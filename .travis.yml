@@ -42,11 +42,12 @@ env:
         secure: "coSbLVW4hGu/PwD4ZeGvXp1JI7meH8qgg6wFyiFlxFWOK+sqM3kkNuqhAU4hp5ElU3sH8iak/uNtFUORLYmdBU9sht7D4yiKPZo3/rWmU+Y9C7C6x3vUqPeeQLGJ/ZS5nVd4FtNOn3oFO52lB0W595kSpSMHOjIZnEDM0ct84DqahIU1l9nBSl3YeSlAyt1ORRA6eheBKDv1mgp7Gbfd9cPwLBtYb378RpwmhcEplw39V8rNu/7mzJPJXgSH4lVJ64Sv0B6xnHhitJOOzwnP2XM7UFS6vI8/JINEzvI8JauLU7uHzKt16v5MiV654MXcaAF8AsqbS57d0oy0mht+Zzf0c6/Hmx3r/gL1yBcoI/4/CC875L7rIpadYvp5jgO9Uy/MhmONR83wK4IJu6VYeBIGLJJ9apMANBLEhPfYfxglnS1YiVPc8neFKAtj2f6O+a2R+jjAnutgpdAZZK2Rlug+zhcOg3aCB+06eRKn6eaeZ2T/TtSPDapA0ayBgmqSkmq/Qvle0OjmivaDC0l6X58+gxfHRGl7Xt95wAdsccC46zNSir/aD3KAYSDD8Np22PlwY9ZR+HLJB+IKsPLZNtOk5BSl6oFBSsaOrajW6UAP2SEOEuzhcoLMIIeNPNPRgDaoj7hXX+HZ2R8uFbfPI5u8P2mvxwZyFQ2kQA6+z3Q="
 
 script:
+    - echo "DOCKER_USERNAME = ${DOCKER_USERNAME}"
     - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-    - docker pull openspacecollective/library-core:latest
-    - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"$TRAVIS_COMMIT" --tag openspacecollective/library-core:latest ./tools/docker/environment/
-    - docker push openspacecollective/library-core:"$TRAVIS_COMMIT"
-    - docker push openspacecollective/library-core:latest
+    # - docker pull openspacecollective/library-core:latest
+    # - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"$TRAVIS_COMMIT" --tag openspacecollective/library-core:latest ./tools/docker/environment/
+    # - docker push openspacecollective/library-core:"$TRAVIS_COMMIT"
+    # - docker push openspacecollective/library-core:latest
     # - npm link
     # - npm install -g yo
     # - mkdir testbuild && cd testbuild
