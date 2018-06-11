@@ -72,17 +72,61 @@ class Object
             
         } ;
 
+        /// @brief              Default constructor (disabled)
+
                                 Object                                      ( ) = delete ;
+
+        /// @brief              Constructs an object using an initializer list
+        ///
+        /// @code
+        ///                     Object object = {{ "Key A": Object::Integer(123) }, { "Key B": Object::String("Hello World!") }} ;
+        /// @endcode
+        ///
+        /// @param              [in] aList An initializer list
 
                                 Object                                      (           std::initializer_list<ctnr::Pair<types::String, Object>> aList          ) ;
 
+        /// @brief              Copy constructor
+        ///
+        /// @param              [in] anObject An object
+
                                 Object                                      (   const   Object&                     anObject                                    ) ;
+
+        /// @brief              Destructor
 
                                 ~Object                                     ( ) ;
 
+        /// @brief              Assignment operator
+        ///
+        /// @param              [in] anObject An object
+        /// @return             Reference to object
+
         Object&                 operator =                                  (   const   Object&                     anObject                                    ) ;
 
+        /// @brief              Equal to operator
+        ///
+        /// @code
+        ///                     Object firstObject = Object::Integer(123) ;
+        ///                     Object secondObject = Object::Integer(123) ;
+        ///                     firstObject == secondObject ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anObject An object
+        /// @return             True if objects are equal
+
         bool                    operator ==                                 (   const   Object&                     anObject                                    ) const ;
+
+        /// @brief              Not equal to operator
+        ///
+        /// @code
+        ///                     Object firstObject = Object::Integer(123) ;
+        ///                     Object secondObject = Object::Integer(456) ;
+        ///                     firstObject != secondObject ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anObject An object
+        /// @return             True if objects are not equal
+
         bool                    operator !=                                 (   const   Object&                     anObject                                    ) const ;
 
         const Object&           operator []                                 (   const   types::String&              aKey                                        ) const ;

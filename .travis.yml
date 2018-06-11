@@ -7,6 +7,11 @@
 
 ################################################################################################################################################################
 
+branches:
+    only:
+        - master
+        - dev
+
 sudo: required
 
 language: cpp
@@ -31,8 +36,19 @@ services:
 #             fi
 #         fi
 
+env:
+    global:
+        - LANG="en_US.UTF-8"
+        - secure: "RalrIObAczqwt+DTRLoVDJQF7+EHYmdHtgg7SyR6K6F8Lxzbg3dke4C/MrXvrzTaGHki2EBMVYXZptWFjh89ASUtjajEXHr3GIc5+Lv6w24MOixbwCwT/R1iQ0cmVtmd4k+zGG5kT1e06ngHmO56my+rHUhxDkNZ+ZA5scizyQEtvUAiNXPqdvXvnelniEENbKkswJ5gGE+kzpJ/F+vFbR5gnTm7GrSJp0Fjpqc568liSBufS15xfhGDNp+enFLjhlsnPxr6sdeh+PZLOchqdLripM+uuRdYPeQZnwYFAw4RzFZ90J6HoFzh7kdR7xIOceqwteWuxS5zg+xJQ66VeJFsyreD4FPZVdrhksTykrVu9pEyRgUJa1de9R6q2Zyk2RjTqsmORY2cFGbHMhDU9jPE0D3om57HSAwNnFWOXSmiMLIqOFnIhRr/zoUwBP/QQslroY3IrGBrFXbFDbD3RDSzgdk1PsmMisJqEP/OUWQdp3U8efpduzDksPPXGW/a6P8Q7un6IiqpsSTNEDzsDoEPVqiGYkSbQscZRPJh2+I7gTUUKzOZTDYhIk9BrgMJ1Oab8tQrym2+HNLX9PYVHl7/Xq27OPB08J/viMsVYjYZEvt0NYl5AV0hTsoggDni1NKevbLFmDukos8unB3Q4OG1PHce+duvvIViNuUGzKs="
+        - secure: "coSbLVW4hGu/PwD4ZeGvXp1JI7meH8qgg6wFyiFlxFWOK+sqM3kkNuqhAU4hp5ElU3sH8iak/uNtFUORLYmdBU9sht7D4yiKPZo3/rWmU+Y9C7C6x3vUqPeeQLGJ/ZS5nVd4FtNOn3oFO52lB0W595kSpSMHOjIZnEDM0ct84DqahIU1l9nBSl3YeSlAyt1ORRA6eheBKDv1mgp7Gbfd9cPwLBtYb378RpwmhcEplw39V8rNu/7mzJPJXgSH4lVJ64Sv0B6xnHhitJOOzwnP2XM7UFS6vI8/JINEzvI8JauLU7uHzKt16v5MiV654MXcaAF8AsqbS57d0oy0mht+Zzf0c6/Hmx3r/gL1yBcoI/4/CC875L7rIpadYvp5jgO9Uy/MhmONR83wK4IJu6VYeBIGLJJ9apMANBLEhPfYfxglnS1YiVPc8neFKAtj2f6O+a2R+jjAnutgpdAZZK2Rlug+zhcOg3aCB+06eRKn6eaeZ2T/TtSPDapA0ayBgmqSkmq/Qvle0OjmivaDC0l6X58+gxfHRGl7Xt95wAdsccC46zNSir/aD3KAYSDD8Np22PlwY9ZR+HLJB+IKsPLZNtOk5BSl6oFBSsaOrajW6UAP2SEOEuzhcoLMIIeNPNPRgDaoj7hXX+HZ2R8uFbfPI5u8P2mvxwZyFQ2kQA6+z3Q="
+
 script:
-    - docker build --tag open-space-collective/library-core ./tools/docker/environment/
+    - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+    - docker pull openspacecollective/library-core:latest || true
+    # - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"${TRAVIS_COMMIT}" --tag openspacecollective/library-core:latest ./tools/docker/environment/
+    - ./tools/ci/test.sh
+    # - docker push openspacecollective/library-core:"${TRAVIS_COMMIT}"
+    - docker push openspacecollective/library-core:latest
     # - npm link
     # - npm install -g yo
     # - mkdir testbuild && cd testbuild
@@ -52,9 +68,5 @@ script:
 #     - make coverage
 #     # Uploading report to CodeCov
 #     - bash <(curl -s https://codecov.io/bash) -X gcov -y ../../.codecov.yml || echo "Codecov did not collect coverage reports"
-
-env:
-    global:
-        - LANG="en_US.UTF-8"
 
 ################################################################################################################################################################
