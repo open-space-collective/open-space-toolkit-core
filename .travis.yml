@@ -7,6 +7,11 @@
 
 ################################################################################################################################################################
 
+branches:
+    only:
+        - master
+        - dev
+
 sudo: required
 
 language: cpp
@@ -33,7 +38,7 @@ services:
 
 script:
     - docker pull openspacecollective/library-core:latest
-    - docker build --quiet --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"$TRAVIS_COMMIT" --tag openspacecollective/library-core:latest ./tools/docker/environment/
+    - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"$TRAVIS_COMMIT" --tag openspacecollective/library-core:latest ./tools/docker/environment/
     - docker push openspacecollective/library-core:"$TRAVIS_COMMIT"
     - docker push openspacecollective/library-core:latest
     # - npm link
