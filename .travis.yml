@@ -1,0 +1,60 @@
+################################################################################################################################################################
+
+# @project        Library/Core
+# @file           .travis.yml
+# @author         Lucas Brémond <lucas@loftorbital.com>
+# @license        TBD
+
+################################################################################################################################################################
+
+sudo: required
+
+language: cpp
+
+os:
+    - linux
+
+services:
+    - docker
+
+# before_install:
+#     - |
+#         if test "$TRAVIS_OS_NAME" == "osx"; then
+#         brew update
+#         brew install lcov
+#         fi
+#     - |
+#         if test "$TRAVIS_OS_NAME" == "linux"; then
+#             if test "$CXX" == "g++" ; then
+#                 sudo apt-get install -qq g++-4.8
+#                 export CXX="g++-4.8"
+#             fi
+#         fi
+
+script:
+    - docker build --tag open-space-collective/library-core ./tools/docker/environment/
+    # - npm link
+    # - npm install -g yo
+    # - mkdir testbuild && cd testbuild
+    # - expect -f ../travis/yo_cpp
+    # - mkdir build && cd build
+    # - cmake ..
+    # - make VERBOSE=1
+    # - make test
+    # - expect -f ../../travis/yo_cpp_class
+    # - cmake ..
+    # - make VERBOSE=1
+    # - make test
+
+# after_success:
+#     # Creating report
+#     - cmake -DBUILD_CODE_COVERAGE=ON ..
+#     - make coverage
+#     # Uploading report to CodeCov
+#     - bash <(curl -s https://codecov.io/bash) -X gcov -y ../../.codecov.yml || echo "Codecov did not collect coverage reports"
+
+env:
+    global:
+        - LANG="en_US.UTF-8"
+
+################################################################################################################################################################
