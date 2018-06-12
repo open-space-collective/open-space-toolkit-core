@@ -72,13 +72,34 @@ class Object
             
         } ;
 
+        /// @brief              Default constructor (disabled)
+
                                 Object                                      ( ) = delete ;
+
+        /// @brief              Constructs an object using an initializer list
+        ///
+        /// @code
+        ///                     Object object = {{ "Key A": Object::Integer(123) }, { "Key B": Object::String("Hello World!") }} ;
+        /// @endcode
+        ///
+        /// @param              [in] aList An initializer list
 
                                 Object                                      (           std::initializer_list<ctnr::Pair<types::String, Object>> aList          ) ;
 
+        /// @brief              Copy constructor
+        ///
+        /// @param              [in] anObject An object
+
                                 Object                                      (   const   Object&                     anObject                                    ) ;
 
+        /// @brief              Destructor
+
                                 ~Object                                     ( ) ;
+
+        /// @brief              Assignment operator
+        ///
+        /// @param              [in] anObject An object
+        /// @return             Reference to object
 
         Object&                 operator =                                  (   const   Object&                     anObject                                    ) ;
 
