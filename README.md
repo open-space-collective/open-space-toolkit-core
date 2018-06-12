@@ -1,6 +1,7 @@
 # Library :: Core
 
 [![Build Status](https://travis-ci.org/open-space-collective/library-core.svg?branch=master)](https://travis-ci.org/open-space-collective/library-core)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/library-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-core)
 [![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-core/index.html)
 
 Fundamental types, containers and utilities.
