@@ -46,6 +46,7 @@ script:
     - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
     - docker pull openspacecollective/library-core:latest || true
     - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"$TRAVIS_COMMIT" --tag openspacecollective/library-core:latest ./tools/docker/environment/
+    - ./tools/docker/environment/run.sh
     - docker push openspacecollective/library-core:"$TRAVIS_COMMIT"
     - docker push openspacecollective/library-core:latest
     # - npm link
