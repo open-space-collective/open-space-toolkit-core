@@ -22,6 +22,6 @@ docker run \
 --volume="/app/build" \
 --workdir="/app/build" \
 ${image_name} \
-/bin/bash -c "cmake -BUILD_DOCUMENTATION=ON .. && make docs"
+/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
 ################################################################################################################################################################
