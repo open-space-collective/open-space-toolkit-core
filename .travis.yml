@@ -20,9 +20,12 @@ services:
     - docker
 
 jobs:
+
   include:
-    - stage: unit tests
-      script: echo one
+
+    - stage: test
+      
+        script: echo one
 
 # branches:
 
