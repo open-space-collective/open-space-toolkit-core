@@ -22,10 +22,9 @@ services:
 jobs:
 
   include:
-
-    - stage: test
-      
-        script: echo one
+    
+    - stage: unit tests
+      script: echo one
 
 # branches:
 
