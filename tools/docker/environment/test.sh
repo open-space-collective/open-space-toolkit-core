@@ -25,6 +25,6 @@ docker run \
 --volume="${script_directory}/helpers/clean.sh:/${image_name}/build/clean.sh:ro" \
 --workdir="/${image_name}/build" \
 "openspacecollective/library-core:latest" \
-"./build.sh && ./test.sh"
+"/bin/bash -c ./build.sh && ./test.sh"
 
 ################################################################################################################################################################
