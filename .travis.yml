@@ -28,8 +28,8 @@ services:
 
 stages:
 
-    - compile
     - test
+    - coverage
     - name: deploy
         if: branch = master
 
