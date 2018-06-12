@@ -62,13 +62,13 @@ RUN mkdir /tmp/cmake \
 
 ## Boost [1.67.0]
 
-# RUN mkdir /tmp/boost \
-#     && cd /tmp/boost \
-#     && wget --quiet http://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar.gz \
-#     && tar -xf boost_1_67_0.tar.gz \
-#     && cd boost_1_67_0 \
-#     && ./b2 -d0 -j ${cpu_count} link=static cxxflags=-fPIC install \
-#     && rm -rf /tmp/boost
+RUN mkdir /tmp/boost \
+    && cd /tmp/boost \
+    && wget --quiet http://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar.gz \
+    && tar -xf boost_1_67_0.tar.gz \
+    && cd boost_1_67_0 \
+    && ./b2 -d0 -j ${cpu_count} link=static cxxflags=-fPIC install \
+    && rm -rf /tmp/boost
 
 # ## Eigen [3.3.4]
 
