@@ -1,13 +1,15 @@
 # Library :: Core
 
 [![Build Status](https://travis-ci.org/open-space-collective/library-core.svg?branch=master)](https://travis-ci.org/open-space-collective/library-core)
-[![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-core/index.html)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/library-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-core)
+[![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-core)
 
 Fundamental types, containers and utilities.
 
 ## Warning
 
 Library **name** and **license** are yet to be defined.
+
 Please check the following projects:
 
 - [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
@@ -80,7 +82,7 @@ The **Core** library exhibits the following structure:
 
 ## Documentation
 
-The Doxygen documentation can be found [here](https://open-space-collective.github.io/library-core/index.html).
+The Doxygen documentation can be found [here](https://open-space-collective.github.io/library-core).
 
 ## Dependencies
 
