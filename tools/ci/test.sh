@@ -17,20 +17,10 @@ docker run \
 --rm \
 --volume="${project_directory}:/app:rw" \
 --volume="/app/build" \
---volume="${project_directory}/docker/environment/helpers/build.sh:/app/build/build.sh:ro" \
---volume="${project_directory}/docker/environment/helpers/test.sh:/app/build/test.sh:ro" \
+--volume="${project_directory}/tools/docker/environment/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${project_directory}/tools/docker/environment/helpers/test.sh:/app/build/test.sh:ro" \
 --workdir="/app/build" \
 "openspacecollective/library-core:latest" \
-"/bin/bash -c 'pwd && ls -l'"
-
-docker run \
---rm \
---volume="${project_directory}:/app:rw" \
---volume="/app/build" \
---volume="${project_directory}/docker/environment/helpers/build.sh:/app/build/build.sh:ro" \
---volume="${project_directory}/docker/environment/helpers/test.sh:/app/build/test.sh:ro" \
---workdir="/app/build" \
-"openspacecollective/library-core:latest" \
-"/bin/bash -c '/app/build/build.sh'"
+/bin/bash -c "/app/build/build.sh"
 
 ################################################################################################################################################################
