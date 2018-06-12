@@ -25,10 +25,7 @@ jobs:
 
     - stage: test
       
-        script:
-            
-            - echo one
-            - echo two
+        script: echo one
 
 # branches:
 
