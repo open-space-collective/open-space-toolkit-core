@@ -25,7 +25,9 @@ jobs:
     
     - stage: unit tests
       
-      script: echo def
+      script:
+        - echo abc
+        - echo def
 
 # branches:
 
