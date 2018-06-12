@@ -103,7 +103,30 @@ class Object
 
         Object&                 operator =                                  (   const   Object&                     anObject                                    ) ;
 
+        /// @brief              Equal to operator
+        ///
+        /// @code
+        ///                     Object firstObject = Object::Integer(123) ;
+        ///                     Object secondObject = Object::Integer(123) ;
+        ///                     firstObject == secondObject ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anObject An object
+        /// @return             True if objects are equal
+
         bool                    operator ==                                 (   const   Object&                     anObject                                    ) const ;
+
+        /// @brief              Not equal to operator
+        ///
+        /// @code
+        ///                     Object firstObject = Object::Integer(123) ;
+        ///                     Object secondObject = Object::Integer(456) ;
+        ///                     firstObject != secondObject ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anObject An object
+        /// @return             True if objects are not equal
+
         bool                    operator !=                                 (   const   Object&                     anObject                                    ) const ;
 
         const Object&           operator []                                 (   const   types::String&              aKey                                        ) const ;
