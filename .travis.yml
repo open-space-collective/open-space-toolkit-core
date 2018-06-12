@@ -9,6 +9,16 @@
 
 sudo: false
 
+language: cpp
+
+os:
+
+    - linux
+
+services:
+
+    - docker
+
 jobs:
   include:
     - stage: unit tests
