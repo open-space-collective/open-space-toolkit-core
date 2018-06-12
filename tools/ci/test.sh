@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/docker/environment/run.sh
+# @file           tools/ci/test.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,20 +11,16 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "${script_directory}/../setup.sh"
+project_directory="${script_directory}"/../..
 
 docker run \
---name="${container_name}" \
--it \
 --rm \
---volume="${project_directory}:/${image_name}:rw" \
---volume="/${image_name}/build" \
---volume="${script_directory}/helpers/build.sh:/${image_name}/build/build.sh:ro" \
---volume="${script_directory}/helpers/test.sh:/${image_name}/build/test.sh:ro" \
---volume="${script_directory}/helpers/debug.sh:/${image_name}/build/debug.sh:ro" \
---volume="${script_directory}/helpers/clean.sh:/${image_name}/build/clean.sh:ro" \
---workdir="/${image_name}/build" \
+--volume="${project_directory}:/app:rw" \
+--volume="/app/build" \
+--volume="${project_directory}/docker/environment/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${project_directory}/docker/environment/helpers/test.sh:/app/build/test.sh:ro" \
+--workdir="/app/build" \
 "openspacecollective/library-core:latest" \
-"/bin/bash -c './build.sh'"
+"/bin/bash -c '/app/build/build.sh'"
 
 ################################################################################################################################################################
