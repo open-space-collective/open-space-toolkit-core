@@ -67,6 +67,7 @@ RUN mkdir /tmp/boost \
     && wget --quiet http://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar.gz \
     && tar -xf boost_1_67_0.tar.gz \
     && cd boost_1_67_0 \
+    && ./bootstrap.sh \
     && ./b2 -d0 -j ${cpu_count} link=static cxxflags=-fPIC install \
     && rm -rf /tmp/boost
 
