@@ -51,7 +51,7 @@ RUN dnf install -y \
 RUN mkdir /tmp/cmake \
     && cd /tmp/cmake \
     && wget --quiet https://cmake.org/files/v3.11/cmake-3.11.3.tar.gz \
-    && tar -xvf cmake-3.11.3.tar.gz \
+    && tar -xf cmake-3.11.3.tar.gz \
     && cd cmake-3.11.3 \
     && ./bootstrap \
     && make --silent -j ${cpu_count} \
@@ -65,7 +65,7 @@ RUN mkdir /tmp/cmake \
 RUN mkdir /tmp/boost \
     && cd /tmp/boost \
     && wget --quiet http://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar.gz \
-    && tar -xvf boost_1_67_0.tar.gz \
+    && tar -xf boost_1_67_0.tar.gz \
     && cd boost_1_67_0 \
     && ./bootstrap.sh \
     && ./b2 -j ${cpu_count} link=static cxxflags=-fPIC install \
@@ -76,7 +76,7 @@ RUN mkdir /tmp/boost \
 RUN mkdir /tmp/eigen \
     && cd /tmp/eigen \
     && wget --quiet http://bitbucket.org/eigen/eigen/get/3.3.4.tar.gz \
-    && tar -xvf 3.3.4.tar.gz \
+    && tar -xf 3.3.4.tar.gz \
     && cd eigen-eigen-5a0156e40feb \
     && mkdir build \
     && cd build \
