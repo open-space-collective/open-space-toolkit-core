@@ -21,13 +21,23 @@ services:
 
 jobs:
 
-  include:
+    include:
     
-    - stage: unit tests
-      
-      script:
-        - echo abc
-        - echo def
+        - stage: test
+        
+          script:
+
+              - echo test_abc
+              - echo test_def
+              - echo test_ghi
+
+        - stage: coverage
+
+          script:
+
+              - echo coverage_abc
+              - echo coverage_def
+              - echo coverage_ghi
 
 # branches:
 
