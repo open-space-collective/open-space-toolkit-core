@@ -24,7 +24,8 @@ jobs:
   include:
     
     - stage: unit tests
-      script: echo one
+      
+        script: echo abc
 
 # branches:
 
