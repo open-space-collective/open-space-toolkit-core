@@ -9,6 +9,7 @@ Fundamental types, containers and utilities.
 ## Warning
 
 Library **name** and **license** are yet to be defined.
+
 Please check the following projects:
 
 - [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
