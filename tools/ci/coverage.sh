@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/docker/environment/build.sh
+# @file           tools/ci/coverage.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,18 +11,17 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "${script_directory}/../.env"
+project_directory="${script_directory}/../.."
+docker_directory="${script_directory}/../docker"
 
-echo "version = ${version}"
-echo "cpu_count = ${cpu_count}"
-echo "image_name = ${image_name}"
-echo "script_directory = ${script_directory}"
+source "${docker_directory}/.env"
 
-docker build \
---build-arg="version=${version}" \
---build-arg="cpu_count=${cpu_count}" \
---tag="${image_name}" \
---file="${script_directory}/Dockerfile" \
-"${script_directory}"
+docker run \
+--rm \
+--volume="${project_directory}:/app:rw" \
+--volume="/app/build" \
+--workdir="/app/build" \
+${image_name} \
+/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make coverage && bash <(curl -s https://codecov.io/bash) -X gcov -y /app/.codecov.yml -t ef1b0312-c7d8-4b72-bd26-d3fc065a5a08 || echo 'Codecov did not collect coverage reports'"
 
 ################################################################################################################################################################

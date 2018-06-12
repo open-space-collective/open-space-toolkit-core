@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/docker/environment/build.sh
+# @file           tools/ci/test.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,18 +11,19 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "${script_directory}/../.env"
+project_directory="${script_directory}/../.."
+docker_directory="${script_directory}/../docker"
 
-echo "version = ${version}"
-echo "cpu_count = ${cpu_count}"
-echo "image_name = ${image_name}"
-echo "script_directory = ${script_directory}"
+source "${docker_directory}/.env"
 
-docker build \
---build-arg="version=${version}" \
---build-arg="cpu_count=${cpu_count}" \
---tag="${image_name}" \
---file="${script_directory}/Dockerfile" \
-"${script_directory}"
+docker run \
+--rm \
+--volume="${project_directory}:/app:rw" \
+--volume="/app/build" \
+--volume="${docker_directory}/environment/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${docker_directory}/environment/helpers/test.sh:/app/build/test.sh:ro" \
+--workdir="/app/build" \
+${image_name} \
+/bin/bash -c "/app/build/build.sh && /app/build/test.sh"
 
 ################################################################################################################################################################
