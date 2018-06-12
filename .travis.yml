@@ -79,10 +79,6 @@ jobs:
 
         - stage: test
 
-          script: ./tools/ci/test.sh
-
-        - stage: test
-
           script:
 
                 # Pull Docker image from repository
