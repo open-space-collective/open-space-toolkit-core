@@ -11,7 +11,7 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "${script_directory}/../setup.sh"
+source "${script_directory}/../.env"
 
 echo "version = ${version}"
 echo "cpu_count = ${cpu_count}"

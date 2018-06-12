@@ -163,7 +163,7 @@ class Dictionary
         /// @brief              Assignment operator
         ///
         /// @param              [in] aDictionary A dictionary
-        /// @return             Dictionary
+        /// @return             Reference to dictionary
 
         Dictionary&             operator =                                  (   const   Dictionary&                 aDictionary                                 ) ;
 
