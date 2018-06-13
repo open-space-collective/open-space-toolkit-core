@@ -84,22 +84,23 @@ jobs:
 
                 # Generate and deploy documentation
 
-                # - ./tools/ci/documentation.sh
+                - ./tools/ci/documentation.sh
 
                 # Generate and deploy binaries
 
-                # - ./tools/ci/binaries.sh
+                - ./tools/ci/binaries.sh
 
           before_deploy:
 
                 - echo ">> before_deploy"
 
                 # Set up git user name and tag this commit
-                # - git config --local user.name "YOUR GIT USER NAME"
-                # - git config --local user.email "YOUR GIT USER EMAIL"
-                # - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+                
+                - git config --local user.name "Lucas Brémond"
+                - git config --local user.email "lucas@loftorbital.com"
+                - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
-          deploy: &releases
+          deploy:
 
                 provider: releases
                 api_key: ${GITHUB_API_KEY}
