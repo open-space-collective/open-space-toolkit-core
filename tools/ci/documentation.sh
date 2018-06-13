@@ -47,8 +47,7 @@ git config --global push.default simple
 git config user.name "Travis CI"
 git config user.email "travis@travis-ci.org"
 
-rm -rf *
-rm -rf ./.*
+find ./ -not -name '.git' -delete
 
 cp -r "${project_directory}"/docs/* .
 
