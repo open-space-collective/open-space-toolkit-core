@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/docker/environment/Dockerfile
+# @file           tools/development/docker/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
