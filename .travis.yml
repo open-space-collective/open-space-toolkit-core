@@ -36,44 +36,46 @@ env:
 
 stages:
 
-    - test
-    - coverage
+    # - test
+    # - coverage
     - name: deploy
-      if: (branch = master) AND (NOT type IN (pull_request))
+    #   if: (branch = master) AND (NOT type IN (pull_request))
 
 jobs:
 
     include:
 
-        - stage: test
+        # - stage: test
 
-          script:
+        #   script:
 
-                # Pull Docker image from repository
+        #         # Pull Docker image from repository
                 
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-                - docker pull openspacecollective/library-core:latest || true
+        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        #         - docker pull openspacecollective/library-core:latest || true
 
-                # Run tests
+        #         # Run tests
 
-                - ./tools/ci/test.sh
+        #         - ./tools/ci/test.sh
 
-        - stage: coverage
+        # - stage: coverage
         
-          script:
+        #   script:
 
-                # Pull Docker image from repository
+        #         # Pull Docker image from repository
                 
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-                - docker pull openspacecollective/library-core:latest || true
+        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        #         - docker pull openspacecollective/library-core:latest || true
 
-                # Run coverage
+        #         # Run coverage
 
-                - ./tools/ci/coverage.sh
+        #         - ./tools/ci/coverage.sh
         
         - stage: deploy
 
           script:
+
+                - echo ">> script"
 
                 # Pull Docker image from repository
                 
@@ -83,5 +85,26 @@ jobs:
                 # Generate and deploy documentation
 
                 - ./tools/ci/documentation.sh
+
+                # Generate and deploy binaries
+
+                - ./tools/ci/binaries.sh
+
+          before_deploy:
+
+                - echo ">> before_deploy"
+
+                # Set up git user name and tag this commit
+                # - git config --local user.name "YOUR GIT USER NAME"
+                # - git config --local user.email "YOUR GIT USER EMAIL"
+                - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
+          deploy:
+
+            provider: releases
+            api_key: ${GITHUB_API_KEY}
+            file_glob: true
+            file: ./lib/*
+            skip_cleanup: true
 
 ################################################################################################################################################################
