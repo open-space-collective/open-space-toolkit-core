@@ -91,7 +91,6 @@ The **Core** library internally uses the following dependencies:
 | Name        | Version | License                | Link                                                                   |
 |-------------|---------|------------------------|------------------------------------------------------------------------|
 | Boost       | 1.67.0  | Boost Software License | [boost.org](https://www.boost.org)                                     |
-| Eigen       | 3.3.4   | MPL2                   | [eigen.tuxfamily.org](http://eigen.tuxfamily.org/index.php)            |
 | RapidJSON   | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                  |
 | ordered-map | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
 
