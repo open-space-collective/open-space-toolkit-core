@@ -40,7 +40,8 @@ stages:
     - test
     - coverage
     - name: deploy
-      if: (branch = master) AND (NOT type IN (pull_request))
+      if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
+      #   if: (branch = master) AND (NOT type IN (pull_request))
 
 jobs:
 
