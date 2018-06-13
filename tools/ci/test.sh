@@ -14,7 +14,7 @@ script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 project_directory="${script_directory}/../.."
 development_directory="${project_directory}/tools/development"
 
-source "${development_directory}/.env"
+source "${project_directory}/tools/.env"
 
 docker run \
 --rm \
