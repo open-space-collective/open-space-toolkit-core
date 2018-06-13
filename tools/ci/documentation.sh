@@ -26,9 +26,9 @@ docker run \
 ${image_name} \
 /bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
-mkdir -p /docs
+mkdir -p "./gh-pages"
 
-pushd /docs
+pushd "./gh-pages"
 
 GH_REPO_NAME="library-core"
 GH_REPO_TOKEN="${GITHUB_API_KEY}"
