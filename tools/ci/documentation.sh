@@ -53,7 +53,10 @@ pwd
 
 ls -la
 
-find ./ -not -name '.git' -delete
+rm -rf ./*
+mv .git git
+rm -rf ./.*
+mv git .git
 
 ls -la
 
