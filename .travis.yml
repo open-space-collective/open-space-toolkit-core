@@ -36,40 +36,40 @@ env:
 
 stages:
 
-    - test
-    - coverage
+    # - test
+    # - coverage
     - name: deploy
-      if: (branch = master) AND (NOT type IN (pull_request))
+    #   if: (branch = master) AND (NOT type IN (pull_request))
 
 jobs:
 
     include:
 
-        - stage: test
+        # - stage: test
 
-          script:
+        #   script:
 
-                # Pull Docker image from repository
+        #         # Pull Docker image from repository
                 
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-                - docker pull openspacecollective/library-core:latest || true
+        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        #         - docker pull openspacecollective/library-core:latest || true
 
-                # Run tests
+        #         # Run tests
 
-                - ./tools/ci/test.sh
+        #         - ./tools/ci/test.sh
 
-        - stage: coverage
+        # - stage: coverage
         
-          script:
+        #   script:
 
-                # Pull Docker image from repository
+        #         # Pull Docker image from repository
                 
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-                - docker pull openspacecollective/library-core:latest || true
+        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        #         - docker pull openspacecollective/library-core:latest || true
 
-                # Run coverage
+        #         # Run coverage
 
-                - ./tools/ci/coverage.sh
+        #         - ./tools/ci/coverage.sh
         
         - stage: deploy
 
