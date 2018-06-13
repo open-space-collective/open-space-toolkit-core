@@ -1,0 +1,72 @@
+{\itshape This document is a work in progress.}
+
+\subsection*{Introduction}
+
+{\itshape T\+BC...}
+
+\subsection*{Guidelines}
+
+\subsubsection*{Codebase}
+
+\paragraph*{C++}
+
+Include order from specific to generic\+:
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <Library/Astrodynamics/Orbit.hpp>}
+
+\textcolor{preprocessor}{#include <\hyperlink{_integer_8hpp}{Library/Core/Types/Integer.hpp}>}
+\textcolor{preprocessor}{#include <\hyperlink{_utilities_8hpp}{Library/Core/Utilities.hpp}>}
+
+\textcolor{preprocessor}{#include <map>}
+\textcolor{preprocessor}{#include <string>}
+\end{DoxyCode}
+
+
+References\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://stackoverflow.com/questions/2762568/c-c-include-file-order-best-practices}{\tt https\+://stackoverflow.\+com/questions/2762568/c-\/c-\/include-\/file-\/order-\/best-\/practices}
+\item \href{https://blog.kowalczyk.info/article/qg/order-of-include-headers-in-cc.html}{\tt https\+://blog.\+kowalczyk.\+info/article/qg/order-\/of-\/include-\/headers-\/in-\/cc.\+html}
+\end{DoxyItemize}
+
+\paragraph*{Python}
+
+{\itshape T\+BC...}
+
+\subsubsection*{Version Control}
+
+\paragraph*{Rules}
+
+{\itshape T\+BC...}
+
+\paragraph*{Commit Messages}
+
+\href{https://chris.beams.io/posts/git-commit/}{\tt How to Write a Git Commit Message}
+
+Use active form ({\ttfamily Do something}).
+
+Prefix commit messages using the following tags\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{[}feature\mbox{]}
+\item \mbox{[}fix\mbox{]}
+\item \mbox{[}misc\mbox{]}
+\end{DoxyItemize}
+
+Examples\+:
+
+
+\begin{DoxyCode}
+[feature] Implement high fidelity orbit propagator
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+[fix] Segmentation fault when fetching ephemeris data
+\end{DoxyCode}
+ 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['queue',['Queue',['../classlibrary_1_1core_1_1ctnr_1_1Queue.html',1,'library::core::ctnr']]]
+  ['real',['Real',['../classlibrary_1_1core_1_1types_1_1_real.html',1,'library::core::types']]],
+  ['runtimeerror',['RuntimeError',['../classlibrary_1_1core_1_1error_1_1_runtime_error.html',1,'library::core::error']]]
 ];

@@ -1,0 +1,179 @@
+\href{https://travis-ci.org/open-space-collective/library-core}{\tt } \href{https://codecov.io/gh/open-space-collective/library-core}{\tt } \href{https://open-space-collective.github.io/library-core}{\tt }
+
+Fundamental types, containers and utilities.
+
+\subsection*{Warning}
+
+Library {\bfseries name} and {\bfseries license} are yet to be defined.
+
+Please check the following projects\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/orgs/open-space-collective/projects/1}{\tt Naming Project}
+\item \href{https://github.com/orgs/open-space-collective/projects/2}{\tt Licensing Project}
+\end{DoxyItemize}
+
+{\itshape ⚠ This library is still under heavy development. Do not use!}
+
+\subsection*{Structure}
+
+The {\bfseries Core} library exhibits the following structure\+:
+
+
+\begin{DoxyCode}
+├── Types
+│   ├── Integer
+│   ├── Real
+│   ├── String
+│   ├── \hyperlink{_byte_8hpp_ae37635b89098069fb3b8c5181edd0945}{Byte}
+│   ├── \hyperlink{_byte_8hpp_ae37635b89098069fb3b8c5181edd0945}{Byte} Array
+│   ├── \hyperlink{_index_8hpp_ad87eeb821d7067ec94e06ed1980d6350}{Index}
+│   ├── \hyperlink{_size_8hpp_a701626ea1027888ebbb8cfd0ff7adab0}{Size}
+│   ├── \hyperlink{_sign_8hpp_a06d9eaa410d43a0fa3f383040618e87d}{Sign}
+│   ├── \hyperlink{_unique_8hpp_ac12d38691838fbc9a36765ee62ace52a}{Unique}
+│   ├── \hyperlink{_shared_8hpp_a3dae1a00f899bac0366794fa85eda8ee}{Shared}
+│   └── \hyperlink{_weak_8hpp_a26c13c272f9fba4ce17ee4980be6703c}{Weak}
+├── Containers
+│   ├── Array
+│   ├── \hyperlink{_list_8hpp_a87ccf40619002299b341a5e76e989912}{List}
+│   ├── \hyperlink{_map_8hpp_a248e088a0b4ec44aff451a5c3663dcee}{Map}
+│   ├── Ordered \hyperlink{_map_8hpp_a248e088a0b4ec44aff451a5c3663dcee}{Map}
+│   ├── Object
+│   ├── Dictionary
+│   ├── \hyperlink{_pair_8hpp_aad6f8de4c0f279c10436d59d4ace74bd}{Pair}
+│   ├── Triple
+│   ├── \hyperlink{_tuple_8hpp_a551ef72e2adb570c4d6bdf5e1bbc96b9}{Tuple}
+│   ├── Table
+│   ├── Queue
+│   ├── Stack
+│   ├── Graph
+│   └── Tree
+├── File System
+│   ├── Path
+│   ├── File
+│   ├── Directory
+│   ├── Symbolic Link
+│   └── Permission
+├── System
+│   ├── User
+│   ├── Group
+│   ├── CPU
+│   ├── Memory
+│   ├── Disk
+│   └── Process
+├── Program
+├── Logger
+├── Error
+│   ├── Exception
+│   ├── Runtime Error
+│   └── Runtime
+│       ├── Undefined
+│       ├── Wrong
+│       └── To Be Implemented
+└── Utilities
+    ├── Iterators
+    └── Version
+\end{DoxyCode}
+
+
+\subsection*{Documentation}
+
+The documentation can be found \href{https://open-space-collective.github.io/library-core}{\tt here}.
+
+\subsection*{Setup}
+
+{\itshape To be completed...}
+
+\subsubsection*{Development}
+
+Using \href{https://www.docker.com}{\tt Docker} is recommended, as the development tools and dependencies setup is described in the provided \href{./tools/development/docker/Dockerfile}{\tt Dockerfile}.
+
+Instructions to install Docker can be found \href{https://docs.docker.com/install/}{\tt here}.
+
+Start the development environment\+:
+
+
+\begin{DoxyCode}
+./tools/development/start.sh
+\end{DoxyCode}
+
+
+This will also build the {\ttfamily openspacecollective/library-\/core\+:latest} Docker image, if not present already.
+
+If installing Docker is not an option, please manually install the development tools (G\+CC, C\+Make) and the dependencies. The procedure should be similar to the one described in the \href{./tools/development/docker/Dockerfile}{\tt Dockerfile}.
+
+\subsubsection*{Build}
+
+From the development environment\+:
+
+
+\begin{DoxyCode}
+./build.sh
+\end{DoxyCode}
+
+
+Manually\+:
+
+
+\begin{DoxyCode}
+mkdir -p build
+cd build
+cmake ..
+make
+\end{DoxyCode}
+
+
+\subsubsection*{Test}
+
+From the development environment\+:
+
+
+\begin{DoxyCode}
+./test.sh
+\end{DoxyCode}
+
+
+Manually\+:
+
+
+\begin{DoxyCode}
+./bin/library-core.test
+\end{DoxyCode}
+
+
+\subsection*{Dependencies}
+
+The {\bfseries Core} library internally uses the following dependencies\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
+\endhead
+Boost &1.\+67.\+0 &Boost Software License &\href{https://www.boost.org}{\tt boost.\+org} \\\cline{1-4}
+Rapid\+J\+S\+ON &master &M\+IT &\href{http://rapidjson.org}{\tt rapidjson.\+org} \\\cline{1-4}
+ordered-\/map &master &M\+IT &\href{https://github.com/Tessil/ordered-map}{\tt github.\+com/\+Tessil/ordered-\/map} \\\cline{1-4}
+\end{longtabu}
+\subsection*{Contribution}
+
+Contributions are more than welcome!
+
+Please read our contributing guide to learn about our development process, how to propose bugfixes and improvements, and how to build and test the code.
+
+\subsection*{Code of Conduct}
+
+{\itshape To be completed...}
+
+\subsection*{Special Thanks}
+
+{\itshape To be completed...}
+
+\subsection*{License}
+
+{\itshape To be defined...} 
