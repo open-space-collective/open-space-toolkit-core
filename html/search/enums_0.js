@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['severity',['Severity',['../_severity_8hpp.html#a35f71353edf64f68f7fe3874b01abaa8',1,'library::core::logger']]],
-  ['sign',['Sign',['../_sign_8hpp.html#a06d9eaa410d43a0fa3f383040618e87d',1,'library::core::types']]]
+  ['color',['Color',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#aa7a07d8165e1df74ad4d289d5220bc96',1,'library::core::logger::sinks::Console']]]
 ];

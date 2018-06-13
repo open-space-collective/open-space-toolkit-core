@@ -18,7 +18,9 @@ var dir_0a9ed87836f5a5fe1abc34529419ae13 =
     ] ],
     [ "OrderedMap.hpp", "_ordered_map_8hpp.html", "_ordered_map_8hpp" ],
     [ "Pair.hpp", "_pair_8hpp.html", "_pair_8hpp" ],
-    [ "Queue.hpp", "_queue_8hpp_source.html", null ],
+    [ "Queue.hpp", "_queue_8hpp.html", [
+      [ "Queue", "classlibrary_1_1core_1_1ctnr_1_1_queue.html", "classlibrary_1_1core_1_1ctnr_1_1_queue" ]
+    ] ],
     [ "Stack.hpp", "_stack_8hpp.html", [
       [ "Stack", "classlibrary_1_1core_1_1ctnr_1_1_stack.html", "classlibrary_1_1core_1_1ctnr_1_1_stack" ]
     ] ],

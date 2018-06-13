@@ -102,97 +102,668 @@ Inheritance diagram for library::core::logger::sinks::Sink:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d53e570fb2be9c97596289743d0ef9d"><td class="memItemLeft" align="right" valign="top"><a id="a4d53e570fb2be9c97596289743d0ef9d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sink</b> (const Severity &amp;aSeverity)</td></tr>
+<tr class="memitem:a4d53e570fb2be9c97596289743d0ef9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a4d53e570fb2be9c97596289743d0ef9d">Sink</a> (const <a class="el" href="namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8">Severity</a> &amp;aSeverity)</td></tr>
 <tr class="separator:a4d53e570fb2be9c97596289743d0ef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ba941947d903825f4922694e0961dd"><td class="memItemLeft" align="right" valign="top"><a id="a00ba941947d903825f4922694e0961dd"></a>
-virtual <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html">Sink</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+<tr class="memitem:af00134e95d23ea002acd6dfcc8feed7e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#af00134e95d23ea002acd6dfcc8feed7e">~Sink</a> ()=0</td></tr>
+<tr class="separator:af00134e95d23ea002acd6dfcc8feed7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ba941947d903825f4922694e0961dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html">Sink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a00ba941947d903825f4922694e0961dd">clone</a> () const =0</td></tr>
 <tr class="separator:a00ba941947d903825f4922694e0961dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31a8ad92f76ad05d630d50fe63c1b747"><td class="memItemLeft" align="right" valign="top"><a id="a31a8ad92f76ad05d630d50fe63c1b747"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> () const</td></tr>
+<tr class="memitem:a31a8ad92f76ad05d630d50fe63c1b747"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a31a8ad92f76ad05d630d50fe63c1b747">isEnabled</a> () const</td></tr>
 <tr class="separator:a31a8ad92f76ad05d630d50fe63c1b747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5670a0ee01ffa61fce94ff14b744cda4"><td class="memItemLeft" align="right" valign="top"><a id="a5670a0ee01ffa61fce94ff14b744cda4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLineIdLogged</b> () const</td></tr>
+<tr class="memitem:a5670a0ee01ffa61fce94ff14b744cda4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a5670a0ee01ffa61fce94ff14b744cda4">isLineIdLogged</a> () const</td></tr>
 <tr class="separator:a5670a0ee01ffa61fce94ff14b744cda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6daeb043af9f1997c04d0e24c12900c"><td class="memItemLeft" align="right" valign="top"><a id="af6daeb043af9f1997c04d0e24c12900c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSeverityLogged</b> () const</td></tr>
+<tr class="memitem:af6daeb043af9f1997c04d0e24c12900c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#af6daeb043af9f1997c04d0e24c12900c">isSeverityLogged</a> () const</td></tr>
 <tr class="separator:af6daeb043af9f1997c04d0e24c12900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9a663485069c6716bb3675d67bd6cd6"><td class="memItemLeft" align="right" valign="top"><a id="ae9a663485069c6716bb3675d67bd6cd6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTimestampLogged</b> () const</td></tr>
+<tr class="memitem:ae9a663485069c6716bb3675d67bd6cd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#ae9a663485069c6716bb3675d67bd6cd6">isTimestampLogged</a> () const</td></tr>
 <tr class="separator:ae9a663485069c6716bb3675d67bd6cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf81adfa6c595d8014b466d86479fae"><td class="memItemLeft" align="right" valign="top"><a id="afdf81adfa6c595d8014b466d86479fae"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isThreadLogged</b> () const</td></tr>
+<tr class="memitem:afdf81adfa6c595d8014b466d86479fae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#afdf81adfa6c595d8014b466d86479fae">isThreadLogged</a> () const</td></tr>
 <tr class="separator:afdf81adfa6c595d8014b466d86479fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09eb7bc8611effd50151c5e371a5962c"><td class="memItemLeft" align="right" valign="top"><a id="a09eb7bc8611effd50151c5e371a5962c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isScopeLogged</b> () const</td></tr>
+<tr class="memitem:a09eb7bc8611effd50151c5e371a5962c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a09eb7bc8611effd50151c5e371a5962c">isScopeLogged</a> () const</td></tr>
 <tr class="separator:a09eb7bc8611effd50151c5e371a5962c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a736086840b9c964c40e349d5e7f68cca"><td class="memItemLeft" align="right" valign="top"><a id="a736086840b9c964c40e349d5e7f68cca"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFileLogged</b> () const</td></tr>
+<tr class="memitem:a736086840b9c964c40e349d5e7f68cca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a736086840b9c964c40e349d5e7f68cca">isFileLogged</a> () const</td></tr>
 <tr class="separator:a736086840b9c964c40e349d5e7f68cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701bbd71bc5f871ac97abdc98fa4460f"><td class="memItemLeft" align="right" valign="top"><a id="a701bbd71bc5f871ac97abdc98fa4460f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLineLogged</b> () const</td></tr>
+<tr class="memitem:a701bbd71bc5f871ac97abdc98fa4460f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a701bbd71bc5f871ac97abdc98fa4460f">isLineLogged</a> () const</td></tr>
 <tr class="separator:a701bbd71bc5f871ac97abdc98fa4460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39078847a7c0f6a22893dd82e64545f1"><td class="memItemLeft" align="right" valign="top"><a id="a39078847a7c0f6a22893dd82e64545f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFunctionLogged</b> () const</td></tr>
+<tr class="memitem:a39078847a7c0f6a22893dd82e64545f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a39078847a7c0f6a22893dd82e64545f1">isFunctionLogged</a> () const</td></tr>
 <tr class="separator:a39078847a7c0f6a22893dd82e64545f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a708041f4c444c21ea1963bd0649b6ac5"><td class="memItemLeft" align="right" valign="top"><a id="a708041f4c444c21ea1963bd0649b6ac5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isChannelLogged</b> () const</td></tr>
+<tr class="memitem:a708041f4c444c21ea1963bd0649b6ac5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a708041f4c444c21ea1963bd0649b6ac5">isChannelLogged</a> () const</td></tr>
 <tr class="separator:a708041f4c444c21ea1963bd0649b6ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa41e2b1488d2e761ded1d209eacf02b3"><td class="memItemLeft" align="right" valign="top"><a id="aa41e2b1488d2e761ded1d209eacf02b3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> ()=0</td></tr>
+<tr class="memitem:aa41e2b1488d2e761ded1d209eacf02b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#aa41e2b1488d2e761ded1d209eacf02b3">enable</a> ()=0</td></tr>
 <tr class="separator:aa41e2b1488d2e761ded1d209eacf02b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab28f7a964d138fc9d080f026bb4143"><td class="memItemLeft" align="right" valign="top"><a id="a3ab28f7a964d138fc9d080f026bb4143"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> ()=0</td></tr>
+<tr class="memitem:a3ab28f7a964d138fc9d080f026bb4143"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a3ab28f7a964d138fc9d080f026bb4143">disable</a> ()=0</td></tr>
 <tr class="separator:a3ab28f7a964d138fc9d080f026bb4143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7905264ef5dde58d967fd7ebb011bdf9"><td class="memItemLeft" align="right" valign="top"><a id="a7905264ef5dde58d967fd7ebb011bdf9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addChannel</b> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aChannel)</td></tr>
+<tr class="memitem:a7905264ef5dde58d967fd7ebb011bdf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a7905264ef5dde58d967fd7ebb011bdf9">addChannel</a> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aChannel)</td></tr>
 <tr class="separator:a7905264ef5dde58d967fd7ebb011bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dd0f0385cd5ba7d281864ba6b8ff7a7"><td class="memItemLeft" align="right" valign="top"><a id="a5dd0f0385cd5ba7d281864ba6b8ff7a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeChannel</b> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aChannel)</td></tr>
+<tr class="memitem:a5dd0f0385cd5ba7d281864ba6b8ff7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a5dd0f0385cd5ba7d281864ba6b8ff7a7">removeChannel</a> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aChannel)</td></tr>
 <tr class="separator:a5dd0f0385cd5ba7d281864ba6b8ff7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac1386fd47307e8956c345b5ec5725c8f"><td class="memItemLeft" align="right" valign="top"><a id="ac1386fd47307e8956c345b5ec5725c8f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr>
+<tr class="memitem:ac1386fd47307e8956c345b5ec5725c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#ac1386fd47307e8956c345b5ec5725c8f">enabled_</a></td></tr>
 <tr class="separator:ac1386fd47307e8956c345b5ec5725c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49cd9c83a41cde12c4b0f5431c0e1b41"><td class="memItemLeft" align="right" valign="top"><a id="a49cd9c83a41cde12c4b0f5431c0e1b41"></a>
-Severity&#160;</td><td class="memItemRight" valign="bottom"><b>severity_</b></td></tr>
+<tr class="memitem:a49cd9c83a41cde12c4b0f5431c0e1b41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a49cd9c83a41cde12c4b0f5431c0e1b41">severity_</a></td></tr>
 <tr class="separator:a49cd9c83a41cde12c4b0f5431c0e1b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75d2b3e0a9551cd8788e3d9c320d79dd"><td class="memItemLeft" align="right" valign="top"><a id="a75d2b3e0a9551cd8788e3d9c320d79dd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>lineIdEnabled_</b></td></tr>
+<tr class="memitem:a75d2b3e0a9551cd8788e3d9c320d79dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a75d2b3e0a9551cd8788e3d9c320d79dd">lineIdEnabled_</a></td></tr>
 <tr class="separator:a75d2b3e0a9551cd8788e3d9c320d79dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af54f11a79fe19b15f2bc2f3783d382ba"><td class="memItemLeft" align="right" valign="top"><a id="af54f11a79fe19b15f2bc2f3783d382ba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>severityEnabled_</b></td></tr>
+<tr class="memitem:af54f11a79fe19b15f2bc2f3783d382ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#af54f11a79fe19b15f2bc2f3783d382ba">severityEnabled_</a></td></tr>
 <tr class="separator:af54f11a79fe19b15f2bc2f3783d382ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afebb8b5eef5abf365943cd10caf23bab"><td class="memItemLeft" align="right" valign="top"><a id="afebb8b5eef5abf365943cd10caf23bab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>timestampEnabled_</b></td></tr>
+<tr class="memitem:afebb8b5eef5abf365943cd10caf23bab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#afebb8b5eef5abf365943cd10caf23bab">timestampEnabled_</a></td></tr>
 <tr class="separator:afebb8b5eef5abf365943cd10caf23bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1a3577855cc40b5075b4d73a3c86a2"><td class="memItemLeft" align="right" valign="top"><a id="abf1a3577855cc40b5075b4d73a3c86a2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>threadEnabled_</b></td></tr>
+<tr class="memitem:abf1a3577855cc40b5075b4d73a3c86a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#abf1a3577855cc40b5075b4d73a3c86a2">threadEnabled_</a></td></tr>
 <tr class="separator:abf1a3577855cc40b5075b4d73a3c86a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abffe5eb81e1eb858eaad2cc806b3806b"><td class="memItemLeft" align="right" valign="top"><a id="abffe5eb81e1eb858eaad2cc806b3806b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>scopeEnabled_</b></td></tr>
+<tr class="memitem:abffe5eb81e1eb858eaad2cc806b3806b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#abffe5eb81e1eb858eaad2cc806b3806b">scopeEnabled_</a></td></tr>
 <tr class="separator:abffe5eb81e1eb858eaad2cc806b3806b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8691bad7f4c73aa394901e6e10b5fe47"><td class="memItemLeft" align="right" valign="top"><a id="a8691bad7f4c73aa394901e6e10b5fe47"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>fileEnabled_</b></td></tr>
+<tr class="memitem:a8691bad7f4c73aa394901e6e10b5fe47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a8691bad7f4c73aa394901e6e10b5fe47">fileEnabled_</a></td></tr>
 <tr class="separator:a8691bad7f4c73aa394901e6e10b5fe47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00b45879a45459f44475eab2618b30f9"><td class="memItemLeft" align="right" valign="top"><a id="a00b45879a45459f44475eab2618b30f9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>lineEnabled_</b></td></tr>
+<tr class="memitem:a00b45879a45459f44475eab2618b30f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a00b45879a45459f44475eab2618b30f9">lineEnabled_</a></td></tr>
 <tr class="separator:a00b45879a45459f44475eab2618b30f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb68b94fd8745d1e06d1cc1f2caa2e73"><td class="memItemLeft" align="right" valign="top"><a id="acb68b94fd8745d1e06d1cc1f2caa2e73"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>functionEnabled_</b></td></tr>
+<tr class="memitem:acb68b94fd8745d1e06d1cc1f2caa2e73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#acb68b94fd8745d1e06d1cc1f2caa2e73">functionEnabled_</a></td></tr>
 <tr class="separator:acb68b94fd8745d1e06d1cc1f2caa2e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48307be32eede5359f345b54363070ae"><td class="memItemLeft" align="right" valign="top"><a id="a48307be32eede5359f345b54363070ae"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>channelEnabled_</b></td></tr>
+<tr class="memitem:a48307be32eede5359f345b54363070ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a48307be32eede5359f345b54363070ae">channelEnabled_</a></td></tr>
 <tr class="separator:a48307be32eede5359f345b54363070ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ba1eb6372e9bf6d2d8b3ff53d529021"><td class="memItemLeft" align="right" valign="top"><a id="a3ba1eb6372e9bf6d2d8b3ff53d529021"></a>
-<a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels_</b></td></tr>
+<tr class="memitem:a3ba1eb6372e9bf6d2d8b3ff53d529021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a3ba1eb6372e9bf6d2d8b3ff53d529021">channels_</a></td></tr>
 <tr class="separator:a3ba1eb6372e9bf6d2d8b3ff53d529021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Log sink base. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4d53e570fb2be9c97596289743d0ef9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d53e570fb2be9c97596289743d0ef9d">&#9670;&nbsp;</a></span>Sink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">library::core::logger::sinks::Sink::Sink </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8">Severity</a> &amp;&#160;</td>
+          <td class="paramname"><em>aSeverity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00134e95d23ea002acd6dfcc8feed7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00134e95d23ea002acd6dfcc8feed7e">&#9670;&nbsp;</a></span>~Sink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual library::core::logger::sinks::Sink::~Sink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7905264ef5dde58d967fd7ebb011bdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7905264ef5dde58d967fd7ebb011bdf9">&#9670;&nbsp;</a></span>addChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void library::core::logger::sinks::Sink::addChannel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aChannel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00ba941947d903825f4922694e0961dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ba941947d903825f4922694e0961dd">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html">Sink</a>* library::core::logger::sinks::Sink::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#ac5c80193b0832f760a7447e7abc7d468">library::core::logger::sinks::Console</a>.</p>
+
+</div>
+</div>
+<a id="a3ab28f7a964d138fc9d080f026bb4143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab28f7a964d138fc9d080f026bb4143">&#9670;&nbsp;</a></span>disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void library::core::logger::sinks::Sink::disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#adc1a648433f26cc4397f1e703c9506c7">library::core::logger::sinks::Console</a>.</p>
+
+</div>
+</div>
+<a id="aa41e2b1488d2e761ded1d209eacf02b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa41e2b1488d2e761ded1d209eacf02b3">&#9670;&nbsp;</a></span>enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void library::core::logger::sinks::Sink::enable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#a09190fa0b66fa9a03792e6a546590da9">library::core::logger::sinks::Console</a>.</p>
+
+</div>
+</div>
+<a id="a708041f4c444c21ea1963bd0649b6ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708041f4c444c21ea1963bd0649b6ac5">&#9670;&nbsp;</a></span>isChannelLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isChannelLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31a8ad92f76ad05d630d50fe63c1b747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a8ad92f76ad05d630d50fe63c1b747">&#9670;&nbsp;</a></span>isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a736086840b9c964c40e349d5e7f68cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736086840b9c964c40e349d5e7f68cca">&#9670;&nbsp;</a></span>isFileLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isFileLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39078847a7c0f6a22893dd82e64545f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39078847a7c0f6a22893dd82e64545f1">&#9670;&nbsp;</a></span>isFunctionLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isFunctionLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5670a0ee01ffa61fce94ff14b744cda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5670a0ee01ffa61fce94ff14b744cda4">&#9670;&nbsp;</a></span>isLineIdLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isLineIdLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a701bbd71bc5f871ac97abdc98fa4460f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701bbd71bc5f871ac97abdc98fa4460f">&#9670;&nbsp;</a></span>isLineLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isLineLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09eb7bc8611effd50151c5e371a5962c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09eb7bc8611effd50151c5e371a5962c">&#9670;&nbsp;</a></span>isScopeLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isScopeLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6daeb043af9f1997c04d0e24c12900c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6daeb043af9f1997c04d0e24c12900c">&#9670;&nbsp;</a></span>isSeverityLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isSeverityLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdf81adfa6c595d8014b466d86479fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf81adfa6c595d8014b466d86479fae">&#9670;&nbsp;</a></span>isThreadLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isThreadLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9a663485069c6716bb3675d67bd6cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a663485069c6716bb3675d67bd6cd6">&#9670;&nbsp;</a></span>isTimestampLogged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::isTimestampLogged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dd0f0385cd5ba7d281864ba6b8ff7a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd0f0385cd5ba7d281864ba6b8ff7a7">&#9670;&nbsp;</a></span>removeChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void library::core::logger::sinks::Sink::removeChannel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aChannel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a48307be32eede5359f345b54363070ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48307be32eede5359f345b54363070ae">&#9670;&nbsp;</a></span>channelEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::channelEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ba1eb6372e9bf6d2d8b3ff53d529021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba1eb6372e9bf6d2d8b3ff53d529021">&#9670;&nbsp;</a></span>channels_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt;<a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a>&gt; library::core::logger::sinks::Sink::channels_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1386fd47307e8956c345b5ec5725c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1386fd47307e8956c345b5ec5725c8f">&#9670;&nbsp;</a></span>enabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::enabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8691bad7f4c73aa394901e6e10b5fe47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8691bad7f4c73aa394901e6e10b5fe47">&#9670;&nbsp;</a></span>fileEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::fileEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb68b94fd8745d1e06d1cc1f2caa2e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb68b94fd8745d1e06d1cc1f2caa2e73">&#9670;&nbsp;</a></span>functionEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::functionEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00b45879a45459f44475eab2618b30f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b45879a45459f44475eab2618b30f9">&#9670;&nbsp;</a></span>lineEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::lineEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75d2b3e0a9551cd8788e3d9c320d79dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d2b3e0a9551cd8788e3d9c320d79dd">&#9670;&nbsp;</a></span>lineIdEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::lineIdEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abffe5eb81e1eb858eaad2cc806b3806b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffe5eb81e1eb858eaad2cc806b3806b">&#9670;&nbsp;</a></span>scopeEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::scopeEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49cd9c83a41cde12c4b0f5431c0e1b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cd9c83a41cde12c4b0f5431c0e1b41">&#9670;&nbsp;</a></span>severity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8">Severity</a> library::core::logger::sinks::Sink::severity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af54f11a79fe19b15f2bc2f3783d382ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54f11a79fe19b15f2bc2f3783d382ba">&#9670;&nbsp;</a></span>severityEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::severityEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1a3577855cc40b5075b4d73a3c86a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1a3577855cc40b5075b4d73a3c86a2">&#9670;&nbsp;</a></span>threadEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::threadEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afebb8b5eef5abf365943cd10caf23bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebb8b5eef5abf365943cd10caf23bab">&#9670;&nbsp;</a></span>timestampEnabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool library::core::logger::sinks::Sink::timestampEnabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/Library/Core/Logger/Sinks/<a class="el" href="_sinks_2_sink_8hpp_source.html">Sink.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -201,7 +772,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>channelEnabled_</b></
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>library</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>logger</b></li><li class="navelem"><b>sinks</b></li><li class="navelem"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html">Sink</a></li>
+    <li class="navelem"><a class="el" href="namespacelibrary.html">library</a></li><li class="navelem"><a class="el" href="namespacelibrary_1_1core.html">core</a></li><li class="navelem"><a class="el" href="namespacelibrary_1_1core_1_1logger.html">logger</a></li><li class="navelem"><a class="el" href="namespacelibrary_1_1core_1_1logger_1_1sinks.html">sinks</a></li><li class="navelem"><a class="el" href="classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html">Sink</a></li>
   </ul>
 </div>
 </body>

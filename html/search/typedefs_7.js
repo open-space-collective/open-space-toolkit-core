@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tuple',['Tuple',['../_tuple_8hpp.html#a551ef72e2adb570c4d6bdf5e1bbc96b9',1,'library::core::ctnr']]]
+  ['pair',['Pair',['../namespacelibrary_1_1core_1_1ctnr.html#aad6f8de4c0f279c10436d59d4ace74bd',1,'library::core::ctnr']]],
+  ['path',['Path',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary.html#a5240b2a04a39b841ed81e52e962f0cbf',1,'library::core::ctnr::Dictionary']]],
+  ['predicate',['Predicate',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#a74cd325a740870aea490b6b739aa06ae',1,'library::core::ctnr::Array']]]
 ];

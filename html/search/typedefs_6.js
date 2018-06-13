@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['shared',['Shared',['../_shared_8hpp.html#a3dae1a00f899bac0366794fa85eda8ee',1,'library::core::types']]],
-  ['size',['Size',['../_size_8hpp.html#a701626ea1027888ebbb8cfd0ff7adab0',1,'library::core::types']]]
+  ['orderedmap',['OrderedMap',['../namespacelibrary_1_1core_1_1ctnr.html#a1c0809231c3bc9fccce602bd7941a36b',1,'library::core::ctnr']]]
 ];

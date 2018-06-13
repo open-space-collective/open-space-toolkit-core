@@ -81,24 +81,46 @@ $(document).ready(function(){initNavTree('md__c_o_n_t_r_i_b_u_t_i_n_g.html','');
 <div class="title">Contributing </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><em>This document is a work in progress.</em></p>
-<h2>Introduction</h2>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Introduction">Introduction</a></li>
+<li class="level1"><a href="#Guidelines">Guidelines</a><ul><li class="level2"><a href="#Codebase">Codebase</a><ul><li class="level3"><a href="#C">C++</a></li>
+<li class="level3"><a href="#Python">Python</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#Version">Version Control</a><ul><li class="level3"><a href="#Rules">Rules</a></li>
+<li class="level3"><a href="#Commit">Commit Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><p><em>⚠ This document is a work in progress.</em></p>
+<h1><a class="anchor" id="Introduction"></a>
+Introduction</h1>
 <p><em>TBC...</em></p>
-<h2>Guidelines</h2>
-<h3>Codebase</h3>
-<h4>C++</h4>
+<h1><a class="anchor" id="Guidelines"></a>
+Guidelines</h1>
+<h2><a class="anchor" id="Codebase"></a>
+Codebase</h2>
+<h3><a class="anchor" id="C"></a>
+C++</h3>
 <p>Include order from specific to generic:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Library/Astrodynamics/Orbit.hpp&gt;</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_integer_8hpp.html">Library/Core/Types/Integer.hpp</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_utilities_8hpp.html">Library/Core/Utilities.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div></div><!-- fragment --><p>References:</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/2762568/c-c-include-file-order-best-practices">https://stackoverflow.com/questions/2762568/c-c-include-file-order-best-practices</a></li>
 <li><a href="https://blog.kowalczyk.info/article/qg/order-of-include-headers-in-cc.html">https://blog.kowalczyk.info/article/qg/order-of-include-headers-in-cc.html</a></li>
 </ul>
-<h4>Python</h4>
+<h3><a class="anchor" id="Python"></a>
+Python</h3>
 <p><em>TBC...</em></p>
-<h3>Version Control</h3>
-<h4>Rules</h4>
+<h2><a class="anchor" id="Version"></a>
+Version Control</h2>
+<h3><a class="anchor" id="Rules"></a>
+Rules</h3>
 <p><em>TBC...</em></p>
-<h4>Commit Messages</h4>
+<h3><a class="anchor" id="Commit"></a>
+Commit Messages</h3>
 <p><a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></p>
 <p>Use active form (<code>Do something</code>).</p>
 <p>Prefix commit messages using the following tags:</p>
