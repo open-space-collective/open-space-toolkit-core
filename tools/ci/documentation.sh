@@ -18,6 +18,8 @@ docker_directory="${script_directory}/../docker"
 
 source "${docker_directory}/.env"
 
+# Generate documentation
+
 docker run \
 --rm \
 --volume="${project_directory}:/app:rw" \
@@ -25,6 +27,8 @@ docker run \
 --workdir="/app/build" \
 ${image_name} \
 /bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
+
+# Deploy documentation
 
 mkdir -p "./gh-pages"
 
@@ -38,8 +42,6 @@ git clone -b gh-pages https://git@${GH_REPO_REF}
 
 pushd ${GH_REPO_NAME}
 
-git status
-
 # Set the push default to simple i.e. push only the current branch.
 
 git config --global push.default simple
@@ -49,17 +51,12 @@ git config --global push.default simple
 git config user.name "Travis CI"
 git config user.email "travis@travis-ci.org"
 
-pwd
-
-ls -la
-
 rm -rf ./*
 mv .git git
 rm -rf ./.*
 mv git .git
 
-ls -la
-
+cp "${project_directory}"/README.md .
 cp -r "${project_directory}"/docs/* .
 
 # Need to create a .nojekyll file to allow filenames starting with an underscore
@@ -68,10 +65,6 @@ cp -r "${project_directory}"/docs/* .
 # to NO, which it is by default. So creating the file just in case.
 
 echo "" > .nojekyll
-
-ls -la
-
-git status
 
 # Only upload if Doxygen successfully created the documentation.
 # Check this by verifying that the html directory and the file html/index.html
@@ -97,14 +90,13 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
 
     echo 'Pushing documentation to remote...'
 
-    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}"
-    # git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
+    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
 
 else
     
     echo '' >&2
-    echo 'Warning: No documentation (html) files have been found!' >&2
-    echo 'Warning: Not going to push the documentation to GitHub!' >&2
+    echo '[Error] No documentation (html) files have been found!' >&2
+    
     exit 1
 
 fi

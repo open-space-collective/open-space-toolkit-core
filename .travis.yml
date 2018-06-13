@@ -36,40 +36,40 @@ env:
 
 stages:
 
-    # - test
-    # - coverage
+    - test
+    - coverage
     - name: deploy
-    #   if: (branch = master) AND (NOT type IN (pull_request))
+      if: (branch = master) AND (NOT type IN (pull_request))
 
 jobs:
 
     include:
 
-        # - stage: test
+        - stage: test
 
-        #   script:
+          script:
 
-        #         # Pull Docker image from repository
+                # Pull Docker image from repository
                 
-        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        #         - docker pull openspacecollective/library-core:latest || true
+                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+                - docker pull openspacecollective/library-core:latest || true
 
-        #         # Run tests
+                # Run tests
 
-        #         - ./tools/ci/test.sh
+                - ./tools/ci/test.sh
 
-        # - stage: coverage
+        - stage: coverage
         
-        #   script:
+          script:
 
-        #         # Pull Docker image from repository
+                # Pull Docker image from repository
                 
-        #         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        #         - docker pull openspacecollective/library-core:latest || true
+                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+                - docker pull openspacecollective/library-core:latest || true
 
-        #         # Run coverage
+                # Run coverage
 
-        #         - ./tools/ci/coverage.sh
+                - ./tools/ci/coverage.sh
         
         - stage: deploy
 
@@ -80,81 +80,8 @@ jobs:
                 - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
                 - docker pull openspacecollective/library-core:latest || true
 
-                # Generate documentation
+                # Generate and deploy documentation
 
                 - ./tools/ci/documentation.sh
-
-                # Deploy documentation
-
-# before_install:
-
-#     # Nothing to do
-
-#     #     - |
-#     #         if test "$TRAVIS_OS_NAME" == "osx"; then
-#     #         brew update
-#     #         brew install lcov
-#     #         fi
-#     #     - |
-#     #         if test "$TRAVIS_OS_NAME" == "linux"; then
-#     #             if test "$CXX" == "g++" ; then
-#     #                 sudo apt-get install -qq g++-4.8
-#     #                 export CXX="g++-4.8"
-#     #             fi
-#     #         fi
-
-# install:
-
-#     # Nothing to do
-
-# before_script:
-
-#     # Pull Docker image from repository
-
-#     - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-#     - docker pull openspacecollective/library-core:latest || true
-
-#     # Build Docker image
-
-#     # - docker build --cache-from openspacecollective/library-core:latest --tag openspacecollective/library-core:"${TRAVIS_COMMIT}" --tag openspacecollective/library-core:latest ./tools/docker/environment/
-
-# script:
-    
-#     - ./tools/ci/test.sh
-
-# after_success:
-
-#     # Generate coverage report
-    
-#     - ./tools/ci/coverage.sh
-
-#     # Generate documentation
-
-#     - ./tools/ci/documentation.sh
-
-#     # Push Docker image to repository
-
-#     # - docker push openspacecollective/library-core:"${TRAVIS_COMMIT}"
-#     # - docker push openspacecollective/library-core:latest
-
-# after_failure:
-
-#     # Nothing to do
-
-# before_deploy:
-
-#     # Nothing to do
-
-# deploy:
-
-#     # Nothing to do
-
-# after_deploy:
-
-#     # Nothing to do
-
-# after_script:
-
-#     # Nothing to do
 
 ################################################################################################################################################################
