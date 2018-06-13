@@ -48,42 +48,76 @@ TEST (Library_Core_Types_Integer, EqualToOperator)
 
     using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(0) == Integer(0)) ;
-    EXPECT_TRUE(Integer(123) == Integer(123)) ;
-    EXPECT_TRUE(Integer(+123) == Integer(+123)) ;
-    EXPECT_TRUE(Integer(-123) == Integer(-123)) ;
+    {
 
-    EXPECT_FALSE(Integer(0) == Integer(1)) ;
-    EXPECT_FALSE(Integer(1) == Integer(0)) ;
-    EXPECT_FALSE(Integer(-1) == Integer(+1)) ;
+        EXPECT_TRUE(Integer(0) == Integer(0)) ;
+        EXPECT_TRUE(Integer(123) == Integer(123)) ;
+        EXPECT_TRUE(Integer(+123) == Integer(+123)) ;
+        EXPECT_TRUE(Integer(-123) == Integer(-123)) ;
 
-    EXPECT_FALSE(Integer::Undefined() == Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() == Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() == Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() == Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() == Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer(0) == Integer(1)) ;
+        EXPECT_FALSE(Integer(1) == Integer(0)) ;
+        EXPECT_FALSE(Integer(-1) == Integer(+1)) ;
+
+        EXPECT_FALSE(Integer::Undefined() == Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() == Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() == Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() == Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() == Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(0) == 0) ;
+        EXPECT_TRUE(Integer(123) == 123) ;
+        EXPECT_TRUE(Integer(+123) == +123) ;
+        EXPECT_TRUE(Integer(-123) == -123) ;
+
+        EXPECT_FALSE(Integer(0) == 1) ;
+        EXPECT_FALSE(Integer(1) == 0) ;
+        EXPECT_FALSE(Integer(-1) == +1) ;
+
+    }
 
 }
 
 TEST (Library_Core_Types_Integer, NotEqualToOperator)
 {
 
-    using library::core::types::Integer ;    
+    using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(0) != Integer(1)) ;
-    EXPECT_TRUE(Integer(1) != Integer(0)) ;
-    EXPECT_TRUE(Integer(-1) != Integer(+1)) ;
+    {
 
-    EXPECT_FALSE(Integer(0) != Integer(0)) ;
-    EXPECT_FALSE(Integer(123) != Integer(123)) ;
-    EXPECT_FALSE(Integer(+123) != Integer(+123)) ;
-    EXPECT_FALSE(Integer(-123) != Integer(-123)) ;
+        EXPECT_TRUE(Integer(0) != Integer(1)) ;
+        EXPECT_TRUE(Integer(1) != Integer(0)) ;
+        EXPECT_TRUE(Integer(-1) != Integer(+1)) ;
 
-    EXPECT_FALSE(Integer::Undefined() != Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() != Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() != Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() != Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() != Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer(0) != Integer(0)) ;
+        EXPECT_FALSE(Integer(123) != Integer(123)) ;
+        EXPECT_FALSE(Integer(+123) != Integer(+123)) ;
+        EXPECT_FALSE(Integer(-123) != Integer(-123)) ;
+
+        EXPECT_FALSE(Integer::Undefined() != Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() != Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() != Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() != Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() != Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(0) != 1) ;
+        EXPECT_TRUE(Integer(1) != 0) ;
+        EXPECT_TRUE(Integer(-1) != +1) ;
+
+        EXPECT_FALSE(Integer(0) != 0) ;
+        EXPECT_FALSE(Integer(123) != 123) ;
+        EXPECT_FALSE(Integer(+123) != +123) ;
+        EXPECT_FALSE(Integer(-123) != -123) ;
+
+    }    
 
 }
 
@@ -92,24 +126,45 @@ TEST (Library_Core_Types_Integer, LessThanOperator)
 
     using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(0) < Integer(1)) ;
-    EXPECT_TRUE(Integer(1) < Integer(2)) ;
-    EXPECT_TRUE(Integer(-1) < Integer(0)) ;
-    EXPECT_TRUE(Integer(-1) < Integer(+1)) ;
-    EXPECT_TRUE(Integer(-123) < Integer(+123)) ;
+    {
 
-    EXPECT_FALSE(Integer(0) < Integer(0)) ;
-    EXPECT_FALSE(Integer(1) < Integer(0)) ;
-    EXPECT_FALSE(Integer(+1) < Integer(-1)) ;
-    EXPECT_FALSE(Integer(+123) < Integer(-123)) ;
-    EXPECT_FALSE(Integer(+123) < Integer(+123)) ;
-    EXPECT_FALSE(Integer(-123) < Integer(-123)) ;
-    
-    EXPECT_FALSE(Integer::Undefined() < Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() < Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() < Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() < Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() < Integer::PositiveInfinity()) ;
+        EXPECT_TRUE(Integer(0) < Integer(1)) ;
+        EXPECT_TRUE(Integer(1) < Integer(2)) ;
+        EXPECT_TRUE(Integer(-1) < Integer(0)) ;
+        EXPECT_TRUE(Integer(-1) < Integer(+1)) ;
+        EXPECT_TRUE(Integer(-123) < Integer(+123)) ;
+
+        EXPECT_FALSE(Integer(0) < Integer(0)) ;
+        EXPECT_FALSE(Integer(1) < Integer(0)) ;
+        EXPECT_FALSE(Integer(+1) < Integer(-1)) ;
+        EXPECT_FALSE(Integer(+123) < Integer(-123)) ;
+        EXPECT_FALSE(Integer(+123) < Integer(+123)) ;
+        EXPECT_FALSE(Integer(-123) < Integer(-123)) ;
+        
+        EXPECT_FALSE(Integer::Undefined() < Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() < Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() < Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() < Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() < Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(0) < 1) ;
+        EXPECT_TRUE(Integer(1) < 2) ;
+        EXPECT_TRUE(Integer(-1) < 0) ;
+        EXPECT_TRUE(Integer(-1) < +1) ;
+        EXPECT_TRUE(Integer(-123) < +123) ;
+
+        EXPECT_FALSE(Integer(0) < 0) ;
+        EXPECT_FALSE(Integer(1) < 0) ;
+        EXPECT_FALSE(Integer(+1) < -1) ;
+        EXPECT_FALSE(Integer(+123) < -123) ;
+        EXPECT_FALSE(Integer(+123) < +123) ;
+        EXPECT_FALSE(Integer(-123) < -123) ;
+
+    }
 
 }
 
@@ -118,24 +173,45 @@ TEST (Library_Core_Types_Integer, LessThanOrEqualToOperator)
 
     using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(0) <= Integer(1)) ;
-    EXPECT_TRUE(Integer(1) <= Integer(2)) ;
-    EXPECT_TRUE(Integer(-1) <= Integer(0)) ;
-    EXPECT_TRUE(Integer(-1) <= Integer(+1)) ;
-    EXPECT_TRUE(Integer(-123) <= Integer(+123)) ;
-    EXPECT_TRUE(Integer(0) <= Integer(0)) ;
-    EXPECT_TRUE(Integer(+123) <= Integer(+123)) ;
-    EXPECT_TRUE(Integer(-123) <= Integer(-123)) ;
+    {
 
-    EXPECT_FALSE(Integer(1) <= Integer(0)) ;
-    EXPECT_FALSE(Integer(+1) <= Integer(-1)) ;
-    EXPECT_FALSE(Integer(+123) <= Integer(-123)) ;
-    
-    EXPECT_FALSE(Integer::Undefined() <= Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::PositiveInfinity()) ;
+        EXPECT_TRUE(Integer(0) <= Integer(1)) ;
+        EXPECT_TRUE(Integer(1) <= Integer(2)) ;
+        EXPECT_TRUE(Integer(-1) <= Integer(0)) ;
+        EXPECT_TRUE(Integer(-1) <= Integer(+1)) ;
+        EXPECT_TRUE(Integer(-123) <= Integer(+123)) ;
+        EXPECT_TRUE(Integer(0) <= Integer(0)) ;
+        EXPECT_TRUE(Integer(+123) <= Integer(+123)) ;
+        EXPECT_TRUE(Integer(-123) <= Integer(-123)) ;
+
+        EXPECT_FALSE(Integer(1) <= Integer(0)) ;
+        EXPECT_FALSE(Integer(+1) <= Integer(-1)) ;
+        EXPECT_FALSE(Integer(+123) <= Integer(-123)) ;
+        
+        EXPECT_FALSE(Integer::Undefined() <= Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(0) <= 1) ;
+        EXPECT_TRUE(Integer(1) <= 2) ;
+        EXPECT_TRUE(Integer(-1) <= 0) ;
+        EXPECT_TRUE(Integer(-1) <= +1) ;
+        EXPECT_TRUE(Integer(-123) <= +123) ;
+        EXPECT_TRUE(Integer(0) <= 0) ;
+        EXPECT_TRUE(Integer(+123) <= +123) ;
+        EXPECT_TRUE(Integer(-123) <= -123) ;
+
+        EXPECT_FALSE(Integer(1) <= 0) ;
+        EXPECT_FALSE(Integer(+1) <= -1) ;
+        EXPECT_FALSE(Integer(+123) <= -123) ;
+
+    }
 
 }
 
@@ -144,24 +220,45 @@ TEST (Library_Core_Types_Integer, GreaterThanOperator)
 
     using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(1) > Integer(0)) ;
-    EXPECT_TRUE(Integer(2) > Integer(1)) ;
-    EXPECT_TRUE(Integer(+1) > Integer(0)) ;
-    EXPECT_TRUE(Integer(+1) > Integer(-1)) ;
-    EXPECT_TRUE(Integer(+123) > Integer(-123)) ;
+    {
 
-    EXPECT_FALSE(Integer(0) > Integer(0)) ;
-    EXPECT_FALSE(Integer(0) > Integer(1)) ;
-    EXPECT_FALSE(Integer(-1) > Integer(+1)) ;
-    EXPECT_FALSE(Integer(-123) > Integer(+123)) ;
-    EXPECT_FALSE(Integer(+123) > Integer(+123)) ;
-    EXPECT_FALSE(Integer(-123) > Integer(-123)) ;
-    
-    EXPECT_FALSE(Integer::Undefined() > Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() > Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() > Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() > Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() > Integer::PositiveInfinity()) ;
+        EXPECT_TRUE(Integer(1) > Integer(0)) ;
+        EXPECT_TRUE(Integer(2) > Integer(1)) ;
+        EXPECT_TRUE(Integer(+1) > Integer(0)) ;
+        EXPECT_TRUE(Integer(+1) > Integer(-1)) ;
+        EXPECT_TRUE(Integer(+123) > Integer(-123)) ;
+
+        EXPECT_FALSE(Integer(0) > Integer(0)) ;
+        EXPECT_FALSE(Integer(0) > Integer(1)) ;
+        EXPECT_FALSE(Integer(-1) > Integer(+1)) ;
+        EXPECT_FALSE(Integer(-123) > Integer(+123)) ;
+        EXPECT_FALSE(Integer(+123) > Integer(+123)) ;
+        EXPECT_FALSE(Integer(-123) > Integer(-123)) ;
+        
+        EXPECT_FALSE(Integer::Undefined() > Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() > Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() > Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() > Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() > Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(1) > 0) ;
+        EXPECT_TRUE(Integer(2) > 1) ;
+        EXPECT_TRUE(Integer(+1) > 0) ;
+        EXPECT_TRUE(Integer(+1) > -1) ;
+        EXPECT_TRUE(Integer(+123) > -123) ;
+
+        EXPECT_FALSE(Integer(0) > 0) ;
+        EXPECT_FALSE(Integer(0) > 1) ;
+        EXPECT_FALSE(Integer(-1) > +1) ;
+        EXPECT_FALSE(Integer(-123) > +123) ;
+        EXPECT_FALSE(Integer(+123) > +123) ;
+        EXPECT_FALSE(Integer(-123) > -123) ;
+
+    }
 
 }
 
@@ -170,24 +267,45 @@ TEST (Library_Core_Types_Integer, GreaterThanOrEqualToOperator)
 
     using library::core::types::Integer ;
 
-    EXPECT_TRUE(Integer(1) >= Integer(0)) ;
-    EXPECT_TRUE(Integer(2) >= Integer(1)) ;
-    EXPECT_TRUE(Integer(+1) >= Integer(0)) ;
-    EXPECT_TRUE(Integer(+1) >= Integer(-1)) ;
-    EXPECT_TRUE(Integer(+123) >= Integer(-123)) ;
-    EXPECT_TRUE(Integer(0) >= Integer(0)) ;
-    EXPECT_TRUE(Integer(+123) >= Integer(+123)) ;
-    EXPECT_TRUE(Integer(-123) >= Integer(-123)) ;
+    {
 
-    EXPECT_FALSE(Integer(0) >= Integer(1)) ;
-    EXPECT_FALSE(Integer(-1) >= Integer(+1)) ;
-    EXPECT_FALSE(Integer(-123) >= Integer(+123)) ;
-    
-    EXPECT_FALSE(Integer::Undefined() >= Integer::Undefined()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::PositiveInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::NegativeInfinity()) ;
-    EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::PositiveInfinity()) ;
+        EXPECT_TRUE(Integer(1) >= Integer(0)) ;
+        EXPECT_TRUE(Integer(2) >= Integer(1)) ;
+        EXPECT_TRUE(Integer(+1) >= Integer(0)) ;
+        EXPECT_TRUE(Integer(+1) >= Integer(-1)) ;
+        EXPECT_TRUE(Integer(+123) >= Integer(-123)) ;
+        EXPECT_TRUE(Integer(0) >= Integer(0)) ;
+        EXPECT_TRUE(Integer(+123) >= Integer(+123)) ;
+        EXPECT_TRUE(Integer(-123) >= Integer(-123)) ;
+
+        EXPECT_FALSE(Integer(0) >= Integer(1)) ;
+        EXPECT_FALSE(Integer(-1) >= Integer(+1)) ;
+        EXPECT_FALSE(Integer(-123) >= Integer(+123)) ;
+        
+        EXPECT_FALSE(Integer::Undefined() >= Integer::Undefined()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::PositiveInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::NegativeInfinity()) ;
+        EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::PositiveInfinity()) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Integer(1) >= 0) ;
+        EXPECT_TRUE(Integer(2) >= 1) ;
+        EXPECT_TRUE(Integer(+1) >= 0) ;
+        EXPECT_TRUE(Integer(+1) >= -1) ;
+        EXPECT_TRUE(Integer(+123) >= -123) ;
+        EXPECT_TRUE(Integer(0) >= 0) ;
+        EXPECT_TRUE(Integer(+123) >= +123) ;
+        EXPECT_TRUE(Integer(-123) >= -123) ;
+
+        EXPECT_FALSE(Integer(0) >= 1) ;
+        EXPECT_FALSE(Integer(-1) >= +1) ;
+        EXPECT_FALSE(Integer(-123) >= +123) ;
+
+    }
 
 }
 

@@ -9,7 +9,7 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "Library")
+SET (PROJECT_NAME "Library :: Core")
 SET (PROJECT_DESCRIPTION "Core library.")
 SET (PROJECT_PATH "Library/Core")
 SET (PROJECT_PACKAGE_NAME "library-core")
@@ -29,7 +29,7 @@ OPTION (BUILD_UTILITY "Build utility." OFF)
 OPTION (BUILD_UNIT_TESTS "Build tests" ON)
 OPTION (BUILD_PYTHON_BINDINGS "Build Python bindings." ON)
 OPTION (BUILD_CODE_COVERAGE "Build code coverage" ON)
-OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
+OPTION (BUILD_DOCUMENTATION "Build documentation" ON)
 OPTION (INSTALL_DATA "Install data" ON)
 
 ################################################################################################################################################################
@@ -426,47 +426,7 @@ ENDIF ()
 
 IF (BUILD_DOCUMENTATION)
 
-    SET (DOCUMENTATION_TARGET "docs")
-
-    SET (DOXYFILE_IN "${PROJECT_SOURCE_DIR}/tools/doxygen/Doxyfile.in")
-    SET (DOXYFILE "${CMAKE_CURRENT_BINARY_DIR}/Doxyfile")
-
-    CONFIGURE_FILE (${DOXYFILE_IN} ${DOXYFILE} @ONLY)
-
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/example-site/header.html" "${CMAKE_CURRENT_BINARY_DIR}/header.html" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/example-site/footer.html" "${CMAKE_CURRENT_BINARY_DIR}/footer.html" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/customdoxygen.css" "${CMAKE_CURRENT_BINARY_DIR}/customdoxygen.css" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/doxy-boot.js" "${CMAKE_CURRENT_BINARY_DIR}/doxy-boot.js" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/jquery.smartmenus.js" "${CMAKE_CURRENT_BINARY_DIR}/jquery.smartmenus.js" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/addons/bootstrap/jquery.smartmenus.bootstrap.js" "${CMAKE_CURRENT_BINARY_DIR}/jquery.smartmenus.bootstrap.js" COPYONLY)
-    CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/tools/doxygen/doxygen-bootstrapped/addons/bootstrap/jquery.smartmenus.bootstrap.css" "${CMAKE_CURRENT_BINARY_DIR}/jquery.smartmenus.bootstrap.css" COPYONLY)
-
-    FIND_PACKAGE ("Doxygen" QUIET)
-    
-    IF (NOT DOXYGEN_FOUND)
-            
-        ADD_SUBDIRECTORY ("${PROJECT_SOURCE_DIR}/thirdparty/doxygen")
-
-        SET (DOXYGEN_EXECUTABLE "${CMAKE_CURRENT_BINARY_DIR}/thirdparty/doxygen/source/bin/doxygen")
-
-        ADD_CUSTOM_TARGET (${DOCUMENTATION_TARGET} ALL
-            COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            DEPENDS "doxygen"
-            COMMENT "Generating API documentation with Doxygen"
-            VERBATIM)
-
-    ELSE ()
-
-        ADD_CUSTOM_TARGET (${DOCUMENTATION_TARGET} ALL
-            COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            COMMENT "Generating API documentation with Doxygen"
-            VERBATIM)
-        
-    ENDIF ()
-
-    INSTALL (DIRECTORY "${DOCS_OUTPUT_PATH}/html/" DESTINATION ${INSTALL_DOC} COMPONENT "documentation")
+    ADD_SUBDIRECTORY ("${PROJECT_SOURCE_DIR}/docs")
 
 ENDIF ()
 

@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/ci/coverage.sh
+# @file           tools/development/start.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,16 +11,37 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-project_directory="${script_directory}/../.."
+# Setup environment
 
-source "${project_directory}/tools/.env"
+source "${script_directory}/../.env"
+
+# Build Docker image if it does not exist already
+
+if [[ "$(docker images -q ${image_name} 2> /dev/null)" == "" ]]; then
+
+    pushd "${script_directory}/docker" > /dev/null
+
+    ./build.sh
+
+    popd
+
+fi
+
+# Run Docker container
 
 docker run \
+--name="${container_name}" \
+-it \
 --rm \
+--privileged \
 --volume="${project_directory}:/app:rw" \
 --volume="/app/build" \
+--volume="${script_directory}/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${script_directory}/helpers/test.sh:/app/build/test.sh:ro" \
+--volume="${script_directory}/helpers/debug.sh:/app/build/debug.sh:ro" \
+--volume="${script_directory}/helpers/clean.sh:/app/build/clean.sh:ro" \
 --workdir="/app/build" \
-${image_name} \
-/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make coverage && bash <(curl -s https://codecov.io/bash) -X gcov -y /app/.codecov.yml -t ef1b0312-c7d8-4b72-bd26-d3fc065a5a08 || echo 'Codecov did not collect coverage reports'"
+"${image_name}" \
+"/bin/bash"
 
 ################################################################################################################################################################
