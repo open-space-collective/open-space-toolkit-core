@@ -18,13 +18,13 @@ docker_directory="${script_directory}/../docker"
 
 source "${docker_directory}/.env"
 
-# docker run \
-# --rm \
-# --volume="${project_directory}:/app:rw" \
-# --volume="/app/build" \
-# --workdir="/app/build" \
-# ${image_name} \
-# /bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
+docker run \
+--rm \
+--volume="${project_directory}:/app:rw" \
+--volume="/app/build" \
+--workdir="/app/build" \
+${image_name} \
+/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
 mkdir -p "./gh-pages"
 
@@ -67,9 +67,9 @@ cp -r "${project_directory}"/docs/* .
 # Presumably this is only needed when the SHORT_NAMES option in Doxygen is set
 # to NO, which it is by default. So creating the file just in case.
 
-ls -la
-
 echo "" > .nojekyll
+
+ls -la
 
 git status
 
