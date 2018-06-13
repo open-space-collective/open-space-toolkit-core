@@ -1,4 +1,4 @@
-# Library :: Core :: Contributing
+# Contributing
 
 *This document is a work in progress.*
 
