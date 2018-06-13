@@ -1,16 +1,19 @@
-# Contributing
+Contributing
+============
 
-*This document is a work in progress.*
+*⚠ This document is a work in progress.*
 
-## Introduction
+[TOC]
+
+# Introduction {#Introduction}
 
 *TBC...*
 
-## Guidelines
+# Guidelines {#Guidelines}
 
-### Codebase
+## Codebase {#Codebase}
 
-#### C++
+### C++ {#C}
 
 Include order from specific to generic:
 
@@ -29,17 +32,17 @@ References:
 - https://stackoverflow.com/questions/2762568/c-c-include-file-order-best-practices
 - https://blog.kowalczyk.info/article/qg/order-of-include-headers-in-cc.html
 
-#### Python
+### Python {#Python}
 
 *TBC...*
 
-### Version Control
+## Version Control {#Version}
 
-#### Rules
+### Rules {#Rules}
 
 *TBC...*
 
-#### Commit Messages
+### Commit Messages {#Commit}
 
 [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 
