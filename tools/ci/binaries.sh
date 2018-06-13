@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/docker/environment/helplers/clean.sh
+# @file           tools/ci/binaries.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,13 +11,25 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-rm -rf ${script_directory}/*
-rm -rf ${script_directory}/../bin/*.exe
-rm -rf ${script_directory}/../bin/*.test
-rm -rf ${script_directory}/../bin/*.test-*
-rm -rf ${script_directory}/../docs/html
-rm -rf ${script_directory}/../docs/latex
-rm -rf ${script_directory}/../lib/*.so
-rm -rf ${script_directory}/../lib/*.so.*
+project_directory="${script_directory}/../.."
+docker_directory="${script_directory}/../docker"
+
+source "${docker_directory}/.env"
+
+# Generate binaries
+
+docker run \
+--rm \
+--volume="${project_directory}:/app:rw" \
+--volume="/app/build" \
+--volume="${docker_directory}/environment/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${docker_directory}/environment/helpers/test.sh:/app/build/test.sh:ro" \
+--workdir="/app/build" \
+${image_name} \
+/bin/bash -c "/app/build/build.sh"
+
+# Deploy binaries
+
+
 
 ################################################################################################################################################################
