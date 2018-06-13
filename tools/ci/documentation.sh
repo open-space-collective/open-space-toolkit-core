@@ -83,7 +83,8 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
 
     echo 'Pushing documentation to remote...'
 
-    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
+    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}"
+    # git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
 
 else
     
