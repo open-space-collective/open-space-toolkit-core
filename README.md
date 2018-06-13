@@ -145,11 +145,7 @@ The **Core** library internally uses the following dependencies:
 
 Contributions are more than welcome!
 
-Please read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test the code.
-
-## Code of Conduct
-
-*To be completed...*
+Please read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose fixes and improvements, and how to build and test the code.
 
 ## Special Thanks
 

@@ -63,3 +63,7 @@ Examples:
 ```txt
 [fix] Segmentation fault when fetching ephemeris data
 ```
+
+# Code of Conduct {#CodeOfConduct}
+
+*To be completed...*
