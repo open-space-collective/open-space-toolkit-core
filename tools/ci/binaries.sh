@@ -22,6 +22,8 @@ docker run \
 --rm \
 --volume="${project_directory}:/app:rw" \
 --volume="/app/build" \
+--volume="${docker_directory}/environment/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${docker_directory}/environment/helpers/test.sh:/app/build/test.sh:ro" \
 --workdir="/app/build" \
 ${image_name} \
 /bin/bash -c "/app/build/build.sh"

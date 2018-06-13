@@ -84,7 +84,7 @@ jobs:
 
                 # Generate and deploy documentation
 
-                - ./tools/ci/documentation.sh
+                # - ./tools/ci/documentation.sh
 
                 # Generate and deploy binaries
 
@@ -101,10 +101,10 @@ jobs:
 
           deploy:
 
-            provider: releases
-            api_key: ${GITHUB_API_KEY}
-            file_glob: true
-            file: ./lib/*
-            skip_cleanup: true
+                provider: releases
+                api_key: ${GITHUB_API_KEY}
+                file_glob: true
+                file: ./lib/*
+                skip_cleanup: true
 
 ################################################################################################################################################################
