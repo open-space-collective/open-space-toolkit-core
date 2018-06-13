@@ -78,7 +78,7 @@ The **Core** library exhibits the following structure:
 
 ## Documentation
 
-The Doxygen documentation can be found [here](https://open-space-collective.github.io/library-core).
+The documentation can be found [here](https://open-space-collective.github.io/library-core).
 
 ## Setup
 
