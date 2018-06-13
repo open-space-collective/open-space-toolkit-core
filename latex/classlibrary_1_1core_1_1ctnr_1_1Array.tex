@@ -1,0 +1,733 @@
+\hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array}{}\section{library\+:\+:core\+:\+:ctnr\+:\+:Array$<$ T $>$ Class Template Reference}
+\label{classlibrary_1_1core_1_1ctnr_1_1Array}\index{library\+::core\+::ctnr\+::\+Array$<$ T $>$@{library\+::core\+::ctnr\+::\+Array$<$ T $>$}}
+
+
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} container.  
+
+
+
+
+{\ttfamily \#include $<$Array.\+hpp$>$}
+
+Inheritance diagram for library\+:\+:core\+:\+:ctnr\+:\+:Array$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlibrary_1_1core_1_1ctnr_1_1Array}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ T $>$\+::const\+\_\+iterator \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}{Const\+Iterator}
+\item 
+typedef std\+::vector$<$ T $>$\+::iterator \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}{Iterator}
+\item 
+typedef std\+::function$<$ bool(const T \&)$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a95de936b24bfdf0a5d24ef45df892ecf}{Array} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a9b510b4e2a3f9d4a324dfd0feba01285}{Array} (const std\+::vector$<$ T $>$ \&a\+Vector)
+\begin{DoxyCompactList}\small\item\em Constructs an array from a C++ Standard Library vector. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a647190cec3e259a8d8ad173c18bf3020}{Array} (const Size \&a\+Size, const T \&a\+Value)
+\begin{DoxyCompactList}\small\item\em Constructs an array of given size populated with a given value. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_adcda1d4d28575b580a978406107febbb}{Array} (std\+::initializer\+\_\+list$<$ T $>$ a\+List)
+\begin{DoxyCompactList}\small\item\em Constructs an array using an initializer list. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a5d65732e2a07b268d9def2da3c955002}{operator+} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&an\+Array) const
+\begin{DoxyCompactList}\small\item\em Concatenate array. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a77d943be46a6d0313be3f2c5ca66d231}{is\+Empty} () const
+\begin{DoxyCompactList}\small\item\em Check if array is empty. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a9c423eb8a34dddc81e0ede9435094e99}{contains} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Check if array contains element (by value) \end{DoxyCompactList}\item 
+const T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_afea012716d6cfffa2803606c0b244419}{access\+First} () const
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+const T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ad95dcce8ddaf163903a2327f766dbc8a}{access\+Last} () const
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+Size \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a049307129c77f461b37ddca47edc7913}{get\+Size} () const
+\begin{DoxyCompactList}\small\item\em Get array size. \end{DoxyCompactList}\item 
+Index \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_aa8a3e2745d72db8181b42e3cfb55415c}{get\+Index\+Of} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Get index of element (by value) \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1String}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a6a3416cc26d2968239af631d946ba11b}{get\+String} () const
+\begin{DoxyCompactList}\small\item\em Get string representation of array. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ const T $\ast$ $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a5359c59d344a6147c7c6ea1012411011}{access\+Where} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&a\+Predicate) const
+\begin{DoxyCompactList}\small\item\em Get array of pointers to element based on condition. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a62069b24d593b2265422cb8f3a149c44}{get\+Where} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&a\+Predicate) const
+\begin{DoxyCompactList}\small\item\em Get array of elements based on condition. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}{Const\+Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_aeb8ed38b67b6031e27c188d89bd5cbbf}{find} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by by value. \end{DoxyCompactList}\item 
+T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_abb2068e46720e8df057b5410ac8879d5}{access\+First} ()
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ad6ea47ab09dfeebd6de0878d3ad2de25}{access\+Last} ()
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a388497f6bda07f69d61aa60099b991a8}{add} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Add element to array. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a8e295703797d6e41dad7a45e4101a6db}{remove} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Remove element from array (by value) \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a8dd701c76ba2659ee2e438cff70fa971}{add} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Add elements to array. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ab37ca6fc14eefd1336544e05ba1b4d0e}{remove} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Remove elements from array (by value) \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_abe72cec38e65761df3eaddcfa9b7a44a}{merge\+With} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Merge array with another array. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a322b1bfc3a93ea18bf68eb0cff69e6d3}{remove\+Where} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&a\+Predicate)
+\begin{DoxyCompactList}\small\item\em Remove elements based on condition. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}{Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_afece85f642e3c623bac197e25ad2d4ec}{find} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a7795ee997ae6008cd0bc8db607315524}{Empty} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class U $>$ }\\std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a9daa2d638e5bd693776f8bf6caae0802}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ U $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class library\+::core\+::ctnr\+::\+Array$<$ T $>$}
+
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} container. 
+
+Sequence containers representing arrays that can change in size. Arrays use contiguous storage locations for their elements. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}\label{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Const\+Iterator@{Const\+Iterator}}
+\index{Const\+Iterator@{Const\+Iterator}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Const\+Iterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+typedef std\+::vector$<$T$>$\+::const\+\_\+iterator \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}{Const\+Iterator}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+typedef std\+::vector$<$T$>$\+::iterator \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}{Iterator}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Predicate}{Predicate}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+typedef std\+::function$<$bool(const T\&)$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a95de936b24bfdf0a5d24ef45df892ecf}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a95de936b24bfdf0a5d24ef45df892ecf}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a9b510b4e2a3f9d4a324dfd0feba01285}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a9b510b4e2a3f9d4a324dfd0feba01285}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a\+Vector }\end{DoxyParamCaption})}
+
+
+
+Constructs an array from a C++ Standard Library vector. 
+
+
+\begin{DoxyCode}
+std::vector<Integer> vector = \{1, 2, 3\} ;
+Array<Integer> array(vector) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Vector} & A vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a647190cec3e259a8d8ad173c18bf3020}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a647190cec3e259a8d8ad173c18bf3020}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} (\begin{DoxyParamCaption}\item[{const Size \&}]{a\+Size,  }\item[{const T \&}]{a\+Value }\end{DoxyParamCaption})}
+
+
+
+Constructs an array of given size populated with a given value. 
+
+
+\begin{DoxyCode}
+Array<String> array(3, \textcolor{stringliteral}{"abc"}) ; \textcolor{comment}{// ["abc", "abc", "abc"]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Size} & An array size \\
+\hline
+\mbox{\tt in}  & {\em a\+Value} & A value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_adcda1d4d28575b580a978406107febbb}\label{classlibrary_1_1core_1_1ctnr_1_1Array_adcda1d4d28575b580a978406107febbb}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{a\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs an array using an initializer list. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+List} & An initializer list \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_afea012716d6cfffa2803606c0b244419}\label{classlibrary_1_1core_1_1ctnr_1_1Array_afea012716d6cfffa2803606c0b244419}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!access\+First@{access\+First}}
+\index{access\+First@{access\+First}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{access\+First()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+const T\& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access first element. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+\textcolor{keyword}{const} Integer& element = array.accessFirst() ; \textcolor{comment}{// 1}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_abb2068e46720e8df057b5410ac8879d5}\label{classlibrary_1_1core_1_1ctnr_1_1Array_abb2068e46720e8df057b5410ac8879d5}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!access\+First@{access\+First}}
+\index{access\+First@{access\+First}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{access\+First()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T\& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access first element. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+Integer& element = array.accessFirst() ; \textcolor{comment}{// 1}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_ad95dcce8ddaf163903a2327f766dbc8a}\label{classlibrary_1_1core_1_1ctnr_1_1Array_ad95dcce8ddaf163903a2327f766dbc8a}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!access\+Last@{access\+Last}}
+\index{access\+Last@{access\+Last}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{access\+Last()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+const T\& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access last element. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+\textcolor{keyword}{const} Integer& element = array.accessLast() ; \textcolor{comment}{// 3}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_ad6ea47ab09dfeebd6de0878d3ad2de25}\label{classlibrary_1_1core_1_1ctnr_1_1Array_ad6ea47ab09dfeebd6de0878d3ad2de25}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!access\+Last@{access\+Last}}
+\index{access\+Last@{access\+Last}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{access\+Last()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T\& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access last element. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+Integer& element = array.accessLast() ; \textcolor{comment}{// 3}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a5359c59d344a6147c7c6ea1012411011}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a5359c59d344a6147c7c6ea1012411011}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!access\+Where@{access\+Where}}
+\index{access\+Where@{access\+Where}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{access\+Where()}{accessWhere()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$const T$\ast$$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::access\+Where (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&}]{a\+Predicate }\end{DoxyParamCaption}) const}
+
+
+
+Get array of pointers to element based on condition. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{0, 1, 2, 3, 4\} ;
+Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer& anInteger) -> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger
+      .isEven() ; \}) ; \textcolor{comment}{// [&0, &2, &4]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} of pointers to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a388497f6bda07f69d61aa60099b991a8}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a388497f6bda07f69d61aa60099b991a8}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!add@{add}}
+\index{add@{add}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Add element to array. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+array.add(4) ; \textcolor{comment}{// [1, 2, 3, 4]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a8dd701c76ba2659ee2e438cff70fa971}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a8dd701c76ba2659ee2e438cff70fa971}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!add@{add}}
+\index{add@{add}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Add elements to array. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+array.add(\{4, 5\}) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array of elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a9c423eb8a34dddc81e0ede9435094e99}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a9c423eb8a34dddc81e0ede9435094e99}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!contains@{contains}}
+\index{contains@{contains}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Check if array contains element (by value) 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+array.contains(2) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array contains element (by value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a7795ee997ae6008cd0bc8db607315524}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a7795ee997ae6008cd0bc8db607315524}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Empty@{Empty}}
+\index{Empty@{Empty}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$T$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an empty array. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a7795ee997ae6008cd0bc8db607315524}{Array<Integer>::Empty}() ;
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Empty array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_aeb8ed38b67b6031e27c188d89bd5cbbf}\label{classlibrary_1_1core_1_1ctnr_1_1Array_aeb8ed38b67b6031e27c188d89bd5cbbf}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!find@{find}}
+\index{find@{find}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$T$>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_ac26454f2a2ad4013873386a70aa25fc4}{Const\+Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Get iterator to element, finding by by value. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{0, 1, 2, 3, 4\} ;
+\textcolor{keyword}{auto} elementIt = array.find(2) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_afece85f642e3c623bac197e25ad2d4ec}\label{classlibrary_1_1core_1_1ctnr_1_1Array_afece85f642e3c623bac197e25ad2d4ec}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!find@{find}}
+\index{find@{find}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$T$>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a2364a34e7bc76d3661c3d89c4729a0e4}{Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Get iterator to element, finding by by value. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{0, 1, 2, 3, 4\} ;
+\textcolor{keyword}{auto} elementIt = array.find(2) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_aa8a3e2745d72db8181b42e3cfb55415c}\label{classlibrary_1_1core_1_1ctnr_1_1Array_aa8a3e2745d72db8181b42e3cfb55415c}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+Index\+Of@{get\+Index\+Of}}
+\index{get\+Index\+Of@{get\+Index\+Of}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Index\+Of()}{getIndexOf()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+Index \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::get\+Index\+Of (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Get index of element (by value) 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+\hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index} index = array.getIndexOf(2) ; \textcolor{comment}{// 1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of element (by value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a049307129c77f461b37ddca47edc7913}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a049307129c77f461b37ddca47edc7913}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+Size \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get array size. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+\hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} size = array.getSize() ; \textcolor{comment}{// 3}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a6a3416cc26d2968239af631d946ba11b}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a6a3416cc26d2968239af631d946ba11b}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1types_1_1String}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get string representation of array. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+String \textcolor{keywordtype}{string} = array.getString() ; \textcolor{comment}{// "[1, 2, 3]"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+String representation of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a62069b24d593b2265422cb8f3a149c44}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a62069b24d593b2265422cb8f3a149c44}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+Where@{get\+Where}}
+\index{get\+Where@{get\+Where}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Where()}{getWhere()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$T$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::get\+Where (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&}]{a\+Predicate }\end{DoxyParamCaption}) const}
+
+
+
+Get array of elements based on condition. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{0, 1, 2, 3, 4\} ;
+Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer& anInteger) -> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger
+      .isEven() ; \}) ; \textcolor{comment}{// [0, 2, 4]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array} of elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a77d943be46a6d0313be3f2c5ca66d231}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a77d943be46a6d0313be3f2c5ca66d231}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is empty. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+array.isEmpty() ; \textcolor{comment}{// False}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if array is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_abe72cec38e65761df3eaddcfa9b7a44a}\label{classlibrary_1_1core_1_1ctnr_1_1Array_abe72cec38e65761df3eaddcfa9b7a44a}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!merge\+With@{merge\+With}}
+\index{merge\+With@{merge\+With}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{merge\+With()}{mergeWith()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::merge\+With (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Merge array with another array. 
+
+
+\begin{DoxyCode}
+Array<Integer> firstArray = \{1, 2, 3\} ;
+Array<Integer> secondArray = \{4, 5\} ;
+firstArray.merge(secondArray) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a5d65732e2a07b268d9def2da3c955002}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a5d65732e2a07b268d9def2da3c955002}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!operator+@{operator+}}
+\index{operator+@{operator+}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$T$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption}) const}
+
+
+
+Concatenate array. 
+
+
+\begin{DoxyCode}
+Array<Integer> a = \{1, 2, 3\} ;
+Array<Integer> b = \{4, 5, 6\} ;
+Array<Integer> c = a + b ; \textcolor{comment}{// \{1, 2, 3, 4, 5, 6\}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array to append \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An concatenated array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a8e295703797d6e41dad7a45e4101a6db}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a8e295703797d6e41dad7a45e4101a6db}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!remove@{remove}}
+\index{remove@{remove}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Remove element from array (by value) 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+array.remove(2) ; \textcolor{comment}{// [1, 3]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_ab37ca6fc14eefd1336544e05ba1b4d0e}\label{classlibrary_1_1core_1_1ctnr_1_1Array_ab37ca6fc14eefd1336544e05ba1b4d0e}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!remove@{remove}}
+\index{remove@{remove}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Remove elements from array (by value) 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3, 4, 5\} ;
+array.remove(\{2, 4\}) ; \textcolor{comment}{// [1, 3, 5]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array of elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a322b1bfc3a93ea18bf68eb0cff69e6d3}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a322b1bfc3a93ea18bf68eb0cff69e6d3}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!remove\+Where@{remove\+Where}}
+\index{remove\+Where@{remove\+Where}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{remove\+Where()}{removeWhere()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::remove\+Where (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&}]{a\+Predicate }\end{DoxyParamCaption})}
+
+
+
+Remove elements based on condition. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3, 4, 5\} ;
+array.removeWhere([] (\textcolor{keyword}{const} Integer& anInteger) -> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [1, 3, 5]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Array_a9daa2d638e5bd693776f8bf6caae0802}\label{classlibrary_1_1core_1_1ctnr_1_1Array_a9daa2d638e5bd693776f8bf6caae0802}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+template$<$class U $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Array}{Array}$<$ U $>$ \&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+std::cout << array ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Library/\+Core/\+Containers/\hyperlink{Array_8hpp}{Array.\+hpp}\end{DoxyCompactItemize}

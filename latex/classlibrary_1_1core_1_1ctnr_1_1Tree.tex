@@ -1,0 +1,105 @@
+\hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree}{}\section{library\+:\+:core\+:\+:ctnr\+:\+:Tree Class Reference}
+\label{classlibrary_1_1core_1_1ctnr_1_1Tree}\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+
+
+Undirected graph in which any two vertices are connected by exactly one path.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_a4bba7cf8925135d1fe4f24fabd07aec4}{Tree} ()=delete
+\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_ac5fc40b3ef35ab52bc0dbdbf807edb46}{Tree} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&a\+Tree)
+\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_ae8a7e6d7f48cd82c59ced9507baec1e9}{$\sim$\+Tree} ()
+\item 
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_a5cc9a5ca245a3d9419caf9f1cd748c9d}{operator=} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&a\+Tree) const
+\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_a7fe044b38601503dca0f2720edead189}{is\+Defined} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_a2ddcc031c7c6e3a97a2dd1ab82231f00}{Empty} ()
+\item 
+static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_a5e90e14573c52b7f00233200c76e9e82}{Object} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Object}{Object} \&an\+Object)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree_aca74cf66509d8f31b83b1c100cb00bea}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&a\+Tree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Undirected graph in which any two vertices are connected by exactly one path. 
+
+A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the \char`\"{}children\char`\"{}), with the constraints that no reference is duplicated, and none points to the root.
+
+https\+://en.wikipedia.\+org/wiki/\+Tree\+\_\+(graph\+\_\+theory) https\+://en.wikipedia.\+org/wiki/\+Tree\+\_\+(data\+\_\+structure) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_a4bba7cf8925135d1fe4f24fabd07aec4}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_a4bba7cf8925135d1fe4f24fabd07aec4}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily library\+::core\+::ctnr\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_ac5fc40b3ef35ab52bc0dbdbf807edb46}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_ac5fc40b3ef35ab52bc0dbdbf807edb46}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily library\+::core\+::ctnr\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_ae8a7e6d7f48cd82c59ced9507baec1e9}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_ae8a7e6d7f48cd82c59ced9507baec1e9}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!````~Tree@{$\sim$\+Tree}}
+\index{````~Tree@{$\sim$\+Tree}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Tree()}{~Tree()}}
+{\footnotesize\ttfamily library\+::core\+::ctnr\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_a2ddcc031c7c6e3a97a2dd1ab82231f00}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_a2ddcc031c7c6e3a97a2dd1ab82231f00}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!Empty@{Empty}}
+\index{Empty@{Empty}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} library\+::core\+::ctnr\+::\+Tree\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_a7fe044b38601503dca0f2720edead189}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_a7fe044b38601503dca0f2720edead189}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool library\+::core\+::ctnr\+::\+Tree\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_a5e90e14573c52b7f00233200c76e9e82}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_a5e90e14573c52b7f00233200c76e9e82}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!Object@{Object}}
+\index{Object@{Object}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} library\+::core\+::ctnr\+::\+Tree\+::\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Object}{Object} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_a5cc9a5ca245a3d9419caf9f1cd748c9d}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_a5cc9a5ca245a3d9419caf9f1cd748c9d}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree}\& library\+::core\+::ctnr\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption}) const}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1Tree_aca74cf66509d8f31b83b1c100cb00bea}\label{classlibrary_1_1core_1_1ctnr_1_1Tree_aca74cf66509d8f31b83b1c100cb00bea}} 
+\index{library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr\+::\+Tree@{library\+::core\+::ctnr\+::\+Tree}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1Tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Library/\+Core/\+Containers/\hyperlink{Tree_8hpp}{Tree.\+hpp}\end{DoxyCompactItemize}

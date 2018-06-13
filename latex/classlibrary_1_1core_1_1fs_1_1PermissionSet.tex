@@ -1,0 +1,533 @@
+\hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet}{}\section{library\+:\+:core\+:\+:fs\+:\+:Permission\+Set Class Reference}
+\label{classlibrary_1_1core_1_1fs_1_1PermissionSet}\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+
+
+Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system.  
+
+
+
+
+{\ttfamily \#include $<$Permission\+Set.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{Permission\+Set} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a39ee30a6f35f325c1cd7bcd307ab11aa}{Permission\+Set} (const bool \&\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}{can\+Read}, const bool \&\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}{can\+Write}, const bool \&\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}{can\+Execute})
+\begin{DoxyCompactList}\small\item\em Full constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a5233d51751bf61d545a283ee6767af47}{operator==} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7549184997b592bb790ccad3e9084a19}{operator!=} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ade354e83f2e281f9a870e73479cfa83a}{operator+} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a57a772018ca9c19db87139672a48a532}{operator-\/} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Subtraction operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab5a43fc956ebbe91328a776b1023b199}{operator\&\&} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Logical A\+ND operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a6e17088c9270586ced726ec2721b587b}{operator$\vert$$\vert$} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set) const
+\begin{DoxyCompactList}\small\item\em Logical OR operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9c4a4a58d8422c9bfa8873184983f455}{is\+None} () const
+\begin{DoxyCompactList}\small\item\em Check if permission set is none. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a2e9d3f4da25dc33be1e11f461db4983d}{is\+All} () const
+\begin{DoxyCompactList}\small\item\em Check if permission set is all. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}{can\+Read} () const
+\begin{DoxyCompactList}\small\item\em Check if permission set can read. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}{can\+Write} () const
+\begin{DoxyCompactList}\small\item\em Check if permission set can write. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}{can\+Execute} () const
+\begin{DoxyCompactList}\small\item\em Check if permission set can execute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af590f297c53ba55474f8d5b78bc45b62}{None} ()
+\begin{DoxyCompactList}\small\item\em Constructs a none permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}{R} ()
+\begin{DoxyCompactList}\small\item\em Constructs a read permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7046fb1ae54d0308161a44eaf01b03e1}{W} ()
+\begin{DoxyCompactList}\small\item\em Constructs a write permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}{X} ()
+\begin{DoxyCompactList}\small\item\em Constructs an execute permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{RW} ()
+\begin{DoxyCompactList}\small\item\em Constructs a read-\/write permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}{RX} ()
+\begin{DoxyCompactList}\small\item\em Constructs a read-\/execute permission set. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{R\+WX} ()
+\begin{DoxyCompactList}\small\item\em Constructs a read-\/write-\/execute permission set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8f2d68bb94d86dea76869abe148ea9f3}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&a\+Permission\+Set)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. 
+
+This class is modeled after the Traditional Unix permissions.
+
+https\+://en.wikipedia.\+org/wiki/\+File\+\_\+system\+\_\+permissions 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!Permission\+Set@{Permission\+Set}}
+\index{Permission\+Set@{Permission\+Set}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{Permission\+Set()}{PermissionSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily library\+::core\+::fs\+::\+Permission\+Set\+::\+Permission\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a39ee30a6f35f325c1cd7bcd307ab11aa}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a39ee30a6f35f325c1cd7bcd307ab11aa}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!Permission\+Set@{Permission\+Set}}
+\index{Permission\+Set@{Permission\+Set}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{Permission\+Set()}{PermissionSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily library\+::core\+::fs\+::\+Permission\+Set\+::\+Permission\+Set (\begin{DoxyParamCaption}\item[{const bool \&}]{can\+Read,  }\item[{const bool \&}]{can\+Write,  }\item[{const bool \&}]{can\+Execute }\end{DoxyParamCaption})}
+
+
+
+Full constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em can\+Read} & Can read if set to true \\
+\hline
+\mbox{\tt in}  & {\em can\+Write} & Can write if set to true \\
+\hline
+\mbox{\tt in}  & {\em can\+Execute} & Can execute if set to true \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!can\+Execute@{can\+Execute}}
+\index{can\+Execute@{can\+Execute}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{can\+Execute()}{canExecute()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::can\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if permission set can execute. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}{PermissionSet::R}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}{canExecute}() ; \textcolor{comment}{// False}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}{canExecute}() ; \textcolor{comment}{// False}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a40da22aa91ee4c8963c1c5434dd8486c}{canExecute}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if permission set can execute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!can\+Read@{can\+Read}}
+\index{can\+Read@{can\+Read}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{can\+Read()}{canRead()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::can\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if permission set can read. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}{PermissionSet::R}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}{canRead}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}{canRead}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af31f6c5e1bd75102749648fd41882beb}{canRead}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if permission set can read 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!can\+Write@{can\+Write}}
+\index{can\+Write@{can\+Write}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{can\+Write()}{canWrite()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::can\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if permission set can write. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}{PermissionSet::R}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}{canWrite}() ; \textcolor{comment}{// False}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}{canWrite}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a12851523996c6c4414749ee9c2f3bbd2}{canWrite}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if permission set can write 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a2e9d3f4da25dc33be1e11f461db4983d}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a2e9d3f4da25dc33be1e11f461db4983d}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!is\+All@{is\+All}}
+\index{is\+All@{is\+All}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{is\+All()}{isAll()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::is\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if permission set is all. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a2e9d3f4da25dc33be1e11f461db4983d}{isAll}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if permission set is all 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9c4a4a58d8422c9bfa8873184983f455}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9c4a4a58d8422c9bfa8873184983f455}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!is\+None@{is\+None}}
+\index{is\+None@{is\+None}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{is\+None()}{isNone()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::is\+None (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if permission set is none. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af590f297c53ba55474f8d5b78bc45b62}{PermissionSet::None}().\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9c4a4a58d8422c9bfa8873184983f455}{isNone}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if permission set is none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_af590f297c53ba55474f8d5b78bc45b62}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_af590f297c53ba55474f8d5b78bc45b62}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!None@{None}}
+\index{None@{None}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{None()}{None()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::\+None (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a none permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_af590f297c53ba55474f8d5b78bc45b62}{PermissionSet::None}() ; \textcolor{comment}{// ---}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+None permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7549184997b592bb790ccad3e9084a19}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7549184997b592bb790ccad3e9084a19}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}() != \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if permissions are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab5a43fc956ebbe91328a776b1023b199}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab5a43fc956ebbe91328a776b1023b199}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator\&\&@{operator\&\&}}
+\index{operator\&\&@{operator\&\&}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator\&\&()}{operator\&\&()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::operator \&\& (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Logical A\+ND operator. 
+
+A\+ND permissions
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rw = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rx = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}{PermissionSet::RX}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} r = rw && rx ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Permission set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_ade354e83f2e281f9a870e73479cfa83a}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_ade354e83f2e281f9a870e73479cfa83a}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator+@{operator+}}
+\index{operator+@{operator+}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Addition operator. 
+
+Add permissions
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rw = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} x = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}{PermissionSet::X}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rwx = rw + x ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Permission set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a57a772018ca9c19db87139672a48a532}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a57a772018ca9c19db87139672a48a532}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Subtraction operator. 
+
+Remove permissions
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rwx = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} x = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}{PermissionSet::X}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rw = rwx - x ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Permission set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a5233d51751bf61d545a283ee6767af47}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a5233d51751bf61d545a283ee6767af47}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator==@{operator==}}
+\index{operator==@{operator==}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Permission\+Set\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}() == \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if permissions are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a6e17088c9270586ced726ec2721b587b}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a6e17088c9270586ced726ec2721b587b}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}}
+\index{operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator\texttt{"|}\texttt{"|}()}{operator||()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::operator$\vert$$\vert$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Logical OR operator. 
+
+OR permissions
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rw = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rx = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}{PermissionSet::RX}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} rwx = rw || rx ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Permission set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!R@{R}}
+\index{R@{R}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{R()}{R()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::R (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a read permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a48d447273c118d6a7c81aebb505189c6}{PermissionSet::R}() ; \textcolor{comment}{// r--}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Read permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!RW@{RW}}
+\index{RW@{RW}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{R\+W()}{RW()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::\+RW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a read-\/write permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a9722204cdc11a0171e1a115d449a134b}{PermissionSet::RW}() ; \textcolor{comment}{// rw-}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Read-\/\+Write permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!R\+WX@{R\+WX}}
+\index{R\+WX@{R\+WX}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{R\+W\+X()}{RWX()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::\+R\+WX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a read-\/write-\/execute permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}() ; \textcolor{comment}{// rwx}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Read-\/\+Write-\/\+Execute permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!RX@{RX}}
+\index{RX@{RX}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{R\+X()}{RX()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::\+RX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a read-\/execute permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_ab632d79f1b8b8f4577bc06fa622b1c09}{PermissionSet::RX}() ; \textcolor{comment}{// r-x}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Read-\/\+Execute permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7046fb1ae54d0308161a44eaf01b03e1}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7046fb1ae54d0308161a44eaf01b03e1}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!W@{W}}
+\index{W@{W}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{W()}{W()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::W (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a write permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7046fb1ae54d0308161a44eaf01b03e1}{PermissionSet::W}() ; \textcolor{comment}{// -w-}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Write permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!X@{X}}
+\index{X@{X}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{X()}{X()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} library\+::core\+::fs\+::\+Permission\+Set\+::X (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an execute permission set. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a7f4717643d0b80b0b98104c357b3322f}{PermissionSet::X}() ; \textcolor{comment}{// --x}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Execute permissions 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8f2d68bb94d86dea76869abe148ea9f3}\label{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8f2d68bb94d86dea76869abe148ea9f3}} 
+\index{library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::fs\+::\+Permission\+Set@{library\+::core\+::fs\+::\+Permission\+Set}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet}{Permission\+Set} \&}]{a\+Permission\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_a8a6eb39cc2a8bca92a657d065d3e36ba}{PermissionSet} permissions = \hyperlink{classlibrary_1_1core_1_1fs_1_1PermissionSet_afa3f9d07a7053240ae97c587543cdb00}{PermissionSet::RWX}()
+\hyperlink{namespacestd}{std}::cout << permissions ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Library/\+Core/\+File\+System/\hyperlink{PermissionSet_8hpp}{Permission\+Set.\+hpp}\end{DoxyCompactItemize}
