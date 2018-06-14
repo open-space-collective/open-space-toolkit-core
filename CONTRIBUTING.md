@@ -7,7 +7,7 @@ Contributing
 
 # Introduction {#Introduction}
 
-*TBC...*
+*To be completed...*
 
 # Guidelines {#Guidelines}
 
@@ -34,13 +34,13 @@ References:
 
 ### Python {#Python}
 
-*TBC...*
+*To be completed...*
 
 ## Version Control {#Version}
 
 ### Rules {#Rules}
 
-*TBC...*
+*To be completed...*
 
 ### Commit Messages {#Commit}
 
