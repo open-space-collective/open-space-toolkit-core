@@ -12,10 +12,14 @@ var NAVTREE =
           [ "Rules", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Rules", null ],
           [ "Commit Messages", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Commit", null ]
         ] ]
-      ] ]
+      ] ],
+      [ "Code of Conduct", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#CodeOfConduct", null ]
     ] ],
     [ "Tutorial", "md_docs__tutorial.html", [
-      [ "JSON", "md_docs__tutorial.html#JSON", null ]
+      [ "Setup", "md_docs__tutorial.html#Setup", null ],
+      [ "Examples", "md_docs__tutorial.html#Examples", [
+        [ "Load / Write JSON", "md_docs__tutorial.html#JSON", null ]
+      ] ]
     ] ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
