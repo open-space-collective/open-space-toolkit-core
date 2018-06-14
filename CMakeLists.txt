@@ -9,7 +9,7 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "Library :: Core")
+SET (PROJECT_NAME "LibraryCore")
 SET (PROJECT_DESCRIPTION "Core library.")
 SET (PROJECT_PATH "Library/Core")
 SET (PROJECT_PACKAGE_NAME "library-core")
@@ -433,17 +433,17 @@ ENDIF ()
 ### Configuration
 
 CONFIGURE_FILE (
-    "${CMAKE_MODULE_PATH}/${PROJECT_PATH}Config.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}Config.cmake"
+    "${CMAKE_MODULE_PATH}/${PROJECT_NAME}Config.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
     @ONLY)
 
 CONFIGURE_FILE (
-    "${CMAKE_MODULE_PATH}/${PROJECT_PATH}ConfigVersion.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}ConfigVersion.cmake"
+    "${CMAKE_MODULE_PATH}/${PROJECT_NAME}ConfigVersion.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
     @ONLY)
 
-INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_PATH}Config.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "libraries")
-INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_PATH}ConfigVersion.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "libraries")
+INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_NAME}" COMPONENT "libraries")
+INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_NAME}" COMPONENT "libraries")
 
 ### Uninstall
 

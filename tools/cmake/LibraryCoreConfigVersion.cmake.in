@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/cmake/Library/CoreConfigVersion.cmake.in
+# @file           tools/cmake/LibraryCoreConfigVersion.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 

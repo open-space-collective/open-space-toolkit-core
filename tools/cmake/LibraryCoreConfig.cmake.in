@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/cmake/Library/CoreConfig.cmake.in
+# @file           tools/cmake/LibraryCoreConfig.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -9,7 +9,7 @@
 
 SET (CPP_PROJECT_TEMPLATE_ROOT_DIR ${CPP_PROJECT_TEMPLATE_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
-FIND_PATH (CPP_PROJECT_TEMPLATE_INCLUDE_DIR "Library/Core/Utilities/Version.hpp" PATHS ${CPP_PROJECT_TEMPLATE_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_PATH (CPP_PROJECT_TEMPLATE_INCLUDE_DIR "Library/Core/Utilities.hpp" PATHS ${CPP_PROJECT_TEMPLATE_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
 FIND_LIBRARY (CPP_PROJECT_TEMPLATE_LIBRARY NAMES "liblibrary-core.so" PATHS ${CPP_PROJECT_TEMPLATE_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
 
 # MESSAGE (STATUS "CPP_PROJECT_TEMPLATE_ROOT_DIR = ${CPP_PROJECT_TEMPLATE_ROOT_DIR}")
