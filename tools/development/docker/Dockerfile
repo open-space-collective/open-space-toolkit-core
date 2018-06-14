@@ -36,7 +36,7 @@ RUN dnf update -y \
 
 # Development Tools
 
-## Compilers
+## GCC / GDB / LCOV
 
 RUN dnf install -y \
     rpm-build \
@@ -71,19 +71,6 @@ RUN mkdir /tmp/boost \
     && ./b2 -j ${cpu_count} link=static cxxflags=-fPIC install \
     && rm -rf /tmp/boost
 
-## Eigen [3.3.4]
-
-RUN mkdir /tmp/eigen \
-    && cd /tmp/eigen \
-    && wget --quiet http://bitbucket.org/eigen/eigen/get/3.3.4.tar.gz \
-    && tar -xf 3.3.4.tar.gz \
-    && cd eigen-eigen-5a0156e40feb \
-    && mkdir build \
-    && cd build \
-    && cmake .. \
-    && make install \
-    && rm -rf /tmp/eigen
-
 ## RapidJSON [1.1.0]
 
 RUN mkdir /tmp/rapidjson \
@@ -105,11 +92,6 @@ RUN mkdir /tmp/ordered-map \
  && cd ordered-map \
  && cp -r ./tsl /usr/local/include \
  && rm -rf /tmp/ordered-map
-
-## NumPy
-
-RUN pip install --upgrade pip \
-    && pip install numpy
 
 # Labels
 

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export PYTHONPATH="${PYTHONPATH}:/library-core/lib"
+export PYTHONPATH="${PYTHONPATH}:/app/lib"
 
-python /library-core/share/python/test/Library/Core/Types.test.py
+python /app/share/python/test/Library/Core/Types.test.py
