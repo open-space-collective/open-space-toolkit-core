@@ -28,8 +28,8 @@ OPTION (BUILD_STATIC_LIBRARY "Build static library." OFF)
 OPTION (BUILD_UTILITY "Build utility." OFF)
 OPTION (BUILD_UNIT_TESTS "Build tests" ON)
 OPTION (BUILD_PYTHON_BINDINGS "Build Python bindings." ON)
-OPTION (BUILD_CODE_COVERAGE "Build code coverage" ON)
-OPTION (BUILD_DOCUMENTATION "Build documentation" ON)
+OPTION (BUILD_CODE_COVERAGE "Build code coverage" OFF)
+OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
 OPTION (INSTALL_DATA "Install data" ON)
 
 ################################################################################################################################################################
@@ -532,8 +532,6 @@ SET (CPACK_RPM_COMPONENT_INSTALL "ON")
 SET (CPACK_RPM_PACKAGE_LICENSE ${CPACK_PACKAGE_LICENSE})
 SET (CPACK_RPM_PACKAGE_VENDOR ${CPACK_PACKAGE_VENDOR})
 SET (CPACK_RPM_PACKAGE_DESCRIPTION ${CPACK_PACKAGE_DESCRIPTION_SUMMARY})
-
-# SET (CPACK_RPM_PACKAGE_REQUIRES "eigen3")
 
 SET (CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST
     /usr

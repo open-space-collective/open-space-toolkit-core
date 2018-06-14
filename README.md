@@ -1,10 +1,10 @@
 # Library :: Core
 
+Fundamental types, containers and utilities.
+
 [![Build Status](https://travis-ci.org/open-space-collective/library-core.svg?branch=master)](https://travis-ci.org/open-space-collective/library-core)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/library-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-core)
 [![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-core)
-
-Fundamental types, containers and utilities.
 
 ## Warning
 
@@ -82,8 +82,6 @@ The documentation can be found [here](https://open-space-collective.github.io/li
 
 ## Setup
 
-*To be completed...*
-
 ### Development
 
 Using [Docker](https://www.docker.com) is recommended, as the development tools and dependencies setup is described in the provided [Dockerfile](./tools/development/docker/Dockerfile).
@@ -98,7 +96,8 @@ Start the development environment:
 
 This will also build the `openspacecollective/library-core:latest` Docker image, if not present already.
 
-If installing Docker is not an option, please manually install the development tools (GCC, CMake) and the dependencies. The procedure should be similar to the one described in the [Dockerfile](./tools/development/docker/Dockerfile).
+If installing Docker is not an option, please manually install the development tools (GCC, CMake) and the dependencies.
+The procedure should be similar to the one described in the [Dockerfile](./tools/development/docker/Dockerfile).
 
 ### Build
 
