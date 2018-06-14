@@ -9,7 +9,7 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "Library :: Core")
+SET (PROJECT_NAME "LibraryCore")
 SET (PROJECT_DESCRIPTION "Core library.")
 SET (PROJECT_PATH "Library/Core")
 SET (PROJECT_PACKAGE_NAME "library-core")
