@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/development/helplers/debug.sh
+# @file           tools/development/helpers/debug.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 

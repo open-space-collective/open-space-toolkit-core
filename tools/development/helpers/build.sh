@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/development/helplers/build.sh
+# @file           tools/development/helpers/build.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
