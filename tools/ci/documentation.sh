@@ -33,13 +33,9 @@ mkdir -p "./gh-pages"
 
 pushd "./gh-pages"
 
-GH_REPO_NAME="library-core"
-GH_REPO_TOKEN="${GITHUB_API_KEY}"
-GH_REPO_REF="github.com/open-space-collective/library-core.git"
+git clone -b gh-pages https://git@${ci_doc_repo_ref}
 
-git clone -b gh-pages https://git@${GH_REPO_REF}
-
-pushd ${GH_REPO_NAME}
+pushd ${ci_doc_repo_name}
 
 # Set the push default to simple i.e. push only the current branch.
 
@@ -47,8 +43,8 @@ git config --global push.default simple
 
 # Pretend to be an user called Travis CI.
 
-git config user.name "Travis CI"
-git config user.email "travis@travis-ci.org"
+git config user.name ${ci_doc_repo_user_name}
+git config user.email ${ci_doc_repo_user_email}
 
 rm -rf ./*
 mv .git git
@@ -89,7 +85,7 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
 
     echo 'Pushing documentation to remote...'
 
-    git push --force "https://${GH_REPO_TOKEN}@${GH_REPO_REF}" > /dev/null 2>&1
+    git push --force "https://${ci_doc_repo_token}@${ci_doc_repo_ref}" > /dev/null 2>&1
 
 else
     
