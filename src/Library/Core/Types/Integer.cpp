@@ -967,7 +967,47 @@ Integer                         Integer::NegativeInfinity                   ( )
     return Integer(Integer::Type::NegativeInfinity, std::numeric_limits<Integer::ValueType>::min()) ;
 }
 
-Integer                         Integer::String                             (   const   types::String&              aString                                     )
+Integer                         Integer::Index                              (   const   types::Index&               anIndex                                     )
+{
+
+    if (!(anIndex < std::numeric_limits<Integer::ValueType>::max()))
+    {
+        throw library::core::error::RuntimeError("Index out of bounds.") ;
+    }
+
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anIndex)) ;
+
+}
+
+Integer                         Integer::Size                               (   const   types::Size&                aSize                                       )
+{
+    
+    if (!(aSize < std::numeric_limits<Integer::ValueType>::max()))
+    {
+        throw library::core::error::RuntimeError("Size out of bounds.") ;
+    }
+
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(aSize)) ;
+    
+}
+
+Integer                         Integer::Parse                              (           char                        aCharacter                                  )
+{
+
+    try
+    {
+        return Integer(boost::lexical_cast<Integer::ValueType>(aCharacter)) ;
+    }
+    catch (const boost::bad_lexical_cast&)
+    {
+        throw library::core::error::RuntimeError("Cannot cast character [" + String::Char(aCharacter) + "] to Integer.") ;
+    }
+
+    return Integer::Undefined() ;
+
+}
+
+Integer                         Integer::Parse                              (   const   types::String&              aString                                     )
 {
 
     if (aString.isEmpty() || (aString == "Undefined"))
@@ -998,10 +1038,41 @@ Integer                         Integer::String                             (   
     
 }
 
-// Integer                         Integer::Object                             (   const   ctnr::Object&               anObject                                 )
-// {
+bool                            Integer::CanParse                           (           char                        aCharacter                                  )
+{
+    return std::isdigit(aCharacter) ;
+}
+
+bool                            Integer::CanParse                           (   const   types::String&              aString                                     )
+{
+
+    if (aString.isEmpty() || (aString == "Undefined"))
+    {
+        return true ;
+    }
+
+    if ((aString == "Inf") || (aString == "+Inf"))
+    {
+        return true ;
+    }
+
+    if (aString == "-Inf")
+    {
+        return true ;
+    }
     
-// }
+    try
+    {
+        boost::lexical_cast<Integer::ValueType>(aString) ;
+    }
+    catch (const boost::bad_lexical_cast&)
+    {
+        return false ;
+    }
+
+    return true ;
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

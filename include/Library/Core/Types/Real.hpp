@@ -112,7 +112,7 @@ class Real
 
         static Real             NegativeInfinity                            ( ) ;
 
-        static Real             String                                      (   const   types::String&              aString                                     ) ;
+        static Real             Parse                                       (   const   types::String&              aString                                     ) ;
 
     private:
 

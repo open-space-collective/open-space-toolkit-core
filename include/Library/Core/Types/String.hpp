@@ -10,6 +10,7 @@
 #ifndef __Library_Core_Types_String__
 #define __Library_Core_Types_String__
 
+#include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 
 #include <ostream>
@@ -27,6 +28,7 @@ namespace types
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using library::core::types::Index ;
 using library::core::types::Size ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,7 +60,18 @@ class String : public std::string
         char                    getFirst                                    ( ) const ;
         char                    getLast                                     ( ) const ;
 
+        String                  getSubstring                                (   const   Index&                      aStartPosition,
+                                                                                const   Size&                       aLength                                     ) const ;
+
+        /// @brief              Removes whitespace from both ends
+        ///
+        /// @return             Reference to string
+
+        String&                 trim                                        ( ) ;
+
         static String           Empty                                       ( ) ;
+
+        static String           Char                                        (           char                        aCharacter                                  ) ;
 
 } ;
 

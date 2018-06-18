@@ -132,12 +132,62 @@ TEST (Library_Core_Types_String, GetLast)
 
 }
 
+TEST (Library_Core_Types_String, GetSubstring)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        FAIL() ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_String, Trim)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("", String("").trim()) ;
+        EXPECT_EQ("abc", String("abc").trim()) ;
+        EXPECT_EQ("abc", String(" abc").trim()) ;
+        EXPECT_EQ("abc", String("   abc").trim()) ;
+        EXPECT_EQ("abc", String("abc ").trim()) ;
+        EXPECT_EQ("abc", String("abc   ").trim()) ;
+        EXPECT_EQ("abc", String(" abc ").trim()) ;
+        EXPECT_EQ("abc", String("   abc   ").trim()) ;
+        EXPECT_EQ("ab cd", String("   ab cd   ").trim()) ;
+        EXPECT_EQ("", String(" ").trim()) ;
+        EXPECT_EQ("", String("   ").trim()) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, Empty)
 {
 
     using library::core::types::String ;
 
     EXPECT_TRUE(String::Empty().isEmpty()) ;
+
+}
+
+TEST (Library_Core_Types_String, Char)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("a", String::Char('a')) ;
+        EXPECT_EQ("0", String::Char('0')) ;
+
+    }
 
 }
 

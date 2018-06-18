@@ -74,7 +74,7 @@ inline void 					LibraryCorePy_Types_Integer					( )
 		.def("Zero", &Integer::Zero).staticmethod("Zero")
 		.def("PositiveInfinity", &Integer::PositiveInfinity).staticmethod("PositiveInfinity")
 		.def("NegativeInfinity", &Integer::NegativeInfinity).staticmethod("NegativeInfinity")
-		.def("String", &Integer::String).staticmethod("String")
+		// .def("Parse", &Integer::Parse).staticmethod("Parse")
 		// .def("Object", &Integer::Object).staticmethod("Object")
 
 		;
@@ -153,8 +153,8 @@ inline void 					LibraryCorePy_Types_Real						( )
 		.staticmethod("PositiveInfinity")
 		.def("NegativeInfinity", &Real::NegativeInfinity)
 		.staticmethod("NegativeInfinity")
-		.def("String", &Real::String)
-		.staticmethod("String")
+		// .def("String", &Real::String)
+		// .staticmethod("Parse")
 		// .def("Object", &Real::Object).staticmethod("Object")
 
 		;

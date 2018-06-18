@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Integer.hpp>
 #include <Library/Core/Error.hpp>
 
 #include <boost/algorithm/string.hpp>
@@ -20,6 +21,10 @@ namespace core
 {
 namespace types
 {
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+using library::core::types::Integer ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -86,10 +91,55 @@ char                            String::getLast                             ( ) 
 
 }
 
+String                          String::getSubstring                        (   const   Index&                      aStartPosition,
+                                                                                const   Size&                       aLength                                     ) const
+{
+
+    if (aLength == 0)
+    {
+        throw library::core::error::runtime::Wrong("Length") ;
+    }
+
+    if (this->empty())
+    {
+        throw library::core::error::RuntimeError("String is empty.") ;
+    }
+
+    if (aStartPosition >= this->size())
+    {
+        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+    }
+
+    if ((aStartPosition + aLength) > this->size())
+    {
+        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+    }
+    
+    return this->substr(aStartPosition, aLength) ;
+
+}
+
+String&                         String::trim                                ( )
+{
+
+    if (!this->empty())
+    {
+        boost::trim(*this) ;
+    }
+
+    return (*this) ;
+    
+}
+
 String                          String::Empty                               ( )
 
 {
     return String("") ;
+}
+
+String                          String::Char                                (           char                        aCharacter                                  )
+{
+    return String(1, aCharacter) ;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

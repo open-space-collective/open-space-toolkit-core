@@ -737,7 +737,7 @@ Real                            Real::NegativeInfinity                      ( )
     return Real(Real::Type::NegativeInfinity, std::numeric_limits<Real::ValueType>::min()) ;
 }
 
-Real                            Real::String                                (   const   types::String&              aString                                     )
+Real                            Real::Parse                                 (   const   types::String&              aString                                     )
 {
 
     if (aString.isEmpty() || (aString == "Undefined"))
