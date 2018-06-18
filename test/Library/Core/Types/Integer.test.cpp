@@ -7,12 +7,14 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Global.test.hpp>
-
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Containers/Pair.hpp>
-#include <Library/Core/Containers/Triple.hpp>
 #include <Library/Core/Containers/Array.hpp>
+#include <Library/Core/Containers/Triple.hpp>
+#include <Library/Core/Containers/Pair.hpp>
+#include <Library/Core/Types/Integer.hpp>
+#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Types/Index.hpp>
+
+#include <Global.test.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2776,11 +2778,19 @@ TEST (Library_Core_Types_Integer, NegativeInfinity)
 TEST (Library_Core_Types_Integer, Index)
 {
 
+    using library::core::types::Index ;
     using library::core::types::Integer ;
 
     {
 
-        FAIL() ;
+        EXPECT_EQ(0, Integer::Index(Index(0))) ;
+        EXPECT_EQ(1, Integer::Index(Index(1))) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Integer::Index(Index(std::numeric_limits<Index>::max()))) ;
 
     }
     
@@ -2789,11 +2799,19 @@ TEST (Library_Core_Types_Integer, Index)
 TEST (Library_Core_Types_Integer, Size)
 {
 
+    using library::core::types::Size ;
     using library::core::types::Integer ;
 
     {
 
-        FAIL() ;
+        EXPECT_EQ(0, Integer::Size(Size(0))) ;
+        EXPECT_EQ(1, Integer::Size(Size(1))) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Integer::Size(Size(std::numeric_limits<Size>::max()))) ;
 
     }
     
