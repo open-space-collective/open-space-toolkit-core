@@ -100,6 +100,9 @@ class Real
         bool                    isPositiveInfinity                          ( ) const ;
         bool                    isNegativeInfinity                          ( ) const ;
 
+        bool                    isInteger                                   ( ) const ;
+        bool                    isFinite                                    ( ) const ;
+
         types::Sign             getSign                                     ( ) const ;
 
         types::String           getString                                   ( ) const ;
