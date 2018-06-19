@@ -766,6 +766,21 @@ Real                            Real::Zero                                  ( )
     return Real(Real::Type::Defined, 0.0) ;
 }
 
+Real                            Real::Pi                                    ( )
+{
+    return Real(Real::Type::Defined, M_PI) ;
+}
+
+Real                            Real::HalfPi                                ( )
+{
+    return Real(Real::Type::Defined, M_PI / 2.0) ;
+}
+
+Real                            Real::TwoPi                                 ( )
+{
+    return Real(Real::Type::Defined, 2.0 * M_PI) ;
+}
+
 Real                            Real::PositiveInfinity                      ( )
 {
     return Real(Real::Type::PositiveInfinity, std::numeric_limits<Real::ValueType>::max()) ;
