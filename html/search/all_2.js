@@ -2,10 +2,12 @@ var searchData=
 [
   ['callgetstring',['CallGetString',['../namespacelibrary_1_1core_1_1types.html#a5715d27d021d9d7a6c766a6d3917a96d',1,'library::core::types']]],
   ['canexecute',['canExecute',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a40da22aa91ee4c8963c1c5434dd8486c',1,'library::core::fs::PermissionSet']]],
+  ['canparse',['CanParse',['../classlibrary_1_1core_1_1types_1_1_integer.html#a8cb057f64ee47cd1d3ff517e8f667a1d',1,'library::core::types::Integer::CanParse(char aCharacter)'],['../classlibrary_1_1core_1_1types_1_1_integer.html#a6a0d5e3ceff944f3a121a59ec7430258',1,'library::core::types::Integer::CanParse(const types::String &amp;aString)']]],
   ['canread',['canRead',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#af31f6c5e1bd75102749648fd41882beb',1,'library::core::fs::PermissionSet']]],
   ['canwrite',['canWrite',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a12851523996c6c4414749ee9c2f3bbd2',1,'library::core::fs::PermissionSet']]],
   ['channelenabled_5f',['channelEnabled_',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a48307be32eede5359f345b54363070ae',1,'library::core::logger::sinks::Sink']]],
   ['channels_5f',['channels_',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a3ba1eb6372e9bf6d2d8b3ff53d529021',1,'library::core::logger::sinks::Sink']]],
+  ['char',['Char',['../classlibrary_1_1core_1_1types_1_1_string.html#abbc5a795da1a72d1456ba4950e62602c',1,'library::core::types::String']]],
   ['clear',['clear',['../classlibrary_1_1core_1_1fs_1_1_file.html#a0b95ab08dd8df2cc28b2e42a72ae0b9a',1,'library::core::fs::File']]],
   ['clone',['clone',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#ac5c80193b0832f760a7447e7abc7d468',1,'library::core::logger::sinks::Console::clone()'],['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a00ba941947d903825f4922694e0961dd',1,'library::core::logger::sinks::Sink::clone()'],['../classlibrary_1_1core_1_1logger_1_1sources_1_1_source.html#a26b4ca6b752737375ab35438c5906775',1,'library::core::logger::sources::Source::clone()']]],
   ['color',['Color',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#aa7a07d8165e1df74ad4d289d5220bc96',1,'library::core::logger::sinks::Console']]],

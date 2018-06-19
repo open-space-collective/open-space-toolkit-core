@@ -35,11 +35,17 @@ bool \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a3620d335dd5b14029a3a67
 char \hyperlink{classlibrary_1_1core_1_1types_1_1_string_ad695264b765448ecf4f8617553012eee}{get\+First} () const
 \item 
 char \hyperlink{classlibrary_1_1core_1_1types_1_1_string_aae3aaf5e3b3fde3f7b90fd1ee431c9d4}{get\+Last} () const
-\end{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_aaf9377048b900766d05a1af9182cf251}{get\+Substring} (const \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index} \&a\+Start\+Position, const \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} \&a\+Length) const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}{trim} ()
+\begin{DoxyCompactList}\small\item\em Removes whitespace from both ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a4d359cb0dba46e14ca46f90e728c2b96}{Empty} ()
+\item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_abbc5a795da1a72d1456ba4950e62602c}{Char} (char a\+Character)
 \end{DoxyCompactItemize}
 
 
@@ -73,6 +79,12 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_abbc5a795da1a72d1456ba4950e62602c}\label{classlibrary_1_1core_1_1types_1_1_string_abbc5a795da1a72d1456ba4950e62602c}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!Char@{Char}}
+\index{Char@{Char}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{Char()}{Char()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::types\+::\+String\+::\+Char (\begin{DoxyParamCaption}\item[{char}]{a\+Character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a4d359cb0dba46e14ca46f90e728c2b96}\label{classlibrary_1_1core_1_1types_1_1_string_a4d359cb0dba46e14ca46f90e728c2b96}} 
 \index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!Empty@{Empty}}
 \index{Empty@{Empty}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
@@ -97,6 +109,12 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \subsubsection{\texorpdfstring{get\+Length()}{getLength()}}
 {\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} library\+::core\+::types\+::\+String\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_aaf9377048b900766d05a1af9182cf251}\label{classlibrary_1_1core_1_1types_1_1_string_aaf9377048b900766d05a1af9182cf251}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!get\+Substring@{get\+Substring}}
+\index{get\+Substring@{get\+Substring}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{get\+Substring()}{getSubstring()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::types\+::\+String\+::get\+Substring (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index} \&}]{a\+Start\+Position,  }\item[{const \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} \&}]{a\+Length }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a1981fee5619389b46c786afa7aadc251}\label{classlibrary_1_1core_1_1types_1_1_string_a1981fee5619389b46c786afa7aadc251}} 
 \index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!is\+Empty@{is\+Empty}}
 \index{is\+Empty@{is\+Empty}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
@@ -115,6 +133,19 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \subsubsection{\texorpdfstring{is\+Uppercase()}{isUppercase()}}
 {\footnotesize\ttfamily bool library\+::core\+::types\+::\+String\+::is\+Uppercase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}\label{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!trim@{trim}}
+\index{trim@{trim}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& library\+::core\+::types\+::\+String\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes whitespace from both ends. 
+
+\begin{DoxyReturn}{Returns}
+Reference to string 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

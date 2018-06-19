@@ -12,6 +12,7 @@ var searchData=
   ['trace',['Trace',['../namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8add4ec0ac4e58f7c32a01244ae91150b1',1,'library::core::logger']]],
   ['tree',['Tree',['../classlibrary_1_1core_1_1ctnr_1_1_tree.html',1,'library::core::ctnr::Tree'],['../classlibrary_1_1core_1_1ctnr_1_1_tree.html#a4bba7cf8925135d1fe4f24fabd07aec4',1,'library::core::ctnr::Tree::Tree()=delete'],['../classlibrary_1_1core_1_1ctnr_1_1_tree.html#ac5fc40b3ef35ab52bc0dbdbf807edb46',1,'library::core::ctnr::Tree::Tree(const Tree &amp;aTree)']]],
   ['tree_2ehpp',['Tree.hpp',['../_tree_8hpp.html',1,'']]],
+  ['trim',['trim',['../classlibrary_1_1core_1_1types_1_1_string.html#a42426ffb11bb0b2789ba0991064a01b5',1,'library::core::types::String']]],
   ['triple',['Triple',['../structlibrary_1_1core_1_1ctnr_1_1_triple.html',1,'library::core::ctnr']]],
   ['triple_2ehpp',['Triple.hpp',['../_triple_8hpp.html',1,'']]],
   ['triple_2etpp',['Triple.tpp',['../_triple_8tpp.html',1,'']]],

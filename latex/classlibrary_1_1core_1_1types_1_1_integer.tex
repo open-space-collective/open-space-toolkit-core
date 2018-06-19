@@ -144,7 +144,17 @@ static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_aa8151c3b615012ec215d20da6de593bd}{Negative\+Infinity} ()
 \item 
-static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_af4d25f6f706e8a4a6b2ec97b506e940a}{String} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+String)
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a902099e195d18a7d843c7cdd9a4f349c}{Index} (const \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{types\+::\+Index} \&an\+Index)
+\item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a42a312defba217d122aa51b9cb46940c}{Size} (const \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{types\+::\+Size} \&a\+Size)
+\item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_aaa5f55222db9aeb9ad7fcd8a69109f9d}{Parse} (char a\+Character)
+\item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a12084c5a23b58ab8f3d28bf69f579253}{Parse} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+String)
+\item 
+static bool \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a8cb057f64ee47cd1d3ff517e8f667a1d}{Can\+Parse} (char a\+Character)
+\item 
+static bool \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a6a0d5e3ceff944f3a121a59ec7430258}{Can\+Parse} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+String)
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -230,6 +240,18 @@ Double constructor (disabled)
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a8cb057f64ee47cd1d3ff517e8f667a1d}\label{classlibrary_1_1core_1_1types_1_1_integer_a8cb057f64ee47cd1d3ff517e8f667a1d}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Can\+Parse@{Can\+Parse}}
+\index{Can\+Parse@{Can\+Parse}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Can\+Parse()}{CanParse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool library\+::core\+::types\+::\+Integer\+::\+Can\+Parse (\begin{DoxyParamCaption}\item[{char}]{a\+Character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a6a0d5e3ceff944f3a121a59ec7430258}\label{classlibrary_1_1core_1_1types_1_1_integer_a6a0d5e3ceff944f3a121a59ec7430258}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Can\+Parse@{Can\+Parse}}
+\index{Can\+Parse@{Can\+Parse}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Can\+Parse()}{CanParse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool library\+::core\+::types\+::\+Integer\+::\+Can\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_abe567cca5d1e448329195df5d16d48e6}\label{classlibrary_1_1core_1_1types_1_1_integer_abe567cca5d1e448329195df5d16d48e6}} 
 \index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!get\+Sign@{get\+Sign}}
 \index{get\+Sign@{get\+Sign}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
@@ -241,6 +263,12 @@ Double constructor (disabled)
 \index{get\+String@{get\+String}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
 \subsubsection{\texorpdfstring{get\+String()}{getString()}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} library\+::core\+::types\+::\+Integer\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a902099e195d18a7d843c7cdd9a4f349c}\label{classlibrary_1_1core_1_1types_1_1_integer_a902099e195d18a7d843c7cdd9a4f349c}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Index@{Index}}
+\index{Index@{Index}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+Index (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{types\+::\+Index} \&}]{an\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a5edecf8abe00a8de9e021b8cc2b38c25}\label{classlibrary_1_1core_1_1types_1_1_integer_a5edecf8abe00a8de9e021b8cc2b38c25}} 
 \index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!is\+Defined@{is\+Defined}}
@@ -698,17 +726,29 @@ True if lhs integer is greater than or equal to rhs integer
 \subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool library\+::core\+::types\+::\+Integer\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a623afb1580f870fd8a1997b1c12c917d}{Integer\+::\+Value\+Type} \&}]{an\+Integer }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_aaa5f55222db9aeb9ad7fcd8a69109f9d}\label{classlibrary_1_1core_1_1types_1_1_integer_aaa5f55222db9aeb9ad7fcd8a69109f9d}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Parse@{Parse}}
+\index{Parse@{Parse}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+Parse (\begin{DoxyParamCaption}\item[{char}]{a\+Character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a12084c5a23b58ab8f3d28bf69f579253}\label{classlibrary_1_1core_1_1types_1_1_integer_a12084c5a23b58ab8f3d28bf69f579253}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Parse@{Parse}}
+\index{Parse@{Parse}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a807320f164c841288eafff5f49470c00}\label{classlibrary_1_1core_1_1types_1_1_integer_a807320f164c841288eafff5f49470c00}} 
 \index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Positive\+Infinity@{Positive\+Infinity}}
 \index{Positive\+Infinity@{Positive\+Infinity}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
 \subsubsection{\texorpdfstring{Positive\+Infinity()}{PositiveInfinity()}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+Positive\+Infinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_af4d25f6f706e8a4a6b2ec97b506e940a}\label{classlibrary_1_1core_1_1types_1_1_integer_af4d25f6f706e8a4a6b2ec97b506e940a}} 
-\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!String@{String}}
-\index{String@{String}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
-\subsubsection{\texorpdfstring{String()}{String()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a42a312defba217d122aa51b9cb46940c}\label{classlibrary_1_1core_1_1types_1_1_integer_a42a312defba217d122aa51b9cb46940c}} 
+\index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Size@{Size}}
+\index{Size@{Size}!library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} library\+::core\+::types\+::\+Integer\+::\+Size (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{types\+::\+Size} \&}]{a\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_integer_a142c2df49031b787daf30673c73fcad7}\label{classlibrary_1_1core_1_1types_1_1_integer_a142c2df49031b787daf30673c73fcad7}} 
 \index{library\+::core\+::types\+::\+Integer@{library\+::core\+::types\+::\+Integer}!Undefined@{Undefined}}

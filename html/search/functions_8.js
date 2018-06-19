@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['index',['Index',['../classlibrary_1_1core_1_1types_1_1_integer.html#a902099e195d18a7d843c7cdd9a4f349c',1,'library::core::types::Integer']]],
   ['integer',['Integer',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a6746a69f0507b2c7ad8ebdf3d873b083',1,'library::core::ctnr::Object::Integer()'],['../classlibrary_1_1core_1_1types_1_1_integer.html#a6483b1c4e13e5ed6af5e7a58347efead',1,'library::core::types::Integer::Integer()=delete'],['../classlibrary_1_1core_1_1types_1_1_integer.html#ac282b8e24c1d1a43e578c5be3c70ea27',1,'library::core::types::Integer::Integer(Integer::ValueType anInteger)'],['../classlibrary_1_1core_1_1types_1_1_integer.html#af3bcebe374c4b7b4329ed0a7fae04abd',1,'library::core::types::Integer::Integer(float)=delete'],['../classlibrary_1_1core_1_1types_1_1_integer.html#ab0d94d5cfc78f38f1598679015f4ab61',1,'library::core::types::Integer::Integer(double)=delete']]],
   ['isabsolute',['isAbsolute',['../classlibrary_1_1core_1_1fs_1_1_path.html#a9a5772dfc1273a74137ca301e9a84d61',1,'library::core::fs::Path']]],
   ['isall',['isAll',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a2e9d3f4da25dc33be1e11f461db4983d',1,'library::core::fs::PermissionSet']]],
@@ -12,10 +13,10 @@ var searchData=
   ['isenabled',['isEnabled',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a31a8ad92f76ad05d630d50fe63c1b747',1,'library::core::logger::sinks::Sink']]],
   ['iseven',['isEven',['../classlibrary_1_1core_1_1types_1_1_integer.html#a12f0f831be3e8a88c2e4ea250a9019e5',1,'library::core::types::Integer']]],
   ['isfilelogged',['isFileLogged',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a736086840b9c964c40e349d5e7f68cca',1,'library::core::logger::sinks::Sink']]],
-  ['isfinite',['isFinite',['../classlibrary_1_1core_1_1types_1_1_integer.html#a892617aa8be82ac3c4e4dfb9129c7613',1,'library::core::types::Integer']]],
+  ['isfinite',['isFinite',['../classlibrary_1_1core_1_1types_1_1_integer.html#a892617aa8be82ac3c4e4dfb9129c7613',1,'library::core::types::Integer::isFinite()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a3355dd60d401e1f464d0bc20be9a32d5',1,'library::core::types::Real::isFinite()']]],
   ['isfunctionlogged',['isFunctionLogged',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a39078847a7c0f6a22893dd82e64545f1',1,'library::core::logger::sinks::Sink']]],
   ['isinfinity',['isInfinity',['../classlibrary_1_1core_1_1types_1_1_integer.html#a99a5c50599c55929e11c7afae4a21709',1,'library::core::types::Integer::isInfinity()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a4603222d9315aa59355778d66c0b214d',1,'library::core::types::Real::isInfinity()']]],
-  ['isinteger',['isInteger',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a13d9accc0093611957481eede274fb5d',1,'library::core::ctnr::Object']]],
+  ['isinteger',['isInteger',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a13d9accc0093611957481eede274fb5d',1,'library::core::ctnr::Object::isInteger()'],['../classlibrary_1_1core_1_1types_1_1_real.html#ad2709f64d24cb119403a0a6d386f5eda',1,'library::core::types::Real::isInteger()']]],
   ['islineidlogged',['isLineIdLogged',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a5670a0ee01ffa61fce94ff14b744cda4',1,'library::core::logger::sinks::Sink']]],
   ['islinelogged',['isLineLogged',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a701bbd71bc5f871ac97abdc98fa4460f',1,'library::core::logger::sinks::Sink']]],
   ['islowercase',['isLowercase',['../classlibrary_1_1core_1_1types_1_1_string.html#a3620d335dd5b14029a3a67e75c79be81',1,'library::core::types::String']]],
