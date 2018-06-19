@@ -111,6 +111,12 @@ class Real
 
         static Real             Zero                                        ( ) ;
 
+        static Real             Pi                                          ( ) ;
+
+        static Real             HalfPi                                      ( ) ;
+
+        static Real             TwoPi                                       ( ) ;
+
         static Real             PositiveInfinity                            ( ) ;
 
         static Real             NegativeInfinity                            ( ) ;
