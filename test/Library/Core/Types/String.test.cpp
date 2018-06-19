@@ -7,9 +7,9 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Global.test.hpp>
-
 #include <Library/Core/Types/String.hpp>
+
+#include <Global.test.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -132,12 +132,75 @@ TEST (Library_Core_Types_String, GetLast)
 
 }
 
+TEST (Library_Core_Types_String, GetSubstring)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("abc", String("abcdef").getSubstring(0, 3)) ;
+        EXPECT_EQ("def", String("abcdef").getSubstring(3, 3)) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(String("").getSubstring(0, 1)) ;
+        EXPECT_ANY_THROW(String("abc").getSubstring(0, 0)) ;
+        EXPECT_ANY_THROW(String("abc").getSubstring(3, 1)) ;
+        EXPECT_ANY_THROW(String("abc").getSubstring(0, 4)) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_String, Trim)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("", String("").trim()) ;
+        EXPECT_EQ("abc", String("abc").trim()) ;
+        EXPECT_EQ("abc", String("abc\n").trim()) ;
+        EXPECT_EQ("abc", String("abc\r").trim()) ;
+        EXPECT_EQ("abc", String("abc\r\n").trim()) ;
+        EXPECT_EQ("abc", String(" abc").trim()) ;
+        EXPECT_EQ("abc", String("   abc").trim()) ;
+        EXPECT_EQ("abc", String("abc ").trim()) ;
+        EXPECT_EQ("abc", String("abc   ").trim()) ;
+        EXPECT_EQ("abc", String(" abc ").trim()) ;
+        EXPECT_EQ("abc", String("   abc   ").trim()) ;
+        EXPECT_EQ("ab cd", String("   ab cd   ").trim()) ;
+        EXPECT_EQ("", String(" ").trim()) ;
+        EXPECT_EQ("", String("   ").trim()) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, Empty)
 {
 
     using library::core::types::String ;
 
     EXPECT_TRUE(String::Empty().isEmpty()) ;
+
+}
+
+TEST (Library_Core_Types_String, Char)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("a", String::Char('a')) ;
+        EXPECT_EQ("0", String::Char('0')) ;
+
+    }
 
 }
 

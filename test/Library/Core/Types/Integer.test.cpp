@@ -7,12 +7,14 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Global.test.hpp>
-
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Containers/Pair.hpp>
-#include <Library/Core/Containers/Triple.hpp>
 #include <Library/Core/Containers/Array.hpp>
+#include <Library/Core/Containers/Triple.hpp>
+#include <Library/Core/Containers/Pair.hpp>
+#include <Library/Core/Types/Integer.hpp>
+#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Types/Index.hpp>
+
+#include <Global.test.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2773,39 +2775,142 @@ TEST (Library_Core_Types_Integer, NegativeInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, String)
+TEST (Library_Core_Types_Integer, Index)
+{
+
+    using library::core::types::Index ;
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_EQ(0, Integer::Index(Index(0))) ;
+        EXPECT_EQ(1, Integer::Index(Index(1))) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Integer::Index(Index(std::numeric_limits<Index>::max()))) ;
+
+    }
+    
+}
+
+TEST (Library_Core_Types_Integer, Size)
+{
+
+    using library::core::types::Size ;
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_EQ(0, Integer::Size(Size(0))) ;
+        EXPECT_EQ(1, Integer::Size(Size(1))) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Integer::Size(Size(std::numeric_limits<Size>::max()))) ;
+
+    }
+    
+}
+
+TEST (Library_Core_Types_Integer, Parse)
 {
 
     using library::core::types::Integer ;
 
-    EXPECT_FALSE(Integer::String("").isDefined()) ;
-    EXPECT_FALSE(Integer::String("Undefined").isDefined()) ;
+    // Char
 
-    EXPECT_EQ(+0, Integer::String("0")) ;
-    EXPECT_EQ(-1, Integer::String("-1")) ;
-    EXPECT_EQ(+0, Integer::String("+0")) ;
-    EXPECT_EQ(+1, Integer::String("+1")) ;
+    {
 
-    EXPECT_EQ(-2147483648, Integer::String("-2147483648")) ;
-    EXPECT_EQ(+2147483647, Integer::String("+2147483647")) ;
+        EXPECT_EQ(0, Integer::Parse('0')) ;
+        EXPECT_EQ(1, Integer::Parse('1')) ;
+        EXPECT_EQ(2, Integer::Parse('2')) ;
+        EXPECT_EQ(3, Integer::Parse('3')) ;
+        EXPECT_EQ(9, Integer::Parse('9')) ;
 
-    EXPECT_ANY_THROW(Integer::String("-2147483649")) ;
-    EXPECT_ANY_THROW(Integer::String("2147483648")) ;
-    EXPECT_ANY_THROW(Integer::String("+2147483648")) ;
+        EXPECT_ANY_THROW(Integer::Parse('a')) ;
+        EXPECT_ANY_THROW(Integer::Parse('-')) ;
+        EXPECT_ANY_THROW(Integer::Parse('+')) ;
 
-    EXPECT_TRUE(Integer::String("-Inf").isNegativeInfinity()) ;
-    EXPECT_TRUE(Integer::String("Inf").isPositiveInfinity()) ;
-    EXPECT_TRUE(Integer::String("+Inf").isPositiveInfinity()) ;
+    }
+
+    // String
+    
+    {
+
+        EXPECT_FALSE(Integer::Parse("").isDefined()) ;
+        EXPECT_FALSE(Integer::Parse("Undefined").isDefined()) ;
+
+        EXPECT_EQ(+0, Integer::Parse("0")) ;
+        EXPECT_EQ(-1, Integer::Parse("-1")) ;
+        EXPECT_EQ(+0, Integer::Parse("+0")) ;
+        EXPECT_EQ(+1, Integer::Parse("+1")) ;
+
+        EXPECT_EQ(-2147483648, Integer::Parse("-2147483648")) ;
+        EXPECT_EQ(+2147483647, Integer::Parse("+2147483647")) ;
+
+        EXPECT_ANY_THROW(Integer::Parse("-2147483649")) ;
+        EXPECT_ANY_THROW(Integer::Parse("2147483648")) ;
+        EXPECT_ANY_THROW(Integer::Parse("+2147483648")) ;
+
+        EXPECT_TRUE(Integer::Parse("-Inf").isNegativeInfinity()) ;
+        EXPECT_TRUE(Integer::Parse("Inf").isPositiveInfinity()) ;
+        EXPECT_TRUE(Integer::Parse("+Inf").isPositiveInfinity()) ;
+
+    }
 
 }
 
-// TEST (Library_Core_Types_Integer, Object)
-// {
+TEST (Library_Core_Types_Integer, CanParse)
+{
 
-//     using library::core::types::Integer ;
+    using library::core::types::Integer ;
 
-//     FAIL() ;
+    // Char
 
-// }
+    {
+
+        EXPECT_TRUE(Integer::CanParse('0')) ;
+        EXPECT_TRUE(Integer::CanParse('1')) ;
+        EXPECT_TRUE(Integer::CanParse('2')) ;
+        EXPECT_TRUE(Integer::CanParse('3')) ;
+        EXPECT_TRUE(Integer::CanParse('9')) ;
+
+        EXPECT_FALSE(Integer::CanParse('a')) ;
+        EXPECT_FALSE(Integer::CanParse('-')) ;
+        EXPECT_FALSE(Integer::CanParse('+')) ;
+        
+    }
+
+    // String
+
+    {
+
+        EXPECT_TRUE(Integer::CanParse("")) ;
+        EXPECT_TRUE(Integer::CanParse("Undefined")) ;
+
+        EXPECT_TRUE(Integer::CanParse("0")) ;
+        EXPECT_TRUE(Integer::CanParse("-1")) ;
+        EXPECT_TRUE(Integer::CanParse("+0")) ;
+        EXPECT_TRUE(Integer::CanParse("+1")) ;
+
+        EXPECT_TRUE(Integer::CanParse("-2147483648")) ;
+        EXPECT_TRUE(Integer::CanParse("+2147483647")) ;
+
+        EXPECT_FALSE(Integer::CanParse("-2147483649")) ;
+        EXPECT_FALSE(Integer::CanParse("2147483648")) ;
+        EXPECT_FALSE(Integer::CanParse("+2147483648")) ;
+
+        EXPECT_TRUE(Integer::CanParse("-Inf")) ;
+        EXPECT_TRUE(Integer::CanParse("Inf")) ;
+        EXPECT_TRUE(Integer::CanParse("+Inf")) ;
+
+    }
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

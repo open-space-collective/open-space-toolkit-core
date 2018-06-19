@@ -13,6 +13,7 @@
 #include <boost/lexical_cast.hpp>
 
 #include <limits>
+#include <iomanip>
 #include <iostream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -130,15 +131,15 @@ Real                            Real::operator +                            (   
             }
 
             // [TBC] Use __builtin_add_overflow instead?
-            
-            if ((aReal.value_ > 0.0) && (value_ > (std::numeric_limits<Real::ValueType>::max() - aReal.value_))) // Addition would overflow
+
+            if ((aReal.value_ > 0.0) && (value_ >= (std::numeric_limits<Real::ValueType>::max() - aReal.value_))) // Addition would overflow
             {
-                return Real::PositiveInfinity() ;
+                return (value_ != 0.0) ? Real::PositiveInfinity() : aReal ;
             }
 
-            if ((aReal.value_ < 0.0) && (value_ < (std::numeric_limits<Real::ValueType>::min() - aReal.value_))) // Addition would underflow
+            if ((aReal.value_ < 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() - aReal.value_))) // Addition would underflow
             {
-                return Real::NegativeInfinity() ;
+                return (value_ != 0.0) ? Real::NegativeInfinity() : aReal ;
             }
 
             return Real(value_ + aReal.value_) ;
@@ -184,14 +185,14 @@ Real                            Real::operator -                            (   
 
             }
 
-            if ((aReal.value_ < 0.0) && (value_ > (std::numeric_limits<Real::ValueType>::max() + aReal.value_))) // Subtraction would overflow
+            if ((aReal.value_ < 0.0) && (value_ >= (std::numeric_limits<Real::ValueType>::max() + aReal.value_))) // Subtraction would overflow
             {
-                return Real::PositiveInfinity() ;
+                return (value_ != 0.0) ? Real::PositiveInfinity() : -aReal ;
             }
 
-            if ((aReal.value_ > 0.0) && (value_ < (std::numeric_limits<Real::ValueType>::min() + aReal.value_))) // Subtraction would underflow
+            if ((aReal.value_ > 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() + aReal.value_))) // Subtraction would underflow
             {
-                return Real::NegativeInfinity() ;
+                return (value_ != 0.0) ? Real::NegativeInfinity() : -aReal ;
             }
 
             return Real(value_ - aReal.value_) ;
@@ -280,12 +281,12 @@ Real                            Real::operator *                            (   
             
             // Check for -1 for two's complement machines
             
-            if ((value_ < 0.0) && (aReal.value_ == std::numeric_limits<Real::ValueType>::min())) // Multiplication can overflow
+            if ((value_ < 0.0) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest())) // Multiplication can overflow
             {
                 return Real::PositiveInfinity() ;
             }
             
-            if ((aReal.value_ < 0.0) && (value_ == std::numeric_limits<Real::ValueType>::min())) // Multiplication can overflow
+            if ((aReal.value_ < 0.0) && (value_ == std::numeric_limits<Real::ValueType>::lowest())) // Multiplication can overflow
             {
                 return Real::PositiveInfinity() ;
             }
@@ -295,17 +296,17 @@ Real                            Real::operator *                            (   
                 return Real::PositiveInfinity() ;
             }
 
-            if ((value_ == +1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::min()))
+            if ((value_ == +1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
             {
-                return Real(std::numeric_limits<Real::ValueType>::min()) ;
+                return Real(std::numeric_limits<Real::ValueType>::lowest()) ;
             }
 
-            if ((value_ == -1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::min()))
+            if ((value_ == -1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
             {
                 return Real::PositiveInfinity() ;
             }
             
-            if ((aReal.value_ != -1) && (this->getSign() != aReal.getSign()) && ((-std::abs(value_)) < (std::numeric_limits<Real::ValueType>::min() / std::abs(aReal.value_)))) // Multiplication would underflow
+            if ((aReal.value_ != -1) && (this->getSign() != aReal.getSign()) && ((-std::abs(value_)) < (std::numeric_limits<Real::ValueType>::lowest() / std::abs(aReal.value_)))) // Multiplication would underflow
             {
                 return Real::NegativeInfinity() ;
             }
@@ -379,7 +380,7 @@ Real                            Real::operator /                            (   
             else
             {
 
-                if ((value_ == std::numeric_limits<Real::ValueType>::min()) && (aReal.value_ == -1))
+                if ((value_ == std::numeric_limits<Real::ValueType>::lowest()) && (aReal.value_ == -1))
                 {
                     return Real::PositiveInfinity() ;
                 }
@@ -526,7 +527,7 @@ Real                            Real::operator -                            ( ) 
         case Real::Type::Defined:
         {
 
-            if (value_ == std::numeric_limits<Real::ValueType>::min())
+            if (value_ == std::numeric_limits<Real::ValueType>::lowest())
             {
                 return Real::PositiveInfinity() ;
             }
@@ -648,6 +649,27 @@ bool                            Real::isNegativeInfinity                    ( ) 
     return type_ == Real::Type::NegativeInfinity ;
 }
 
+bool                            Real::isInteger                             ( ) const
+{
+
+    if (this->isFinite())
+    {
+        
+        double intpart ;
+    
+        return std::modf(value_, &intpart) == 0.0 ;
+
+    }
+
+    return false ;
+
+}
+
+bool                            Real::isFinite                              ( ) const
+{
+    return type_ == Real::Type::Defined ;
+}
+
 types::Sign                     Real::getSign                               ( ) const
 {
 
@@ -698,7 +720,24 @@ types::String                   Real::getString                             ( ) 
             return "Undefined" ;
 
         case Real::Type::Defined:
-            return boost::lexical_cast<std::string>(value_) ;
+        {
+
+            if (this->isInteger())
+            {
+                return boost::lexical_cast<std::string>(value_) + ".0" ;
+            }
+
+            std::ostringstream stringStream ;
+
+            // stringStream << std::fixed << std::setprecision(2) ;
+
+            stringStream << value_ ;
+
+            return stringStream.str() ;
+
+            // return boost::lexical_cast<std::string>(value_) ;
+
+        }
 
         case Real::Type::PositiveInfinity:
             return "+Inf" ;
@@ -734,10 +773,10 @@ Real                            Real::PositiveInfinity                      ( )
 
 Real                            Real::NegativeInfinity                      ( )
 {
-    return Real(Real::Type::NegativeInfinity, std::numeric_limits<Real::ValueType>::min()) ;
+    return Real(Real::Type::NegativeInfinity, std::numeric_limits<Real::ValueType>::lowest()) ;
 }
 
-Real                            Real::String                                (   const   types::String&              aString                                     )
+Real                            Real::Parse                                 (   const   types::String&              aString                                     )
 {
 
     if (aString.isEmpty() || (aString == "Undefined"))

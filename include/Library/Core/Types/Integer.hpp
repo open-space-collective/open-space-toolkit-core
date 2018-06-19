@@ -11,6 +11,8 @@
 #define __Library_Core_Types_Integer__
 
 #include <Library/Core/Types/Sign.hpp>
+#include <Library/Core/Types/Index.hpp>
+#include <Library/Core/Types/Size.hpp>
 #include <Library/Core/Types/String.hpp>
 
 #include <ostream>
@@ -221,7 +223,17 @@ class Integer
 
         static Integer          NegativeInfinity                            ( ) ;
 
-        static Integer          String                                      (   const   types::String&              aString                                     ) ;
+        static Integer          Index                                       (   const   types::Index&               anIndex                                     ) ;
+
+        static Integer          Size                                        (   const   types::Size&                aSize                                       ) ;
+
+        static Integer          Parse                                       (           char                        aCharacter                                  ) ;
+        
+        static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
+
+        static bool             CanParse                                    (           char                        aCharacter                                  ) ;
+
+        static bool             CanParse                                    (   const   types::String&              aString                                     ) ;
 
     private:
 
