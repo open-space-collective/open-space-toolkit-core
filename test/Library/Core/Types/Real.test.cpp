@@ -12,6 +12,8 @@
 #include <Library/Core/Containers/Pair.hpp>
 #include <Library/Core/Types/Real.hpp>
 
+#include <cmath>
+
 #include <Global.test.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2000,6 +2002,54 @@ TEST (Library_Core_Types_Real, Undefined)
    
     EXPECT_FALSE(Real::Undefined().isDefined()) ;
     EXPECT_FALSE(Real::Undefined().isInfinity()) ;
+
+}
+
+TEST (Library_Core_Types_Real, Zero)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_NO_THROW(Real::Zero()) ;
+    EXPECT_TRUE(Real::Zero().isDefined()) ;
+
+    EXPECT_EQ(0.0, Real::Zero()) ;
+
+}
+
+TEST (Library_Core_Types_Real, Pi)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_NO_THROW(Real::Pi()) ;
+    EXPECT_TRUE(Real::Pi().isDefined()) ;
+
+    EXPECT_EQ(M_PI, Real::Pi()) ;
+
+}
+
+TEST (Library_Core_Types_Real, HalfPi)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_NO_THROW(Real::HalfPi()) ;
+    EXPECT_TRUE(Real::HalfPi().isDefined()) ;
+
+    EXPECT_EQ(M_PI / 2.0, Real::HalfPi()) ;
+
+}
+
+TEST (Library_Core_Types_Real, TwoPi)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_NO_THROW(Real::TwoPi()) ;
+    EXPECT_TRUE(Real::TwoPi().isDefined()) ;
+
+    EXPECT_EQ(2.0 * M_PI, Real::TwoPi()) ;
 
 }
 
