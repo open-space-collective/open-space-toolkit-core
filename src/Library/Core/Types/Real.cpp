@@ -751,6 +751,20 @@ types::String                   Real::getString                             ( ) 
 
 }
 
+types::Integer                  Real::toInteger                         ( ) const
+{
+
+    if (this->isInteger())
+    {
+        return types::Integer(static_cast<types::Integer::ValueType>(value_)) ;
+    }
+
+    throw library::core::error::RuntimeError("Real is not integer.") ;
+
+    return types::Integer::Undefined() ;
+
+}
+
 // ctnr::Object                    Real::getObject                              ( ) const
 // {
 
@@ -789,6 +803,18 @@ Real                            Real::PositiveInfinity                      ( )
 Real                            Real::NegativeInfinity                      ( )
 {
     return Real(Real::Type::NegativeInfinity, std::numeric_limits<Real::ValueType>::lowest()) ;
+}
+
+Real                            Real::Integer                               (   const   types::Integer&             anInteger                                   )
+{
+
+    if (anInteger.isDefined())
+    {
+        return Real(Real::Type::Defined, anInteger) ;
+    }
+    
+    return Real::Undefined() ;
+
 }
 
 Real                            Real::Parse                                 (   const   types::String&              aString                                     )
