@@ -54,7 +54,7 @@ RUN pushd /tmp > /dev/null \
  && cd fmt \
  && mkdir build \
  && cd build \
- && cmake .. \
+ && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
  && make --silent -j ${cpu_count} \
  && make install \
  && rm -rf /tmp/fmt \

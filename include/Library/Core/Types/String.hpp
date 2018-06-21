@@ -13,6 +13,7 @@
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 
+#define FMT_HEADER_ONLY
 #include <fmt/format.h>
 
 #include <ostream>
