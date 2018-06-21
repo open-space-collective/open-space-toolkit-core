@@ -12,6 +12,7 @@
 
 #include <Library/Core/Types/Sign.hpp>
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Integer.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -107,6 +108,8 @@ class Real
 
         types::String           getString                                   ( ) const ;
 
+        types::Integer          toInteger                                   ( ) const ;
+
         static Real             Undefined                                   ( ) ;
 
         static Real             Zero                                        ( ) ;
@@ -120,6 +123,8 @@ class Real
         static Real             PositiveInfinity                            ( ) ;
 
         static Real             NegativeInfinity                            ( ) ;
+
+        static Real             Integer                                     (   const   types::Integer&             anInteger                                   ) ;
 
         static Real             Parse                                       (   const   types::String&              aString                                     ) ;
 

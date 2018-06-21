@@ -8,6 +8,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Real.hpp>
+#include <Library/Core/Types/Integer.hpp>
 
 #include <Global.test.hpp>
 
@@ -200,6 +202,29 @@ TEST (Library_Core_Types_String, Char)
         EXPECT_EQ("a", String::Char('a')) ;
         EXPECT_EQ("0", String::Char('0')) ;
 
+    }
+
+}
+
+TEST (Library_Core_Types_String, Format)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::Real ;
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("", String::Format("")) ;
+        EXPECT_EQ("123", String::Format("{0}", 123)) ;
+        EXPECT_EQ("123.456", String::Format("{0}", 123.456)) ;
+        EXPECT_EQ("123", String::Format("{0}", Integer(123))) ;
+        EXPECT_EQ("123.456", String::Format("{0}", Real(123.456))) ;
+        EXPECT_EQ("123 - 456 - 789 - 123", String::Format("{0} - {1} - {2} - {0}", 123, 456, 789)) ;
+        EXPECT_EQ("123 - 456.789", String::Format("{0} - {1}", 123, 456.789)) ;
+        EXPECT_EQ("Hello, World!", String::Format("{0}, {1}!", "Hello", "World")) ;
+        EXPECT_EQ("123 - 456.789 - Hello, World!", String::Format("{0} - {1} - {2}, {3}!", 123, 456.789, "Hello", "World")) ;
+        
     }
 
 }

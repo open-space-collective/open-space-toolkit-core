@@ -28,6 +28,18 @@ namespace types
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+typedef int8_t Int8 ;
+typedef int16_t Int16 ;
+typedef int32_t Int32 ;
+typedef int64_t Int64 ;
+
+typedef uint8_t Uint8 ;
+typedef uint16_t Uint16 ;
+typedef uint32_t Uint32 ;
+typedef uint64_t Uint64 ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /// @brief                      Integer type
 
 class Integer
@@ -222,6 +234,22 @@ class Integer
         static Integer          PositiveInfinity                            ( ) ;
 
         static Integer          NegativeInfinity                            ( ) ;
+
+        static Integer          Int8                                        (           types::Int8                 anInteger                                   ) ;
+
+        static Integer          Int16                                       (           types::Int16                anInteger                                   ) ;
+
+        static Integer          Int32                                       (           types::Int32                anInteger                                   ) ;
+
+        static Integer          Int64                                       (           types::Int64                anInteger                                   ) ;
+
+        static Integer          Uint8                                       (           types::Uint8                anInteger                                   ) ;
+
+        static Integer          Uint16                                      (           types::Uint16               anInteger                                   ) ;
+
+        static Integer          Uint32                                      (           types::Uint32               anInteger                                   ) ;
+
+        static Integer          Uint64                                      (           types::Uint64               anInteger                                   ) ;
 
         static Integer          Index                                       (   const   types::Index&               anIndex                                     ) ;
 

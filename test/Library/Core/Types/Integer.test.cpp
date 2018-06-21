@@ -2775,6 +2775,317 @@ TEST (Library_Core_Types_Integer, NegativeInfinity)
 
 }
 
+TEST (Library_Core_Types_Integer, Int8)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(-1))) ;
+        EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Int8(library::core::types::Int8(0))) ;
+        
+        EXPECT_EQ(-1, Integer::Int8(library::core::types::Int8(-1))) ;
+        EXPECT_EQ(+1, Integer::Int8(library::core::types::Int8(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::min(), Integer::Int8(library::core::types::Int8(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::max(), Integer::Int8(library::core::types::Int8(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Int16)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(-1))) ;
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Int16(library::core::types::Int16(0))) ;
+        
+        EXPECT_EQ(-1, Integer::Int16(library::core::types::Int16(-1))) ;
+        EXPECT_EQ(+1, Integer::Int16(library::core::types::Int16(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::min(), Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::max(), Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::min(), Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::max(), Integer::Int16(library::core::types::Int16(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Int32)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(-1))) ;
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int32>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int32>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Int32(library::core::types::Int32(0))) ;
+        
+        EXPECT_EQ(-1, Integer::Int32(library::core::types::Int32(-1))) ;
+        EXPECT_EQ(+1, Integer::Int32(library::core::types::Int32(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::min(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::max(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::min(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::max(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int32>::min(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int32>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int32>::max(), Integer::Int32(library::core::types::Int32(std::numeric_limits<library::core::types::Int32>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Int64)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(-1))) ;
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::min()))) ;
+        EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::max()))) ;
+
+        EXPECT_ANY_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::min()) - 1)) ;
+        EXPECT_ANY_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::max()) + 1)) ;
+
+        EXPECT_ANY_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int64>::min()))) ;
+        EXPECT_ANY_THROW(Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int64>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Int64(library::core::types::Int64(0))) ;
+        
+        EXPECT_EQ(-1, Integer::Int64(library::core::types::Int64(-1))) ;
+        EXPECT_EQ(+1, Integer::Int64(library::core::types::Int64(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::min(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int8>::max(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::min(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int16>::max(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int16>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int32>::min(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Int32>::max(), Integer::Int64(library::core::types::Int64(std::numeric_limits<library::core::types::Int32>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Uint8)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Uint8(library::core::types::Uint8(0))) ;
+        
+        EXPECT_EQ(+1, Integer::Uint8(library::core::types::Uint8(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::max(), Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Uint16)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint16>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Uint16(library::core::types::Uint16(0))) ;
+        
+        EXPECT_EQ(+1, Integer::Uint16(library::core::types::Uint16(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::max(), Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::min(), Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::max(), Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint16>::max()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Uint32)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint32>::min()))) ;
+        
+        EXPECT_ANY_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint32>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Uint32(library::core::types::Uint32(0))) ;
+        
+        EXPECT_EQ(+1, Integer::Uint32(library::core::types::Uint32(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::max(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::min(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::max(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint16>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint32>::min(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint32>::min()))) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Integer, Uint64)
+{
+
+    using library::core::types::Integer ;
+
+    {
+
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(0))) ;
+        
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(+1))) ;
+
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint16>::max()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::min()))) ;
+
+        EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::min()))) ;
+        
+        EXPECT_ANY_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::max()))) ;
+        EXPECT_ANY_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::max()))) ;
+
+    }
+
+    {
+
+        EXPECT_EQ(0, Integer::Uint64(library::core::types::Uint64(0))) ;
+        
+        EXPECT_EQ(+1, Integer::Uint64(library::core::types::Uint64(+1))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::max(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint16>::min()))) ;
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::max(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint16>::max()))) ;
+
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint32>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::min()))) ;
+        
+        EXPECT_EQ(std::numeric_limits<library::core::types::Uint64>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::min()))) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_Integer, Index)
 {
 

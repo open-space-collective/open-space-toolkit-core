@@ -13,6 +13,8 @@
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 
+#include <fmt/format.h>
+
 #include <ostream>
 #include <string>
 #include <type_traits>
@@ -72,6 +74,24 @@ class String : public std::string
         static String           Empty                                       ( ) ;
 
         static String           Char                                        (           char                        aCharacter                                  ) ;
+
+        /// @brief              Create formatted string
+        ///
+        /// @code
+        ///                     String::Format("{0}, {1}!", "Hello", "World") ; // "Hello, World!"
+        ///                     String::Format("Let's operate {0} {1}!", 123, "satellites") ; // "Let's operate 123 satellites!"
+        /// @endcode
+        ///
+        /// @param              [in] aFormat A format
+        /// @param              [in] anArgumentList A list of arguments
+        /// @return             Formatted string
+
+        template <typename ...Args>
+        static String           Format                                      (   const   char*                       aFormat,
+                                                                                        Args...                     anArgumentList                              )
+        {
+            return fmt::format(aFormat, anArgumentList...) ;
+        }
 
 } ;
 
