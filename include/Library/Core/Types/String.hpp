@@ -13,6 +13,8 @@
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 
+#include <fmt/format.h>
+
 #include <ostream>
 #include <string>
 #include <type_traits>
@@ -72,6 +74,19 @@ class String : public std::string
         static String           Empty                                       ( ) ;
 
         static String           Char                                        (           char                        aCharacter                                  ) ;
+
+        template <typename ...Args>
+        // static String           Format                                      (   const   char*                       aFormat,
+        //                                                                                 Args&&                      args                                        )
+        static String           Format                                      (   const   char*                       aFormat,
+                                                                                        Args...                     args                                        )
+        {
+            
+            // Process arguments
+            
+            return fmt::format(aFormat, args...) ;
+
+        }
 
 } ;
 
