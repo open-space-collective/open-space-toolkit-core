@@ -39,8 +39,16 @@ class Wrong : public RuntimeError
 
                                 Wrong                                       (   const   String&                     aVariableName                               ) ;
 
-                                Wrong                                       (   const   String&                     aScope,
-                                                                                const   String&                     aVariableName                               ) ;
+                                template <typename ...Args>
+                                Wrong                                       (   const   String&                     aVariableName,
+                                                                                        Args...                     anArgumentList                              )
+                                :   RuntimeError("{} = {} is wrong.", aVariableName, anArgumentList...)
+        {
+            
+        }
+
+                                // Wrong                                       (   const   String&                     aScope,
+                                //                                                 const   String&                     aVariableName                               ) ;
 
                                 ~Wrong                                      ( ) ;
 

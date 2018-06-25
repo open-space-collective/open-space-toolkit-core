@@ -101,6 +101,25 @@ TEST (Library_Core_Types_String, IsLowercase)
 
 }
 
+TEST (Library_Core_Types_String, Match)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_TRUE(String("abc").match(std::regex("^[a-z]{3}$"))) ;
+
+    }
+
+    {
+
+        EXPECT_FALSE(String("abc").match(std::regex("^[a-z]{4}$"))) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, GetLength)
 {
 

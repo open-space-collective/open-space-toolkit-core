@@ -34,12 +34,12 @@ namespace runtime
     
 }
 
-                                ToBeImplemented::ToBeImplemented            (   const   String&                     aScope,
-                                                                                const   String&                     aFunctionName                               )
-                                :   RuntimeError(aScope, "{" + aFunctionName + "} is not yet implemented.")
-{
+//                                 ToBeImplemented::ToBeImplemented            (   const   String&                     aScope,
+//                                                                                 const   String&                     aFunctionName                               )
+//                                 :   RuntimeError(aScope, "{" + aFunctionName + "} is not yet implemented.")
+// {
     
-}
+// }
 
                                 ToBeImplemented::~ToBeImplemented           ( )
 {
