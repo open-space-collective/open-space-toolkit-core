@@ -48,6 +48,7 @@ var classlibrary_1_1core_1_1types_1_1_real =
     [ "operator>", "classlibrary_1_1core_1_1types_1_1_real.html#a36906548aeef8ab50e79ab6474be2f07", null ],
     [ "operator>=", "classlibrary_1_1core_1_1types_1_1_real.html#a5046bc6db8251a1d3ac5bbc43f07db5d", null ],
     [ "operator>=", "classlibrary_1_1core_1_1types_1_1_real.html#aa36e6de2ef7bc2d234be64417d36013d", null ],
+    [ "toInteger", "classlibrary_1_1core_1_1types_1_1_real.html#aa4a7f3663994b5e59dc894b80856e0fb", null ],
     [ "operator*", "classlibrary_1_1core_1_1types_1_1_real.html#a7ca23417eb394573dad57b0e763b3e47", null ],
     [ "operator+", "classlibrary_1_1core_1_1types_1_1_real.html#a4e189d9163eb4d1edcc16035d78c69b6", null ],
     [ "operator-", "classlibrary_1_1core_1_1types_1_1_real.html#a6bc7663211551195d77a7136784c382a", null ],

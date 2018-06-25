@@ -10,5 +10,6 @@ var classlibrary_1_1core_1_1types_1_1_string =
     [ "isEmpty", "classlibrary_1_1core_1_1types_1_1_string.html#a1981fee5619389b46c786afa7aadc251", null ],
     [ "isLowercase", "classlibrary_1_1core_1_1types_1_1_string.html#a3620d335dd5b14029a3a67e75c79be81", null ],
     [ "isUppercase", "classlibrary_1_1core_1_1types_1_1_string.html#a6d12c373b22a062cfa0270204fc998f5", null ],
+    [ "match", "classlibrary_1_1core_1_1types_1_1_string.html#abab50e9c0d620b246d0bfde0dad0add5", null ],
     [ "trim", "classlibrary_1_1core_1_1types_1_1_string.html#a42426ffb11bb0b2789ba0991064a01b5", null ]
 ];

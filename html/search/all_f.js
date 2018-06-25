@@ -7,6 +7,7 @@ var searchData=
   ['path_2ehpp',['Path.hpp',['../_path_8hpp.html',1,'']]],
   ['permissionset',['PermissionSet',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html',1,'library::core::fs::PermissionSet'],['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a8a6eb39cc2a8bca92a657d065d3e36ba',1,'library::core::fs::PermissionSet::PermissionSet()=delete'],['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a39ee30a6f35f325c1cd7bcd307ab11aa',1,'library::core::fs::PermissionSet::PermissionSet(const bool &amp;canRead, const bool &amp;canWrite, const bool &amp;canExecute)']]],
   ['permissionset_2ehpp',['PermissionSet.hpp',['../_permission_set_8hpp.html',1,'']]],
+  ['pi',['Pi',['../classlibrary_1_1core_1_1types_1_1_real.html#a264dc174766742ebfc88c87a72d8fe34',1,'library::core::types::Real']]],
   ['positive',['Positive',['../namespacelibrary_1_1core_1_1types.html#a06d9eaa410d43a0fa3f383040618e87da3289297424e01eda5b788c083bbf3147',1,'library::core::types']]],
   ['positiveinfinity',['PositiveInfinity',['../classlibrary_1_1core_1_1types_1_1_integer.html#a807320f164c841288eafff5f49470c00',1,'library::core::types::Integer::PositiveInfinity()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a7f4aa42fec951281e976eebca95e695e',1,'library::core::types::Real::PositiveInfinity()']]],
   ['predicate',['Predicate',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#a74cd325a740870aea490b6b739aa06ae',1,'library::core::ctnr::Array']]],

@@ -30,6 +30,8 @@ bool \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a6d12c373b22a062cfa0270
 \item 
 bool \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a3620d335dd5b14029a3a67e75c79be81}{is\+Lowercase} () const
 \item 
+bool \hyperlink{classlibrary_1_1core_1_1types_1_1_string_abab50e9c0d620b246d0bfde0dad0add5}{match} (const std\+::regex \&a\+Regular\+Expression) const
+\begin{DoxyCompactList}\small\item\em Returns whether the string matches a regular expression. \end{DoxyCompactList}\item 
 \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_adc97f82ccc9a3d034bc3127e643199fb}{get\+Length} () const
 \item 
 char \hyperlink{classlibrary_1_1core_1_1types_1_1_string_ad695264b765448ecf4f8617553012eee}{get\+First} () const
@@ -46,7 +48,9 @@ char \hyperlink{classlibrary_1_1core_1_1types_1_1_string_aae3aaf5e3b3fde3f7b90fd
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a4d359cb0dba46e14ca46f90e728c2b96}{Empty} ()
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_abbc5a795da1a72d1456ba4950e62602c}{Char} (char a\+Character)
-\end{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_ae1745f54be6952d7b5a388239377b287}{Format} (const char $\ast$a\+Format, Args... an\+Argument\+List)
+\begin{DoxyCompactList}\small\item\em Create formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -91,6 +95,35 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \subsubsection{\texorpdfstring{Empty()}{Empty()}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::types\+::\+String\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_ae1745f54be6952d7b5a388239377b287}\label{classlibrary_1_1core_1_1types_1_1_string_ae1745f54be6952d7b5a388239377b287}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!Format@{Format}}
+\index{Format@{Format}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{Format()}{Format()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::types\+::\+String\+::\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create formatted string. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string_ae1745f54be6952d7b5a388239377b287}{String::Format}(\textcolor{stringliteral}{"\{0\}, \{1\}!"}, \textcolor{stringliteral}{"Hello"}, \textcolor{stringliteral}{"World"}) ; \textcolor{comment}{// "Hello, World!"}
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string_ae1745f54be6952d7b5a388239377b287}{String::Format}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123
+       satellites!"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Format} & A format \\
+\hline
+\mbox{\tt in}  & {\em an\+Argument\+List} & A list of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_ad695264b765448ecf4f8617553012eee}\label{classlibrary_1_1core_1_1types_1_1_string_ad695264b765448ecf4f8617553012eee}} 
 \index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!get\+First@{get\+First}}
 \index{get\+First@{get\+First}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
@@ -133,6 +166,30 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \subsubsection{\texorpdfstring{is\+Uppercase()}{isUppercase()}}
 {\footnotesize\ttfamily bool library\+::core\+::types\+::\+String\+::is\+Uppercase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_abab50e9c0d620b246d0bfde0dad0add5}\label{classlibrary_1_1core_1_1types_1_1_string_abab50e9c0d620b246d0bfde0dad0add5}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!match@{match}}
+\index{match@{match}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily bool library\+::core\+::types\+::\+String\+::match (\begin{DoxyParamCaption}\item[{const std\+::regex \&}]{a\+Regular\+Expression }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the string matches a regular expression. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string_ab49dec039a75f0049c95759141b6d484}{String}(\textcolor{stringliteral}{"abc"}).match(std::regex(\textcolor{stringliteral}{"^[a-z]\{3\}$"})) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Regular\+Expression} & A regular expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if matches regular expression 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}\label{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}} 
 \index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!trim@{trim}}
 \index{trim@{trim}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}

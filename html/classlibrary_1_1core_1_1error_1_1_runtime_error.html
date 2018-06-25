@@ -106,8 +106,9 @@ Inheritance diagram for library::core::error::RuntimeError:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ba0ac577d200ad5f83843ecbe775c2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1error_1_1_runtime_error.html#a6ba0ac577d200ad5f83843ecbe775c2f">RuntimeError</a> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aMessage)</td></tr>
 <tr class="separator:a6ba0ac577d200ad5f83843ecbe775c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e3fcfbbd3636c42dc6e64461e41d85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1error_1_1_runtime_error.html#ac0e3fcfbbd3636c42dc6e64461e41d85">RuntimeError</a> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aScope, const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aMessage)</td></tr>
-<tr class="separator:ac0e3fcfbbd3636c42dc6e64461e41d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac1bac63f4c46fe10e7c96d545c6e4a"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a4ac1bac63f4c46fe10e7c96d545c6e4a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1error_1_1_runtime_error.html#a4ac1bac63f4c46fe10e7c96d545c6e4a">RuntimeError</a> (const char *aFormat, Args... anArgumentList)</td></tr>
+<tr class="separator:a4ac1bac63f4c46fe10e7c96d545c6e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66a0df8767bf53b9910a15960622c0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1error_1_1_runtime_error.html#ab66a0df8767bf53b9910a15960622c0d">~RuntimeError</a> ()</td></tr>
 <tr class="separator:ab66a0df8767bf53b9910a15960622c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3da31cf67f3f5e120c5db9072e3a801"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1error_1_1_runtime_error.html#af3da31cf67f3f5e120c5db9072e3a801">what</a> () const noexcept override</td></tr>
@@ -141,23 +142,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac0e3fcfbbd3636c42dc6e64461e41d85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0e3fcfbbd3636c42dc6e64461e41d85">&#9670;&nbsp;</a></span>RuntimeError() <span class="overload">[2/2]</span></h2>
+<a id="a4ac1bac63f4c46fe10e7c96d545c6e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac1bac63f4c46fe10e7c96d545c6e4a">&#9670;&nbsp;</a></span>RuntimeError() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">library::core::error::RuntimeError::RuntimeError </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>aScope</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>aFormat</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>aMessage</em>&#160;</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>anArgumentList</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,6 +171,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

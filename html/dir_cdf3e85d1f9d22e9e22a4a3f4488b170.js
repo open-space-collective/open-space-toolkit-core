@@ -5,9 +5,7 @@ var dir_cdf3e85d1f9d22e9e22a4a3f4488b170 =
       [ "ByteArray", "classlibrary_1_1core_1_1types_1_1_byte_array.html", "classlibrary_1_1core_1_1types_1_1_byte_array" ]
     ] ],
     [ "Index.hpp", "_index_8hpp.html", "_index_8hpp" ],
-    [ "Integer.hpp", "_integer_8hpp.html", [
-      [ "Integer", "classlibrary_1_1core_1_1types_1_1_integer.html", "classlibrary_1_1core_1_1types_1_1_integer" ]
-    ] ],
+    [ "Integer.hpp", "_integer_8hpp.html", "_integer_8hpp" ],
     [ "Real.hpp", "_real_8hpp.html", [
       [ "Real", "classlibrary_1_1core_1_1types_1_1_real.html", "classlibrary_1_1core_1_1types_1_1_real" ]
     ] ],

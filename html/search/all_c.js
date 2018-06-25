@@ -6,6 +6,7 @@ var searchData=
   ['map_2ehpp',['Map.hpp',['../_map_8hpp.html',1,'']]],
   ['mapconstiterator',['MapConstIterator',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_const_iterator.html#a34426ebde79ee2bb93040f498f09b9ca',1,'library::core::ctnr::Dictionary::ConstIterator']]],
   ['mapiterator',['MapIterator',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html#a990205e908ac1bafcd754993219b805e',1,'library::core::ctnr::Dictionary::Iterator']]],
+  ['match',['match',['../classlibrary_1_1core_1_1types_1_1_string.html#abab50e9c0d620b246d0bfde0dad0add5',1,'library::core::types::String']]],
   ['memory_2ehpp',['Memory.hpp',['../_memory_8hpp.html',1,'']]],
   ['mergewith',['mergeWith',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#abe72cec38e65761df3eaddcfa9b7a44a',1,'library::core::ctnr::Array']]],
   ['movetodirectory',['moveToDirectory',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a666a1ac6f84535bb113979115a760f11',1,'library::core::fs::Directory::moveToDirectory()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#ac81efdfeb17ea50abe23d96f69bc15ae',1,'library::core::fs::File::moveToDirectory()']]]
