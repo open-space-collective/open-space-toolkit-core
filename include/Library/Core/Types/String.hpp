@@ -13,8 +13,10 @@
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 
+#define FMT_HEADER_ONLY
 #include <fmt/format.h>
 
+#include <regex>
 #include <ostream>
 #include <string>
 #include <type_traits>
@@ -56,6 +58,17 @@ class String : public std::string
         bool                    isUppercase                                 ( ) const ;
 
         bool                    isLowercase                                 ( ) const ;
+
+        /// @brief              Returns whether the string matches a regular expression
+        ///
+        /// @code
+        ///                     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
+        /// @endcode
+        ///
+        /// @param              [in] aRegularExpression A regular expression
+        /// @return             True if matches regular expression
+
+        bool                    match                                       (   const   std::regex&                 aRegularExpression                          ) const ;
 
         Size                    getLength                                   ( ) const ;
 

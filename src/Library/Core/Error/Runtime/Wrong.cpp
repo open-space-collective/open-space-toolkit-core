@@ -28,12 +28,12 @@ namespace runtime
     
 }
 
-                                Wrong::Wrong                                (   const   String&                     aScope,
-                                                                                const   String&                     aVariableName                               )
-                                :   RuntimeError(aScope, "{" + aVariableName + "} is wrong.")
-{
+//                                 Wrong::Wrong                                (   const   String&                     aScope,
+//                                                                                 const   String&                     aVariableName                               )
+//                                 :   RuntimeError(aScope, "{" + aVariableName + "} is wrong.")
+// {
     
-}
+// }
 
                                 Wrong::~Wrong                               ( )
 {
