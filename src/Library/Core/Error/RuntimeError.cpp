@@ -27,13 +27,13 @@ namespace error
     
 }
 
-                                RuntimeError::RuntimeError                  (   const   String&                     aScope,
-                                                                                const   String&                     aMessage                            )
-                                :   Exception(aScope),
-                                    message_(aMessage)
-{
+//                                 RuntimeError::RuntimeError                  (   const   String&                     aScope,
+//                                                                                 const   String&                     aMessage                            )
+//                                 :   Exception(aScope),
+//                                     message_(aMessage)
+// {
     
-}
+// }
 
                                 RuntimeError::~RuntimeError                 ( )
 {

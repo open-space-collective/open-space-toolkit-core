@@ -27,8 +27,7 @@ RUN alias ls='ls --color=auto' \
 
 ## RapidJSON [1.1.0]
 
-RUN mkdir /tmp/rapidjson \
- && cd /tmp/rapidjson \
+RUN pushd /tmp > /dev/null \
  && git clone https://github.com/miloyip/rapidjson.git \
  && cd rapidjson \
  && mkdir build \
@@ -36,16 +35,30 @@ RUN mkdir /tmp/rapidjson \
  && cmake .. \
  && make --silent -j ${cpu_count} \
  && make install \
- && rm -rf /tmp/rapidjson
+ && rm -rf /tmp/rapidjson \
+ && popd > /dev/null
 
-## ordered-map
+## ordered-map [master]
 
-RUN mkdir /tmp/ordered-map \
- && cd /tmp/ordered-map \
+RUN pushd /tmp > /dev/null \
  && git clone https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
  && cp -r ./tsl /usr/local/include \
- && rm -rf /tmp/ordered-map
+ && rm -rf /tmp/ordered-map \
+ && popd > /dev/null
+
+## {fmt} [master]
+
+RUN pushd /tmp > /dev/null \
+ && git clone https://github.com/fmtlib/fmt.git \
+ && cd fmt \
+ && mkdir build \
+ && cd build \
+ && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
+ && make --silent -j ${cpu_count} \
+ && make install \
+ && rm -rf /tmp/fmt \
+ && popd > /dev/null
 
 # Labels
 

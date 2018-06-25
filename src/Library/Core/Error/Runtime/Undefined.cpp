@@ -28,12 +28,12 @@ namespace runtime
     
 }
 
-                                Undefined::Undefined                        (   const   String&                     aScope,
-                                                                                const   String&                     aVariableName                               )
-                                :   RuntimeError(aScope, "{" + aVariableName + "} is undefined.")
-{
+//                                 Undefined::Undefined                        (   const   String&                     aScope,
+//                                                                                 const   String&                     aVariableName                               )
+//                                 :   RuntimeError(aScope, "{" + aVariableName + "} is undefined.")
+// {
     
-}
+// }
 
                                 Undefined::~Undefined                       ( )
 {

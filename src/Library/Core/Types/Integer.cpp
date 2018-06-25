@@ -942,11 +942,6 @@ types::String                   Integer::getString                          ( ) 
 
 }
 
-// ctnr::Object                    Integer::getObject                          ( ) const
-// {
-
-// }
-
 Integer                         Integer::Undefined                          ( )
 {
     return Integer(Integer::Type::Undefined, 0) ;
@@ -965,6 +960,67 @@ Integer                         Integer::PositiveInfinity                   ( )
 Integer                         Integer::NegativeInfinity                   ( )
 {
     return Integer(Integer::Type::NegativeInfinity, std::numeric_limits<Integer::ValueType>::min()) ;
+}
+
+Integer                         Integer::Int8                               (           types::Int8                 anInteger                                   )
+{
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+}
+
+Integer                         Integer::Int16                              (           types::Int16                anInteger                                   )
+{
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+}
+
+Integer                         Integer::Int32                              (           types::Int32                anInteger                                   )
+{
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+}
+
+Integer                         Integer::Int64                              (           types::Int64                anInteger                                   )
+{
+
+    if ((anInteger < static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::min())) || (anInteger > static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::max())))
+    {
+        throw library::core::error::RuntimeError("Int64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+    }
+    
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+
+}
+
+Integer                         Integer::Uint8                              (           types::Uint8                anInteger                                   )
+{
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+}
+
+Integer                         Integer::Uint16                             (           types::Uint16               anInteger                                   )
+{
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+}
+
+Integer                         Integer::Uint32                             (           types::Uint32               anInteger                                   )
+{
+
+    if (anInteger > static_cast<types::Uint32>(std::numeric_limits<Integer::ValueType>::max()))
+    {
+        throw library::core::error::RuntimeError("Uint32 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+    }
+    
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+
+}
+
+Integer                         Integer::Uint64                             (           types::Uint64               anInteger                                   )
+{
+
+    if (anInteger > static_cast<types::Uint64>(std::numeric_limits<Integer::ValueType>::max()))
+    {
+        throw library::core::error::RuntimeError("Uint64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+    }
+
+    return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
+
 }
 
 Integer                         Integer::Index                              (   const   types::Index&               anIndex                                     )

@@ -39,8 +39,27 @@ class RuntimeError : public Exception
 
                                 RuntimeError                                (   const   String&                     aMessage                                    ) ;
 
-                                RuntimeError                                (   const   String&                     aScope,
-                                                                                const   String&                     aMessage                                    ) ;
+                                // RuntimeError                                (   const   String&                     aScope,
+                                //                                                 const   String&                     aMessage                                    ) ;
+
+                                template <typename ...Args>
+                                RuntimeError                                (   const   char*                       aFormat,
+                                                                                        Args...                     anArgumentList                              )
+                                :   Exception(String::Empty()),
+                                    message_(String::Format(aFormat, anArgumentList...))
+        {
+            
+        }
+
+        //                         template <typename ...Args>
+        //                         RuntimeError                                (   const   String&                     aScope,
+        //                                                                         const   char*                       aFormat,
+        //                                                                                 Args...                     anArgumentList                              )
+        //                         :   Exception(aScope),
+        //                             message_(String::Format(aFormat, anArgumentList...))
+        // {
+            
+        // }
 
                                 ~RuntimeError                               ( ) ;
 

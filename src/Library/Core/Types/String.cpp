@@ -62,6 +62,11 @@ bool                            String::isLowercase                         ( ) 
     return (!this->empty()) && !std::any_of(this->begin(), this->end(), [] (char ch) { return ::isupper(ch) ; }) ;
 }
 
+bool                            String::match                               (   const   std::regex&                 aRegularExpression                          ) const
+{
+    return std::regex_match((*this), aRegularExpression) ;
+}
+
 Size                            String::getLength                           ( ) const
 {
     return this->length() ;

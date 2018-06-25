@@ -1993,6 +1993,34 @@ TEST (Library_Core_Types_Real, GetString)
 
 }
 
+TEST (Library_Core_Types_Real, ToInteger)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_EQ(0, Real(0.0).toInteger()) ;
+
+        EXPECT_EQ(+1, Real(+1.0).toInteger()) ;
+        EXPECT_EQ(-1, Real(-1.0).toInteger()) ;
+
+        EXPECT_EQ(+123, Real(+123.0).toInteger()) ;
+        EXPECT_EQ(-123, Real(-123.0).toInteger()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Real::Undefined().toInteger()) ;
+        EXPECT_ANY_THROW(Real(0.1).toInteger()) ;
+        EXPECT_ANY_THROW(Real(10.1).toInteger()) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_Real, Undefined)
 {
 
@@ -2076,6 +2104,34 @@ TEST (Library_Core_Types_Real, NegativeInfinity)
     EXPECT_TRUE(Real::NegativeInfinity().isDefined()) ;
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity()) ;
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity()) ;
+
+}
+
+TEST (Library_Core_Types_Real, Integer)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_NO_THROW(Real::Integer(Integer(123))) ;
+    
+        EXPECT_TRUE(Real::Integer(Integer(123)).isDefined()) ;
+        EXPECT_TRUE(Real::Integer(Integer(123)).isInteger()) ;
+        EXPECT_TRUE(Real::Integer(Integer(123)).isFinite()) ;
+        
+        EXPECT_EQ(Integer(123), Real::Integer(Integer(123)).toInteger()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real::Integer(Integer::Undefined())) ;
+
+        EXPECT_FALSE(Real::Integer(Integer::Undefined()).isDefined()) ;
+
+    }
 
 }
 

@@ -39,8 +39,8 @@ class Undefined : public RuntimeError
 
                                 Undefined                                   (   const   String&                     aVariableName                               ) ;
 
-                                Undefined                                   (   const   String&                     aScope,
-                                                                                const   String&                     aVariableName                               ) ;
+                                // Undefined                                   (   const   String&                     aScope,
+                                //                                                 const   String&                     aVariableName                               ) ;
 
                                 ~Undefined                                  ( ) ;
 

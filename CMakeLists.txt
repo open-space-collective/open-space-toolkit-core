@@ -252,6 +252,16 @@ ELSE ()
     MESSAGE (SEND_ERROR "[RapidJSON] not found.")
 ENDIF ()
 
+### {fmt} [master]
+
+FIND_PACKAGE ("fmt" REQUIRED)
+
+IF (fmt_FOUND)
+
+ELSE ()
+    MESSAGE (SEND_ERROR "[{fmt}] not found.")
+ENDIF ()
+
 ################################################################################################################################################################
 
 ## Versioning

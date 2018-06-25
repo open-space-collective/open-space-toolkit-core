@@ -41,8 +41,8 @@ class ToBeImplemented : public RuntimeError
                                 
                                 ToBeImplemented                             (   const   String&                     aFunctionName                               ) ;
 
-                                ToBeImplemented                             (   const   String&                     aScope,
-                                                                                const   String&                     aFunctionName                               ) ;
+                                // ToBeImplemented                             (   const   String&                     aScope,
+                                //                                                 const   String&                     aFunctionName                               ) ;
 
                                 ~ToBeImplemented                            ( ) ;
 
