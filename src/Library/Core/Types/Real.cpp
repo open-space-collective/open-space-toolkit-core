@@ -765,10 +765,68 @@ types::Integer                  Real::toInteger                         ( ) cons
 
 }
 
-// ctnr::Object                    Real::getObject                              ( ) const
-// {
+Real                            Real::abs                                   ( ) const
+{
 
-// }
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return Real::Undefined() ;
+
+        case Real::Type::Defined:
+            return Real(Real::Type::Defined, std::abs(value_)) ;
+
+        case Real::Type::PositiveInfinity:
+        case Real::Type::NegativeInfinity:
+            return Real::PositiveInfinity() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return Real::Undefined() ;
+
+}
+
+Real                            Real::sqrt                                  ( ) const
+{
+
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return Real::Undefined() ;
+
+        case Real::Type::Defined:
+        {
+
+            if (this->isStrictlyNegative())
+            {
+                return Real::Undefined() ;
+            }
+
+            return Real(Real::Type::Defined, std::sqrt(value_)) ;
+
+        } 
+
+        case Real::Type::PositiveInfinity:
+            return Real::PositiveInfinity() ;
+
+        case Real::Type::NegativeInfinity:
+            return Real::Undefined() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return Real::Undefined() ;
+
+}
 
 Real                            Real::Undefined                             ( )
 {

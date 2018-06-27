@@ -110,6 +110,10 @@ class Real
 
         types::Integer          toInteger                                   ( ) const ;
 
+        Real                    abs                                         ( ) const ;
+        
+        Real                    sqrt                                        ( ) const ;
+
         static Real             Undefined                                   ( ) ;
 
         static Real             Zero                                        ( ) ;

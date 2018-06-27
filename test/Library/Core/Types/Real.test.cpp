@@ -2021,6 +2021,89 @@ TEST (Library_Core_Types_Real, ToInteger)
 
 }
 
+TEST (Library_Core_Types_Real, Abs)
+{
+
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_EQ(0.0, Real(0.0).abs()) ;
+        EXPECT_EQ(1.0, Real(+1.0).abs()) ;
+        EXPECT_EQ(1.0, Real(-1.0).abs()) ;
+        EXPECT_EQ(2.0, Real(+2.0).abs()) ;
+        EXPECT_EQ(2.0, Real(-2.0).abs()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real::Undefined().abs()) ;
+
+        EXPECT_FALSE(Real::Undefined().abs().isDefined()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real::PositiveInfinity().abs()) ;
+        EXPECT_NO_THROW(Real::NegativeInfinity().abs()) ;
+
+        EXPECT_TRUE(Real::PositiveInfinity().abs().isDefined()) ;
+        EXPECT_TRUE(Real::NegativeInfinity().abs().isDefined()) ;
+
+        EXPECT_TRUE(Real::PositiveInfinity().abs().isPositiveInfinity()) ;
+        EXPECT_TRUE(Real::NegativeInfinity().abs().isPositiveInfinity()) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_Real, Sqrt)
+{
+
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_EQ(0.0, Real(0.0).sqrt()) ;
+        EXPECT_EQ(1.0, Real(+1.0).sqrt()) ;
+        EXPECT_EQ(2.0, Real(+4.0).sqrt()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real(-1.0).sqrt()) ;
+        EXPECT_NO_THROW(Real(-2.0).sqrt()) ;
+
+        EXPECT_FALSE(Real(-1.0).sqrt().isDefined()) ;
+        EXPECT_FALSE(Real(-2.0).sqrt().isDefined()) ;
+        
+    }
+    
+    {
+
+        EXPECT_NO_THROW(Real::Undefined().sqrt()) ;
+
+        EXPECT_FALSE(Real::Undefined().sqrt().isDefined()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real::PositiveInfinity().sqrt()) ;
+        EXPECT_NO_THROW(Real::NegativeInfinity().sqrt()) ;
+
+        EXPECT_TRUE(Real::PositiveInfinity().sqrt().isDefined()) ;
+        EXPECT_FALSE(Real::NegativeInfinity().sqrt().isDefined()) ;
+
+        EXPECT_TRUE(Real::PositiveInfinity().sqrt().isPositiveInfinity()) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_Real, Undefined)
 {
 
