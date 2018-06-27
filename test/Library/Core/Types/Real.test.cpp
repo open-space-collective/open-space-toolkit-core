@@ -2164,6 +2164,19 @@ TEST (Library_Core_Types_Real, TwoPi)
 
 }
 
+TEST (Library_Core_Types_Real, Epsilon)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_NO_THROW(Real::Epsilon()) ;
+    EXPECT_TRUE(Real::Epsilon().isDefined()) ;
+    EXPECT_FALSE(Real::Epsilon().isZero()) ;
+
+    EXPECT_EQ(1e-15, Real::Epsilon()) ;
+
+}
+
 TEST (Library_Core_Types_Real, PositiveInfinity)
 {
 

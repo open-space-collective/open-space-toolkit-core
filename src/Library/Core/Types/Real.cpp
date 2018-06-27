@@ -853,6 +853,11 @@ Real                            Real::TwoPi                                 ( )
     return Real(Real::Type::Defined, 2.0 * M_PI) ;
 }
 
+Real                            Real::Epsilon                               ( )
+{
+    return Real(Real::Type::Defined, 1e-15) ;
+}
+
 Real                            Real::PositiveInfinity                      ( )
 {
     return Real(Real::Type::PositiveInfinity, std::numeric_limits<Real::ValueType>::max()) ;

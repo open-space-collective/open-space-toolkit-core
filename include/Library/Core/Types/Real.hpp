@@ -111,7 +111,7 @@ class Real
         types::Integer          toInteger                                   ( ) const ;
 
         Real                    abs                                         ( ) const ;
-        
+
         Real                    sqrt                                        ( ) const ;
 
         static Real             Undefined                                   ( ) ;
@@ -123,6 +123,8 @@ class Real
         static Real             HalfPi                                      ( ) ;
 
         static Real             TwoPi                                       ( ) ;
+
+        static Real             Epsilon                                     ( ) ;
 
         static Real             PositiveInfinity                            ( ) ;
 
