@@ -158,7 +158,7 @@ class Object
         bool                    getBoolean                                  ( ) const ;
         types::Integer          getInteger                                  ( ) const ;
         types::Real             getReal                                     ( ) const ;
-        types::String           getString                                   ( ) const ;
+        types::String           toString                                    ( ) const ;
         ctnr::Dictionary        getDictionary                               ( ) const ;
         ctnr::Array<Object>     getArray                                    ( ) const ;
 

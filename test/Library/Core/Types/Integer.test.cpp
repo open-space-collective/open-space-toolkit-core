@@ -2713,18 +2713,18 @@ TEST (Library_Core_Types_Integer, GetSign)
 
 }
 
-TEST (Library_Core_Types_Integer, GetString)
+TEST (Library_Core_Types_Integer, ToString)
 {
 
     using library::core::types::Integer ;
 
-    EXPECT_EQ("Undefined", Integer::Undefined().getString()) ;
-    EXPECT_EQ("0", Integer(0).getString()) ;
-    EXPECT_EQ("-1", Integer(-1).getString()) ;
-    EXPECT_EQ("0", Integer(+0).getString()) ;
-    EXPECT_EQ("1", Integer(+1).getString()) ;
-    EXPECT_EQ("-Inf", Integer::NegativeInfinity().getString()) ;
-    EXPECT_EQ("+Inf", Integer::PositiveInfinity().getString()) ;
+    EXPECT_EQ("Undefined", Integer::Undefined().toString()) ;
+    EXPECT_EQ("0", Integer(0).toString()) ;
+    EXPECT_EQ("-1", Integer(-1).toString()) ;
+    EXPECT_EQ("0", Integer(+0).toString()) ;
+    EXPECT_EQ("1", Integer(+1).toString()) ;
+    EXPECT_EQ("-Inf", Integer::NegativeInfinity().toString()) ;
+    EXPECT_EQ("+Inf", Integer::PositiveInfinity().toString()) ;
 
 }
 

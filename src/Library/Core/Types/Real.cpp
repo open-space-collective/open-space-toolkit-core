@@ -710,7 +710,7 @@ types::Sign                     Real::getSign                               ( ) 
 
 }
 
-types::String                   Real::getString                             ( ) const
+types::String                   Real::toString                             ( ) const
 {
 
     switch (type_)

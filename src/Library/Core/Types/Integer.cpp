@@ -918,7 +918,7 @@ types::Sign                     Integer::getSign                            ( ) 
 
 }
 
-types::String                   Integer::getString                          ( ) const
+types::String                   Integer::toString                          ( ) const
 {
 
     switch (type_)

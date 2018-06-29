@@ -1976,20 +1976,20 @@ TEST (Library_Core_Types_Real, GetSign)
 
 }
 
-TEST (Library_Core_Types_Real, GetString)
+TEST (Library_Core_Types_Real, ToString)
 {
 
     using library::core::types::Real ;
 
-    EXPECT_EQ("Undefined", Real::Undefined().getString()) ;
-    EXPECT_EQ("0.0", Real(0.0).getString()) ;
-    EXPECT_EQ("-1.1", Real(-1.1).getString()) ;
-    EXPECT_EQ("-1.0", Real(-1.0).getString()) ;
-    EXPECT_EQ("0.0", Real(+0.0).getString()) ;
-    EXPECT_EQ("1.0", Real(+1.0).getString()) ;
-    EXPECT_EQ("1.1", Real(+1.1).getString()) ;
-    EXPECT_EQ("-Inf", Real::NegativeInfinity().getString()) ;
-    EXPECT_EQ("+Inf", Real::PositiveInfinity().getString()) ;
+    EXPECT_EQ("Undefined", Real::Undefined().toString()) ;
+    EXPECT_EQ("0.0", Real(0.0).toString()) ;
+    EXPECT_EQ("-1.1", Real(-1.1).toString()) ;
+    EXPECT_EQ("-1.0", Real(-1.0).toString()) ;
+    EXPECT_EQ("0.0", Real(+0.0).toString()) ;
+    EXPECT_EQ("1.0", Real(+1.0).toString()) ;
+    EXPECT_EQ("1.1", Real(+1.1).toString()) ;
+    EXPECT_EQ("-Inf", Real::NegativeInfinity().toString()) ;
+    EXPECT_EQ("+Inf", Real::PositiveInfinity().toString()) ;
 
 }
 

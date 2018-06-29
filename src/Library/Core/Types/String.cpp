@@ -112,12 +112,12 @@ String                          String::getSubstring                        (   
 
     if (aStartPosition >= this->size())
     {
-        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).toString() + "] out of bounds [" + Integer::Size(this->size() - 1).toString() + "].") ;
     }
 
     if ((aStartPosition + aLength) > this->size())
     {
-        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" + Integer::Size(this->size() - 1).toString() + "].") ;
     }
     
     return this->substr(aStartPosition, aLength) ;

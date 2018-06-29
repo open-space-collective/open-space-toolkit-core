@@ -225,7 +225,7 @@ class Integer
         
         types::Sign             getSign                                     ( ) const ;
 
-        types::String           getString                                   ( ) const ;
+        types::String           toString                                    ( ) const ;
 
         static Integer          Undefined                                   ( ) ;
 

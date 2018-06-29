@@ -134,9 +134,9 @@ Index                           Array<T>::getIndexOf                        (   
 }
 
 template <typename T>
-typename std::enable_if<library::core::types::HasGetString<T>::value, types::String>::type extractString (const T& aType)
+typename std::enable_if<library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 {
-    return aType.getString() ;
+    return aType.toString() ;
 }
 
 template <typename T>
@@ -146,13 +146,13 @@ typename std::enable_if<std::is_same<T, types::String>::value, types::String>::t
 }
 
 // template <typename T>
-// typename std::enable_if<!library::core::types::HasGetString<T>::value, types::String>::type extractString (const T& aType)
+// typename std::enable_if<!library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 // {
 //     return aType ;
 // }
 
                                 template <class T>
-types::String                   Array<T>::getString                         ( ) const
+types::String                   Array<T>::toString                         ( ) const
 {
 
     types::String string = "[" ;
@@ -160,7 +160,7 @@ types::String                   Array<T>::getString                         ( ) 
     for (const auto& item : (*this))
     {
 
-        // string += item.getString() ;
+        // string += item.toString() ;
         string += extractString(item) ;
 
         if (&item != &(this->back()))
