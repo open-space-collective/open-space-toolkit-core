@@ -791,6 +791,32 @@ Real                            Real::abs                                   ( ) 
 
 }
 
+types::Integer                  Real::floor                                 ( ) const
+{
+
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return types::Integer::Undefined() ;
+
+        case Real::Type::Defined:
+            return types::Integer(static_cast<types::Integer::ValueType>(std::floor(value_))) ;
+
+        case Real::Type::PositiveInfinity:
+        case Real::Type::NegativeInfinity:
+            return types::Integer::Undefined() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return types::Integer::Undefined() ;
+
+}
+
 Real                            Real::sqrt                                  ( ) const
 {
 

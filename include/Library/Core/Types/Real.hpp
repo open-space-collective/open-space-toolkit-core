@@ -112,6 +112,8 @@ class Real
 
         Real                    abs                                         ( ) const ;
 
+        types::Integer          floor                                       ( ) const ;
+
         Real                    sqrt                                        ( ) const ;
 
         static Real             Undefined                                   ( ) ;

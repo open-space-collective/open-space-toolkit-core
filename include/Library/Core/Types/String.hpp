@@ -73,7 +73,12 @@ class String : public std::string
         Size                    getLength                                   ( ) const ;
 
         char                    getFirst                                    ( ) const ;
+
         char                    getLast                                     ( ) const ;
+
+        String                  getHead                                     (   const   Size&                       aLength                                     ) const ;
+
+        String                  getTail                                     (   const   Size&                       aLength                                     ) const ;
 
         String                  getSubstring                                (   const   Index&                      aStartPosition,
                                                                                 const   Size&                       aLength                                     ) const ;
@@ -85,6 +90,8 @@ class String : public std::string
         String&                 trim                                        ( ) ;
 
         static String           Empty                                       ( ) ;
+
+        static String           Boolean                                     (           bool                        aBoolean                                    ) ;
 
         static String           Char                                        (           char                        aCharacter                                  ) ;
 

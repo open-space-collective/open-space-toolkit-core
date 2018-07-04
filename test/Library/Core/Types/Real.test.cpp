@@ -2059,6 +2059,37 @@ TEST (Library_Core_Types_Real, Abs)
 
 }
 
+TEST (Library_Core_Types_Real, Floor)
+{
+
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_EQ(+0, Real(0.0).floor()) ;
+        EXPECT_EQ(+1, Real(+1.0).floor()) ;
+        EXPECT_EQ(+1, Real(+1.1).floor()) ;
+        EXPECT_EQ(-1, Real(-1.0).floor()) ;
+        EXPECT_EQ(-2, Real(-1.1).floor()) ;
+        EXPECT_EQ(+2.0, Real(+2.0).floor()) ;
+        EXPECT_EQ(-2.0, Real(-2.0).floor()) ;
+
+    }
+
+    {
+
+        EXPECT_NO_THROW(Real::Undefined().floor()) ;
+        EXPECT_NO_THROW(Real::PositiveInfinity().floor()) ;
+        EXPECT_NO_THROW(Real::NegativeInfinity().floor()) ;
+
+        EXPECT_FALSE(Real::Undefined().floor().isDefined()) ;
+        EXPECT_FALSE(Real::PositiveInfinity().floor().isDefined()) ;
+        EXPECT_FALSE(Real::NegativeInfinity().floor().isDefined()) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_Real, Sqrt)
 {
 
