@@ -293,6 +293,26 @@ TEST (Library_Core_FileSystem_File, GetPath)
     
 // }
 
+TEST (Library_Core_FileSystem_File, ToString)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        EXPECT_EQ("/app/CMakeLists.txt", File::Path(Path::Parse("/app/CMakeLists.txt")).toString()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().toString()) ;
+
+    }
+    
+}
+
 // TEST (Library_Core_FileSystem_File, RenameTo)
 // {
 

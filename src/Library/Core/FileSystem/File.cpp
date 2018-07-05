@@ -182,6 +182,18 @@ fs::Path                        File::getPath                               ( ) 
 
 // }
 
+String                          File::toString                              ( ) const
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("File") ;
+    }
+
+    return path_.toString() ;
+
+}
+
 // void                            File::renameTo                              (   const   String&              aName                                       )
 // {
 

@@ -170,6 +170,16 @@ class File
 
         fs::Directory           getParentDirectory                          ( ) const ;
 
+        /// @brief              Get serialized file
+        ///
+        /// @code
+        ///                     File::Path(Path::Parse("/path/to/file")).toString() ; // "/path/to/file"
+        /// @endcode
+        ///
+        /// @return             Serialized file
+
+        String                  toString                                    ( ) const ;
+
         /// @brief              Rename file
         ///
         /// @code
