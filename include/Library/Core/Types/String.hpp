@@ -95,6 +95,12 @@ class String : public std::string
 
         static String           Char                                        (           char                        aCharacter                                  ) ;
 
+        static String           Replicate                                   (           char                        aCharacter,
+                                                                                        Size                        aCount                                      ) ;
+
+        static String           Replicate                                   (   const   String&                     aString,
+                                                                                        Size                        aCount                                      ) ;
+
         /// @brief              Create formatted string
         ///
         /// @code

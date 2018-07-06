@@ -40,6 +40,10 @@ typedef uint64_t Uint64 ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+class Real ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /// @brief                      Integer type
 
 class Integer
@@ -171,6 +175,11 @@ class Integer
         Integer                 operator *                                  (   const   Integer::ValueType&         anInteger                                   ) const ;
         Integer                 operator /                                  (   const   Integer::ValueType&         anInteger                                   ) const ;
         Integer                 operator %                                  (   const   Integer::ValueType&         anInteger                                   ) const ;
+
+        Real                    operator +                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator -                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator *                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator /                                  (   const   Real&                       aReal                                       ) const ;
 
         Integer&                operator +=                                 (   const   Integer&                    anInteger                                   ) ;
         Integer&                operator -=                                 (   const   Integer&                    anInteger                                   ) ;

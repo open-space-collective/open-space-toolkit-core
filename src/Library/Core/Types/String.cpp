@@ -176,6 +176,27 @@ String                          String::Char                                (   
     return String(1, aCharacter) ;
 }
 
+String                          String::Replicate                           (           char                        aCharacter,
+                                                                                        Size                        aCount                                      )
+{
+    return String(aCount, aCharacter) ;
+}
+
+String                          String::Replicate                           (   const   String&                     aString,
+                                                                                        Size                        aCount                                      )
+{
+
+    std::ostringstream stringStream ;
+
+    for (Index idx = 0; idx < aCount; ++idx)
+    {
+        stringStream << aString ;
+    }
+        
+    return stringStream.str() ;
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }

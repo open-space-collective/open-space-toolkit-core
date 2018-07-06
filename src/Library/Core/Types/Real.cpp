@@ -710,7 +710,7 @@ types::Sign                     Real::getSign                               ( ) 
 
 }
 
-types::String                   Real::toString                             ( ) const
+types::String                   Real::toString                              (   const   types::Integer&             aPrecision                                  ) const
 {
 
     switch (type_)
@@ -729,13 +729,11 @@ types::String                   Real::toString                             ( ) c
 
             std::ostringstream stringStream ;
 
-            // stringStream << std::fixed << std::setprecision(2) ;
+            stringStream.precision(aPrecision) ;
 
-            stringStream << value_ ;
+            stringStream << std::fixed << value_ ;
 
             return stringStream.str() ;
-
-            // return boost::lexical_cast<std::string>(value_) ;
 
         }
 

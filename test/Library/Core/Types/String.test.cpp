@@ -255,6 +255,20 @@ TEST (Library_Core_Types_String, Empty)
 
 }
 
+TEST (Library_Core_Types_String, Boolean)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("True", String::Boolean(true)) ;
+        EXPECT_EQ("False", String::Boolean(false)) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, Char)
 {
 
@@ -269,15 +283,23 @@ TEST (Library_Core_Types_String, Char)
 
 }
 
-TEST (Library_Core_Types_String, Boolean)
+TEST (Library_Core_Types_String, Replicate)
 {
 
     using library::core::types::String ;
 
     {
 
-        EXPECT_EQ("True", String::Boolean(true)) ;
-        EXPECT_EQ("False", String::Boolean(false)) ;
+        EXPECT_EQ("aaa", String::Replicate('a', 3)) ;
+        EXPECT_EQ("", String::Replicate('a', 0)) ;
+        
+    }
+
+    {
+
+        EXPECT_EQ("- - - ", String::Replicate("- ", 3)) ;
+        EXPECT_EQ("", String::Replicate("- ", 0)) ;
+        EXPECT_EQ("", String::Replicate("", 3)) ;
 
     }
 

@@ -64,6 +64,11 @@ class Real
         Real                    operator *                                  (   const   Real::ValueType&            aReal                                       ) const ;
         Real                    operator /                                  (   const   Real::ValueType&            aReal                                       ) const ;
 
+        Real                    operator +                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator -                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator *                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator /                                  (   const   Integer&                    anInteger                                   ) const ;
+
         Real&                   operator +=                                 (   const   Real&                       aReal                                       ) ;
         Real&                   operator -=                                 (   const   Real&                       aReal                                       ) ;
         Real&                   operator *=                                 (   const   Real&                       aReal                                       ) ;
@@ -106,7 +111,7 @@ class Real
 
         types::Sign             getSign                                     ( ) const ;
 
-        types::String           toString                                    ( ) const ;
+        types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   15 ) const ;
 
         types::Integer          toInteger                                   ( ) const ;
 

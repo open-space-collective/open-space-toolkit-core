@@ -68,9 +68,10 @@ class Print
                                                                                 const   types::String&              aName                                       ) ;
 
         static Print::LineBuffer Line                                       (           std::ostream&               anOutputStream,
-                                                                                        uint                        anIndentation                               = 1 ) ;
+                                                                                        uint                        anIndentation                               =   1 ) ;
 
-        static void             Separator                                   (           std::ostream&               anOutputStream                              ) ;
+        static void             Separator                                   (           std::ostream&               anOutputStream,
+                                                                                const   types::String&              aName                                       =   "") ;
 
         static void             Footer                                      (           std::ostream&               anOutputStream                              ) ;
 
