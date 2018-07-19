@@ -111,7 +111,7 @@ class Real
 
         types::Sign             getSign                                     ( ) const ;
 
-        types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   15 ) const ;
+        types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   types::Integer::Undefined() ) const ;
 
         types::Integer          toInteger                                   ( ) const ;
 

@@ -1981,15 +1981,217 @@ TEST (Library_Core_Types_Real, ToString)
 
     using library::core::types::Real ;
 
-    EXPECT_EQ("Undefined", Real::Undefined().toString()) ;
-    EXPECT_EQ("0.0", Real(0.0).toString()) ;
-    EXPECT_EQ("-1.1", Real(-1.1).toString()) ;
-    EXPECT_EQ("-1.0", Real(-1.0).toString()) ;
-    EXPECT_EQ("0.0", Real(+0.0).toString()) ;
-    EXPECT_EQ("1.0", Real(+1.0).toString()) ;
-    EXPECT_EQ("1.1", Real(+1.1).toString()) ;
-    EXPECT_EQ("-Inf", Real::NegativeInfinity().toString()) ;
-    EXPECT_EQ("+Inf", Real::PositiveInfinity().toString()) ;
+    {
+
+        EXPECT_EQ("0.0",                        Real(0.0).toString()) ;
+    
+        EXPECT_EQ("-1.0",                       Real(-1.0).toString()) ;
+        EXPECT_EQ("0.0",                        Real(+0.0).toString()) ;
+        EXPECT_EQ("1.0",                        Real(+1.0).toString()) ;
+
+        EXPECT_EQ("1.1000000000000001",         Real(1.1).toString()) ;
+        EXPECT_EQ("1.1200000000000001",         Real(1.12).toString()) ;
+        EXPECT_EQ("1.123",                      Real(1.123).toString()) ;
+        EXPECT_EQ("1.1234",                     Real(1.1234).toString()) ;
+        EXPECT_EQ("1.1234500000000001",         Real(1.12345).toString()) ;
+        EXPECT_EQ("1.123456",                   Real(1.123456).toString()) ;
+        EXPECT_EQ("1.1234567",                  Real(1.1234567).toString()) ;
+        EXPECT_EQ("1.1234567799999999",         Real(1.12345678).toString()) ;
+        EXPECT_EQ("1.123456789",                Real(1.123456789).toString()) ;
+        EXPECT_EQ("1.1234567891",               Real(1.1234567891).toString()) ;
+        EXPECT_EQ("1.12345678912",              Real(1.12345678912).toString()) ;
+        EXPECT_EQ("1.1234567891230001",         Real(1.123456789123).toString()) ;
+        EXPECT_EQ("1.1234567891234",            Real(1.1234567891234).toString()) ;
+        EXPECT_EQ("1.1234567891234499",         Real(1.12345678912345).toString()) ;
+        EXPECT_EQ("1.1234567891234559",         Real(1.123456789123456).toString()) ;
+        EXPECT_EQ("1.1234567891234566",         Real(1.1234567891234567).toString()) ;
+        EXPECT_EQ("1.1234567891234568",         Real(1.12345678912345678).toString()) ;
+        EXPECT_EQ("1.1234567891234568",         Real(1.123456789123456789).toString()) ;
+
+        EXPECT_EQ("-1.1000000000000001",        Real(-1.1).toString()) ;
+        EXPECT_EQ("-1.1200000000000001",        Real(-1.12).toString()) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123).toString()) ;
+        EXPECT_EQ("-1.1234",                    Real(-1.1234).toString()) ;
+        EXPECT_EQ("-1.1234500000000001",        Real(-1.12345).toString()) ;
+        EXPECT_EQ("-1.123456",                  Real(-1.123456).toString()) ;
+        EXPECT_EQ("-1.1234567",                 Real(-1.1234567).toString()) ;
+        EXPECT_EQ("-1.1234567799999999",        Real(-1.12345678).toString()) ;
+        EXPECT_EQ("-1.123456789",               Real(-1.123456789).toString()) ;
+        EXPECT_EQ("-1.1234567891",              Real(-1.1234567891).toString()) ;
+        EXPECT_EQ("-1.12345678912",             Real(-1.12345678912).toString()) ;
+        EXPECT_EQ("-1.1234567891230001",        Real(-1.123456789123).toString()) ;
+        EXPECT_EQ("-1.1234567891234",           Real(-1.1234567891234).toString()) ;
+        EXPECT_EQ("-1.1234567891234499",        Real(-1.12345678912345).toString()) ;
+        EXPECT_EQ("-1.1234567891234559",        Real(-1.123456789123456).toString()) ;
+        EXPECT_EQ("-1.1234567891234566",        Real(-1.1234567891234567).toString()) ;
+        EXPECT_EQ("-1.1234567891234568",        Real(-1.12345678912345678).toString()) ;
+        EXPECT_EQ("-1.1234567891234568",        Real(-1.123456789123456789).toString()) ;
+
+        EXPECT_EQ("1.1000000000000001",         Real(1.1).toString()) ;
+        EXPECT_EQ("11.199999999999999",         Real(11.2).toString()) ;
+        EXPECT_EQ("112.3",                      Real(112.3).toString()) ;
+        EXPECT_EQ("1123.4000000000001",         Real(1123.4).toString()) ;
+        EXPECT_EQ("11234.5",                    Real(11234.5).toString()) ;
+        EXPECT_EQ("112345.60000000001",         Real(112345.6).toString()) ;
+        EXPECT_EQ("1123456.7",                  Real(1123456.7).toString()) ;
+        EXPECT_EQ("11234567.800000001",         Real(11234567.8).toString()) ;
+        EXPECT_EQ("112345678.90000001",         Real(112345678.9).toString()) ;
+        EXPECT_EQ("1123456789.0999999",         Real(1123456789.1).toString()) ;
+        EXPECT_EQ("11234567891.200001",         Real(11234567891.2).toString()) ;
+        EXPECT_EQ("112345678912.3",             Real(112345678912.3).toString()) ;
+        EXPECT_EQ("1123456789123.3999",         Real(1123456789123.4).toString()) ;
+        EXPECT_EQ("11234567891234.5",           Real(11234567891234.5).toString()) ;
+        EXPECT_EQ("112345678912345.59",         Real(112345678912345.6).toString()) ;
+        EXPECT_EQ("1123456789123456.8",         Real(1123456789123456.7).toString()) ;
+        EXPECT_EQ("11234567891234568.0",        Real(11234567891234567.8).toString()) ;
+        EXPECT_EQ("1.1234567891234568e+17.0",   Real(112345678912345678.9).toString()) ;
+
+    }
+
+    {
+
+        EXPECT_EQ("0.000",                      Real(0.0).toString(3)) ;
+    
+        EXPECT_EQ("-1.000",                     Real(-1.0).toString(3)) ;
+        EXPECT_EQ("0.000",                      Real(+0.0).toString(3)) ;
+        EXPECT_EQ("1.000",                      Real(+1.0).toString(3)) ;
+
+        EXPECT_EQ("1.100",                      Real(1.1).toString(3)) ;
+        EXPECT_EQ("1.120",                      Real(1.12).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.1234).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.12345).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123456).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.1234567).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.12345678).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123456789).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.1234567891).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.12345678912).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123456789123).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.1234567891234).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.12345678912345).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123456789123456).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.1234567891234567).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.12345678912345678).toString(3)) ;
+        EXPECT_EQ("1.123",                      Real(1.123456789123456789).toString(3)) ;
+
+        EXPECT_EQ("-1.100",                     Real(-1.1).toString(3)) ;
+        EXPECT_EQ("-1.120",                     Real(-1.12).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.1234).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.12345).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123456).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.1234567).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.12345678).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123456789).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.1234567891).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.12345678912).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123456789123).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.1234567891234).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.12345678912345).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123456789123456).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.1234567891234567).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.12345678912345678).toString(3)) ;
+        EXPECT_EQ("-1.123",                     Real(-1.123456789123456789).toString(3)) ;
+
+        EXPECT_EQ("1.100",                      Real(1.1).toString(3)) ;
+        EXPECT_EQ("11.200",                     Real(11.2).toString(3)) ;
+        EXPECT_EQ("112.300",                    Real(112.3).toString(3)) ;
+        EXPECT_EQ("1123.400",                   Real(1123.4).toString(3)) ;
+        EXPECT_EQ("11234.500",                  Real(11234.5).toString(3)) ;
+        EXPECT_EQ("112345.600",                 Real(112345.6).toString(3)) ;
+        EXPECT_EQ("1123456.700",                Real(1123456.7).toString(3)) ;
+        EXPECT_EQ("11234567.800",               Real(11234567.8).toString(3)) ;
+        EXPECT_EQ("112345678.900",              Real(112345678.9).toString(3)) ;
+        EXPECT_EQ("1123456789.100",             Real(1123456789.1).toString(3)) ;
+        EXPECT_EQ("11234567891.200",            Real(11234567891.2).toString(3)) ;
+        EXPECT_EQ("112345678912.300",           Real(112345678912.3).toString(3)) ;
+        EXPECT_EQ("1123456789123.400",          Real(1123456789123.4).toString(3)) ;
+        EXPECT_EQ("11234567891234.500",         Real(11234567891234.5).toString(3)) ;
+        EXPECT_EQ("112345678912345.594",        Real(112345678912345.6).toString(3)) ;
+        EXPECT_EQ("1123456789123456.750",       Real(1123456789123456.7).toString(3)) ;
+        EXPECT_EQ("11234567891234568.000",      Real(11234567891234567.8).toString(3)) ;
+
+    }
+
+    {
+
+        EXPECT_EQ("0.00000",                    Real(0.0).toString(5)) ;
+    
+        EXPECT_EQ("-1.00000",                   Real(-1.0).toString(5)) ;
+        EXPECT_EQ("0.00000",                    Real(+0.0).toString(5)) ;
+        EXPECT_EQ("1.00000",                    Real(+1.0).toString(5)) ;
+
+        EXPECT_EQ("1.10000",                    Real(1.1).toString(5)) ;
+        EXPECT_EQ("1.12000",                    Real(1.12).toString(5)) ;
+        EXPECT_EQ("1.12300",                    Real(1.123).toString(5)) ;
+        EXPECT_EQ("1.12340",                    Real(1.1234).toString(5)) ;
+        EXPECT_EQ("1.12345",                    Real(1.12345).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.123456).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.1234567).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.12345678).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.123456789).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.1234567891).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.12345678912).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.123456789123).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.1234567891234).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.12345678912345).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.123456789123456).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.1234567891234567).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.12345678912345678).toString(5)) ;
+        EXPECT_EQ("1.12346",                    Real(1.123456789123456789).toString(5)) ;
+
+        EXPECT_EQ("-1.10000",                   Real(-1.1).toString(5)) ;
+        EXPECT_EQ("-1.12000",                   Real(-1.12).toString(5)) ;
+        EXPECT_EQ("-1.12300",                   Real(-1.123).toString(5)) ;
+        EXPECT_EQ("-1.12340",                   Real(-1.1234).toString(5)) ;
+        EXPECT_EQ("-1.12345",                   Real(-1.12345).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.123456).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.1234567).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.12345678).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.123456789).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.1234567891).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.12345678912).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.123456789123).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.1234567891234).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.12345678912345).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.123456789123456).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.1234567891234567).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.12345678912345678).toString(5)) ;
+        EXPECT_EQ("-1.12346",                   Real(-1.123456789123456789).toString(5)) ;
+
+        EXPECT_EQ("1.10000",                    Real(1.1).toString(5)) ;
+        EXPECT_EQ("11.20000",                   Real(11.2).toString(5)) ;
+        EXPECT_EQ("112.30000",                  Real(112.3).toString(5)) ;
+        EXPECT_EQ("1123.40000",                 Real(1123.4).toString(5)) ;
+        EXPECT_EQ("11234.50000",                Real(11234.5).toString(5)) ;
+        EXPECT_EQ("112345.60000",               Real(112345.6).toString(5)) ;
+        EXPECT_EQ("1123456.70000",              Real(1123456.7).toString(5)) ;
+        EXPECT_EQ("11234567.80000",             Real(11234567.8).toString(5)) ;
+        EXPECT_EQ("112345678.90000",            Real(112345678.9).toString(5)) ;
+        EXPECT_EQ("1123456789.10000",           Real(1123456789.1).toString(5)) ;
+        EXPECT_EQ("11234567891.20000",          Real(11234567891.2).toString(5)) ;
+        EXPECT_EQ("112345678912.30000",         Real(112345678912.3).toString(5)) ;
+        EXPECT_EQ("1123456789123.39990",        Real(1123456789123.4).toString(5)) ;
+        EXPECT_EQ("11234567891234.50000",       Real(11234567891234.5).toString(5)) ;
+        EXPECT_EQ("112345678912345.59375",      Real(112345678912345.6).toString(5)) ;
+        EXPECT_EQ("1123456789123456.75000",     Real(1123456789123456.7).toString(5)) ;
+        EXPECT_EQ("11234567891234568.00000",    Real(11234567891234567.8).toString(5)) ;
+
+    }
+
+    {
+
+        EXPECT_EQ("-Inf", Real::NegativeInfinity().toString(3)) ;
+        EXPECT_EQ("+Inf", Real::PositiveInfinity().toString(3)) ;
+
+    }
+    
+    {
+
+        EXPECT_EQ("Undefined", Real::Undefined().toString(3)) ;
+
+    }
 
 }
 

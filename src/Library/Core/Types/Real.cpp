@@ -722,11 +722,34 @@ types::String                   Real::toString                              (   
         case Real::Type::Defined:
         {
 
-            if (this->isInteger())
+            if (!aPrecision.isDefined())
             {
-                return boost::lexical_cast<std::string>(value_) + ".0" ;
-            }
 
+                if (this->isInteger())
+                {
+                    return boost::lexical_cast<std::string>(value_) + ".0" ;
+                }
+
+                // types::String realString = std::to_string(value_) ;
+                types::String realString = boost::lexical_cast<std::string>(value_) ;
+
+                // std::ostringstream stringStream ;
+
+                // stringStream.precision(14) ;
+
+                // stringStream << std::fixed << value_ ;
+
+                // types::String realString = stringStream.str() ;
+
+                realString.erase(realString.find_last_not_of('0') + 1, std::string::npos) ; // Remove trailing zeros if any
+
+                return realString ;
+                
+                // return boost::lexical_cast<std::string>(value_) ;
+                // return std::to_string(value_) ;
+
+            }
+            
             std::ostringstream stringStream ;
 
             stringStream.precision(aPrecision) ;
