@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Library/Core/Error.hpp>
+#include <Library/Core/Utilities.hpp>
 
 #include <algorithm>
 
@@ -61,14 +62,14 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Array<U>&                   anArray                                     )
 {
 
-    anOutputStream << "-- Array ---------------------------------------------------" << std::endl ;
+    library::core::utils::Print::Header(anOutputStream, "Array") ;
 
     for (const auto& element : anArray)
     {
         anOutputStream << element << std::endl ;    
     }
 
-    anOutputStream << "------------------------------------------------------------" << std::endl ;
+    library::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
