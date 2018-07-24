@@ -49,7 +49,7 @@ Size \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a049307129c77f461b37ddca4
 \begin{DoxyCompactList}\small\item\em Get array size. \end{DoxyCompactList}\item 
 Index \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_aa8a3e2745d72db8181b42e3cfb55415c}{get\+Index\+Of} (const T \&an\+Element) const
 \begin{DoxyCompactList}\small\item\em Get index of element (by value) \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a6a3416cc26d2968239af631d946ba11b}{get\+String} () const
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a90622afd5860fedd7d04e6518c096ffa}{to\+String} () const
 \begin{DoxyCompactList}\small\item\em Get string representation of array. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ const T $\ast$ $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a5359c59d344a6147c7c6ea1012411011}{access\+Where} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&a\+Predicate) const
 \begin{DoxyCompactList}\small\item\em Get array of pointers to element based on condition. \end{DoxyCompactList}\item 
@@ -505,27 +505,6 @@ Array<Integer> array = \{1, 2, 3\} ;
 \begin{DoxyReturn}{Returns}
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} size 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a6a3416cc26d2968239af631d946ba11b}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a6a3416cc26d2968239af631d946ba11b}} 
-\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+String@{get\+String}}
-\index{get\+String@{get\+String}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
-\subsubsection{\texorpdfstring{get\+String()}{getString()}}
-{\footnotesize\ttfamily template$<$class T$>$ \\
-\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Get string representation of array. 
-
-
-\begin{DoxyCode}
-Array<Integer> array = \{1, 2, 3\} ;
-String \textcolor{keywordtype}{string} = array.getString() ; \textcolor{comment}{// "[1, 2, 3]"}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-String representation of array 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a62069b24d593b2265422cb8f3a149c44}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a62069b24d593b2265422cb8f3a149c44}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!get\+Where@{get\+Where}}
 \index{get\+Where@{get\+Where}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
@@ -694,6 +673,27 @@ array.removeWhere([] (\textcolor{keyword}{const} Integer& anInteger) -> \textcol
 \mbox{\tt in}  & {\em a\+Predicate} & A predicate \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a90622afd5860fedd7d04e6518c096ffa}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a90622afd5860fedd7d04e6518c096ffa}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get string representation of array. 
+
+
+\begin{DoxyCode}
+Array<Integer> array = \{1, 2, 3\} ;
+String \textcolor{keywordtype}{string} = array.toString() ; \textcolor{comment}{// "[1, 2, 3]"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+String representation of array 
+\end{DoxyReturn}
 
 
 \subsection{Friends And Related Function Documentation}

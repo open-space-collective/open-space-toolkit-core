@@ -19,7 +19,6 @@ var classlibrary_1_1core_1_1ctnr_1_1_array =
     [ "find", "classlibrary_1_1core_1_1ctnr_1_1_array.html#afece85f642e3c623bac197e25ad2d4ec", null ],
     [ "getIndexOf", "classlibrary_1_1core_1_1ctnr_1_1_array.html#aa8a3e2745d72db8181b42e3cfb55415c", null ],
     [ "getSize", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a049307129c77f461b37ddca47edc7913", null ],
-    [ "getString", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a6a3416cc26d2968239af631d946ba11b", null ],
     [ "getWhere", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a62069b24d593b2265422cb8f3a149c44", null ],
     [ "isEmpty", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a77d943be46a6d0313be3f2c5ca66d231", null ],
     [ "mergeWith", "classlibrary_1_1core_1_1ctnr_1_1_array.html#abe72cec38e65761df3eaddcfa9b7a44a", null ],
@@ -27,5 +26,6 @@ var classlibrary_1_1core_1_1ctnr_1_1_array =
     [ "remove", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a8e295703797d6e41dad7a45e4101a6db", null ],
     [ "remove", "classlibrary_1_1core_1_1ctnr_1_1_array.html#ab37ca6fc14eefd1336544e05ba1b4d0e", null ],
     [ "removeWhere", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a322b1bfc3a93ea18bf68eb0cff69e6d3", null ],
+    [ "toString", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a90622afd5860fedd7d04e6518c096ffa", null ],
     [ "operator<<", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a9daa2d638e5bd693776f8bf6caae0802", null ]
 ];

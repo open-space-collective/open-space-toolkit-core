@@ -145,9 +145,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8a3e2745d72db8181b42e3cfb55415c"><td class="memItemLeft" align="right" valign="top">Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#aa8a3e2745d72db8181b42e3cfb55415c">getIndexOf</a> (const T &amp;anElement) const</td></tr>
 <tr class="memdesc:aa8a3e2745d72db8181b42e3cfb55415c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of element (by value)  <a href="#aa8a3e2745d72db8181b42e3cfb55415c">More...</a><br /></td></tr>
 <tr class="separator:aa8a3e2745d72db8181b42e3cfb55415c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3416cc26d2968239af631d946ba11b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">types::String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a6a3416cc26d2968239af631d946ba11b">getString</a> () const</td></tr>
-<tr class="memdesc:a6a3416cc26d2968239af631d946ba11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get string representation of array.  <a href="#a6a3416cc26d2968239af631d946ba11b">More...</a><br /></td></tr>
-<tr class="separator:a6a3416cc26d2968239af631d946ba11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90622afd5860fedd7d04e6518c096ffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">types::String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a90622afd5860fedd7d04e6518c096ffa">toString</a> () const</td></tr>
+<tr class="memdesc:a90622afd5860fedd7d04e6518c096ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get string representation of array.  <a href="#a90622afd5860fedd7d04e6518c096ffa">More...</a><br /></td></tr>
+<tr class="separator:a90622afd5860fedd7d04e6518c096ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5359c59d344a6147c7c6ea1012411011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; const T * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a5359c59d344a6147c7c6ea1012411011">accessWhere</a> (const <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt;::<a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a74cd325a740870aea490b6b739aa06ae">Predicate</a> &amp;aPredicate) const</td></tr>
 <tr class="memdesc:a5359c59d344a6147c7c6ea1012411011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get array of pointers to element based on condition.  <a href="#a5359c59d344a6147c7c6ea1012411011">More...</a><br /></td></tr>
 <tr class="separator:a5359c59d344a6147c7c6ea1012411011"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -720,28 +720,6 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a6a3416cc26d2968239af631d946ba11b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a3416cc26d2968239af631d946ba11b">&#9670;&nbsp;</a></span>getString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">types::String</a> <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::getString </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get string representation of array. </p>
-<div class="fragment"><div class="line">Array&lt;Integer&gt; array = {1, 2, 3} ;</div><div class="line">String <span class="keywordtype">string</span> = array.getString() ; <span class="comment">// &quot;[1, 2, 3]&quot;</span></div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>String representation of array </dd></dl>
-
-</div>
-</div>
 <a id="a62069b24d593b2265422cb8f3a149c44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62069b24d593b2265422cb8f3a149c44">&#9670;&nbsp;</a></span>getWhere()</h2>
 
@@ -931,6 +909,28 @@ template&lt;class T&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a90622afd5860fedd7d04e6518c096ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90622afd5860fedd7d04e6518c096ffa">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">types::String</a> <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get string representation of array. </p>
+<div class="fragment"><div class="line">Array&lt;Integer&gt; array = {1, 2, 3} ;</div><div class="line">String <span class="keywordtype">string</span> = array.toString() ; <span class="comment">// &quot;[1, 2, 3]&quot;</span></div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>String representation of array </dd></dl>
 
 </div>
 </div>
