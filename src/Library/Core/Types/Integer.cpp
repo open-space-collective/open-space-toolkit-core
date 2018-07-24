@@ -918,7 +918,7 @@ types::Sign                     Integer::getSign                            ( ) 
 
 }
 
-types::String                   Integer::getString                          ( ) const
+types::String                   Integer::toString                          ( ) const
 {
 
     switch (type_)
@@ -1047,6 +1047,37 @@ Integer                         Integer::Size                               (   
     
 }
 
+bool                            Integer::CanParse                           (           char                        aCharacter                                  )
+{
+    return std::isdigit(aCharacter) ;
+}
+
+bool                            Integer::CanParse                           (   const   types::String&              aString                                     )
+{
+
+    if (aString.isEmpty())
+    {
+        return false ;
+    }
+
+    if ((aString == "Undefined") || (aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
+    {
+        return true ;
+    }
+    
+    try
+    {
+        boost::lexical_cast<Integer::ValueType>(aString) ;
+    }
+    catch (const boost::bad_lexical_cast&)
+    {
+        return false ;
+    }
+
+    return true ;
+
+}
+
 Integer                         Integer::Parse                              (           char                        aCharacter                                  )
 {
 
@@ -1066,7 +1097,12 @@ Integer                         Integer::Parse                              (   
 Integer                         Integer::Parse                              (   const   types::String&              aString                                     )
 {
 
-    if (aString.isEmpty() || (aString == "Undefined"))
+    if (aString.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("String") ;
+    }
+
+    if (aString == "Undefined")
     {
         return Integer::Undefined() ;
     }
@@ -1092,42 +1128,6 @@ Integer                         Integer::Parse                              (   
 
     return Integer::Undefined() ;
     
-}
-
-bool                            Integer::CanParse                           (           char                        aCharacter                                  )
-{
-    return std::isdigit(aCharacter) ;
-}
-
-bool                            Integer::CanParse                           (   const   types::String&              aString                                     )
-{
-
-    if (aString.isEmpty() || (aString == "Undefined"))
-    {
-        return true ;
-    }
-
-    if ((aString == "Inf") || (aString == "+Inf"))
-    {
-        return true ;
-    }
-
-    if (aString == "-Inf")
-    {
-        return true ;
-    }
-    
-    try
-    {
-        boost::lexical_cast<Integer::ValueType>(aString) ;
-    }
-    catch (const boost::bad_lexical_cast&)
-    {
-        return false ;
-    }
-
-    return true ;
-
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

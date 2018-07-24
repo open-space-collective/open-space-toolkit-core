@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Library/Core/Error.hpp>
+#include <Library/Core/Utilities.hpp>
 
 #include <algorithm>
 
@@ -61,14 +62,14 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Array<U>&                   anArray                                     )
 {
 
-    anOutputStream << "-- Array ---------------------------------------------------" << std::endl ;
+    library::core::utils::Print::Header(anOutputStream, "Array") ;
 
     for (const auto& element : anArray)
     {
         anOutputStream << element << std::endl ;    
     }
 
-    anOutputStream << "------------------------------------------------------------" << std::endl ;
+    library::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -134,9 +135,9 @@ Index                           Array<T>::getIndexOf                        (   
 }
 
 template <typename T>
-typename std::enable_if<library::core::types::HasGetString<T>::value, types::String>::type extractString (const T& aType)
+typename std::enable_if<library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 {
-    return aType.getString() ;
+    return aType.toString() ;
 }
 
 template <typename T>
@@ -146,13 +147,13 @@ typename std::enable_if<std::is_same<T, types::String>::value, types::String>::t
 }
 
 // template <typename T>
-// typename std::enable_if<!library::core::types::HasGetString<T>::value, types::String>::type extractString (const T& aType)
+// typename std::enable_if<!library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 // {
 //     return aType ;
 // }
 
                                 template <class T>
-types::String                   Array<T>::getString                         ( ) const
+types::String                   Array<T>::toString                         ( ) const
 {
 
     types::String string = "[" ;
@@ -160,7 +161,7 @@ types::String                   Array<T>::getString                         ( ) 
     for (const auto& item : (*this))
     {
 
-        // string += item.getString() ;
+        // string += item.toString() ;
         string += extractString(item) ;
 
         if (&item != &(this->back()))

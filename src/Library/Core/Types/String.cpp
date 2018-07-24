@@ -72,6 +72,30 @@ Size                            String::getLength                           ( ) 
     return this->length() ;
 }
 
+String                          String::getHead                             (   const   Size&                       aLength                                     ) const
+{
+
+    if (aLength > this->length())
+    {
+        throw library::core::error::RuntimeError("Head length [{}] greater than string length [{}].", aLength, this->length()) ;
+    }
+
+    return this->substr(0, aLength) ;
+
+}
+
+String                          String::getTail                             (   const   Size&                       aLength                                     ) const
+{
+
+    if (aLength > this->length())
+    {
+        throw library::core::error::RuntimeError("Tail length [{}] greater than string length [{}].", aLength, this->length()) ;
+    }
+
+    return this->substr(this->length() - aLength , aLength) ;
+
+}
+
 char                            String::getFirst                            ( ) const
 {
 
@@ -110,14 +134,14 @@ String                          String::getSubstring                        (   
         throw library::core::error::RuntimeError("String is empty.") ;
     }
 
-    if (aStartPosition >= this->size())
+    if (aStartPosition >= this->length())
     {
-        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
     }
 
-    if ((aStartPosition + aLength) > this->size())
+    if ((aStartPosition + aLength) > this->length())
     {
-        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).getString() + "] out of bounds [" + Integer::Size(this->size() - 1).getString() + "].") ;
+        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
     }
     
     return this->substr(aStartPosition, aLength) ;
@@ -142,9 +166,35 @@ String                          String::Empty                               ( )
     return String("") ;
 }
 
+String                          String::Boolean                             (           bool                        aBoolean                                    )
+{
+    return aBoolean ? "True" : "False" ;
+}
+
 String                          String::Char                                (           char                        aCharacter                                  )
 {
     return String(1, aCharacter) ;
+}
+
+String                          String::Replicate                           (           char                        aCharacter,
+                                                                                        Size                        aCount                                      )
+{
+    return String(aCount, aCharacter) ;
+}
+
+String                          String::Replicate                           (   const   String&                     aString,
+                                                                                        Size                        aCount                                      )
+{
+
+    std::ostringstream stringStream ;
+
+    for (Index idx = 0; idx < aCount; ++idx)
+    {
+        stringStream << aString ;
+    }
+        
+    return stringStream.str() ;
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

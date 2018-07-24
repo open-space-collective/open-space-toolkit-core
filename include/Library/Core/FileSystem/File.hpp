@@ -38,10 +38,6 @@ class File
 
     public:
 
-        /// @brief              Default constructor (disabled)
-
-                                File                                        ( ) = delete ;
-
         /// @brief              Copy constructor
         ///
         /// @param              [in] aFile A file
@@ -92,7 +88,6 @@ class File
         /// @param              [in] aFile A file
         /// @return             An output stream
 
-        template <class U>
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   File&                       aFile                                       ) ;
 
@@ -129,7 +124,7 @@ class File
         /// @param              [in] (optional) withExtension If true, add extension to filename
         /// @return             File name
 
-        types::String           getName                                     (           bool                        withExtension                               =   true) const ;
+        String                  getName                                     (           bool                        withExtension                               =   true) const ;
 
         /// @brief              Get file extension
         ///
@@ -140,7 +135,7 @@ class File
         ///
         /// @return             File extension
 
-        types::String           getExtension                                ( ) const ;
+        String                  getExtension                                ( ) const ;
 
         /// @brief              Get file path
         ///
@@ -175,6 +170,16 @@ class File
 
         fs::Directory           getParentDirectory                          ( ) const ;
 
+        /// @brief              Get serialized file
+        ///
+        /// @code
+        ///                     File::Path(Path::Parse("/path/to/file")).toString() ; // "/path/to/file"
+        /// @endcode
+        ///
+        /// @return             Serialized file
+
+        String                  toString                                    ( ) const ;
+
         /// @brief              Rename file
         ///
         /// @code
@@ -184,7 +189,7 @@ class File
         ///
         /// @param              [in] aName A file name
 
-        void                    renameTo                                    (   const   types::String&              aName                                       ) ;
+        void                    renameTo                                    (   const   String&                     aName                                       ) ;
 
         /// @brief              Copy file to directory
         ///
@@ -199,7 +204,7 @@ class File
         /// @return             Copied file
 
         File                    copyToDirectory                             (   const   fs::Directory&              aDestination,
-                                                                                const   types::String&              aNewFileName                                =   "" ) const ;
+                                                                                const   String&                     aNewFileName                                =   "" ) const ;
 
         /// @brief              Move file to directory
         ///
@@ -277,7 +282,9 @@ class File
 
     private:
 
-        // fs::Path path_ ;
+        fs::Path                path_ ;
+
+                                File                                        (   const   fs::Path&                   aPath                                       ) ;
 
 } ;
 

@@ -341,7 +341,7 @@ TEST (Library_Core_Containers_Array, GetIndexOf)
 
 }
 
-TEST (Library_Core_Containers_Array, GetString)
+TEST (Library_Core_Containers_Array, ToString)
 {
 
     using library::core::types::Integer ;
@@ -352,7 +352,7 @@ TEST (Library_Core_Containers_Array, GetString)
 
         const Array<Integer> array({1, 2, 3}) ;
 
-        EXPECT_EQ("[1, 2, 3]", array.getString()) ;
+        EXPECT_EQ("[1, 2, 3]", array.toString()) ;
 
     }
 
@@ -360,14 +360,14 @@ TEST (Library_Core_Containers_Array, GetString)
 
         const Array<String> array({"abc", "def"}) ;
 
-        EXPECT_EQ("[\"abc\", \"def\"]", array.getString()) ;
+        EXPECT_EQ("[\"abc\", \"def\"]", array.toString()) ;
 
     }
 
     {
 
-        EXPECT_EQ("[]", Array<Integer>::Empty().getString()) ;
-        EXPECT_EQ("[]", Array<String>::Empty().getString()) ;
+        EXPECT_EQ("[]", Array<Integer>::Empty().toString()) ;
+        EXPECT_EQ("[]", Array<String>::Empty().toString()) ;
 
     }
 

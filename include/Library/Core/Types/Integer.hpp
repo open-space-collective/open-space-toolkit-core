@@ -40,6 +40,10 @@ typedef uint64_t Uint64 ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+class Real ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /// @brief                      Integer type
 
 class Integer
@@ -172,6 +176,11 @@ class Integer
         Integer                 operator /                                  (   const   Integer::ValueType&         anInteger                                   ) const ;
         Integer                 operator %                                  (   const   Integer::ValueType&         anInteger                                   ) const ;
 
+        Real                    operator +                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator -                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator *                                  (   const   Real&                       aReal                                       ) const ;
+        Real                    operator /                                  (   const   Real&                       aReal                                       ) const ;
+
         Integer&                operator +=                                 (   const   Integer&                    anInteger                                   ) ;
         Integer&                operator -=                                 (   const   Integer&                    anInteger                                   ) ;
         Integer&                operator *=                                 (   const   Integer&                    anInteger                                   ) ;
@@ -225,7 +234,7 @@ class Integer
         
         types::Sign             getSign                                     ( ) const ;
 
-        types::String           getString                                   ( ) const ;
+        types::String           toString                                    ( ) const ;
 
         static Integer          Undefined                                   ( ) ;
 
@@ -255,13 +264,13 @@ class Integer
 
         static Integer          Size                                        (   const   types::Size&                aSize                                       ) ;
 
-        static Integer          Parse                                       (           char                        aCharacter                                  ) ;
-        
-        static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
-
         static bool             CanParse                                    (           char                        aCharacter                                  ) ;
 
         static bool             CanParse                                    (   const   types::String&              aString                                     ) ;
+
+        static Integer          Parse                                       (           char                        aCharacter                                  ) ;
+        
+        static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
 
     private:
 
