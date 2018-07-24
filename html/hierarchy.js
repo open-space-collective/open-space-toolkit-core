@@ -21,7 +21,7 @@ var hierarchy =
     [ "library::core::fs::File", "classlibrary_1_1core_1_1fs_1_1_file.html", null ],
     [ "library::core::ctnr::Graph", "classlibrary_1_1core_1_1ctnr_1_1_graph.html", null ],
     [ "library::core::system::Group", "classlibrary_1_1core_1_1system_1_1_group.html", null ],
-    [ "library::core::types::HasToString< T >", "classlibrary_1_1core_1_1types_1_1_has_to_string.html", null ],
+    [ "library::core::types::HasGetString< T >", "classlibrary_1_1core_1_1types_1_1_has_get_string.html", null ],
     [ "library::core::types::Integer", "classlibrary_1_1core_1_1types_1_1_integer.html", null ],
     [ "library::core::ctnr::Dictionary::Iterator", "classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html", null ],
     [ "library::core::utils::Print::LineBuffer", "classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html", null ],
@@ -33,11 +33,10 @@ var hierarchy =
     [ "library::core::logger::Pump", "classlibrary_1_1core_1_1logger_1_1_pump.html", null ],
     [ "library::core::ctnr::Queue", "classlibrary_1_1core_1_1ctnr_1_1_queue.html", null ],
     [ "library::core::types::Real", "classlibrary_1_1core_1_1types_1_1_real.html", null ],
-    [ "library::core::ctnr::table::Row", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html", null ],
+    [ "library::core::logger::Sink", "classlibrary_1_1core_1_1logger_1_1_sink.html", null ],
     [ "library::core::logger::sinks::Sink", "classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html", [
       [ "library::core::logger::sinks::Console", "classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html", null ]
     ] ],
-    [ "library::core::logger::Sink", "classlibrary_1_1core_1_1logger_1_1_sink.html", null ],
     [ "library::core::logger::sources::Source", "classlibrary_1_1core_1_1logger_1_1sources_1_1_source.html", null ],
     [ "library::core::logger::Source", "classlibrary_1_1core_1_1logger_1_1_source.html", null ],
     [ "library::core::ctnr::Stack", "classlibrary_1_1core_1_1ctnr_1_1_stack.html", null ],
@@ -50,12 +49,6 @@ var hierarchy =
     ] ],
     [ "std::vector< Byte >", null, [
       [ "library::core::ctnr::Array< Byte >", "classlibrary_1_1core_1_1ctnr_1_1_array.html", null ]
-    ] ],
-    [ "std::vector< library::core::ctnr::Object >", null, [
-      [ "library::core::ctnr::Array< library::core::ctnr::Object >", "classlibrary_1_1core_1_1ctnr_1_1_array.html", null ]
-    ] ],
-    [ "std::vector< library::core::ctnr::table::Row >", null, [
-      [ "library::core::ctnr::Array< library::core::ctnr::table::Row >", "classlibrary_1_1core_1_1ctnr_1_1_array.html", null ]
     ] ],
     [ "std::vector< library::core::logger::Sink >", null, [
       [ "library::core::ctnr::Array< library::core::logger::Sink >", "classlibrary_1_1core_1_1ctnr_1_1_array.html", null ]

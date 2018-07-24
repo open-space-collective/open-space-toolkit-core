@@ -36,7 +36,7 @@ Object object = Object::Load(jsonFile) ;
 
 // Get object value
 
-String value = object["Key 1"].toString() ; // "Hello World!"
+String value = object["Key 1"].getString() ; // "Hello World!"
 
 // Set object value
 

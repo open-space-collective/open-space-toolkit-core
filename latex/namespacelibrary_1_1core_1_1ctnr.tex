@@ -1,10 +1,5 @@
 \hypertarget{namespacelibrary_1_1core_1_1ctnr}{}\section{library\+:\+:core\+:\+:ctnr Namespace Reference}
 \label{namespacelibrary_1_1core_1_1ctnr}\index{library\+::core\+::ctnr@{library\+::core\+::ctnr}}
-\subsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
- \hyperlink{namespacelibrary_1_1core_1_1ctnr_1_1table}{table}
-\end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,12 +38,6 @@ struct \hyperlink{structlibrary_1_1core_1_1ctnr_1_1_triple}{Triple}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T , typename U , typename V $>$ }\\\hyperlink{structlibrary_1_1core_1_1ctnr_1_1_triple}{Triple}$<$ T, U, V $>$ \hyperlink{namespacelibrary_1_1core_1_1ctnr_a96a0b941c0de59772cb5e073d0c2b8a8}{make\+\_\+triple} (const T \&a\+First\+Element, const U \&a\+Second\+Element, const V \&a\+Third\+Element)
-\item 
-std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1ctnr_a5089e336819bf6e43bdb9ea9c8c01fcf}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_dictionary}{Dictionary} \&a\+Dictionary)
-\item 
-std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1ctnr_a20ee48a4a564834bae30af868b549043}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_object}{Object} \&an\+Object)
-\item 
-std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1ctnr_aae8e4f8665fde7fdd3e3f479e48c90aa}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table}{Table} \&a\+Table)
 \end{DoxyCompactItemize}
 
 
@@ -122,55 +111,4 @@ Tuple container.
 \subsubsection{\texorpdfstring{make\+\_\+triple()}{make\_triple()}}
 {\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
 \hyperlink{structlibrary_1_1core_1_1ctnr_1_1_triple}{Triple}$<$T,U,V$>$ library\+::core\+::ctnr\+::make\+\_\+triple (\begin{DoxyParamCaption}\item[{const T \&}]{a\+First\+Element,  }\item[{const U \&}]{a\+Second\+Element,  }\item[{const V \&}]{a\+Third\+Element }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacelibrary_1_1core_1_1ctnr_aae8e4f8665fde7fdd3e3f479e48c90aa}\label{namespacelibrary_1_1core_1_1ctnr_aae8e4f8665fde7fdd3e3f479e48c90aa}} 
-\index{library\+::core\+::ctnr@{library\+::core\+::ctnr}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr@{library\+::core\+::ctnr}}
-\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily std\+::ostream\& library\+::core\+::ctnr\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table}{Table} \&}]{a\+Table }\end{DoxyParamCaption})}
-
-
-\begin{DoxyCode}
-std::cout << Table(...) ;
-\end{DoxyCode}
-
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
-\hline
-\mbox{\tt in}  & {\em a\+Table} & A table \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-An output stream 
-\end{DoxyReturn}
-\mbox{\Hypertarget{namespacelibrary_1_1core_1_1ctnr_a5089e336819bf6e43bdb9ea9c8c01fcf}\label{namespacelibrary_1_1core_1_1ctnr_a5089e336819bf6e43bdb9ea9c8c01fcf}} 
-\index{library\+::core\+::ctnr@{library\+::core\+::ctnr}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr@{library\+::core\+::ctnr}}
-\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily std\+::ostream\& library\+::core\+::ctnr\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_dictionary}{Dictionary} \&}]{a\+Dictionary }\end{DoxyParamCaption})}
-
-
-\begin{DoxyCode}
-Dictionary dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_object_a8a8b1ef718d092c154011cf5c37373bb}{Object::Integer}(123) \}\} ;
-std::cout << dictionary ;
-\end{DoxyCode}
-
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
-\hline
-\mbox{\tt in}  & {\em a\+Dictionary} & An dictionary \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-An output stream 
-\end{DoxyReturn}
-\mbox{\Hypertarget{namespacelibrary_1_1core_1_1ctnr_a20ee48a4a564834bae30af868b549043}\label{namespacelibrary_1_1core_1_1ctnr_a20ee48a4a564834bae30af868b549043}} 
-\index{library\+::core\+::ctnr@{library\+::core\+::ctnr}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr@{library\+::core\+::ctnr}}
-\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily std\+::ostream\& library\+::core\+::ctnr\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_object}{Object} \&}]{an\+Object }\end{DoxyParamCaption})}
 

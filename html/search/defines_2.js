@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['length',['LENGTH',['../_print_8cpp.html#a30362161c93e3f1a4ee4c673f535b5a8',1,'Print.cpp']]],
   ['log',['LOG',['../_logger_8hpp.html#a8ac9d89e791f5cb9828a8c970e970db8',1,'Logger.hpp']]],
   ['log_5fdebug',['LOG_DEBUG',['../_logger_8hpp.html#ac871e9578d8f0db84bd5d6ae6fa3aede',1,'Logger.hpp']]],
   ['log_5ferror',['LOG_ERROR',['../_logger_8hpp.html#af82d42df573b733c1f607fc8a52775b9',1,'Logger.hpp']]],

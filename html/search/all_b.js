@@ -5,7 +5,6 @@ var searchData=
   ['error',['error',['../namespacelibrary_1_1core_1_1error.html',1,'library::core']]],
   ['fs',['fs',['../namespacelibrary_1_1core_1_1fs.html',1,'library::core']]],
   ['library_20_3a_3a_20core',['Library :: Core',['../index.html',1,'']]],
-  ['length',['LENGTH',['../_print_8cpp.html#a30362161c93e3f1a4ee4c673f535b5a8',1,'Print.cpp']]],
   ['library',['library',['../namespacelibrary.html',1,'']]],
   ['lightblue',['LightBlue',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#aa7a07d8165e1df74ad4d289d5220bc96a4d7ff7393a484a7b9ed2e381f5cdeaf7',1,'library::core::logger::sinks::Console']]],
   ['lightcyan',['LightCyan',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#aa7a07d8165e1df74ad4d289d5220bc96ac37b5ce4ba80a097d82726ae74d34b13',1,'library::core::logger::sinks::Console']]],
@@ -20,7 +19,7 @@ var searchData=
   ['lineidenabled_5f',['lineIdEnabled_',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html#a75d2b3e0a9551cd8788e3d9c320d79dd',1,'library::core::logger::sinks::Sink']]],
   ['list',['List',['../namespacelibrary_1_1core_1_1ctnr.html#a87ccf40619002299b341a5e76e989912',1,'library::core::ctnr']]],
   ['list_2ehpp',['List.hpp',['../_list_8hpp.html',1,'']]],
-  ['load',['Load',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a508e658f6525f7607a7fa869c3ac4df5',1,'library::core::ctnr::Object::Load()'],['../classlibrary_1_1core_1_1ctnr_1_1_table.html#a423b5a739e3ed0127bc14572042c158e',1,'library::core::ctnr::Table::Load()']]],
+  ['load',['Load',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a508e658f6525f7607a7fa869c3ac4df5',1,'library::core::ctnr::Object']]],
   ['log',['LOG',['../_logger_8hpp.html#a8ac9d89e791f5cb9828a8c970e970db8',1,'Logger.hpp']]],
   ['log_5fdebug',['LOG_DEBUG',['../_logger_8hpp.html#ac871e9578d8f0db84bd5d6ae6fa3aede',1,'Logger.hpp']]],
   ['log_5ferror',['LOG_ERROR',['../_logger_8hpp.html#af82d42df573b733c1f607fc8a52775b9',1,'Logger.hpp']]],
@@ -38,7 +37,6 @@ var searchData=
   ['sinks',['sinks',['../namespacelibrary_1_1core_1_1logger_1_1sinks.html',1,'library::core::logger']]],
   ['sources',['sources',['../namespacelibrary_1_1core_1_1logger_1_1sources.html',1,'library::core::logger']]],
   ['system',['system',['../namespacelibrary_1_1core_1_1system.html',1,'library::core']]],
-  ['table',['table',['../namespacelibrary_1_1core_1_1ctnr_1_1table.html',1,'library::core::ctnr']]],
   ['types',['types',['../namespacelibrary_1_1core_1_1types.html',1,'library::core']]],
   ['utils',['utils',['../namespacelibrary_1_1core_1_1utils.html',1,'library::core']]]
 ];
