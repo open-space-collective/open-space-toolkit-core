@@ -158,11 +158,11 @@ class Object
         bool                    getBoolean                                  ( ) const ;
         types::Integer          getInteger                                  ( ) const ;
         types::Real             getReal                                     ( ) const ;
-        types::String           toString                                    ( ) const ;
+        types::String           getString                                   ( ) const ;
         ctnr::Dictionary        getDictionary                               ( ) const ;
         ctnr::Array<Object>     getArray                                    ( ) const ;
 
-        types::String           getSerialized                               (   const   Object::Format&             aFormat                                     =   Object::Format::Undefined ) const ;
+        types::String           toString                                    (   const   Object::Format&             aFormat                                     =   Object::Format::Undefined ) const ;
         types::String           getJsonString                               ( ) const ;
 
         bool&                   accessBoolean                               ( ) ;

@@ -57,7 +57,7 @@ void                            Print::Separator                            (   
 
     if (aName.isEmpty())
     {
-        anOutputStream << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << std::endl ;
+        anOutputStream << types::String::Replicate("- ", LENGTH / 2) << std::endl ;
     }
     else
     {

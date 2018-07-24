@@ -264,13 +264,13 @@ class Integer
 
         static Integer          Size                                        (   const   types::Size&                aSize                                       ) ;
 
-        static Integer          Parse                                       (           char                        aCharacter                                  ) ;
-        
-        static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
-
         static bool             CanParse                                    (           char                        aCharacter                                  ) ;
 
         static bool             CanParse                                    (   const   types::String&              aString                                     ) ;
+
+        static Integer          Parse                                       (           char                        aCharacter                                  ) ;
+        
+        static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
 
     private:
 

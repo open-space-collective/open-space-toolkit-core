@@ -57,8 +57,8 @@ class Print
 
             private:
 
-                std::ostream& stream_ ;
-                uint indentation_ ;
+                std::ostream&   stream_ ;
+                uint            indentation_ ;
 
         } ;
 

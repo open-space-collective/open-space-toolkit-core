@@ -139,6 +139,8 @@ class Real
 
         static Real             Integer                                     (   const   types::Integer&             anInteger                                   ) ;
 
+        static Real             CanParse                                    (   const   types::String&              aString                                     ) ;
+
         static Real             Parse                                       (   const   types::String&              aString                                     ) ;
 
     private:

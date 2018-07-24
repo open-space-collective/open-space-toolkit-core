@@ -2464,13 +2464,56 @@ TEST (Library_Core_Types_Real, Integer)
 
 }
 
+TEST (Library_Core_Types_Real, CanParse)
+{
+
+    using library::core::types::Real ;
+
+    EXPECT_TRUE(Real::CanParse("Undefined")) ;
+    EXPECT_TRUE(Real::CanParse("NaN")) ;
+
+    EXPECT_TRUE(Real::CanParse("0")) ;
+    EXPECT_TRUE(Real::CanParse("-1")) ;
+    EXPECT_TRUE(Real::CanParse("+0")) ;
+    EXPECT_TRUE(Real::CanParse("+1")) ;
+    
+    EXPECT_TRUE(Real::CanParse("0.0")) ;
+    EXPECT_TRUE(Real::CanParse("-1.0")) ;
+    EXPECT_TRUE(Real::CanParse("+0.0")) ;
+    EXPECT_TRUE(Real::CanParse("+1.0")) ;
+
+    EXPECT_TRUE(Real::CanParse("-2147483648.0")) ;
+    EXPECT_TRUE(Real::CanParse("+2147483647.0")) ;
+
+    EXPECT_TRUE(Real::CanParse("-2147483649.0")) ;
+    EXPECT_TRUE(Real::CanParse("2147483648.0")) ;
+    EXPECT_TRUE(Real::CanParse("+2147483648.0")) ;
+
+    EXPECT_TRUE(Real::CanParse("-Inf")) ;
+    EXPECT_TRUE(Real::CanParse("Inf")) ;
+    EXPECT_TRUE(Real::CanParse("+Inf")) ;
+
+    EXPECT_FALSE(Real::CanParse("")) ;
+
+    EXPECT_FALSE(Real::CanParse("-NaN")) ;
+    EXPECT_FALSE(Real::CanParse("+NaN")) ;
+    EXPECT_FALSE(Real::CanParse("nan")) ;
+    EXPECT_FALSE(Real::CanParse("NAN")) ;
+
+    EXPECT_FALSE(Real::CanParse("abc")) ;
+
+    EXPECT_FALSE(Real::CanParse("-1e600")) ;
+    EXPECT_FALSE(Real::CanParse("+1e600")) ;
+
+}
+
 TEST (Library_Core_Types_Real, Parse)
 {
 
     using library::core::types::Real ;
 
-    EXPECT_FALSE(Real::Parse("").isDefined()) ;
     EXPECT_FALSE(Real::Parse("Undefined").isDefined()) ;
+    EXPECT_FALSE(Real::Parse("NaN").isDefined()) ;
 
     EXPECT_EQ(+0.0, Real::Parse("0")) ;
     EXPECT_EQ(-1.0, Real::Parse("-1")) ;
@@ -2485,16 +2528,25 @@ TEST (Library_Core_Types_Real, Parse)
     EXPECT_EQ(-2147483648.0, Real::Parse("-2147483648.0")) ;
     EXPECT_EQ(+2147483647.0, Real::Parse("+2147483647.0")) ;
 
+    EXPECT_TRUE(Real::Parse("-Inf").isNegativeInfinity()) ;
+    EXPECT_TRUE(Real::Parse("Inf").isPositiveInfinity()) ;
+    EXPECT_TRUE(Real::Parse("+Inf").isPositiveInfinity()) ;
+
     EXPECT_NO_THROW(Real::Parse("-2147483649.0")) ;
     EXPECT_NO_THROW(Real::Parse("2147483648.0")) ;
     EXPECT_NO_THROW(Real::Parse("+2147483648.0")) ;
 
+    EXPECT_ANY_THROW(Real::Parse("")) ;
+    
+    EXPECT_ANY_THROW(Real::Parse("-NaN")) ;
+    EXPECT_ANY_THROW(Real::Parse("+NaN")) ;
+    EXPECT_ANY_THROW(Real::Parse("nan")) ;
+    EXPECT_ANY_THROW(Real::Parse("NAN")) ;
+
+    EXPECT_ANY_THROW(Real::Parse("abc")) ;
+
     EXPECT_ANY_THROW(Real::Parse("-1e600")) ;
     EXPECT_ANY_THROW(Real::Parse("+1e600")) ;
-
-    EXPECT_TRUE(Real::Parse("-Inf").isNegativeInfinity()) ;
-    EXPECT_TRUE(Real::Parse("Inf").isPositiveInfinity()) ;
-    EXPECT_TRUE(Real::Parse("+Inf").isPositiveInfinity()) ;
 
 }
 

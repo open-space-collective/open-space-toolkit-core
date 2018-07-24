@@ -927,10 +927,45 @@ Real                            Real::Integer                               (   
 
 }
 
+Real                            Real::CanParse                              (   const   types::String&              aString                                     )
+{
+
+    if (aString.isEmpty())
+    {
+        return false ;
+    }
+
+    if ((aString == "Undefined") || (aString == "NaN") || (aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
+    {
+        return true ;
+    }
+
+    try
+    {
+        
+        const Real::ValueType value = boost::lexical_cast<Real::ValueType>(aString) ;
+
+        return value == value ;
+
+    }
+    catch (const boost::bad_lexical_cast&)
+    {
+        return false ;
+    }
+
+    return true ;
+
+}
+
 Real                            Real::Parse                                 (   const   types::String&              aString                                     )
 {
 
-    if (aString.isEmpty() || (aString == "Undefined"))
+    if (aString.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("String") ;
+    }
+
+    if ((aString == "Undefined") || (aString == "NaN"))
     {
         return Real::Undefined() ;
     }
@@ -947,7 +982,16 @@ Real                            Real::Parse                                 (   
 
     try
     {
-        return Real(boost::lexical_cast<Real::ValueType>(aString)) ;
+
+        const Real::ValueType value = boost::lexical_cast<Real::ValueType>(aString) ;
+
+        if (value != value)
+        {
+            throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
+        }
+        
+        return Real(value) ;
+
     }
     catch (const boost::bad_lexical_cast&)
     {
