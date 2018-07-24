@@ -63,6 +63,14 @@ bool \hyperlink{classlibrary_1_1core_1_1types_1_1_real_aa36e6de2ef7bc2d234be6441
 \item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_acd9a542764fae4b94bf4612affcfa701}{operator/} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9c5c8826b7e5a8e39544d23fea6c0e1c}{Real\+::\+Value\+Type} \&a\+Real) const
 \item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a5b8ec99c8c2f846228c62724870671e8}{operator+} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&an\+Integer) const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_acd8b13000f401601c123df6d248a3b7d}{operator-\/} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&an\+Integer) const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_addb91f5d8c5a22716942f7e5d180073c}{operator$\ast$} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&an\+Integer) const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_adfd83fd099289cfee3ab553f33f00e41}{operator/} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&an\+Integer) const
+\item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9d6119549877717ef91876e1e53c78f9}{operator+=} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&a\+Real)
 \item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a91b116698504125c3e9063e5b457f3fe}{operator-\/=} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&a\+Real)
@@ -109,9 +117,15 @@ bool \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a3355dd60d401e1f464d0bc20
 \item 
 \hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87d}{types\+::\+Sign} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a0e92ad5d5a946dcc64385e1bf47003c8}{get\+Sign} () const
 \item 
-\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_ac075065c78713b32a2144756efaae7b0}{get\+String} () const
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a5d2632591e723b672323c60f1f4ec0be}{to\+String} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} \&a\+Precision=\hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a142c2df49031b787daf30673c73fcad7}{types\+::\+Integer\+::\+Undefined}()) const
 \item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_aa4a7f3663994b5e59dc894b80856e0fb}{to\+Integer} () const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_aca1aed64224745a0aa2fcf93c6faa0f9}{abs} () const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_ab25f3250b107fda48e86964792854b94}{floor} () const
+\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a7cb7843b8dc0c2e2b69322dd66caabc0}{sqrt} () const
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -126,11 +140,15 @@ static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{class
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_ab6da87777d2c1c3517b3ee0c1b87f8a7}{Two\+Pi} ()
 \item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a5f3b76a5055cb042c25448b873e39663}{Epsilon} ()
+\item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a7f4aa42fec951281e976eebca95e695e}{Positive\+Infinity} ()
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a04f125b4861a4f348b9754fc65fbbb43}{Negative\+Infinity} ()
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a76c27d5d7d98ff5475809e07c7ebbd8d}{Integer} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} \&an\+Integer)
+\item 
+static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a179d3db1c67dff26272317ca850046cf}{Can\+Parse} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+String)
 \item 
 static \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a7ec624abaddba3a9cabf094a6a69f484}{Parse} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+String)
 \end{DoxyCompactItemize}
@@ -177,17 +195,35 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_aca1aed64224745a0aa2fcf93c6faa0f9}\label{classlibrary_1_1core_1_1types_1_1_real_aca1aed64224745a0aa2fcf93c6faa0f9}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!abs@{abs}}
+\index{abs@{abs}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a179d3db1c67dff26272317ca850046cf}\label{classlibrary_1_1core_1_1types_1_1_real_a179d3db1c67dff26272317ca850046cf}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!Can\+Parse@{Can\+Parse}}
+\index{Can\+Parse@{Can\+Parse}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{Can\+Parse()}{CanParse()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::\+Can\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a5f3b76a5055cb042c25448b873e39663}\label{classlibrary_1_1core_1_1types_1_1_real_a5f3b76a5055cb042c25448b873e39663}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!Epsilon@{Epsilon}}
+\index{Epsilon@{Epsilon}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{Epsilon()}{Epsilon()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::\+Epsilon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_ab25f3250b107fda48e86964792854b94}\label{classlibrary_1_1core_1_1types_1_1_real_ab25f3250b107fda48e86964792854b94}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!floor@{floor}}
+\index{floor@{floor}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{floor()}{floor()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} library\+::core\+::types\+::\+Real\+::floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a0e92ad5d5a946dcc64385e1bf47003c8}\label{classlibrary_1_1core_1_1types_1_1_real_a0e92ad5d5a946dcc64385e1bf47003c8}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!get\+Sign@{get\+Sign}}
 \index{get\+Sign@{get\+Sign}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
 \subsubsection{\texorpdfstring{get\+Sign()}{getSign()}}
 {\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87d}{types\+::\+Sign} library\+::core\+::types\+::\+Real\+::get\+Sign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_ac075065c78713b32a2144756efaae7b0}\label{classlibrary_1_1core_1_1types_1_1_real_ac075065c78713b32a2144756efaae7b0}} 
-\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!get\+String@{get\+String}}
-\index{get\+String@{get\+String}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{get\+String()}{getString()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} library\+::core\+::types\+::\+Real\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a5047de46000e05369231c22c144d1c9c}\label{classlibrary_1_1core_1_1types_1_1_real_a5047de46000e05369231c22c144d1c9c}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!Half\+Pi@{Half\+Pi}}
@@ -294,14 +330,20 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a9a02a74873dddab8ced5d4a154fdfb8e}\label{classlibrary_1_1core_1_1types_1_1_real_a9a02a74873dddab8ced5d4a154fdfb8e}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&}]{a\+Real }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a385f64053b9bef3f9f127a8073a2477d}\label{classlibrary_1_1core_1_1types_1_1_real_a385f64053b9bef3f9f127a8073a2477d}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9c5c8826b7e5a8e39544d23fea6c0e1c}{Real\+::\+Value\+Type} \&}]{a\+Real }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_addb91f5d8c5a22716942f7e5d180073c}\label{classlibrary_1_1core_1_1types_1_1_real_addb91f5d8c5a22716942f7e5d180073c}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&}]{an\+Integer }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a7ce9bdd2c145c3684498cac094dc240e}\label{classlibrary_1_1core_1_1types_1_1_real_a7ce9bdd2c145c3684498cac094dc240e}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator$\ast$=@{operator$\ast$=}}
@@ -318,19 +360,25 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a1f5ed9019063814bd13c0cebc7c9fa1a}\label{classlibrary_1_1core_1_1types_1_1_real_a1f5ed9019063814bd13c0cebc7c9fa1a}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator+@{operator+}}
 \index{operator+@{operator+}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&}]{a\+Real }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_aee62d1d76e3b0ba37dc9bebdbdcdaaf7}\label{classlibrary_1_1core_1_1types_1_1_real_aee62d1d76e3b0ba37dc9bebdbdcdaaf7}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator+@{operator+}}
 \index{operator+@{operator+}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9c5c8826b7e5a8e39544d23fea6c0e1c}{Real\+::\+Value\+Type} \&}]{a\+Real }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a5b8ec99c8c2f846228c62724870671e8}\label{classlibrary_1_1core_1_1types_1_1_real_a5b8ec99c8c2f846228c62724870671e8}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator+@{operator+}}
+\index{operator+@{operator+}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&}]{an\+Integer }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a7f39b72df1d66f354dce558a99dc2da5}\label{classlibrary_1_1core_1_1types_1_1_real_a7f39b72df1d66f354dce558a99dc2da5}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator+@{operator+}}
 \index{operator+@{operator+}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a9d6119549877717ef91876e1e53c78f9}\label{classlibrary_1_1core_1_1types_1_1_real_a9d6119549877717ef91876e1e53c78f9}} 
@@ -348,19 +396,25 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a2194765977bf5e6d53cb9532d8d089ec}\label{classlibrary_1_1core_1_1types_1_1_real_a2194765977bf5e6d53cb9532d8d089ec}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&}]{a\+Real }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a45eecda19bb915f419b13c9441b65876}\label{classlibrary_1_1core_1_1types_1_1_real_a45eecda19bb915f419b13c9441b65876}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9c5c8826b7e5a8e39544d23fea6c0e1c}{Real\+::\+Value\+Type} \&}]{a\+Real }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_acd8b13000f401601c123df6d248a3b7d}\label{classlibrary_1_1core_1_1types_1_1_real_acd8b13000f401601c123df6d248a3b7d}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&}]{an\+Integer }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a7a018943c5110e4023f5e462eed70a25}\label{classlibrary_1_1core_1_1types_1_1_real_a7a018943c5110e4023f5e462eed70a25}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a91b116698504125c3e9063e5b457f3fe}\label{classlibrary_1_1core_1_1types_1_1_real_a91b116698504125c3e9063e5b457f3fe}} 
@@ -378,14 +432,20 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a01f29a424bf2fafb8e22f4fbaaa4e46a}\label{classlibrary_1_1core_1_1types_1_1_real_a01f29a424bf2fafb8e22f4fbaaa4e46a}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator/@{operator/}}
 \index{operator/@{operator/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} \&}]{a\+Real }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_acd9a542764fae4b94bf4612affcfa701}\label{classlibrary_1_1core_1_1types_1_1_real_acd9a542764fae4b94bf4612affcfa701}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator/@{operator/}}
 \index{operator/@{operator/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
-\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a9c5c8826b7e5a8e39544d23fea6c0e1c}{Real\+::\+Value\+Type} \&}]{a\+Real }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_adfd83fd099289cfee3ab553f33f00e41}\label{classlibrary_1_1core_1_1types_1_1_real_adfd83fd099289cfee3ab553f33f00e41}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator/@{operator/}}
+\index{operator/@{operator/}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{Integer} \&}]{an\+Integer }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_adc661a93f109f10500738a77439c975d}\label{classlibrary_1_1core_1_1types_1_1_real_adc661a93f109f10500738a77439c975d}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!operator/=@{operator/=}}
@@ -483,11 +543,23 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1types_1_1_real_a36816b0e006
 \subsubsection{\texorpdfstring{Positive\+Infinity()}{PositiveInfinity()}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::\+Positive\+Infinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a7cb7843b8dc0c2e2b69322dd66caabc0}\label{classlibrary_1_1core_1_1types_1_1_real_a7cb7843b8dc0c2e2b69322dd66caabc0}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_real}{Real} library\+::core\+::types\+::\+Real\+::sqrt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_aa4a7f3663994b5e59dc894b80856e0fb}\label{classlibrary_1_1core_1_1types_1_1_real_aa4a7f3663994b5e59dc894b80856e0fb}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!to\+Integer@{to\+Integer}}
 \index{to\+Integer@{to\+Integer}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
 \subsubsection{\texorpdfstring{to\+Integer()}{toInteger()}}
 {\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} library\+::core\+::types\+::\+Real\+::to\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_a5d2632591e723b672323c60f1f4ec0be}\label{classlibrary_1_1core_1_1types_1_1_real_a5d2632591e723b672323c60f1f4ec0be}} 
+\index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} library\+::core\+::types\+::\+Real\+::to\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_integer}{types\+::\+Integer} \&}]{a\+Precision = {\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_a142c2df49031b787daf30673c73fcad7}{types\+::\+Integer\+::\+Undefined}()} }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_real_ab6da87777d2c1c3517b3ee0c1b87f8a7}\label{classlibrary_1_1core_1_1types_1_1_real_ab6da87777d2c1c3517b3ee0c1b87f8a7}} 
 \index{library\+::core\+::types\+::\+Real@{library\+::core\+::types\+::\+Real}!Two\+Pi@{Two\+Pi}}

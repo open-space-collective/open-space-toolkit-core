@@ -11,3 +11,59 @@ class \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path}
 \item 
 class \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{Permission\+Set}
 \begin{DoxyCompactList}\small\item\em Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1fs_a06acb7c0054dcbe216284bdadd5663ac}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1fs_1_1_file}{File} \&a\+File)
+\item 
+std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1fs_a47817adc842f15a3de34925de44b2de3}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacelibrary_1_1core_1_1fs_a06acb7c0054dcbe216284bdadd5663ac}\label{namespacelibrary_1_1core_1_1fs_a06acb7c0054dcbe216284bdadd5663ac}} 
+\index{library\+::core\+::fs@{library\+::core\+::fs}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::fs@{library\+::core\+::fs}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream\& library\+::core\+::fs\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_file}{File} \&}]{a\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+File file = \hyperlink{classlibrary_1_1core_1_1fs_1_1_file_a72d6cdf8bb7e299889c6149e2b8a6cc7}{File::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/file"})) ;
+std::cout << file ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+File} & A file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelibrary_1_1core_1_1fs_a47817adc842f15a3de34925de44b2de3}\label{namespacelibrary_1_1core_1_1fs_a47817adc842f15a3de34925de44b2de3}} 
+\index{library\+::core\+::fs@{library\+::core\+::fs}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::fs@{library\+::core\+::fs}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream\& library\+::core\+::fs\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+Path path = \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/file"}) ;
+std::cout << path ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
