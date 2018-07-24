@@ -11,6 +11,7 @@
 #define __Library_Core_FileSystem_Path__
 
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Unique.hpp>
 
 #include <ostream>
 
@@ -25,6 +26,11 @@ namespace fs
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using library::core::types::Unique ;
+using library::core::types::String ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /// @brief                      
 
 class Path
@@ -32,15 +38,15 @@ class Path
 
     public:
 
-        /// @brief              Default constructor (disabled)
-
-                                Path                                        ( ) = delete ;
-
         /// @brief              Copy constructor
         ///
         /// @param              [in] aPath A path
 
                                 Path                                        (   const   Path&                       aPath                                       ) ;
+
+        /// @brief              Destructor
+
+                                ~Path                                       ( ) ;
 
         /// @brief              Assignment operator
         ///
@@ -158,7 +164,7 @@ class Path
         ///
         /// @return             First element of path
 
-        types::String           getFirstElement                              ( ) const ;
+        String                  getFirstElement                             ( ) const ;
 
         /// @brief              Get last element of path
         ///
@@ -169,7 +175,7 @@ class Path
         ///
         /// @return             Last element of path
 
-        types::String           getLastElement                              ( ) const ;
+        String                  getLastElement                              ( ) const ;
 
         /// @brief              Get normalized path
         ///
@@ -206,6 +212,16 @@ class Path
 
         Path                    getRelativePathTo                           (   const   Path&                       aReferencePath                              ) const ;
 
+        /// @brief              Get serialized path
+        ///
+        /// @code
+        ///                     Path::Parse("/path/to/file").toString() ; // "/path/to/file"
+        /// @endcode
+        ///
+        /// @return             Serialized path
+
+        String                  toString                                    ( ) const ;
+
         /// @brief              Constructs an undefined path
         ///
         /// @code
@@ -236,7 +252,7 @@ class Path
         /// @param              [in] aString A string
         /// @return             Path
 
-        static Path             Parse                                       (   const   types::String&              aString                                     ) ;
+        static Path             Parse                                       (   const   String&                     aString                                     ) ;
 
         /// @brief              Constructs a path from a list of string
         ///
@@ -247,11 +263,15 @@ class Path
         /// @param              [in] aStringList A list of string
         /// @return             Path
 
-        static Path             Strings                                     (   const   std::initializer_list<types::String> aStringList                        ) ;
+        static Path             Strings                                     (   const   std::initializer_list<String> aStringList                               ) ;
 
     private:
 
-        // [TBI]
+        class Impl ;
+
+        Unique<Path::Impl>      impl_ ;
+
+                                Path                                        ( ) ;
     
 } ;
 

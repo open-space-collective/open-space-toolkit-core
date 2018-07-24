@@ -133,6 +133,50 @@ TEST (Library_Core_Types_String, GetLength)
 
 }
 
+TEST (Library_Core_Types_String, GetHead)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("abc", String("abcdef").getHead(3)) ;
+        EXPECT_EQ("abc", String("abc").getHead(3)) ;
+        EXPECT_EQ("", String("abcdef").getHead(0)) ;
+        EXPECT_EQ("", String("").getHead(0)) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(String("abc").getHead(4)) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_String, GetTail)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("def", String("abcdef").getTail(3)) ;
+        EXPECT_EQ("abc", String("abc").getTail(3)) ;
+        EXPECT_EQ("", String("abcdef").getTail(0)) ;
+        EXPECT_EQ("", String("").getTail(0)) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(String("abc").getTail(4)) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, GetFirst)
 {
 
@@ -211,6 +255,20 @@ TEST (Library_Core_Types_String, Empty)
 
 }
 
+TEST (Library_Core_Types_String, Boolean)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("True", String::Boolean(true)) ;
+        EXPECT_EQ("False", String::Boolean(false)) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, Char)
 {
 
@@ -220,6 +278,28 @@ TEST (Library_Core_Types_String, Char)
 
         EXPECT_EQ("a", String::Char('a')) ;
         EXPECT_EQ("0", String::Char('0')) ;
+
+    }
+
+}
+
+TEST (Library_Core_Types_String, Replicate)
+{
+
+    using library::core::types::String ;
+
+    {
+
+        EXPECT_EQ("aaa", String::Replicate('a', 3)) ;
+        EXPECT_EQ("", String::Replicate('a', 0)) ;
+        
+    }
+
+    {
+
+        EXPECT_EQ("- - - ", String::Replicate("- ", 3)) ;
+        EXPECT_EQ("", String::Replicate("- ", 0)) ;
+        EXPECT_EQ("", String::Replicate("", 3)) ;
 
     }
 
