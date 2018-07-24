@@ -73,7 +73,12 @@ class String : public std::string
         Size                    getLength                                   ( ) const ;
 
         char                    getFirst                                    ( ) const ;
+
         char                    getLast                                     ( ) const ;
+
+        String                  getHead                                     (   const   Size&                       aLength                                     ) const ;
+
+        String                  getTail                                     (   const   Size&                       aLength                                     ) const ;
 
         String                  getSubstring                                (   const   Index&                      aStartPosition,
                                                                                 const   Size&                       aLength                                     ) const ;
@@ -86,7 +91,15 @@ class String : public std::string
 
         static String           Empty                                       ( ) ;
 
+        static String           Boolean                                     (           bool                        aBoolean                                    ) ;
+
         static String           Char                                        (           char                        aCharacter                                  ) ;
+
+        static String           Replicate                                   (           char                        aCharacter,
+                                                                                        Size                        aCount                                      ) ;
+
+        static String           Replicate                                   (   const   String&                     aString,
+                                                                                        Size                        aCount                                      ) ;
 
         /// @brief              Create formatted string
         ///
@@ -113,7 +126,7 @@ class String : public std::string
 /// @ref                        https://gist.github.com/fenbf/d2cd670704b82e2ce7fd
 
 template <typename T>
-class HasGetString
+class HasToString
 {
 
     private:
@@ -121,7 +134,7 @@ class HasGetString
         typedef char YesType[1] ;
         typedef char NoType[2] ;
 
-        template <typename C> static YesType& test( decltype(&C::getString) ) ;
+        template <typename C> static YesType& test( decltype(&C::toString) ) ;
         template <typename C> static NoType& test(...) ;
 
     public:
@@ -131,10 +144,10 @@ class HasGetString
 } ;
 
 template<typename T> 
-typename std::enable_if<HasGetString<T>::value, std::string>::type
-CallGetString (T * t)
+typename std::enable_if<HasToString<T>::value, std::string>::type
+CallToString (T * t)
 {
-    return t->getString() ;
+    return t->toString() ;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

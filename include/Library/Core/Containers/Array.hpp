@@ -187,12 +187,12 @@ class Array : public std::vector<T>
         ///
         /// @code
         ///                     Array<Integer> array = {1, 2, 3} ;
-        ///                     String string = array.getString() ; // "[1, 2, 3]"
+        ///                     String string = array.toString() ; // "[1, 2, 3]"
         /// @endcode
         ///
         /// @return             String representation of array
 
-        types::String           getString                                   ( ) const ;
+        types::String           toString                                    ( ) const ;
 
         /// @brief              Get array of pointers to element based on condition
         ///
