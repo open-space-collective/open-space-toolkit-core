@@ -60,6 +60,16 @@ RUN pushd /tmp > /dev/null \
  && rm -rf /tmp/fmt \
  && popd > /dev/null
 
+## Rapidcsv [master]
+
+RUN pushd /tmp > /dev/null \
+ && git clone https://github.com/d99kris/rapidcsv.git \
+ && cd rapidcsv \
+ && mkdir -p /usr/local/include/rapidcsv \
+ && cp src/*.h /usr/local/include/rapidcsv/ \
+ && rm -rf /tmp/rapidcsv \
+ && popd > /dev/null
+
 # Labels
 
 ENV version ${version}

@@ -135,12 +135,13 @@ Manually:
 
 The **Core** library internally uses the following dependencies:
 
-| Name        | Version | License                | Link                                                                   |
-|-------------|---------|------------------------|------------------------------------------------------------------------|
-| Boost       | 1.67.0  | Boost Software License | [boost.org](https://www.boost.org)                                     |
-| RapidJSON   | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                  |
-| ordered-map | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
-| {fmt}       | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |
+| Name                | Version | License                | Link                                                                                               |
+|---------------------|---------|------------------------|----------------------------------------------------------------------------------------------------|
+| Boost               | 1.67.0  | Boost Software License | [boost.org](https://www.boost.org)                                                                 |
+| RapidJSON           | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                                              |
+| ordered-map         | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map)                             |
+| {fmt}               | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                                             |
+| Rapidcsv            | master  | BSD-3-Clause           | [/github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)                                |
 
 ## Contribution
 

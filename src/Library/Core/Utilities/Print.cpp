@@ -11,6 +11,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#define LENGTH 100
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 namespace library
 {
 namespace core
@@ -25,8 +29,7 @@ namespace utils
                                 :   stream_(anOutputStream),
                                     indentation_(anIndentation)
 {
-    stream_ << std::left << types::String(indentation_, ' ') << types::String(indentation_, ' ') << types::String(indentation_, ' ') << types::String(indentation_, ' ') ;
-    // stream_ << std::left << types::String(indentation_, '\t') ;
+    stream_ << std::left << types::String::Replicate("    ", indentation_) ;
 }
 
                                 Print::LineBuffer::~LineBuffer              ( )
@@ -39,7 +42,7 @@ namespace utils
 void                            Print::Header                               (           std::ostream&               anOutputStream,
                                                                                 const   types::String&              aName                                       )
 {
-    anOutputStream << "-- " << aName << " " << types::String((aName.getLength() < 60) ? (60 - aName.getLength() - 1) : 0, '-') << std::endl ;
+    anOutputStream << "-- " << aName << " " << types::String::Replicate('-', (aName.getLength() < (LENGTH - 3)) ? ((LENGTH - 3) - aName.getLength() - 1) : 0) << std::endl ;
 }
 
 Print::LineBuffer               Print::Line                                 (           std::ostream&               anOutputStream,
@@ -48,14 +51,24 @@ Print::LineBuffer               Print::Line                                 (   
     return Print::LineBuffer(anOutputStream, anIndentation) ;
 }
 
-void                            Print::Separator                            (           std::ostream&               anOutputStream                              )
+void                            Print::Separator                            (           std::ostream&               anOutputStream,
+                                                                                const   types::String&              aName                                       )
 {
-    anOutputStream << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << std::endl ;
+
+    if (aName.isEmpty())
+    {
+        anOutputStream << types::String::Replicate("- ", LENGTH / 2) << std::endl ;
+    }
+    else
+    {
+        anOutputStream << "    " << aName << " " << types::String::Replicate("- ", (aName.getLength() < (LENGTH - 4)) ? ((LENGTH - 4) - aName.getLength() - 1) / 2 : 0) << std::endl ;
+    }
+
 }
 
 void                            Print::Footer                               (           std::ostream&               anOutputStream                              )
 {
-    anOutputStream << "---------------------------------------------------------------" << std::endl ;
+    anOutputStream << types::String::Replicate('-', LENGTH) << std::endl ;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

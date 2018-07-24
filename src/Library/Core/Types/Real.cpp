@@ -710,7 +710,7 @@ types::Sign                     Real::getSign                               ( ) 
 
 }
 
-types::String                   Real::getString                             ( ) const
+types::String                   Real::toString                              (   const   types::Integer&             aPrecision                                  ) const
 {
 
     switch (type_)
@@ -722,20 +722,41 @@ types::String                   Real::getString                             ( ) 
         case Real::Type::Defined:
         {
 
-            if (this->isInteger())
+            if (!aPrecision.isDefined())
             {
-                return boost::lexical_cast<std::string>(value_) + ".0" ;
-            }
 
+                if (this->isInteger())
+                {
+                    return boost::lexical_cast<std::string>(value_) + ".0" ;
+                }
+
+                // types::String realString = std::to_string(value_) ;
+                types::String realString = boost::lexical_cast<std::string>(value_) ;
+
+                // std::ostringstream stringStream ;
+
+                // stringStream.precision(14) ;
+
+                // stringStream << std::fixed << value_ ;
+
+                // types::String realString = stringStream.str() ;
+
+                realString.erase(realString.find_last_not_of('0') + 1, std::string::npos) ; // Remove trailing zeros if any
+
+                return realString ;
+                
+                // return boost::lexical_cast<std::string>(value_) ;
+                // return std::to_string(value_) ;
+
+            }
+            
             std::ostringstream stringStream ;
 
-            // stringStream << std::fixed << std::setprecision(2) ;
+            stringStream.precision(aPrecision) ;
 
-            stringStream << value_ ;
+            stringStream << std::fixed << value_ ;
 
             return stringStream.str() ;
-
-            // return boost::lexical_cast<std::string>(value_) ;
 
         }
 
@@ -765,10 +786,94 @@ types::Integer                  Real::toInteger                         ( ) cons
 
 }
 
-// ctnr::Object                    Real::getObject                              ( ) const
-// {
+Real                            Real::abs                                   ( ) const
+{
 
-// }
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return Real::Undefined() ;
+
+        case Real::Type::Defined:
+            return Real(Real::Type::Defined, std::abs(value_)) ;
+
+        case Real::Type::PositiveInfinity:
+        case Real::Type::NegativeInfinity:
+            return Real::PositiveInfinity() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return Real::Undefined() ;
+
+}
+
+types::Integer                  Real::floor                                 ( ) const
+{
+
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return types::Integer::Undefined() ;
+
+        case Real::Type::Defined:
+            return types::Integer(static_cast<types::Integer::ValueType>(std::floor(value_))) ;
+
+        case Real::Type::PositiveInfinity:
+        case Real::Type::NegativeInfinity:
+            return types::Integer::Undefined() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return types::Integer::Undefined() ;
+
+}
+
+Real                            Real::sqrt                                  ( ) const
+{
+
+    switch (type_)
+    {
+
+        case Real::Type::Undefined:
+            return Real::Undefined() ;
+
+        case Real::Type::Defined:
+        {
+
+            if (this->isStrictlyNegative())
+            {
+                return Real::Undefined() ;
+            }
+
+            return Real(Real::Type::Defined, std::sqrt(value_)) ;
+
+        } 
+
+        case Real::Type::PositiveInfinity:
+            return Real::PositiveInfinity() ;
+
+        case Real::Type::NegativeInfinity:
+            return Real::Undefined() ;
+
+        default:
+            throw library::core::error::runtime::Undefined("Type") ;
+            break ;
+
+    }
+
+    return Real::Undefined() ;
+
+}
 
 Real                            Real::Undefined                             ( )
 {
@@ -795,6 +900,11 @@ Real                            Real::TwoPi                                 ( )
     return Real(Real::Type::Defined, 2.0 * M_PI) ;
 }
 
+Real                            Real::Epsilon                               ( )
+{
+    return Real(Real::Type::Defined, 1e-15) ;
+}
+
 Real                            Real::PositiveInfinity                      ( )
 {
     return Real(Real::Type::PositiveInfinity, std::numeric_limits<Real::ValueType>::max()) ;
@@ -817,10 +927,45 @@ Real                            Real::Integer                               (   
 
 }
 
+Real                            Real::CanParse                              (   const   types::String&              aString                                     )
+{
+
+    if (aString.isEmpty())
+    {
+        return false ;
+    }
+
+    if ((aString == "Undefined") || (aString == "NaN") || (aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
+    {
+        return true ;
+    }
+
+    try
+    {
+        
+        const Real::ValueType value = boost::lexical_cast<Real::ValueType>(aString) ;
+
+        return value == value ;
+
+    }
+    catch (const boost::bad_lexical_cast&)
+    {
+        return false ;
+    }
+
+    return true ;
+
+}
+
 Real                            Real::Parse                                 (   const   types::String&              aString                                     )
 {
 
-    if (aString.isEmpty() || (aString == "Undefined"))
+    if (aString.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("String") ;
+    }
+
+    if ((aString == "Undefined") || (aString == "NaN"))
     {
         return Real::Undefined() ;
     }
@@ -837,7 +982,16 @@ Real                            Real::Parse                                 (   
 
     try
     {
-        return Real(boost::lexical_cast<Real::ValueType>(aString)) ;
+
+        const Real::ValueType value = boost::lexical_cast<Real::ValueType>(aString) ;
+
+        if (value != value)
+        {
+            throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
+        }
+        
+        return Real(value) ;
+
     }
     catch (const boost::bad_lexical_cast&)
     {

@@ -64,6 +64,11 @@ class Real
         Real                    operator *                                  (   const   Real::ValueType&            aReal                                       ) const ;
         Real                    operator /                                  (   const   Real::ValueType&            aReal                                       ) const ;
 
+        Real                    operator +                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator -                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator *                                  (   const   Integer&                    anInteger                                   ) const ;
+        Real                    operator /                                  (   const   Integer&                    anInteger                                   ) const ;
+
         Real&                   operator +=                                 (   const   Real&                       aReal                                       ) ;
         Real&                   operator -=                                 (   const   Real&                       aReal                                       ) ;
         Real&                   operator *=                                 (   const   Real&                       aReal                                       ) ;
@@ -106,9 +111,15 @@ class Real
 
         types::Sign             getSign                                     ( ) const ;
 
-        types::String           getString                                   ( ) const ;
+        types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   types::Integer::Undefined() ) const ;
 
         types::Integer          toInteger                                   ( ) const ;
+
+        Real                    abs                                         ( ) const ;
+
+        types::Integer          floor                                       ( ) const ;
+
+        Real                    sqrt                                        ( ) const ;
 
         static Real             Undefined                                   ( ) ;
 
@@ -120,11 +131,15 @@ class Real
 
         static Real             TwoPi                                       ( ) ;
 
+        static Real             Epsilon                                     ( ) ;
+
         static Real             PositiveInfinity                            ( ) ;
 
         static Real             NegativeInfinity                            ( ) ;
 
         static Real             Integer                                     (   const   types::Integer&             anInteger                                   ) ;
+
+        static Real             CanParse                                    (   const   types::String&              aString                                     ) ;
 
         static Real             Parse                                       (   const   types::String&              aString                                     ) ;
 
