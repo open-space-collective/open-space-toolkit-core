@@ -111,20 +111,20 @@ String                          File::getName                               (   
     }
 
     try
-	{
+    {
 
-		if (!withExtension)
+        if (!withExtension)
         {
             return boost::filesystem::path(path_.toString()).stem().string() ;
         }
 
         return boost::filesystem::path(path_.toString()).filename().string() ;
 
-	}
-	catch (const boost::filesystem::filesystem_error& e)
-	{
-		throw library::core::error::RuntimeError(e.what()) ;
-	}
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
 
     return String::Empty() ;
 
@@ -139,22 +139,22 @@ String                          File::getExtension                          ( ) 
     }
 
     try
-	{
+    {
 
-		const String fullExtension = boost::filesystem::path(path_.toString()).extension().string() ;
+        const String fullExtension = boost::filesystem::path(path_.toString()).extension().string() ;
 
-		if (fullExtension.getLength() > 1)
-		{
-			return fullExtension.getTail(fullExtension.getLength() - 1) ;
-		}
+        if (fullExtension.getLength() > 1)
+        {
+            return fullExtension.getTail(fullExtension.getLength() - 1) ;
+        }
 
         return fullExtension ;
 
-	}
-	catch (const boost::filesystem::filesystem_error& e)
-	{
-		throw library::core::error::RuntimeError(e.what()) ;
-	}
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
 
     return String::Empty() ;
 
@@ -181,6 +181,47 @@ fs::Path                        File::getPath                               ( ) 
 // {
 
 // }
+
+String                          File::getContents                           ( ) const
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("File") ;
+    }
+
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    std::fstream fileStream(path_.toString(), std::fstream::in) ;
+
+    if (!fileStream.is_open())
+    {
+        throw library::core::error::RuntimeError("Cannot open file [{}].", this->toString()) ;
+    }
+
+    String contents ;
+
+    try
+    {
+        contents = String(std::istreambuf_iterator<char>(fileStream), std::istreambuf_iterator<char>()) ;
+    }
+    catch (const std::exception& e)
+    {
+
+        fileStream.close() ;
+
+        throw library::core::error::RuntimeError("Cannot get contents of file [{}].", this->toString()) ;
+    
+    }
+
+    fileStream.close() ;
+
+    return contents ;
+
+}
 
 String                          File::toString                              ( ) const
 {

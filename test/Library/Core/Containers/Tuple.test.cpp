@@ -24,7 +24,7 @@ TEST (Library_Core_Containers_Tuple, Constructor)
     
     {
 
-        Tuple<Integer, String, Integer, String> pair = {123, "abc", 456, "def"} ;
+        const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
 
     }
 
@@ -39,12 +39,12 @@ TEST (Library_Core_Containers_Tuple, Getters)
     
     {
 
-        Tuple<Integer, String, Integer, String> pair = {123, "abc", 456, "def"} ;
+        const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
 
-        EXPECT_EQ(123, std::get<0>(pair)) ;
-        EXPECT_EQ("abc", std::get<1>(pair)) ;
-        EXPECT_EQ(456, std::get<2>(pair)) ;
-        EXPECT_EQ("def", std::get<3>(pair)) ;
+        EXPECT_EQ(123, std::get<0>(tuple)) ;
+        EXPECT_EQ("abc", std::get<1>(tuple)) ;
+        EXPECT_EQ(456, std::get<2>(tuple)) ;
+        EXPECT_EQ("def", std::get<3>(tuple)) ;
 
     }
 
@@ -73,6 +73,34 @@ TEST (Library_Core_Containers_Tuple, Setters)
         EXPECT_EQ("abc", std::get<1>(tuple)) ;
         EXPECT_EQ(789, std::get<2>(tuple)) ;
         EXPECT_EQ("ghi", std::get<3>(tuple)) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Tuple, Unpack)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::String ;
+    using library::core::ctnr::Tuple ;
+    using library::core::ctnr::Unpack ;
+    
+    {
+
+        const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
+
+        Integer firstInteger = Integer::Undefined() ;
+        Integer secondInteger = Integer::Undefined() ;
+        String firstString = String::Empty() ;
+        String secondString = String::Empty() ;
+
+        Unpack(firstInteger, firstString, secondInteger, secondString) = tuple ;
+
+        EXPECT_EQ(123, firstInteger) ;
+        EXPECT_EQ(456, secondInteger) ;
+        EXPECT_EQ("abc", firstString) ;
+        EXPECT_EQ("def", secondString) ;
 
     }
 

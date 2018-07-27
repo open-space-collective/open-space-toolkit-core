@@ -10,9 +10,10 @@
 #ifndef __Library_Core_Containers_Pair__
 #define __Library_Core_Containers_Pair__
 
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Containers/Tuple.hpp>
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Types/Index.hpp>
 
 #include <utility>
 #include <ostream>

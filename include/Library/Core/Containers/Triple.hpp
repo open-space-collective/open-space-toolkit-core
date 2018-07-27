@@ -10,10 +10,10 @@
 #ifndef __Library_Core_Containers_Triple__
 #define __Library_Core_Containers_Triple__
 
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Containers/Tuple.hpp>
 #include <Library/Core/Types/String.hpp>
-#include <Library/Core/Containers/Object.hpp>
+#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Types/Index.hpp>
 
 #include <utility>
 #include <ostream>
@@ -32,8 +32,6 @@ namespace ctnr
 using library::core::types::Index ;
 using library::core::types::Size ;
 using library::core::types::String ;
-
-using library::core::ctnr::Object ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
