@@ -11,6 +11,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (Real_toString_overloads, library::core::types::Real::toString, 0, 1)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 inline void 					LibraryCorePy_Types_Real					( )
 {
 
@@ -70,7 +74,8 @@ inline void 					LibraryCorePy_Types_Real					( )
 		.def("isFinite", &Real::isFinite)
 
 		.def("getSign", &Real::getSign)
-		.def("toString", &Real::toString)
+		// .def("toString", Real_toString_overloads(args("aPrecision"), "Convert Real to String."))
+		// .def("toString", Real_toString_overloads())
 		.def("toInteger", &Real::toInteger)
 		.def("abs", &Real::abs)
 		.def("floor", &Real::floor)

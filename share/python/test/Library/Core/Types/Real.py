@@ -1,55 +1,24 @@
+# coding=utf-8
+
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           .gitignore
+# @file           Library/Core/LibraryCorePy/Types/Real.test.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-# Operating Systems
+from LibraryCorePy import Types
 
-## Mac OS
+assert Types.Real(0.0) == 0.0
+assert Types.Real(123.456) == 123.456
+assert Types.Real(+123.456) == +123.456
+assert Types.Real(-123.456) == -123.456
 
-**/.DS_Store
-
-# Editors
-
-## Visual Studio Code
-
-.vscode/
-*.code-workspace
-
-## Sublime Text
-
-*.sublime-workspace
-*.sublime-project
-
-# Project
-
-## Common
-
-!.gitignore
-!.gitkeep
-
-## Binaries
-
-bin/*
-lib/*
-build/
-*.so*
-*.a
-*.exe*
-*.rpm*
-
-## Documentation
-
-docs/html/
-docs/latex/
-
-## Misc.
-
-tmp/
-__pycache__
+assert Types.Real(0.0).toString() == "0.0"
+assert Types.Real(123.456).toString() == "123.456"
+assert Types.Real(+123.456).toString() == "123.456"
+assert Types.Real(-123.456).toString() == "-123.456"
 
 ################################################################################################################################################################
