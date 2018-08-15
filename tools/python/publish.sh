@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/scripts/version.sh
+# @file           tools/python/publish.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -11,10 +11,17 @@
 
 script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Setup environment
+# Package
 
-source "${script_directory}/../.env"
+pushd ${script_directory} >> /dev/null
 
-echo "Version: ${version}"
+source ../.env
+
+python3 -m pip install twine
+
+# twine upload -r pypitest dist/*
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+popd >> /dev/null
 
 ################################################################################################################################################################

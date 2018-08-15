@@ -35,7 +35,6 @@ docker run \
 --rm \
 --privileged \
 --volume="${project_directory}:/app:rw" \
---volume="/app/build" \
 --volume="${script_directory}/helpers/build.sh:/app/build/build.sh:ro" \
 --volume="${script_directory}/helpers/test.sh:/app/build/test.sh:ro" \
 --volume="${script_directory}/helpers/debug.sh:/app/build/debug.sh:ro" \

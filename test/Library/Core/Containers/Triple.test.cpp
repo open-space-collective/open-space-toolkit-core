@@ -24,7 +24,7 @@ TEST (Library_Core_Containers_Triple, Constructor)
     
     {
 
-        Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
+        const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
 
     }
 
@@ -39,7 +39,7 @@ TEST (Library_Core_Containers_Triple, Getters)
     
     {
 
-        Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
+        const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
 
         EXPECT_EQ(true, triple.first) ;
         EXPECT_EQ(123, triple.second) ;
@@ -75,5 +75,31 @@ TEST (Library_Core_Containers_Triple, Setters)
     }
 
 }
+
+// TEST (Library_Core_Containers_Triple, Unpack)
+// {
+
+//     using library::core::types::Integer ;
+//     using library::core::types::String ;
+//     using library::core::ctnr::Triple ;
+//     using library::core::ctnr::Unpack ;
+    
+//     {
+
+//         const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
+
+//         bool boolean = false ;
+//         Integer integer = Integer::Undefined() ;
+//         String string = String::Empty() ;
+
+//         Unpack(boolean, integer, string) = triple ;
+
+//         EXPECT_EQ(true, boolean) ;
+//         EXPECT_EQ(123, integer) ;
+//         EXPECT_EQ("abc", string) ;
+
+//     }
+
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -7,13 +7,12 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:latest
+FROM openspacecollective/library-base:0.1.2
 
 LABEL maintainer="lucas@loftorbital.com"
 
 # Arguments
 
-ARG version
 ARG cpu_count=1
 
 # Environment
@@ -43,7 +42,7 @@ RUN pushd /tmp > /dev/null \
 RUN pushd /tmp > /dev/null \
  && git clone https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
- && cp -r ./tsl /usr/local/include \
+ && cp -r ./include/tsl /usr/local/include \
  && rm -rf /tmp/ordered-map \
  && popd > /dev/null
 
@@ -71,6 +70,8 @@ RUN pushd /tmp > /dev/null \
  && popd > /dev/null
 
 # Labels
+
+ARG version
 
 ENV version ${version}
 

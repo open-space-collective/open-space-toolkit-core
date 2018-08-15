@@ -53,15 +53,18 @@ SET (Boost_USE_MULTITHREADED ON)
 UNSET (Boost_INCLUDE_DIR CACHE)
 UNSET (Boost_LIBRARY_DIRS CACHE)
 
-FIND_PACKAGE ("Boost" "1.67" COMPONENTS "python27" REQUIRED)
+FIND_PACKAGE ("Boost" "1.67" COMPONENTS "python36" REQUIRED)
 
 INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS})
 LINK_DIRECTORIES (${Boost_LIBRARY_DIRS})
 
 ### Python
 
-SET (PYTHON_INCLUDE_DIR "/usr/include/python2.7")
-SET (PYTHON_LIBRARIES "/usr/lib64/libpython2.7.so")
+# SET (PYTHON_INCLUDE_DIR "/usr/include/python2.7")
+# SET (PYTHON_LIBRARIES "/usr/lib64/libpython2.7.so")
+
+SET (PYTHON_INCLUDE_DIR "/usr/include/python3.6m")
+SET (PYTHON_LIBRARIES "/usr/lib64/libpython3.6m.so")
 
 ################################################################################################################################################################
 
@@ -86,10 +89,56 @@ TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${PYTHON_LIBRARIES})
 TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${Boost_LIBRARIES})
 TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${SHARED_LIBRARY_TARGET})
 
-SET_TARGET_PROPERTIES (${LIBRARY_TARGET} PROPERTIES VERSION ${PROJECT_VERSION_STRING} SOVERSION ${PROJECT_VERSION_MAJOR} OUTPUT_NAME ${PROJECT_PACKAGE_NAME} CLEAN_DIRECT_OUTPUT 1 PREFIX "")
+SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES
+                        VERSION ${PROJECT_VERSION_STRING}
+                        SOVERSION ${PROJECT_VERSION_MAJOR}
+                        OUTPUT_NAME ${PROJECT_PACKAGE_NAME}
+                        CLEAN_DIRECT_OUTPUT 1
+                        PREFIX ""
+                        BUILD_WITH_INSTALL_RPATH TRUE
+                        INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
 INSTALL (TARGETS ${LIBRARY_TARGET} DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/__init__.py" DESTINATION "${INSTALL_LIB}/Library" COMPONENT "python")
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/Core/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
+
+################################################################################################################################################################
+
+FIND_PROGRAM (PYTHON "python3")
+
+IF (NOT PYTHON)
+
+    MESSAGE (FATAL_ERROR "Unable to find [python3] program.")
+
+ENDIF (NOT PYTHON)
+
+SET (PACKAGE_NAME ${PROJECT_PACKAGE_NAME})
+SET (PACKAGE_TARGET "${PACKAGE_NAME}-python-package")
+
+SET (SETUP_PY_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.py.in")
+SET (SETUP_PY "${CMAKE_CURRENT_BINARY_DIR}/setup.py")
+SET (DEPS "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/__init__.py")
+SET (OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build/timestamp")
+
+CONFIGURE_FILE (${SETUP_PY_IN} ${SETUP_PY})
+
+ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
+                    COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/__init__.py"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/liblibrary-core.so.0"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/LibraryCorePy.so"
+                    COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
+                    COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
+                    DEPENDS ${DEPS})
+
+ADD_CUSTOM_TARGET (${PACKAGE_TARGET} ALL DEPENDS ${OUTPUT})
+
+ADD_DEPENDENCIES (${PACKAGE_TARGET} ${LIBRARY_TARGET})
+
+INSTALL (CODE "execute_process(COMMAND ${PYTHON} ${SETUP_PY} install)")
+
+################################################################################################################################################################
+
+ADD_CUSTOM_TARGET ("publish" COMMAND twine upload --repository-url https://test.pypi.org/legacy/ "${CMAKE_CURRENT_BINARY_DIR}/dist/*" DEPENDS ${OUTPUT})
 
 ################################################################################################################################################################

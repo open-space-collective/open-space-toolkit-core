@@ -309,7 +309,7 @@ class Directory
 
     private:
 
-        // [TBI]
+        fs::Path                path_ ;
 
 } ;
 
