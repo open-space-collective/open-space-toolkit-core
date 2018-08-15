@@ -1,1 +1,1 @@
-from LibraryCorePy import *
+from .LibraryCorePy import *

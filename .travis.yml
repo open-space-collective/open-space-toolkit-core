@@ -80,7 +80,7 @@ jobs:
 
                 - ./tools/ci/documentation.sh
 
-                # Generate and deploy binaries
+                # Generate binaries
 
                 - ./tools/ci/binaries.sh
 
@@ -94,8 +94,9 @@ jobs:
                 api_key: ${GITHUB_API_KEY}
                 file_glob: true
                 file:
-                    - ./bin/*
-                    - ./lib/*
+                    # - ./bin/*
+                    # - ./lib/*
+                    - ./build/*.rpm
                 skip_cleanup: true
                 on:
                     branch: master

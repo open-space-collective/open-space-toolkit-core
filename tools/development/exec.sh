@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           tools/scripts/version.sh
+# @file           tools/development/exec.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
@@ -15,6 +15,11 @@ script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${script_directory}/../.env"
 
-echo "Version: ${version}"
+# Exec Docker container
+
+docker exec \
+-it \
+${container_name} \
+/bin/bash
 
 ################################################################################################################################################################
