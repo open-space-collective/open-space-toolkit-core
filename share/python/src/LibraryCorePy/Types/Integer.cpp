@@ -54,8 +54,8 @@ inline void 					LibraryCorePy_Types_Integer					( )
 		.def(int() * self)
 		.def(int() / self)
 
-		.def("__str__", +[] (const library::core::types::Integer& anInteger) -> String { return anInteger.toString() ; })
-		.def("__repr__", +[] (const library::core::types::Integer& anInteger) -> String { return anInteger.toString() ; })
+		.def("__str__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
+		.def("__repr__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
 
 		.def("isDefined", &Integer::isDefined)
 		.def("isZero", &Integer::isZero)
