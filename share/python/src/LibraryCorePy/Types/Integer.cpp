@@ -54,8 +54,8 @@ inline void 					LibraryCorePy_Types_Integer					( )
 		.def(int() * self)
 		.def(int() / self)
 
-		.def("__str__", +[] (const library::core::types::Integer& anInteger) -> String { return anInteger.toString() ; })
-		.def("__repr__", +[] (const library::core::types::Integer& anInteger) -> String { return anInteger.toString() ; })
+		.def("__str__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
+		.def("__repr__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
 
 		.def("isDefined", &Integer::isDefined)
 		.def("isZero", &Integer::isZero)
@@ -87,9 +87,7 @@ inline void 					LibraryCorePy_Types_Integer					( )
 		.def("Uint64", &Integer::Uint64).staticmethod("Uint64")
 		.def("Index", &Integer::Index).staticmethod("Index")
 		.def("Size", &Integer::Size).staticmethod("Size")
-		.def("CanParse", static_cast<bool(*)(char)>(&Integer::CanParse)).staticmethod("CanParse")
 		.def("CanParse", static_cast<bool(*)(const String&)>(&Integer::CanParse)).staticmethod("CanParse")
-		.def("Parse", static_cast<Integer(*)(char)>(&Integer::Parse)).staticmethod("Parse")
 		.def("Parse", static_cast<Integer(*)(const String&)>(&Integer::Parse)).staticmethod("Parse")
 
 		;

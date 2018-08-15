@@ -27,16 +27,16 @@ inline void 					LibraryCorePy_Types_String					( )
 		.def(self == self)
 		.def(self != self)
 
-		// .def(self + self)
-		// .def(self += self)
+		.def(self + self)
+		.def(self += self)
 
 		// .def(self + str())
 		// .def(self += string())
 
 		// .def(string() + self)
 
-		// .def("__str__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
-		// .def("__repr__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
+		.def("__str__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
+		.def("__repr__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
 
 		.def("isEmpty", &String::isEmpty)
         .def("isUppercase", &String::isUppercase)
@@ -48,7 +48,7 @@ inline void 					LibraryCorePy_Types_String					( )
 		.def("getLast", &String::getLast)
 		.def("getHead", &String::getHead)
 		.def("getTail", &String::getTail)
-		// .def("getSubstring", &String::getSubstring)
+		.def("getSubstring", &String::getSubstring)
 		// .def("trim", &String::trim)
 
 		// .def("Empty", &String::Empty).staticmethod("Empty")
