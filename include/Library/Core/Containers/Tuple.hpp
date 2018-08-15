@@ -10,10 +10,9 @@
 #ifndef __Library_Core_Containers_Tuple__
 #define __Library_Core_Containers_Tuple__
 
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
 #include <Library/Core/Types/String.hpp>
-#include <Library/Core/Containers/Object.hpp>
+#include <Library/Core/Types/Size.hpp>
+#include <Library/Core/Types/Index.hpp>
 
 #include <tuple>
 #include <ostream>
@@ -33,13 +32,16 @@ using library::core::types::Index ;
 using library::core::types::Size ;
 using library::core::types::String ;
 
-using library::core::ctnr::Object ;
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @brief                      Tuple container
 
 template <typename... Args> using Tuple = std::tuple<Args...> ;
+
+template <typename... Args> auto Unpack (Args&... args)
+{
+    return std::tuple<Args&...>(args...) ;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

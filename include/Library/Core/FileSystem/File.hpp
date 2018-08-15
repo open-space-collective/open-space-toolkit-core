@@ -170,6 +170,8 @@ class File
 
         fs::Directory           getParentDirectory                          ( ) const ;
 
+        String                  getContents                                 ( ) const ;
+
         /// @brief              Get serialized file
         ///
         /// @code

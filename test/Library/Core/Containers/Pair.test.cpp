@@ -24,7 +24,7 @@ TEST (Library_Core_Containers_Pair, Constructor)
     
     {
 
-        Pair<Integer, String> pair = {123, "abc"} ;
+        const Pair<Integer, String> pair = {123, "abc"} ;
 
     }
 
@@ -39,7 +39,7 @@ TEST (Library_Core_Containers_Pair, Getters)
     
     {
 
-        Pair<Integer, String> pair = {123, "abc"} ;
+        const Pair<Integer, String> pair = {123, "abc"} ;
 
         EXPECT_EQ(123, pair.first) ;
         EXPECT_EQ("abc", pair.second) ;
@@ -67,6 +67,30 @@ TEST (Library_Core_Containers_Pair, Setters)
 
         EXPECT_EQ(456, pair.first) ;
         EXPECT_EQ("def", pair.second) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Pair, Unpack)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::String ;
+    using library::core::ctnr::Pair ;
+    using library::core::ctnr::Unpack ;
+    
+    {
+
+        const Pair<Integer, String> pair = {123, "abc"} ;
+
+        Integer integer = Integer::Undefined() ;
+        String string = String::Empty() ;
+
+        Unpack(integer, string) = pair ;
+
+        EXPECT_EQ(123, integer) ;
+        EXPECT_EQ("abc", string) ;
 
     }
 
