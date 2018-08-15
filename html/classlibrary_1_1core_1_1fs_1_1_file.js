@@ -5,6 +5,7 @@ var classlibrary_1_1core_1_1fs_1_1_file =
     [ "copyToDirectory", "classlibrary_1_1core_1_1fs_1_1_file.html#a9fd8a0cca72e2414f071d6045c0a1a0d", null ],
     [ "create", "classlibrary_1_1core_1_1fs_1_1_file.html#aa83b1f11be8c9106e780266dc097d03c", null ],
     [ "exists", "classlibrary_1_1core_1_1fs_1_1_file.html#a61851886b6bf66cd0f179b6c7bd7f972", null ],
+    [ "getContents", "classlibrary_1_1core_1_1fs_1_1_file.html#a0a48a4d886d255e53e35511f1519e7fa", null ],
     [ "getExtension", "classlibrary_1_1core_1_1fs_1_1_file.html#acfb85ab6934afc65ecf53a1a08775f84", null ],
     [ "getName", "classlibrary_1_1core_1_1fs_1_1_file.html#ac8ecef1fd249eaf2ab6d7141131c0424", null ],
     [ "getParentDirectory", "classlibrary_1_1core_1_1fs_1_1_file.html#a8eb74097f9bdc9d3c626fe4924bf405e", null ],

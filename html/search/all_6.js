@@ -6,6 +6,7 @@ var searchData=
   ['getboolean',['getBoolean',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a57a984b26f914c33155c79f88e01b934',1,'library::core::ctnr::Object']]],
   ['getchannel',['getChannel',['../classlibrary_1_1core_1_1_logger.html#a61b860f2a6b4c54accdb04d7b15e3653',1,'library::core::Logger']]],
   ['getcolumncount',['getColumnCount',['../classlibrary_1_1core_1_1ctnr_1_1_table.html#af725ea46d4737e1c3d0d8ad5a4dda733',1,'library::core::ctnr::Table']]],
+  ['getcontents',['getContents',['../classlibrary_1_1core_1_1fs_1_1_file.html#a0a48a4d886d255e53e35511f1519e7fa',1,'library::core::fs::File']]],
   ['getdictionary',['getDictionary',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#ac2993dfa7b33ac3216f233f796b3ae3a',1,'library::core::ctnr::Object']]],
   ['getdirectories',['getDirectories',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a31ef325dea750ce2d7ecca49258c2a9a',1,'library::core::fs::Directory']]],
   ['getegid',['getEGID',['../classlibrary_1_1core_1_1system_1_1_group.html#ab9677f28eb1f6653ad9c5776d1f00c3f',1,'library::core::system::Group']]],

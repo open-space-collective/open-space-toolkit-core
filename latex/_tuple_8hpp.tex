@@ -1,9 +1,8 @@
 \hypertarget{_tuple_8hpp}{}\section{include/\+Library/\+Core/\+Containers/\+Tuple.hpp File Reference}
 \label{_tuple_8hpp}\index{include/\+Library/\+Core/\+Containers/\+Tuple.\+hpp@{include/\+Library/\+Core/\+Containers/\+Tuple.\+hpp}}
-{\ttfamily \#include $<$Library/\+Core/\+Types/\+Index.\+hpp$>$}\newline
-{\ttfamily \#include $<$Library/\+Core/\+Types/\+Size.\+hpp$>$}\newline
 {\ttfamily \#include $<$Library/\+Core/\+Types/\+String.\+hpp$>$}\newline
-{\ttfamily \#include $<$Library/\+Core/\+Containers/\+Object.\+hpp$>$}\newline
+{\ttfamily \#include $<$Library/\+Core/\+Types/\+Size.\+hpp$>$}\newline
+{\ttfamily \#include $<$Library/\+Core/\+Types/\+Index.\+hpp$>$}\newline
 {\ttfamily \#include $<$tuple$>$}\newline
 {\ttfamily \#include $<$ostream$>$}\newline
 \subsection*{Namespaces}
@@ -20,6 +19,11 @@
 \item 
 {\footnotesize template$<$typename... Args$>$ }\\using \hyperlink{namespacelibrary_1_1core_1_1ctnr_a551ef72e2adb570c4d6bdf5e1bbc96b9}{library\+::core\+::ctnr\+::\+Tuple} = std\+::tuple$<$ Args... $>$
 \begin{DoxyCompactList}\small\item\em Tuple container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \hyperlink{namespacelibrary_1_1core_1_1ctnr_aa83e692c1420d325c7602ae7b21d626d}{library\+::core\+::ctnr\+::\+Unpack} (Args \&... args)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

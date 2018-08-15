@@ -10,6 +10,7 @@ var searchData=
   ['undefined_2ehpp',['Undefined.hpp',['../_undefined_8hpp.html',1,'']]],
   ['unique',['Unique',['../namespacelibrary_1_1core_1_1types.html#ac12d38691838fbc9a36765ee62ace52a',1,'library::core::types']]],
   ['unique_2ehpp',['Unique.hpp',['../_unique_8hpp.html',1,'']]],
+  ['unpack',['Unpack',['../namespacelibrary_1_1core_1_1ctnr.html#aa83e692c1420d325c7602ae7b21d626d',1,'library::core::ctnr']]],
   ['user',['User',['../classlibrary_1_1core_1_1system_1_1_user.html',1,'library::core::system::User'],['../classlibrary_1_1core_1_1system_1_1_user.html#af7960468619027fc5a9a19590583c969',1,'library::core::system::User::User(const uint &amp;aUID, const String &amp;aName)'],['../classlibrary_1_1core_1_1system_1_1_user.html#a399449d4a49ca4ce9c060e17b0783fc8',1,'library::core::system::User::User(const uint &amp;aUID, const uint &amp;aEUID, const String &amp;aName)']]],
   ['user_2ehpp',['User.hpp',['../_user_8hpp.html',1,'']]],
   ['utilities_2ehpp',['Utilities.hpp',['../_utilities_8hpp.html',1,'']]]

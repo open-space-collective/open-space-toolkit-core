@@ -44,6 +44,8 @@ struct \hyperlink{structlibrary_1_1core_1_1ctnr_1_1_triple}{Triple}
 \item 
 {\footnotesize template$<$typename T , typename U , typename V $>$ }\\\hyperlink{structlibrary_1_1core_1_1ctnr_1_1_triple}{Triple}$<$ T, U, V $>$ \hyperlink{namespacelibrary_1_1core_1_1ctnr_a96a0b941c0de59772cb5e073d0c2b8a8}{make\+\_\+triple} (const T \&a\+First\+Element, const U \&a\+Second\+Element, const V \&a\+Third\+Element)
 \item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \hyperlink{namespacelibrary_1_1core_1_1ctnr_aa83e692c1420d325c7602ae7b21d626d}{Unpack} (Args \&... args)
+\item 
 std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1ctnr_a5089e336819bf6e43bdb9ea9c8c01fcf}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_dictionary}{Dictionary} \&a\+Dictionary)
 \item 
 std\+::ostream \& \hyperlink{namespacelibrary_1_1core_1_1ctnr_a20ee48a4a564834bae30af868b549043}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_object}{Object} \&an\+Object)
@@ -173,4 +175,11 @@ An output stream
 \index{operator$<$$<$@{operator$<$$<$}!library\+::core\+::ctnr@{library\+::core\+::ctnr}}
 \subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily std\+::ostream\& library\+::core\+::ctnr\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_object}{Object} \&}]{an\+Object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelibrary_1_1core_1_1ctnr_aa83e692c1420d325c7602ae7b21d626d}\label{namespacelibrary_1_1core_1_1ctnr_aa83e692c1420d325c7602ae7b21d626d}} 
+\index{library\+::core\+::ctnr@{library\+::core\+::ctnr}!Unpack@{Unpack}}
+\index{Unpack@{Unpack}!library\+::core\+::ctnr@{library\+::core\+::ctnr}}
+\subsubsection{\texorpdfstring{Unpack()}{Unpack()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto library\+::core\+::ctnr\+::\+Unpack (\begin{DoxyParamCaption}\item[{Args \&...}]{args }\end{DoxyParamCaption})}
 
