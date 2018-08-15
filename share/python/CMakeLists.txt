@@ -135,7 +135,7 @@ ADD_CUSTOM_TARGET (${PACKAGE_TARGET} ALL DEPENDS ${OUTPUT})
 
 ADD_DEPENDENCIES (${PACKAGE_TARGET} ${LIBRARY_TARGET})
 
-INSTALL (CODE "execute_process(COMMAND ${PYTHON} ${SETUP_PY} install)")
+# INSTALL (CODE "execute_process(COMMAND ${PYTHON} ${SETUP_PY} install)")
 
 ################################################################################################################################################################
 
