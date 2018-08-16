@@ -20,5 +20,5 @@ setuptools.setup(
     ),
     keywords="open-space-collective core",
     packages=setuptools.find_packages(),
-    package_data={'': ['/app/lib/LibraryCorePy.so', '/app/lib/liblibrary-core.so.0']}
+    package_data={"": ["${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/LibraryCorePy.so", "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/liblibrary-core.so.0"]}
 )
