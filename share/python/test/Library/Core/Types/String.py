@@ -1,55 +1,16 @@
+# coding=utf-8
+
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           .gitignore
+# @file           Library/Core/LibraryCorePy/Types/String.test.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-# Operating Systems
+from LibraryCorePy import Types
 
-## Mac OS
 
-**/.DS_Store
-
-# Editors
-
-## Visual Studio Code
-
-.vscode/
-*.code-workspace
-
-## Sublime Text
-
-*.sublime-workspace
-*.sublime-project
-
-# Project
-
-## Common
-
-!.gitignore
-!.gitkeep
-
-## Binaries
-
-bin/*
-lib/*
-build/
-*.so*
-*.a
-*.exe*
-*.rpm*
-
-## Documentation
-
-docs/html/
-docs/latex/
-
-## Misc.
-
-tmp/
-__pycache__
 
 ################################################################################################################################################################

@@ -7,20 +7,13 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.2
+FROM openspacecollective/library-base:0.1.3
 
 LABEL maintainer="lucas@loftorbital.com"
 
 # Arguments
 
 ARG cpu_count=1
-
-# Environment
-
-ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
-
-RUN alias ls='ls --color=auto' \
-    && alias ll='ls -halF'
 
 # Dependencies
 
