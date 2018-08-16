@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library/Core
-/// @file           Library/Core/LibraryCorePy/Types.hpp
+/// @file           LibraryCorePy/Types.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        TBD
 
@@ -11,22 +11,20 @@
 #include <LibraryCorePy/Types/Real.cpp>
 #include <LibraryCorePy/Types/Integer.cpp>
 
-#include <Library/Core/Types.hpp>
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void						LibraryCorePy_Types							( )
+inline void                     LibraryCorePy_Types                         ( )
 {
-	
-	boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.Types")))) ;
-	
-	boost::python::scope().attr("Types") = module ;
-	
-	boost::python::scope scope = module ;
-	
-	LibraryCorePy_Types_Integer() ;
-	LibraryCorePy_Types_Real() ;
-	LibraryCorePy_Types_String() ;
+    
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.Types")))) ;
+    
+    boost::python::scope().attr("Types") = module ;
+    
+    boost::python::scope scope = module ;
+    
+    LibraryCorePy_Types_Integer() ;
+    LibraryCorePy_Types_Real() ;
+    LibraryCorePy_Types_String() ;
 
 }
 
