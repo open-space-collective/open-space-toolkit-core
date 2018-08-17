@@ -99,7 +99,7 @@ SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES
                         INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
 INSTALL (TARGETS ${LIBRARY_TARGET} DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
-# INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/__init__.py" DESTINATION "${INSTALL_LIB}/Library" COMPONENT "python")
+INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/__init__.py" DESTINATION "${INSTALL_LIB}/Library" COMPONENT "python")
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/Core/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
 
 ################################################################################################################################################################
