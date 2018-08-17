@@ -99,7 +99,7 @@ SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES
                         INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
 INSTALL (TARGETS ${LIBRARY_TARGET} DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
-INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/__init__.py" DESTINATION "${INSTALL_LIB}/Library" COMPONENT "python")
+# INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/__init__.py" DESTINATION "${INSTALL_LIB}/Library" COMPONENT "python")
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/Core/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
 
 ################################################################################################################################################################
@@ -117,16 +117,17 @@ SET (PACKAGE_TARGET "${PACKAGE_NAME}-python-package")
 
 SET (SETUP_PY_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.py.in")
 SET (SETUP_PY "${CMAKE_CURRENT_BINARY_DIR}/setup.py")
-SET (DEPS "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/__init__.py")
+SET (DEPS "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py")
 SET (OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build/timestamp")
 
 CONFIGURE_FILE (${SETUP_PY_IN} ${SETUP_PY})
 
 ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
-                    COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}"
-                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/__init__.py"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/liblibrary-core.so.0"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${LIBRARY_NAME}/LibraryCorePy.so"
+                    COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/Library/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/Library/__init__.py"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                     DEPENDS ${DEPS})
