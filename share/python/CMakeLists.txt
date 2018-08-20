@@ -47,7 +47,7 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
 ### Boost [1.67.0]
 
-SET (Boost_USE_STATIC_LIBS ON)
+SET (Boost_USE_STATIC_LIBS OFF)
 SET (Boost_USE_MULTITHREADED ON)
 
 UNSET (Boost_INCLUDE_DIR CACHE)
@@ -126,6 +126,7 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/Library/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/Library/__init__.py"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
+                    COMMAND cp "/usr/local/lib/libboost_python36.so.1.68.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
