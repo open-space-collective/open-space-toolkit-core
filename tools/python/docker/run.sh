@@ -1,56 +1,27 @@
+#!/bin/bash
+
 ################################################################################################################################################################
 
 # @project        Library/Core
-# @file           .gitignore
+# @file           tools/python/docker/run.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-# Operating Systems
+script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-## Mac OS
+pushd ${script_directory} > /dev/null
 
-**/.DS_Store
+source "../../.env"
 
-# Editors
+docker run \
+--name="${container_name}-python" \
+-it \
+--rm \
+"${repository_name}/${project_name}-python" \
+/bin/bash
 
-## Visual Studio Code
-
-.vscode/
-*.code-workspace
-
-## Sublime Text
-
-*.sublime-workspace
-*.sublime-project
-
-# Project
-
-## Common
-
-!.gitignore
-!.gitkeep
-
-## Binaries
-
-bin/*
-lib/*
-build/
-*.so*
-*.a
-*.exe*
-*.rpm*
-
-## Documentation
-
-docs/html/
-docs/latex/
-
-## Misc.
-
-tmp/
-__pycache__
-.ipynb_checkpoints
+popd > /dev/null
 
 ################################################################################################################################################################
