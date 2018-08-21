@@ -52,7 +52,8 @@ class Array : public std::vector<T>
 
         /// @brief              Default constructor (disabled)
 
-                                Array                                       ( ) = delete ;
+                                // Array                                       ( ) = delete ;
+                                Array                                       ( ) = default ;
 
         /// @brief              Constructs an array from a C++ Standard Library vector
         ///
@@ -76,6 +77,11 @@ class Array : public std::vector<T>
 
                                 Array                                       (   const   Size&                       aSize,
                                                                                 const   T&                          aValue                                      ) ;
+
+                                template <class InputIterator>
+                                Array                                       (           InputIterator               aFirstIterator,
+                                                                                        InputIterator               aLastIterator,
+                                                                                const   typename std::vector<T>::allocator_type& anAllocator                    =   typename std::vector<T>::allocator_type() ) ;
 
         /// @brief              Constructs an array using an initializer list
         ///

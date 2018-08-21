@@ -46,6 +46,16 @@ namespace ctnr
 }
 
                                 template <class T>
+                                template <class InputIterator>
+                                Array<T>::Array                             (           InputIterator               aFirstIterator,
+                                                                                        InputIterator               aLastIterator,
+                                                                                const   typename std::vector<T>::allocator_type& anAllocator                    )
+                                :    std::vector<T>(aFirstIterator, aLastIterator, anAllocator)
+{
+
+}
+
+                                template <class T>
 Array<T>                        Array<T>::operator +                        (   const   Array<T>&                   anArray                                     ) const
 {
 

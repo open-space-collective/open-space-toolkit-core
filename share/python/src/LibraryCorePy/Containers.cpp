@@ -1,28 +1,26 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library/Core
-/// @file           LibraryCorePy.cxx
+/// @file           LibraryCorePy/Containers.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        TBD
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <boost/python.hpp>
-
-#include <LibraryCorePy/Containers.cpp>
-#include <LibraryCorePy/Types.cpp>
+#include <LibraryCorePy/Containers/Array.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (LibraryCorePy)
+inline void                     LibraryCorePy_Containers                    ( )
 {
-
-    boost::python::object package = boost::python::scope() ;
-
-    package.attr("__path__") = "Library" ;
-
-    LibraryCorePy_Types() ;
-    LibraryCorePy_Containers() ;
+    
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.Containers")))) ;
+    
+    boost::python::scope().attr("Containers") = module ;
+    
+    boost::python::scope scope = module ;
+    
+    LibraryCorePy_Containers_Array() ;
 
 }
 
