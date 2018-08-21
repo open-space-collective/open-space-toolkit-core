@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library/Physics
+# @project        Library/Core
 # @file           tools/python/docker/build.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
