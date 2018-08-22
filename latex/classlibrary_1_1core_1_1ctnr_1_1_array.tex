@@ -27,12 +27,14 @@ typedef std\+::function$<$ bool(const T \&)$>$ \hyperlink{classlibrary_1_1core_1
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a95de936b24bfdf0a5d24ef45df892ecf}{Array} ()=delete
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a8aa661d7a5bbcce25394d1778dbe3a18}{Array} ()=default
 \begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a9b510b4e2a3f9d4a324dfd0feba01285}{Array} (const std\+::vector$<$ T $>$ \&a\+Vector)
 \begin{DoxyCompactList}\small\item\em Constructs an array from a C++ Standard Library vector. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a647190cec3e259a8d8ad173c18bf3020}{Array} (const Size \&a\+Size, const T \&a\+Value)
 \begin{DoxyCompactList}\small\item\em Constructs an array of given size populated with a given value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_ad4fa22d8de4f796b8baf34d7e0aa89ba}{Array} (Input\+Iterator a\+First\+Iterator, Input\+Iterator a\+Last\+Iterator, const typename std\+::vector$<$ T $>$\+::allocator\+\_\+type \&an\+Allocator=typename std\+::vector$<$ T $>$\+::allocator\+\_\+type())
+\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_adcda1d4d28575b580a978406107febbb}{Array} (std\+::initializer\+\_\+list$<$ T $>$ a\+List)
 \begin{DoxyCompactList}\small\item\em Constructs an array using an initializer list. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a5d65732e2a07b268d9def2da3c955002}{operator+} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \&an\+Array) const
@@ -120,12 +122,12 @@ typedef std\+::function$<$bool(const T\&)$>$ \hyperlink{classlibrary_1_1core_1_1
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a95de936b24bfdf0a5d24ef45df892ecf}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a95de936b24bfdf0a5d24ef45df892ecf}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a8aa661d7a5bbcce25394d1778dbe3a18}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a8aa661d7a5bbcce25394d1778dbe3a18}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily template$<$class T$>$ \\
-\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -134,7 +136,7 @@ Default constructor (disabled)
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a9b510b4e2a3f9d4a324dfd0feba01285}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a9b510b4e2a3f9d4a324dfd0feba01285}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily template$<$class T$>$ \\
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a\+Vector }\end{DoxyParamCaption})}
 
@@ -157,7 +159,7 @@ Array<Integer> array(vector) ;
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a647190cec3e259a8d8ad173c18bf3020}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a647190cec3e259a8d8ad173c18bf3020}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily template$<$class T$>$ \\
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}\item[{const Size \&}]{a\+Size,  }\item[{const T \&}]{a\+Value }\end{DoxyParamCaption})}
 
@@ -178,10 +180,18 @@ Array<String> array(3, \textcolor{stringliteral}{"abc"}) ; \textcolor{comment}{/
 \mbox{\tt in}  & {\em a\+Value} & A value \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_ad4fa22d8de4f796b8baf34d7e0aa89ba}\label{classlibrary_1_1core_1_1ctnr_1_1_array_ad4fa22d8de4f796b8baf34d7e0aa89ba}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+template$<$class Input\+Iterator $>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{a\+First\+Iterator,  }\item[{Input\+Iterator}]{a\+Last\+Iterator,  }\item[{const typename std\+::vector$<$ T $>$\+::allocator\+\_\+type \&}]{an\+Allocator = {\ttfamily typename~std\+:\+:vector$<$~T~$>$\+:\+:allocator\+\_\+type()} }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_adcda1d4d28575b580a978406107febbb}\label{classlibrary_1_1core_1_1ctnr_1_1_array_adcda1d4d28575b580a978406107febbb}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
 {\footnotesize\ttfamily template$<$class T$>$ \\
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{a\+List }\end{DoxyParamCaption})}
 
