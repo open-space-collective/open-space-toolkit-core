@@ -46,6 +46,13 @@ namespace ctnr
 }
 
                                 template <class T>
+                                Array<T>::Array                             (           std::vector<T>&&            aVector                                     )
+                                :    std::vector<T>(std::move(aVector))
+{
+
+}
+
+                                template <class T>
                                 template <class InputIterator>
                                 Array<T>::Array                             (           InputIterator               aFirstIterator,
                                                                                         InputIterator               aLastIterator,
@@ -318,7 +325,7 @@ typename Array<T>::Iterator     Array<T>::find                              (   
                                 template <class T>
 Array<T>                        Array<T>::Empty                             ( )
 {
-    return Array<T>(std::vector<T>()) ;
+    return std::move(std::vector<T>()) ;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -48,7 +48,7 @@ class Path
 
                                 ~Path                                       ( ) ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] aPath A path
         /// @return             Path

@@ -75,7 +75,7 @@ class Integer
 
                                 Integer                                     (           double                                                                  ) = delete ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] anInteger An integer
         /// @return             Reference to integer

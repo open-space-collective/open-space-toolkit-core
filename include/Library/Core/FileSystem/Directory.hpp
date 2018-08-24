@@ -50,7 +50,7 @@ class Directory
 
                                 Directory                                   (   const   Directory&                  aDirectory                                  ) ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] aDirectory A directory
         /// @return             Directory
