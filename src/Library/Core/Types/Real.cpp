@@ -40,7 +40,7 @@ Real&                           Real::operator =                            (   
     type_ = Real::Type::Defined ;
     value_ = aReal ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -123,7 +123,7 @@ Real                            Real::operator +                            (   
 
             if (type_ != Real::Type::Defined)
             {
-                return (*this) ;
+                return *this ;
             }
             else if (aReal.type_ != Real::Type::Defined)
             {
@@ -171,7 +171,7 @@ Real                            Real::operator -                            (   
 
             if (type_ != Real::Type::Defined)
             {
-                return (*this) ;
+                return *this ;
             }
             else if (aReal.type_ != Real::Type::Defined)
             {
@@ -422,7 +422,7 @@ Real&                           Real::operator +=                           (   
 
     (*this) = (*this) + aReal ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -431,7 +431,7 @@ Real&                           Real::operator -=                           (   
 
     (*this) = (*this) - aReal ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -440,7 +440,7 @@ Real&                           Real::operator *=                           (   
 
     (*this) = (*this) * aReal ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -449,7 +449,7 @@ Real&                           Real::operator /=                           (   
 
     (*this) = (*this) / aReal ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -458,7 +458,7 @@ Real&                           Real::operator +=                           (   
 
     (*this) = (*this) + Real(aReal) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -467,7 +467,7 @@ Real&                           Real::operator -=                           (   
 
     (*this) = (*this) - Real(aReal) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -476,7 +476,7 @@ Real&                           Real::operator *=                           (   
 
     (*this) = (*this) * Real(aReal) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -485,7 +485,7 @@ Real&                           Real::operator /=                           (   
 
     (*this) = (*this) / Real(aReal) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -515,7 +515,7 @@ Real                            operator /                                  (   
 
 Real                            Real::operator +                            ( ) const
 {
-    return (*this) ;
+    return *this ;
 }
 
 Real                            Real::operator -                            ( ) const

@@ -66,7 +66,7 @@ class Pump
                 this->accessStream() << anObject ;
             }
 
-            return (*this) ;
+            return *this ;
 
         }
 
@@ -78,7 +78,7 @@ class Pump
                 this->accessStream() << aStreamManipulator ;
             }
 
-            return (*this) ;
+            return *this ;
 
         }
 

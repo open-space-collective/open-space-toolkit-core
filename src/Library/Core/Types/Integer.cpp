@@ -39,7 +39,7 @@ Integer&                        Integer::operator =                         (   
     type_ = Integer::Type::Defined ;
     value_ = anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -122,7 +122,7 @@ Integer                         Integer::operator +                         (   
 
             if (type_ != Integer::Type::Defined)
             {
-                return (*this) ;
+                return *this ;
             }
             else if (anInteger.type_ != Integer::Type::Defined)
             {
@@ -170,7 +170,7 @@ Integer                         Integer::operator -                         (   
 
             if (type_ != Integer::Type::Defined)
             {
-                return (*this) ;
+                return *this ;
             }
             else if (anInteger.type_ != Integer::Type::Defined)
             {
@@ -413,11 +413,11 @@ Integer                         Integer::operator %                         (   
         }
         else if (!this->isInfinity() && anInteger.isInfinity())
         {
-            return (*this) ;
+            return *this ;
         }
         else if ((!this->isInfinity()) && this->isStrictlyPositive() && (!anInteger.isInfinity()) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
         {
-            return (*this) ;
+            return *this ;
         }
         else if ((!anInteger.isInfinity()) && (std::abs(anInteger.value_) == 1))
         {
@@ -468,7 +468,7 @@ Integer&                        Integer::operator +=                        (   
 
     (*this) = (*this) + anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -477,7 +477,7 @@ Integer&                        Integer::operator -=                        (   
 
     (*this) = (*this) - anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -486,7 +486,7 @@ Integer&                        Integer::operator *=                        (   
 
     (*this) = (*this) * anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -495,7 +495,7 @@ Integer&                        Integer::operator /=                        (   
 
     (*this) = (*this) / anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -504,7 +504,7 @@ Integer&                        Integer::operator %=                        (   
 
     (*this) = (*this) % anInteger ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -513,7 +513,7 @@ Integer&                        Integer::operator +=                        (   
 
     (*this) = (*this) + Integer(anInteger) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -522,7 +522,7 @@ Integer&                        Integer::operator -=                        (   
 
     (*this) = (*this) - Integer(anInteger) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -531,7 +531,7 @@ Integer&                        Integer::operator *=                        (   
 
     (*this) = (*this) * Integer(anInteger) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -540,7 +540,7 @@ Integer&                        Integer::operator /=                        (   
 
     (*this) = (*this) / Integer(anInteger) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -549,7 +549,7 @@ Integer&                        Integer::operator %=                        (   
 
     (*this) = (*this) % Integer(anInteger) ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -585,7 +585,7 @@ Integer                         operator %                                  (   
 
 Integer                         Integer::operator +                         ( ) const
 {
-    return (*this) ;
+    return *this ;
 }
 
 Integer                         Integer::operator -                         ( ) const
@@ -654,7 +654,7 @@ Integer&                        Integer::operator ++                        ( )
 
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -688,7 +688,7 @@ Integer&                        Integer::operator --                        ( )
 
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 
