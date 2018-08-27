@@ -156,7 +156,7 @@ String&                         String::trim                                ( )
         boost::trim(*this) ;
     }
 
-    return (*this) ;
+    return *this ;
     
 }
 

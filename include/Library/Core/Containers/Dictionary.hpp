@@ -160,7 +160,7 @@ class Dictionary
 
                                 ~Dictionary                                 ( ) ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] aDictionary A dictionary
         /// @return             Reference to dictionary

@@ -51,7 +51,7 @@ class Print
 
                     stream_ << std::setw(40) << std::setfill(' ') << anObject << " " ;
 
-                    return (*this) ;
+                    return *this ;
 
                 }
 

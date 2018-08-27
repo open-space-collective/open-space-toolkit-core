@@ -46,7 +46,7 @@ Dictionary::Iterator&           Dictionary::Iterator::operator =            (   
         mapIt_ = anIterator.mapIt_ ;
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -62,7 +62,7 @@ bool                            Dictionary::Iterator::operator !=           (   
 
 const Dictionary::Iterator&     Dictionary::Iterator::operator *            ( ) const
 {
-    return (*this) ;
+    return *this ;
 }
 
 const Dictionary::Iterator*     Dictionary::Iterator::operator ->           ( ) const
@@ -72,7 +72,7 @@ const Dictionary::Iterator*     Dictionary::Iterator::operator ->           ( ) 
 
 Dictionary::Iterator&           Dictionary::Iterator::operator *            ( )
 {
-    return (*this) ;
+    return *this ;
 }
 
 Dictionary::Iterator*           Dictionary::Iterator::operator ->           ( )
@@ -90,7 +90,7 @@ Dictionary::Iterator&           Dictionary::Iterator::operator ++           ( )
 
     ++mapIt_ ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -104,7 +104,7 @@ Dictionary::Iterator&           Dictionary::Iterator::operator --           ( )
 
     --mapIt_ ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -171,7 +171,7 @@ Dictionary::ConstIterator&      Dictionary::ConstIterator::operator =       (   
         mapIt_ = aConstIterator.mapIt_ ;
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -187,7 +187,7 @@ bool                            Dictionary::ConstIterator::operator !=      (   
 
 const Dictionary::ConstIterator& Dictionary::ConstIterator::operator *      ( ) const
 {
-    return (*this) ;
+    return *this ;
 }
 
 const Dictionary::ConstIterator* Dictionary::ConstIterator::operator ->     ( ) const
@@ -205,7 +205,7 @@ Dictionary::ConstIterator&      Dictionary::ConstIterator::operator ++      ( )
 
     ++mapIt_ ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -219,7 +219,7 @@ Dictionary::ConstIterator&      Dictionary::ConstIterator::operator --      ( )
 
     --mapIt_ ;
 
-    return (*this) ;
+    return *this ;
 
 }
 
@@ -270,7 +270,7 @@ Dictionary&                     Dictionary::operator =                      (   
         map_ = aDictionary.map_ ;
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 

@@ -372,7 +372,7 @@ Object&                         Object::operator =                          (   
         objectImplUPtr_.reset((anObject.objectImplUPtr_ != nullptr) ? anObject.objectImplUPtr_->clone() : nullptr) ;
     }
 
-    return (*this) ;
+    return *this ;
 
 }
 

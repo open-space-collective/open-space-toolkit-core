@@ -44,7 +44,7 @@ class File
 
                                 File                                        (   const   File&                       aFile                                       ) ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] aFile A file
         /// @return             File

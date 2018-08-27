@@ -96,7 +96,7 @@ class Object
 
                                 ~Object                                     ( ) ;
 
-        /// @brief              Assignment operator
+        /// @brief              Copy assignment operator
         ///
         /// @param              [in] anObject An object
         /// @return             Reference to object

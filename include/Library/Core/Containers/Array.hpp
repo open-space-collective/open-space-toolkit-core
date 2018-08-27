@@ -93,6 +93,38 @@ class Array : public std::vector<T>
 
                                 Array                                       (           std::initializer_list<T>    aList                                       ) ;
 
+        /// @brief              Copy constructor
+        ///
+        /// @param              [in] anArray An array
+                                
+                                Array                                       (   const   Array&                      anArray                                     ) = default ;
+
+        /// @brief              Move constructor (array)
+        ///
+        /// @param              [in] anArray An array
+                                
+                                Array                                       (           Array&&                     anArray                                     ) = default ;
+
+        /// @brief              Move constructor (vector)
+        ///
+        /// @param              [in] aVector A vector
+                                
+                                Array                                       (           std::vector<T>&&            aVector                                     ) ;
+
+        /// @brief              Copy assignment operator
+        ///
+        /// @param              [in] anArray An array
+        /// @return             Reference to array
+
+        Array<T>&               operator =                                  (   const   Array<T>&                   anArray                                     ) = default ;
+
+        /// @brief              Move assignment operator
+        ///
+        /// @param              [in] anArray An array
+        /// @return             Reference to array
+
+        Array<T>&               operator =                                  (           Array<T>&&                  anArray                                     ) = default ;
+
         /// @brief              Concatenate array
         ///
         /// @code
