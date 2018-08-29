@@ -10,6 +10,7 @@
 #ifndef __Library_Core_Containers_Array__
 #define __Library_Core_Containers_Array__
 
+#include <Library/Core/Containers/Iterators/Zip.hpp>
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>
 #include <Library/Core/Types/String.hpp>
@@ -52,8 +53,7 @@ class Array : public std::vector<T>
 
         /// @brief              Default constructor (disabled)
 
-                                // Array                                       ( ) = delete ;
-                                Array                                       ( ) = default ;
+                                Array                                       ( ) = delete ;
 
         /// @brief              Constructs an array from a C++ Standard Library vector
         ///
@@ -147,7 +147,7 @@ class Array : public std::vector<T>
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] anArray An array
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         template <class U>
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,

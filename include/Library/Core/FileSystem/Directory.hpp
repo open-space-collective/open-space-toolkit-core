@@ -92,7 +92,7 @@ class Directory
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aDirectory A directory
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Directory&                  aDirectory                                  ) ;

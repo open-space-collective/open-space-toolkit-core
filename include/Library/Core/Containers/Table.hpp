@@ -150,7 +150,7 @@ class Table
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aTable A table
-        /// @return             An output stream                                                                            
+        /// @return             A reference to output stream                                                                            
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Table&                      aTable                                      ) ;

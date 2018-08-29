@@ -226,7 +226,7 @@ class Dictionary
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aDictionary An dictionary
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Dictionary&                 aDictionary                                 ) ;

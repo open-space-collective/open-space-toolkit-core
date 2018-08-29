@@ -86,7 +86,7 @@ class File
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aFile A file
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   File&                       aFile                                       ) ;

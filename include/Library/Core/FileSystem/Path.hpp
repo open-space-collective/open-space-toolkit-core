@@ -117,7 +117,7 @@ class Path
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aPath A path
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         friend std::ostream&    operator <<                                 (            std::ostream&              anOutputStream,
                                                                                 const    Path&                      aPath                                       ) ;
