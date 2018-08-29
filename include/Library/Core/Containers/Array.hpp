@@ -147,7 +147,7 @@ class Array : public std::vector<T>
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] anArray An array
-        /// @return             An output stream
+        /// @return             A reference to output stream
 
         template <class U>
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
