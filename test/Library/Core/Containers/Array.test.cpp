@@ -690,4 +690,33 @@ TEST (Library_Core_Containers_Array, Empty)
 
 }
 
+TEST (Library_Core_Containers_Array, Zip)
+{
+
+    using library::core::types::Index ;
+    using library::core::types::Integer ;
+    using library::core::ctnr::Array ;
+
+    {
+
+        const Array<Integer> firstArray = { {-4, -3, -2, -1, +0, +1, +2, +3, +4} } ;
+        const Array<Integer> secondArray = { {-8, -6, -4, -2, +0, +2, +4, +6, +8} } ;
+
+        Index index = 0 ;
+
+        for (const auto tuple : library::core::ctnr::iterators::Zip(firstArray, secondArray))
+        {
+
+            EXPECT_EQ(std::get<0>(tuple) * 2, std::get<1>(tuple)) ;
+
+            index++ ;
+
+        }
+
+        EXPECT_EQ(9, index) ;
+
+    }
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
