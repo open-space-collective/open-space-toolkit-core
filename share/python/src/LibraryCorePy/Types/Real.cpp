@@ -72,6 +72,7 @@ inline void                     LibraryCorePy_Types_Real                    ( )
         .def("isNegativeInfinity", &Real::isNegativeInfinity)
         .def("isInteger", &Real::isInteger)
         .def("isFinite", &Real::isFinite)
+        .def("isNear", &Real::isNear)
 
         .def("getSign", &Real::getSign)
         // .def("toString", Real_toString_overloads(args("aPrecision"), "Convert Real to String."))
