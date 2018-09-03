@@ -10,6 +10,7 @@ var classlibrary_1_1core_1_1types_1_1_real =
     [ "isFinite", "classlibrary_1_1core_1_1types_1_1_real.html#a3355dd60d401e1f464d0bc20be9a32d5", null ],
     [ "isInfinity", "classlibrary_1_1core_1_1types_1_1_real.html#a4603222d9315aa59355778d66c0b214d", null ],
     [ "isInteger", "classlibrary_1_1core_1_1types_1_1_real.html#ad2709f64d24cb119403a0a6d386f5eda", null ],
+    [ "isNear", "classlibrary_1_1core_1_1types_1_1_real.html#a6c150ebbc93ea6b27efe192b38c5622a", null ],
     [ "isNegative", "classlibrary_1_1core_1_1types_1_1_real.html#aa12d6c4d50c80dc184e34d6e52c9dd10", null ],
     [ "isNegativeInfinity", "classlibrary_1_1core_1_1types_1_1_real.html#a5d7286e45a9f05cda79402c9d8efbc13", null ],
     [ "isPositive", "classlibrary_1_1core_1_1types_1_1_real.html#af2ace2b52781a5e537daef7e6cee6df3", null ],
