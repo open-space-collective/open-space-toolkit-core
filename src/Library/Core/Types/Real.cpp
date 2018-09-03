@@ -670,6 +670,34 @@ bool                            Real::isFinite                              ( ) 
     return type_ == Real::Type::Defined ;
 }
 
+bool                            Real::isNear                                (   const   Real&                       aValue,
+                                                                                const   Real&                       aTolerance                                  )
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Real") ;
+    }
+
+    if (!aValue.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Real") ;
+    }
+
+    if (!aTolerance.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Tolerance") ;
+    }
+
+    if ((!this->isFinite()) || (!aValue.isFinite()))
+    {
+        return false ;
+    }
+
+    return ((*this) - aValue).abs() <= aTolerance ;
+
+}
+
 types::Sign                     Real::getSign                               ( ) const
 {
 

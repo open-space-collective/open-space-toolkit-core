@@ -1958,6 +1958,43 @@ TEST (Library_Core_Types_Real, IsFinite)
 
 }
 
+TEST (Library_Core_Types_Real, IsNear)
+{
+
+    using library::core::types::Real ;
+
+    {
+
+        EXPECT_TRUE(Real(0.0).isNear(Real(0.0), 0.0)) ;
+        EXPECT_TRUE(Real(-1.0).isNear(Real(-1.0), 0.0)) ;
+        EXPECT_TRUE(Real(+0.0).isNear(Real(+0.0), 0.0)) ;
+        EXPECT_TRUE(Real(+1.0).isNear(Real(+1.0), 0.0)) ;
+
+        EXPECT_TRUE(Real(0.0).isNear(Real(1.0), 1.0)) ;
+
+    }
+
+    {
+
+        EXPECT_FALSE(Real(0.0).isNear(Real(1.1), 1.0)) ;
+
+        EXPECT_FALSE(Real::NegativeInfinity().isNear(Real::NegativeInfinity(), 0.0)) ;
+        EXPECT_FALSE(Real::PositiveInfinity().isNear(Real::PositiveInfinity(), 0.0)) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Real::Undefined().isNear(Real::Undefined(), Real::Undefined())) ;
+        EXPECT_ANY_THROW(Real::Undefined().isNear(Real::Undefined(), 0.0)) ;
+        EXPECT_ANY_THROW(Real::Undefined().isNear(0.0, 0.0)) ;
+        EXPECT_ANY_THROW(Real(0.0).isNear(Real::Undefined(), 0.0)) ;
+        EXPECT_ANY_THROW(Real(0.0).isNear(0.0, Real::Undefined())) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_Real, GetSign)
 {
 

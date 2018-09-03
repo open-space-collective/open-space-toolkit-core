@@ -109,6 +109,9 @@ class Real
         bool                    isInteger                                   ( ) const ;
         bool                    isFinite                                    ( ) const ;
 
+        bool                    isNear                                      (   const   Real&                       aValue,
+                                                                                const   Real&                       aTolerance                                  =   Real::Epsilon() ) ;
+
         types::Sign             getSign                                     ( ) const ;
 
         types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   types::Integer::Undefined() ) const ;
