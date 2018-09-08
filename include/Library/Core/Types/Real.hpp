@@ -110,7 +110,7 @@ class Real
         bool                    isFinite                                    ( ) const ;
 
         bool                    isNear                                      (   const   Real&                       aValue,
-                                                                                const   Real&                       aTolerance                                  =   Real::Epsilon() ) ;
+                                                                                const   Real&                       aTolerance                                  =   Real::Epsilon() ) const ;
 
         types::Sign             getSign                                     ( ) const ;
 

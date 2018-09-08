@@ -671,7 +671,7 @@ bool                            Real::isFinite                              ( ) 
 }
 
 bool                            Real::isNear                                (   const   Real&                       aValue,
-                                                                                const   Real&                       aTolerance                                  )
+                                                                                const   Real&                       aTolerance                                  ) const
 {
 
     if (!this->isDefined())
