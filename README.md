@@ -63,7 +63,6 @@ The **Core** library exhibits the following structure:
 │   ├── Memory
 │   ├── Disk
 │   └── Process
-├── Program
 ├── Logger
 ├── Error
 │   ├── Exception
