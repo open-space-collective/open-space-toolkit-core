@@ -18,13 +18,15 @@ source "${project_directory}/tools/.env"
 
 # Generate binaries
 
-# docker run \
-# --rm \
-# --volume="${project_directory}:/app:rw" \
-# --volume="${development_directory}/helpers/build.sh:/app/build/build.sh:ro" \
-# --volume="${development_directory}/helpers/test.sh:/app/build/test.sh:ro" \
-# --workdir="/app/build" \
-# ${image_name} \
-# /bin/bash -c "/app/build/build.sh && make package && mkdir -p /app/package && mv /app/build/*.rpm /app/package"
+docker run \
+--rm \
+--volume="${project_directory}:/app:rw" \
+--volume="${development_directory}/helpers/build.sh:/app/build/build.sh:ro" \
+--volume="${development_directory}/helpers/test.sh:/app/build/test.sh:ro" \
+--workdir="/app/build" \
+--env="TWINE_USERNAME=${PYPI_USERNAME}" \
+--env="TWINE_PASSWORD=${PYPI_PASSWORD}" \
+${image_name} \
+/bin/bash -c "make publish"
 
 ################################################################################################################################################################
