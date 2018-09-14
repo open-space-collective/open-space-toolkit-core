@@ -848,6 +848,25 @@ TEST (Library_Core_Containers_Table, Load)
 
     }
 
+    {
+
+        
+        const Array<String> header = { "Start Time (UTCG)", "Stop Time (UTCG)", "Duration (sec)", "Obstruction", "Current Condition", "Worst Condition", "Total Duration (sec)" } ;
+        const Array<Row> rows =
+        {
+            { Object::String("1 Jan 2018 00:00:00.000"), Object::String("1 Jan 2018 04:15:48.956"), Object::Real(15348.956), Object::String("Earth"), Object::String("Umbra"), Object::String("Umbra"), Object::Real(15492.990) }
+        } ;
+
+        const Table referenceTable = { header, rows } ;
+
+        const File file = File::Path(Path::Parse("../test/Library/Core/Containers/Table/B.csv")) ;
+
+        const Table table = Table::Load(file) ;
+
+        EXPECT_EQ(referenceTable, table) ;
+
+    }
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

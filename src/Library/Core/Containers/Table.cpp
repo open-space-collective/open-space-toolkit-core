@@ -243,6 +243,11 @@ Index                           Table::getIndexOfColumnWithName             (   
         throw library::core::error::runtime::Undefined("Column name") ;
     }
 
+    if (!header_.contains(aColumnName)) // Double query... should be optimized
+    {
+        throw library::core::error::RuntimeError("Table does not have any column with name [{}].", aColumnName) ;
+    }
+
     return header_.getIndexOf(aColumnName) ;
 
 }
@@ -347,7 +352,16 @@ Table                           Table::LoadCsv                              (   
 
             for (const auto& columnName : document.GetColumnNames())
             {
-                header.add(columnName) ;
+
+                if ((columnName.front() == '"') && (columnName.back() == '"'))
+                {
+                    header.add(columnName.substr(1, columnName.length() - 2)) ;
+                }
+                else
+                {
+                    header.add(columnName) ;
+                }                
+
             }
             
         }
