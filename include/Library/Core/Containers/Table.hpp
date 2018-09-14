@@ -137,10 +137,25 @@ class Table
         /// @endcode
         ///
         /// @param              [in] aRowIndex A row index
+        /// @param              [in] aColumnIndex A column index
         /// @return             Reference to cell
 
         const Cell&             operator ()                                 (   const   Index&                      aRowIndex,
                                                                                 const   Index&                      aColumnIndex                                ) const ;
+
+        /// @brief              Function call operator (cell accessor)
+        ///
+        /// @code
+        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
+        ///                     const Cell& cell = table(0, "Column A") ; // Cell::Integer(123)
+        /// @endcode
+        ///
+        /// @param              [in] aRowIndex A row index
+        /// @param              [in] aColumnName A column name
+        /// @return             Reference to cell
+
+        const Cell&             operator ()                                 (   const   Index&                      aRowIndex,
+                                                                                const   String&                     aColumnName                                 ) const ;
 
         /// @brief              Output stream operator
         ///
@@ -165,6 +180,13 @@ class Table
 
         bool                    isEmpty                                     ( ) const ;
 
+        /// @brief              Returns true is table has column with a given name
+        ///
+        /// @param              [in] aColumnName A column name
+        /// @return             True is table has column with a given name
+
+        bool                    hasColumnWithName                           (   const   String&                     aColumnName                                 ) const ;
+
         /// @brief              Get number of rows
         ///
         /// @code
@@ -186,6 +208,13 @@ class Table
         /// @return             Number of columns
 
         Size                    getColumnCount                              ( ) const ;
+
+        /// @brief              Returns the index of column with a given name
+        ///
+        /// @param              [in] aColumnName A column name
+        /// @return             Index of column with a given name
+
+        Index                   getIndexOfColumnWithName                    (   const   String&                     aColumnName                                 ) const ;
 
         /// @brief              Add row
         ///

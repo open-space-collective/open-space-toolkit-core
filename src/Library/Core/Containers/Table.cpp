@@ -119,6 +119,19 @@ const Cell&                     Table::operator ()                          (   
 
 }
 
+const Cell&                     Table::operator ()                          (   const   Index&                      aRowIndex,
+                                                                                const   String&                     aColumnName                                 ) const
+{
+
+    if (aRowIndex >= rows_.getSize())
+    {
+        throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
+    }
+    
+    return rows_[aRowIndex][this->getIndexOfColumnWithName(aColumnName)] ;
+
+}
+
 std::ostream&                   operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Table&                      aTable                                      )
 {
@@ -200,6 +213,18 @@ bool                            Table::isEmpty                              ( ) 
     return rows_.isEmpty() ;
 }
 
+bool                            Table::hasColumnWithName                    (   const   String&                     aColumnName                                 ) const
+{
+
+    if (aColumnName.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("Column name") ;
+    }
+    
+    return header_.contains(aColumnName) ;
+
+}
+
 Size                            Table::getRowCount                          ( ) const
 {
     return rows_.getSize() ;
@@ -208,6 +233,18 @@ Size                            Table::getRowCount                          ( ) 
 Size                            Table::getColumnCount                       ( ) const
 {
     return header_.getSize() ;
+}
+
+Index                           Table::getIndexOfColumnWithName             (   const   String&                     aColumnName                                 ) const
+{
+
+    if (aColumnName.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("Column name") ;
+    }
+
+    return header_.getIndexOf(aColumnName) ;
+
 }
 
 void                            Table::addRow                               (   const   Row&                        aRow                                        )

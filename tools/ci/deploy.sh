@@ -16,7 +16,7 @@ development_directory="${project_directory}/tools/development"
 
 source "${project_directory}/tools/.env"
 
-# Generate binaries
+# Deploy Python bindings
 
 docker run \
 --rm \

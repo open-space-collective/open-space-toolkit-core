@@ -37,6 +37,7 @@ namespace table
 
 using library::core::types::Index ;
 using library::core::types::Size ;
+using library::core::types::String ;
 using library::core::ctnr::Array ;
 using library::core::ctnr::table::Cell ;
 
@@ -69,6 +70,8 @@ class Row
         bool                    operator !=                                 (   const   Row&                        aRow                                        ) const ;
 
         const Cell&             operator []                                 (   const   Index&                      aColumnIndex                                ) const ;
+
+        const Cell&             operator []                                 (   const   String&                     aColumnName                                 ) const ;
 
         bool                    isEmpty                                     ( ) const ;
 
