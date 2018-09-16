@@ -2081,7 +2081,7 @@ TEST (Library_Core_Types_Real, ToString)
         EXPECT_EQ("112345678912345.59",         Real(112345678912345.6).toString()) ;
         EXPECT_EQ("1123456789123456.8",         Real(1123456789123456.7).toString()) ;
         EXPECT_EQ("11234567891234568.0",        Real(11234567891234567.8).toString()) ;
-        EXPECT_EQ("1.1234567891234568e+17.0",   Real(112345678912345678.9).toString()) ;
+        EXPECT_EQ("1.1234567891234568e+17",   Real(112345678912345678.9).toString()) ;
 
     }
 
@@ -2214,6 +2214,30 @@ TEST (Library_Core_Types_Real, ToString)
         EXPECT_EQ("112345678912345.59375",      Real(112345678912345.6).toString(5)) ;
         EXPECT_EQ("1123456789123456.75000",     Real(1123456789123456.7).toString(5)) ;
         EXPECT_EQ("11234567891234568.00000",    Real(11234567891234567.8).toString(5)) ;
+
+    }
+
+    {
+
+        EXPECT_EQ("1.0000000000000001e+300",    Real(1e+300).toString()) << Real(1e+300).toString() ;
+        EXPECT_EQ("1.0000000000000001e-30",     Real(1e-30).toString()) << Real(1e-30).toString() ;
+        EXPECT_EQ("1e+30",                      Real(1e+30).toString()) << Real(1e+30).toString() ;
+        EXPECT_EQ("1e-300",                     Real(1e-300).toString()) << Real(1e-300).toString() ;
+
+        EXPECT_EQ("-1.0000000000000001e+300",   Real(-1e+300).toString()) << Real(-1e+300).toString() ;
+        EXPECT_EQ("-1.0000000000000001e-30",    Real(-1e-30).toString()) << Real(-1e-30).toString() ;
+        EXPECT_EQ("-1e+30",                     Real(-1e+30).toString()) << Real(-1e+30).toString() ;
+        EXPECT_EQ("-1e-300",                    Real(-1e-300).toString()) << Real(-1e-300).toString() ;
+
+        EXPECT_EQ("1.1000000000000001e+300",    Real(1.1e+300).toString()) << Real(1.1e+300).toString() ;
+        EXPECT_EQ("1.0999999999999999e-30",     Real(1.1e-30).toString()) << Real(1.1e-30).toString() ;
+        EXPECT_EQ("1.1e+30",                    Real(1.1e+30).toString()) << Real(1.1e+30).toString() ;
+        EXPECT_EQ("1.1e-300",                   Real(1.1e-300).toString()) << Real(1.1e-300).toString() ;
+
+        EXPECT_EQ("-1.1000000000000001e+300",   Real(-1.1e+300).toString()) << Real(-1.1e+300).toString() ;
+        EXPECT_EQ("-1.0999999999999999e-30",    Real(-1.1e-30).toString()) << Real(-1.1e-30).toString() ;
+        EXPECT_EQ("-1.1e+30",                   Real(-1.1e+30).toString()) << Real(-1.1e+30).toString() ;
+        EXPECT_EQ("-1.1e-300",                  Real(-1.1e-300).toString()) << Real(-1.1e-300).toString() ;
 
     }
 

@@ -755,7 +755,16 @@ types::String                   Real::toString                              (   
 
                 if (this->isInteger())
                 {
-                    return boost::lexical_cast<std::string>(value_) + ".0" ;
+
+                    types::String realString = boost::lexical_cast<std::string>(value_) ;
+
+                    if (realString.find('e') == std::string::npos)
+                    {
+                        realString += ".0" ;
+                    }
+                    
+                    return realString ;
+
                 }
 
                 // types::String realString = std::to_string(value_) ;
@@ -769,7 +778,10 @@ types::String                   Real::toString                              (   
 
                 // types::String realString = stringStream.str() ;
 
-                realString.erase(realString.find_last_not_of('0') + 1, std::string::npos) ; // Remove trailing zeros if any
+                if (realString.find('e') == std::string::npos)
+                {
+                    realString.erase(realString.find_last_not_of('0') + 1, std::string::npos) ; // Remove trailing zeros if any
+                }
 
                 return realString ;
                 
