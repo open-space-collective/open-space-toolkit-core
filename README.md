@@ -6,6 +6,8 @@ Fundamental types, containers and utilities.
 [![Build Status](https://travis-ci.com/open-space-collective/library-core.svg?branch=master)](https://travis-ci.com/open-space-collective/library-core)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/library-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-core)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/library-core)
+[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-core.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-core)
+[![PyPI version](https://badge.fury.io/py/LibraryCorePy.svg)](https://badge.fury.io/py/LibraryCorePy)
 
 ## Warning
 
@@ -78,7 +80,17 @@ The **Core** library exhibits the following structure:
 
 ## Documentation
 
-The documentation can be found [here](https://open-space-collective.github.io/library-core).
+The documentation can be found here:
+
+- [C++](https://open-space-collective.github.io/library-core)
+- [Python](./bindings/python/docs)
+
+## Tutorials
+
+Various tutorials are available here:
+
+- [C++](./tutorials/cpp)
+- [Python](./tutorials/python)
 
 ## Setup
 
@@ -86,17 +98,17 @@ The documentation can be found [here](https://open-space-collective.github.io/li
 
 Using [Docker](https://www.docker.com) is recommended, as the development tools and dependencies setup is described in the provided [Dockerfile](./tools/development/docker/Dockerfile).
 
-Instructions to install Docker can be found [here](https://docs.docker.com/install/).
+Instructions on how to install Docker can be found [here](https://docs.docker.com/install/).
 
-Start the development environment:
+To start a development environment:
 
 ```bash
 ./tools/development/start.sh
 ```
 
-This will also build the `openspacecollective/library-core:latest` Docker image, if not present already.
+This will also build the `openspacecollective/library-core:latest` Docker image, if not already.
 
-If installing Docker is not an option, please manually install the development tools (GCC, CMake) and the dependencies.
+If installing Docker is not an option, please manually install the development tools (GCC, CMake) and all required dependencies.
 The procedure should be similar to the one described in the [Dockerfile](./tools/development/docker/Dockerfile).
 
 ### Build
