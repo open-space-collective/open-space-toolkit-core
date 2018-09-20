@@ -78,7 +78,10 @@ The **Core** library exhibits the following structure:
 
 ## Documentation
 
-The documentation can be found [here](https://open-space-collective.github.io/library-core).
+The documentation can be found here:
+
+- [C++](https://open-space-collective.github.io/library-core)
+- [Python](./bindings/python/docs)
 
 ## Tutorials
 
