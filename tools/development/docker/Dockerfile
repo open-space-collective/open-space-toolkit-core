@@ -7,7 +7,7 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.4
+FROM openspacecollective/library-base:0.1.5
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -30,19 +30,19 @@ RUN pushd /tmp > /dev/null \
  && rm -rf /tmp/rapidjson \
  && popd > /dev/null
 
-## ordered-map [master]
+## ordered-map [0.6.0]
 
 RUN pushd /tmp > /dev/null \
- && git clone https://github.com/Tessil/ordered-map.git \
+ && git clone --branch v0.6.0 --depth 1 https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
  && cp -r ./include/tsl /usr/local/include \
  && rm -rf /tmp/ordered-map \
  && popd > /dev/null
 
-## {fmt} [master]
+## {fmt} [5.2.0]
 
 RUN pushd /tmp > /dev/null \
- && git clone https://github.com/fmtlib/fmt.git \
+ && git clone --branch 5.2.0 --depth 1 https://github.com/fmtlib/fmt.git \
  && cd fmt \
  && mkdir build \
  && cd build \

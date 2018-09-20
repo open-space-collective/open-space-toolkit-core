@@ -339,6 +339,10 @@ TEST (Library_Core_Containers_Table, SubscriptOperator)
         EXPECT_EQ(Object::Real(123.456), firstRow[1]) ;
         EXPECT_ANY_THROW(firstRow[2]) ;
 
+        EXPECT_EQ(Object::Integer(123), firstRow["Column A"]) ;
+        EXPECT_EQ(Object::Real(123.456), firstRow["Column B"]) ;
+        EXPECT_ANY_THROW(firstRow["Column C"]) ;
+
         EXPECT_NO_THROW(table[1]) ;
 
         const Row& secondRow = table[1] ;
@@ -347,10 +351,17 @@ TEST (Library_Core_Containers_Table, SubscriptOperator)
         EXPECT_FALSE(secondRow[1].isDefined()) ;
         EXPECT_ANY_THROW(secondRow[2]) ;
 
+        EXPECT_EQ(Object::String("Hello"), secondRow["Column A"]) ;
+        EXPECT_FALSE(secondRow["Column B"].isDefined()) ;
+        EXPECT_ANY_THROW(secondRow["Column C"]) ;
+
         const Row& thirdRow = table[2] ;
 
         EXPECT_EQ(Object::String("World!"), thirdRow[0]) ;
         EXPECT_ANY_THROW(thirdRow[1]) ;
+
+        EXPECT_EQ(Object::String("World!"), thirdRow["Column A"]) ;
+        EXPECT_ANY_THROW(thirdRow["Column B"]) ;
 
         EXPECT_ANY_THROW(table[3]) ;
 
@@ -391,6 +402,33 @@ TEST (Library_Core_Containers_Table, FunctionCallOperator)
         EXPECT_ANY_THROW(table(2, 1)) ;
 
         EXPECT_ANY_THROW(table(3, 0)) ;
+
+    }
+
+    {
+
+        const Array<String> header = { "Column A", "Column B" } ;
+        const Array<Row> rows =
+        {
+            { Object::Integer(123), Object::Real(123.456) },
+            { Object::String("Hello"), Object::Undefined() },
+            { Object::String("World!") }
+        } ;
+
+        const Table table = { header, rows } ;
+
+        EXPECT_EQ(Object::Integer(123), table(0, "Column A")) ;
+        EXPECT_EQ(Object::Real(123.456), table(0, "Column B")) ;
+        EXPECT_ANY_THROW(table(0, "Column C")) ;
+
+        EXPECT_EQ(Object::String("Hello"), table(1, "Column A")) ;
+        EXPECT_FALSE(table(1, "Column B").isDefined()) ;
+        EXPECT_ANY_THROW(table(1, "Column C")) ;
+
+        EXPECT_EQ(Object::String("World!"), table(2, "Column A")) ;
+        EXPECT_ANY_THROW(table(2, "Column B")) ;
+
+        EXPECT_ANY_THROW(table(3, "Column A")) ;
 
     }
 
@@ -532,6 +570,61 @@ TEST (Library_Core_Containers_Table, IsEmpty)
 
 }
 
+TEST (Library_Core_Containers_Table, HasColumnWithName)
+{
+
+    using library::core::types::String ;
+    using library::core::ctnr::Array ;
+    using library::core::ctnr::Object ;
+    using library::core::ctnr::Table ;
+    using library::core::ctnr::table::Row ;
+
+    {
+
+        const Array<String> header = { "Column A", "Column B" } ;
+        const Array<Row> rows =
+        {
+            { Object::Integer(123), Object::Real(123.456) },
+            { Object::String("Hello"), Object::Undefined() },
+            { Object::String("World!") }
+        } ;
+
+        const Table table = { header, rows } ;
+
+        EXPECT_TRUE(table.hasColumnWithName("Column A")) ;
+        EXPECT_TRUE(table.hasColumnWithName("Column B")) ;
+        
+        EXPECT_FALSE(table.hasColumnWithName("Column C")) ;
+
+    }
+
+    {
+
+        const Array<String> header = { "Column A", "Column B" } ;
+        
+        const Table table = { header } ;
+
+        EXPECT_TRUE(table.hasColumnWithName("Column A")) ;
+        EXPECT_TRUE(table.hasColumnWithName("Column B")) ;
+        
+        EXPECT_FALSE(table.hasColumnWithName("Column C")) ;
+
+    }
+
+    {
+
+        EXPECT_FALSE(Table::Empty().hasColumnWithName("Column A")) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Table::Empty().hasColumnWithName("")) ;
+
+    }
+
+}
+
 TEST (Library_Core_Containers_Table, GetRowCount)
 {
 
@@ -593,6 +686,43 @@ TEST (Library_Core_Containers_Table, GetColumnCount)
     {
 
         EXPECT_EQ(0, Table::Empty().getColumnCount()) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
+{
+
+    using library::core::types::String ;
+    using library::core::ctnr::Array ;
+    using library::core::ctnr::Object ;
+    using library::core::ctnr::Table ;
+    using library::core::ctnr::table::Row ;
+
+    {
+
+        const Array<String> header = { "Column A", "Column B" } ;
+        const Array<Row> rows =
+        {
+            { Object::Integer(123), Object::Real(123.456) },
+            { Object::String("Hello"), Object::Undefined() },
+            { Object::String("World!") }
+        } ;
+
+        const Table table = { header, rows } ;
+
+        EXPECT_EQ(0, table.getIndexOfColumnWithName("Column A")) ;
+        EXPECT_EQ(1, table.getIndexOfColumnWithName("Column B")) ;
+        
+        EXPECT_ANY_THROW(table.getIndexOfColumnWithName("Column C")) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Table::Empty().getIndexOfColumnWithName("")) ;
+        EXPECT_ANY_THROW(Table::Empty().getIndexOfColumnWithName("Column A")) ;
 
     }
 
@@ -711,6 +841,25 @@ TEST (Library_Core_Containers_Table, Load)
         const Table referenceTable = { header, rows } ;
 
         const File file = File::Path(Path::Parse("../test/Library/Core/Containers/Table/A.csv")) ;
+
+        const Table table = Table::Load(file) ;
+
+        EXPECT_EQ(referenceTable, table) ;
+
+    }
+
+    {
+
+        
+        const Array<String> header = { "Start Time (UTCG)", "Stop Time (UTCG)", "Duration (sec)", "Obstruction", "Current Condition", "Worst Condition", "Total Duration (sec)" } ;
+        const Array<Row> rows =
+        {
+            { Object::String("1 Jan 2018 00:00:00.000"), Object::String("1 Jan 2018 04:15:48.956"), Object::Real(15348.956), Object::String("Earth"), Object::String("Umbra"), Object::String("Umbra"), Object::Real(15492.990) }
+        } ;
+
+        const Table referenceTable = { header, rows } ;
+
+        const File file = File::Path(Path::Parse("../test/Library/Core/Containers/Table/B.csv")) ;
 
         const Table table = Table::Load(file) ;
 

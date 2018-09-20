@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Library/Core/Containers/Table/Row.hpp>
+#include <Library/Core/Containers/Table.hpp>
 #include <Library/Core/Error.hpp>
 #include <Library/Core/Utilities.hpp>
 
@@ -105,6 +106,18 @@ const Cell&                     Row::operator []                            (   
     }
 
     return cells_[aColumnIndex] ;
+
+}
+
+const Cell&                     Row::operator []                            (   const   String&                     aColumnName                                 ) const
+{
+
+    if (tablePtr_ == nullptr)
+    {
+        throw library::core::error::RuntimeError("No associated table.") ;
+    }
+
+    return (*this)[tablePtr_->getIndexOfColumnWithName(aColumnName)] ;
 
 }
 

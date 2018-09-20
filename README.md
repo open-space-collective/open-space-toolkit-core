@@ -1,5 +1,5 @@
-Library :: Core
-===============
+Library ▸ Core
+==============
 
 Fundamental types, containers and utilities.
 

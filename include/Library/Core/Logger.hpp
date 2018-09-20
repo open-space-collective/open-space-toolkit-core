@@ -110,7 +110,7 @@ class Logger
 
 #define                         LOG_SCOPE0()                                    BOOST_LOG_NAMED_SCOPE("?")
 #define                         LOG_SCOPE1(aScope)                              BOOST_LOG_NAMED_SCOPE(aScope)
-#define                         LOG_SCOPE2(aClass, aMethod)                     BOOST_LOG_NAMED_SCOPE(aClass " :: " aMethod)
+#define                         LOG_SCOPE2(aClass, aMethod)                     BOOST_LOG_NAMED_SCOPE(aClass " ▸ " aMethod)
 
 #define                         LOG_SCOPE(...)                                  GET_MACRO(_0, ##__VA_ARGS__, LOG_SCOPE2, LOG_SCOPE1, LOG_SCOPE0)(__VA_ARGS__)
 
