@@ -14,5 +14,6 @@ var classlibrary_1_1core_1_1ctnr_1_1table_1_1_row =
     [ "operator!=", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a2c7d630e88809a564300b3c61c5124c6", null ],
     [ "operator=", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a6d6582a7ac4eba2bb7d6d34b1fa79b51", null ],
     [ "operator==", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a0c4f807d7c22544609314c366a494ed8", null ],
-    [ "operator[]", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a8fd76f9562104b7d92b91a8774609e6f", null ]
+    [ "operator[]", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a8fd76f9562104b7d92b91a8774609e6f", null ],
+    [ "operator[]", "classlibrary_1_1core_1_1ctnr_1_1table_1_1_row.html#a6415c3a4cfde0e2c1e85fad3f972651a", null ]
 ];

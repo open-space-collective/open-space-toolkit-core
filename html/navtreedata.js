@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "LibraryCore", "index.html", [
-    [ "Library :: Core", "index.html", null ],
+    [ "Library ▸ Core", "index.html", null ],
     [ "Contributing", "md__c_o_n_t_r_i_b_u_t_i_n_g.html", [
       [ "Introduction", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Introduction", null ],
       [ "Guidelines", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Guidelines", [
@@ -58,8 +58,8 @@ var NAVTREEINDEX =
 [
 "_array_8hpp.html",
 "classlibrary_1_1core_1_1ctnr_1_1_dictionary.html#a17e09d0a01799ed41cb6dfe9cf7dd52c",
-"classlibrary_1_1core_1_1fs_1_1_file.html#ae65190a612b6958e9e36238e3370c134",
-"classlibrary_1_1core_1_1types_1_1_real.html#a938344b0a800d4fe3fcc51bffd95df73"
+"classlibrary_1_1core_1_1fs_1_1_file.html#aa83b1f11be8c9106e780266dc097d03c",
+"classlibrary_1_1core_1_1types_1_1_real.html#a7f9a08009b4d5033ff8c9eaa4a6b2c7e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

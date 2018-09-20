@@ -37,12 +37,18 @@ const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1table_1_1_row}{Row} \& \hyperli
 \begin{DoxyCompactList}\small\item\em Subscript operator (row accessor) \end{DoxyCompactList}\item 
 const Cell \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a4eb003dcbe4c1c127adf473465e70bef}{operator()} (const Index \&a\+Row\+Index, const Index \&a\+Column\+Index) const
 \begin{DoxyCompactList}\small\item\em Function call operator (cell accessor) \end{DoxyCompactList}\item 
+const Cell \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a3176682f6a0762d2290ca82e4318ab56}{operator()} (const Index \&a\+Row\+Index, const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Function call operator (cell accessor) \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_ae0b9f9ee022ed72e06ed41f324855c1a}{is\+Empty} () const
 \begin{DoxyCompactList}\small\item\em Check if table is empty. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a53d1981ce11ba15cc920addfba23e236}{has\+Column\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns true is table has column with a given name. \end{DoxyCompactList}\item 
 Size \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a18036491993fea84dd2a595e7703258f}{get\+Row\+Count} () const
 \begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
 Size \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_af725ea46d4737e1c3d0d8ad5a4dda733}{get\+Column\+Count} () const
 \begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+Index \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a6144fd9e6f0e18bb17f457a32ab3c027}{get\+Index\+Of\+Column\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns the index of column with a given name. \end{DoxyCompactList}\item 
 void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a9c9b8b7a2eca260d58b721c4f465a7d3}{add\+Row} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1table_1_1_row}{Row} \&a\+Row)
 \begin{DoxyCompactList}\small\item\em Add row. \end{DoxyCompactList}\item 
 void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a82b89b7d22f40518054f6d507660e8b5}{clear} ()
@@ -269,6 +275,24 @@ table.getColumnCount() ; \textcolor{comment}{// 2}
 \begin{DoxyReturn}{Returns}
 Number of columns 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_a6144fd9e6f0e18bb17f457a32ab3c027}\label{classlibrary_1_1core_1_1ctnr_1_1_table_a6144fd9e6f0e18bb17f457a32ab3c027}} 
+\index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!get\+Index\+Of\+Column\+With\+Name@{get\+Index\+Of\+Column\+With\+Name}}
+\index{get\+Index\+Of\+Column\+With\+Name@{get\+Index\+Of\+Column\+With\+Name}!library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}}
+\subsubsection{\texorpdfstring{get\+Index\+Of\+Column\+With\+Name()}{getIndexOfColumnWithName()}}
+{\footnotesize\ttfamily Index library\+::core\+::ctnr\+::\+Table\+::get\+Index\+Of\+Column\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of column with a given name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Column\+Name} & A column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of column with a given name 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_a18036491993fea84dd2a595e7703258f}\label{classlibrary_1_1core_1_1ctnr_1_1_table_a18036491993fea84dd2a595e7703258f}} 
 \index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!get\+Row\+Count@{get\+Row\+Count}}
 \index{get\+Row\+Count@{get\+Row\+Count}!library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}}
@@ -288,6 +312,24 @@ table.getRowCount() ; \textcolor{comment}{// 1}
 
 \begin{DoxyReturn}{Returns}
 Number of rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_a53d1981ce11ba15cc920addfba23e236}\label{classlibrary_1_1core_1_1ctnr_1_1_table_a53d1981ce11ba15cc920addfba23e236}} 
+\index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!has\+Column\+With\+Name@{has\+Column\+With\+Name}}
+\index{has\+Column\+With\+Name@{has\+Column\+With\+Name}!library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}}
+\subsubsection{\texorpdfstring{has\+Column\+With\+Name()}{hasColumnWithName()}}
+{\footnotesize\ttfamily bool library\+::core\+::ctnr\+::\+Table\+::has\+Column\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true is table has column with a given name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Column\+Name} & A column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True is table has column with a given name 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_ae0b9f9ee022ed72e06ed41f324855c1a}\label{classlibrary_1_1core_1_1ctnr_1_1_table_ae0b9f9ee022ed72e06ed41f324855c1a}} 
 \index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!is\+Empty@{is\+Empty}}
@@ -359,12 +401,12 @@ Not equal to operator.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True if tables not are equal 
+True if tables are not equal 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_a4eb003dcbe4c1c127adf473465e70bef}\label{classlibrary_1_1core_1_1ctnr_1_1_table_a4eb003dcbe4c1c127adf473465e70bef}} 
 \index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!operator()@{operator()}}
 \index{operator()@{operator()}!library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}}
-\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily const Cell \& library\+::core\+::ctnr\+::\+Table\+::operator() (\begin{DoxyParamCaption}\item[{const Index \&}]{a\+Row\+Index,  }\item[{const Index \&}]{a\+Column\+Index }\end{DoxyParamCaption}) const}
 
 
@@ -381,6 +423,35 @@ Function call operator (cell accessor)
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em a\+Row\+Index} & A row index \\
+\hline
+\mbox{\tt in}  & {\em a\+Column\+Index} & A column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_table_a3176682f6a0762d2290ca82e4318ab56}\label{classlibrary_1_1core_1_1ctnr_1_1_table_a3176682f6a0762d2290ca82e4318ab56}} 
+\index{library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}!operator()@{operator()}}
+\index{operator()@{operator()}!library\+::core\+::ctnr\+::\+Table@{library\+::core\+::ctnr\+::\+Table}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Cell \& library\+::core\+::ctnr\+::\+Table\+::operator() (\begin{DoxyParamCaption}\item[{const Index \&}]{a\+Row\+Index,  }\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Function call operator (cell accessor) 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_table_a5b11121caa4288c3da642af7c6a5a632}{Table} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;
+\textcolor{keyword}{const} \hyperlink{namespacelibrary_1_1core_1_1ctnr_1_1table_aac6007d595b2967513e8e6b89f6092f5}{Cell}& cell = table(0, \textcolor{stringliteral}{"Column A"}) ; \textcolor{comment}{// Cell::Integer(123)}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Row\+Index} & A row index \\
+\hline
+\mbox{\tt in}  & {\em a\+Column\+Name} & A column name \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

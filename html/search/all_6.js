@@ -18,6 +18,7 @@ var searchData=
   ['getgid',['getGID',['../classlibrary_1_1core_1_1system_1_1_group.html#a22d1dd28ab638e043d1ca1aac19af36e',1,'library::core::system::Group']]],
   ['gethead',['getHead',['../classlibrary_1_1core_1_1types_1_1_string.html#af11475f7a147a11342765a690df18852',1,'library::core::types::String']]],
   ['getindexof',['getIndexOf',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#aa8a3e2745d72db8181b42e3cfb55415c',1,'library::core::ctnr::Array']]],
+  ['getindexofcolumnwithname',['getIndexOfColumnWithName',['../classlibrary_1_1core_1_1ctnr_1_1_table.html#a6144fd9e6f0e18bb17f457a32ab3c027',1,'library::core::ctnr::Table']]],
   ['getinteger',['getInteger',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#adc2f56dc111bfa8c3f71ff0428865bd1',1,'library::core::ctnr::Object']]],
   ['getjsonstring',['getJsonString',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a7d5636998cfe799f523b8a4f8b4e6489',1,'library::core::ctnr::Object']]],
   ['getlast',['getLast',['../classlibrary_1_1core_1_1types_1_1_string.html#aae3aaf5e3b3fde3f7b90fd1ee431c9d4',1,'library::core::types::String']]],
