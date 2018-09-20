@@ -21,15 +21,15 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --name="${container_name}-notebook" \
     -it \
     --rm \
-    --publish="8886:8888" \
+    --publish="${python_port}:8888" \
     --user="" \
     --env="JUPYTER_ENABLE_LAB=yes" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume=$(pwd)/../../../library-physics/lib:/opt/library-physics:ro \
-    --volume=$(pwd)/../../lib:/opt/lib:ro \
-    --volume=$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks \
-    --workdir="/home/jovyan/notebooks" \
+    --volume="${project_directory}/lib:/opt/lib:ro" \
+    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+    --workdir="/home/jovyan" \
     "${repository_name}/${project_name}-python" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
     && ln -s /opt/lib/liblibrary-core.so.0 /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0 \
@@ -45,15 +45,21 @@ else
     --name="${container_name}-notebook" \
     -it \
     --rm \
-    --publish="8886:8888" \
+    --publish="${python_port}:8888" \
     --user="" \
     --env="JUPYTER_ENABLE_LAB=yes" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume=$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks \
-    --workdir="/home/jovyan/notebooks" \
+    --volume="${project_directory}/lib:/opt/lib:ro" \
+    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+    --workdir="/home/jovyan" \
     "${repository_name}/${project_name}-python" \
-    bash -c "start-notebook.sh --NotebookApp.token=''"
+    bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
+    && ln -s /opt/lib/liblibrary-core.so.0 /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0 \
+    && ln -s /opt/lib/LibraryCorePy.so /opt/conda/lib/python3.6/site-packages/Library/Core/LibraryCorePy.so \
+    && echo 'from .LibraryCorePy import *' > /opt/conda/lib/python3.6/site-packages/Library/Core/__init__.py \
+    && start-notebook.sh --NotebookApp.token=''"
 
 fi
 
