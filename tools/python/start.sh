@@ -28,7 +28,7 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --volume=$(pwd)/../../../library-physics/lib:/opt/library-physics:ro \
     --volume=$(pwd)/../../lib:/opt/lib:ro \
-    --volume=$(pwd)/../../share/python/notebooks:/home/jovyan/notebooks \
+    --volume=$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks \
     --workdir="/home/jovyan/notebooks" \
     "${repository_name}/${project_name}-python" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
@@ -50,7 +50,7 @@ else
     --env="JUPYTER_ENABLE_LAB=yes" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume=$(pwd)/../../share/python/notebooks:/home/jovyan/notebooks \
+    --volume=$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks \
     --workdir="/home/jovyan/notebooks" \
     "${repository_name}/${project_name}-python" \
     bash -c "start-notebook.sh --NotebookApp.token=''"
