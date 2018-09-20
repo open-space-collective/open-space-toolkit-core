@@ -41,7 +41,7 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   TestClass&                  aTestClass                          )
 {
 
-    anOutputStream << "Class :: " << aTestClass.integer_ << " " << aTestClass.double_ ;
+    anOutputStream << "Class ▸ " << aTestClass.integer_ << " " << aTestClass.double_ ;
 
     return anOutputStream ;
 
