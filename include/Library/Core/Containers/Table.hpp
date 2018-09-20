@@ -113,7 +113,7 @@ class Table
         /// @endcode
         ///
         /// @param              [in] aTable A table
-        /// @return             True if tables not are equal
+        /// @return             True if tables are not equal
         
         bool                    operator !=                                 (   const   Table&                      aTable                                      ) const ;
 
