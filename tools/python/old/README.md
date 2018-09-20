@@ -1,2 +1,2 @@
-Library :: Core :: Python Bindings
-==================================
+Library ▸ Core :: Python Bindings
+=================================
