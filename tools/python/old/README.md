@@ -1,2 +1,0 @@
-Library ▸ Core ▸ Python Bindings
-================================

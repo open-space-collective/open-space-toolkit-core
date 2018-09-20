@@ -80,23 +80,28 @@ The **Core** library exhibits the following structure:
 
 The documentation can be found [here](https://open-space-collective.github.io/library-core).
 
+## Tutorials
+
+- [C++](./tutorials/cpp)
+- [Python](./tutorials/python)
+
 ## Setup
 
 ### Development
 
 Using [Docker](https://www.docker.com) is recommended, as the development tools and dependencies setup is described in the provided [Dockerfile](./tools/development/docker/Dockerfile).
 
-Instructions to install Docker can be found [here](https://docs.docker.com/install/).
+Instructions on how to install Docker can be found [here](https://docs.docker.com/install/).
 
-Start the development environment:
+To start a development environment:
 
 ```bash
 ./tools/development/start.sh
 ```
 
-This will also build the `openspacecollective/library-core:latest` Docker image, if not present already.
+This will also build the `openspacecollective/library-core:latest` Docker image, if not already.
 
-If installing Docker is not an option, please manually install the development tools (GCC, CMake) and the dependencies.
+If installing Docker is not an option, please manually install the development tools (GCC, CMake) and all required dependencies.
 The procedure should be similar to the one described in the [Dockerfile](./tools/development/docker/Dockerfile).
 
 ### Build
