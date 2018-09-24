@@ -155,6 +155,30 @@ bool                            Array<T>::isNear                            (   
 }
 
                                 template <class T>
+bool                            Array<T>::isNear                            (   const   Array<T>&                   anArray,
+                                                                                const   std::function<bool (const T&, const T&)>& aComparator                   ) const
+{
+
+    if (this->getSize() != anArray.getSize())
+    {
+        return false ;
+    }
+
+    for (const auto elementTuple : library::core::ctnr::iterators::Zip(*this, anArray))
+    {
+
+        if (!aComparator(std::get<0>(elementTuple), std::get<1>(elementTuple)))
+        {
+            return false ;
+        }
+
+    }
+
+    return true ;
+
+}
+
+                                template <class T>
 Size                            Array<T>::getSize                           ( ) const
 {
     return this->size() ;

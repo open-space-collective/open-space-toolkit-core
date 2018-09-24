@@ -179,8 +179,8 @@ class Array : public std::vector<T>
         /// @brief              Check if array is near another array
         ///
         /// @code
-        ///                     Array<Integer> firstArray = {1, 2, 3} ;
-        ///                     Array<Integer> secondArray = {1, 2, 3 + 1e-15} ;
+        ///                     Array<Real> firstArray = {1.0, 2.0, 3.0} ;
+        ///                     Array<Real> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
         ///                     firstArray.isNear(secondArray, 1e-15) ; // True
         /// @endcode
         ///
@@ -190,6 +190,23 @@ class Array : public std::vector<T>
 
         bool                    isNear                                      (   const   Array<T>&                   anArray,
                                                                                 const   T&                          aTolerance                                  ) const ;
+
+        /// @brief              Check if array is near another array
+        ///
+        /// @code
+        ///                     Array<Real> firstArray = {1.0, 2.0, 3.0} ;
+        ///                     Array<Real> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
+        ///                     firstArray.isNear(secondArray,
+        ///                     [] (const Real& aFirstValue, const Real& aSecondValue) -> bool 
+        ///                     { return aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anArray An array
+        /// @param              [in] aComparator A comparator
+        /// @return             True if array is near another array    
+
+        bool                    isNear                                      (   const   Array<T>&                   anArray,
+                                                                                const   std::function<bool (const T&, const T&)>& aComparator                   ) const ;
 
         /// @brief              Access first element
         ///

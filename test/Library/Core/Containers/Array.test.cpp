@@ -223,6 +223,8 @@ TEST (Library_Core_Containers_Array, IsNear)
     using library::core::types::Real ;
     using library::core::ctnr::Array ;
 
+    // Tolerance
+
     {
 
         const Array<Real> array = { 1.0, 2.0, 3.0 } ;
@@ -255,6 +257,23 @@ TEST (Library_Core_Containers_Array, IsNear)
         const Array<Real> secondArray = { 1.0, 2.0, 3.0, 4.0 } ;
 
         EXPECT_FALSE(firstArray.isNear(secondArray, 1.0)) ;
+
+    }
+
+    // Comparator
+
+    {
+
+        const Array<Real> firstArray = { 1.0, 2.0, 3.0 } ;
+        const Array<Real> secondArray = { 1.0, 2.0, 4.0 } ;
+
+        EXPECT_TRUE
+        (
+            firstArray.isNear(secondArray,
+                [] (const Real& aFirstValue, const Real& aSecondValue) -> bool 
+                { return aFirstValue.isNear(aSecondValue, 1.0) ; }
+            )
+        ) ;
 
     }
 
