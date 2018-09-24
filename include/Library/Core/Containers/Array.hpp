@@ -176,6 +176,21 @@ class Array : public std::vector<T>
 
         bool                    contains                                    (   const   T&                          anElement                                   ) const ;
 
+        /// @brief              Check if array is near another array
+        ///
+        /// @code
+        ///                     Array<Integer> firstArray = {1, 2, 3} ;
+        ///                     Array<Integer> secondArray = {1, 2, 3 + 1e-15} ;
+        ///                     firstArray.isNear(secondArray, 1e-15) ; // True
+        /// @endcode
+        ///
+        /// @param              [in] anArray An array
+        /// @param              [in] aTolerance A tolerance
+        /// @return             True if array is near another array
+
+        bool                    isNear                                      (   const   Array<T>&                   anArray,
+                                                                                const   T&                          aTolerance                                  ) const ;
+
         /// @brief              Access first element
         ///
         /// @code

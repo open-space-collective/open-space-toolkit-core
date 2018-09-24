@@ -131,6 +131,30 @@ bool                            Array<T>::contains                          (   
 }
 
                                 template <class T>
+bool                            Array<T>::isNear                            (   const   Array<T>&                   anArray,
+                                                                                const   T&                          aTolerance                                  ) const
+{
+
+    if (this->getSize() != anArray.getSize())
+    {
+        return false ;
+    }
+
+    for (const auto elementTuple : library::core::ctnr::iterators::Zip(*this, anArray))
+    {
+
+        if (!std::get<0>(elementTuple).isNear(std::get<1>(elementTuple), aTolerance))
+        {
+            return false ;
+        }
+
+    }
+
+    return true ;
+
+}
+
+                                template <class T>
 Size                            Array<T>::getSize                           ( ) const
 {
     return this->size() ;
