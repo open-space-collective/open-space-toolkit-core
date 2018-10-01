@@ -9,6 +9,7 @@
 
 #include <Library/Core/Containers/Array.hpp>
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Real.hpp>
 #include <Library/Core/Types/Integer.hpp>
 #include <Library/Core/Types/Size.hpp>
 #include <Library/Core/Types/Index.hpp>
@@ -211,6 +212,68 @@ TEST (Library_Core_Containers_Array, Contains)
         
         EXPECT_FALSE(array.contains("")) ;
         EXPECT_FALSE(array.contains("ghi")) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Array, IsNear)
+{
+
+    using library::core::types::Real ;
+    using library::core::ctnr::Array ;
+
+    // Tolerance
+
+    {
+
+        const Array<Real> array = { 1.0, 2.0, 3.0 } ;
+
+        EXPECT_TRUE(array.isNear(array, 0.0)) ;
+
+    }
+
+    {
+
+        const Array<Real> firstArray = { 1.0, 2.0, 3.0 } ;
+        const Array<Real> secondArray = { 1.0, 2.0, 3.0 } ;
+
+        EXPECT_TRUE(firstArray.isNear(secondArray, 0.0)) ;
+
+    }
+
+    {
+
+        const Array<Real> firstArray = { 1.0, 2.0, 3.0 } ;
+        const Array<Real> secondArray = { 1.0, 2.0, 4.0 } ;
+
+        EXPECT_TRUE(firstArray.isNear(secondArray, 1.0)) ;
+
+    }
+
+    {
+
+        const Array<Real> firstArray = { 1.0, 2.0, 3.0 } ;
+        const Array<Real> secondArray = { 1.0, 2.0, 3.0, 4.0 } ;
+
+        EXPECT_FALSE(firstArray.isNear(secondArray, 1.0)) ;
+
+    }
+
+    // Comparator
+
+    {
+
+        const Array<Real> firstArray = { 1.0, 2.0, 3.0 } ;
+        const Array<Real> secondArray = { 1.0, 2.0, 4.0 } ;
+
+        EXPECT_TRUE
+        (
+            firstArray.isNear(secondArray,
+                [] (const Real& aFirstValue, const Real& aSecondValue) -> bool 
+                { return aFirstValue.isNear(aSecondValue, 1.0) ; }
+            )
+        ) ;
 
     }
 
