@@ -53,6 +53,10 @@ bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a77d943be46a6d0313be3f2c5
 \begin{DoxyCompactList}\small\item\em Check if array is empty. \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a9c423eb8a34dddc81e0ede9435094e99}{contains} (const T \&an\+Element) const
 \begin{DoxyCompactList}\small\item\em Check if array contains element (by value) \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a752d42dba565118fbc49935ee1694944}{is\+Near} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \&an\+Array, const T \&a\+Tolerance) const
+\begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_abb020c857d302fab11fac87b72527821}{is\+Near} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \&an\+Array, const std\+::function$<$ bool(const T \&, const T \&)$>$ \&a\+Comparator) const
+\begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
 const T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_afea012716d6cfffa2803606c0b244419}{access\+First} () const
 \begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
 const T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_ad95dcce8ddaf163903a2327f766dbc8a}{access\+Last} () const
@@ -620,6 +624,66 @@ array.isEmpty() ; \textcolor{comment}{// False}
 
 \begin{DoxyReturn}{Returns}
 True if array is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a752d42dba565118fbc49935ee1694944}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a752d42dba565118fbc49935ee1694944}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!is\+Near@{is\+Near}}
+\index{is\+Near@{is\+Near}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{is\+Near()}{isNear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::is\+Near (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \&}]{an\+Array,  }\item[{const T \&}]{a\+Tolerance }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is near another array. 
+
+
+\begin{DoxyCode}
+Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;
+Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-15\} ;
+firstArray.isNear(secondArray, 1e-15) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array \\
+\hline
+\mbox{\tt in}  & {\em a\+Tolerance} & A tolerance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array is near another array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_abb020c857d302fab11fac87b72527821}\label{classlibrary_1_1core_1_1ctnr_1_1_array_abb020c857d302fab11fac87b72527821}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!is\+Near@{is\+Near}}
+\index{is\+Near@{is\+Near}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{is\+Near()}{isNear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::is\+Near (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$ \&}]{an\+Array,  }\item[{const std\+::function$<$ bool(const T \&, const T \&)$>$ \&}]{a\+Comparator }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is near another array. 
+
+
+\begin{DoxyCode}
+Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;
+Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-15\} ;
+firstArray.isNear(secondArray,
+[] (\textcolor{keyword}{const} Real& aFirstValue, \textcolor{keyword}{const} Real& aSecondValue) -> \textcolor{keywordtype}{bool} 
+\{ \textcolor{keywordflow}{return} aFirstValue.isNear(aSecondValue, 1e-15) ; \}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Array} & An array \\
+\hline
+\mbox{\tt in}  & {\em a\+Comparator} & A comparator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array is near another array 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_abe72cec38e65761df3eaddcfa9b7a44a}\label{classlibrary_1_1core_1_1ctnr_1_1_array_abe72cec38e65761df3eaddcfa9b7a44a}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!merge\+With@{merge\+With}}

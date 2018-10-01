@@ -151,6 +151,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c423eb8a34dddc81e0ede9435094e99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a9c423eb8a34dddc81e0ede9435094e99">contains</a> (const T &amp;anElement) const</td></tr>
 <tr class="memdesc:a9c423eb8a34dddc81e0ede9435094e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if array contains element (by value)  <a href="#a9c423eb8a34dddc81e0ede9435094e99">More...</a><br /></td></tr>
 <tr class="separator:a9c423eb8a34dddc81e0ede9435094e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752d42dba565118fbc49935ee1694944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a752d42dba565118fbc49935ee1694944">isNear</a> (const <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt; &amp;anArray, const T &amp;aTolerance) const</td></tr>
+<tr class="memdesc:a752d42dba565118fbc49935ee1694944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if array is near another array.  <a href="#a752d42dba565118fbc49935ee1694944">More...</a><br /></td></tr>
+<tr class="separator:a752d42dba565118fbc49935ee1694944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb020c857d302fab11fac87b72527821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#abb020c857d302fab11fac87b72527821">isNear</a> (const <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt; &amp;anArray, const std::function&lt; bool(const T &amp;, const T &amp;)&gt; &amp;aComparator) const</td></tr>
+<tr class="memdesc:abb020c857d302fab11fac87b72527821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if array is near another array.  <a href="#abb020c857d302fab11fac87b72527821">More...</a><br /></td></tr>
+<tr class="separator:abb020c857d302fab11fac87b72527821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea012716d6cfffa2803606c0b244419"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#afea012716d6cfffa2803606c0b244419">accessFirst</a> () const</td></tr>
 <tr class="memdesc:afea012716d6cfffa2803606c0b244419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access first element.  <a href="#afea012716d6cfffa2803606c0b244419">More...</a><br /></td></tr>
 <tr class="separator:afea012716d6cfffa2803606c0b244419"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -924,6 +930,86 @@ template&lt;class T&gt; </div>
 
 <p>Check if array is empty. </p>
 <div class="fragment"><div class="line">Array&lt;Integer&gt; array = {1, 2, 3} ;</div><div class="line">array.isEmpty() ; <span class="comment">// False</span></div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if array is empty </dd></dl>
+
+</div>
+</div>
+<a id="a752d42dba565118fbc49935ee1694944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752d42dba565118fbc49935ee1694944">&#9670;&nbsp;</a></span>isNear() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::isNear </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>anArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>aTolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if array is near another array. </p>
+<div class="fragment"><div class="line">Array&lt;Real&gt; firstArray = {1.0, 2.0, 3.0} ;</div><div class="line">Array&lt;Real&gt; secondArray = {1.0, 2.0, 3.0 + 1e-15} ;</div><div class="line">firstArray.isNear(secondArray, 1e-15) ; <span class="comment">// True</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anArray</td><td>An array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aTolerance</td><td>A tolerance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if array is near another array </dd></dl>
+
+</div>
+</div>
+<a id="abb020c857d302fab11fac87b72527821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb020c857d302fab11fac87b72527821">&#9670;&nbsp;</a></span>isNear() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::isNear </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>anArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool(const T &amp;, const T &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>aComparator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if array is near another array. </p>
+<div class="fragment"><div class="line">Array&lt;Real&gt; firstArray = {1.0, 2.0, 3.0} ;</div><div class="line">Array&lt;Real&gt; secondArray = {1.0, 2.0, 3.0 + 1e-15} ;</div><div class="line">firstArray.isNear(secondArray,</div><div class="line">[] (<span class="keyword">const</span> Real&amp; aFirstValue, <span class="keyword">const</span> Real&amp; aSecondValue) -&gt; <span class="keywordtype">bool</span> </div><div class="line">{ <span class="keywordflow">return</span> aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; <span class="comment">// True</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anArray</td><td>An array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aComparator</td><td>A comparator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if array is near another array </dd></dl>
 
 </div>
 </div>

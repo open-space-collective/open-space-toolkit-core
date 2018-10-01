@@ -25,6 +25,8 @@ var classlibrary_1_1core_1_1ctnr_1_1_array =
     [ "getSize", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a049307129c77f461b37ddca47edc7913", null ],
     [ "getWhere", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a62069b24d593b2265422cb8f3a149c44", null ],
     [ "isEmpty", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a77d943be46a6d0313be3f2c5ca66d231", null ],
+    [ "isNear", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a752d42dba565118fbc49935ee1694944", null ],
+    [ "isNear", "classlibrary_1_1core_1_1ctnr_1_1_array.html#abb020c857d302fab11fac87b72527821", null ],
     [ "mergeWith", "classlibrary_1_1core_1_1ctnr_1_1_array.html#abe72cec38e65761df3eaddcfa9b7a44a", null ],
     [ "operator+", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a5d65732e2a07b268d9def2da3c955002", null ],
     [ "operator=", "classlibrary_1_1core_1_1ctnr_1_1_array.html#a30a1be66cd95f9e37c965065f95d2b39", null ],
