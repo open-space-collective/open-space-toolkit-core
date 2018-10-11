@@ -44,9 +44,9 @@ class PermissionSet
         /// @param              [in] canWrite Can write if set to true
         /// @param              [in] canExecute Can execute if set to true
 
-                                PermissionSet                               (   const   bool&                       canRead,
-                                                                                const   bool&                       canWrite,
-                                                                                const   bool&                       canExecute                                  ) ;
+                                PermissionSet                               (   const   bool                        canRead,
+                                                                                const   bool                        canWrite,
+                                                                                const   bool                        canExecute                                  ) ;
 
         /// @brief              Equal to operator
         ///
@@ -272,7 +272,9 @@ class PermissionSet
 
     private:
 
-        uint8_t permissions_ ;
+        bool                    read_ ;
+        bool                    write_ ;
+        bool                    execute_ ;
 
 } ;
 

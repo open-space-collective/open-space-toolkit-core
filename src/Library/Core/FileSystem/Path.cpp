@@ -30,9 +30,9 @@ class Path::Impl
 
     public:
 
-                                Impl                                        (   const   boost::filesystem::path&    aPath                                       ) ;
-
         boost::filesystem::path path_ ;
+
+                                Impl                                        (   const   boost::filesystem::path&    aPath                                       ) ;
 
 } ;
 
@@ -47,7 +47,7 @@ class Path::Impl
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                                 Path::Path                                  (   const   Path&                       aPath                                       )
-                                :   impl_((aPath.impl_ != nullptr) ? std::make_unique<Path::Impl>(*aPath.impl_) : nullptr)
+                                :   implUPtr_((aPath.implUPtr_ != nullptr) ? std::make_unique<Path::Impl>(*aPath.implUPtr_) : nullptr)
 {
     
 }
@@ -62,7 +62,7 @@ Path&                           Path::operator =                            (   
 
     if (this != &aPath)
     {
-        impl_.reset((aPath.impl_ != nullptr) ? new Path::Impl(*aPath.impl_) : nullptr) ;   
+        implUPtr_.reset((aPath.implUPtr_ != nullptr) ? new Path::Impl(*aPath.implUPtr_) : nullptr) ;   
     }
 
     return *this ;
@@ -77,7 +77,7 @@ bool                            Path::operator ==                           (   
         return false ;
     }
 
-    return impl_->path_ == aPath.impl_->path_ ;
+    return implUPtr_->path_ == aPath.implUPtr_->path_ ;
 
 }
 
@@ -86,15 +86,42 @@ bool                            Path::operator !=                           (   
     return !((*this) == aPath) ;
 }
 
-// Path                            Path::operator +                            (   const   Path&                       aPath                                       ) const
-// {
+Path                            Path::operator +                            (   const   Path&                       aPath                                       ) const
+{
 
-// }
+    Path path = { *this } ;
 
-// Path&                           Path::operator +=                           (   const   Path&                       aPath                                       )
-// {
+    path += aPath ;
 
-// }
+    return path ;
+
+}
+
+Path&                           Path::operator +=                           (   const   Path&                       aPath                                       )
+{
+
+    if (!aPath.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+    
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+
+    try
+    {
+        implUPtr_->path_ /= aPath.implUPtr_->path_ ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return *this ;
+
+}
 
 std::ostream&                   operator <<                                 (            std::ostream&              anOutputStream,
                                                                                 const    Path&                      aPath                                       )
@@ -102,7 +129,7 @@ std::ostream&                   operator <<                                 (   
 
     library::core::utils::Print::Header(anOutputStream, "Path") ;
 
-    library::core::utils::Print::Line(anOutputStream) << (aPath.isDefined() ? aPath.toString() : "Undefined") ;
+    library::core::utils::Print::Line(anOutputStream)                           << (aPath.isDefined() ? aPath.toString() : "Undefined") ;
 
     library::core::utils::Print::Footer(anOutputStream) ;
 
@@ -112,38 +139,127 @@ std::ostream&                   operator <<                                 (   
 
 bool                            Path::isDefined                             ( ) const
 {
-    return impl_ != nullptr ;
+    return implUPtr_ != nullptr ;
 }
 
-// bool                            Path::isAbsolute                            ( ) const
-// {
+bool                            Path::isAbsolute                            ( ) const
+{
 
-// }
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
 
-// bool                            Path::isRelative                            ( ) const
-// {
+    return implUPtr_->path_.is_absolute() ;
 
-// }
+}
 
-// String                          Path::getFirstElement                       ( ) const
-// {
+bool                            Path::isRelative                            ( ) const
+{
 
-// }
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
 
-// String                          Path::getLastElement                        ( ) const
-// {
+    return implUPtr_->path_.is_relative() ;
 
-// }
+}
 
-// Path                            Path::getNormalizedPath                     ( ) const
-// {
+Path                            Path::getParentPath                         ( ) const
+{
 
-// }
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
 
-// Path                            Path::getAbsolutePath                       ( ) const
-// {
+    Path path ;
 
-// }
+    try
+    {
+        path.implUPtr_ = std::make_unique<Path::Impl>(implUPtr_->path_.parent_path()) ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return path ;
+
+}
+
+String                          Path::getLastElement                        ( ) const
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+
+    try
+    {
+        return implUPtr_->path_.filename().string() ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return String::Empty() ;
+
+}
+
+Path                            Path::getNormalizedPath                     ( ) const
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+
+    Path path ;
+
+    try
+    {
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::weakly_canonical(implUPtr_->path_)) ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return path ;
+
+}
+
+Path                            Path::getAbsolutePath                       (   const   Path&                       aBasePath                                   ) const
+{
+
+    if (!aBasePath.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Base path") ;
+    }
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+
+    Path path ;
+
+    try
+    {
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::absolute(implUPtr_->path_, aBasePath.implUPtr_->path_)) ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return path ;
+
+}
 
 // Path                            Path::getRelativePathTo                     (   const   Path&                       aReferencePath                              ) const
 // {
@@ -157,14 +273,23 @@ String                          Path::toString                              ( ) 
     {
         throw library::core::error::runtime::Undefined("Path") ;
     }
+
+    try
+    {
+        return implUPtr_->path_.string() ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
     
-    return impl_->path_.string() ;
+    return String::Empty() ;
 
 }
 
 Path                            Path::Undefined                             ( )
 {
-    return Path() ;
+    return {} ;
 }
 
 Path                            Path::Root                                  ( )
@@ -172,7 +297,25 @@ Path                            Path::Root                                  ( )
     
     Path path ;
 
-    path.impl_ = std::make_unique<Path::Impl>("/") ;
+    path.implUPtr_ = std::make_unique<Path::Impl>("/") ;
+
+    return path ;
+
+}
+
+Path                            Path::Current                               ( )
+{
+    
+    Path path ;
+
+    try
+    {
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::current_path()) ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
 
     return path ;
 
@@ -188,7 +331,7 @@ Path                            Path::Parse                                 (   
 
     Path path ;
 
-    path.impl_ = std::make_unique<Path::Impl>(aString) ;
+    path.implUPtr_ = std::make_unique<Path::Impl>(aString) ;
 
     return path ;
 
@@ -202,7 +345,7 @@ Path                            Path::Parse                                 (   
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                                 Path::Path                                  ( )
-                                :   impl_(nullptr)
+                                :   implUPtr_(nullptr)
 {
 
 }
