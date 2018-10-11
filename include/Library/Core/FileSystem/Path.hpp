@@ -155,17 +155,6 @@ class Path
 
         bool                    isRelative                                  ( ) const ;
 
-        /// @brief              Get first element of path
-        ///
-        /// @code
-        ///                     Path path = Path::Parse("/path/to/file") ;
-        ///                     String element = path.getFirstElement() ; // path
-        /// @endcode
-        ///
-        /// @return             First element of path
-
-        String                  getFirstElement                             ( ) const ;
-
         /// @brief              Get last element of path
         ///
         /// @code
@@ -186,7 +175,7 @@ class Path
         ///
         /// @return             Normalized path
 
-        Path                    getNormalizedPath                           ( ) const ;
+        Path                    getNormalizedPath                           (   const   Path&                       aBasePath                                   =   Path::Current() ) const ;
 
         /// @brief              Get absolute path
         ///
@@ -195,9 +184,10 @@ class Path
         ///                     Path absolutePath = path.getAbsolutePath() ; // /path/to/file
         /// @endcode
         ///
+        /// @param              [in] (optional) aBasePath A base path
         /// @return             Absolute path
 
-        Path                    getAbsolutePath                             ( ) const ;
+        Path                    getAbsolutePath                             (   const   Path&                       aBasePath                                   =   Path::Current() ) const ;
 
         /// @brief              Get path relative to path
         ///
@@ -243,6 +233,16 @@ class Path
 
         static Path             Root                                        ( ) ;
 
+        /// @brief              Constructs a current path
+        ///
+        /// @code
+        ///                     Path path = Path::Current() ; // /app/build
+        /// @endcode
+        ///
+        /// @return             Current path
+
+        static Path             Current                                     ( ) ;
+
         /// @brief              Constructs a path from a given string
         ///
         /// @code
@@ -269,7 +269,7 @@ class Path
 
         class Impl ;
 
-        Unique<Path::Impl>      impl_ ;
+        Unique<Path::Impl>      implUPtr_ ;
 
                                 Path                                        ( ) ;
     
