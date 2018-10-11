@@ -23,9 +23,9 @@ namespace fs
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                                PermissionSet::PermissionSet                (   const   bool&                       canRead,
-                                                                                const   bool&                       canWrite,
-                                                                                const   bool&                       canExecute                                  )
+                                PermissionSet::PermissionSet                (   const   bool                        canRead,
+                                                                                const   bool                        canWrite,
+                                                                                const   bool                        canExecute                                  )
                                 :   read_(canRead),
                                     write_(canWrite),
                                     execute_(canExecute)
