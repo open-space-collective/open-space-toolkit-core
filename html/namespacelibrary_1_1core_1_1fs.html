@@ -101,14 +101,54 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a53ad2f08863101b5ae694faae44f811e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html#a53ad2f08863101b5ae694faae44f811e">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_directory.html">Directory</a> &amp;aDirectory)</td></tr>
+<tr class="separator:a53ad2f08863101b5ae694faae44f811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06acb7c0054dcbe216284bdadd5663ac"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html#a06acb7c0054dcbe216284bdadd5663ac">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_file.html">File</a> &amp;aFile)</td></tr>
 <tr class="separator:a06acb7c0054dcbe216284bdadd5663ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47817adc842f15a3de34925de44b2de3"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html#a47817adc842f15a3de34925de44b2de3">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_path.html">Path</a> &amp;aPath)</td></tr>
 <tr class="separator:a47817adc842f15a3de34925de44b2de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e125ea54e0e902d4b7fde80237d366"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html#a23e125ea54e0e902d4b7fde80237d366">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_permission_set.html">PermissionSet</a> &amp;aPermissionSet)</td></tr>
+<tr class="separator:a23e125ea54e0e902d4b7fde80237d366"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a53ad2f08863101b5ae694faae44f811e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ad2f08863101b5ae694faae44f811e">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; library::core::fs::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>anOutputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_directory.html">Directory</a> &amp;&#160;</td>
+          <td class="paramname"><em>aDirectory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line">Directory directory = <a class="code" href="classlibrary_1_1core_1_1fs_1_1_directory.html#ae906e33e4659219cf296dd314c7726b8">Directory::Path</a>(<a class="code" href="classlibrary_1_1core_1_1fs_1_1_path.html#a6ba644b6609507e724c217bf2020f5ae">Path::Parse</a>(<span class="stringliteral">&quot;/path/to/directory&quot;</span>)) ;</div><div class="line">std::cout &lt;&lt; directory ;</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anOutputStream</td><td>An output stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDirectory</td><td>A directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to output stream </dd></dl>
+
+</div>
+</div>
 <a id="a06acb7c0054dcbe216284bdadd5663ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06acb7c0054dcbe216284bdadd5663ac">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a06acb7c0054dcbe216284bdadd5663ac">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,8 +183,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a23e125ea54e0e902d4b7fde80237d366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e125ea54e0e902d4b7fde80237d366">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; library::core::fs::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>anOutputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1fs_1_1_permission_set.html">PermissionSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>aPermissionSet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line">PermissionSet permissions = <a class="code" href="classlibrary_1_1core_1_1fs_1_1_permission_set.html#aa193bcbecb0c6ebbb488e99052cbba88">PermissionSet::RWX</a>()</div><div class="line"><a class="code" href="namespacestd.html">std</a>::cout &lt;&lt; permissions ;</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anOutputStream</td><td>An output stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aPermissionSet</td><td>A permission set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to output stream </dd></dl>
+
+</div>
+</div>
 <a id="a47817adc842f15a3de34925de44b2de3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47817adc842f15a3de34925de44b2de3">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47817adc842f15a3de34925de44b2de3">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -14,9 +14,9 @@ Cataloging structure which contains references to other computer files, and poss
 \item 
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} ()=delete
 \begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a5685b48aa8a6332caf0e4e253d8471f7}{Directory} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Directory)
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ad213042d687444104348dab13a051710}{Directory} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Directory)=default
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \& \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae49af93d5b45fd410634ab14d82a690a}{operator=} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Directory)
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \& \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_af96f153ef1f63eef01e948dc98aa129c}{operator=} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Directory)=default
 \begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a7d1a76c04ba3750606c3f22519d0ef66}{operator==} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Directory) const
 \begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
@@ -28,11 +28,11 @@ bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a1625670c9b94125ee6965b
 \begin{DoxyCompactList}\small\item\em Check if directory exists. \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_af664c462ccd42a31c670c0304597c74a}{is\+Empty} () const
 \begin{DoxyCompactList}\small\item\em Check if directory is empty. \end{DoxyCompactList}\item 
-bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a0d326fef28dfbb21702a12af9701ed50}{contains\+File\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+File\+Name) const
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_aa4e066fe1523c866fd1e7b7b82ad66f5}{contains\+File\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+File\+Name) const
 \begin{DoxyCompactList}\small\item\em Check if directory contains file with name. \end{DoxyCompactList}\item 
-bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_abf702bc8f107d3e4eefe15579861b8e3}{contains\+Directory\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+Directory\+Name) const
+bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a8e669f2db69416126d2f7076bdf31e33}{contains\+Directory\+With\+Name} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+Directory\+Name) const
 \begin{DoxyCompactList}\small\item\em Check if directory contains directory with name. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_acc2dd0ae02ee3733bf20f93ac1d05a56}{get\+Name} () const
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a7c21b35bbdc6306d9b98cdd220515619}{get\+Name} () const
 \begin{DoxyCompactList}\small\item\em Get directory name. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{fs\+::\+Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a94b153cbebbcc5ac6db64ec3aee63901}{get\+Path} () const
 \begin{DoxyCompactList}\small\item\em Get directory path. \end{DoxyCompactList}\item 
@@ -44,22 +44,26 @@ bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_abf702bc8f107d3e4eefe15
 \begin{DoxyCompactList}\small\item\em Get files in directory. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} $>$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a31ef325dea750ce2d7ecca49258c2a9a}{get\+Directories} () const
 \begin{DoxyCompactList}\small\item\em Get directories in directory. \end{DoxyCompactList}\item 
-void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_abc9c7c9f9129950cd89c9dbd77978b8f}{rename\+To} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+Name)
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a9d9751fccc93342105d3ea3ee29e3a9f}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Get serialized directory. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a895ac94a625098aa05a2239cfaf5359b}{rename\+To} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+Name)
 \begin{DoxyCompactList}\small\item\em Rename directory. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a7d1bd71d46c8fd653cf237dc3ed5aa00}{copy\+To\+Directory} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Destination, const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&a\+New\+Directory\+Name=\char`\"{}\char`\"{}) const
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a47e5e9a14af43a55dd45283b62baf482}{copy\+To\+Directory} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Destination, const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+New\+Directory\+Name=\char`\"{}\char`\"{}) const
 \begin{DoxyCompactList}\small\item\em Copy directory to directory. \end{DoxyCompactList}\item 
 void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a666a1ac6f84535bb113979115a760f11}{move\+To\+Directory} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&a\+Destination)
 \begin{DoxyCompactList}\small\item\em Move directory to directory. \end{DoxyCompactList}\item 
-void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a4ca33de67d870bfd0f20db68242dac9d}{create} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&an\+Owner\+Permissions\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_afa3f9d07a7053240ae97c587543cdb00}{fs\+::\+Permission\+Set\+::\+R\+WX}(), const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&a\+Group\+Permissions\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_ab632d79f1b8b8f4577bc06fa622b1c09}{fs\+::\+Permission\+Set\+::\+RX}(), const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&an\+Other\+Permissions\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_ab632d79f1b8b8f4577bc06fa622b1c09}{fs\+::\+Permission\+Set\+::\+RX}())
+void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ad1f35a8538aaccff2a64e024f3a68ddb}{create} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&an\+Owner\+Permission\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_aa193bcbecb0c6ebbb488e99052cbba88}{fs\+::\+Permission\+Set\+::\+R\+WX}(), const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&a\+Group\+Permission\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_adb5417e6188ca697a21723613a60b690}{fs\+::\+Permission\+Set\+::\+RX}(), const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&an\+Other\+Permission\+Set=\hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_adb5417e6188ca697a21723613a60b690}{fs\+::\+Permission\+Set\+::\+RX}())
 \begin{DoxyCompactList}\small\item\em Create empty directory. \end{DoxyCompactList}\item 
 void \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a8392a637e3b8cc07f55c0bc2850fb42b}{remove} ()
 \begin{DoxyCompactList}\small\item\em Delete directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae26fce16c37e5fed2bcc4d914a5eaa71}{Undefined} ()
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a448eafac782d46d3e7764aaf6d9beed0}{Undefined} ()
 \begin{DoxyCompactList}\small\item\em Constructs an undefined directory. \end{DoxyCompactList}\item 
-static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Path} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{fs\+::\+Path} \&a\+Directory\+Path)
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a617eb0d4858dd8e2b69a6c5e7b645d8c}{Root} ()
+\begin{DoxyCompactList}\small\item\em Constructs a root directory. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Path} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{fs\+::\+Path} \&a\+Path)
 \begin{DoxyCompactList}\small\item\em Constructs a directory from a given path. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -70,6 +74,8 @@ std\+::ostream \& \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3cbfede39
 
 \subsection{Detailed Description}
 Cataloging structure which contains references to other computer files, and possibly other directories. 
+
+https\+://en.wikipedia.\+org/wiki/\+Directory\+\_\+(computing) 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}\label{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}} 
@@ -82,11 +88,11 @@ Cataloging structure which contains references to other computer files, and poss
 
 Default constructor (disabled) 
 
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a5685b48aa8a6332caf0e4e253d8471f7}\label{classlibrary_1_1core_1_1fs_1_1_directory_a5685b48aa8a6332caf0e4e253d8471f7}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ad213042d687444104348dab13a051710}\label{classlibrary_1_1core_1_1fs_1_1_directory_ad213042d687444104348dab13a051710}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!Directory@{Directory}}
 \index{Directory@{Directory}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{Directory()}{Directory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily library\+::core\+::fs\+::\+Directory\+::\+Directory (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Directory }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily library\+::core\+::fs\+::\+Directory\+::\+Directory (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -100,11 +106,11 @@ Copy constructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_abf702bc8f107d3e4eefe15579861b8e3}\label{classlibrary_1_1core_1_1fs_1_1_directory_abf702bc8f107d3e4eefe15579861b8e3}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a8e669f2db69416126d2f7076bdf31e33}\label{classlibrary_1_1core_1_1fs_1_1_directory_a8e669f2db69416126d2f7076bdf31e33}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!contains\+Directory\+With\+Name@{contains\+Directory\+With\+Name}}
 \index{contains\+Directory\+With\+Name@{contains\+Directory\+With\+Name}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{contains\+Directory\+With\+Name()}{containsDirectoryWithName()}}
-{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Directory\+::contains\+Directory\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+Directory\+Name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Directory\+::contains\+Directory\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+Directory\+Name }\end{DoxyParamCaption}) const}
 
 
 
@@ -112,7 +118,7 @@ Check if directory contains directory with name.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.containsDirectoryWithName(\textcolor{stringliteral}{"subdirectory"}) ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -121,11 +127,11 @@ directory.containsDirectoryWithName(\textcolor{stringliteral}{"subdirectory"}) ;
 \begin{DoxyReturn}{Returns}
 True if directory contains directory 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a0d326fef28dfbb21702a12af9701ed50}\label{classlibrary_1_1core_1_1fs_1_1_directory_a0d326fef28dfbb21702a12af9701ed50}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_aa4e066fe1523c866fd1e7b7b82ad66f5}\label{classlibrary_1_1core_1_1fs_1_1_directory_aa4e066fe1523c866fd1e7b7b82ad66f5}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!contains\+File\+With\+Name@{contains\+File\+With\+Name}}
 \index{contains\+File\+With\+Name@{contains\+File\+With\+Name}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{contains\+File\+With\+Name()}{containsFileWithName()}}
-{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Directory\+::contains\+File\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+File\+Name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool library\+::core\+::fs\+::\+Directory\+::contains\+File\+With\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+File\+Name }\end{DoxyParamCaption}) const}
 
 
 
@@ -133,7 +139,7 @@ Check if directory contains file with name.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.containsFileWithName(\textcolor{stringliteral}{"file.txt"}) ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -142,11 +148,11 @@ directory.containsFileWithName(\textcolor{stringliteral}{"file.txt"}) ; \textcol
 \begin{DoxyReturn}{Returns}
 True if directory contains file 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a7d1bd71d46c8fd653cf237dc3ed5aa00}\label{classlibrary_1_1core_1_1fs_1_1_directory_a7d1bd71d46c8fd653cf237dc3ed5aa00}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a47e5e9a14af43a55dd45283b62baf482}\label{classlibrary_1_1core_1_1fs_1_1_directory_a47e5e9a14af43a55dd45283b62baf482}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!copy\+To\+Directory@{copy\+To\+Directory}}
 \index{copy\+To\+Directory@{copy\+To\+Directory}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{copy\+To\+Directory()}{copyToDirectory()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::copy\+To\+Directory (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Destination,  }\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+New\+Directory\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::copy\+To\+Directory (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Destination,  }\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+New\+Directory\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
 
 
 
@@ -154,9 +160,9 @@ Copy directory to directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} original = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"})) 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} original = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"})) 
       ;
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} destination = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} destination = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/destination"})) ;
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} copy = original.copyToDirectory(destination) ; \textcolor{comment}{// /path/to/destination/directory}
 \end{DoxyCode}
@@ -172,11 +178,11 @@ Copy directory to directory.
 \begin{DoxyReturn}{Returns}
 Copied directory 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a4ca33de67d870bfd0f20db68242dac9d}\label{classlibrary_1_1core_1_1fs_1_1_directory_a4ca33de67d870bfd0f20db68242dac9d}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ad1f35a8538aaccff2a64e024f3a68ddb}\label{classlibrary_1_1core_1_1fs_1_1_directory_ad1f35a8538aaccff2a64e024f3a68ddb}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!create@{create}}
 \index{create@{create}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{create()}{create()}}
-{\footnotesize\ttfamily void library\+::core\+::fs\+::\+Directory\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{an\+Owner\+Permissions\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_afa3f9d07a7053240ae97c587543cdb00}{fs\+::\+Permission\+Set\+::\+R\+WX}()},  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{a\+Group\+Permissions\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_ab632d79f1b8b8f4577bc06fa622b1c09}{fs\+::\+Permission\+Set\+::\+RX}()},  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{an\+Other\+Permissions\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_ab632d79f1b8b8f4577bc06fa622b1c09}{fs\+::\+Permission\+Set\+::\+RX}()} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void library\+::core\+::fs\+::\+Directory\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{an\+Owner\+Permission\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_aa193bcbecb0c6ebbb488e99052cbba88}{fs\+::\+Permission\+Set\+::\+R\+WX}()},  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{a\+Group\+Permission\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_adb5417e6188ca697a21723613a60b690}{fs\+::\+Permission\+Set\+::\+RX}()},  }\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set}{fs\+::\+Permission\+Set} \&}]{an\+Other\+Permission\+Set = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_permission_set_adb5417e6188ca697a21723613a60b690}{fs\+::\+Permission\+Set\+::\+RX}()} }\end{DoxyParamCaption})}
 
 
 
@@ -184,7 +190,7 @@ Create empty directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.exists() ; \textcolor{comment}{// False}
 directory.create() ;
@@ -194,11 +200,11 @@ directory.exists() ; \textcolor{comment}{// True}
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em (optional)} & an\+Owner\+Permissions\+Set An owner permissions set \\
+\mbox{\tt in}  & {\em (optional)} & an\+Owner\+Permission\+Set An owner permission set \\
 \hline
-\mbox{\tt in}  & {\em (optional)} & a\+Group\+Permissions\+Set A group permissions set \\
+\mbox{\tt in}  & {\em (optional)} & a\+Group\+Permission\+Set A group permission set \\
 \hline
-\mbox{\tt in}  & {\em (optional)} & an\+Other\+Permissions\+Set An other permissions set \\
+\mbox{\tt in}  & {\em (optional)} & an\+Other\+Permission\+Set An other permission set \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a1625670c9b94125ee6965ba8bce848fd}\label{classlibrary_1_1core_1_1fs_1_1_directory_a1625670c9b94125ee6965ba8bce848fd}} 
@@ -213,7 +219,7 @@ Check if directory exists.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/nonexistent/directory"})) ;
 directory.exists() ; \textcolor{comment}{// False}
 \end{DoxyCode}
@@ -234,7 +240,7 @@ Get directories in directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 Array<Directory> directories = directory.getDirectories() ;
 \end{DoxyCode}
@@ -255,7 +261,7 @@ Get files in directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 Array<File> files = directory.getFiles() ;
 \end{DoxyCode}
@@ -264,11 +270,11 @@ Array<File> files = directory.getFiles() ;
 \begin{DoxyReturn}{Returns}
 Array of files in directory 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_acc2dd0ae02ee3733bf20f93ac1d05a56}\label{classlibrary_1_1core_1_1fs_1_1_directory_acc2dd0ae02ee3733bf20f93ac1d05a56}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a7c21b35bbdc6306d9b98cdd220515619}\label{classlibrary_1_1core_1_1fs_1_1_directory_a7c21b35bbdc6306d9b98cdd220515619}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{get\+Name()}{getName()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} library\+::core\+::fs\+::\+Directory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::fs\+::\+Directory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -276,7 +282,7 @@ Get directory name.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.getName() ; \textcolor{comment}{// directory}
 \end{DoxyCode}
@@ -297,7 +303,7 @@ Get directory\textquotesingle{}s parent directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} parentDirectory = directory.getParentDirectory() ; \textcolor{comment}{// /path/to}
 \end{DoxyCode}
@@ -318,9 +324,9 @@ Get directory path.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Path} path = directory.\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a94b153cbebbcc5ac6db64ec3aee63901}{getPath}() ; \textcolor{comment}{// /path/to/directory}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Path} path = directory.\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a94b153cbebbcc5ac6db64ec3aee63901}{getPath}() ; \textcolor{comment}{// /path/to/directory}
 \end{DoxyCode}
 
 
@@ -339,7 +345,7 @@ Get directory permissions.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 Permissions permissions = directory.getPermissions() ; \textcolor{comment}{// rwx}
 \end{DoxyCode}
@@ -360,7 +366,7 @@ Check if directory is defined.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae26fce16c37e5fed2bcc4d914a5eaa71}{Directory::Undefined}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a448eafac782d46d3e7764aaf6d9beed0}{Directory::Undefined}() ;
 directory.isDefined() ; \textcolor{comment}{// False}
 \end{DoxyCode}
 
@@ -380,7 +386,7 @@ Check if directory is empty.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/empty/directory"})) ;
 directory.isEmpty() ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -401,9 +407,9 @@ Move directory to directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} destination = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} destination = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/destination"})) ;
 directory.moveToDirectory(destination) ; \textcolor{comment}{// /path/to/destination/directory}
 \end{DoxyCode}
@@ -426,9 +432,9 @@ Not equal to operator.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} firstDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} firstDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/first/directory"})) ;
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} secondDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} secondDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/second/directory"})) ;
 firstDirectory != secondDirectory ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -442,11 +448,11 @@ firstDirectory != secondDirectory ; \textcolor{comment}{// True}
 \begin{DoxyReturn}{Returns}
 True if directories are not equal 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ae49af93d5b45fd410634ab14d82a690a}\label{classlibrary_1_1core_1_1fs_1_1_directory_ae49af93d5b45fd410634ab14d82a690a}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_af96f153ef1f63eef01e948dc98aa129c}\label{classlibrary_1_1core_1_1fs_1_1_directory_af96f153ef1f63eef01e948dc98aa129c}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!operator=@{operator=}}
 \index{operator=@{operator=}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory}\& library\+::core\+::fs\+::\+Directory\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Directory }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory}\& library\+::core\+::fs\+::\+Directory\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -472,9 +478,9 @@ Equal to operator.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} firstDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} firstDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/directory"})) ;
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} secondDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} secondDirectory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"
       /path/to/directory"})) ;
 firstDirectory == secondDirectory ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -488,11 +494,11 @@ firstDirectory == secondDirectory ; \textcolor{comment}{// True}
 \begin{DoxyReturn}{Returns}
 True if directories are equal 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}\label{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}\label{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!Path@{Path}}
 \index{Path@{Path}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{Path()}{Path()}}
-{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{fs\+::\+Path} \&}]{a\+Directory\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{fs\+::\+Path} \&}]{a\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -500,7 +506,7 @@ Constructs a directory from a given path.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.isDefined() ; \textcolor{comment}{// True}
 \end{DoxyCode}
@@ -526,17 +532,17 @@ Delete directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.exists() ; \textcolor{comment}{// True}
 directory.delete() ;
 directory.exists() ; \textcolor{comment}{// False}
 \end{DoxyCode}
- \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_abc9c7c9f9129950cd89c9dbd77978b8f}\label{classlibrary_1_1core_1_1fs_1_1_directory_abc9c7c9f9129950cd89c9dbd77978b8f}} 
+ \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a895ac94a625098aa05a2239cfaf5359b}\label{classlibrary_1_1core_1_1fs_1_1_directory_a895ac94a625098aa05a2239cfaf5359b}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!rename\+To@{rename\+To}}
 \index{rename\+To@{rename\+To}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{rename\+To()}{renameTo()}}
-{\footnotesize\ttfamily void library\+::core\+::fs\+::\+Directory\+::rename\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{types\+::\+String} \&}]{a\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void library\+::core\+::fs\+::\+Directory\+::rename\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+Name }\end{DoxyParamCaption})}
 
 
 
@@ -544,7 +550,7 @@ Rename directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 directory.renameTo(\textcolor{stringliteral}{"folder"}) ; \textcolor{comment}{// /path/to/folder}
 \end{DoxyCode}
@@ -555,11 +561,50 @@ directory.renameTo(\textcolor{stringliteral}{"folder"}) ; \textcolor{comment}{//
 \mbox{\tt in}  & {\em a\+Name} & A directory name \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ae26fce16c37e5fed2bcc4d914a5eaa71}\label{classlibrary_1_1core_1_1fs_1_1_directory_ae26fce16c37e5fed2bcc4d914a5eaa71}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a617eb0d4858dd8e2b69a6c5e7b645d8c}\label{classlibrary_1_1core_1_1fs_1_1_directory_a617eb0d4858dd8e2b69a6c5e7b645d8c}} 
+\index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!Root@{Root}}
+\index{Root@{Root}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
+\subsubsection{\texorpdfstring{Root()}{Root()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a root directory. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a617eb0d4858dd8e2b69a6c5e7b645d8c}{Directory::Root}() ; \textcolor{stringliteral}{"/"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Root directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a9d9751fccc93342105d3ea3ee29e3a9f}\label{classlibrary_1_1core_1_1fs_1_1_directory_a9d9751fccc93342105d3ea3ee29e3a9f}} 
+\index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::fs\+::\+Directory\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized directory. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"})).
+      \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a9d9751fccc93342105d3ea3ee29e3a9f}{toString}() ; \textcolor{comment}{// "/path/to/directory"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Serialized directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a448eafac782d46d3e7764aaf6d9beed0}\label{classlibrary_1_1core_1_1fs_1_1_directory_a448eafac782d46d3e7764aaf6d9beed0}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!Undefined@{Undefined}}
 \index{Undefined@{Undefined}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} library\+::core\+::fs\+::\+Directory\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -567,7 +612,7 @@ Constructs an undefined directory.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae26fce16c37e5fed2bcc4d914a5eaa71}{Directory::Undefined}() ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a448eafac782d46d3e7764aaf6d9beed0}{Directory::Undefined}() ;
 directory.isDefined() ; \textcolor{comment}{// False}
 \end{DoxyCode}
 
@@ -590,7 +635,7 @@ Output stream operator.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a6d3ea04654841e62a4dbd99feb563caf}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a3ec39f6cad19a81d520e9a1f2d8bb1f7}{Directory} directory = \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ae906e33e4659219cf296dd314c7726b8}{Directory::Path}(\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/directory"}))
        ;
 std::cout << directory ;
 \end{DoxyCode}

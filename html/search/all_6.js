@@ -1,7 +1,7 @@
 var searchData=
 [
   ['get_5fmacro',['GET_MACRO',['../_logger_8hpp.html#a19f198f1db10b2d1e5d220ca4077e0f5',1,'Logger.hpp']]],
-  ['getabsolutepath',['getAbsolutePath',['../classlibrary_1_1core_1_1fs_1_1_path.html#a09dc880115d1e0a9079ac8e106e82c92',1,'library::core::fs::Path']]],
+  ['getabsolutepath',['getAbsolutePath',['../classlibrary_1_1core_1_1fs_1_1_path.html#a3a4c995e4b1ca0f26abbf65d3a244446',1,'library::core::fs::Path']]],
   ['getarray',['getArray',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#af72b48798c45695b7b225a961c57d8d0',1,'library::core::ctnr::Object']]],
   ['getboolean',['getBoolean',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a57a984b26f914c33155c79f88e01b934',1,'library::core::ctnr::Object']]],
   ['getchannel',['getChannel',['../classlibrary_1_1core_1_1_logger.html#a61b860f2a6b4c54accdb04d7b15e3653',1,'library::core::Logger']]],
@@ -14,7 +14,6 @@ var searchData=
   ['getextension',['getExtension',['../classlibrary_1_1core_1_1fs_1_1_file.html#acfb85ab6934afc65ecf53a1a08775f84',1,'library::core::fs::File']]],
   ['getfiles',['getFiles',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a9c80c3a09389bb6f024e9a9001dea432',1,'library::core::fs::Directory']]],
   ['getfirst',['getFirst',['../classlibrary_1_1core_1_1types_1_1_string.html#ad695264b765448ecf4f8617553012eee',1,'library::core::types::String']]],
-  ['getfirstelement',['getFirstElement',['../classlibrary_1_1core_1_1fs_1_1_path.html#a2d2c6d44f2a229948ea564d3ba8bc456',1,'library::core::fs::Path']]],
   ['getgid',['getGID',['../classlibrary_1_1core_1_1system_1_1_group.html#a22d1dd28ab638e043d1ca1aac19af36e',1,'library::core::system::Group']]],
   ['gethead',['getHead',['../classlibrary_1_1core_1_1types_1_1_string.html#af11475f7a147a11342765a690df18852',1,'library::core::types::String']]],
   ['getindexof',['getIndexOf',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#aa8a3e2745d72db8181b42e3cfb55415c',1,'library::core::ctnr::Array']]],
@@ -24,9 +23,10 @@ var searchData=
   ['getlast',['getLast',['../classlibrary_1_1core_1_1types_1_1_string.html#aae3aaf5e3b3fde3f7b90fd1ee431c9d4',1,'library::core::types::String']]],
   ['getlastelement',['getLastElement',['../classlibrary_1_1core_1_1fs_1_1_path.html#a1beabf215fcc96dde591838556e00370',1,'library::core::fs::Path']]],
   ['getlength',['getLength',['../classlibrary_1_1core_1_1types_1_1_string.html#adc97f82ccc9a3d034bc3127e643199fb',1,'library::core::types::String']]],
-  ['getname',['getName',['../classlibrary_1_1core_1_1fs_1_1_directory.html#acc2dd0ae02ee3733bf20f93ac1d05a56',1,'library::core::fs::Directory::getName()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#ac8ecef1fd249eaf2ab6d7141131c0424',1,'library::core::fs::File::getName()'],['../classlibrary_1_1core_1_1system_1_1_group.html#a28d73668971941ff02c106f07b599712',1,'library::core::system::Group::getName()'],['../classlibrary_1_1core_1_1system_1_1_user.html#a56ec63ee3e0f1d5bdfd9ab1814350c70',1,'library::core::system::User::getName()']]],
+  ['getname',['getName',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a7c21b35bbdc6306d9b98cdd220515619',1,'library::core::fs::Directory::getName()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#ac8ecef1fd249eaf2ab6d7141131c0424',1,'library::core::fs::File::getName()'],['../classlibrary_1_1core_1_1system_1_1_group.html#a28d73668971941ff02c106f07b599712',1,'library::core::system::Group::getName()'],['../classlibrary_1_1core_1_1system_1_1_user.html#a56ec63ee3e0f1d5bdfd9ab1814350c70',1,'library::core::system::User::getName()']]],
   ['getnormalizedpath',['getNormalizedPath',['../classlibrary_1_1core_1_1fs_1_1_path.html#a920b1d062cb1274da811150afafba124',1,'library::core::fs::Path']]],
   ['getparentdirectory',['getParentDirectory',['../classlibrary_1_1core_1_1fs_1_1_directory.html#ad17e782b4937e026064cf90e5b6150e6',1,'library::core::fs::Directory::getParentDirectory()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#a8eb74097f9bdc9d3c626fe4924bf405e',1,'library::core::fs::File::getParentDirectory()']]],
+  ['getparentpath',['getParentPath',['../classlibrary_1_1core_1_1fs_1_1_path.html#a0cdc72946505290b9fc2022618f118d9',1,'library::core::fs::Path']]],
   ['getpath',['getPath',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a94b153cbebbcc5ac6db64ec3aee63901',1,'library::core::fs::Directory::getPath()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#a70b1380ff844adf37a481bbdb46d11a0',1,'library::core::fs::File::getPath()']]],
   ['getpermissions',['getPermissions',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a2214a988c6a3d2b168768d83dfa17225',1,'library::core::fs::Directory::getPermissions()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#a0addf18f7510955e48fdef2416b98423',1,'library::core::fs::File::getPermissions()']]],
   ['getreal',['getReal',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a6ef00cc2dfb1ec7983a571ac2d3ac29d',1,'library::core::ctnr::Object']]],

@@ -19,7 +19,7 @@ bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a79b3a6951753c591bab57ee41f7
 \begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a3f86a7054939a51f44b2f5a796470071}{operator+} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Path) const
 \begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \& \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a3fae713dbf257fdcec2fdb2ec6c27256}{operator+=} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Path)
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \& \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a79ce7b2d9ac53e3bb22240f8cd5c883a}{operator+=} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Path)
 \begin{DoxyCompactList}\small\item\em Addition assignment operator. \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a4315cfd12f61bf477e010f33122c3d0c}{is\+Defined} () const
 \begin{DoxyCompactList}\small\item\em Check if path is defined. \end{DoxyCompactList}\item 
@@ -27,13 +27,13 @@ bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a9a5772dfc1273a74137ca301e9a
 \begin{DoxyCompactList}\small\item\em Check if path is absolute. \end{DoxyCompactList}\item 
 bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a97cf61b699efe17e23ac3a91daf897e2}{is\+Relative} () const
 \begin{DoxyCompactList}\small\item\em Check if path is relative. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a2d2c6d44f2a229948ea564d3ba8bc456}{get\+First\+Element} () const
-\begin{DoxyCompactList}\small\item\em Get first element of path. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a0cdc72946505290b9fc2022618f118d9}{get\+Parent\+Path} () const
+\begin{DoxyCompactList}\small\item\em Get parent path of path. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a1beabf215fcc96dde591838556e00370}{get\+Last\+Element} () const
 \begin{DoxyCompactList}\small\item\em Get last element of path. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a920b1d062cb1274da811150afafba124}{get\+Normalized\+Path} () const
 \begin{DoxyCompactList}\small\item\em Get normalized path. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a09dc880115d1e0a9079ac8e106e82c92}{get\+Absolute\+Path} () const
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a3a4c995e4b1ca0f26abbf65d3a244446}{get\+Absolute\+Path} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Base\+Path=\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}{Path\+::\+Current}()) const
 \begin{DoxyCompactList}\small\item\em Get absolute path. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a8f24340e887cfbfe675e96c0ba92321f}{get\+Relative\+Path\+To} (const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&a\+Reference\+Path) const
 \begin{DoxyCompactList}\small\item\em Get path relative to path. \end{DoxyCompactList}\item 
@@ -46,6 +46,8 @@ static \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlib
 \begin{DoxyCompactList}\small\item\em Constructs an undefined path. \end{DoxyCompactList}\item 
 static \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a59d9a7b2fcca844a82d22742b5a110ac}{Root} ()
 \begin{DoxyCompactList}\small\item\em Constructs a root path. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}{Current} ()
+\begin{DoxyCompactList}\small\item\em Constructs a current path. \end{DoxyCompactList}\item 
 static \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Parse} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+String)
 \begin{DoxyCompactList}\small\item\em Constructs a path from a given string. \end{DoxyCompactList}\item 
 static \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a94a2bd454a137249bab970e29a5a95f2}{Strings} (const std\+::initializer\+\_\+list$<$ \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} $>$ a\+String\+List)
@@ -86,11 +88,30 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a09dc880115d1e0a9079ac8e106e82c92}\label{classlibrary_1_1core_1_1fs_1_1_path_a09dc880115d1e0a9079ac8e106e82c92}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}\label{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}} 
+\index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!Current@{Current}}
+\index{Current@{Current}!library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}}
+\subsubsection{\texorpdfstring{Current()}{Current()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} library\+::core\+::fs\+::\+Path\+::\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a current path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_aabc4240fc08479d1bff6b9753f2b5cc2}{Path} path = \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}{Path::Current}() ; \textcolor{comment}{// /app/build}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Current path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a3a4c995e4b1ca0f26abbf65d3a244446}\label{classlibrary_1_1core_1_1fs_1_1_path_a3a4c995e4b1ca0f26abbf65d3a244446}} 
 \index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!get\+Absolute\+Path@{get\+Absolute\+Path}}
 \index{get\+Absolute\+Path@{get\+Absolute\+Path}!library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}}
 \subsubsection{\texorpdfstring{get\+Absolute\+Path()}{getAbsolutePath()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} library\+::core\+::fs\+::\+Path\+::get\+Absolute\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} library\+::core\+::fs\+::\+Path\+::get\+Absolute\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&}]{a\+Base\+Path = {\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_adbdaa4e7ab2a1b399746782668863e53}{Path\+::\+Current}()} }\end{DoxyParamCaption}) const}
 
 
 
@@ -103,28 +124,13 @@ Get absolute path.
 \end{DoxyCode}
 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em (optional)} & a\+Base\+Path A base path \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Absolute path 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a2d2c6d44f2a229948ea564d3ba8bc456}\label{classlibrary_1_1core_1_1fs_1_1_path_a2d2c6d44f2a229948ea564d3ba8bc456}} 
-\index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!get\+First\+Element@{get\+First\+Element}}
-\index{get\+First\+Element@{get\+First\+Element}!library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}}
-\subsubsection{\texorpdfstring{get\+First\+Element()}{getFirstElement()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} library\+::core\+::fs\+::\+Path\+::get\+First\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Get first element of path. 
-
-
-\begin{DoxyCode}
-\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_aabc4240fc08479d1bff6b9753f2b5cc2}{Path} path = \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/file"}) ;
-String element = path.getFirstElement() ; \textcolor{comment}{// path}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-First element of path 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a1beabf215fcc96dde591838556e00370}\label{classlibrary_1_1core_1_1fs_1_1_path_a1beabf215fcc96dde591838556e00370}} 
 \index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!get\+Last\+Element@{get\+Last\+Element}}
@@ -165,6 +171,26 @@ Get normalized path.
 
 \begin{DoxyReturn}{Returns}
 Normalized path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a0cdc72946505290b9fc2022618f118d9}\label{classlibrary_1_1core_1_1fs_1_1_path_a0cdc72946505290b9fc2022618f118d9}} 
+\index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!get\+Parent\+Path@{get\+Parent\+Path}}
+\index{get\+Parent\+Path@{get\+Parent\+Path}!library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}}
+\subsubsection{\texorpdfstring{get\+Parent\+Path()}{getParentPath()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} library\+::core\+::fs\+::\+Path\+::get\+Parent\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get parent path of path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_aabc4240fc08479d1bff6b9753f2b5cc2}{Path} path = \hyperlink{classlibrary_1_1core_1_1fs_1_1_path_a6ba644b6609507e724c217bf2020f5ae}{Path::Parse}(\textcolor{stringliteral}{"/path/to/file"}) ;
+\hyperlink{classlibrary_1_1core_1_1fs_1_1_path_aabc4240fc08479d1bff6b9753f2b5cc2}{Path} parentPath = path.getParentPath() ; \textcolor{comment}{// /path/to}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Parent path of path 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a8f24340e887cfbfe675e96c0ba92321f}\label{classlibrary_1_1core_1_1fs_1_1_path_a8f24340e887cfbfe675e96c0ba92321f}} 
 \index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!get\+Relative\+Path\+To@{get\+Relative\+Path\+To}}
@@ -304,11 +330,11 @@ Append path to path
 \begin{DoxyReturn}{Returns}
 \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a3fae713dbf257fdcec2fdb2ec6c27256}\label{classlibrary_1_1core_1_1fs_1_1_path_a3fae713dbf257fdcec2fdb2ec6c27256}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_path_a79ce7b2d9ac53e3bb22240f8cd5c883a}\label{classlibrary_1_1core_1_1fs_1_1_path_a79ce7b2d9ac53e3bb22240f8cd5c883a}} 
 \index{library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!library\+::core\+::fs\+::\+Path@{library\+::core\+::fs\+::\+Path}}
 \subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path}\& library\+::core\+::fs\+::\+Path\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&}]{a\+Path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \& library\+::core\+::fs\+::\+Path\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1fs_1_1_path}{Path} \&}]{a\+Path }\end{DoxyParamCaption})}
 
 
 

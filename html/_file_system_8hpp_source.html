@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('_file_8cpp.html','');});
+$(document).ready(function(){initNavTree('_file_system_8hpp_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -77,46 +77,22 @@ $(document).ready(function(){initNavTree('_file_8cpp.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">File.cpp File Reference</div>  </div>
+<div class="title">FileSystem.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_directory_8hpp_source.html">Library/Core/FileSystem/Directory.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_file_8hpp_source.html">Library/Core/FileSystem/File.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_error_8hpp_source.html">Library/Core/Error.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_utilities_8hpp_source.html">Library/Core/Utilities.hpp</a>&gt;</code><br />
-<code>#include &lt;boost/filesystem.hpp&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;errno.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacelibrary"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary.html">library</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacelibrary_1_1core"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core.html">library::core</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacelibrary_1_1core_1_1fs"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html">library::core::fs</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a06acb7c0054dcbe216284bdadd5663ac"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1core_1_1fs.html#a06acb7c0054dcbe216284bdadd5663ac">library::core::fs::operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const File &amp;aFile)</td></tr>
-<tr class="separator:a06acb7c0054dcbe216284bdadd5663ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Library/Core</p>
-<dl class="section author"><dt>Author</dt><dd>Lucas Brémond <a href="#" onclick="location.href='mai'+'lto:'+'luc'+'as'+'@lo'+'ft'+'orb'+'it'+'al.'+'co'+'m'; return false;">lucas<span style="display: none;">.nosp@m.</span>@lof<span style="display: none;">.nosp@m.</span>torbi<span style="display: none;">.nosp@m.</span>tal.<span style="display: none;">.nosp@m.</span>com</a>  TBD </dd></dl>
-</div></div><!-- contents -->
+<a href="_file_system_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __Library_Core_FileSystem__</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __Library_Core_FileSystem__</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_symbolic_link_8hpp.html">Library/Core/FileSystem/SymbolicLink.hpp</a>&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_directory_8hpp.html">Library/Core/FileSystem/Directory.hpp</a>&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_file_8hpp.html">Library/Core/FileSystem/File.hpp</a>&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_path_8hpp.html">Library/Core/FileSystem/Path.hpp</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_permission_set_8hpp.html">Library/Core/FileSystem/PermissionSet.hpp</a>&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span></div><div class="ttc" id="_file_8hpp_html"><div class="ttname"><a href="_file_8hpp.html">File.hpp</a></div></div>
+<div class="ttc" id="_directory_8hpp_html"><div class="ttname"><a href="_directory_8hpp.html">Directory.hpp</a></div></div>
+<div class="ttc" id="_path_8hpp_html"><div class="ttname"><a href="_path_8hpp.html">Path.hpp</a></div></div>
+<div class="ttc" id="_symbolic_link_8hpp_html"><div class="ttname"><a href="_symbolic_link_8hpp.html">SymbolicLink.hpp</a></div></div>
+<div class="ttc" id="_permission_set_8hpp_html"><div class="ttname"><a href="_permission_set_8hpp.html">PermissionSet.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f741251061e5c7c7ed48ab45c3348f11.html">Library</a></li><li class="navelem"><a class="el" href="dir_d55b9776d997d02e1319e5afa6031bf7.html">Core</a></li><li class="navelem"><a class="el" href="dir_f116fef7cc332b0b8c800e5be846c0f4.html">FileSystem</a></li><li class="navelem"><a class="el" href="_file_8cpp.html">File.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f3b5534f769798fe34f6616e7fe90e4d.html">Library</a></li><li class="navelem"><a class="el" href="dir_fa56722ff0f883796fdcd80dedc5a173.html">Core</a></li><li class="navelem"><a class="el" href="_file_system_8hpp.html">FileSystem.hpp</a></li>
   </ul>
 </div>
 </body>
