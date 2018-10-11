@@ -210,13 +210,8 @@ String                          Path::getLastElement                        ( ) 
 
 }
 
-Path                            Path::getNormalizedPath                     (   const   Path&                       aBasePath                                   ) const
+Path                            Path::getNormalizedPath                     ( ) const
 {
-
-    if (!aBasePath.isDefined())
-    {
-        throw library::core::error::runtime::Undefined("Base path") ;
-    }
 
     if (!this->isDefined())
     {
@@ -227,7 +222,7 @@ Path                            Path::getNormalizedPath                     (   
 
     try
     {
-        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::canonical(implUPtr_->path_, aBasePath.implUPtr_->path_)) ;
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::weakly_canonical(implUPtr_->path_)) ;
     }
     catch (const boost::filesystem::filesystem_error& e)
     {

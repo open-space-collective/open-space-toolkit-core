@@ -418,6 +418,7 @@ TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
     {
 
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getNormalizedPath()) ;
+        EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc").getNormalizedPath()) ;
         EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app").getNormalizedPath()) ;
         EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/").getNormalizedPath()) ;
         EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/build").getNormalizedPath()) ;
@@ -434,29 +435,7 @@ TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
 
     {
 
-        EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/build").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app/build/Makefile"), Path::Parse("/app/build/Makefile").getNormalizedPath(Path::Parse("/app/build"))) ;
-
-        EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/.").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/"), Path::Parse("/app/..").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/./build").getNormalizedPath(Path::Parse("/app/build"))) ;
-
-        EXPECT_EQ(Path::Parse("/app/build/Makefile"), Path::Parse("Makefile").getNormalizedPath(Path::Parse("/app/build"))) ;
-        EXPECT_EQ(Path::Parse("/app/build/Makefile"), Path::Parse("./Makefile").getNormalizedPath(Path::Parse("/app/build"))) ;
-
-        EXPECT_EQ(Path::Parse("/app/docs/index.html"), Path::Parse("index.html").getNormalizedPath(Path::Parse("/app/docs"))) ;
-        EXPECT_EQ(Path::Parse("/app/docs/index.html"), Path::Parse("./index.html").getNormalizedPath(Path::Parse("/app/docs"))) ;
-
-    }
-
-    {
-
         EXPECT_ANY_THROW(Path::Undefined().getNormalizedPath()) ;
-        EXPECT_ANY_THROW(Path::Parse("/abc").getNormalizedPath()) ;
-        EXPECT_ANY_THROW(Path::Parse("/").getNormalizedPath(Path::Undefined())) ;
 
     }
     

@@ -269,7 +269,26 @@ fs::Directory                   File::getParentDirectory                    ( ) 
         throw library::core::error::runtime::Undefined("File") ;
     }
 
-    return fs::Directory::Path(path_.getParentPath()) ;
+    String filePathString = path_.getNormalizedPath().toString() ;
+
+    // Below is a hacky solution to trim trailing slashes
+
+    while ((filePathString.getLength() > 1) && (filePathString.getLast() == '/'))
+    {
+        filePathString = filePathString.getHead(filePathString.getLength() - 1) ;
+    }
+
+    if ((filePathString.getLength() > 2) && (filePathString.getTail(2) == "/."))
+    {
+        filePathString = filePathString.getHead(filePathString.getLength() - 2) ;
+    }
+
+    if (filePathString == "/")
+    {
+        return fs::Directory::Root() ;
+    }
+
+    return fs::Directory::Path(Path::Parse(filePathString).getParentPath()) ;
 
 }
 

@@ -186,7 +186,7 @@ class Path
         ///
         /// @return             Normalized path
 
-        Path                    getNormalizedPath                           (   const   Path&                       aBasePath                                   =   Path::Current() ) const ;
+        Path                    getNormalizedPath                           ( ) const ;
 
         /// @brief              Get absolute path
         ///

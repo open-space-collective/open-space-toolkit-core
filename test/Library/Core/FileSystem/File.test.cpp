@@ -14,42 +14,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_FileSystem_File, CopyConstructor)
-{
-
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
-
-    {
-
-        const File file = File::Path(Path::Parse("/path/to/file")) ;
-
-        const File newFile(file) ;
-
-        EXPECT_EQ(file, newFile) ;
-
-    }
-
-}
-
-TEST (Library_Core_FileSystem_File, AssignmentOperator)
-{
-
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
-
-    {
-
-        const File file = File::Path(Path::Parse("/path/to/file")) ;
-
-        const File newFile = file ;
-
-        EXPECT_EQ(file, newFile) ;
-
-    }
-
-}
-
 TEST (Library_Core_FileSystem_File, EqualToOperator)
 {
 
@@ -326,6 +290,7 @@ TEST (Library_Core_FileSystem_File, GetParentDirectory)
 
     {
 
+        EXPECT_EQ(Directory::Path(Path::Parse("/app")), File::Path(Path::Parse("/app/CMakeLists.txt")).getParentDirectory()) ;
         EXPECT_EQ(Directory::Path(Path::Parse("/path/to")), File::Path(Path::Parse("/path/to/file")).getParentDirectory()) ;
 
     }

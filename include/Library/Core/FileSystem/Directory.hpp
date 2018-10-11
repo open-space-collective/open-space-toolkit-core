@@ -16,8 +16,6 @@
 #include <Library/Core/Containers/Array.hpp>
 #include <Library/Core/Types/String.hpp>
 
-#include <ostream>
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace library
@@ -31,9 +29,13 @@ namespace fs
 
 namespace ctnr = library::core::ctnr ;
 
+using library::core::types::String ;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @brief                      Cataloging structure which contains references to other computer files, and possibly other directories.
+/// @brief                      Cataloging structure which contains references to other computer files, and possibly other directories
+///
+/// @ref                        https://en.wikipedia.org/wiki/Directory_(computing)
 
 class Directory
 {
@@ -48,14 +50,14 @@ class Directory
         ///
         /// @param              [in] aDirectory A directory
 
-                                Directory                                   (   const   Directory&                  aDirectory                                  ) ;
+                                Directory                                   (   const   Directory&                  aDirectory                                  ) = default ;
 
         /// @brief              Copy assignment operator
         ///
         /// @param              [in] aDirectory A directory
         /// @return             Directory
 
-        Directory&              operator =                                  (   const   Directory&                  aDirectory                                  ) ;
+        Directory&              operator =                                  (   const   Directory&                  aDirectory                                  ) = default ;
 
         /// @brief              Equal to operator
         ///
@@ -139,7 +141,7 @@ class Directory
         ///
         /// @return             True if directory contains file
 
-        bool                    containsFileWithName                        (   const   types::String&              aFileName                                   ) const ;
+        bool                    containsFileWithName                        (   const   String&                     aFileName                                   ) const ;
 
         /// @brief              Check if directory contains directory with name
         ///
@@ -150,7 +152,7 @@ class Directory
         ///
         /// @return             True if directory contains directory
 
-        bool                    containsDirectoryWithName                   (   const   types::String&              aDirectoryName                              ) const ;
+        bool                    containsDirectoryWithName                   (   const   String&                     aDirectoryName                              ) const ;
 
         /// @brief              Get directory name
         ///
@@ -161,7 +163,7 @@ class Directory
         ///
         /// @return             Directory name
 
-        types::String           getName                                     ( ) const ;
+        String                  getName                                     ( ) const ;
 
         /// @brief              Get directory path
         ///
@@ -218,6 +220,16 @@ class Directory
 
         ctnr::Array<Directory>  getDirectories                              ( ) const ;
 
+        /// @brief              Get serialized directory
+        ///
+        /// @code
+        ///                     Directory::Path(Path::Parse("/path/to/directory")).toString() ; // "/path/to/directory"
+        /// @endcode
+        ///
+        /// @return             Serialized directory
+
+        String                  toString                                    ( ) const ;
+
         /// @brief              Rename directory
         ///
         /// @code
@@ -227,7 +239,7 @@ class Directory
         ///
         /// @param              [in] aName A directory name
 
-        void                    renameTo                                    (   const   types::String&              aName                                       ) ;
+        void                    renameTo                                    (   const   String&                     aName                                       ) ;
 
         /// @brief              Copy directory to directory
         ///
@@ -242,7 +254,7 @@ class Directory
         /// @return             Copied directory
 
         Directory               copyToDirectory                             (   const   Directory&                  aDestination,
-                                                                                const   types::String&              aNewDirectoryName                           =   "" ) const ;
+                                                                                const   String&                     aNewDirectoryName                           =   "" ) const ;
 
         /// @brief              Move directory to directory
         ///
@@ -265,13 +277,13 @@ class Directory
         ///                     directory.exists() ; // True
         /// @endcode
         ///
-        /// @param              [in] (optional) anOwnerPermissionsSet An owner permissions set
-        /// @param              [in] (optional) aGroupPermissionsSet A group permissions set
-        /// @param              [in] (optional) anOtherPermissionsSet An other permissions set
+        /// @param              [in] (optional) anOwnerPermissionSet An owner permission set
+        /// @param              [in] (optional) aGroupPermissionSet A group permission set
+        /// @param              [in] (optional) anOtherPermissionSet An other permission set
 
-        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionsSet                       =   fs::PermissionSet::RWX(),
-                                                                                const   fs::PermissionSet&          aGroupPermissionsSet                        =   fs::PermissionSet::RX(),
-                                                                                const   fs::PermissionSet&          anOtherPermissionsSet                       =   fs::PermissionSet::RX() ) ;
+        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionSet                       =   fs::PermissionSet::RWX(),
+                                                                                const   fs::PermissionSet&          aGroupPermissionSet                        =   fs::PermissionSet::RX(),
+                                                                                const   fs::PermissionSet&          anOtherPermissionSet                       =   fs::PermissionSet::RX() ) ;
 
         /// @brief              Delete directory
         ///
@@ -295,6 +307,16 @@ class Directory
 
         static Directory        Undefined                                   ( ) ;
 
+        /// @brief              Constructs a root directory
+        ///
+        /// @code
+        ///                     Directory directory = Directory::Root() ; "/"
+        /// @endcode
+        ///
+        /// @return             Root directory
+
+        static Directory        Root                                        ( ) ;
+
         /// @brief              Constructs a directory from a given path
         ///
         /// @code
@@ -305,11 +327,13 @@ class Directory
         /// @param              [in] aPath Path to directory
         /// @return             Directory
 
-        static Directory        Path                                        (   const   fs::Path&                   aDirectoryPath                              ) ;
+        static Directory        Path                                        (   const   fs::Path&                   aPath                                       ) ;
 
     private:
 
         fs::Path                path_ ;
+
+                                Directory                                   (   const   fs::Path&                   aPath                                       ) ;
 
 } ;
 
