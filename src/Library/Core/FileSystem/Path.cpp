@@ -166,6 +166,29 @@ bool                            Path::isRelative                            ( ) 
 
 }
 
+Path                            Path::getParentPath                         ( ) const
+{
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Path") ;
+    }
+
+    Path path ;
+
+    try
+    {
+        path.implUPtr_ = std::make_unique<Path::Impl>(implUPtr_->path_.parent_path()) ;
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return path ;
+
+}
+
 String                          Path::getLastElement                        ( ) const
 {
 

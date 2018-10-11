@@ -7,6 +7,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include <Library/Core/FileSystem/Directory.hpp>
 #include <Library/Core/FileSystem/File.hpp>
 
 #include <Global.test.hpp>
@@ -119,9 +120,11 @@ TEST (Library_Core_FileSystem_File, StreamOperator)
 
     {
 
+        const File file = File::Path(Path::Parse("/path/to/file")) ;
+
         testing::internal::CaptureStdout() ;
 
-        EXPECT_NO_THROW(std::cout << File::Path(Path::Parse("/path/to/file")) << std::endl) ;
+        EXPECT_NO_THROW(std::cout << file << std::endl) ;
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
 
@@ -193,6 +196,8 @@ TEST (Library_Core_FileSystem_File, GetName)
         EXPECT_EQ("/", File::Path(Path::Parse("/")).getName(true)) ;
         EXPECT_EQ("usr", File::Path(Path::Parse("/usr")).getName(true)) ;
         EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("/app/CMakeLists.txt")).getName(true)) ;
+        EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("./CMakeLists.txt")).getName(true)) ;
+        EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("../CMakeLists.txt")).getName(true)) ;
 
     }
 
@@ -203,6 +208,8 @@ TEST (Library_Core_FileSystem_File, GetName)
         EXPECT_EQ("/", File::Path(Path::Parse("/")).getName(false)) ;
         EXPECT_EQ("usr", File::Path(Path::Parse("/usr")).getName(false)) ;
         EXPECT_EQ("CMakeLists", File::Path(Path::Parse("/app/CMakeLists.txt")).getName(false)) ;
+        EXPECT_EQ("CMakeLists", File::Path(Path::Parse("./CMakeLists.txt")).getName(false)) ;
+        EXPECT_EQ("CMakeLists", File::Path(Path::Parse("../CMakeLists.txt")).getName(false)) ;
 
     }
 
@@ -265,33 +272,71 @@ TEST (Library_Core_FileSystem_File, GetPath)
     
 }
 
-// TEST (Library_Core_FileSystem_File, GetPermissions)
-// {
+TEST (Library_Core_FileSystem_File, GetPermissions)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
+    using library::core::fs::PermissionSet ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
 
-//     {
+    {
 
-//         FAIL() ;
+        const Path path = Path::Parse("/app/build") ;
 
-//     }
+        const File file = File::Path(path) ;
+
+        EXPECT_EQ(PermissionSet::RWX(), file.getPermissions()) ;
+
+    }
+
+    {
+
+        const Path path = Path::Parse("/app/build/Makefile") ;
+
+        const File file = File::Path(path) ;
+
+        EXPECT_EQ(PermissionSet::RW(), file.getPermissions()) ;
+
+    }
+
+    {
+
+        const Path path = Path::Parse("/app/bin/library-core.test") ;
+
+        const File file = File::Path(path) ;
+
+        EXPECT_EQ(PermissionSet::RWX(), file.getPermissions()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().getPermissions()) ;
+
+    }
     
-// }
+}
 
-// TEST (Library_Core_FileSystem_File, GetParentDirectory)
-// {
+TEST (Library_Core_FileSystem_File, GetParentDirectory)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+    using library::core::fs::Directory ;
 
-//     {
+    {
 
-//         FAIL() ;
+        EXPECT_EQ(Directory::Path(Path::Parse("/path/to")), File::Path(Path::Parse("/path/to/file")).getParentDirectory()) ;
 
-//     }
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().getParentDirectory()) ;
+
+    }
     
-// }
+}
 
 TEST (Library_Core_FileSystem_File, ToString)
 {
@@ -301,6 +346,8 @@ TEST (Library_Core_FileSystem_File, ToString)
 
     {
 
+        EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("CMakeLists.txt")).toString()) ;
+        EXPECT_EQ("./CMakeLists.txt", File::Path(Path::Parse("./CMakeLists.txt")).toString()) ;
         EXPECT_EQ("/app/CMakeLists.txt", File::Path(Path::Parse("/app/CMakeLists.txt")).toString()) ;
 
     }
@@ -355,19 +402,35 @@ TEST (Library_Core_FileSystem_File, ToString)
     
 // }
 
-// TEST (Library_Core_FileSystem_File, Create)
-// {
+TEST (Library_Core_FileSystem_File, Create)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
 
-//     {
+    {
 
-//         FAIL() ;
+        File file = File::Path(Path::Parse("/tmp/library-core-filesystem-file-create")) ;
 
-//     }
+        EXPECT_FALSE(file.exists()) ;
+
+        file.create() ;
+        
+        EXPECT_TRUE(file.exists()) ;
+
+        EXPECT_ANY_THROW(file.create()) ;
+
+        file.remove() ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().create()) ;
+
+    }
     
-// }
+}
 
 // TEST (Library_Core_FileSystem_File, Clear)
 // {
@@ -383,19 +446,35 @@ TEST (Library_Core_FileSystem_File, ToString)
     
 // }
 
-// TEST (Library_Core_FileSystem_File, Remove)
-// {
+TEST (Library_Core_FileSystem_File, Remove)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
 
-//     {
+    {
 
-//         FAIL() ;
+        File file = File::Path(Path::Parse("/tmp/library-core-filesystem-file-remove")) ;
 
-//     }
+        file.create() ;
+        
+        EXPECT_TRUE(file.exists()) ;
+
+        file.remove() ;
+
+        EXPECT_FALSE(file.exists()) ;
+
+        EXPECT_ANY_THROW(file.remove()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().remove()) ;
+
+    }
     
-// }
+}
 
 TEST (Library_Core_FileSystem_File, Undefined)
 {

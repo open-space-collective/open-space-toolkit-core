@@ -347,6 +347,31 @@ TEST (Library_Core_FileSystem_Path, IsRelative)
     
 }
 
+TEST (Library_Core_FileSystem_Path, GetParentPath)
+{
+
+    using library::core::fs::Path ;
+
+    {
+
+        EXPECT_EQ(Path::Parse("/"), Path::Parse("/abc").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc/").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc/..").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc/def").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc/def.ghi").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc/."), Path::Parse("/abc/./def.ghi").getParentPath()) ;
+        EXPECT_EQ(Path::Parse("/abc/.."), Path::Parse("/abc/../def.ghi").getParentPath()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Path::Undefined().getParentPath()) ;
+
+    }
+
+}
+
 TEST (Library_Core_FileSystem_Path, GetLastElement)
 {
 
@@ -354,26 +379,26 @@ TEST (Library_Core_FileSystem_Path, GetLastElement)
 
     {
 
-        EXPECT_EQ("/", Path::Parse("/").getLastElement()) << Path::Parse("/").getLastElement() ;
-        EXPECT_EQ("abc", Path::Parse("/abc").getLastElement()) << Path::Parse("/abc").getLastElement() ;
-        EXPECT_EQ(".", Path::Parse("/abc/").getLastElement()) << Path::Parse("/abc/").getLastElement() ;
-        EXPECT_EQ("..", Path::Parse("/abc/..").getLastElement()) << Path::Parse("/abc/..").getLastElement() ;
-        EXPECT_EQ("def", Path::Parse("/abc/def").getLastElement()) << Path::Parse("/abc/def").getLastElement() ;
-        EXPECT_EQ("def.ghi", Path::Parse("/abc/def.ghi").getLastElement()) << Path::Parse("/abc/def.ghi").getLastElement() ;
-        EXPECT_EQ("def.ghi", Path::Parse("/abc/./def.ghi").getLastElement()) << Path::Parse("/abc/./def.ghi").getLastElement() ;
-        EXPECT_EQ("def.ghi", Path::Parse("/abc/../def.ghi").getLastElement()) << Path::Parse("/abc/../def.ghi").getLastElement() ;
+        EXPECT_EQ("/", Path::Parse("/").getLastElement()) ;
+        EXPECT_EQ("abc", Path::Parse("/abc").getLastElement()) ;
+        EXPECT_EQ(".", Path::Parse("/abc/").getLastElement()) ;
+        EXPECT_EQ("..", Path::Parse("/abc/..").getLastElement()) ;
+        EXPECT_EQ("def", Path::Parse("/abc/def").getLastElement()) ;
+        EXPECT_EQ("def.ghi", Path::Parse("/abc/def.ghi").getLastElement()) ;
+        EXPECT_EQ("def.ghi", Path::Parse("/abc/./def.ghi").getLastElement()) ;
+        EXPECT_EQ("def.ghi", Path::Parse("/abc/../def.ghi").getLastElement()) ;
 
-        EXPECT_EQ(".", Path::Parse("./").getLastElement()) << Path::Parse("./").getLastElement() ;
-        EXPECT_EQ("abc", Path::Parse("./abc").getLastElement()) << Path::Parse("./abc").getLastElement() ;
-        EXPECT_EQ(".", Path::Parse("./abc/").getLastElement()) << Path::Parse("./abc/").getLastElement() ;
-        EXPECT_EQ("def", Path::Parse("./abc/def").getLastElement()) << Path::Parse("./abc/def").getLastElement() ;
-        EXPECT_EQ("def.ghi", Path::Parse("./abc/def.ghi").getLastElement()) << Path::Parse("./abc/def.ghi").getLastElement() ;
+        EXPECT_EQ(".", Path::Parse("./").getLastElement()) ;
+        EXPECT_EQ("abc", Path::Parse("./abc").getLastElement()) ;
+        EXPECT_EQ(".", Path::Parse("./abc/").getLastElement()) ;
+        EXPECT_EQ("def", Path::Parse("./abc/def").getLastElement()) ;
+        EXPECT_EQ("def.ghi", Path::Parse("./abc/def.ghi").getLastElement()) ;
 
-        EXPECT_EQ(".", Path::Parse("../").getLastElement()) << Path::Parse("../").getLastElement() ;
-        EXPECT_EQ("abc", Path::Parse("../abc").getLastElement()) << Path::Parse("../abc").getLastElement() ;
-        EXPECT_EQ(".", Path::Parse("../abc/").getLastElement()) << Path::Parse("../abc/").getLastElement() ;
-        EXPECT_EQ("def", Path::Parse("../abc/def").getLastElement()) << Path::Parse("../abc/def").getLastElement() ;
-        EXPECT_EQ("def.ghi", Path::Parse("../abc/def.ghi").getLastElement()) << Path::Parse("../abc/def.ghi").getLastElement() ;
+        EXPECT_EQ(".", Path::Parse("../").getLastElement()) ;
+        EXPECT_EQ("abc", Path::Parse("../abc").getLastElement()) ;
+        EXPECT_EQ(".", Path::Parse("../abc/").getLastElement()) ;
+        EXPECT_EQ("def", Path::Parse("../abc/def").getLastElement()) ;
+        EXPECT_EQ("def.ghi", Path::Parse("../abc/def.ghi").getLastElement()) ;
 
     }
 

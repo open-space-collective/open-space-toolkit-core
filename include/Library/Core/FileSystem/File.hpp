@@ -14,8 +14,6 @@
 #include <Library/Core/FileSystem/PermissionSet.hpp>
 #include <Library/Core/Types/String.hpp>
 
-#include <ostream>
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace library
@@ -31,7 +29,9 @@ class Directory ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @brief                      Computer resource for recording data discretely in a computer storage device.
+/// @brief                      Computer resource for recording data discretely in a computer storage device
+///
+/// @ref                        https://en.wikipedia.org/wiki/Computer_file
 
 class File
 {
@@ -42,14 +42,14 @@ class File
         ///
         /// @param              [in] aFile A file
 
-                                File                                        (   const   File&                       aFile                                       ) ;
+                                File                                        (   const   File&                       aFile                                       ) = default ;
 
         /// @brief              Copy assignment operator
         ///
         /// @param              [in] aFile A file
         /// @return             File
 
-        File&                   operator =                                  (   const   File&                       aFile                                       ) ;
+        File&                   operator =                                  (   const   File&                       aFile                                       ) = default ;
 
         /// @brief              Equal to operator
         ///
@@ -170,6 +170,10 @@ class File
 
         fs::Directory           getParentDirectory                          ( ) const ;
 
+        /// @brief              Get file contents
+        ///
+        /// @return             File contents
+
         String                  getContents                                 ( ) const ;
 
         /// @brief              Get serialized file
@@ -229,13 +233,13 @@ class File
         ///                     file.exists() ; // True
         /// @endcode
         ///
-        /// @param              [in] (optional) anOwnerPermissionsSet An owner permissions set
-        /// @param              [in] (optional) aGroupPermissionsSet A group permissions set
-        /// @param              [in] (optional) anOtherPermissionsSet An other permissions set
+        /// @param              [in] (optional) anOwnerPermissionSet An owner permission set
+        /// @param              [in] (optional) aGroupPermissionSet A group permission set
+        /// @param              [in] (optional) anOtherPermissionSet An other permission set
 
-        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionsSet                       =   fs::PermissionSet::RW(),
-                                                                                const   fs::PermissionSet&          aGroupPermissionsSet                        =   fs::PermissionSet::R(),
-                                                                                const   fs::PermissionSet&          anOtherPermissionsSet                       =   fs::PermissionSet::R() ) ;
+        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionSet                       =   fs::PermissionSet::RW(),
+                                                                                const   fs::PermissionSet&          aGroupPermissionSet                        =   fs::PermissionSet::R(),
+                                                                                const   fs::PermissionSet&          anOtherPermissionSet                       =   fs::PermissionSet::R() ) ;
 
         /// @brief              Clear file contents
         ///

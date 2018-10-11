@@ -155,6 +155,17 @@ class Path
 
         bool                    isRelative                                  ( ) const ;
 
+        /// @brief              Get parent path of path
+        ///
+        /// @code
+        ///                     Path path = Path::Parse("/path/to/file") ;
+        ///                     Path parentPath = path.getParentPath() ; // /path/to
+        /// @endcode
+        ///
+        /// @return             Parent path of path
+
+        Path                    getParentPath                               ( ) const ;
+
         /// @brief              Get last element of path
         ///
         /// @code
