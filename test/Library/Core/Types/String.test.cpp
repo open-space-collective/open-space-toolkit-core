@@ -246,6 +246,51 @@ TEST (Library_Core_Types_String, Trim)
 
 }
 
+TEST (Library_Core_Types_String, Replace)
+{
+
+    using library::core::types::String ;
+
+    // Char
+
+    {
+
+        EXPECT_EQ("", String("").replace('a', 'a')) ;
+        EXPECT_EQ("bbc", String("abc").replace('a', 'b')) ;
+        EXPECT_EQ("abc-", String("abc\n").replace('\n', '-')) ;
+        EXPECT_EQ("abc-", String("abc\r").replace('\r', '-')) ;
+        EXPECT_EQ("abc-\n", String("abc\r\n").replace('\r', '-')) ;
+        EXPECT_EQ("-abc", String(" abc").replace(' ', '-')) ;
+        EXPECT_EQ("---abc", String("   abc").replace(' ', '-')) ;
+        EXPECT_EQ("abc-", String("abc ").replace(' ', '-')) ;
+        EXPECT_EQ("abc---", String("abc   ").replace(' ', '-')) ;
+        EXPECT_EQ("-abc-", String(" abc ").replace(' ', '-')) ;
+        EXPECT_EQ("---abc---", String("   abc   ").replace(' ', '-')) ;
+        EXPECT_EQ("---ab-cd---", String("   ab cd   ").replace(' ', '-')) ;
+
+    }
+
+    // String
+
+    {
+
+        EXPECT_EQ("", String("").replace("", "")) ;
+        EXPECT_EQ("bbc", String("abc").replace("a", "b")) ;
+        EXPECT_EQ("abc", String("abc\n").replace("\n", "")) ;
+        EXPECT_EQ("abc", String("abc\r").replace("\r", "")) ;
+        EXPECT_EQ("abc", String("abc\r\n").replace("\r\n", "")) ;
+        EXPECT_EQ("abc", String(" abc").replace(" ", "")) ;
+        EXPECT_EQ("abc", String("   abc").replace("   ", "")) ;
+        EXPECT_EQ("abc", String("abc ").replace(" ", "")) ;
+        EXPECT_EQ("abc", String("abc   ").replace(" ", "")) ;
+        EXPECT_EQ("abc", String(" abc ").replace(" ", "")) ;
+        EXPECT_EQ("abc", String("   abc   ").replace(" ", "")) ;
+        EXPECT_EQ("ab cd", String("   ab cd   ").replace("   ", "")) ;
+
+    }
+
+}
+
 TEST (Library_Core_Types_String, Empty)
 {
 
