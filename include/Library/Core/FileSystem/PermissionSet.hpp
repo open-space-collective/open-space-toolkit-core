@@ -272,7 +272,9 @@ class PermissionSet
 
     private:
 
-        uint8_t permissions_ ;
+        bool                    read_ ;
+        bool                    write_ ;
+        bool                    execute_ ;
 
 } ;
 
