@@ -29,6 +29,39 @@ namespace fs
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+                                File::File                                  (   const   File&                       aFile                                       )
+                                :   path_(aFile.path_),
+                                    fileStreamUPtr_(nullptr)
+{
+
+}
+
+File&                           File::operator =                            (   const   File&                       aFile                                       )
+{
+
+    if (this != &aFile)
+    {
+
+        path_ = aFile.path_ ;
+
+        fileStreamUPtr_.reset(nullptr) ;
+
+    }
+
+    return *this ;
+
+}
+
+                                File::~File                                 ( )
+{
+
+    if (this->isDefined() && this->exists() && this->isOpen())
+    {
+        this->close() ;
+    }
+
+}
+
 bool                            File::operator ==                           (   const   File&                       aFile                                       ) const
 {
 
@@ -89,7 +122,19 @@ bool                            File::exists                                ( ) 
 
 }
 
-String                          File::getName                               (           bool                        withExtension                               ) const
+bool                            File::isOpen                                ( ) const
+{
+    
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    return (fileStreamUPtr_ != nullptr) && fileStreamUPtr_->is_open() ;
+
+}
+
+String                          File::getName                               (   const   bool                        withExtension                               ) const
 {
 
     if (!this->isDefined())
@@ -300,7 +345,7 @@ String                          File::getContents                           ( ) 
         throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
-    std::fstream fileStream(path_.toString(), std::fstream::in) ;
+    std::fstream fileStream { path_.toString(), std::fstream::in } ;
 
     if (!fileStream.is_open())
     {
@@ -337,6 +382,104 @@ String                          File::toString                              ( ) 
     }
 
     return path_.toString() ;
+
+}
+
+void                            File::open                                  (   const   File::OpenMode&             anOpenMode                                  )
+{
+
+    // https://en.cppreference.com/w/cpp/io/ios_base/openmode
+
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    if (this->isOpen())
+    {
+        throw library::core::error::RuntimeError("File [{}] is already open.", this->toString()) ;
+    }
+
+    std::ios_base::openmode fileOpenMode ;
+
+    switch (anOpenMode)
+    {
+
+        case File::OpenMode::Read:
+            fileOpenMode = std::ios::in ;
+            break ;
+
+        case File::OpenMode::Write:
+            fileOpenMode = std::ios::out ;
+            break ;
+
+        case File::OpenMode::Binary:
+            fileOpenMode = std::ios::out | std::ios::binary ;
+            break ;
+
+        case File::OpenMode::Append:
+            fileOpenMode = std::ios::out | std::ios::app ;
+            break ;
+
+        case File::OpenMode::AtEnd:
+            fileOpenMode = std::ios::out | std::ios::ate ;
+            break ;
+
+        case File::OpenMode::Truncate:
+            fileOpenMode = std::ios::out | std::ios::trunc ;
+            break ;
+
+        default:
+            throw library::core::error::runtime::Wrong("Open mode") ;
+            break ;
+
+    }
+
+    fileStreamUPtr_ = std::make_unique<std::fstream>(path_.toString(), fileOpenMode) ;
+
+	if (!fileStreamUPtr_->is_open())
+    {
+        throw library::core::error::RuntimeError("Error when opening file [{}].", this->toString()) ;
+    }
+
+}
+        
+void                            File::close                                 ( )
+{
+
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    if (!this->isOpen())
+    {
+        throw library::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
+    }
+
+    if (fileStreamUPtr_->is_open())
+    {
+        fileStreamUPtr_->close() ;
+    }
+
+    fileStreamUPtr_.reset(nullptr) ;
+
+}
+
+std::fstream&                   File::accessStream                          ( )
+{
+
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    if (!this->isOpen())
+    {
+        throw library::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
+    }
+
+    return *fileStreamUPtr_ ;
 
 }
 
@@ -447,7 +590,8 @@ File                            File::Path                                  (   
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                                 File::File                                  (   const   fs::Path&                   aPath                                       )
-                                :   path_(aPath)
+                                :   path_(aPath),
+                                    fileStreamUPtr_(nullptr)
 {
 
 }

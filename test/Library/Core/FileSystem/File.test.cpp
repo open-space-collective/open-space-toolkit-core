@@ -96,6 +96,22 @@ TEST (Library_Core_FileSystem_File, StreamOperator)
     
 }
 
+TEST (Library_Core_FileSystem_File, FileStreamOperator)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        const File file = File::Path(Path::Parse("/tmp/test.txt")) ;
+
+        FAIL() ;
+
+    }
+
+}
+
 TEST (Library_Core_FileSystem_File, IsDefined)
 {
 
@@ -145,6 +161,27 @@ TEST (Library_Core_FileSystem_File, Exists)
 
     }
     
+}
+
+TEST (Library_Core_FileSystem_File, IsOpen)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        FAIL() ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().isOpen()) ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).isOpen()) ;
+
+    }
+
 }
 
 TEST (Library_Core_FileSystem_File, GetName)
@@ -323,6 +360,39 @@ TEST (Library_Core_FileSystem_File, ToString)
 
     }
     
+}
+
+TEST (Library_Core_FileSystem_File, Open)
+{
+
+    {
+
+        FAIL() ;
+
+    }
+
+}
+
+TEST (Library_Core_FileSystem_File, Close)
+{
+
+    {
+
+        FAIL() ;
+
+    }
+
+}
+
+TEST (Library_Core_FileSystem_File, AccessStream)
+{
+
+    {
+
+        FAIL() ;
+
+    }
+
 }
 
 // TEST (Library_Core_FileSystem_File, RenameTo)

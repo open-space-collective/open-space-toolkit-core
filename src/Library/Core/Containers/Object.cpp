@@ -522,6 +522,30 @@ std::ostream&                   operator <<                                 (   
 
 }
 
+fs::File&                       operator <<                                 (           fs::File&                   aFile,
+                                                                                const   Object&                     anObject                                    )
+{
+
+    // [TBM] This should be improved, supporting format manipulators and iterative string generation
+
+    aFile.accessStream() << anObject.toString(Object::Format::JSON) ;
+
+    return aFile ;
+
+}
+
+fs::File&                       operator >>                                 (           fs::File&                   aFile,
+                                                                                        Object&                     anObject                                    )
+{
+
+    // [TBM] This should be improved, supporting format manipulators
+
+    anObject = Object::Load(aFile, Object::Format::JSON) ;
+
+    return aFile ;
+    
+}
+
 bool                            Object::isDefined                           ( ) const
 {
     return objectImplUPtr_ != nullptr ;
@@ -1047,20 +1071,25 @@ Object                          Object::ParseJson                           (   
 
 }
 
-// Object                          Object::Load                                (   const   fs::File&                   aFile,
-//                                                                                 const   Object::Format&             aFormat                                     )
-// {
+Object                          Object::Load                                (   const   fs::File&                   aFile,
+                                                                                const   Object::Format&             aFormat                                     )
+{
 
-//     LOG_SCOPE("Object", "Load") ;
+    LOG_SCOPE("Object", "Load") ;
 
-//     throw library::core::error::runtime::ToBeImplemented() ;
+    if (!aFile.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("File") ;
+    }
 
-//     (void) aFile ;
-//     (void) aFormat ;
+    if (!aFile.exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", aFile.toString()) ;
+    }
 
-//     return Object::Undefined() ;
+    return Object::Parse(aFile.getContents(), aFormat) ;
 
-// }
+}
 
 types::String                   Object::StringFromType                      (   const   Object::Type&               aType                                       )
 {

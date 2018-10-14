@@ -13,6 +13,10 @@
 #include <Library/Core/FileSystem/Path.hpp>
 #include <Library/Core/FileSystem/PermissionSet.hpp>
 #include <Library/Core/Types/String.hpp>
+#include <Library/Core/Types/Unique.hpp>
+#include <Library/Core/Error.hpp>
+
+#include <fstream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -29,6 +33,10 @@ class Directory ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using library::core::types::Unique ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /// @brief                      Computer resource for recording data discretely in a computer storage device
 ///
 /// @ref                        https://en.wikipedia.org/wiki/Computer_file
@@ -38,18 +46,37 @@ class File
 
     public:
 
+        /// @brief              File open mode
+
+        enum class OpenMode
+        {
+
+            Undefined,          ///< Undefined mode
+            Read,               ///< Open for reading
+            Write,              ///< Open for writing
+            Binary,             ///< Open in binary mode
+            Append,             ///< Seek to the end of stream before each write
+            AtEnd,              ///< Seek to the end of stream immediately after open
+            Truncate            ///< Discard the contents of the stream when opening
+
+        } ;
+
         /// @brief              Copy constructor
         ///
         /// @param              [in] aFile A file
 
-                                File                                        (   const   File&                       aFile                                       ) = default ;
+                                File                                        (   const   File&                       aFile                                       ) ;
 
         /// @brief              Copy assignment operator
         ///
         /// @param              [in] aFile A file
         /// @return             File
 
-        File&                   operator =                                  (   const   File&                       aFile                                       ) = default ;
+        File&                   operator =                                  (   const   File&                       aFile                                       ) ;
+
+        /// @brief              Destructor
+        
+                                ~File                                       ( ) ;
 
         /// @brief              Equal to operator
         ///
@@ -76,6 +103,29 @@ class File
         /// @return             True if files are not equal
 
         bool                    operator !=                                 (   const   File&                       aFile                                       ) const ;
+
+        /// @brief              Stream operator
+        ///
+        ///                     Write object to file.
+        ///
+        /// @param              [in] anObject An input object
+
+        template <class T>
+        File&                   operator <<                                 (   const   T&                          anObject                                    )
+        {
+
+            try
+            {
+                this->accessStream() << anObject ;
+            }
+            catch (const std::exception& anException)
+            {
+                throw library::core::error::RuntimeError(anException.what()) ;
+            }
+
+            return *this ;
+
+        }
 
         /// @brief              Output stream operator
         ///
@@ -113,6 +163,19 @@ class File
 
         bool                    exists                                      ( ) const ;
 
+        /// @brief              Check if file is open
+        ///
+        /// @code
+        ///                     File file = File::Path(Path::Parse("/path/to/file")) ;
+        ///                     file.isOpen() ; // False
+        ///                     file.open() ;
+        ///                     file.isOpen() ; // True
+        /// @endcode
+        ///
+        /// @return             True if file is open
+
+        bool                    isOpen                                      ( ) const ;
+
         /// @brief              Get file name
         ///
         /// @code
@@ -124,7 +187,7 @@ class File
         /// @param              [in] (optional) withExtension If true, add extension to filename
         /// @return             File name
 
-        String                  getName                                     (           bool                        withExtension                               =   true) const ;
+        String                  getName                                     (   const   bool                        withExtension                               =   true) const ;
 
         /// @brief              Get file extension
         ///
@@ -186,6 +249,22 @@ class File
 
         String                  toString                                    ( ) const ;
 
+        /// @brief              Open file
+        ///
+        /// @param              [in] anOpenMode A file open mode
+
+        void                    open                                        (   const   File::OpenMode&             anOpenMode                                  ) ;
+
+        /// @brief              Close file
+
+        void                    close                                       ( ) ;
+
+        /// @brief              Access file stream
+        ///
+        /// @return             Reference to file stream
+
+        std::fstream&           accessStream                                ( ) ;
+
         /// @brief              Rename file
         ///
         /// @code
@@ -237,9 +316,9 @@ class File
         /// @param              [in] (optional) aGroupPermissionSet A group permission set
         /// @param              [in] (optional) anOtherPermissionSet An other permission set
 
-        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionSet                       =   fs::PermissionSet::RW(),
-                                                                                const   fs::PermissionSet&          aGroupPermissionSet                        =   fs::PermissionSet::R(),
-                                                                                const   fs::PermissionSet&          anOtherPermissionSet                       =   fs::PermissionSet::R() ) ;
+        void                    create                                      (   const   fs::PermissionSet&          anOwnerPermissionSet                        =   fs::PermissionSet::RW(),
+                                                                                const   fs::PermissionSet&          aGroupPermissionSet                         =   fs::PermissionSet::R(),
+                                                                                const   fs::PermissionSet&          anOtherPermissionSet                        =   fs::PermissionSet::R() ) ;
 
         /// @brief              Clear file contents
         ///
@@ -289,6 +368,8 @@ class File
     private:
 
         fs::Path                path_ ;
+
+        Unique<std::fstream>    fileStreamUPtr_ ;
 
                                 File                                        (   const   fs::Path&                   aPath                                       ) ;
 

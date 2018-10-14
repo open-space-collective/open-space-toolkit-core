@@ -980,20 +980,9 @@ Real                            Real::CanParse                              (   
         return true ;
     }
 
-    try
-    {
-        
-        const Real::ValueType value = boost::lexical_cast<Real::ValueType>(aString) ;
+    Real::ValueType real ;
 
-        return value == value ;
-
-    }
-    catch (const boost::bad_lexical_cast&)
-    {
-        return false ;
-    }
-
-    return true ;
+    return boost::conversion::try_lexical_convert<Real::ValueType>(aString, real) ;
 
 }
 
