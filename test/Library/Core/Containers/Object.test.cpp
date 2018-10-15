@@ -7,6 +7,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include <Library/Core/FileSystem/File.hpp>
 #include <Library/Core/Types/Integer.hpp>
 #include <Library/Core/Types/Real.hpp>
 #include <Library/Core/Types/String.hpp>
@@ -232,6 +233,118 @@ TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
         EXPECT_FALSE(object[1].isDefined()) ;
         EXPECT_FALSE(object[2].isDefined()) ;
         EXPECT_EQ("abc", object[3].getString()) ;
+
+    }
+    
+}
+
+TEST (Library_Core_Containers_Object, StreamOperator)
+{
+
+    using library::core::ctnr::Object ;
+
+    {
+
+        Object object = Object::Undefined() ;
+
+        object["Integer"] = Object::Integer(123) ;
+        object["Real"] = Object::Real(123.456) ;
+        object["String"] = Object::String("Hello World!") ;
+
+        testing::internal::CaptureStdout() ;
+
+        EXPECT_NO_THROW(std::cout << object << std::endl) ;
+
+        EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
+{
+
+    using library::core::ctnr::Object ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        Object object = Object::Undefined() ;
+
+        object["Integer"] = Object::Integer(123) ;
+        object["Real"] = Object::Real(123.456) ;
+        object["String"] = Object::String("Hello World!") ;
+
+        File file = File::Path(Path::Parse("/tmp/test.json")) ;
+
+        file.create() ;
+        
+        file.open(File::OpenMode::Truncate) ;
+
+        file << object ;
+
+        file.close() ;
+
+        EXPECT_TRUE(file.exists()) ;
+        EXPECT_EQ("{\"Integer\":123,\"Real\":123.456,\"String\":\"Hello World!\"}", file.getContents()) ;
+
+        file.remove() ;
+
+    }
+
+    {
+
+        Object object = Object::Undefined() ;
+
+        object["Integer"] = Object::Integer(123) ;
+        object["Real"] = Object::Real(123.456) ;
+        object["String"] = Object::String("Hello World!") ;
+
+        File file = File::Undefined() ;
+
+        EXPECT_ANY_THROW(file << object) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Object, InputFileStreamOperator)
+{
+
+    using library::core::ctnr::Object ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        Object object = Object::Undefined() ;
+
+        object["Integer"] = Object::Integer(123) ;
+        object["Real"] = Object::Real(123.456) ;
+        object["String"] = Object::String("Hello World!") ;
+
+        File file = File::Path(Path::Parse("/tmp/test.json")) ;
+
+        file.create() ;
+        
+        file.open(File::OpenMode::Truncate) ;
+
+        file << object ;
+
+        file.close() ;
+
+        Object loadedObject = Object::Undefined() ;
+
+        file.open(File::OpenMode::Read) ;
+
+        file >> loadedObject ;
+
+        file.close() ;
+
+        EXPECT_EQ(object, loadedObject) ;
+
+        file.remove() ;
 
     }
     

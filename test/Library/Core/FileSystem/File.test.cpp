@@ -96,6 +96,39 @@ TEST (Library_Core_FileSystem_File, StreamOperator)
     
 }
 
+TEST (Library_Core_FileSystem_File, FileStreamOperator)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        File file = File::Path(Path::Parse("/tmp/file.txt")) ;
+
+        file.create() ;
+
+        file.open(File::OpenMode::Truncate) ;
+
+        file << "Hello World!" ;
+
+        file.close() ;
+
+        EXPECT_EQ("Hello World!", file.getContents()) ;
+
+        file.remove() ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined() << "Hello World!") ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")) << "Hello World!") ;
+
+    }
+
+}
+
 TEST (Library_Core_FileSystem_File, IsDefined)
 {
 
@@ -145,6 +178,37 @@ TEST (Library_Core_FileSystem_File, Exists)
 
     }
     
+}
+
+TEST (Library_Core_FileSystem_File, IsOpen)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        File file = File::Path(Path::Parse("/app/CMakeLists.txt")) ;
+
+        EXPECT_FALSE(file.isOpen()) ;
+
+        file.open(File::OpenMode::Read) ;
+
+        EXPECT_TRUE(file.isOpen()) ;
+
+        file.close() ;
+
+        EXPECT_FALSE(file.isOpen()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().isOpen()) ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).isOpen()) ;
+
+    }
+
 }
 
 TEST (Library_Core_FileSystem_File, GetName)
@@ -325,6 +389,101 @@ TEST (Library_Core_FileSystem_File, ToString)
     
 }
 
+TEST (Library_Core_FileSystem_File, Open)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        File file = File::Path(Path::Parse("/app/CMakeLists.txt")) ;
+
+        EXPECT_FALSE(file.isOpen()) ;
+
+        file.open(File::OpenMode::Read) ;
+
+        EXPECT_TRUE(file.isOpen()) ;
+
+        EXPECT_ANY_THROW(file.open(File::OpenMode::Read)) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().open(File::OpenMode::Read)) ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).open(File::OpenMode::Read)) ;
+
+    }
+
+}
+
+TEST (Library_Core_FileSystem_File, Close)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        File file = File::Path(Path::Parse("/app/CMakeLists.txt")) ;
+
+        EXPECT_FALSE(file.isOpen()) ;
+
+        file.open(File::OpenMode::Read) ;
+
+        EXPECT_TRUE(file.isOpen()) ;
+
+        file.close() ;
+
+        EXPECT_FALSE(file.isOpen()) ;
+
+        EXPECT_ANY_THROW(file.close()) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().close()) ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).close()) ;
+
+    }
+
+}
+
+TEST (Library_Core_FileSystem_File, AccessStream)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+
+    {
+
+        File file = File::Path(Path::Parse("/tmp/file.txt")) ;
+
+        file.create() ;
+
+        file.open(File::OpenMode::Truncate) ;
+
+        file.accessStream() << "Hello World!" ;
+
+        file.close() ;
+
+        EXPECT_EQ("Hello World!", file.getContents()) ;
+
+        file.remove() ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(File::Undefined().accessStream()) ;
+        EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).accessStream()) ;
+
+    }
+
+}
+
 // TEST (Library_Core_FileSystem_File, RenameTo)
 // {
 
@@ -353,19 +512,48 @@ TEST (Library_Core_FileSystem_File, ToString)
     
 // }
 
-// TEST (Library_Core_FileSystem_File, MoveToDirectory)
-// {
+TEST (Library_Core_FileSystem_File, MoveToDirectory)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+    using library::core::fs::Directory ;
 
-//     {
+    {
 
-//         FAIL() ;
+        File file = File::Path(Path::Parse("/tmp/file")) ;
+        Directory directory = Directory::Path(Path::Parse("/tmp/destination")) ;
 
-//     }
+        file.create() ;
+        directory.create() ;
+
+        file.moveToDirectory(directory) ;
+        
+        EXPECT_EQ("/tmp/destination/file", file.getPath().toString()) ;
+
+        file.remove() ;
+        directory.remove() ;
+
+    }
+
+    {
+
+        File file = File::Path(Path::Parse("/tmp/file")) ;
+        Directory directory = Directory::Path(Path::Parse("/tmp/destination")) ;
+
+        file.create() ;
+        directory.create() ;
+
+        EXPECT_ANY_THROW(file.moveToDirectory(Directory::Undefined())) ;
+        EXPECT_ANY_THROW(File::Undefined().moveToDirectory(directory)) ;
+        EXPECT_ANY_THROW(File::Undefined().moveToDirectory(Directory::Undefined())) ;
+
+        file.remove() ;
+        directory.remove() ;
+
+    }
     
-// }
+}
 
 TEST (Library_Core_FileSystem_File, Create)
 {
@@ -375,7 +563,7 @@ TEST (Library_Core_FileSystem_File, Create)
 
     {
 
-        File file = File::Path(Path::Parse("/tmp/library-core-filesystem-file-create")) ;
+        File file = File::Path(Path::Parse("/tmp/file")) ;
 
         EXPECT_FALSE(file.exists()) ;
 

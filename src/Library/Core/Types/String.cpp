@@ -160,6 +160,26 @@ String&                         String::trim                                ( )
     
 }
 
+String&                         String::replace                             (   const   char                        aCharacter,
+                                                                                const   char                        aNewCharacter                               )
+{
+
+    std::replace(this->begin(), this->end(), aCharacter, aNewCharacter) ;
+
+    return *this ;
+
+}
+
+String&                         String::replace                             (   const   String&                     aString,
+                                                                                const   String&                     aNewString                                  )
+{
+
+    boost::replace_all(*this, aString, aNewString) ;
+
+    return *this ;
+
+}
+
 String                          String::Empty                               ( )
 
 {

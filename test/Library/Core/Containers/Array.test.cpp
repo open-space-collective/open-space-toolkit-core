@@ -564,6 +564,69 @@ TEST (Library_Core_Containers_Array, Find)
 
 }
 
+TEST (Library_Core_Containers_Array, Map)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::String ;
+    using library::core::ctnr::Array ;
+
+    {
+
+        const Array<String> strings = { "1", "2", "3" } ;
+
+        const Array<Integer> integers = strings.map<Integer>([] (const String& aString) -> Integer { return Integer::Parse(aString) ; }) ;
+
+        ASSERT_EQ(3, integers.getSize()) ;
+
+        EXPECT_EQ(1, integers.at(0)) ;
+        EXPECT_EQ(2, integers.at(1)) ;
+        EXPECT_EQ(3, integers.at(2)) ;
+
+    }
+
+    {
+
+        EXPECT_TRUE(Array<String>::Empty().map<String>([] (const String& aString) -> String { return aString ; }).isEmpty()) ;
+
+    }
+
+}
+
+TEST (Library_Core_Containers_Array, Reduce)
+{
+
+    using library::core::types::Integer ;
+    using library::core::ctnr::Array ;
+
+    {
+
+        const Array<Integer> integers = { 1, 2, 3 } ;
+
+        const Integer reducedInteger = integers.reduce(std::plus<Integer>()) ;
+
+        EXPECT_EQ(6, reducedInteger) ;
+
+    }
+
+    {
+
+        const Array<Integer> integers = { 1, 2, 3 } ;
+
+        const Integer reducedInteger = integers.reduce([] (const Integer& anAccumulator, const Integer& aValue) -> Integer { return anAccumulator + aValue ; }) ;
+
+        EXPECT_EQ(6, reducedInteger) ;
+
+    }
+
+    {
+
+        // EXPECT_ANY_THROW(Array<Integer>::Empty().reduce([] () -> ddd { return aaa ; })) ;
+
+    }
+
+}
+
 TEST (Library_Core_Containers_Array, Add)
 {
 

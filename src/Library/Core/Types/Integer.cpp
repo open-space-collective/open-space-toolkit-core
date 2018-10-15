@@ -1064,17 +1064,10 @@ bool                            Integer::CanParse                           (   
     {
         return true ;
     }
-    
-    try
-    {
-        boost::lexical_cast<Integer::ValueType>(aString) ;
-    }
-    catch (const boost::bad_lexical_cast&)
-    {
-        return false ;
-    }
 
-    return true ;
+    Integer::ValueType integer ;
+
+    return boost::conversion::try_lexical_convert<Integer::ValueType>(aString, integer) ;
 
 }
 

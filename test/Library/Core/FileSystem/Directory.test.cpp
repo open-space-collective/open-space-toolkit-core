@@ -176,19 +176,36 @@ TEST (Library_Core_FileSystem_Directory, IsEmpty)
 
 }
 
-// TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
-// {
+TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+    using library::core::fs::Path ;
+    using library::core::fs::Directory ;
     
-//     {
+    {
 
-//         FAIL() ;
+        const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
 
-//     }
+        EXPECT_TRUE(directory.containsFileWithName("exec.sh")) ;
+        EXPECT_TRUE(directory.containsFileWithName("start.sh")) ;
 
-// }
+        EXPECT_FALSE(directory.containsFileWithName("docker")) ;
+        EXPECT_FALSE(directory.containsFileWithName("helpers")) ;
+        EXPECT_FALSE(directory.containsFileWithName("abc")) ;
+
+    }
+
+    {
+
+        const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
+
+        EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc")) ;
+        EXPECT_ANY_THROW(directory.containsFileWithName("")) ;
+        EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc")) ;
+        
+    }
+
+}
 
 // TEST (Library_Core_FileSystem_Directory, ContainsDirectoryWithName)
 // {
@@ -357,25 +374,37 @@ TEST (Library_Core_FileSystem_Directory, GetParentDirectory)
 
 // }
 
-// TEST (Library_Core_FileSystem_Directory, GetDirectories)
-// {
+TEST (Library_Core_FileSystem_Directory, GetDirectories)
+{
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+    using library::core::types::String ;
+    using library::core::ctnr::Array ;
+    using library::core::fs::Path ;
+    using library::core::fs::Directory ;
     
-//     {
+    {
 
-//         FAIL() ;
+        const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
 
-//     }
+        const Array<Directory> subDirectories = directory.getDirectories() ;
 
-//     {
+        EXPECT_EQ(2, subDirectories.getSize()) ;
 
-//         EXPECT_ANY_THROW(Directory::Undefined().getDirectories()) ;
+        const Array<String> subDirectoryNames = subDirectories.map<String>([] (const Directory& aDirectory) -> String { return aDirectory.getName() ; }) ;
 
-//     }
+        const Array<String> referenceSubDirectoryNames = {"docker", "helpers"} ;
 
-// }
+        EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames) ;
+
+    }
+
+    {
+
+        EXPECT_ANY_THROW(Directory::Undefined().getDirectories()) ;
+
+    }
+
+}
 
 TEST (Library_Core_FileSystem_Directory, ToString)
 {

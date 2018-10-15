@@ -248,6 +248,79 @@ typename Array<T>::ConstIterator Array<T>::find                             (   
     return std::find(this->begin(), this->end(), anElement) ;
 }
 
+template <typename T, typename U>
+U                               foldLeft                                    (   const   std::vector<T>&             data,
+                                                                                const   U&                          initialValue,
+                                                                                const   std::function<U (U, T)>&    aFoldFunction                               )
+{
+
+    typedef typename Array<T>::ConstIterator Iterator ;
+    
+    U accumulator = initialValue ;
+    
+    Iterator end = data.cend() ;
+    
+    for (Iterator it = data.cbegin(); it != end; ++it)
+    {
+        accumulator = aFoldFunction(accumulator, *it) ;
+    }
+
+    return accumulator ;
+
+}
+
+                                template <class T>
+                                template <class U>
+Array<U>                        Array<T>::map                               (   const   std::function<U (T)>        aMappingFunction                            ) const
+{
+
+    Array<U> result = Array<U>::Empty() ;
+
+    result.reserve(this->getSize()) ;
+
+    foldLeft<T, Array<U>&>
+    (
+        (*this), result, [aMappingFunction] (Array<U>& anArray, T aValue) -> Array<U>&
+        {
+            
+            anArray.add(aMappingFunction(aValue)) ;
+            
+            return anArray;
+
+        }
+    ) ;
+
+    return result ;
+    
+}
+
+                                template <class T>
+T                               Array<T>::reduce                            (   const   std::function<T (T, T)>&    aReduceFunction                             ) const
+{
+
+    typedef typename Array<T>::ConstIterator Iterator ;
+
+    if (this->isEmpty())
+    {
+        throw library::core::error::RuntimeError("Array is empty.") ;
+    }
+
+    Iterator it = this->cbegin() ;
+    Iterator end = this->cend() ;
+
+    T accumulator = *it ;
+    
+    ++it ;
+    
+    for (; it != end; ++it)
+    {
+        accumulator = aReduceFunction(accumulator, *it) ;
+    }
+    
+    return accumulator ;
+
+}
+
                                 template <class T>
 Array<const T*>                 Array<T>::accessWhere                       (   const   std::function<bool(const T&)>& aPredicate                               ) const
 {

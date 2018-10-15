@@ -19,6 +19,7 @@
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Unique.hpp>
 
+#include <fstream>
 #include <ostream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -138,6 +139,12 @@ class Object
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Object&                     anObject                                    ) ;
 
+        friend fs::File&        operator <<                                 (           fs::File&                   aFile,
+                                                                                const   Object&                     anObject                                    ) ;
+
+        friend fs::File&        operator >>                                 (           fs::File&                   aFile,
+                                                                                        Object&                     anObject                                    ) ;
+
         bool                    isDefined                                   ( ) const ;
         bool                    isBoolean                                   ( ) const ;
         bool                    isInteger                                   ( ) const ;
@@ -175,10 +182,15 @@ class Object
         static Object           Undefined                                   ( ) ;
 
         static Object           Boolean                                     (   const   bool&                       aBoolean                                    ) ;
+
         static Object           Integer                                     (   const   types::Integer&             anInteger                                   =   types::Integer::Undefined() ) ;
+
         static Object           Real                                        (   const   types::Real&                aReal                                       =   types::Real::Undefined() ) ;
+
         static Object           String                                      (   const   types::String&              aString                                     =   types::String::Empty() ) ;
+
         static Object           Dictionary                                  (   const   ctnr::Dictionary&           aDictionary                                 ) ;
+
         static Object           Array                                       (   const   ctnr::Array<Object>&        anArray                                     =   ctnr::Array<Object>::Empty() ) ;
 
         static Object           Parse                                       (   const   types::String&              aString,
@@ -188,6 +200,7 @@ class Object
                                                                                 const   Object::Format&             aFormat                                     =   Object::Format::Undefined ) ;
 
         static types::String    StringFromType                              (   const   Object::Type&               aType                                       ) ;
+
         static Object::Type     TypeFromString                              (   const   types::String&              aString                                     ) ;
 
     private:

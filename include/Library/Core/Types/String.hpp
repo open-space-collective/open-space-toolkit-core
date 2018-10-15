@@ -89,6 +89,24 @@ class String : public std::string
 
         String&                 trim                                        ( ) ;
 
+        /// @brief              Replace all occurences of character by other character
+        ///
+        /// @param              [in] aCharacter A character
+        /// @param              [in] aNewCharacter A replacement character
+        /// @return             Reference to string
+
+        String&                 replace                                     (   const   char                        aCharacter,
+                                                                                const   char                        aNewCharacter                               ) ;
+
+        /// @brief              Replace all occurences of string by other string
+        ///
+        /// @param              [in] aCharacter A string
+        /// @param              [in] aNewCharacter A replacement string
+        /// @return             Reference to string
+
+        String&                 replace                                     (   const   String&                     aString,
+                                                                                const   String&                     aNewString                                  ) ;
+
         static String           Empty                                       ( ) ;
 
         static String           Boolean                                     (           bool                        aBoolean                                    ) ;

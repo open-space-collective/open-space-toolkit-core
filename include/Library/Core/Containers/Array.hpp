@@ -300,6 +300,31 @@ class Array : public std::vector<T>
 
         typename Array<T>::ConstIterator find                               (   const   T&                          anElement                                   ) const ;
 
+        /// @brief              Get mapped array
+        ///
+        /// @code
+        ///                     Array<String> strings = { "1", "2", "3" } ;
+        ///                     Array<Integer> integers = strings.map<Integer>([] (const String& aString) -> Integer { return Integer::Parse(aString) ; }) ; // [1, 2, 3]
+        /// @endcode
+        ///
+        /// @param              [in] aMappingFunction A mapping function
+        /// @return             Mapped array
+
+        template <typename U>
+        Array<U>                map                                         (   const   std::function<U (T)>        aMappingFunction                            ) const ;
+
+        /// @brief              Get reduced value
+        ///
+        /// @code
+        ///                     Array<Integer> integers = { 1, 2, 3 } ;
+        ///                     Integer reducedInteger = integers.reduce(std::plus<Integer>()) ; // 6
+        /// @endcode
+        ///
+        /// @param              [in] aReduceFunction A reduce function
+        /// @return             Reduced value
+
+        T                       reduce                                      (   const   std::function<T (T, T)>&    aReduceFunction                             ) const ;
+
         /// @brief              Access first element
         ///
         /// @code
@@ -389,7 +414,7 @@ class Array : public std::vector<T>
 
         void                    removeWhere                                 (   const   Array<T>::Predicate&        aPredicate                                  ) ;
 
-        /// @brief              Get iterator to element, finding by by value
+        /// @brief              Get iterator to element, finding by value
         ///
         /// @code
         ///                     Array<Integer> array = {0, 1, 2, 3, 4} ;

@@ -2531,7 +2531,6 @@ TEST (Library_Core_Types_Real, CanParse)
     using library::core::types::Real ;
 
     EXPECT_TRUE(Real::CanParse("Undefined")) ;
-    EXPECT_TRUE(Real::CanParse("NaN")) ;
 
     EXPECT_TRUE(Real::CanParse("0")) ;
     EXPECT_TRUE(Real::CanParse("-1")) ;
@@ -2550,16 +2549,19 @@ TEST (Library_Core_Types_Real, CanParse)
     EXPECT_TRUE(Real::CanParse("2147483648.0")) ;
     EXPECT_TRUE(Real::CanParse("+2147483648.0")) ;
 
-    EXPECT_TRUE(Real::CanParse("-Inf")) ;
+    EXPECT_TRUE(Real::CanParse("NaN")) ;
+    EXPECT_TRUE(Real::CanParse("-NaN")) ;
+    EXPECT_TRUE(Real::CanParse("+NaN")) ;
+    EXPECT_TRUE(Real::CanParse("nan")) ;
+    EXPECT_TRUE(Real::CanParse("NAN")) ;
+
     EXPECT_TRUE(Real::CanParse("Inf")) ;
+    EXPECT_TRUE(Real::CanParse("-Inf")) ;
     EXPECT_TRUE(Real::CanParse("+Inf")) ;
+    EXPECT_TRUE(Real::CanParse("inf")) ;
+    EXPECT_TRUE(Real::CanParse("INF")) ;
 
     EXPECT_FALSE(Real::CanParse("")) ;
-
-    EXPECT_FALSE(Real::CanParse("-NaN")) ;
-    EXPECT_FALSE(Real::CanParse("+NaN")) ;
-    EXPECT_FALSE(Real::CanParse("nan")) ;
-    EXPECT_FALSE(Real::CanParse("NAN")) ;
 
     EXPECT_FALSE(Real::CanParse("abc")) ;
 
