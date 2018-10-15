@@ -494,10 +494,35 @@ std::fstream&                   File::accessStream                          ( )
 
 // }
 
-// void                            File::moveToDirectory                       (   const   fs::Directory&              aDestination                                )
-// {
+void                            File::moveToDirectory                       (   const   fs::Directory&              aDestination                                )
+{
 
-// }
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+    }
+
+    if (!aDestination.exists())
+    {
+        throw library::core::error::RuntimeError("Destination [{}] does not exist.", aDestination.toString()) ;
+    }
+
+    const fs::Path destinationPath = aDestination.getPath() + Path::Parse(this->getName()) ;
+
+    try
+    {
+
+        boost::filesystem::rename(path_.toString(), destinationPath.toString()) ;
+
+        path_ = destinationPath ;
+
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }	
+
+}
 
 void                            File::create                                (   const   fs::PermissionSet&          anOwnerPermissionSet,
                                                                                 const   fs::PermissionSet&          aGroupPermissionSet,

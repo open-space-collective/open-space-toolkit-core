@@ -105,9 +105,50 @@ bool                            Directory::isEmpty                          ( ) 
 
 }
 
-// bool                            Directory::containsFileWithName             (   const   String&                     aFileName                                   ) const
-// {
-// }
+bool                            Directory::containsFileWithName             (   const   String&                     aFileName                                   ) const
+{
+
+    if (aFileName.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("File name") ;
+    }
+
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+    }
+
+    try
+    {
+
+        const boost::filesystem::path directoryPath = { path_.toString() } ;
+
+        for (boost::filesystem::directory_iterator directoryIterator { directoryPath } ; directoryIterator != boost::filesystem::directory_iterator() ; ++directoryIterator)
+        {
+
+            const boost::filesystem::path subFilePath = directoryIterator->path() ;
+
+            if (!boost::filesystem::is_directory(subFilePath))
+            {
+
+                if (subFilePath.filename().string() == aFileName)
+                {
+                    return true ;
+                }
+
+            }
+
+        }
+
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    return false ;
+    
+}
 
 // bool                            Directory::containsDirectoryWithName        (   const   String&                     aDirectoryName                              ) const
 // {
@@ -170,10 +211,49 @@ Directory                       Directory::getParentDirectory               ( ) 
 
 // }
 
-// ctnr::Array<Directory>          Directory::getDirectories                   ( ) const
-// {
+ctnr::Array<Directory>          Directory::getDirectories                   ( ) const
+{
 
-// }
+    if (!this->exists())
+    {
+        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+    }
+
+    ctnr::Array<Directory> subDirectories = ctnr::Array<Directory>::Empty() ;
+
+    try
+    {
+
+        const boost::filesystem::path directoryPath = { path_.toString() } ;
+
+        for (boost::filesystem::directory_iterator directoryIterator { directoryPath } ; directoryIterator != boost::filesystem::directory_iterator() ; ++directoryIterator)
+        {
+
+            const boost::filesystem::path subDirectoryPath = directoryIterator->path() ;
+
+            if (boost::filesystem::is_directory(subDirectoryPath))
+            {
+                subDirectories.add(Directory::Path(Path::Parse(subDirectoryPath.string()))) ;
+            }
+
+        }
+
+    }
+    catch (const boost::filesystem::filesystem_error& e)
+    {
+        throw library::core::error::RuntimeError(e.what()) ;
+    }
+
+    std::sort
+    (
+        subDirectories.begin(),
+        subDirectories.end(),
+        [] (const Directory& aFirstDirectory, const Directory& aSecondDirectory) -> bool { return aFirstDirectory.getName() < aSecondDirectory.getName() ; }
+    ) ;
+
+    return subDirectories ;
+
+}
 
 String                          Directory::toString                         ( ) const
 {

@@ -200,6 +200,8 @@ class Directory
 
         /// @brief              Get files in directory
         ///
+        ///                     Files are listed in alphabetical order.
+        ///
         /// @code
         ///                     Directory directory = Directory::Path(Path::Parse("/path/to/directory")) ;
         ///                     Array<File> files = directory.getFiles() ;
@@ -210,6 +212,8 @@ class Directory
         ctnr::Array<fs::File>   getFiles                                    ( ) const ;
 
         /// @brief              Get directories in directory
+        ///
+        ///                     Directories are listed in alphabetical order.
         ///
         /// @code
         ///                     Directory directory = Directory::Path(Path::Parse("/path/to/directory")) ;
