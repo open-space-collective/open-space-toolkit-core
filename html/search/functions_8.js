@@ -29,6 +29,7 @@ var searchData=
   ['isnegativeinfinity',['isNegativeInfinity',['../classlibrary_1_1core_1_1types_1_1_integer.html#ae7e2fcfb35272cf58b5e548a7702950c',1,'library::core::types::Integer::isNegativeInfinity()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a5d7286e45a9f05cda79402c9d8efbc13',1,'library::core::types::Real::isNegativeInfinity()']]],
   ['isnone',['isNone',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a9c4a4a58d8422c9bfa8873184983f455',1,'library::core::fs::PermissionSet']]],
   ['isodd',['isOdd',['../classlibrary_1_1core_1_1types_1_1_integer.html#a4b403f5ac370a1f333c67fda7c54e1ed',1,'library::core::types::Integer']]],
+  ['isopen',['isOpen',['../classlibrary_1_1core_1_1fs_1_1_file.html#a838cd36a7f54aaff75859b69cc9dac40',1,'library::core::fs::File']]],
   ['ispositive',['isPositive',['../classlibrary_1_1core_1_1types_1_1_integer.html#a78058bede904b0b730e6a0924296bae5',1,'library::core::types::Integer::isPositive()'],['../classlibrary_1_1core_1_1types_1_1_real.html#af2ace2b52781a5e537daef7e6cee6df3',1,'library::core::types::Real::isPositive()']]],
   ['ispositiveinfinity',['isPositiveInfinity',['../classlibrary_1_1core_1_1types_1_1_integer.html#a82713f4a7737cf59ad402bceb5f2017f',1,'library::core::types::Integer::isPositiveInfinity()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a432e5a765554e8656e9bcb6d54f1553d',1,'library::core::types::Real::isPositiveInfinity()']]],
   ['isreal',['isReal',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#ab638356093a8b746f178fde641632d91',1,'library::core::ctnr::Object']]],

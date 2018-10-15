@@ -45,7 +45,11 @@ char \hyperlink{classlibrary_1_1core_1_1types_1_1_string_aae3aaf5e3b3fde3f7b90fd
 \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1types_1_1_string_aaf9377048b900766d05a1af9182cf251}{get\+Substring} (const \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index} \&a\+Start\+Position, const \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size} \&a\+Length) const
 \item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a42426ffb11bb0b2789ba0991064a01b5}{trim} ()
-\begin{DoxyCompactList}\small\item\em Removes whitespace from both ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Removes whitespace from both ends. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a8d4100938450cb4c4bba2c3e49d1871d}{replace} (const char a\+Character, const char a\+New\+Character)
+\begin{DoxyCompactList}\small\item\em Replace all occurences of character by other character. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& \hyperlink{classlibrary_1_1core_1_1types_1_1_string_a33f558b912c1f24a109e985c3a180f22}{replace} (const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+String, const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&a\+New\+String)
+\begin{DoxyCompactList}\small\item\em Replace all occurences of string by other string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -217,6 +221,46 @@ Returns whether the string matches a regular expression.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 True if matches regular expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a8d4100938450cb4c4bba2c3e49d1871d}\label{classlibrary_1_1core_1_1types_1_1_string_a8d4100938450cb4c4bba2c3e49d1871d}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!replace@{replace}}
+\index{replace@{replace}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& library\+::core\+::types\+::\+String\+::replace (\begin{DoxyParamCaption}\item[{const char}]{a\+Character,  }\item[{const char}]{a\+New\+Character }\end{DoxyParamCaption})}
+
+
+
+Replace all occurences of character by other character. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Character} & A character \\
+\hline
+\mbox{\tt in}  & {\em a\+New\+Character} & A replacement character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_a33f558b912c1f24a109e985c3a180f22}\label{classlibrary_1_1core_1_1types_1_1_string_a33f558b912c1f24a109e985c3a180f22}} 
+\index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!replace@{replace}}
+\index{replace@{replace}!library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}}
+\subsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \& library\+::core\+::types\+::\+String\+::replace (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+String,  }\item[{const \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \&}]{a\+New\+String }\end{DoxyParamCaption})}
+
+
+
+Replace all occurences of string by other string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Character} & A string \\
+\hline
+\mbox{\tt in}  & {\em a\+New\+Character} & A replacement string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1types_1_1_string_ab476d0986c7d364261ee3e668890836c}\label{classlibrary_1_1core_1_1types_1_1_string_ab476d0986c7d364261ee3e668890836c}} 
 \index{library\+::core\+::types\+::\+String@{library\+::core\+::types\+::\+String}!Replicate@{Replicate}}

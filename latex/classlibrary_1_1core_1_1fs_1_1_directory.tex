@@ -42,7 +42,7 @@ bool \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a8e669f2db69416126d2f70
 \begin{DoxyCompactList}\small\item\em Get directory\textquotesingle{}s parent directory. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_file}{fs\+::\+File} $>$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a9c80c3a09389bb6f024e9a9001dea432}{get\+Files} () const
 \begin{DoxyCompactList}\small\item\em Get files in directory. \end{DoxyCompactList}\item 
-\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} $>$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a31ef325dea750ce2d7ecca49258c2a9a}{get\+Directories} () const
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} $>$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_ab933053d4585e10b83ee66f9cf499249}{get\+Directories} () const
 \begin{DoxyCompactList}\small\item\em Get directories in directory. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1types_1_1_string}{String} \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory_a9d9751fccc93342105d3ea3ee29e3a9f}{to\+String} () const
 \begin{DoxyCompactList}\small\item\em Get serialized directory. \end{DoxyCompactList}\item 
@@ -228,15 +228,17 @@ directory.exists() ; \textcolor{comment}{// False}
 \begin{DoxyReturn}{Returns}
 True if directory exists 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_a31ef325dea750ce2d7ecca49258c2a9a}\label{classlibrary_1_1core_1_1fs_1_1_directory_a31ef325dea750ce2d7ecca49258c2a9a}} 
+\mbox{\Hypertarget{classlibrary_1_1core_1_1fs_1_1_directory_ab933053d4585e10b83ee66f9cf499249}\label{classlibrary_1_1core_1_1fs_1_1_directory_ab933053d4585e10b83ee66f9cf499249}} 
 \index{library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}!get\+Directories@{get\+Directories}}
 \index{get\+Directories@{get\+Directories}!library\+::core\+::fs\+::\+Directory@{library\+::core\+::fs\+::\+Directory}}
 \subsubsection{\texorpdfstring{get\+Directories()}{getDirectories()}}
-{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$\hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory}$>$ library\+::core\+::fs\+::\+Directory\+::get\+Directories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}$<$ \hyperlink{classlibrary_1_1core_1_1fs_1_1_directory}{Directory} $>$ library\+::core\+::fs\+::\+Directory\+::get\+Directories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Get directories in directory. 
+
+Directories are listed in alphabetical order.
 
 
 \begin{DoxyCode}
@@ -258,6 +260,8 @@ Array of directories in directory
 
 
 Get files in directory. 
+
+Files are listed in alphabetical order.
 
 
 \begin{DoxyCode}

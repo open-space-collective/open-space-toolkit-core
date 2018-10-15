@@ -3,6 +3,7 @@ var searchData=
   ['_7econsole',['~Console',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#adefb4276dd98ae3d6183b4c2351f88b6',1,'library::core::logger::sinks::Console']]],
   ['_7edictionary',['~Dictionary',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary.html#a4b06c3b334776cb177aa3423bce0afaa',1,'library::core::ctnr::Dictionary']]],
   ['_7eexception',['~Exception',['../classlibrary_1_1core_1_1error_1_1_exception.html#a2fc342415e921c6037465806d278d7d0',1,'library::core::error::Exception']]],
+  ['_7efile',['~File',['../classlibrary_1_1core_1_1fs_1_1_file.html#aaea7205fab73035b6839b75395169d22',1,'library::core::fs::File']]],
   ['_7egraph',['~Graph',['../classlibrary_1_1core_1_1ctnr_1_1_graph.html#ae6ef3f0ac73a356f0f3ce64748ff9f06',1,'library::core::ctnr::Graph']]],
   ['_7elinebuffer',['~LineBuffer',['../classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#aed429cbff736a609eeb1b87c984006ac',1,'library::core::utils::Print::LineBuffer']]],
   ['_7eobject',['~Object',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a18a5350937267e55df0a76f5ce154a7a',1,'library::core::ctnr::Object']]],

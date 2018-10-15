@@ -19,6 +19,7 @@ var searchData=
   ['triple',['Triple',['../structlibrary_1_1core_1_1ctnr_1_1_triple.html',1,'library::core::ctnr']]],
   ['triple_2ehpp',['Triple.hpp',['../_triple_8hpp.html',1,'']]],
   ['triple_2etpp',['Triple.tpp',['../_triple_8tpp.html',1,'']]],
+  ['truncate',['Truncate',['../classlibrary_1_1core_1_1fs_1_1_file.html#ac18b7d7ee50c803cbd0087b0f71ce4f7aa8156810bfee2bd2b44765b9e91db3bd',1,'library::core::fs::File']]],
   ['tuple',['Tuple',['../namespacelibrary_1_1core_1_1ctnr.html#a551ef72e2adb570c4d6bdf5e1bbc96b9',1,'library::core::ctnr']]],
   ['tuple_2ehpp',['Tuple.hpp',['../_tuple_8hpp.html',1,'']]],
   ['tutorial_2emd',['Tutorial.md',['../_tutorial_8md.html',1,'']]],

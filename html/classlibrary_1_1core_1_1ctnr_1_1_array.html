@@ -181,6 +181,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb8ed38b67b6031e27c188d89bd5cbbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt;::<a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#ac26454f2a2ad4013873386a70aa25fc4">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#aeb8ed38b67b6031e27c188d89bd5cbbf">find</a> (const T &amp;anElement) const</td></tr>
 <tr class="memdesc:aeb8ed38b67b6031e27c188d89bd5cbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get iterator to element, finding by by value.  <a href="#aeb8ed38b67b6031e27c188d89bd5cbbf">More...</a><br /></td></tr>
 <tr class="separator:aeb8ed38b67b6031e27c188d89bd5cbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442dd11b5ef8bf12e84921f6d2296767"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a442dd11b5ef8bf12e84921f6d2296767"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a442dd11b5ef8bf12e84921f6d2296767">map</a> (const std::function&lt; U(T)&gt; aMappingFunction) const</td></tr>
+<tr class="memdesc:a442dd11b5ef8bf12e84921f6d2296767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mapped array.  <a href="#a442dd11b5ef8bf12e84921f6d2296767">More...</a><br /></td></tr>
+<tr class="separator:a442dd11b5ef8bf12e84921f6d2296767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4636763515f791d0b9da1dfa205a65b1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a4636763515f791d0b9da1dfa205a65b1">reduce</a> (const std::function&lt; T(T, T)&gt; &amp;aReduceFunction) const</td></tr>
+<tr class="memdesc:a4636763515f791d0b9da1dfa205a65b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reduced value.  <a href="#a4636763515f791d0b9da1dfa205a65b1">More...</a><br /></td></tr>
+<tr class="separator:a4636763515f791d0b9da1dfa205a65b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb2068e46720e8df057b5410ac8879d5"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#abb2068e46720e8df057b5410ac8879d5">accessFirst</a> ()</td></tr>
 <tr class="memdesc:abb2068e46720e8df057b5410ac8879d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access first element.  <a href="#abb2068e46720e8df057b5410ac8879d5">More...</a><br /></td></tr>
 <tr class="separator:abb2068e46720e8df057b5410ac8879d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a322b1bfc3a93ea18bf68eb0cff69e6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove elements based on condition.  <a href="#a322b1bfc3a93ea18bf68eb0cff69e6d3">More...</a><br /></td></tr>
 <tr class="separator:a322b1bfc3a93ea18bf68eb0cff69e6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afece85f642e3c623bac197e25ad2d4ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; T &gt;::<a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#a2364a34e7bc76d3661c3d89c4729a0e4">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html#afece85f642e3c623bac197e25ad2d4ec">find</a> (const T &amp;anElement)</td></tr>
-<tr class="memdesc:afece85f642e3c623bac197e25ad2d4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get iterator to element, finding by by value.  <a href="#afece85f642e3c623bac197e25ad2d4ec">More...</a><br /></td></tr>
+<tr class="memdesc:afece85f642e3c623bac197e25ad2d4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get iterator to element, finding by value.  <a href="#afece85f642e3c623bac197e25ad2d4ec">More...</a><br /></td></tr>
 <tr class="separator:afece85f642e3c623bac197e25ad2d4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -820,7 +827,7 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Get iterator to element, finding by by value. </p>
+<p>Get iterator to element, finding by value. </p>
 <div class="fragment"><div class="line">Array&lt;Integer&gt; array = {0, 1, 2, 3, 4} ;</div><div class="line"><span class="keyword">auto</span> elementIt = array.find(2) ;</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">anElement</td><td>An element </td></tr>
@@ -1013,6 +1020,37 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a id="a442dd11b5ef8bf12e84921f6d2296767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442dd11b5ef8bf12e84921f6d2296767">&#9670;&nbsp;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt;U&gt; <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::map </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; U(T)&gt;&#160;</td>
+          <td class="paramname"><em>aMappingFunction</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get mapped array. </p>
+<div class="fragment"><div class="line">Array&lt;String&gt; strings = { <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2&quot;</span>, <span class="stringliteral">&quot;3&quot;</span> } ;</div><div class="line">Array&lt;Integer&gt; integers = strings.map&lt;Integer&gt;([] (<span class="keyword">const</span> String&amp; aString) -&gt; Integer { <span class="keywordflow">return</span> <a class="code" href="classlibrary_1_1core_1_1types_1_1_integer.html#aaa5f55222db9aeb9ad7fcd8a69109f9d">Integer::Parse</a>(aString) ; }) ; <span class="comment">// [1, 2, 3]</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aMappingFunction</td><td>A mapping function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Mapped array </dd></dl>
+
+</div>
+</div>
 <a id="abe72cec38e65761df3eaddcfa9b7a44a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe72cec38e65761df3eaddcfa9b7a44a">&#9670;&nbsp;</a></span>mergeWith()</h2>
 
@@ -1141,6 +1179,35 @@ template&lt;class T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to array </dd></dl>
+
+</div>
+</div>
+<a id="a4636763515f791d0b9da1dfa205a65b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4636763515f791d0b9da1dfa205a65b1">&#9670;&nbsp;</a></span>reduce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classlibrary_1_1core_1_1ctnr_1_1_array.html">library::core::ctnr::Array</a>&lt; T &gt;::reduce </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; T(T, T)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>aReduceFunction</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get reduced value. </p>
+<div class="fragment"><div class="line">Array&lt;Integer&gt; integers = { 1, 2, 3 } ;</div><div class="line">Integer reducedInteger = integers.reduce(std::plus&lt;Integer&gt;()) ; <span class="comment">// 6</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReduceFunction</td><td>A reduce function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reduced value </dd></dl>
 
 </div>
 </div>

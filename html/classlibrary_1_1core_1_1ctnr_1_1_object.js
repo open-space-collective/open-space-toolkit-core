@@ -52,5 +52,7 @@ var classlibrary_1_1core_1_1ctnr_1_1_object =
     [ "operator[]", "classlibrary_1_1core_1_1ctnr_1_1_object.html#ac6f1e43e985c9e31dbae1b1e87d72dca", null ],
     [ "operator[]", "classlibrary_1_1core_1_1ctnr_1_1_object.html#ae403f6b0f9a93430c45908262ff95e5d", null ],
     [ "toString", "classlibrary_1_1core_1_1ctnr_1_1_object.html#a5398bda4792be6ad5c2d07429c83d110", null ],
-    [ "operator<<", "classlibrary_1_1core_1_1ctnr_1_1_object.html#a418df9bf4a73078f3d494edef1743f8d", null ]
+    [ "operator<<", "classlibrary_1_1core_1_1ctnr_1_1_object.html#a418df9bf4a73078f3d494edef1743f8d", null ],
+    [ "operator<<", "classlibrary_1_1core_1_1ctnr_1_1_object.html#af9350d4362cb9ad3424f4a6bb6d77a4c", null ],
+    [ "operator>>", "classlibrary_1_1core_1_1ctnr_1_1_object.html#ad91e1957f0afd5d49dde0b81d11a66e1", null ]
 ];

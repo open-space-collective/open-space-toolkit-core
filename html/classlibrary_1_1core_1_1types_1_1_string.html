@@ -131,6 +131,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a42426ffb11bb0b2789ba0991064a01b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html#a42426ffb11bb0b2789ba0991064a01b5">trim</a> ()</td></tr>
 <tr class="memdesc:a42426ffb11bb0b2789ba0991064a01b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes whitespace from both ends.  <a href="#a42426ffb11bb0b2789ba0991064a01b5">More...</a><br /></td></tr>
 <tr class="separator:a42426ffb11bb0b2789ba0991064a01b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4100938450cb4c4bba2c3e49d1871d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html#a8d4100938450cb4c4bba2c3e49d1871d">replace</a> (const char aCharacter, const char aNewCharacter)</td></tr>
+<tr class="memdesc:a8d4100938450cb4c4bba2c3e49d1871d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace all occurences of character by other character.  <a href="#a8d4100938450cb4c4bba2c3e49d1871d">More...</a><br /></td></tr>
+<tr class="separator:a8d4100938450cb4c4bba2c3e49d1871d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f558b912c1f24a109e985c3a180f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html#a33f558b912c1f24a109e985c3a180f22">replace</a> (const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aString, const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;aNewString)</td></tr>
+<tr class="memdesc:a33f558b912c1f24a109e985c3a180f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace all occurences of string by other string.  <a href="#a33f558b912c1f24a109e985c3a180f22">More...</a><br /></td></tr>
+<tr class="separator:a33f558b912c1f24a109e985c3a180f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -521,6 +527,82 @@ template&lt;typename ... Args&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if matches regular expression </dd></dl>
+
+</div>
+</div>
+<a id="a8d4100938450cb4c4bba2c3e49d1871d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4100938450cb4c4bba2c3e49d1871d">&#9670;&nbsp;</a></span>replace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp; library::core::types::String::replace </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>aCharacter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>aNewCharacter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace all occurences of character by other character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCharacter</td><td>A character </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aNewCharacter</td><td>A replacement character </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to string </dd></dl>
+
+</div>
+</div>
+<a id="a33f558b912c1f24a109e985c3a180f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f558b912c1f24a109e985c3a180f22">&#9670;&nbsp;</a></span>replace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp; library::core::types::String::replace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aNewString</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace all occurences of string by other string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCharacter</td><td>A string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aNewCharacter</td><td>A replacement string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to string </dd></dl>
 
 </div>
 </div>

@@ -73,6 +73,10 @@ Index \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_aa8a3e2745d72db8181b42e3
 \begin{DoxyCompactList}\small\item\em Get array of elements based on condition. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_ac26454f2a2ad4013873386a70aa25fc4}{Const\+Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_aeb8ed38b67b6031e27c188d89bd5cbbf}{find} (const T \&an\+Element) const
 \begin{DoxyCompactList}\small\item\em Get iterator to element, finding by by value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ U $>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a442dd11b5ef8bf12e84921f6d2296767}{map} (const std\+::function$<$ U(T)$>$ a\+Mapping\+Function) const
+\begin{DoxyCompactList}\small\item\em Get mapped array. \end{DoxyCompactList}\item 
+T \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a4636763515f791d0b9da1dfa205a65b1}{reduce} (const std\+::function$<$ T(T, T)$>$ \&a\+Reduce\+Function) const
+\begin{DoxyCompactList}\small\item\em Get reduced value. \end{DoxyCompactList}\item 
 T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_abb2068e46720e8df057b5410ac8879d5}{access\+First} ()
 \begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
 T \& \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_ad6ea47ab09dfeebd6de0878d3ad2de25}{access\+Last} ()
@@ -90,7 +94,7 @@ void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_abe72cec38e65761df3eaddcf
 void \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a322b1bfc3a93ea18bf68eb0cff69e6d3}{remove\+Where} (const \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a74cd325a740870aea490b6b739aa06ae}{Predicate} \&a\+Predicate)
 \begin{DoxyCompactList}\small\item\em Remove elements based on condition. \end{DoxyCompactList}\item 
 \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$ T $>$\+::\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_a2364a34e7bc76d3661c3d89c4729a0e4}{Iterator} \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array_afece85f642e3c623bac197e25ad2d4ec}{find} (const T \&an\+Element)
-\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -513,7 +517,7 @@ Iterator to element
 
 
 
-Get iterator to element, finding by by value. 
+Get iterator to element, finding by value. 
 
 
 \begin{DoxyCode}
@@ -685,6 +689,34 @@ firstArray.isNear(secondArray,
 \begin{DoxyReturn}{Returns}
 True if array is near another array 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a442dd11b5ef8bf12e84921f6d2296767}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a442dd11b5ef8bf12e84921f6d2296767}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!map@{map}}
+\index{map@{map}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+template$<$typename U $>$ \\
+\hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{Array}$<$U$>$ \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::map (\begin{DoxyParamCaption}\item[{const std\+::function$<$ U(T)$>$}]{a\+Mapping\+Function }\end{DoxyParamCaption}) const}
+
+
+
+Get mapped array. 
+
+
+\begin{DoxyCode}
+Array<String> strings = \{ \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"} \} ;
+Array<Integer> integers = strings.map<Integer>([] (\textcolor{keyword}{const} String& aString) -> Integer \{ \textcolor{keywordflow}{return} 
+      \hyperlink{classlibrary_1_1core_1_1types_1_1_integer_aaa5f55222db9aeb9ad7fcd8a69109f9d}{Integer::Parse}(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Mapping\+Function} & A mapping function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapped array 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_abe72cec38e65761df3eaddcfa9b7a44a}\label{classlibrary_1_1core_1_1ctnr_1_1_array_abe72cec38e65761df3eaddcfa9b7a44a}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!merge\+With@{merge\+With}}
 \index{merge\+With@{merge\+With}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
@@ -773,6 +805,32 @@ Move assignment operator.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Reference to array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a4636763515f791d0b9da1dfa205a65b1}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a4636763515f791d0b9da1dfa205a65b1}} 
+\index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!reduce@{reduce}}
+\index{reduce@{reduce}!library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}}
+\subsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T \hyperlink{classlibrary_1_1core_1_1ctnr_1_1_array}{library\+::core\+::ctnr\+::\+Array}$<$ T $>$\+::reduce (\begin{DoxyParamCaption}\item[{const std\+::function$<$ T(T, T)$>$ \&}]{a\+Reduce\+Function }\end{DoxyParamCaption}) const}
+
+
+
+Get reduced value. 
+
+
+\begin{DoxyCode}
+Array<Integer> integers = \{ 1, 2, 3 \} ;
+Integer reducedInteger = integers.reduce(std::plus<Integer>()) ; \textcolor{comment}{// 6}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Reduce\+Function} & A reduce function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reduced value 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1core_1_1ctnr_1_1_array_a8e295703797d6e41dad7a45e4101a6db}\label{classlibrary_1_1core_1_1ctnr_1_1_array_a8e295703797d6e41dad7a45e4101a6db}} 
 \index{library\+::core\+::ctnr\+::\+Array@{library\+::core\+::ctnr\+::\+Array}!remove@{remove}}
