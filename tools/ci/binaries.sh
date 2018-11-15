@@ -5,7 +5,7 @@
 # @project        Library/Core
 # @file           tools/ci/binaries.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 

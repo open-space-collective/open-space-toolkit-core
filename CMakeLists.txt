@@ -3,7 +3,7 @@
 # @project        Library/Core
 # @file           CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 
@@ -13,7 +13,7 @@ SET (PROJECT_NAME "LibraryCore")
 SET (PROJECT_DESCRIPTION "Core library.")
 SET (PROJECT_PATH "Library/Core")
 SET (PROJECT_PACKAGE_NAME "library-core")
-SET (PROJECT_LICENSE "TBD")
+SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "org.open-space-collective")
 SET (PROJECT_VENDOR_NAME "Open Space Collective")
 SET (PROJECT_VENDOR_CONTACT "contact@open-space-collective.org")

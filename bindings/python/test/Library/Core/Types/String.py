@@ -5,7 +5,7 @@
 # @project        Library/Core
 # @file           Library/Core/LibraryCorePy/Types/String.test.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 

@@ -8,15 +8,15 @@ Fundamental types, containers and utilities.
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/library-core)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-core.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-core)
 [![PyPI version](https://badge.fury.io/py/LibraryCorePy.svg)](https://badge.fury.io/py/LibraryCorePy)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Warning
 
-Library **name** and **license** are yet to be defined.
+Library **name** is yet to be defined.
 
 Please check the following projects:
 
 - [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
-- [Licensing Project](https://github.com/orgs/open-space-collective/projects/2)
 
 *⚠ This library is still under heavy development. Do not use!*
 
@@ -166,4 +166,4 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about our develop
 
 ## License
 
-*To be defined...*
+Apache License 2.0
