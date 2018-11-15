@@ -5,7 +5,7 @@
 # @project        Library/Core
 # @file           tools/python/start.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 
@@ -14,6 +14,18 @@ script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pushd "${script_directory}" > /dev/null
 
 source ../.env
+
+# Build Docker image if it does not exist already
+
+if [[ "$(docker images -q ${repository_name}/${project_name}-python 2> /dev/null)" == "" ]]; then
+
+    pushd "${script_directory}/docker" > /dev/null
+
+    ./build.sh
+
+    popd
+
+fi
 
 if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
 

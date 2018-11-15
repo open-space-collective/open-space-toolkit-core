@@ -3,7 +3,7 @@
 # @project        Library/Core
 # @file           Makefile
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 

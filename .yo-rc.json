@@ -4,7 +4,7 @@
     "projectDescription": "Core library.",
     "projectPath": "Library/Core",
     "projectPackage": "library-core",
-    "projectLicense": "TBD",
+    "projectLicense": "Apache License 2.0",
     "authorName": "Lucas Brémond",
     "authorEmail": "contact@open-space-collective.org",
     "companyName": "Open Space Collective",
