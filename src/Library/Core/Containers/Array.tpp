@@ -258,7 +258,7 @@ U                               foldLeft                                    (   
     
     U accumulator = initialValue ;
     
-    Iterator end = data.cend() ;
+    const Iterator end = data.cend() ;
     
     for (Iterator it = data.cbegin(); it != end; ++it)
     {
@@ -306,7 +306,7 @@ T                               Array<T>::reduce                            (   
     }
 
     Iterator it = this->cbegin() ;
-    Iterator end = this->cend() ;
+    const Iterator end = this->cend() ;
 
     T accumulator = *it ;
     
