@@ -16,7 +16,7 @@ pushd ${script_directory} > /dev/null
 source "../../.env"
 
 docker build \
---tag="${repository_name}/${project_name}-python" \
+--tag="${image_name}-python:${image_version}" \
 .
 
 popd > /dev/null
