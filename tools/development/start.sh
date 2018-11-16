@@ -23,7 +23,7 @@ if [[ "$(docker images -q ${image_name}:${image_version} 2> /dev/null)" == "" ]]
 
     ./build.sh
 
-    popd
+    popd > /dev/null
 
 fi
 

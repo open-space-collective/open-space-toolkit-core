@@ -31,11 +31,11 @@ ${image_name}:${image_version} \
 
 mkdir -p "./gh-pages"
 
-pushd "./gh-pages"
+pushd "./gh-pages" > /dev/null
 
 git clone -b gh-pages https://git@${ci_doc_repo_ref}
 
-pushd ${ci_doc_repo_name}
+pushd ${ci_doc_repo_name} > /dev/null
 
 # Set the push default to simple i.e. push only the current branch.
 
@@ -96,6 +96,6 @@ else
 
 fi
 
-popd
+popd > /dev/null
 
 ################################################################################################################################################################
