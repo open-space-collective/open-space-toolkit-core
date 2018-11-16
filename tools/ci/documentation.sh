@@ -24,18 +24,18 @@ docker run \
 --volume="${project_directory}:/app:rw" \
 --volume="/app/build" \
 --workdir="/app/build" \
-${image_name} \
+${image_name}:${image_version} \
 /bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
 # Deploy documentation
 
 mkdir -p "./gh-pages"
 
-pushd "./gh-pages"
+pushd "./gh-pages" > /dev/null
 
 git clone -b gh-pages https://git@${ci_doc_repo_ref}
 
-pushd ${ci_doc_repo_name}
+pushd ${ci_doc_repo_name} > /dev/null
 
 # Set the push default to simple i.e. push only the current branch.
 
@@ -96,6 +96,6 @@ else
 
 fi
 
-popd
+popd > /dev/null
 
 ################################################################################################################################################################

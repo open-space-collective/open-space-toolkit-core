@@ -7,13 +7,9 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.5
+FROM openspacecollective/library-base:0.1.6
 
 LABEL maintainer="lucas@loftorbital.com"
-
-# Arguments
-
-ARG cpu_count=1
 
 # Dependencies
 
@@ -25,7 +21,7 @@ RUN pushd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake .. \
- && make --silent -j ${cpu_count} \
+ && make --silent -j $(nproc) \
  && make install \
  && rm -rf /tmp/rapidjson \
  && popd > /dev/null
@@ -47,7 +43,7 @@ RUN pushd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
- && make --silent -j ${cpu_count} \
+ && make --silent -j $(nproc) \
  && make install \
  && rm -rf /tmp/fmt \
  && popd > /dev/null
@@ -64,11 +60,11 @@ RUN pushd /tmp > /dev/null \
 
 # Labels
 
-ARG version
+ARG VERSION
 
-ENV version ${version}
+ENV VERSION ${VERSION}
 
-LABEL version="${version}"
+LABEL VERSION="${VERSION}"
 
 # Execution
 

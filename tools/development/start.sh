@@ -17,13 +17,13 @@ source "${script_directory}/../.env"
 
 # Build Docker image if it does not exist already
 
-if [[ "$(docker images -q ${image_name} 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q ${image_name}:${image_version} 2> /dev/null)" == "" ]]; then
 
     pushd "${script_directory}/docker" > /dev/null
 
     ./build.sh
 
-    popd
+    popd > /dev/null
 
 fi
 
@@ -34,14 +34,13 @@ docker run \
 -it \
 --rm \
 --privileged \
---env="cpu_count=${cpu_count}" \
 --volume="${project_directory}:/app:rw" \
 --volume="${script_directory}/helpers/build.sh:/app/build/build.sh:ro" \
 --volume="${script_directory}/helpers/test.sh:/app/build/test.sh:ro" \
 --volume="${script_directory}/helpers/debug.sh:/app/build/debug.sh:ro" \
 --volume="${script_directory}/helpers/clean.sh:/app/build/clean.sh:ro" \
 --workdir="/app/build" \
-"${image_name}" \
+"${image_name}:${image_version}" \
 "/bin/bash"
 
 ################################################################################################################################################################

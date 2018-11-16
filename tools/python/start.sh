@@ -23,7 +23,7 @@ if [[ "$(docker images -q ${repository_name}/${project_name}-python 2> /dev/null
 
     ./build.sh
 
-    popd
+    popd > /dev/null
 
 fi
 
