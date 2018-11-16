@@ -15,11 +15,6 @@ script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${script_directory}/../../.env"
 
-echo "version = ${version}"
-echo "image_name = ${image_name}"
-echo "image_version = ${image_version}"
-echo "script_directory = ${script_directory}"
-
 # Build Docker image
 
 docker build \
