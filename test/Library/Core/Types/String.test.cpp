@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/String.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -337,7 +337,7 @@ TEST (Library_Core_Types_String, Replicate)
 
         EXPECT_EQ("aaa", String::Replicate('a', 3)) ;
         EXPECT_EQ("", String::Replicate('a', 0)) ;
-        
+
     }
 
     {
@@ -368,7 +368,7 @@ TEST (Library_Core_Types_String, Format)
         EXPECT_EQ("123 - 456.789", String::Format("{0} - {1}", 123, 456.789)) ;
         EXPECT_EQ("Hello, World!", String::Format("{0}, {1}!", "Hello", "World")) ;
         EXPECT_EQ("123 - 456.789 - Hello, World!", String::Format("{0} - {1} - {2}, {3}!", 123, 456.789, "Hello", "World")) ;
-        
+
     }
 
 }

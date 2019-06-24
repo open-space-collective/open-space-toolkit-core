@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/Types/Real.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -81,7 +81,7 @@ inline void                     LibraryCorePy_Types_Real                    ( )
         .def("abs", &Real::abs)
         .def("floor", &Real::floor)
         .def("sqrt", &Real::sqrt)
-        
+
         .def("Undefined", &Real::Undefined).staticmethod("Undefined")
         .def("Zero", &Real::Zero).staticmethod("Zero")
         .def("Pi", &Real::Pi).staticmethod("Pi")

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Object.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -24,7 +24,7 @@ TEST (Library_Core_Containers_Object, InitializerListConstructor)
 {
 
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object =
@@ -61,7 +61,7 @@ TEST (Library_Core_Containers_Object, CopyConstructor)
     using library::core::types::Real ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object firstObject = Object::Integer(123) ;
@@ -83,7 +83,7 @@ TEST (Library_Core_Containers_Object, AssignmentOperator)
     using library::core::types::Real ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object firstObject = Object::Integer(123) ;
@@ -116,7 +116,7 @@ TEST (Library_Core_Containers_Object, EqualToOperator)
     using library::core::types::Real ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_TRUE(Object::Integer(123) == Object::Integer(123)) ;
@@ -146,7 +146,7 @@ TEST (Library_Core_Containers_Object, NotEqualToOperator)
     using library::core::types::Real ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_FALSE(Object::Integer(123) != Object::Integer(123)) ;
@@ -187,7 +187,7 @@ TEST (Library_Core_Containers_Object, KeySubscriptOperator)
         EXPECT_EQ("Value", object["Key"].getString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
@@ -235,7 +235,7 @@ TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
         EXPECT_EQ("abc", object[3].getString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Containers_Object, StreamOperator)
@@ -279,7 +279,7 @@ TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
         File file = File::Path(Path::Parse("/tmp/test.json")) ;
 
         file.create() ;
-        
+
         file.open(File::OpenMode::Truncate) ;
 
         file << object ;
@@ -327,7 +327,7 @@ TEST (Library_Core_Containers_Object, InputFileStreamOperator)
         File file = File::Path(Path::Parse("/tmp/test.json")) ;
 
         file.create() ;
-        
+
         file.open(File::OpenMode::Truncate) ;
 
         file << object ;
@@ -347,7 +347,7 @@ TEST (Library_Core_Containers_Object, InputFileStreamOperator)
         file.remove() ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Containers_Object, IsDefined)
@@ -359,7 +359,7 @@ TEST (Library_Core_Containers_Object, IsDefined)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_TRUE(Object::Integer(123).isDefined()) ;
@@ -384,10 +384,10 @@ TEST (Library_Core_Containers_Object, IsBoolean)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     EXPECT_TRUE(Object::Boolean(true).isBoolean()) ;
     EXPECT_TRUE(Object::Boolean(false).isBoolean()) ;
-    
+
     EXPECT_FALSE(Object::Undefined().isBoolean()) ;
     EXPECT_FALSE(Object::Integer(123).isBoolean()) ;
     EXPECT_FALSE(Object::Real(123).isBoolean()) ;
@@ -404,9 +404,9 @@ TEST (Library_Core_Containers_Object, IsInteger)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     EXPECT_TRUE(Object::Integer(123).isInteger()) ;
-    
+
     EXPECT_FALSE(Object::Undefined().isInteger()) ;
     EXPECT_FALSE(Object::Boolean(true).isInteger()) ;
     EXPECT_FALSE(Object::Real(123).isInteger()) ;
@@ -423,9 +423,9 @@ TEST (Library_Core_Containers_Object, IsReal)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     EXPECT_TRUE(Object::Real(123.456).isReal()) ;
-    
+
     EXPECT_FALSE(Object::Undefined().isReal()) ;
     EXPECT_FALSE(Object::Boolean(true).isReal()) ;
     EXPECT_FALSE(Object::Integer(123).isReal()) ;
@@ -442,10 +442,10 @@ TEST (Library_Core_Containers_Object, IsString)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     EXPECT_TRUE(Object::String("abc").isString()) ;
     EXPECT_TRUE(Object::String("123").isString()) ;
-    
+
     EXPECT_FALSE(Object::Undefined().isString()) ;
     EXPECT_FALSE(Object::Boolean(true).isString()) ;
     EXPECT_FALSE(Object::Integer(123).isString()) ;
@@ -462,7 +462,7 @@ TEST (Library_Core_Containers_Object, IsDictionary)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_TRUE(Object::Dictionary(Dictionary::Empty()).isDictionary()) ;
@@ -496,7 +496,7 @@ TEST (Library_Core_Containers_Object, IsArray)
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Array ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_TRUE(Object::Array().isArray()) ;
@@ -515,9 +515,9 @@ TEST (Library_Core_Containers_Object, IsArray)
 
 TEST (Library_Core_Containers_Object, AccessBoolean)
 {
-    
+
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Boolean(true) ;
@@ -534,9 +534,9 @@ TEST (Library_Core_Containers_Object, AccessBoolean)
 
 TEST (Library_Core_Containers_Object, AccessInteger)
 {
-    
+
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Integer(123) ;
@@ -553,9 +553,9 @@ TEST (Library_Core_Containers_Object, AccessInteger)
 
 TEST (Library_Core_Containers_Object, AccessReal)
 {
-    
+
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Real(123.456) ;
@@ -572,9 +572,9 @@ TEST (Library_Core_Containers_Object, AccessReal)
 
 TEST (Library_Core_Containers_Object, AccessString)
 {
-    
+
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::String("abc") ;
@@ -591,10 +591,10 @@ TEST (Library_Core_Containers_Object, AccessString)
 
 TEST (Library_Core_Containers_Object, AccessDictionary)
 {
-    
+
     using library::core::ctnr::Dictionary ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Dictionary({{ "Key", Object::String("Value") }}) ;
@@ -624,7 +624,7 @@ TEST (Library_Core_Containers_Object, AccessArray)
         object.accessArray()[0] = Object::String("Hello") ;
         object.accessArray()[1] = Object::Real(456.789) ;
         object.accessArray()[2] = Object::Integer(456) ;
-        
+
         object.accessArray().add(Object::Undefined()) ;
         object.accessArray().add(Object::Boolean(true)) ;
 
@@ -641,7 +641,7 @@ TEST (Library_Core_Containers_Object, GetType)
     using library::core::types::Real ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         EXPECT_EQ(Object::Type::Undefined, Object::Undefined().getType()) ;
@@ -657,7 +657,7 @@ TEST (Library_Core_Containers_Object, GetBoolean)
 {
 
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Boolean(true) ;
@@ -689,7 +689,7 @@ TEST (Library_Core_Containers_Object, GetInteger)
 
     using library::core::types::Integer ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Integer(123) ;
@@ -721,7 +721,7 @@ TEST (Library_Core_Containers_Object, GetReal)
 
     using library::core::types::Real ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::Real(123.456) ;
@@ -753,7 +753,7 @@ TEST (Library_Core_Containers_Object, GetString)
 
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Object object = Object::String("abc") ;
@@ -786,7 +786,7 @@ TEST (Library_Core_Containers_Object, GetDictionary)
     using library::core::ctnr::Dictionary ;
     using library::core::types::String ;
     using library::core::ctnr::Object ;
-    
+
     {
 
         Dictionary dictionary = Dictionary::Empty() ;

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/Integer.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -130,7 +130,7 @@ Integer                         Integer::operator +                         (   
             }
 
             // [TBC] Use __builtin_add_overflow instead?
-            
+
             if ((anInteger.value_ > 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() - anInteger.value_))) // Addition would overflow
             {
                 return Integer::PositiveInfinity() ;
@@ -221,13 +221,13 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::NegativeInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
 
         }
         else if (type_ == Integer::Type::NegativeInfinity)
         {
-            
+
             if (anInteger.isStrictlyPositive())
             {
                 return Integer::NegativeInfinity() ;
@@ -236,13 +236,13 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
 
         }
         else if (anInteger.type_ == Integer::Type::PositiveInfinity)
         {
-            
+
             if (this->isStrictlyPositive())
             {
                 return Integer::PositiveInfinity() ;
@@ -251,13 +251,13 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::NegativeInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
-            
+
         }
         else if (anInteger.type_ == Integer::Type::NegativeInfinity)
         {
-            
+
             if (this->isStrictlyPositive())
             {
                 return Integer::NegativeInfinity() ;
@@ -266,7 +266,7 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
 
         }
@@ -277,19 +277,19 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::Zero() ;
             }
-            
+
             // Check for -1 for two's complement machines
-            
+
             if ((value_ < 0) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min())) // Multiplication can overflow
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             if ((anInteger.value_ < 0) && (value_ == std::numeric_limits<Integer::ValueType>::min())) // Multiplication can overflow
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             if ((this->getSign() == anInteger.getSign()) && (std::abs(value_) > (std::numeric_limits<Integer::ValueType>::max() / std::abs(anInteger.value_)))) // Multiplication would overflow
             {
                 return Integer::PositiveInfinity() ;
@@ -304,12 +304,12 @@ Integer                         Integer::operator *                         (   
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             if ((anInteger.value_ != -1) && (this->getSign() != anInteger.getSign()) && ((-std::abs(value_)) < (std::numeric_limits<Integer::ValueType>::min() / std::abs(anInteger.value_)))) // Multiplication would underflow
             {
                 return Integer::NegativeInfinity() ;
             }
-            
+
             return Integer(value_ * anInteger.value_) ;
 
         }
@@ -346,13 +346,13 @@ Integer                         Integer::operator /                         (   
             {
                 return Integer::NegativeInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
 
         }
         else if (type_ == Integer::Type::NegativeInfinity)
         {
-            
+
             if (anInteger.isInfinity())
             {
                 return Integer::Undefined() ;
@@ -365,7 +365,7 @@ Integer                         Integer::operator /                         (   
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             return Integer::Undefined() ;
 
         }
@@ -383,7 +383,7 @@ Integer                         Integer::operator /                         (   
                 {
                     return Integer::PositiveInfinity() ;
                 }
-                
+
                 return Integer(value_ / anInteger.value_) ;
 
             }
@@ -590,10 +590,10 @@ Integer                         Integer::operator +                         ( ) 
 
 Integer                         Integer::operator -                         ( ) const
 {
-    
+
     switch (type_)
     {
-    
+
         case Integer::Type::Defined:
         {
 
@@ -601,7 +601,7 @@ Integer                         Integer::operator -                         ( ) 
             {
                 return Integer::PositiveInfinity() ;
             }
-            
+
             return Integer(-value_) ;
 
         }
@@ -611,10 +611,10 @@ Integer                         Integer::operator -                         ( ) 
 
         case Integer::Type::PositiveInfinity:
             return Integer::NegativeInfinity() ;
-        
+
         case Integer::Type::NegativeInfinity:
             return Integer::PositiveInfinity() ;
-        
+
         default:
             break ;
 
@@ -629,7 +629,7 @@ Integer&                        Integer::operator ++                        ( )
 
     switch (type_)
     {
-    
+
         case Integer::Type::Defined:
         {
 
@@ -663,7 +663,7 @@ Integer&                        Integer::operator --                        ( )
 
     switch (type_)
     {
-    
+
         case Integer::Type::Defined:
         {
 
@@ -701,7 +701,7 @@ Integer                         Integer::operator ++                        (   
 
     switch (type_)
     {
-    
+
         case Integer::Type::Defined:
         {
 
@@ -739,7 +739,7 @@ Integer                         Integer::operator --                        (   
 
     switch (type_)
     {
-    
+
         case Integer::Type::Defined:
         {
 
@@ -775,7 +775,7 @@ Integer                         Integer::operator --                        (   
     {
         throw library::core::error::runtime::Undefined("Integer") ;
     }
-    
+
     return value_ ;
 
 }
@@ -898,7 +898,7 @@ types::Sign                     Integer::getSign                            ( ) 
             {
                 return types::Sign::Negative ;
             }
-            
+
             return types::Sign::None ;
 
         }
@@ -910,7 +910,7 @@ types::Sign                     Integer::getSign                            ( ) 
             return types::Sign::Negative ;
 
         default:
-           return types::Sign::Undefined ; 
+           return types::Sign::Undefined ;
 
     }
 
@@ -984,7 +984,7 @@ Integer                         Integer::Int64                              (   
     {
         throw library::core::error::RuntimeError("Int64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
     }
-    
+
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
 
 }
@@ -1006,7 +1006,7 @@ Integer                         Integer::Uint32                             (   
     {
         throw library::core::error::RuntimeError("Uint32 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
     }
-    
+
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
 
 }
@@ -1037,14 +1037,14 @@ Integer                         Integer::Index                              (   
 
 Integer                         Integer::Size                               (   const   types::Size&                aSize                                       )
 {
-    
+
     if (!(aSize < std::numeric_limits<Integer::ValueType>::max()))
     {
         throw library::core::error::RuntimeError("Size out of bounds.") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(aSize)) ;
-    
+
 }
 
 bool                            Integer::CanParse                           (           char                        aCharacter                                  )
@@ -1120,7 +1120,7 @@ Integer                         Integer::Parse                              (   
     }
 
     return Integer::Undefined() ;
-    
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1130,7 +1130,7 @@ Integer                         Integer::Parse                              (   
                                 :   type_(aType),
                                     value_(anInteger)
 {
-    
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

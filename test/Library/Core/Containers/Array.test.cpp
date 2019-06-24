@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Array.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -25,7 +25,7 @@ TEST (Library_Core_Containers_Array, VectorConstructor)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Array ;
-    
+
     {
 
         const std::vector<Integer> aVector = {1, 2, 3} ;
@@ -167,9 +167,9 @@ TEST (Library_Core_Containers_Array, IsEmpty)
     using library::core::types::Size ;
     using library::core::types::Integer ;
     using library::core::ctnr::Array ;
-    
+
     {
-        
+
         EXPECT_FALSE(Array<Integer>({1, 2, 3}).isEmpty()) ;
 
     }
@@ -209,7 +209,7 @@ TEST (Library_Core_Containers_Array, Contains)
 
         EXPECT_TRUE(array.contains("abc")) ;
         EXPECT_TRUE(array.contains("def")) ;
-        
+
         EXPECT_FALSE(array.contains("")) ;
         EXPECT_FALSE(array.contains("ghi")) ;
 
@@ -270,7 +270,7 @@ TEST (Library_Core_Containers_Array, IsNear)
         EXPECT_TRUE
         (
             firstArray.isNear(secondArray,
-                [] (const Real& aFirstValue, const Real& aSecondValue) -> bool 
+                [] (const Real& aFirstValue, const Real& aSecondValue) -> bool
                 { return aFirstValue.isNear(aSecondValue, 1.0) ; }
             )
         ) ;
@@ -363,7 +363,7 @@ TEST (Library_Core_Containers_Array, GetSize)
 
     EXPECT_EQ(Size(0), Array<Integer>({}).getSize()) ;
     EXPECT_EQ(Size(0), Array<Integer>::Empty().getSize()) ;
-    
+
     EXPECT_EQ(Size(3), Array<Integer>({1, 2, 3}).getSize()) ;
     EXPECT_EQ(Size(2), Array<String>({"abc", "def"}).getSize()) ;
 
@@ -396,7 +396,7 @@ TEST (Library_Core_Containers_Array, GetIndexOf)
 
         EXPECT_EQ(Index(0), array.getIndexOf("abc")) ;
         EXPECT_EQ(Index(1), array.getIndexOf("def")) ;
-        
+
         EXPECT_ANY_THROW(array.getIndexOf("")) ;
         EXPECT_ANY_THROW(array.getIndexOf("ghi")) ;
 
@@ -440,7 +440,7 @@ TEST (Library_Core_Containers_Array, ToString)
 // {
 
 //     using library::core::ctnr::Array ;
-    
+
 //     FAIL() ;
 
 // }
@@ -642,11 +642,11 @@ TEST (Library_Core_Containers_Array, Add)
         EXPECT_EQ(Array<Integer>({1, 2, 3}), array) ;
 
         array.add(4) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2, 3, 4}), array) ;
 
         array.add(4) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 4}), array) ;
 
     }
@@ -658,11 +658,11 @@ TEST (Library_Core_Containers_Array, Add)
         EXPECT_EQ(Array<Integer>({1, 2, 3}), array) ;
 
         array.add({4, 5, 6}) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 5, 6}), array) ;
 
         array.add({4, 5, 6}) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 5, 6, 4, 5, 6}), array) ;
 
     }
@@ -684,13 +684,13 @@ TEST (Library_Core_Containers_Array, Remove)
         EXPECT_EQ(Array<Integer>({1, 2, 3}), array) ;
 
         array.remove(3) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2}), array) ;
 
         EXPECT_NO_THROW(array.remove(3)) ;
 
         array.remove(1) ;
-        
+
         EXPECT_EQ(Array<Integer>({2}), array) ;
 
     }
@@ -702,7 +702,7 @@ TEST (Library_Core_Containers_Array, Remove)
         EXPECT_EQ(Array<Integer>({1, 3, 2, 3}), array) ;
 
         array.remove(3) ;
-        
+
         EXPECT_EQ(Array<Integer>({1, 2}), array) ;
 
         EXPECT_NO_THROW(array.remove(3)) ;
@@ -716,7 +716,7 @@ TEST (Library_Core_Containers_Array, Remove)
         EXPECT_EQ(Array<Integer>({1, 3, 2, 3}), array) ;
 
         array.remove({2, 3}) ;
-        
+
         EXPECT_EQ(Array<Integer>({1}), array) ;
 
     }
@@ -805,7 +805,7 @@ TEST (Library_Core_Containers_Array, Empty)
     using library::core::types::Size ;
     using library::core::types::Integer ;
     using library::core::ctnr::Array ;
-    
+
     {
 
         EXPECT_NO_THROW(Array<Integer> array = Array<Integer>::Empty() ; (void) array ; ) ;

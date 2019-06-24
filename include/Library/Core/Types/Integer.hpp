@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/Integer.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -68,7 +68,7 @@ class Integer
                                 Integer                                     (           Integer::ValueType          anInteger                                   ) ;
 
         /// @brief              Float constructor (disabled)
-                                
+
                                 Integer                                     (           float                                                                   ) = delete ;
 
         /// @brief              Double constructor (disabled)
@@ -134,7 +134,7 @@ class Integer
         ///
         /// @param              [in] anInteger An integer
         /// @return             True if lhs integer is greater than rhs integer
-        
+
         bool                    operator >                                  (   const   Integer&                    anInteger                                   ) const ;
 
         /// @brief              Greater than or equal to operator
@@ -206,7 +206,7 @@ class Integer
 
         Integer                 operator +                                  ( ) const ;
         Integer                 operator -                                  ( ) const ;
-        
+
         Integer&                operator ++                                 ( ) ;
         Integer&                operator --                                 ( ) ;
 
@@ -231,7 +231,7 @@ class Integer
         bool                    isFinite                                    ( ) const ;
         bool                    isEven                                      ( ) const ;
         bool                    isOdd                                       ( ) const ;
-        
+
         types::Sign             getSign                                     ( ) const ;
 
         types::String           toString                                    ( ) const ;
@@ -269,14 +269,14 @@ class Integer
         static bool             CanParse                                    (   const   types::String&              aString                                     ) ;
 
         static Integer          Parse                                       (           char                        aCharacter                                  ) ;
-        
+
         static Integer          Parse                                       (   const   types::String&              aString                                     ) ;
 
     private:
 
         enum class Type
         {
-            
+
             Undefined,
             Defined,
             PositiveInfinity,

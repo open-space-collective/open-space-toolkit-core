@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/Runtime/ToBeImplemented.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -25,20 +25,20 @@ namespace runtime
                                 ToBeImplemented::ToBeImplemented            ( )
                                 :   RuntimeError("This is not yet implemented.")
 {
-    
+
 }
 
                                 ToBeImplemented::ToBeImplemented            (   const   String&                     aFunctionName                               )
                                 :   RuntimeError("{" + aFunctionName + "} is not yet implemented.")
 {
-    
+
 }
 
 //                                 ToBeImplemented::ToBeImplemented            (   const   String&                     aScope,
 //                                                                                 const   String&                     aFunctionName                               )
 //                                 :   RuntimeError(aScope, "{" + aFunctionName + "} is not yet implemented.")
 // {
-    
+
 // }
 
                                 ToBeImplemented::~ToBeImplemented           ( )

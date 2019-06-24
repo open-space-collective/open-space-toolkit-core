@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Tuple.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -21,7 +21,7 @@ TEST (Library_Core_Containers_Tuple, Constructor)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Tuple ;
-    
+
     {
 
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
@@ -36,7 +36,7 @@ TEST (Library_Core_Containers_Tuple, Getters)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Tuple ;
-    
+
     {
 
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
@@ -56,7 +56,7 @@ TEST (Library_Core_Containers_Tuple, Setters)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Tuple ;
-    
+
     {
 
         Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;
@@ -85,7 +85,7 @@ TEST (Library_Core_Containers_Tuple, Unpack)
     using library::core::types::String ;
     using library::core::ctnr::Tuple ;
     using library::core::ctnr::Unpack ;
-    
+
     {
 
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"} ;

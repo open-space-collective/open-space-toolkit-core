@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/System/User.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -46,7 +46,7 @@ class User
                                                                                 const   String&                     aName                                       ) ;
 
         bool                    operator ==                                 (   const   User&                       aUser                                       ) const ;
-        
+
         bool                    operator !=                                 (   const   User&                       aUser                                       ) const ;
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,

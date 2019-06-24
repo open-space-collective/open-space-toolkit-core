@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/Types/Integer.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -72,7 +72,7 @@ inline void                     LibraryCorePy_Types_Integer                 ( )
 
         .def("getSign", &Integer::getSign)
         .def("toString", &Integer::toString)
-        
+
         .def("Undefined", &Integer::Undefined).staticmethod("Undefined")
         .def("Zero", &Integer::Zero).staticmethod("Zero")
         .def("PositiveInfinity", &Integer::PositiveInfinity).staticmethod("PositiveInfinity")

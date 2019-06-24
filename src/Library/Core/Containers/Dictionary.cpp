@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Dictionary.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -318,10 +318,10 @@ Dictionary::Value&              Dictionary::operator []                     (   
     auto mapIt = map_.find(aKey) ;
 
     if (mapIt == map_.end())
-    {        
+    {
         return map_.emplace(aKey, Dictionary::Value::Undefined()).first.value() ;
     }
-    
+
     return mapIt.value() ;
 
 }
@@ -348,7 +348,7 @@ std::ostream&                   operator <<                                 (   
             {
 
                 library::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") ;
-                
+
                 printDictionary(value.accessDictionary(), anIndentation + 1) ;
 
             }
@@ -366,7 +366,7 @@ std::ostream&                   operator <<                                 (   
             }
 
         }
-        
+
     } ;
 
     printArray =

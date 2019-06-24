@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/FileSystem/PermissionSet.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -34,7 +34,7 @@ inline void                     LibraryCorePy_FileSystem_PermissionSet      ( )
         .def("canRead", &PermissionSet::canRead)
         .def("canWrite", &PermissionSet::canWrite)
         .def("canExecute", &PermissionSet::canExecute)
-        
+
         .def("None", &PermissionSet::None).staticmethod("None")
         .def("R", &PermissionSet::R).staticmethod("R")
         .def("W", &PermissionSet::W).staticmethod("W")

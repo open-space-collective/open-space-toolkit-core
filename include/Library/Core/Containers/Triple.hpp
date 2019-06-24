@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Triple.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -41,7 +41,7 @@ template <typename T, typename U, typename V>
 struct Triple
 {
 
-    T                           first ; 
+    T                           first ;
     U                           second ;
     V                           third ;
 

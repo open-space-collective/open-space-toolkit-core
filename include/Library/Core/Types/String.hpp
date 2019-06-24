@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/String.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -161,7 +161,7 @@ class HasToString
 
 } ;
 
-template<typename T> 
+template<typename T>
 typename std::enable_if<HasToString<T>::value, std::string>::type
 CallToString (T * t)
 {
@@ -184,10 +184,10 @@ namespace std
 template<>
 struct hash<library::core::types::String>
 {
-    
+
     typedef library::core::types::String argument_type ;
     typedef std::size_t result_type ;
-    
+
     result_type                 operator ()                                 (   const   argument_type&              aString                                     ) const
     {
         return std::hash<std::string>{}(aString) ;

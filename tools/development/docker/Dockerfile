@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library/Core
+# @project        Library ▸ Core
 # @file           tools/development/docker/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

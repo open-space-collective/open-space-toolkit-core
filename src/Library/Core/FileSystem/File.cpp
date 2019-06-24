@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/File.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -124,7 +124,7 @@ bool                            File::exists                                ( ) 
 
 bool                            File::isOpen                                ( ) const
 {
-    
+
     if (!this->exists())
     {
         throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
@@ -199,7 +199,7 @@ fs::Path                        File::getPath                               ( ) 
     {
         throw library::core::error::runtime::Undefined("File") ;
     }
-    
+
     return path_ ;
 
 }
@@ -364,7 +364,7 @@ String                          File::getContents                           ( ) 
         fileStream.close() ;
 
         throw library::core::error::RuntimeError("Cannot get contents of file [{}].", this->toString()) ;
-    
+
     }
 
     fileStream.close() ;
@@ -443,7 +443,7 @@ void                            File::open                                  (   
     }
 
 }
-        
+
 void                            File::close                                 ( )
 {
 
@@ -520,7 +520,7 @@ void                            File::moveToDirectory                       (   
     catch (const boost::filesystem::filesystem_error& e)
     {
         throw library::core::error::RuntimeError(e.what()) ;
-    }	
+    }
 
 }
 
@@ -547,7 +547,7 @@ void                            File::create                                (   
 
     try
     {
-    
+
         fileStream.open(filePath.toString(), std::ios::out) ;
 
         if (fileStream.is_open())

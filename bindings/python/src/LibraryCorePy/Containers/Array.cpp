@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/Containers/Array.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -29,14 +29,14 @@ struct ToListConverter
 
 	static PyObject*            convert                                     (   const   Container&                  aContainer                                  )
     {
-		
+
         boost::python::list list ;
 
         for (const auto& element : aContainer)
         {
             list.append(element) ;
         }
-		
+
         return boost::python::incref(list.ptr()) ;
 
 	}
@@ -47,7 +47,7 @@ struct IterableConverter
 {
 
     /// @brief                  Registers converter from a python interable type to the provided type
-  
+
                                 template <typename Container>
     IterableConverter&          from_python                                 ( )
     {
@@ -64,7 +64,7 @@ struct IterableConverter
     }
 
     /// @brief                  Registers converter from the provided type to a python interable type
-  
+
                                 template <typename Container>
     IterableConverter&          to_python                                   ( )
     {
@@ -104,7 +104,7 @@ struct IterableConverter
         // Obtain a handle to the memory block that the converter has allocated for the C++ type
 
         typedef python::converter::rvalue_from_python_storage<Container> storage_type ;
-        
+
         void* storage = reinterpret_cast<storage_type*>(data)->storage.bytes ;
 
         typedef python::stl_input_iterator<typename Container::value_type> iterator ;
@@ -119,7 +119,7 @@ struct IterableConverter
             iterator(python::object(handle)), // begin
             iterator() // end
         ) ;
-        
+
         data->convertible = storage ;
 
     }
@@ -158,7 +158,7 @@ inline void                     LibraryCorePy_Containers_Array              ( )
         .to_python<Array<Integer>>()
         .to_python<Array<Real>>()
         .to_python<Array<String>>()
-        
+
     ;
 
     def("GetIntArray", +[] () -> Array<int> { Array<int> vector = { 1, 2, 3 } ; return vector ; }) ;

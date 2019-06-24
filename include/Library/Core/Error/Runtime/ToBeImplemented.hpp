@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/Runtime/ToBeImplemented.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -38,7 +38,7 @@ class ToBeImplemented : public RuntimeError
     public:
 
                                 ToBeImplemented                             ( ) ;
-                                
+
                                 ToBeImplemented                             (   const   String&                     aFunctionName                               ) ;
 
                                 // ToBeImplemented                             (   const   String&                     aScope,

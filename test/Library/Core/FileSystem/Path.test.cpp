@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/Path.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -237,7 +237,7 @@ TEST (Library_Core_FileSystem_Path, StreamOperator)
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, IsDefined)
@@ -260,7 +260,7 @@ TEST (Library_Core_FileSystem_Path, IsDefined)
         EXPECT_FALSE(Path::Undefined().isDefined()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, IsAbsolute)
@@ -302,7 +302,7 @@ TEST (Library_Core_FileSystem_Path, IsAbsolute)
         EXPECT_ANY_THROW(Path::Undefined().isAbsolute()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, IsRelative)
@@ -344,7 +344,7 @@ TEST (Library_Core_FileSystem_Path, IsRelative)
         EXPECT_ANY_THROW(Path::Undefined().isRelative()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, GetParentPath)
@@ -407,7 +407,7 @@ TEST (Library_Core_FileSystem_Path, GetLastElement)
         EXPECT_ANY_THROW(Path::Undefined().getLastElement()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
@@ -438,7 +438,7 @@ TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
         EXPECT_ANY_THROW(Path::Undefined().getNormalizedPath()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
@@ -491,7 +491,7 @@ TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
         EXPECT_ANY_THROW(Path::Parse("/").getAbsolutePath(Path::Undefined())) ;
 
     }
-    
+
 }
 
 // TEST (Library_Core_FileSystem_Path, GetRelativePathTo)
@@ -504,7 +504,7 @@ TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
 //         FAIL() ;
 
 //     }
-    
+
 // }
 
 TEST (Library_Core_FileSystem_Path, ToString)
@@ -527,7 +527,7 @@ TEST (Library_Core_FileSystem_Path, ToString)
         EXPECT_ANY_THROW(Path::Undefined().toString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, Undefined)
@@ -541,7 +541,7 @@ TEST (Library_Core_FileSystem_Path, Undefined)
         EXPECT_FALSE(Path::Undefined().isDefined()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, Root)
@@ -556,7 +556,7 @@ TEST (Library_Core_FileSystem_Path, Root)
         EXPECT_EQ("/", Path::Root().toString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, Current)
@@ -571,7 +571,7 @@ TEST (Library_Core_FileSystem_Path, Current)
         EXPECT_EQ("/app/build", Path::Current().toString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Path, Parse)
@@ -592,7 +592,7 @@ TEST (Library_Core_FileSystem_Path, Parse)
         EXPECT_ANY_THROW(Path::Parse("")) ;
 
     }
-    
+
 }
 
 // TEST (Library_Core_FileSystem_Path, Strings)
@@ -605,7 +605,7 @@ TEST (Library_Core_FileSystem_Path, Parse)
 //         FAIL() ;
 
 //     }
-    
+
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

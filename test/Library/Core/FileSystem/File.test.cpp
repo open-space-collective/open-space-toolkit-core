@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/File.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -93,7 +93,7 @@ TEST (Library_Core_FileSystem_File, StreamOperator)
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, FileStreamOperator)
@@ -148,7 +148,7 @@ TEST (Library_Core_FileSystem_File, IsDefined)
         EXPECT_FALSE(File::Undefined().isDefined()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, Exists)
@@ -177,7 +177,7 @@ TEST (Library_Core_FileSystem_File, Exists)
         EXPECT_ANY_THROW(File::Undefined().exists()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, IsOpen)
@@ -246,7 +246,7 @@ TEST (Library_Core_FileSystem_File, GetName)
         EXPECT_ANY_THROW(File::Undefined().getName()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, GetExtension)
@@ -275,7 +275,7 @@ TEST (Library_Core_FileSystem_File, GetExtension)
         EXPECT_ANY_THROW(File::Undefined().exists()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, GetPath)
@@ -291,13 +291,13 @@ TEST (Library_Core_FileSystem_File, GetPath)
         EXPECT_EQ(path, File::Path(path).getPath()) ;
 
     }
-    
+
     {
 
         EXPECT_ANY_THROW(File::Undefined().getPath()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, GetPermissions)
@@ -342,7 +342,7 @@ TEST (Library_Core_FileSystem_File, GetPermissions)
         EXPECT_ANY_THROW(File::Undefined().getPermissions()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, GetParentDirectory)
@@ -364,7 +364,7 @@ TEST (Library_Core_FileSystem_File, GetParentDirectory)
         EXPECT_ANY_THROW(File::Undefined().getParentDirectory()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, ToString)
@@ -386,7 +386,7 @@ TEST (Library_Core_FileSystem_File, ToString)
         EXPECT_ANY_THROW(File::Undefined().toString()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, Open)
@@ -495,7 +495,7 @@ TEST (Library_Core_FileSystem_File, AccessStream)
 //         FAIL() ;
 
 //     }
-    
+
 // }
 
 // TEST (Library_Core_FileSystem_File, CopyToDirectory)
@@ -509,7 +509,7 @@ TEST (Library_Core_FileSystem_File, AccessStream)
 //         FAIL() ;
 
 //     }
-    
+
 // }
 
 TEST (Library_Core_FileSystem_File, MoveToDirectory)
@@ -528,7 +528,7 @@ TEST (Library_Core_FileSystem_File, MoveToDirectory)
         directory.create() ;
 
         file.moveToDirectory(directory) ;
-        
+
         EXPECT_EQ("/tmp/destination/file", file.getPath().toString()) ;
 
         file.remove() ;
@@ -552,7 +552,7 @@ TEST (Library_Core_FileSystem_File, MoveToDirectory)
         directory.remove() ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, Create)
@@ -568,7 +568,7 @@ TEST (Library_Core_FileSystem_File, Create)
         EXPECT_FALSE(file.exists()) ;
 
         file.create() ;
-        
+
         EXPECT_TRUE(file.exists()) ;
 
         EXPECT_ANY_THROW(file.create()) ;
@@ -582,7 +582,7 @@ TEST (Library_Core_FileSystem_File, Create)
         EXPECT_ANY_THROW(File::Undefined().create()) ;
 
     }
-    
+
 }
 
 // TEST (Library_Core_FileSystem_File, Clear)
@@ -596,7 +596,7 @@ TEST (Library_Core_FileSystem_File, Create)
 //         FAIL() ;
 
 //     }
-    
+
 // }
 
 TEST (Library_Core_FileSystem_File, Remove)
@@ -610,7 +610,7 @@ TEST (Library_Core_FileSystem_File, Remove)
         File file = File::Path(Path::Parse("/tmp/library-core-filesystem-file-remove")) ;
 
         file.create() ;
-        
+
         EXPECT_TRUE(file.exists()) ;
 
         file.remove() ;
@@ -626,7 +626,7 @@ TEST (Library_Core_FileSystem_File, Remove)
         EXPECT_ANY_THROW(File::Undefined().remove()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, Undefined)
@@ -641,7 +641,7 @@ TEST (Library_Core_FileSystem_File, Undefined)
         EXPECT_FALSE(File::Undefined().isDefined()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_File, Path)
@@ -676,7 +676,7 @@ TEST (Library_Core_FileSystem_File, Path)
         EXPECT_ANY_THROW(File::Path(Path::Undefined())) ;
 
     }
-    
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/Types.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -15,13 +15,13 @@
 
 inline void                     LibraryCorePy_Types                         ( )
 {
-    
+
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.Types")))) ;
-    
+
     boost::python::scope().attr("Types") = module ;
-    
+
     boost::python::scope scope = module ;
-    
+
     LibraryCorePy_Types_Integer() ;
     LibraryCorePy_Types_Real() ;
     LibraryCorePy_Types_String() ;

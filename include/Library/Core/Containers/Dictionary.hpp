@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Dictionary.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -62,7 +62,7 @@ class Dictionary
                                 Iterator                                    ( ) ;
 
                                 Iterator                                    (   const   Iterator::MapIterator&      anOrderedMapIt                              ) ;
-                                
+
                                 Iterator                                    (   const   Iterator&                   aIterator                                   ) ;
 
                 Iterator&       operator =                                  (   const   Iterator&                   aIterator                                   ) ;
@@ -109,7 +109,7 @@ class Dictionary
                                 ConstIterator                               ( ) ;
 
                                 ConstIterator                               (   const   ConstIterator::MapConstIterator& anOrderedMapIt                         ) ;
-                                
+
                                 ConstIterator                               (   const   ConstIterator&              aConstIterator                              ) ;
                                 ConstIterator                               (   const   Iterator&                   anIterator                                  ) ;
 
@@ -214,7 +214,7 @@ class Dictionary
         ///
         /// @param              [in] aKey A key
         /// @return             A reference to value
-        
+
         Dictionary::Value&      operator []                                 (   const   Dictionary::Key&            aKey                                        ) ;
 
         /// @brief              Output stream operator
@@ -293,7 +293,7 @@ class Dictionary
         /// @brief              Returns an iterator pointing to the first element
         ///
         /// @return             Iterator pointing to the first element
-        
+
         Dictionary::Iterator    begin                                       ( ) ;
 
         /// @brief              Returns an iterator pointing to the last element

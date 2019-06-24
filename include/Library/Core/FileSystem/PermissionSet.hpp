@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/PermissionSet.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -35,7 +35,7 @@ class PermissionSet
     public:
 
         /// @brief              Default constructor (disabled)
-    
+
                                 PermissionSet                               ( ) = delete ;
 
         /// @brief              Full constructor
@@ -247,7 +247,7 @@ class PermissionSet
         /// @endcode
         ///
         /// @return             Read-Write permissions
-        
+
         static PermissionSet    RW                                          ( ) ;
 
         /// @brief              Constructs a read-execute permission set

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/FileSystem/File.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -41,7 +41,7 @@ inline void                     LibraryCorePy_FileSystem_File               ( )
         .def("create", &File::create)
         // .def("clear", &File::clear)
         .def("remove", &File::remove)
-        
+
         .def("Undefined", &File::Undefined).staticmethod("Undefined")
         .def("Path", &File::Path).staticmethod("Path")
 

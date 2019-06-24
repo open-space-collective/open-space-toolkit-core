@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Table/Row.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -66,7 +66,7 @@ class Row
         Row&                    operator =                                  (   const   Row&                        aRow                                        ) ;
 
         bool                    operator ==                                 (   const   Row&                        aRow                                        ) const ;
-        
+
         bool                    operator !=                                 (   const   Row&                        aRow                                        ) const ;
 
         const Cell&             operator []                                 (   const   Index&                      aColumnIndex                                ) const ;
@@ -78,7 +78,7 @@ class Row
         Size                    getSize                                     ( ) const ;
 
         Row::ConstIterator      begin                                       ( ) const ;
-        
+
         Row::ConstIterator      end                                         ( ) const ;
 
         void                    associateTable                              (   const   Table*                      aTablePtr                                   ) ;

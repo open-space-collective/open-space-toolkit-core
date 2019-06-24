@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library/Core
+# @project        Library ▸ Core
 # @file           LibraryCorePy/CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -54,7 +54,7 @@ SET (BUILD_SHARED_LIBS ON)
 SET (Boost_USE_STATIC_LIBS OFF)
 SET (Boost_USE_MULTITHREADED ON)
 
-FIND_PACKAGE ("Boost" "1.70" REQUIRED COMPONENTS "python" "numpy")
+FIND_PACKAGE ("Boost" "1.70" REQUIRED COMPONENTS "python")
 
 IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
@@ -88,7 +88,7 @@ TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/incl
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 
 TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Python3::Python")
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Boost::python" "Boost::numpy")
+TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Boost::python")
 TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${SHARED_LIBRARY_TARGET})
 
 SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES

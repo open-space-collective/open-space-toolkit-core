@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/Directory.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -65,7 +65,7 @@ bool                            Directory::isDefined                        ( ) 
 
 bool                            Directory::exists                           ( ) const
 {
-    
+
     if (!this->isDefined())
     {
         throw library::core::error::runtime::Undefined("Directory") ;
@@ -147,7 +147,7 @@ bool                            Directory::containsFileWithName             (   
     }
 
     return false ;
-    
+
 }
 
 // bool                            Directory::containsDirectoryWithName        (   const   String&                     aDirectoryName                              ) const
@@ -171,7 +171,7 @@ String                          Directory::getName                          ( ) 
         {
             directoryPathString = directoryPathString.getHead(directoryPathString.getLength() - 1) ;
         }
-        
+
         return boost::filesystem::path(directoryPathString).filename().string() ;
 
     }
@@ -191,7 +191,7 @@ fs::Path                        Directory::getPath                          ( ) 
     {
         throw library::core::error::runtime::Undefined("File") ;
     }
-    
+
     return path_ ;
 
 }

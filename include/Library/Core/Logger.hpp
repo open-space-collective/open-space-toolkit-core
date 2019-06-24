@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Logger.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -61,7 +61,7 @@ class Logger
             Pump pump(Severity::Info, Integer::Undefined(), String::Empty(), String::Empty(), &source_) ;
 
             pump << anObject ;
-            
+
             return std::move(pump) ;
 
         }
@@ -69,7 +69,7 @@ class Logger
         String                  getChannel                                  ( ) const ;
 
         static Logger           Console                                     (   const   Severity&                   aSeverity                           ) ;
-        
+
         static Logger           Console                                     (   const   String&                     aChannel,
                                                                                 const   Severity&                   aSeverity                           ) ;
 
@@ -80,7 +80,7 @@ class Logger
         String                  channel_ ;
         Source                  source_ ;
         Array<Sink>             sinks_ ;
-        
+
 } ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

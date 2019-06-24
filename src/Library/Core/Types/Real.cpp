@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/Real.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -222,13 +222,13 @@ Real                            Real::operator *                            (   
             {
                 return Real::NegativeInfinity() ;
             }
-            
+
             return Real::Undefined() ;
 
         }
         else if (type_ == Real::Type::NegativeInfinity)
         {
-            
+
             if (aReal.isStrictlyPositive())
             {
                 return Real::NegativeInfinity() ;
@@ -237,13 +237,13 @@ Real                            Real::operator *                            (   
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             return Real::Undefined() ;
 
         }
         else if (aReal.type_ == Real::Type::PositiveInfinity)
         {
-            
+
             if (this->isStrictlyPositive())
             {
                 return Real::PositiveInfinity() ;
@@ -252,13 +252,13 @@ Real                            Real::operator *                            (   
             {
                 return Real::NegativeInfinity() ;
             }
-            
+
             return Real::Undefined() ;
-            
+
         }
         else if (aReal.type_ == Real::Type::NegativeInfinity)
         {
-            
+
             if (this->isStrictlyPositive())
             {
                 return Real::NegativeInfinity() ;
@@ -267,7 +267,7 @@ Real                            Real::operator *                            (   
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             return Real::Undefined() ;
 
         }
@@ -278,19 +278,19 @@ Real                            Real::operator *                            (   
             {
                 return Real::Zero() ;
             }
-            
+
             // Check for -1 for two's complement machines
-            
+
             if ((value_ < 0.0) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest())) // Multiplication can overflow
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             if ((aReal.value_ < 0.0) && (value_ == std::numeric_limits<Real::ValueType>::lowest())) // Multiplication can overflow
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             if ((this->getSign() == aReal.getSign()) && (std::abs(value_) > (std::numeric_limits<Real::ValueType>::max() / std::abs(aReal.value_)))) // Multiplication would overflow
             {
                 return Real::PositiveInfinity() ;
@@ -305,12 +305,12 @@ Real                            Real::operator *                            (   
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             if ((aReal.value_ != -1) && (this->getSign() != aReal.getSign()) && ((-std::abs(value_)) < (std::numeric_limits<Real::ValueType>::lowest() / std::abs(aReal.value_)))) // Multiplication would underflow
             {
                 return Real::NegativeInfinity() ;
             }
-            
+
             return Real(value_ * aReal.value_) ;
 
         }
@@ -347,13 +347,13 @@ Real                            Real::operator /                            (   
             {
                 return Real::NegativeInfinity() ;
             }
-            
+
             return Real::Undefined() ;
 
         }
         else if (type_ == Real::Type::NegativeInfinity)
         {
-            
+
             if (aReal.isInfinity())
             {
                 return Real::Undefined() ;
@@ -366,7 +366,7 @@ Real                            Real::operator /                            (   
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             return Real::Undefined() ;
 
         }
@@ -384,7 +384,7 @@ Real                            Real::operator /                            (   
                 {
                     return Real::PositiveInfinity() ;
                 }
-                
+
                 return Real(value_ / aReal.value_) ;
 
             }
@@ -520,10 +520,10 @@ Real                            Real::operator +                            ( ) 
 
 Real                            Real::operator -                            ( ) const
 {
-    
+
     switch (type_)
     {
-    
+
         case Real::Type::Defined:
         {
 
@@ -531,7 +531,7 @@ Real                            Real::operator -                            ( ) 
             {
                 return Real::PositiveInfinity() ;
             }
-            
+
             return Real(-value_) ;
 
         }
@@ -541,10 +541,10 @@ Real                            Real::operator -                            ( ) 
 
         case Real::Type::PositiveInfinity:
             return Real::NegativeInfinity() ;
-        
+
         case Real::Type::NegativeInfinity:
             return Real::PositiveInfinity() ;
-        
+
         default:
             break ;
 
@@ -561,7 +561,7 @@ Real                            Real::operator -                            ( ) 
     {
         throw library::core::error::runtime::Undefined("Real") ;
     }
-    
+
     return value_ ;
 
 }
@@ -654,9 +654,9 @@ bool                            Real::isInteger                             ( ) 
 
     if (this->isFinite())
     {
-        
+
         double intpart ;
-    
+
         return std::modf(value_, &intpart) == 0.0 ;
 
     }
@@ -718,7 +718,7 @@ types::Sign                     Real::getSign                               ( ) 
             {
                 return types::Sign::Negative ;
             }
-            
+
             return types::Sign::None ;
 
         }
@@ -730,7 +730,7 @@ types::Sign                     Real::getSign                               ( ) 
             return types::Sign::Negative ;
 
         default:
-           return types::Sign::Undefined ; 
+           return types::Sign::Undefined ;
 
     }
 
@@ -762,7 +762,7 @@ types::String                   Real::toString                              (   
                     {
                         realString += ".0" ;
                     }
-                    
+
                     return realString ;
 
                 }
@@ -784,12 +784,12 @@ types::String                   Real::toString                              (   
                 }
 
                 return realString ;
-                
+
                 // return boost::lexical_cast<std::string>(value_) ;
                 // return std::to_string(value_) ;
 
             }
-            
+
             std::ostringstream stringStream ;
 
             stringStream.precision(aPrecision) ;
@@ -897,7 +897,7 @@ Real                            Real::sqrt                                  ( ) 
 
             return Real(Real::Type::Defined, std::sqrt(value_)) ;
 
-        } 
+        }
 
         case Real::Type::PositiveInfinity:
             return Real::PositiveInfinity() ;
@@ -962,7 +962,7 @@ Real                            Real::Integer                               (   
     {
         return Real(Real::Type::Defined, anInteger) ;
     }
-    
+
     return Real::Undefined() ;
 
 }
@@ -1018,7 +1018,7 @@ Real                            Real::Parse                                 (   
         {
             throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
         }
-        
+
         return Real(value) ;
 
     }
@@ -1028,12 +1028,12 @@ Real                            Real::Parse                                 (   
     }
 
     return Real::Undefined() ;
-    
+
 }
 
 // Real                             Real::Object                             (   const   ctnr::Object&               anObject                                   )
 // {
-    
+
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1043,7 +1043,7 @@ Real                            Real::Parse                                 (   
                                 :   type_(aType),
                                     value_(aReal)
 {
-    
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

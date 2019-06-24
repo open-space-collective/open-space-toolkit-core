@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Array.tpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -83,7 +83,7 @@ std::ostream&                   operator <<                                 (   
 
     for (const auto& element : anArray)
     {
-        anOutputStream << element << std::endl ;    
+        anOutputStream << element << std::endl ;
     }
 
     library::core::utils::Print::Footer(anOutputStream) ;
@@ -100,7 +100,7 @@ const T&                        Array<T>::accessFirst                       ( ) 
     {
         throw library::core::error::RuntimeError("Array is empty.") ;
     }
-    
+
     return this->front() ;
 
 }
@@ -113,7 +113,7 @@ const T&                        Array<T>::accessLast                        ( ) 
     {
         throw library::core::error::RuntimeError("Array is empty.") ;
     }
-    
+
     return this->back() ;
 
 }
@@ -255,11 +255,11 @@ U                               foldLeft                                    (   
 {
 
     typedef typename Array<T>::ConstIterator Iterator ;
-    
+
     U accumulator = initialValue ;
-    
+
     const Iterator end = data.cend() ;
-    
+
     for (Iterator it = data.cbegin(); it != end; ++it)
     {
         accumulator = aFoldFunction(accumulator, *it) ;
@@ -282,16 +282,16 @@ Array<U>                        Array<T>::map                               (   
     (
         (*this), result, [aMappingFunction] (Array<U>& anArray, T aValue) -> Array<U>&
         {
-            
+
             anArray.add(aMappingFunction(aValue)) ;
-            
+
             return anArray;
 
         }
     ) ;
 
     return result ;
-    
+
 }
 
                                 template <class T>
@@ -309,14 +309,14 @@ T                               Array<T>::reduce                            (   
     const Iterator end = this->cend() ;
 
     T accumulator = *it ;
-    
+
     ++it ;
-    
+
     for (; it != end; ++it)
     {
         accumulator = aReduceFunction(accumulator, *it) ;
     }
-    
+
     return accumulator ;
 
 }
@@ -367,7 +367,7 @@ T&                              Array<T>::accessFirst                       ( )
     {
         throw library::core::error::RuntimeError("Array is empty.") ;
     }
-    
+
     return this->front() ;
 
 }
@@ -411,7 +411,7 @@ void                            Array<T>::remove                            (   
     {
         this->erase(std::remove(this->begin(), this->end(), element), this->end()) ;
     }
-    
+
 }
 
                                 template <class T>
@@ -428,7 +428,7 @@ void                            Array<T>::removeWhere                       (   
     (
         std::remove_if
         (
-            this->begin(), 
+            this->begin(),
             this->end(),
             aPredicate
         ),

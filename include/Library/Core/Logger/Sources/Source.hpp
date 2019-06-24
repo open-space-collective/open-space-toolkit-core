@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Logger/Sources/Source.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -47,7 +47,7 @@ class Source
     public:
 
                                 Source                                      (   const   String&                     aChannel                                    ) ;
-                                
+
                                 Source                                      (   const   Source&                     aSource                                     ) ;
 
                                 ~Source                                     ( ) ;

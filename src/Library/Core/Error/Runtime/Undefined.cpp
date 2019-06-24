@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/Runtime/Undefined.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -25,14 +25,14 @@ namespace runtime
                                 Undefined::Undefined                        (   const   String&                     aVariableName                               )
                                 :   RuntimeError("{" + aVariableName + "} is undefined.")
 {
-    
+
 }
 
 //                                 Undefined::Undefined                        (   const   String&                     aScope,
 //                                                                                 const   String&                     aVariableName                               )
 //                                 :   RuntimeError(aScope, "{" + aVariableName + "} is undefined.")
 // {
-    
+
 // }
 
                                 Undefined::~Undefined                       ( )

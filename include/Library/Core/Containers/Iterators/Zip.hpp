@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Iterators/Zip.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -52,20 +52,20 @@ class ZipIterator
 
                 Iterator&       operator ++                                 ( )
                 {
-                    
+
                     increment(std::index_sequence_for<T...>{}) ;
-                
+
                     return *this ;
 
                 }
 
                 Iterator        operator ++                                 (           int                                                                     )
                 {
-                
+
                     auto        saved{*this} ;
-                    
+
                     increment(std::index_sequence_for<T...>{}) ;
-                    
+
                     return saved ;
 
                 }
@@ -79,7 +79,7 @@ class ZipIterator
                 {
                     return deref(std::index_sequence_for<T...>{}) ;
                 }
-        
+
             private:
 
                 template <std::size_t... I>

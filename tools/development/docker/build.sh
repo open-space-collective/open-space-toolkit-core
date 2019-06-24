@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library/Core
+# @project        Library ▸ Core
 # @file           tools/development/docker/build.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
