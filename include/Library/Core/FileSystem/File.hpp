@@ -336,7 +336,7 @@ class File
         /// @code
         ///                     File file = File::Path(Path::Parse("/path/to/file.txt")) ;
         ///                     file.exists() ; // True
-        ///                     file.delete() ;
+        ///                     file.remove() ;
         ///                     file.exists() ; // False
         /// @endcode
 
