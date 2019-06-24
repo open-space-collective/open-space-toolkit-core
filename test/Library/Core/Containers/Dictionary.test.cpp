@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Dictionary.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -24,7 +24,7 @@ TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
     using library::core::types::Size ;
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary dictionary =
@@ -100,7 +100,7 @@ TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
         EXPECT_TRUE(dictionary["Array"][6][0].isInteger()) ;
         EXPECT_TRUE(dictionary["Array"][6][1].isInteger()) ;
         EXPECT_TRUE(dictionary["Array"][6][2].isInteger()) ;
-        
+
         EXPECT_EQ(true, dictionary["Boolean"].getBoolean()) ;
         EXPECT_EQ(123, dictionary["Integer"].getInteger()) ;
         EXPECT_EQ(123.456, dictionary["Real"].getReal()) ;
@@ -128,7 +128,7 @@ TEST (Library_Core_Containers_Dictionary, CopyConstructor)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary firstDictionary =
@@ -160,7 +160,7 @@ TEST (Library_Core_Containers_Dictionary, AssignmentOperator)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary firstDictionary =
@@ -192,7 +192,7 @@ TEST (Library_Core_Containers_Dictionary, EqualToOperator)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary firstDictionary =
@@ -263,7 +263,7 @@ TEST (Library_Core_Containers_Dictionary, NotEqualToOperator)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary firstDictionary =
@@ -334,7 +334,7 @@ TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary dictionary =
@@ -375,7 +375,7 @@ TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
         EXPECT_EQ(789.123, dictionary["Dictionary"]["Dictionary"]["Real"].getReal()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Containers_Dictionary, Iterators)
@@ -383,7 +383,7 @@ TEST (Library_Core_Containers_Dictionary, Iterators)
 
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         const Dictionary dictionary =
@@ -554,7 +554,7 @@ TEST (Library_Core_Containers_Dictionary, Iterators)
         }
 
     }
-    
+
 }
 
 TEST (Library_Core_Containers_Dictionary, IsEmpty)
@@ -568,7 +568,7 @@ TEST (Library_Core_Containers_Dictionary, IsEmpty)
         EXPECT_FALSE(Dictionary({{ "Key", Object::String("Value") }}).isEmpty()) ;
 
     }
-    
+
     {
 
         EXPECT_TRUE(Dictionary::Empty().isEmpty()) ;
@@ -691,7 +691,7 @@ TEST (Library_Core_Containers_Dictionary, Empty)
 {
 
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         EXPECT_TRUE(Dictionary::Empty().isEmpty()) ;
@@ -706,7 +706,7 @@ TEST (Library_Core_Containers_Dictionary, Parse)
     using library::core::types::String ;
     using library::core::ctnr::Object ;
     using library::core::ctnr::Dictionary ;
-    
+
     {
 
         String jsonString = "{}" ;

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Table.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -39,7 +39,7 @@ TEST (Library_Core_Containers_Table, Constructor)
     {
 
         const Array<String> header = { "Column A", "Column B" } ;
-        
+
         EXPECT_NO_THROW(Table table(header) ;) ;
 
     }
@@ -504,13 +504,13 @@ TEST (Library_Core_Containers_Table, Iterator)
 
                 EXPECT_EQ(Object::String("Hello"), row[0]) ;
                 EXPECT_FALSE(row[1].isDefined()) ;
-                
+
             }
             else if (index == 2)
             {
 
                 EXPECT_EQ(Object::String("World!"), row[0]) ;
-                
+
             }
             else
             {
@@ -555,7 +555,7 @@ TEST (Library_Core_Containers_Table, IsEmpty)
     {
 
         const Array<String> header = { "Column A", "Column B" } ;
-        
+
         const Table table = { header } ;
 
         EXPECT_TRUE(table.isEmpty()) ;
@@ -593,7 +593,7 @@ TEST (Library_Core_Containers_Table, HasColumnWithName)
 
         EXPECT_TRUE(table.hasColumnWithName("Column A")) ;
         EXPECT_TRUE(table.hasColumnWithName("Column B")) ;
-        
+
         EXPECT_FALSE(table.hasColumnWithName("Column C")) ;
 
     }
@@ -601,12 +601,12 @@ TEST (Library_Core_Containers_Table, HasColumnWithName)
     {
 
         const Array<String> header = { "Column A", "Column B" } ;
-        
+
         const Table table = { header } ;
 
         EXPECT_TRUE(table.hasColumnWithName("Column A")) ;
         EXPECT_TRUE(table.hasColumnWithName("Column B")) ;
-        
+
         EXPECT_FALSE(table.hasColumnWithName("Column C")) ;
 
     }
@@ -714,7 +714,7 @@ TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
 
         EXPECT_EQ(0, table.getIndexOfColumnWithName("Column A")) ;
         EXPECT_EQ(1, table.getIndexOfColumnWithName("Column B")) ;
-        
+
         EXPECT_ANY_THROW(table.getIndexOfColumnWithName("Column C")) ;
 
     }
@@ -740,7 +740,7 @@ TEST (Library_Core_Containers_Table, AddRow)
     {
 
         const Array<String> header = { "Column A", "Column B" } ;
-        
+
         Table table = { header } ;
 
         EXPECT_TRUE(table.isEmpty()) ;
@@ -758,7 +758,7 @@ TEST (Library_Core_Containers_Table, AddRow)
     {
 
         const Array<String> header = { "Column A" } ;
-        
+
         Table table = { header } ;
 
         EXPECT_TRUE(table.isEmpty()) ;
@@ -794,7 +794,7 @@ TEST (Library_Core_Containers_Table, Clear)
         Table table = { header, rows } ;
 
         EXPECT_FALSE(table.isEmpty()) ;
-        
+
         table.clear() ;
 
         EXPECT_TRUE(table.isEmpty()) ;
@@ -850,7 +850,7 @@ TEST (Library_Core_Containers_Table, Load)
 
     {
 
-        
+
         const Array<String> header = { "Start Time (UTCG)", "Stop Time (UTCG)", "Duration (sec)", "Obstruction", "Current Condition", "Worst Condition", "Total Duration (sec)" } ;
         const Array<Row> rows =
         {

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/RuntimeError.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -24,7 +24,7 @@ namespace error
                                 :   Exception(String::Empty()),
                                     message_(aMessage)
 {
-    
+
 }
 
 //                                 RuntimeError::RuntimeError                  (   const   String&                     aScope,
@@ -32,7 +32,7 @@ namespace error
 //                                 :   Exception(aScope),
 //                                     message_(aMessage)
 // {
-    
+
 // }
 
                                 RuntimeError::~RuntimeError                 ( )

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Array.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -96,19 +96,19 @@ class Array : public std::vector<T>
         /// @brief              Copy constructor
         ///
         /// @param              [in] anArray An array
-                                
+
                                 Array                                       (   const   Array&                      anArray                                     ) = default ;
 
         /// @brief              Move constructor (array)
         ///
         /// @param              [in] anArray An array
-                                
+
                                 Array                                       (           Array&&                     anArray                                     ) = default ;
 
         /// @brief              Move constructor (vector)
         ///
         /// @param              [in] aVector A vector
-                                
+
                                 Array                                       (           std::vector<T>&&            aVector                                     ) ;
 
         /// @brief              Copy assignment operator
@@ -197,13 +197,13 @@ class Array : public std::vector<T>
         ///                     Array<Real> firstArray = {1.0, 2.0, 3.0} ;
         ///                     Array<Real> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
         ///                     firstArray.isNear(secondArray,
-        ///                     [] (const Real& aFirstValue, const Real& aSecondValue) -> bool 
+        ///                     [] (const Real& aFirstValue, const Real& aSecondValue) -> bool
         ///                     { return aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; // True
         /// @endcode
         ///
         /// @param              [in] anArray An array
         /// @param              [in] aComparator A comparator
-        /// @return             True if array is near another array    
+        /// @return             True if array is near another array
 
         bool                    isNear                                      (   const   Array<T>&                   anArray,
                                                                                 const   std::function<bool (const T&, const T&)>& aComparator                   ) const ;
@@ -366,7 +366,7 @@ class Array : public std::vector<T>
         /// @endcode
         ///
         /// @param              [in] anElement An element
-        
+
         void                    remove                                      (   const   T&                          anElement                                   ) ;
 
         /// @brief              Add elements to array
@@ -433,7 +433,7 @@ class Array : public std::vector<T>
         /// @endcode
         ///
         /// @return             Empty array
-        
+
         static Array<T>         Empty                                       ( ) ;
 
 } ;

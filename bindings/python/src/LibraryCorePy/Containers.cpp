@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/Containers.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -13,13 +13,13 @@
 
 inline void                     LibraryCorePy_Containers                    ( )
 {
-    
+
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.Containers")))) ;
-    
+
     boost::python::scope().attr("Containers") = module ;
-    
+
     boost::python::scope scope = module ;
-    
+
     LibraryCorePy_Containers_Array() ;
 
 }

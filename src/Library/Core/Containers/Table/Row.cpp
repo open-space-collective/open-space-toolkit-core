@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Table/Row.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -79,7 +79,7 @@ Row&                            Row::operator =                             (   
 
 bool                            Row::operator ==                            (   const   Row&                        aRow                                        ) const
 {
-    
+
     return std::equal
     (
         cells_.begin(), cells_.end(),
@@ -135,7 +135,7 @@ Row::ConstIterator              Row::begin                                  ( ) 
 {
     return cells_.begin() ;
 }
-        
+
 Row::ConstIterator              Row::end                                    ( ) const
 {
     return cells_.end() ;

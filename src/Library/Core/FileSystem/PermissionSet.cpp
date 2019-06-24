@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/PermissionSet.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -44,7 +44,7 @@ bool                            PermissionSet::operator !=                  (   
 }
 
 PermissionSet                   PermissionSet::operator +                   (   const   PermissionSet&              aPermissionSet                              ) const
-{   
+{
     return { read_ || aPermissionSet.read_, write_ || aPermissionSet.write_, execute_ || aPermissionSet.execute_ } ;
 }
 

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/RuntimeError.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -48,7 +48,7 @@ class RuntimeError : public Exception
                                 :   Exception(String::Empty()),
                                     message_(String::Format(aFormat, anArgumentList...))
         {
-            
+
         }
 
         //                         template <typename ...Args>
@@ -58,7 +58,7 @@ class RuntimeError : public Exception
         //                         :   Exception(aScope),
         //                             message_(String::Format(aFormat, anArgumentList...))
         // {
-            
+
         // }
 
                                 ~RuntimeError                               ( ) ;

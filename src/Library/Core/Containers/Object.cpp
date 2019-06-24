@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Object.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -89,7 +89,7 @@ Object::Impl*                   Object::Impl::clone                         ( ) 
 
 bool                            Object::Impl::operator ==                   (   const   Object::Impl&               anObject                                    ) const
 {
-    
+
     if (value_.type() != anObject.value_.type())
     {
         return false ;
@@ -128,7 +128,7 @@ bool                            Object::Impl::operator ==                   (   
     throw library::core::error::runtime::Wrong("Type") ;
 
     return false ;
-    
+
 }
 
 bool                            Object::Impl::operator !=                   (   const   Object::Impl&               anObject                                    ) const
@@ -505,7 +505,7 @@ std::ostream&                   operator <<                                 (   
                 index++ ;
 
             }
-            
+
             break ;
 
         }
@@ -543,7 +543,7 @@ fs::File&                       operator >>                                 (   
     anObject = Object::Load(aFile, Object::Format::JSON) ;
 
     return aFile ;
-    
+
 }
 
 bool                            Object::isDefined                           ( ) const
@@ -583,12 +583,12 @@ bool                            Object::isArray                             ( ) 
 
 const bool&                     Object::accessBoolean                       ( ) const
 {
-    
+
     if (!this->isDefined())
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessBoolean() ;
 
 }
@@ -600,7 +600,7 @@ const types::Integer&           Object::accessInteger                       ( ) 
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessInteger() ;
 
 }
@@ -612,7 +612,7 @@ const types::Real&              Object::accessReal                          ( ) 
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessReal() ;
 
 }
@@ -624,7 +624,7 @@ const types::String&            Object::accessString                        ( ) 
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessString() ;
 
 }
@@ -636,7 +636,7 @@ const ctnr::Dictionary&         Object::accessDictionary                    ( ) 
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessDictionary() ;
 
 }
@@ -648,7 +648,7 @@ const ctnr::Array<Object>&      Object::accessArray                         ( ) 
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessArray() ;
 
 }
@@ -754,7 +754,7 @@ types::String                   Object::getJsonString                       ( ) 
                 {
 
                     const types::String string = integer.toString() ;
-                    
+
                     value.SetString(string.data(), string.length()) ;
 
                 }
@@ -814,9 +814,9 @@ types::String                   Object::getJsonString                       ( ) 
     jsonDocument.CopyFrom(ValueFromObject(*this), jsonDocument.GetAllocator()) ;
 
     rapidjson::StringBuffer buffer ;
-    
+
     rapidjson::Writer<rapidjson::StringBuffer, rapidjson::UTF8<>, rapidjson::UTF8<>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(buffer) ;
-    
+
     jsonDocument.Accept(writer) ;
 
     return buffer.GetString() ;
@@ -825,12 +825,12 @@ types::String                   Object::getJsonString                       ( ) 
 
 bool&                           Object::accessBoolean                       ( )
 {
-    
+
     if (!this->isDefined())
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessBoolean() ;
 
 }
@@ -842,7 +842,7 @@ types::Integer&                 Object::accessInteger                       ( )
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessInteger() ;
 
 }
@@ -854,7 +854,7 @@ types::Real&                    Object::accessReal                          ( )
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessReal() ;
 
 }
@@ -866,7 +866,7 @@ types::String&                  Object::accessString                        ( )
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessString() ;
 
 }
@@ -878,7 +878,7 @@ ctnr::Dictionary&               Object::accessDictionary                    ( )
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessDictionary() ;
 
 }
@@ -890,7 +890,7 @@ ctnr::Array<Object>&            Object::accessArray                         ( )
     {
         throw library::core::error::runtime::Undefined("Object") ;
     }
-    
+
     return objectImplUPtr_->accessArray() ;
 
 }
@@ -954,16 +954,16 @@ Object                          Object::Parse                               (   
             break ;
 
         }
-        
+
         case Object::Format::JSON:
             return Object::ParseJson(aString) ;
-    
+
         default:
             break ;
     }
 
     throw library::core::error::runtime::Wrong("Format") ;
-    
+
     return Object::Undefined() ;
 
 }
@@ -982,7 +982,7 @@ Object                          Object::ParseJson                           (   
     [&parseJson]
     (const rapidjson::Value& aJsonValue) -> Object
     {
-        
+
         if (aJsonValue.IsNull()) // Value is Null
         {
             return Object::Undefined() ;
@@ -993,7 +993,7 @@ Object                          Object::ParseJson                           (   
         }
         else if (aJsonValue.IsNumber()) // Value is Number
         {
-            
+
             if (aJsonValue.IsInt() || aJsonValue.IsUint() || aJsonValue.IsInt64() || aJsonValue.IsUint64())
             {
                 return Object::Integer(aJsonValue.GetInt()) ;
@@ -1006,15 +1006,15 @@ Object                          Object::ParseJson                           (   
             {
                 throw library::core::error::runtime::Wrong("Number") ;
             }
-            
+
         }
         else if (aJsonValue.IsString()) // Object is String
         {
-            
+
             const types::String jsonValueString = aJsonValue.GetString() ;
 
             return Object::String(jsonValueString) ;
-            
+
         }
         else if (aJsonValue.IsObject()) // Object is Object
         {
@@ -1031,7 +1031,7 @@ Object                          Object::ParseJson                           (   
         }
         else if (aJsonValue.IsArray()) // Object is [Array]
         {
-            
+
             if (aJsonValue.Empty())
             {
                 return Object::Array() ;
@@ -1045,7 +1045,7 @@ Object                          Object::ParseJson                           (   
             }
 
             return Object::Array(array) ;
-            
+
         }
         else
         {
@@ -1057,7 +1057,7 @@ Object                          Object::ParseJson                           (   
     } ;
 
     rapidjson::StringStream jsonStream(aString.data()) ;
-    
+
     rapidjson::Document jsonDocument ;
 
     if (jsonDocument.ParseStream<rapidjson::kParseNanAndInfFlag | rapidjson::kParseCommentsFlag>(jsonStream).HasParseError())

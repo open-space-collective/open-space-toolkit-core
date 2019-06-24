@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Table.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -77,7 +77,7 @@ Table&                          Table::operator =                           (   
         {
             row.associateTable(this) ;
         }
-        
+
     }
 
     return *this ;
@@ -101,7 +101,7 @@ const Row&                      Table::operator []                          (   
     {
         throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
     }
-    
+
     return rows_[aRowIndex] ;
 
 }
@@ -127,7 +127,7 @@ const Cell&                     Table::operator ()                          (   
     {
         throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
     }
-    
+
     return rows_[aRowIndex][this->getIndexOfColumnWithName(aColumnName)] ;
 
 }
@@ -220,7 +220,7 @@ bool                            Table::hasColumnWithName                    (   
     {
         throw library::core::error::runtime::Undefined("Column name") ;
     }
-    
+
     return header_.contains(aColumnName) ;
 
 }
@@ -360,10 +360,10 @@ Table                           Table::LoadCsv                              (   
                 else
                 {
                     header.add(columnName) ;
-                }                
+                }
 
             }
-            
+
         }
 
         Table table = Table(header) ;

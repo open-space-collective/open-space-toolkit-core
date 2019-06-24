@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Error/Exception.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -23,12 +23,12 @@ namespace error
                                 Exception::Exception                        (   const   String&                     aScope                              )
                                 :   scope_(aScope)
 {
-    
+
 }
 
                                 Exception::~Exception                       ( )
 {
-    
+
 }
 
 String                          Exception::getScope                         ( ) const

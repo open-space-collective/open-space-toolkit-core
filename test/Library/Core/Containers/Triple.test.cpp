@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Triple.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -21,7 +21,7 @@ TEST (Library_Core_Containers_Triple, Constructor)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Triple ;
-    
+
     {
 
         const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
@@ -36,7 +36,7 @@ TEST (Library_Core_Containers_Triple, Getters)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Triple ;
-    
+
     {
 
         const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
@@ -55,7 +55,7 @@ TEST (Library_Core_Containers_Triple, Setters)
     using library::core::types::Integer ;
     using library::core::types::String ;
     using library::core::ctnr::Triple ;
-    
+
     {
 
         Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
@@ -83,7 +83,7 @@ TEST (Library_Core_Containers_Triple, Setters)
 //     using library::core::types::String ;
 //     using library::core::ctnr::Triple ;
 //     using library::core::ctnr::Unpack ;
-    
+
 //     {
 
 //         const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;

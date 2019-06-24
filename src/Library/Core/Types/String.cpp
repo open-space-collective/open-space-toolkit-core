@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/String.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -42,7 +42,7 @@ using library::core::types::Integer ;
 
                                 String::~String                             ( )
 {
-    
+
 }
 
 bool                            String::isEmpty                             ( ) const
@@ -143,7 +143,7 @@ String                          String::getSubstring                        (   
     {
         throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
     }
-    
+
     return this->substr(aStartPosition, aLength) ;
 
 }
@@ -157,7 +157,7 @@ String&                         String::trim                                ( )
     }
 
     return *this ;
-    
+
 }
 
 String&                         String::replace                             (   const   char                        aCharacter,
@@ -212,7 +212,7 @@ String                          String::Replicate                           (   
     {
         stringStream << aString ;
     }
-        
+
     return stringStream.str() ;
 
 }

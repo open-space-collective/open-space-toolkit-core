@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/FileSystem/Path.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -38,7 +38,7 @@ inline void                     LibraryCorePy_FileSystem_Path               ( )
         .def("getAbsolutePath", &Path::getAbsolutePath)
         // .def("getRelativePathTo", &Path::getRelativePathTo)
         .def("toString", &Path::toString)
-        
+
         .def("Undefined", &Path::Undefined).staticmethod("Undefined")
         .def("Root", &Path::Root).staticmethod("Root")
         .def("Current", &Path::Current).staticmethod("Current")

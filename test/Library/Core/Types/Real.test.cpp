@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/Real.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -71,7 +71,7 @@ TEST (Library_Core_Types_Real, EqualToOperator)
         EXPECT_FALSE(Real::PositiveInfinity() == Real::NegativeInfinity()) ;
         EXPECT_FALSE(Real::NegativeInfinity() == Real::PositiveInfinity()) ;
 
-    }    
+    }
 
 }
 
@@ -128,7 +128,7 @@ TEST (Library_Core_Types_Real, LessThanOperator)
         EXPECT_FALSE(Real(+123.0) < Real(-123.0)) ;
         EXPECT_FALSE(Real(+123.0) < Real(+123.0)) ;
         EXPECT_FALSE(Real(-123.0) < Real(-123.0)) ;
-        
+
         EXPECT_FALSE(Real::Undefined() < Real::Undefined()) ;
         EXPECT_FALSE(Real::PositiveInfinity() < Real::PositiveInfinity()) ;
         EXPECT_FALSE(Real::NegativeInfinity() < Real::NegativeInfinity()) ;
@@ -162,7 +162,7 @@ TEST (Library_Core_Types_Real, LessThanOrEqualToOperator)
         EXPECT_FALSE(Real(1.0) <= Real(0.0)) ;
         EXPECT_FALSE(Real(+1.0) <= Real(-1.0)) ;
         EXPECT_FALSE(Real(+123.0) <= Real(-123.0)) ;
-        
+
         EXPECT_FALSE(Real::Undefined() <= Real::Undefined()) ;
         EXPECT_FALSE(Real::PositiveInfinity() <= Real::PositiveInfinity()) ;
         EXPECT_FALSE(Real::NegativeInfinity() <= Real::NegativeInfinity()) ;
@@ -196,7 +196,7 @@ TEST (Library_Core_Types_Real, GreaterThanOperator)
         EXPECT_FALSE(Real(-123.0) > Real(+123.0)) ;
         EXPECT_FALSE(Real(+123.0) > Real(+123.0)) ;
         EXPECT_FALSE(Real(-123.0) > Real(-123.0)) ;
-        
+
         EXPECT_FALSE(Real::Undefined() > Real::Undefined()) ;
         EXPECT_FALSE(Real::PositiveInfinity() > Real::PositiveInfinity()) ;
         EXPECT_FALSE(Real::NegativeInfinity() > Real::NegativeInfinity()) ;
@@ -230,7 +230,7 @@ TEST (Library_Core_Types_Real, GreaterThanOrEqualToOperator)
         EXPECT_FALSE(Real(0.0) >= Real(1.0)) ;
         EXPECT_FALSE(Real(-1.0) >= Real(+1.0)) ;
         EXPECT_FALSE(Real(-123.0) >= Real(+123.0)) ;
-        
+
         EXPECT_FALSE(Real::Undefined() >= Real::Undefined()) ;
         EXPECT_FALSE(Real::PositiveInfinity() >= Real::PositiveInfinity()) ;
         EXPECT_FALSE(Real::NegativeInfinity() >= Real::NegativeInfinity()) ;
@@ -327,7 +327,7 @@ TEST (Library_Core_Types_Real, AdditionOperator)
         {+1.0, +2.0, +3.0},
         {+1.0, std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()},
         {+1.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
-        
+
         {+2.0, Real::Undefined(), Real::Undefined()},
         {+2.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest() + 2},
@@ -482,7 +482,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
         {+1.0, +2.0, -1.0},
         {+1.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::lowest() + 2},
         {+1.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
-        
+
         {+2.0, Real::Undefined(), Real::Undefined()},
         {+2.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
@@ -524,7 +524,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
         const Real& a = testCase.first ;
         const Real& b = testCase.second ;
         const Real& c = testCase.third ;
-        
+
         if (c.isDefined())
         {
 
@@ -617,7 +617,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {-2.0, +2.0, -4.0},
 //         {-2.0, std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
 //         {-2.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
-        
+
 //         {-1.0, Real::Undefined(), Real::Undefined()},
 //         {-1.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
 //         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
@@ -705,7 +705,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         const Real& a = testCase.first ;
 //         const Real& b = testCase.second ;
 //         const Real& c = testCase.third ;
-        
+
 //         if (c.isDefined())
 //         {
 
@@ -785,7 +785,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {-2.0, +2.0, -1.0},
 //         {-2.0, std::numeric_limits<Real::ValueType>::max(), +0.0},
 //         {-2.0, Real::PositiveInfinity(), +0.0},
-        
+
 //         {-1.0, Real::Undefined(), Real::Undefined()},
 //         {-1.0, Real::NegativeInfinity(), +0.0},
 //         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), +0.0},
@@ -860,7 +860,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         const Real& a = testCase.first ;
 //         const Real& b = testCase.second ;
 //         const Real& c = testCase.third ;
-        
+
 //         if (c.isDefined())
 //         {
 
@@ -973,7 +973,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {+1.0, +2.0, +3.0},
 //         {+1.0, std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()},
 //         {+1.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
-        
+
 //         {+2.0, Real::Undefined(), Real::Undefined()},
 //         {+2.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
 //         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest() + 2},
@@ -1130,7 +1130,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {+1.0, +2.0, -1.0},
 //         {+1.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::lowest() + 2},
 //         {+1.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
-        
+
 //         {+2.0, Real::Undefined(), Real::Undefined()},
 //         {+2.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
 //         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
@@ -1267,7 +1267,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {-2.0, +2.0, -4.0},
 //         {-2.0, std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
 //         {-2.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
-        
+
 //         {-1.0, Real::Undefined(), Real::Undefined()},
 //         {-1.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
 //         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
@@ -1437,7 +1437,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {-2.0, +2.0, -1.0},
 //         {-2.0, std::numeric_limits<Real::ValueType>::max(), +0.0},
 //         {-2.0, Real::PositiveInfinity(), +0.0},
-        
+
 //         {-1.0, Real::Undefined(), Real::Undefined()},
 //         {-1.0, Real::NegativeInfinity(), +0.0},
 //         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), +0.0},
@@ -1561,7 +1561,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {+2.0, +2.0},
 //         {std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::max()},
 //         {Real::PositiveInfinity(), Real::PositiveInfinity()}
-        
+
 //     } ;
 
 //     for (const auto& testCase : testCases)
@@ -1571,7 +1571,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         const Real& b = testCase.second ;
 
 //         Real c = +a ;
-        
+
 //         if (b.isDefined())
 //         {
 
@@ -1618,7 +1618,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         {+2.0, -2.0},
 //         {std::numeric_limits<Real::ValueType>::max(), -std::numeric_limits<Real::ValueType>::max()},
 //         {Real::PositiveInfinity(), Real::NegativeInfinity()}
-        
+
 //     } ;
 
 //     for (const auto& testCase : testCases)
@@ -1628,7 +1628,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 //         const Real& b = testCase.second ;
 
 //         Real c = -a ;
-        
+
 //         if (b.isDefined())
 //         {
 
@@ -1659,7 +1659,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using library::core::types::Real ;
-    
+
 //     {
 
 //         EXPECT_ANY_THROW( Real::ValueType a = Real::Undefined() ; (void) a ; ) ;
@@ -1892,7 +1892,7 @@ TEST (Library_Core_Types_Real, IsInteger)
 
         EXPECT_TRUE(Real(0.0).isInteger()) ;
         EXPECT_TRUE(Real(1.0).isInteger()) ;
-        
+
         EXPECT_TRUE(Real(-1.0).isInteger()) ;
         EXPECT_TRUE(Real(+1.0).isInteger()) ;
 
@@ -1912,7 +1912,7 @@ TEST (Library_Core_Types_Real, IsInteger)
         EXPECT_FALSE(Real(0.1).isInteger()) ;
         EXPECT_FALSE(Real(1.1).isInteger()) ;
         EXPECT_FALSE(Real(0.999999999999).isInteger()) ;
-        
+
         EXPECT_FALSE(Real(-1.0e-6).isInteger()) ;
         EXPECT_FALSE(Real(+1.0e-6).isInteger()) ;
 
@@ -2021,7 +2021,7 @@ TEST (Library_Core_Types_Real, ToString)
     {
 
         EXPECT_EQ("0.0",                        Real(0.0).toString()) ;
-    
+
         EXPECT_EQ("-1.0",                       Real(-1.0).toString()) ;
         EXPECT_EQ("0.0",                        Real(+0.0).toString()) ;
         EXPECT_EQ("1.0",                        Real(+1.0).toString()) ;
@@ -2088,7 +2088,7 @@ TEST (Library_Core_Types_Real, ToString)
     {
 
         EXPECT_EQ("0.000",                      Real(0.0).toString(3)) ;
-    
+
         EXPECT_EQ("-1.000",                     Real(-1.0).toString(3)) ;
         EXPECT_EQ("0.000",                      Real(+0.0).toString(3)) ;
         EXPECT_EQ("1.000",                      Real(+1.0).toString(3)) ;
@@ -2154,7 +2154,7 @@ TEST (Library_Core_Types_Real, ToString)
     {
 
         EXPECT_EQ("0.00000",                    Real(0.0).toString(5)) ;
-    
+
         EXPECT_EQ("-1.00000",                   Real(-1.0).toString(5)) ;
         EXPECT_EQ("0.00000",                    Real(+0.0).toString(5)) ;
         EXPECT_EQ("1.00000",                    Real(+1.0).toString(5)) ;
@@ -2247,7 +2247,7 @@ TEST (Library_Core_Types_Real, ToString)
         EXPECT_EQ("+Inf", Real::PositiveInfinity().toString(3)) ;
 
     }
-    
+
     {
 
         EXPECT_EQ("Undefined", Real::Undefined().toString(3)) ;
@@ -2373,9 +2373,9 @@ TEST (Library_Core_Types_Real, Sqrt)
 
         EXPECT_FALSE(Real(-1.0).sqrt().isDefined()) ;
         EXPECT_FALSE(Real(-2.0).sqrt().isDefined()) ;
-        
+
     }
-    
+
     {
 
         EXPECT_NO_THROW(Real::Undefined().sqrt()) ;
@@ -2404,7 +2404,7 @@ TEST (Library_Core_Types_Real, Undefined)
     using library::core::types::Real ;
 
     EXPECT_NO_THROW(Real::Undefined()) ;
-   
+
     EXPECT_FALSE(Real::Undefined().isDefined()) ;
     EXPECT_FALSE(Real::Undefined().isInfinity()) ;
 
@@ -2490,7 +2490,7 @@ TEST (Library_Core_Types_Real, NegativeInfinity)
     using library::core::types::Real ;
 
     EXPECT_NO_THROW(Real::NegativeInfinity()) ;
-    
+
     EXPECT_TRUE(Real::NegativeInfinity().isDefined()) ;
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity()) ;
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity()) ;
@@ -2506,11 +2506,11 @@ TEST (Library_Core_Types_Real, Integer)
     {
 
         EXPECT_NO_THROW(Real::Integer(Integer(123))) ;
-    
+
         EXPECT_TRUE(Real::Integer(Integer(123)).isDefined()) ;
         EXPECT_TRUE(Real::Integer(Integer(123)).isInteger()) ;
         EXPECT_TRUE(Real::Integer(Integer(123)).isFinite()) ;
-        
+
         EXPECT_EQ(Integer(123), Real::Integer(Integer(123)).toInteger()) ;
 
     }
@@ -2536,7 +2536,7 @@ TEST (Library_Core_Types_Real, CanParse)
     EXPECT_TRUE(Real::CanParse("-1")) ;
     EXPECT_TRUE(Real::CanParse("+0")) ;
     EXPECT_TRUE(Real::CanParse("+1")) ;
-    
+
     EXPECT_TRUE(Real::CanParse("0.0")) ;
     EXPECT_TRUE(Real::CanParse("-1.0")) ;
     EXPECT_TRUE(Real::CanParse("+0.0")) ;
@@ -2582,7 +2582,7 @@ TEST (Library_Core_Types_Real, Parse)
     EXPECT_EQ(-1.0, Real::Parse("-1")) ;
     EXPECT_EQ(+0.0, Real::Parse("+0")) ;
     EXPECT_EQ(+1.0, Real::Parse("+1")) ;
-    
+
     EXPECT_EQ(+0.0, Real::Parse("0.0")) ;
     EXPECT_EQ(-1.0, Real::Parse("-1.0")) ;
     EXPECT_EQ(+0.0, Real::Parse("+0.0")) ;
@@ -2600,7 +2600,7 @@ TEST (Library_Core_Types_Real, Parse)
     EXPECT_NO_THROW(Real::Parse("+2147483648.0")) ;
 
     EXPECT_ANY_THROW(Real::Parse("")) ;
-    
+
     EXPECT_ANY_THROW(Real::Parse("-NaN")) ;
     EXPECT_ANY_THROW(Real::Parse("+NaN")) ;
     EXPECT_ANY_THROW(Real::Parse("nan")) ;

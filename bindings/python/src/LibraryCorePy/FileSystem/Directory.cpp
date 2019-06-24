@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           LibraryCorePy/FileSystem/Directory.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -43,7 +43,7 @@ inline void                     LibraryCorePy_FileSystem_Directory          ( )
         // .def("moveToDirectory", &Directory::moveToDirectory)
         .def("create", &Directory::create)
         .def("remove", &Directory::remove)
-        
+
         .def("Undefined", &Directory::Undefined).staticmethod("Undefined")
         .def("Root", &Directory::Root).staticmethod("Root")
         .def("Path", &Directory::Path).staticmethod("Path")

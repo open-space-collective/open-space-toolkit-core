@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Containers/Table.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -114,7 +114,7 @@ class Table
         ///
         /// @param              [in] aTable A table
         /// @return             True if tables are not equal
-        
+
         bool                    operator !=                                 (   const   Table&                      aTable                                      ) const ;
 
         /// @brief              Subscript operator (row accessor)
@@ -165,7 +165,7 @@ class Table
         ///
         /// @param              [in] anOutputStream An output stream
         /// @param              [in] aTable A table
-        /// @return             A reference to output stream                                                                            
+        /// @return             A reference to output stream
 
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Table&                      aTable                                      ) ;
@@ -245,7 +245,7 @@ class Table
         /// @brief              Get end constant interator
         ///
         /// @return             End constant interator
-        
+
         Table::ConstIterator    end                                         ( ) const ;
 
         /// @brief              Constructs an empty table
@@ -274,7 +274,7 @@ class Table
                                                                                         bool                        hasHeader                                   =   true ) ;
 
     private:
-    
+
         Array<String>           header_ ;
         Array<Row>              rows_ ;
 

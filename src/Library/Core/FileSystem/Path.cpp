@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/Path.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -49,7 +49,7 @@ class Path::Impl
                                 Path::Path                                  (   const   Path&                       aPath                                       )
                                 :   implUPtr_((aPath.implUPtr_ != nullptr) ? std::make_unique<Path::Impl>(*aPath.implUPtr_) : nullptr)
 {
-    
+
 }
 
                                 Path::~Path                                 ( )
@@ -62,7 +62,7 @@ Path&                           Path::operator =                            (   
 
     if (this != &aPath)
     {
-        implUPtr_.reset((aPath.implUPtr_ != nullptr) ? new Path::Impl(*aPath.implUPtr_) : nullptr) ;   
+        implUPtr_.reset((aPath.implUPtr_ != nullptr) ? new Path::Impl(*aPath.implUPtr_) : nullptr) ;
     }
 
     return *this ;
@@ -104,7 +104,7 @@ Path&                           Path::operator +=                           (   
     {
         throw library::core::error::runtime::Undefined("Path") ;
     }
-    
+
     if (!this->isDefined())
     {
         throw library::core::error::runtime::Undefined("Path") ;
@@ -282,7 +282,7 @@ String                          Path::toString                              ( ) 
     {
         throw library::core::error::RuntimeError(e.what()) ;
     }
-    
+
     return String::Empty() ;
 
 }
@@ -294,7 +294,7 @@ Path                            Path::Undefined                             ( )
 
 Path                            Path::Root                                  ( )
 {
-    
+
     Path path ;
 
     path.implUPtr_ = std::make_unique<Path::Impl>("/") ;
@@ -305,7 +305,7 @@ Path                            Path::Root                                  ( )
 
 Path                            Path::Current                               ( )
 {
-    
+
     Path path ;
 
     try

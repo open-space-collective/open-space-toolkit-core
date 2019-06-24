@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/FileSystem/Directory.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -92,7 +92,7 @@ TEST (Library_Core_FileSystem_Directory, StreamOperator)
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_FileSystem_Directory, IsDefined)
@@ -100,7 +100,7 @@ TEST (Library_Core_FileSystem_Directory, IsDefined)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_TRUE(Directory::Path(Path::Parse("/")).isDefined()) ;
@@ -122,7 +122,7 @@ TEST (Library_Core_FileSystem_Directory, Exists)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_TRUE(Directory::Path(Path::Parse("/")).exists()) ;
@@ -151,7 +151,7 @@ TEST (Library_Core_FileSystem_Directory, IsEmpty)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_TRUE(Directory::Path(Path::Parse("/usr/games")).isEmpty()) ;
@@ -181,7 +181,7 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
@@ -202,7 +202,7 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
         EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc")) ;
         EXPECT_ANY_THROW(directory.containsFileWithName("")) ;
         EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc")) ;
-        
+
     }
 
 }
@@ -212,7 +212,7 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         FAIL() ;
@@ -226,7 +226,7 @@ TEST (Library_Core_FileSystem_Directory, GetName)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_EQ("/", Directory::Path(Path::Parse("/")).getName()) ;
@@ -250,7 +250,7 @@ TEST (Library_Core_FileSystem_Directory, GetPath)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_EQ(Path::Parse("/"), Directory::Path(Path::Parse("/")).getPath()) ;
@@ -275,7 +275,7 @@ TEST (Library_Core_FileSystem_Directory, GetPath)
 //     using library::core::fs::PermissionSet ;
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         const Path path = Path::Parse("/app/build") ;
@@ -359,7 +359,7 @@ TEST (Library_Core_FileSystem_Directory, GetParentDirectory)
 
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         FAIL() ;
@@ -381,7 +381,7 @@ TEST (Library_Core_FileSystem_Directory, GetDirectories)
     using library::core::ctnr::Array ;
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
@@ -411,7 +411,7 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_EQ("/app/build", Directory::Path(Path::Parse("/app/build")).toString()) ;
@@ -435,7 +435,7 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         FAIL() ;
@@ -455,7 +455,7 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         FAIL() ;
@@ -475,7 +475,7 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 
 //     using library::core::fs::Path ;
 //     using library::core::fs::Directory ;
-    
+
 //     {
 
 //         FAIL() ;
@@ -495,7 +495,7 @@ TEST (Library_Core_FileSystem_Directory, Create)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         Directory directory = Directory::Path(Path::Parse("/tmp/library-core-filesystem-directory-create")) ;
@@ -503,7 +503,7 @@ TEST (Library_Core_FileSystem_Directory, Create)
         EXPECT_FALSE(directory.exists()) ;
 
         directory.create() ;
-        
+
         EXPECT_TRUE(directory.exists()) ;
 
         EXPECT_ANY_THROW(directory.create()) ;
@@ -525,13 +525,13 @@ TEST (Library_Core_FileSystem_Directory, Remove)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         Directory directory = Directory::Path(Path::Parse("/tmp/library-core-filesystem-directory-remove")) ;
 
         directory.create() ;
-        
+
         EXPECT_TRUE(directory.exists()) ;
 
         directory.remove() ;
@@ -555,7 +555,7 @@ TEST (Library_Core_FileSystem_Directory, Undefined)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_NO_THROW(Directory::Undefined()) ;
@@ -570,7 +570,7 @@ TEST (Library_Core_FileSystem_Directory, Root)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         EXPECT_NO_THROW(Directory::Root()) ;
@@ -586,7 +586,7 @@ TEST (Library_Core_FileSystem_Directory, Path)
 
     using library::core::fs::Path ;
     using library::core::fs::Directory ;
-    
+
     {
 
         const Path path = Path::Parse("/path/to/directory") ;

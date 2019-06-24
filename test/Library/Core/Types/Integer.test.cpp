@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/Core
+/// @project        Library ▸ Core
 /// @file           Library/Core/Types/Integer.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -119,7 +119,7 @@ TEST (Library_Core_Types_Integer, NotEqualToOperator)
         EXPECT_FALSE(Integer(+123) != +123) ;
         EXPECT_FALSE(Integer(-123) != -123) ;
 
-    }    
+    }
 
 }
 
@@ -142,7 +142,7 @@ TEST (Library_Core_Types_Integer, LessThanOperator)
         EXPECT_FALSE(Integer(+123) < Integer(-123)) ;
         EXPECT_FALSE(Integer(+123) < Integer(+123)) ;
         EXPECT_FALSE(Integer(-123) < Integer(-123)) ;
-        
+
         EXPECT_FALSE(Integer::Undefined() < Integer::Undefined()) ;
         EXPECT_FALSE(Integer::PositiveInfinity() < Integer::PositiveInfinity()) ;
         EXPECT_FALSE(Integer::NegativeInfinity() < Integer::NegativeInfinity()) ;
@@ -189,7 +189,7 @@ TEST (Library_Core_Types_Integer, LessThanOrEqualToOperator)
         EXPECT_FALSE(Integer(1) <= Integer(0)) ;
         EXPECT_FALSE(Integer(+1) <= Integer(-1)) ;
         EXPECT_FALSE(Integer(+123) <= Integer(-123)) ;
-        
+
         EXPECT_FALSE(Integer::Undefined() <= Integer::Undefined()) ;
         EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::PositiveInfinity()) ;
         EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::NegativeInfinity()) ;
@@ -236,7 +236,7 @@ TEST (Library_Core_Types_Integer, GreaterThanOperator)
         EXPECT_FALSE(Integer(-123) > Integer(+123)) ;
         EXPECT_FALSE(Integer(+123) > Integer(+123)) ;
         EXPECT_FALSE(Integer(-123) > Integer(-123)) ;
-        
+
         EXPECT_FALSE(Integer::Undefined() > Integer::Undefined()) ;
         EXPECT_FALSE(Integer::PositiveInfinity() > Integer::PositiveInfinity()) ;
         EXPECT_FALSE(Integer::NegativeInfinity() > Integer::NegativeInfinity()) ;
@@ -283,7 +283,7 @@ TEST (Library_Core_Types_Integer, GreaterThanOrEqualToOperator)
         EXPECT_FALSE(Integer(0) >= Integer(1)) ;
         EXPECT_FALSE(Integer(-1) >= Integer(+1)) ;
         EXPECT_FALSE(Integer(-123) >= Integer(+123)) ;
-        
+
         EXPECT_FALSE(Integer::Undefined() >= Integer::Undefined()) ;
         EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::PositiveInfinity()) ;
         EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::NegativeInfinity()) ;
@@ -397,7 +397,7 @@ TEST (Library_Core_Types_Integer, AdditionOperator)
         {+1, +2, +3},
         {+1, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
-        
+
         {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 2},
@@ -552,7 +552,7 @@ TEST (Library_Core_Types_Integer, SubtractionOperator)
         {+1, +2, -1},
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
-        
+
         {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
@@ -594,7 +594,7 @@ TEST (Library_Core_Types_Integer, SubtractionOperator)
         const Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
         const Integer& c = testCase.third ;
-        
+
         if (c.isDefined())
         {
 
@@ -687,7 +687,7 @@ TEST (Library_Core_Types_Integer, MultiplicationOperator)
         {-2, +2, -4},
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
@@ -775,7 +775,7 @@ TEST (Library_Core_Types_Integer, MultiplicationOperator)
         const Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
         const Integer& c = testCase.third ;
-        
+
         if (c.isDefined())
         {
 
@@ -855,7 +855,7 @@ TEST (Library_Core_Types_Integer, DivisionOperator)
         {-2, +2, -1},
         {-2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-2, Integer::PositiveInfinity(), +0},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), +0},
         {-1, std::numeric_limits<Integer::ValueType>::min(), +0},
@@ -930,7 +930,7 @@ TEST (Library_Core_Types_Integer, DivisionOperator)
         const Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
         const Integer& c = testCase.third ;
-        
+
         if (c.isDefined())
         {
 
@@ -1014,7 +1014,7 @@ TEST (Library_Core_Types_Integer, ModuloOperator)
         {-2, +3, -2},
         {-2, std::numeric_limits<Integer::ValueType>::max(), -2},
         {-2, Integer::PositiveInfinity(), -2},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), -1},
         {-1, std::numeric_limits<Integer::ValueType>::min(), -1},
@@ -1097,7 +1097,7 @@ TEST (Library_Core_Types_Integer, ModuloOperator)
         const Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
         const Integer& c = testCase.third ;
-        
+
         if (c.isDefined())
         {
 
@@ -1210,7 +1210,7 @@ TEST (Library_Core_Types_Integer, AdditionAssignmentOperator)
         {+1, +2, +3},
         {+1, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
-        
+
         {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 2},
@@ -1367,7 +1367,7 @@ TEST (Library_Core_Types_Integer, SubtractionAssignmentOperator)
         {+1, +2, -1},
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
-        
+
         {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
@@ -1504,7 +1504,7 @@ TEST (Library_Core_Types_Integer, MultiplicationAssignmentOperator)
         {-2, +2, -4},
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
@@ -1674,7 +1674,7 @@ TEST (Library_Core_Types_Integer, DivisionAssignmentOperator)
         {-2, +2, -1},
         {-2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-2, Integer::PositiveInfinity(), +0},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), +0},
         {-1, std::numeric_limits<Integer::ValueType>::min(), +0},
@@ -1835,7 +1835,7 @@ TEST (Library_Core_Types_Integer, ModuloAssignmentOperator)
         {-2, +3, -2},
         {-2, std::numeric_limits<Integer::ValueType>::max(), -2},
         {-2, Integer::PositiveInfinity(), -2},
-        
+
         {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), -1},
         {-1, std::numeric_limits<Integer::ValueType>::min(), -1},
@@ -1967,7 +1967,7 @@ TEST (Library_Core_Types_Integer, UnaryPlusOperator)
         {+2, +2},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max()},
         {Integer::PositiveInfinity(), Integer::PositiveInfinity()}
-        
+
     } ;
 
     for (const auto& testCase : testCases)
@@ -1977,7 +1977,7 @@ TEST (Library_Core_Types_Integer, UnaryPlusOperator)
         const Integer& b = testCase.second ;
 
         Integer c = +a ;
-        
+
         if (b.isDefined())
         {
 
@@ -2024,7 +2024,7 @@ TEST (Library_Core_Types_Integer, UnaryMinusOperator)
         {+2, -2},
         {std::numeric_limits<Integer::ValueType>::max(), -std::numeric_limits<Integer::ValueType>::max()},
         {Integer::PositiveInfinity(), Integer::NegativeInfinity()}
-        
+
     } ;
 
     for (const auto& testCase : testCases)
@@ -2034,7 +2034,7 @@ TEST (Library_Core_Types_Integer, UnaryMinusOperator)
         const Integer& b = testCase.second ;
 
         Integer c = -a ;
-        
+
         if (b.isDefined())
         {
 
@@ -2081,7 +2081,7 @@ TEST (Library_Core_Types_Integer, PrefixIncrementOperator)
         {+2, +3},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), Integer::PositiveInfinity()}
-        
+
     } ;
 
     for (auto& testCase : testCases)
@@ -2089,7 +2089,7 @@ TEST (Library_Core_Types_Integer, PrefixIncrementOperator)
 
         Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
-        
+
         if (b.isDefined())
         {
 
@@ -2157,7 +2157,7 @@ TEST (Library_Core_Types_Integer, PrefixDecrementOperator)
         {+2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 1},
         {Integer::PositiveInfinity(), Integer::PositiveInfinity()}
-        
+
     } ;
 
     for (auto& testCase : testCases)
@@ -2165,7 +2165,7 @@ TEST (Library_Core_Types_Integer, PrefixDecrementOperator)
 
         Integer& a = testCase.first ;
         const Integer& b = testCase.second ;
-        
+
         if (b.isDefined())
         {
 
@@ -2233,7 +2233,7 @@ TEST (Library_Core_Types_Integer, PostfixIncrementOperator)
         {+2, +3},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), Integer::PositiveInfinity()}
-        
+
     } ;
 
     for (auto& testCase : testCases)
@@ -2242,7 +2242,7 @@ TEST (Library_Core_Types_Integer, PostfixIncrementOperator)
         Integer& a = testCase.first ;
         const Integer aCopy = a ;
         const Integer& b = testCase.second ;
-        
+
         if (b.isDefined())
         {
 
@@ -2329,7 +2329,7 @@ TEST (Library_Core_Types_Integer, PostfixDecrementOperator)
         {+2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 1},
         {Integer::PositiveInfinity(), Integer::PositiveInfinity()}
-        
+
     } ;
 
     for (auto& testCase : testCases)
@@ -2338,7 +2338,7 @@ TEST (Library_Core_Types_Integer, PostfixDecrementOperator)
         Integer& a = testCase.first ;
         const Integer aCopy = a ;
         const Integer& b = testCase.second ;
-        
+
         if (b.isDefined())
         {
 
@@ -2409,7 +2409,7 @@ TEST (Library_Core_Types_Integer, ValueTypeOperator)
 {
 
     using library::core::types::Integer ;
-    
+
     {
 
         EXPECT_ANY_THROW( Integer::ValueType a = Integer::Undefined() ; (void) a ; ) ;
@@ -2657,7 +2657,7 @@ TEST (Library_Core_Types_Integer, IsEven)
     using library::core::types::Integer ;
 
     EXPECT_TRUE(Integer(0).isEven()) ;
-    
+
     EXPECT_TRUE(Integer(-4).isEven()) ;
     EXPECT_TRUE(Integer(-2).isEven()) ;
     EXPECT_TRUE(Integer(+0).isEven()) ;
@@ -2668,7 +2668,7 @@ TEST (Library_Core_Types_Integer, IsEven)
     EXPECT_FALSE(Integer(-1).isEven()) ;
     EXPECT_FALSE(Integer(+1).isEven()) ;
     EXPECT_FALSE(Integer(+3).isEven()) ;
-    
+
     EXPECT_FALSE(Integer::NegativeInfinity().isEven()) ;
     EXPECT_FALSE(Integer::PositiveInfinity().isEven()) ;
     EXPECT_FALSE(Integer::Undefined().isEven()) ;
@@ -2688,7 +2688,7 @@ TEST (Library_Core_Types_Integer, IsOdd)
     EXPECT_FALSE(Integer(-2).isOdd()) ;
     EXPECT_FALSE(Integer(+0).isOdd()) ;
     EXPECT_FALSE(Integer(+2).isOdd()) ;
-    
+
     EXPECT_FALSE(Integer::NegativeInfinity().isOdd()) ;
     EXPECT_FALSE(Integer::PositiveInfinity().isOdd()) ;
     EXPECT_FALSE(Integer::Undefined().isOdd()) ;
@@ -2743,7 +2743,7 @@ TEST (Library_Core_Types_Integer, Undefined)
     using library::core::types::Integer ;
 
     EXPECT_NO_THROW(Integer::Undefined()) ;
-   
+
     EXPECT_FALSE(Integer::Undefined().isDefined()) ;
     EXPECT_FALSE(Integer::Undefined().isInfinity()) ;
 
@@ -2768,7 +2768,7 @@ TEST (Library_Core_Types_Integer, NegativeInfinity)
     using library::core::types::Integer ;
 
     EXPECT_NO_THROW(Integer::NegativeInfinity()) ;
-    
+
     EXPECT_TRUE(Integer::NegativeInfinity().isDefined()) ;
     EXPECT_TRUE(Integer::NegativeInfinity().isInfinity()) ;
     EXPECT_TRUE(Integer::NegativeInfinity().isNegativeInfinity()) ;
@@ -2783,7 +2783,7 @@ TEST (Library_Core_Types_Integer, Int8)
     {
 
         EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(-1))) ;
         EXPECT_NO_THROW(Integer::Int8(library::core::types::Int8(+1))) ;
 
@@ -2795,7 +2795,7 @@ TEST (Library_Core_Types_Integer, Int8)
     {
 
         EXPECT_EQ(0, Integer::Int8(library::core::types::Int8(0))) ;
-        
+
         EXPECT_EQ(-1, Integer::Int8(library::core::types::Int8(-1))) ;
         EXPECT_EQ(+1, Integer::Int8(library::core::types::Int8(+1))) ;
 
@@ -2814,7 +2814,7 @@ TEST (Library_Core_Types_Integer, Int16)
     {
 
         EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(-1))) ;
         EXPECT_NO_THROW(Integer::Int16(library::core::types::Int16(+1))) ;
 
@@ -2829,7 +2829,7 @@ TEST (Library_Core_Types_Integer, Int16)
     {
 
         EXPECT_EQ(0, Integer::Int16(library::core::types::Int16(0))) ;
-        
+
         EXPECT_EQ(-1, Integer::Int16(library::core::types::Int16(-1))) ;
         EXPECT_EQ(+1, Integer::Int16(library::core::types::Int16(+1))) ;
 
@@ -2851,7 +2851,7 @@ TEST (Library_Core_Types_Integer, Int32)
     {
 
         EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(-1))) ;
         EXPECT_NO_THROW(Integer::Int32(library::core::types::Int32(+1))) ;
 
@@ -2869,7 +2869,7 @@ TEST (Library_Core_Types_Integer, Int32)
     {
 
         EXPECT_EQ(0, Integer::Int32(library::core::types::Int32(0))) ;
-        
+
         EXPECT_EQ(-1, Integer::Int32(library::core::types::Int32(-1))) ;
         EXPECT_EQ(+1, Integer::Int32(library::core::types::Int32(+1))) ;
 
@@ -2894,7 +2894,7 @@ TEST (Library_Core_Types_Integer, Int64)
     {
 
         EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(-1))) ;
         EXPECT_NO_THROW(Integer::Int64(library::core::types::Int64(+1))) ;
 
@@ -2918,7 +2918,7 @@ TEST (Library_Core_Types_Integer, Int64)
     {
 
         EXPECT_EQ(0, Integer::Int64(library::core::types::Int64(0))) ;
-        
+
         EXPECT_EQ(-1, Integer::Int64(library::core::types::Int64(-1))) ;
         EXPECT_EQ(+1, Integer::Int64(library::core::types::Int64(+1))) ;
 
@@ -2943,7 +2943,7 @@ TEST (Library_Core_Types_Integer, Uint8)
     {
 
         EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(+1))) ;
 
         EXPECT_NO_THROW(Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -2954,7 +2954,7 @@ TEST (Library_Core_Types_Integer, Uint8)
     {
 
         EXPECT_EQ(0, Integer::Uint8(library::core::types::Uint8(0))) ;
-        
+
         EXPECT_EQ(+1, Integer::Uint8(library::core::types::Uint8(+1))) ;
 
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint8(library::core::types::Uint8(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -2972,7 +2972,7 @@ TEST (Library_Core_Types_Integer, Uint16)
     {
 
         EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(+1))) ;
 
         EXPECT_NO_THROW(Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -2986,7 +2986,7 @@ TEST (Library_Core_Types_Integer, Uint16)
     {
 
         EXPECT_EQ(0, Integer::Uint16(library::core::types::Uint16(0))) ;
-        
+
         EXPECT_EQ(+1, Integer::Uint16(library::core::types::Uint16(+1))) ;
 
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint16(library::core::types::Uint16(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -3007,7 +3007,7 @@ TEST (Library_Core_Types_Integer, Uint32)
     {
 
         EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(+1))) ;
 
         EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -3017,7 +3017,7 @@ TEST (Library_Core_Types_Integer, Uint32)
         EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint16>::min()))) ;
 
         EXPECT_NO_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint32>::min()))) ;
-        
+
         EXPECT_ANY_THROW(Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint32>::max()))) ;
 
     }
@@ -3025,7 +3025,7 @@ TEST (Library_Core_Types_Integer, Uint32)
     {
 
         EXPECT_EQ(0, Integer::Uint32(library::core::types::Uint32(0))) ;
-        
+
         EXPECT_EQ(+1, Integer::Uint32(library::core::types::Uint32(+1))) ;
 
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint32(library::core::types::Uint32(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -3048,7 +3048,7 @@ TEST (Library_Core_Types_Integer, Uint64)
     {
 
         EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(0))) ;
-        
+
         EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(+1))) ;
 
         EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -3060,7 +3060,7 @@ TEST (Library_Core_Types_Integer, Uint64)
         EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::min()))) ;
 
         EXPECT_NO_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::min()))) ;
-        
+
         EXPECT_ANY_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::max()))) ;
         EXPECT_ANY_THROW(Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::max()))) ;
 
@@ -3069,7 +3069,7 @@ TEST (Library_Core_Types_Integer, Uint64)
     {
 
         EXPECT_EQ(0, Integer::Uint64(library::core::types::Uint64(0))) ;
-        
+
         EXPECT_EQ(+1, Integer::Uint64(library::core::types::Uint64(+1))) ;
 
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint8>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint8>::min()))) ;
@@ -3079,7 +3079,7 @@ TEST (Library_Core_Types_Integer, Uint64)
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint16>::max(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint16>::max()))) ;
 
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint32>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint32>::min()))) ;
-        
+
         EXPECT_EQ(std::numeric_limits<library::core::types::Uint64>::min(), Integer::Uint64(library::core::types::Uint64(std::numeric_limits<library::core::types::Uint64>::min()))) ;
 
     }
@@ -3104,7 +3104,7 @@ TEST (Library_Core_Types_Integer, Index)
         EXPECT_ANY_THROW(Integer::Index(Index(std::numeric_limits<Index>::max()))) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Types_Integer, Size)
@@ -3125,7 +3125,7 @@ TEST (Library_Core_Types_Integer, Size)
         EXPECT_ANY_THROW(Integer::Size(Size(std::numeric_limits<Size>::max()))) ;
 
     }
-    
+
 }
 
 TEST (Library_Core_Types_Integer, CanParse)
@@ -3146,7 +3146,7 @@ TEST (Library_Core_Types_Integer, CanParse)
         EXPECT_FALSE(Integer::CanParse('a')) ;
         EXPECT_FALSE(Integer::CanParse('-')) ;
         EXPECT_FALSE(Integer::CanParse('+')) ;
-        
+
     }
 
     // String
@@ -3200,7 +3200,7 @@ TEST (Library_Core_Types_Integer, Parse)
     }
 
     // String
-    
+
     {
 
         EXPECT_FALSE(Integer::Parse("Undefined").isDefined()) ;
