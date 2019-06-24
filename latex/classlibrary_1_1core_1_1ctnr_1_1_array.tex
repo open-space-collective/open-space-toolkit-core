@@ -674,7 +674,7 @@ Check if array is near another array.
 \DoxyCodeLine{Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;}
 \DoxyCodeLine{Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-15\} ;}
 \DoxyCodeLine{firstArray.isNear(secondArray,}
-\DoxyCodeLine{[] (\textcolor{keyword}{const} Real\& aFirstValue, \textcolor{keyword}{const} Real\& aSecondValue) -> \textcolor{keywordtype}{bool} }
+\DoxyCodeLine{[] (\textcolor{keyword}{const} Real\& aFirstValue, \textcolor{keyword}{const} Real\& aSecondValue) -> \textcolor{keywordtype}{bool}}
 \DoxyCodeLine{\{ \textcolor{keywordflow}{return} aFirstValue.isNear(aSecondValue, 1e-15) ; \}) ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 

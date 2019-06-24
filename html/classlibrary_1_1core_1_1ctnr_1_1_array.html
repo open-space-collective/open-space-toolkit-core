@@ -1014,7 +1014,7 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>Check if array is near another array. </p>
-<div class="fragment"><div class="line">Array&lt;Real&gt; firstArray = {1.0, 2.0, 3.0} ;</div><div class="line">Array&lt;Real&gt; secondArray = {1.0, 2.0, 3.0 + 1e-15} ;</div><div class="line">firstArray.isNear(secondArray,</div><div class="line">[] (<span class="keyword">const</span> Real&amp; aFirstValue, <span class="keyword">const</span> Real&amp; aSecondValue) -&gt; <span class="keywordtype">bool</span> </div><div class="line">{ <span class="keywordflow">return</span> aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; <span class="comment">// True</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">Array&lt;Real&gt; firstArray = {1.0, 2.0, 3.0} ;</div><div class="line">Array&lt;Real&gt; secondArray = {1.0, 2.0, 3.0 + 1e-15} ;</div><div class="line">firstArray.isNear(secondArray,</div><div class="line">[] (<span class="keyword">const</span> Real&amp; aFirstValue, <span class="keyword">const</span> Real&amp; aSecondValue) -&gt; <span class="keywordtype">bool</span></div><div class="line">{ <span class="keywordflow">return</span> aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; <span class="comment">// True</span></div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">anArray</td><td>An array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">aComparator</td><td>A comparator </td></tr>
