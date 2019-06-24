@@ -45,26 +45,28 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
 ## Dependencies
 
-### Boost [1.67.0]
+### Boost [1.70.0]
 
+UNSET (Boost_USE_STATIC_LIBS CACHE)
+UNSET (Boost_USE_MULTITHREADED CACHE)
+
+SET (BUILD_SHARED_LIBS ON)
 SET (Boost_USE_STATIC_LIBS OFF)
 SET (Boost_USE_MULTITHREADED ON)
 
-UNSET (Boost_INCLUDE_DIR CACHE)
-UNSET (Boost_LIBRARY_DIRS CACHE)
+FIND_PACKAGE ("Boost" "1.70" REQUIRED COMPONENTS "python" "numpy")
 
-FIND_PACKAGE ("Boost" "1.67" COMPONENTS "python36" REQUIRED)
-
-INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS})
-LINK_DIRECTORIES (${Boost_LIBRARY_DIRS})
+IF (NOT Boost_FOUND)
+    MESSAGE (SEND_ERROR "[Boost] not found.")
+ENDIF ()
 
 ### Python
 
-# SET (PYTHON_INCLUDE_DIR "/usr/include/python2.7")
-# SET (PYTHON_LIBRARIES "/usr/lib64/libpython2.7.so")
+FIND_PACKAGE ("Python3" COMPONENTS "Development")
 
-SET (PYTHON_INCLUDE_DIR "/usr/include/python3.6m")
-SET (PYTHON_LIBRARIES "/usr/lib64/libpython3.6m.so")
+IF (NOT Python3_FOUND)
+    MESSAGE (SEND_ERROR "[Python 3] not found.")
+ENDIF ()
 
 ################################################################################################################################################################
 
@@ -85,8 +87,8 @@ TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${CMAKE_SOURCE_DIR}/src")
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/include")
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${PYTHON_LIBRARIES})
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${Boost_LIBRARIES})
+TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Python3::Python")
+TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Boost::python" "Boost::numpy")
 TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${SHARED_LIBRARY_TARGET})
 
 SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES
@@ -126,7 +128,7 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/Library/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/Library/__init__.py"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
-                    COMMAND cp "/usr/local/lib/libboost_python36.so.1.68.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0"
+                    COMMAND cp "/usr/local/lib/libboost_python37.so.1.70.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python37.so.1.70.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel

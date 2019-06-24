@@ -7,7 +7,7 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.6
+FROM openspacecollective/library-base:0.1.7
 
 LABEL maintainer="lucas@loftorbital.com"
 
