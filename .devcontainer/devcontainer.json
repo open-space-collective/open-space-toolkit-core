@@ -1,0 +1,13 @@
+{
+    "name": "Library Core",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "mhutchie.git-graph"
+    ],
+    "image": "openspacecollective/library-core",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+    "shutdownAction": "stopContainer"
+}

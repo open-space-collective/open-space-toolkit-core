@@ -9,15 +9,19 @@
 
 ################################################################################################################################################################
 
-script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+project_directory="$(git rev-parse --show-toplevel)"
 
-rm -rf ${script_directory}/*
-rm -rf ${script_directory}/../bin/*.exe
-rm -rf ${script_directory}/../bin/*.test
-rm -rf ${script_directory}/../bin/*.test-*
-rm -rf ${script_directory}/../docs/html
-rm -rf ${script_directory}/../docs/latex
-rm -rf ${script_directory}/../lib/*.so
-rm -rf ${script_directory}/../lib/*.so.*
+pushd "${project_directory}" > /dev/null
+
+rm -rf ./build/*
+rm -rf ./bin/*.exe
+rm -rf ./bin/*.test
+rm -rf ./bin/*.test-*
+rm -rf ./docs/html
+rm -rf ./docs/latex
+rm -rf ./lib/*.so
+rm -rf ./lib/*.so.*
+
+popd > /dev/null
 
 ################################################################################################################################################################
