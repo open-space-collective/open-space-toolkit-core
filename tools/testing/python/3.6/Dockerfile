@@ -1,24 +1,32 @@
-# coding=utf-8
-
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           Library/Core/LibraryCorePy/Types/Real.test.py
+# @file           tools/testing/python/3.6/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-from LibraryCorePy import Types
+FROM python:3.6
 
-assert Types.Real(0.0) == 0.0
-assert Types.Real(123.456) == 123.456
-assert Types.Real(+123.456) == +123.456
-assert Types.Real(-123.456) == -123.456
+LABEL maintainer="lucas@loftorbital.com"
 
-assert Types.Real(0.0).toString() == "0.0"
-assert Types.Real(123.456).toString() == "123.456"
-assert Types.Real(+123.456).toString() == "123.456"
-assert Types.Real(-123.456).toString() == "-123.456"
+RUN pip install pytest>=5.0.1
+
+COPY bindings/python/requirements.txt /requirements.txt
+
+RUN pip install -r /requirements.txt
+
+ENV LD_LIBRARY_PATH /usr/local/lib:/usr/local/lib/python3.6/site-packages:/library/core/lib
+ENV PYTHONPATH /usr/local/lib/python3.6/site-packages:/library/core/lib
+
+COPY bindings/python/tools/python/Library/Core /usr/local/lib/python3.6/site-packages/Library/Core
+
+RUN mkdir -p /library \
+ && mkdir -p /library/core
+
+WORKDIR /library/core/test
+
+CMD [ "pytest", "-sv" ]
 
 ################################################################################################################################################################

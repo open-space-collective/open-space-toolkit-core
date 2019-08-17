@@ -1,16 +1,29 @@
-# coding=utf-8
+#!/bin/bash
 
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           Library/Core/LibraryCorePy/Types/String.test.py
+# @file           tools/testing/python/3.6/build.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-from LibraryCorePy import Types
+set -a
+set -e
 
+script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+top_directory="${script_directory}/../../../.."
 
+source "${script_directory}/.env"
+
+pushd "${top_directory}" > /dev/null
+
+docker build \
+--tag="${python_test_image_repository}:${python_test_image_tag}" \
+--file="${script_directory}/Dockerfile" \
+.
+
+popd > /dev/null
 
 ################################################################################################################################################################
