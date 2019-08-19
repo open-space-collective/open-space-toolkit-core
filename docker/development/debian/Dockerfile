@@ -7,7 +7,9 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.8-debian
+ARG BASE_IMAGE_VERSION
+
+FROM openspacecollective/library-base:${BASE_IMAGE_VERSION}-debian
 
 LABEL maintainer="lucas@loftorbital.com"
 
