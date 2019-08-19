@@ -1,32 +1,20 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           tools/testing/python/3.6/Dockerfile
+# @file           bindings/python/test/types/test_integer.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-FROM python:3.6
+import pytest
 
-LABEL maintainer="lucas@loftorbital.com"
+from Library.Core.Types import Integer
 
-RUN pip install pytest>=5.0.1
+################################################################################################################################################################
 
-COPY bindings/python/requirements.txt /requirements.txt
+def test_integer_constructors ():
 
-RUN pip install -r /requirements.txt
-
-ENV LD_LIBRARY_PATH /usr/local/lib:/usr/local/lib/python3.6/site-packages:/library/core/lib
-ENV PYTHONPATH /usr/local/lib/python3.6/site-packages:/library/core/lib
-
-COPY bindings/python/tools/python/Library/Core /usr/local/lib/python3.6/site-packages/Library/Core
-
-RUN mkdir -p /library \
- && mkdir -p /library/core
-
-WORKDIR /library/core/test
-
-CMD [ "pytest", "-sv" ]
+    pass
 
 ################################################################################################################################################################

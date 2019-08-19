@@ -254,13 +254,11 @@ U                               foldLeft                                    (   
                                                                                 const   std::function<U (U, T)>&    aFoldFunction                               )
 {
 
-    typedef typename Array<T>::ConstIterator Iterator ;
-
     U accumulator = initialValue ;
 
-    const Iterator end = data.cend() ;
+    const typename Array<T>::ConstIterator end = data.cend() ;
 
-    for (Iterator it = data.cbegin(); it != end; ++it)
+    for (typename Array<T>::ConstIterator it = data.cbegin(); it != end; ++it)
     {
         accumulator = aFoldFunction(accumulator, *it) ;
     }
@@ -298,15 +296,13 @@ Array<U>                        Array<T>::map                               (   
 T                               Array<T>::reduce                            (   const   std::function<T (T, T)>&    aReduceFunction                             ) const
 {
 
-    typedef typename Array<T>::ConstIterator Iterator ;
-
     if (this->isEmpty())
     {
         throw library::core::error::RuntimeError("Array is empty.") ;
     }
 
-    Iterator it = this->cbegin() ;
-    const Iterator end = this->cend() ;
+    typename Array<T>::ConstIterator it = this->cbegin() ;
+    const typename Array<T>::ConstIterator end = this->cend() ;
 
     T accumulator = *it ;
 

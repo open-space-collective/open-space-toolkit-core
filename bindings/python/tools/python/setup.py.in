@@ -33,7 +33,7 @@ setuptools.setup(
         '': [
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so',
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0',
-            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python37.so.1.70.0'
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0'
         ]
     }
 )

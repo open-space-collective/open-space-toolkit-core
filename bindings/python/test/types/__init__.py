@@ -1,15 +1,8 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           tools/testing/python/3.6/.env
+# @file           bindings/python/test/types/__init__.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
-
-################################################################################################################################################################
-
-python_test_image_repository="openspacecollective/library-physics-test-python-36"
-python_test_image_tag=$(git describe --tags --always)
-
-python_test_container_name="library-physics-test-python-36-${USER}"
 
 ################################################################################################################################################################
