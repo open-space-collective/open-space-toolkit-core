@@ -54,7 +54,7 @@ jobs:
 
                 # Run tests
 
-                - ./tools/ci/test.sh
+                - make test
 
         - stage: coverage
 
@@ -66,7 +66,7 @@ jobs:
 
                 # Run coverage
 
-                - ./tools/ci/coverage.sh
+                - make test-coverage
 
         - stage: deploy
 
@@ -78,11 +78,11 @@ jobs:
 
                 # Generate and deploy documentation
 
-                - ./tools/ci/documentation.sh
+                - make deploy-documentation
 
                 # Generate binaries
 
-                - ./tools/ci/binaries.sh
+                - make build-packages
 
           before_deploy:
 
@@ -113,6 +113,6 @@ jobs:
 
                 - echo "Deploying Python package to PyPI..."
 
-                - ./tools/ci/deploy.sh
+                - make deploy-python
 
 ################################################################################################################################################################
