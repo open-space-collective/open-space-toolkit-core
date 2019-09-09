@@ -108,12 +108,20 @@ _run-python: _build-python-release-image
 
 ################################################################################################################################################################
 
-test: test-debian
+test:
+
+	make test-debian
+	make test-fedora
 
 test-debian:
 
 	make test-cpp-debian
 	make test-python-debian
+
+test-fedora:
+
+	make test-cpp-fedora
+	make test-python-fedora
 
 test-cpp-debian: linux := debian
 test-cpp-fedora: linux := fedora

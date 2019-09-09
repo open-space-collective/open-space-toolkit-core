@@ -21,12 +21,12 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url = "https://github.com/open-space-collective/library-core",
-    classifiers=(
+    classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: POSIX :: Linux"
-    ),
+    ],
     keywords="open-space-collective core",
     packages=setuptools.find_packages(),
     package_data = {
