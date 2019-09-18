@@ -233,7 +233,7 @@ ENDFOREACH ()
 SET (Boost_USE_STATIC_LIBS ON)
 SET (Boost_USE_MULTITHREADED ON)
 
-FIND_PACKAGE ("Boost" "1.70" REQUIRED COMPONENTS "system" "filesystem" "regex" "log")
+FIND_PACKAGE ("Boost" "1.69" REQUIRED COMPONENTS "system" "filesystem" "regex" "log")
 
 IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
