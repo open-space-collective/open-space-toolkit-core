@@ -135,6 +135,7 @@ _run-development: _build-development-image
 	-it \
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
+	--volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
 	--workdir=/app/build \
 	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
 	/bin/bash

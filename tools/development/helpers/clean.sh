@@ -13,7 +13,8 @@ project_directory="$(git rev-parse --show-toplevel)"
 
 pushd "${project_directory}" > /dev/null
 
-rm -rf ./build/*
+find ./build -mindepth 1 ! -regex '^./build/helpers\(/.*\)?' -delete
+
 rm -rf ./bin/*.exe
 rm -rf ./bin/*.test
 rm -rf ./bin/*.test-*

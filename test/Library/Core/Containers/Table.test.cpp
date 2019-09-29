@@ -840,7 +840,7 @@ TEST (Library_Core_Containers_Table, Load)
 
         const Table referenceTable = { header, rows } ;
 
-        const File file = File::Path(Path::Parse("../test/Library/Core/Containers/Table/A.csv")) ;
+        const File file = File::Path(Path::Parse("/app/test/Library/Core/Containers/Table/A.csv")) ;
 
         const Table table = Table::Load(file) ;
 
@@ -859,7 +859,7 @@ TEST (Library_Core_Containers_Table, Load)
 
         const Table referenceTable = { header, rows } ;
 
-        const File file = File::Path(Path::Parse("../test/Library/Core/Containers/Table/B.csv")) ;
+        const File file = File::Path(Path::Parse("/app/test/Library/Core/Containers/Table/B.csv")) ;
 
         const Table table = Table::Load(file) ;
 
