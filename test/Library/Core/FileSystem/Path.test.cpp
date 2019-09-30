@@ -428,9 +428,6 @@ TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/app/..").getNormalizedPath()) ;
         EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/./build").getNormalizedPath()) ;
 
-        EXPECT_EQ(Path::Parse("/app/Makefile"), Path::Parse("Makefile").getNormalizedPath()) ;
-        EXPECT_EQ(Path::Parse("/app/Makefile"), Path::Parse("./Makefile").getNormalizedPath()) ;
-
     }
 
     {
@@ -458,9 +455,6 @@ TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
         EXPECT_EQ(Path::Parse("/app/."), Path::Parse("/app/.").getAbsolutePath()) ;
         EXPECT_EQ(Path::Parse("/app/.."), Path::Parse("/app/..").getAbsolutePath()) ;
         EXPECT_EQ(Path::Parse("/app/./build"), Path::Parse("/app/./build").getAbsolutePath()) ;
-
-        EXPECT_EQ(Path::Parse("/app/Makefile"), Path::Parse("Makefile").getAbsolutePath()) ;
-        EXPECT_EQ(Path::Parse("/app/./Makefile"), Path::Parse("./Makefile").getAbsolutePath()) ;
 
     }
 
@@ -568,7 +562,6 @@ TEST (Library_Core_FileSystem_Path, Current)
 
         EXPECT_NO_THROW(Path::Current()) ;
         EXPECT_TRUE(Path::Current().isDefined()) ;
-        EXPECT_EQ("/app", Path::Current().toString()) ;
 
     }
 

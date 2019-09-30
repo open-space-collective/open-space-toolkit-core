@@ -412,7 +412,7 @@ IF (BUILD_UNIT_TESTS)
 
         APPEND_COVERAGE_COMPILER_FLAGS ()
 
-        SET (COVERAGE_EXCLUDES "*.test.cpp" "*/include/gtest/*" "*/c++/v1/*" "/usr/include/*" "/usr/local/*" "*/include/boost/*" "*/c++/7/*")
+        SET (COVERAGE_EXCLUDES '*.test.cpp' '/usr/*' '/app/bindings/*')
 
         SETUP_TARGET_FOR_COVERAGE (
             NAME ${COVERAGE_TARGET}
