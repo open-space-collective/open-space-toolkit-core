@@ -186,29 +186,6 @@ _test-cpp: _build-development-image
 	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
 	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j && make test"
 
-test-coverage:
-
-	make test-coverage-cpp
-
-test-coverage-cpp:
-
-	make test-coverage-cpp-debian
-
-test-coverage-cpp-debian: linux := debian
-test-coverage-cpp-fedora: linux := fedora
-
-test-coverage-cpp-debian test-coverage-cpp-fedora: _test-coverage-cpp
-
-_test-coverage-cpp: _build-development-image
-
-	docker run \
-	--rm \
-	--volume="$(project_directory):/app:delegated" \
-	--volume="/app/build" \
-	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage"
-
 test-python-debian: linux := debian
 test-python-fedora: linux := fedora
 
@@ -222,6 +199,29 @@ _test-python: _build-python-release-image
 	--entrypoint="" \
 	$(docker_image_repository)-python:$(docker_image_version)-$(linux) \
 	/bin/bash -c "pip install pytest && pytest ."
+
+coverage:
+
+	make coverage-cpp
+
+coverage-cpp:
+
+	make coverage-cpp-debian
+
+coverage-cpp-debian: linux := debian
+coverage-cpp-fedora: linux := fedora
+
+coverage-cpp-debian coverage-cpp-fedora: _coverage-cpp
+
+_coverage-cpp: _build-development-image
+
+	docker run \
+	--rm \
+	--volume="$(project_directory):/app:delegated" \
+	--volume="/app/build" \
+	--workdir=/app/build \
+	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
+	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage"
 
 ################################################################################################################################################################
 
@@ -278,7 +278,7 @@ deploy-python: build-debian-development-image
 
 deploy-coverage: linux := debian
 
-deploy-coverage: _test-coverage-cpp
+deploy-coverage: _coverage-cpp
 
 	docker run \
 	--rm \
@@ -320,7 +320,7 @@ clean:
 		run-python run-python-debian run-python-fedora \
 		test test-debian test-fedora \
 		test-cpp-debian test-cpp-fedora \
-		test-coverage-cpp-debian test-coverage-cpp-fedora \
+		coverage-cpp-debian coverage-cpp-fedora \
 		test-python-debian test-python-fedora \
 		debug-development-debian debug-cpp-release-debian debug-python-release-debian \
 		debug-development-fedora debug-cpp-release-fedora debug-python-release-fedora \

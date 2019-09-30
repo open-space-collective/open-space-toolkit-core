@@ -66,7 +66,7 @@ jobs:
 
                 # Run coverage
 
-                - make test-coverage
+                - make coverage
 
         - stage: deploy
 
