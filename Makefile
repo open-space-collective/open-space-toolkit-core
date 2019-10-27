@@ -30,106 +30,171 @@ export ci_codecov_token := $(CODECOV_TOKEN)
 
 build: build-images
 
-build-images: build-development-images
+build-images:
+
+	@ echo "Building images..."
+
+	@ make build-development-images
+	@ make build-release-images
 
 build-development-images:
 
-	make build-debian-development-image
-	make build-fedora-development-image
+	@ echo "Building development images..."
 
-build-debian-development-image: linux := debian
-build-fedora-development-image: linux := fedora
+	@ make build-development-image-debian
+	@ make build-development-image-fedora
 
-build-debian-development-image build-fedora-development-image: _build-development-image
+build-development-image-debian: target := debian
+build-development-image-fedora: target := fedora
+
+build-development-image-debian build-development-image-fedora: _build-development-image
 
 _build-development-image:
 
+	@ echo "Building [$(target)] development image..."
+
 	docker build \
-	--file="$(project_directory)/docker/development/$(linux)/Dockerfile" \
-	--tag=$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	--tag=$(docker_image_repository)-development:latest-$(linux) \
+	--file="$(project_directory)/docker/development/$(target)/Dockerfile" \
+	--tag=$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	--tag=$(docker_image_repository)-development:latest-$(target) \
 	--build-arg="BASE_IMAGE_VERSION=$(development_base_image_version)" \
 	--build-arg="VERSION=$(docker_image_version)" \
 	"$(project_directory)"
 
-build-cpp-release-debian-image: linux := debian
-build-cpp-release-fedora-image: linux := fedora
+build-release-images:
 
-build-cpp-release-debian-image build-cpp-release-fedora-image: _build-cpp-release-image
+	@ echo "Building release images..."
 
-_build-cpp-release-image: _build-development-image
+	@ make build-release-image-cpp-debian
+	@ make build-release-image-cpp-fedora
+
+	@ make build-release-image-python-debian
+	@ make build-release-image-python-fedora
+
+build-release-image-cpp-debian: target := debian
+build-release-image-cpp-fedora: target := fedora
+
+build-release-image-cpp-debian build-release-image-cpp-fedora: _build-release-image-cpp
+
+_build-release-image-cpp:
+
+	@ echo "Building [$(target)] C++ release image..."
 
 	docker build \
-	--file="$(project_directory)/docker/release/$(linux)/Dockerfile" \
-	--tag=$(docker_image_repository):$(docker_image_version)-$(linux) \
-	--tag=$(docker_image_repository):latest-$(linux) \
+	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
+	--tag=$(docker_image_repository):$(docker_image_version)-$(target) \
+	--tag=$(docker_image_repository):latest-$(target) \
 	--build-arg="VERSION=$(docker_image_version)" \
 	--target=cpp-release \
 	"$(project_directory)"
 
-build-python-release-debian-image: linux := debian
-build-python-release-fedora-image: linux := fedora
+build-release-image-python-debian: target := debian
+build-release-image-python-fedora: target := fedora
 
-build-python-release-debian-image build-python-release-fedora-image: _build-python-release-image
+build-release-image-python-debian build-release-image-python-fedora: _build-release-image-python
 
-_build-python-release-image: _build-development-image
+_build-release-image-python:
+
+	@ echo "Building [$(target)] Python release image..."
 
 	docker build \
-	--file="$(project_directory)/docker/release/$(linux)/Dockerfile" \
-	--tag=$(docker_image_repository)-python:$(docker_image_version)-$(linux) \
-	--tag=$(docker_image_repository)-python:latest-$(linux) \
+	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
+	--tag=$(docker_image_repository)-python:$(docker_image_version)-$(target) \
+	--tag=$(docker_image_repository)-python:latest-$(target) \
 	--build-arg="VERSION=$(docker_image_version)" \
 	--target=python-release \
 	"$(project_directory)"
 
-build-documentation: linux := debian
+build-documentation: target := debian
 
 build-documentation: _build-development-image
+
+	@ echo "Building [$(target)] documentation..."
 
 	docker run \
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
 build-packages:
 
-	make build-debian-package
-	make build-fedora-package
+	@ echo "Building packages..."
 
-build-debian-package: linux := debian
-build-fedora-package: linux := fedora
+	@ make build-packages-cpp
+	@ make build-packages-python
 
-build-debian-package: package_generator := DEB
-build-fedora-package: package_generator := RPM
+build-packages-cpp:
 
-build-debian-package: package_extension := deb
-build-fedora-package: package_extension := rpm
+	@ echo "Building C++ packages..."
 
-build-debian-package build-fedora-package: _build-package
+	@ make build-packages-cpp-debian
+	@ make build-packages-cpp-fedora
 
-_build-package:
+build-packages-cpp-debian: target := debian
+build-packages-cpp-fedora: target := fedora
+
+build-packages-cpp-debian: package_generator := DEB
+build-packages-cpp-fedora: package_generator := RPM
+
+build-packages-cpp-debian: package_extension := deb
+build-packages-cpp-fedora: package_extension := rpm
+
+build-packages-cpp-debian build-packages-cpp-fedora: _build-packages-cpp
+
+_build-packages-cpp: _build-development-image
+
+	@ echo "Building [$(target)] C++ packages..."
 
 	docker run \
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DCPACK_GENERATOR=$(package_generator) .. && make package && mkdir -p /app/package && mv /app/build/*.$(package_extension) /app/package"
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=$(package_generator) .. && make package && mkdir -p /app/packages/cpp && mv /app/build/*.$(package_extension) /app/packages/cpp"
+
+build-packages-python:
+
+	@ echo "Building Python packages..."
+
+	@ make build-packages-python-debian
+
+build-packages-python-debian: target := debian
+build-packages-python-fedora: target := fedora
+
+build-packages-python-debian build-packages-python-fedora: _build-packages-python
+
+_build-packages-python: _build-development-image
+
+	@ echo "Building [$(target)] Python packages..."
+
+	docker run \
+	--rm \
+	--volume="$(project_directory):/app:delegated" \
+	--volume="/app/build" \
+	--workdir=/app/build \
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. && make -j && mkdir -p /app/packages/python && mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
 ################################################################################################################################################################
 
-run-development: run-development-debian
+run-development:
 
-run-development-debian: linux := debian
-run-development-fedora: linux := fedora
+	@ echo "Running development environment..."
+
+	make run-development-debian
+
+run-development-debian: target := debian
+run-development-fedora: target := fedora
 
 run-development-debian run-development-fedora: _run-development
 
 _run-development: _build-development-image
+
+	@ echo "Running [$(target)] development environment..."
 
 	docker run \
 	-it \
@@ -137,158 +202,245 @@ _run-development: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
 	/bin/bash
 
 run-python: run-python-debian
 
-run-python-debian: linux := debian
-run-python-fedora: linux := fedora
+run-python-debian: target := debian
+run-python-fedora: target := fedora
 
 run-python-debian run-python-fedora: _run-python
 
-_run-python: _build-python-release-image
+_run-python: _build-release-image-python
+
+	@ echo "Running [$(target)] Python runtime environment..."
 
 	docker run \
 	-it \
 	--rm \
-	$(docker_image_repository)-python:$(docker_image_version)-$(linux)
+	$(docker_image_repository)-python:$(docker_image_version)-$(target)
 
 ################################################################################################################################################################
 
-test:
+debug-development:
 
-	make test-debian
-	make test-fedora
+	@ echo "Debugging development environment..."
 
-test-debian:
+	make debug-development-debian
 
-	make test-cpp-debian
-	make test-python-debian
-
-test-fedora:
-
-	make test-cpp-fedora
-	make test-python-fedora
-
-test-cpp-debian: linux := debian
-test-cpp-fedora: linux := fedora
-
-test-cpp-debian test-cpp-fedora: _test-cpp
-
-_test-cpp: _build-development-image
-
-	docker run \
-	--rm \
-	--volume="$(project_directory):/app:delegated" \
-	--volume="/app/build" \
-	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j && make test"
-
-test-python-debian: linux := debian
-test-python-fedora: linux := fedora
-
-test-python-debian test-python-fedora: _test-python
-
-_test-python: _build-python-release-image
-
-	docker run \
-	--rm \
-	--workdir=/usr/local/lib/python3.7/site-packages/Library/Core \
-	--entrypoint="" \
-	$(docker_image_repository)-python:$(docker_image_version)-$(linux) \
-	/bin/bash -c "pip install pytest && pytest ."
-
-coverage:
-
-	make coverage-cpp
-
-coverage-cpp:
-
-	make coverage-cpp-debian
-
-coverage-cpp-debian: linux := debian
-coverage-cpp-fedora: linux := fedora
-
-coverage-cpp-debian coverage-cpp-fedora: _coverage-cpp
-
-_coverage-cpp: _build-development-image
-
-	docker run \
-	--rm \
-	--volume="$(project_directory):/app:delegated" \
-	--volume="/app/build" \
-	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage"
-
-################################################################################################################################################################
-
-debug-development-debian: linux := debian
-debug-development-fedora: linux := fedora
+debug-development-debian: target := debian
+debug-development-fedora: target := fedora
 
 debug-development-debian debug-development-fedora: _debug-development
 
 _debug-development: _build-development-image
 
+	@ echo "Debugging [$(target)] development environment..."
+
 	docker run \
 	-it \
 	--rm \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
 	/bin/bash
 
-debug-cpp-release-debian: linux := debian
-debug-cpp-release-debian: linux := fedora
+debug-cpp-release-debian: target := debian
+debug-cpp-release-fedora: target := fedora
 
-debug-cpp-release-debian debug-cpp-release-debian: _debug-cpp-release
+debug-cpp-release-debian debug-cpp-release-fedora: _debug-cpp-release
 
-_debug-cpp-release: _build-cpp-release-image
+_debug-cpp-release: _build-release-image-cpp
+
+	@ echo "Debugging [$(target)] C++ release environment..."
 
 	docker run \
 	-it \
 	--rm \
 	--entrypoint=/bin/bash \
-	$(docker_image_repository):$(docker_image_version)-$(linux)
+	$(docker_image_repository):$(docker_image_version)-$(target)
 
-debug-python-release-debian: linux := debian
-debug-python-release-fedora: linux := fedora
+debug-python-release-debian: target := debian
+debug-python-release-fedora: target := fedora
 
 debug-python-release-debian debug-python-release-fedora: _debug-python-release
 
-_debug-python-release: _build-python-release-image
+_debug-python-release: _build-release-image-python
+
+	@ echo "Debugging [$(target)] Python release environment..."
 
 	docker run \
 	-it \
 	--rm \
 	--entrypoint=/bin/bash \
-	$(docker_image_repository)-python:$(docker_image_version)-$(linux)
+	$(docker_image_repository)-python:$(docker_image_version)-$(target)
 
 ################################################################################################################################################################
 
-deploy-python: build-debian-development-image
+test:
+
+	@ echo "Running tests..."
+
+	@ make test-unit
+	@ make test-coverage
+
+test-unit:
+
+	@ echo "Running unit tests..."
+
+	@ make test-unit-debian
+
+test-unit-debian:
+
+	@ echo "Running [debian] unit tests..."
+
+	@ make test-unit-cpp-debian
+	@ make test-unit-python-debian
+
+test-unit-fedora:
+
+	@ echo "Running [fedora] unit tests..."
+
+	@ make test-unit-cpp-fedora
+	@ make test-unit-python-fedora
+
+test-unit-cpp-debian: target := debian
+test-unit-cpp-fedora: target := fedora
+
+test-unit-cpp-debian test-unit-cpp-fedora: _test-unit-cpp
+
+_test-unit-cpp: _build-development-image
+
+	@ echo "Running [$(target)] C++ unit tests..."
 
 	docker run \
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-debian \
-	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF .. && make -j && make publish"
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j && make test"
 
-deploy-coverage: linux := debian
+test-unit-python-debian: target := debian
+test-unit-python-fedora: target := fedora
 
-deploy-coverage: _coverage-cpp
+test-unit-python-debian test-unit-python-fedora: _test-unit-python
+
+_test-unit-python: _build-development-image
+
+	@ echo "Running [$(target)] Python unit tests..."
+
+	docker run \
+	--rm \
+	--workdir=/usr/local/lib/python3.7/site-packages/Library/Core \
+	--entrypoint="" \
+	$(docker_image_repository)-python:$(docker_image_version)-$(target) \
+	/bin/bash -c "pip install pytest && pytest ."
+
+test-coverage:
+
+	@ echo "Running coverage tests..."
+
+	@ make test-coverage-cpp
+
+test-coverage-cpp:
+
+	@ echo "Running C++ coverage tests..."
+
+	@ make test-coverage-cpp-debian
+
+test-coverage-cpp-debian: target := debian
+test-coverage-cpp-fedora: target := fedora
+
+test-coverage-cpp-debian test-coverage-cpp-fedora: _test-coverage-cpp
+
+_test-coverage-cpp: _build-development-image
+
+	@ echo "Running [$(target)] C++ coverage tests..."
 
 	docker run \
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(linux) \
-	/bin/bash -c "bash <(curl -s https://codecov.io/bash) -X gcov -y /app/.codecov.yml -t ${ci_codecov_token} || echo 'Codecov did not collect coverage reports'"
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage && mkdir -p /app/coverage && mv /app/build/coverage* /app/coverage"
+
+################################################################################################################################################################
+
+deploy:
+
+	@ echo "Deploying..."
+
+	@ make deploy-coverage-cpp-results
+	@ make deploy-packages
+	@ make deploy-documentation
+
+deploy-packages:
+
+	@ echo "Deploying packages..."
+
+	@ make deploy-packages-debian
+	@ make deploy-packages-fedora
+
+deploy-packages-debian: target := debian
+deploy-packages-fedora: target := fedora
+
+deploy-packages-debian deploy-packages-fedora: _deploy_packages
+
+_deploy_packages:
+
+	@ echo "Deploying [$(target)] packages..."
+
+	@ make _deploy-packages-cpp target=$(target)
+	@ make _deploy-packages-python target=$(target)
+
+deploy-packages-cpp:
+
+	@ echo "Deploying C++ packages..."
+
+	@ make _deploy-packages-cpp target=debian
+	@ make _deploy-packages-cpp target=fedora
+
+_deploy-packages-cpp: _build-packages-cpp
+
+	@ echo "Deploying [$(target)] C++ packages..."
+
+	@ echo "TBI"
+
+deploy-packages-python:
+
+	@ echo "Deploying Python packages..."
+
+	@ make deploy-packages-python-debian
+
+_deploy-packages-python: _build-packages-python
+
+	@ echo "Deploying [$(target)] Python packages..."
+
+	docker run \
+	--rm \
+	--volume="$(project_directory)/packages/python:/packages:ro" \
+	--env="TWINE_USERNAME=${PYPI_USERNAME}" \
+	--env="TWINE_PASSWORD=${PYPI_PASSWORD}" \
+	python:3.7-slim \
+	/bin/bash -c "pip install twine && python3 -m twine upload /packages"
+
+deploy-coverage-cpp-results: target := debian
+
+deploy-coverage-cpp-results: _test-coverage-cpp
+
+	@ echo "Deploying C++ coverage results..."
+
+	docker run \
+	--rm \
+	--volume="$(project_directory):/app:delegated" \
+	--workdir=/app \
+	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	/bin/bash -c "bash <(curl -s https://codecov.io/bash) -X gcov -y .codecov.yml -t ${ci_codecov_token}"
 
 deploy-documentation: build-documentation
+
+	@ echo "Deploying documentation..."
 
 	$(shell \
 		project_directory=$(project_directory) \
@@ -305,26 +457,36 @@ deploy-documentation: build-documentation
 
 clean:
 
+	@ echo "Cleaning up..."
+
 	rm -r "$(project_directory)/build" || true
 	rm -r "$(project_directory)/bin/"*.test* || true
+	rm -r "$(project_directory)/docs/html" || true
+	rm -r "$(project_directory)/docs/latex" || true
 	rm -r "$(project_directory)/lib/"*.so* || true
+	rm -r "$(project_directory)/coverage" || true
+	rm -r "$(project_directory)/packages" || true
 
 ################################################################################################################################################################
 
 .PHONY: build build-images \
-		build-development-images build-debian-development-image build-fedora-development-image \
-		build-cpp-release-debian-image build-python-release-debian-image build-python-release-fedora-image \
+		build-development-images build-development-image-debian build-development-image-fedora \
+		build-release-image-cpp-debian build-release-image-python-debian build-release-image-python-fedora \
 		build-documentation \
-		build-packages build-debian-package build-fedora-package \
+		build-packages-cpp build-packages-cpp-debian build-packages-cpp-fedora \
 		run-development run-development-debian run-development-fedora \
 		run-python run-python-debian run-python-fedora \
-		test test-debian test-fedora \
-		test-cpp-debian test-cpp-fedora \
-		coverage-cpp-debian coverage-cpp-fedora \
-		test-python-debian test-python-fedora \
 		debug-development-debian debug-cpp-release-debian debug-python-release-debian \
 		debug-development-fedora debug-cpp-release-fedora debug-python-release-fedora \
-		deploy-python deploy-coverage deploy-documentation \
+		test \
+		test-unit test-unit-debian test-unit-fedora \
+		test-unit-cpp-debian test-unit-cpp-fedora \
+		test-unit-python-debian test-unit-python-fedora \
+		test-coverage \
+		test-coverage-cpp \
+		test-coverage-cpp-debian test-coverage-cpp-fedora \
+		deploy deploy-packages deploy-coverage-cpp-results deploy-documentation \
+		deploy-packages-cpp deploy-packages-python \
 		clean
 
 ################################################################################################################################################################
