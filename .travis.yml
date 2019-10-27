@@ -8,111 +8,73 @@
 ################################################################################################################################################################
 
 branches:
-
-    only:
-
-        - /^\d+\.\d+(\.\d+)?(-\S*)?$/
-        - master
-        - dev
+  only:
+    - /^\d+\.\d+(\.\d+)?(-\S*)?$/
+    - master
+    - dev
 
 os:
-
-    - linux
+  - linux
 
 sudo: false
 
 services:
-
-    - docker
+  - docker
 
 language: cpp
 
 env:
-
-    global:
-
-        - LANG="en_US.UTF-8"
+  global:
+    - LANG="en_US.UTF-8"
 
 stages:
+  - test
+  - coverage
+  - name: deploy
+    if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
 
-    - test
-    - coverage
-    - name: deploy
-      if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
+before_script:
+  - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+after_script:
+  - make clean
 
 jobs:
+  include:
+    - stage: test
+      name: "Unit Testing"
+      script:
+        - make test-unit-cpp-debian
+        - make test-unit-python-debian
 
-    include:
+    - stage: coverage
+      name: "Coverage Analysis"
+      script:
+        - make deploy-coverage-cpp-results
 
-        - stage: test
+    - stage: deploy
+      name: "Documentation Deployment"
+      script:
+        - make deploy-documentation
 
-          script:
-
-                # Login to the Docker registry
-
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-
-                # Run tests
-
-                - make test
-
-        - stage: coverage
-
-          script:
-
-                # Login to the Docker registry
-
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-
-                # Run coverage
-
-                - make coverage
-
-        - stage: deploy
-
-          script:
-
-                # Login to the Docker registry
-
-                - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-
-                # Generate and deploy documentation
-
-                - make deploy-documentation
-
-                # Generate binaries
-
-                - make build-packages
-
-          before_deploy:
-
-                - echo "Deploying binaries to GitHub Releases..."
-
-          deploy:
-
-                - provider: releases
-                  api_key: ${GITHUB_API_KEY}
-                  file_glob: true
-                  file:
-                      - ./package/*
-                  skip_cleanup: true
-                  on:
-                      branch: master
-                      tags: true
-
-                # - provider: pypi
-                #   user: ${PYPI_USER}
-                #   password: ${PYPI_PASSWORD}
-                #   distributions: "bdist_wheel"
-                #   skip_cleanup: true
-                #   on:
-                #       branch: master
-                #       tags: true
-
-          after_deploy:
-
-                - echo "Deploying Python package to PyPI..."
-
-                - make deploy-python
+    - stage: deploy
+      name: "Package Deployment"
+      script:
+        - make build-packages
+      before_deploy:
+        - echo "Deploying packages to GitHub Releases..."
+      deploy:
+        - provider: releases
+          api_key: ${GITHUB_API_KEY}
+          file_glob: true
+          file:
+            - ./packages/*
+          skip_cleanup: true
+          on:
+            branch: master
+            tags: true
+      after_deploy:
+        - echo "Deploying Python package to PyPI..."
+        - make deploy-packages-python
 
 ################################################################################################################################################################
