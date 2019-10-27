@@ -325,7 +325,7 @@ test-unit-python-fedora: target := fedora
 
 test-unit-python-debian test-unit-python-fedora: _test-unit-python
 
-_test-unit-python: _build-development-image
+_test-unit-python: _build-release-image-python
 
 	@ echo "Running [$(target)] Python unit tests..."
 
