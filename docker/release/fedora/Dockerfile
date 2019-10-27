@@ -11,12 +11,22 @@ ARG VERSION
 
 FROM openspacecollective/library-core-development:${VERSION}-fedora as cpp-builder
 
-COPY . /app
-
-RUN rm -rf /app/build \
- && mkdir /app/build
+RUN mkdir -p /app/bin /app/build /app/lib
 
 WORKDIR /app/build
+
+COPY ./bindings /app/bindings
+COPY ./docs /app/docs
+COPY ./include /app/include
+COPY ./share /app/share
+COPY ./src /app/src
+COPY ./test /app/test
+COPY ./thirdparty /app/thirdparty
+COPY ./tools /app/tools
+COPY CMakeLists.txt /app/CMakeLists.txt
+COPY LICENSE /app/LICENSE
+COPY README.md /app/README.md
+COPY .git /app/.git
 
 RUN cmake .. \
  && make -j $(nproc) \
