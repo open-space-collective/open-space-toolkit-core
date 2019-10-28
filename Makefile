@@ -56,6 +56,8 @@ _build-development-image:
 
 	@ echo "Building [$(target)] development image..."
 
+	docker pull $(docker_development_image_repository):latest-$(target) || true
+
 	docker build \
 	--cache-from=$(docker_development_image_repository):latest-$(target) \
 	--file="$(project_directory)/docker/development/$(target)/Dockerfile" \
@@ -84,6 +86,8 @@ _build-release-image-cpp:
 
 	@ echo "Building [$(target)] C++ release image..."
 
+	docker pull $(docker_image_repository):latest-$(target) || true
+
 	docker build \
 	--cache-from=$(docker_image_repository):latest-$(target) \
 	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
@@ -101,6 +105,8 @@ build-release-image-python-debian build-release-image-python-fedora: _build-rele
 _build-release-image-python:
 
 	@ echo "Building [$(target)] Python release image..."
+
+	docker pull $(docker_release_image_python_repository):latest-$(target) || true
 
 	docker build \
 	--cache-from=$(docker_release_image_python_repository):latest-$(target) \
