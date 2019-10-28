@@ -36,9 +36,6 @@ stages:
 before_script:
   - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
-after_script:
-  - make clean
-
 jobs:
   include:
     - stage: test
