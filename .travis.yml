@@ -28,6 +28,7 @@ env:
     - LANG="en_US.UTF-8"
 
 stages:
+  - build
   - test
   - coverage
   - name: deploy
@@ -38,6 +39,12 @@ before_script:
 
 jobs:
   include:
+    - stage: build
+      name: "Image Building"
+      script:
+        - make build-development-images
+        - make deploy-development-images
+
     - stage: test
       name: "Unit Testing"
       script:
@@ -48,6 +55,11 @@ jobs:
       name: "Coverage Analysis"
       script:
         - make deploy-coverage-cpp-results
+
+    - stage: deploy
+      name: "Image Deployment"
+      script:
+        - make deploy-release-images
 
     - stage: deploy
       name: "Documentation Deployment"

@@ -17,6 +17,9 @@ export docker_image_version := $(project_version)
 
 export development_base_image_version := 0.1.10
 
+export docker_development_image_repository := $(docker_image_repository)-development
+export docker_release_image_python_repository := $(docker_image_repository)-python
+
 export ci_build_number := $(TRAVIS_BUILD_NUMBER)
 export ci_commit := $(TRAVIS_COMMIT)
 export ci_doc_repo_name := $(project_name)
@@ -54,9 +57,10 @@ _build-development-image:
 	@ echo "Building [$(target)] development image..."
 
 	docker build \
+	--cache-from=$(docker_development_image_repository):latest-$(target) \
 	--file="$(project_directory)/docker/development/$(target)/Dockerfile" \
-	--tag=$(docker_image_repository)-development:$(docker_image_version)-$(target) \
-	--tag=$(docker_image_repository)-development:latest-$(target) \
+	--tag=$(docker_development_image_repository):$(docker_image_version)-$(target) \
+	--tag=$(docker_development_image_repository):latest-$(target) \
 	--build-arg="BASE_IMAGE_VERSION=$(development_base_image_version)" \
 	--build-arg="VERSION=$(docker_image_version)" \
 	"$(project_directory)"
@@ -81,6 +85,7 @@ _build-release-image-cpp:
 	@ echo "Building [$(target)] C++ release image..."
 
 	docker build \
+	--cache-from=$(docker_image_repository):latest-$(target) \
 	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
 	--tag=$(docker_image_repository):$(docker_image_version)-$(target) \
 	--tag=$(docker_image_repository):latest-$(target) \
@@ -98,9 +103,10 @@ _build-release-image-python:
 	@ echo "Building [$(target)] Python release image..."
 
 	docker build \
+	--cache-from=$(docker_release_image_python_repository):latest-$(target) \
 	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
-	--tag=$(docker_image_repository)-python:$(docker_image_version)-$(target) \
-	--tag=$(docker_image_repository)-python:latest-$(target) \
+	--tag=$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
+	--tag=$(docker_release_image_python_repository):latest-$(target) \
 	--build-arg="VERSION=$(docker_image_version)" \
 	--target=python-release \
 	"$(project_directory)"
@@ -116,7 +122,7 @@ build-documentation: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
 build-packages:
@@ -153,7 +159,7 @@ _build-packages-cpp: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=$(package_generator) .. && make package && mkdir -p /app/packages/cpp && mv /app/build/*.$(package_extension) /app/packages/cpp"
 
 build-packages-python:
@@ -176,7 +182,7 @@ _build-packages-python: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. && make -j && mkdir -p /app/packages/python && mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
 ################################################################################################################################################################
@@ -202,7 +208,7 @@ _run-development: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash
 
 run-python: run-python-debian
@@ -219,7 +225,7 @@ _run-python: _build-release-image-python
 	docker run \
 	-it \
 	--rm \
-	$(docker_image_repository)-python:$(docker_image_version)-$(target)
+	$(docker_release_image_python_repository):$(docker_image_version)-$(target)
 
 ################################################################################################################################################################
 
@@ -241,7 +247,7 @@ _debug-development: _build-development-image
 	docker run \
 	-it \
 	--rm \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash
 
 debug-cpp-release-debian: target := debian
@@ -272,7 +278,7 @@ _debug-python-release: _build-release-image-python
 	-it \
 	--rm \
 	--entrypoint=/bin/bash \
-	$(docker_image_repository)-python:$(docker_image_version)-$(target)
+	$(docker_release_image_python_repository):$(docker_image_version)-$(target)
 
 ################################################################################################################################################################
 
@@ -317,7 +323,7 @@ _test-unit-cpp: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j && make test"
 
 test-unit-python-debian: target := debian
@@ -333,7 +339,7 @@ _test-unit-python: _build-release-image-python
 	--rm \
 	--workdir=/usr/local/lib/python3.7/site-packages/Library/Core \
 	--entrypoint="" \
-	$(docker_image_repository)-python:$(docker_image_version)-$(target) \
+	$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "pip install pytest && pytest ."
 
 test-coverage:
@@ -362,7 +368,7 @@ _test-coverage-cpp: _build-development-image
 	--volume="$(project_directory):/app:delegated" \
 	--volume="/app/build" \
 	--workdir=/app/build \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage && mkdir -p /app/coverage && mv /app/build/coverage* /app/coverage"
 
 ################################################################################################################################################################
@@ -372,8 +378,47 @@ deploy:
 	@ echo "Deploying..."
 
 	@ make deploy-coverage-cpp-results
+	@ make deploy-images
 	@ make deploy-packages
 	@ make deploy-documentation
+
+deploy-images:
+
+	@ echo "Deploying images..."
+
+	@ make deploy-development-images
+	@ make deploy-release-images
+
+deploy-development-images:
+
+	@ echo "Deploying development images..."
+
+	@ make _deploy-development-image target=debian
+	@ make _deploy-development-image target=fedora
+
+_deploy-development-image: _build-development-image
+
+	@ echo "Deploying [$(target)] development image..."
+
+	docker push $(docker_development_image_repository):$(docker_image_version)-$(target)
+	docker push $(docker_development_image_repository):latest-$(target)
+
+deploy-release-images:
+
+	@ echo "Deploying release images..."
+
+	@ make _deploy-release-images target=debian
+	@ make _deploy-release-images target=fedora
+
+_deploy-release-images: _build-release-image-cpp _build-release-image-python
+
+	@ echo "Deploying [$(target)] release images..."
+
+	docker push $(docker_image_repository):$(docker_image_version)-$(target)
+	docker push $(docker_image_repository):latest-$(target)
+
+	docker push $(docker_release_image_python_repository):$(docker_image_version)-$(target)
+	docker push $(docker_release_image_python_repository):latest-$(target)
 
 deploy-packages:
 
@@ -435,7 +480,7 @@ deploy-coverage-cpp-results: _test-coverage-cpp
 	--rm \
 	--volume="$(project_directory):/app:delegated" \
 	--workdir=/app \
-	$(docker_image_repository)-development:$(docker_image_version)-$(target) \
+	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "bash <(curl -s https://codecov.io/bash) -X gcov -y .codecov.yml -t ${ci_codecov_token}"
 
 deploy-documentation: build-documentation
@@ -485,7 +530,7 @@ clean:
 		test-coverage \
 		test-coverage-cpp \
 		test-coverage-cpp-debian test-coverage-cpp-fedora \
-		deploy deploy-packages deploy-coverage-cpp-results deploy-documentation \
+		deploy deploy-images deploy-packages deploy-coverage-cpp-results deploy-documentation \
 		deploy-packages-cpp deploy-packages-python \
 		clean
 
