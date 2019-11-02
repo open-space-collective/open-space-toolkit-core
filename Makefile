@@ -60,10 +60,11 @@ _build-development-image:
 
 	docker build \
 	--cache-from=$(docker_development_image_repository):latest-$(target) \
-	--file="$(project_directory)/docker/development/$(target)/Dockerfile" \
+	--file="$(project_directory)/docker/development/Dockerfile" \
 	--tag=$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	--tag=$(docker_development_image_repository):latest-$(target) \
 	--build-arg="BASE_IMAGE_VERSION=$(development_base_image_version)" \
+	--build-arg="BASE_IMAGE_SYSTEM=$(target)" \
 	--build-arg="VERSION=$(docker_image_version)" \
 	"$(project_directory)"
 
