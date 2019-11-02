@@ -485,7 +485,7 @@ _deploy-packages-python: _build-packages-python
 	--env="TWINE_USERNAME=${PYPI_USERNAME}" \
 	--env="TWINE_PASSWORD=${PYPI_PASSWORD}" \
 	python:3.7-slim \
-	/bin/bash -c "pip install twine && python3 -m twine upload /packages"
+	/bin/bash -c "pip install twine && python3 -m twine upload /packages/*"
 
 deploy-coverage-cpp-results: target := debian
 
