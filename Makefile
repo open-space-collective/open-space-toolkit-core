@@ -22,7 +22,7 @@ export docker_release_image_python_repository := $(docker_image_repository)-pyth
 export docker_jupyter_notebook_image_repository := $(docker_image_repository)-jupyter
 
 export jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
-export jupyter_notebook_port := 8888
+export jupyter_notebook_port := 9001
 
 export ci_build_number := $(TRAVIS_BUILD_NUMBER)
 export ci_commit := $(TRAVIS_COMMIT)
