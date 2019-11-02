@@ -30,7 +30,6 @@ env:
 stages:
   - build
   - test
-  - coverage
   - name: deploy
     if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
 
@@ -51,7 +50,7 @@ jobs:
         - make test-unit-cpp-debian
         - make test-unit-python-debian
 
-    - stage: coverage
+    - stage: test
       name: "Coverage Analysis"
       script:
         - make deploy-coverage-cpp-results
@@ -77,7 +76,8 @@ jobs:
           api_key: ${GITHUB_API_KEY}
           file_glob: true
           file:
-            - ./packages/*
+            - ./packages/cpp/*
+            - ./packages/python/*
           skip_cleanup: true
           on:
             branch: master
