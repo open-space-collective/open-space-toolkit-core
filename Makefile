@@ -194,40 +194,45 @@ _build-packages-python: _build-development-image
 
 ################################################################################################################################################################
 
-run-development:
+start-development:
 
-	@ echo "Running development environment..."
+	@ echo "Starting development environment..."
 
-	make run-development-debian
+	make start-development-debian
 
-run-development-debian: target := debian
-run-development-fedora: target := fedora
+start-development-debian: target := debian
+start-development-fedora: target := fedora
 
-run-development-debian run-development-fedora: _run-development
+start-development-debian start-development-fedora: _start-development
 
-_run-development: _build-development-image
+_start-development: _build-development-image
 
-	@ echo "Running [$(target)] development environment..."
+	@ echo "Starting [$(target)] development environment..."
 
 	docker run \
 	-it \
 	--rm \
+	--privileged \
 	--volume="$(project_directory):/app:delegated" \
 	--volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
 	--workdir=/app/build \
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash
 
-run-python: run-python-debian
+start-python:
 
-run-python-debian: target := debian
-run-python-fedora: target := fedora
+	@ echo "Starting Python runtime environment..."
 
-run-python-debian run-python-fedora: _run-python
+	@ make start-python-debian
 
-_run-python: _build-release-image-python
+start-python-debian: target := debian
+start-python-fedora: target := fedora
 
-	@ echo "Running [$(target)] Python runtime environment..."
+start-python-debian start-python-fedora: _start-python
+
+_start-python: _build-release-image-python
+
+	@ echo "Starting [$(target)] Python runtime environment..."
 
 	docker run \
 	-it \
@@ -376,7 +381,7 @@ _test-coverage-cpp: _build-development-image
 	--volume="/app/build" \
 	--workdir=/app/build \
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
-	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage && mkdir -p /app/coverage && mv /app/build/coverage* /app/coverage"
+	/bin/bash -c "cmake -DBUILD_CODE_COVERAGE=ON .. && make -j && make coverage && (rm -rf /app/coverage || true) && mkdir /app/coverage && mv /app/build/coverage* /app/coverage"
 
 ################################################################################################################################################################
 
@@ -494,16 +499,7 @@ deploy-documentation: build-documentation
 
 	@ echo "Deploying documentation..."
 
-	$(shell \
-		project_directory=$(project_directory) \
-		ci_doc_repo_ref=$(ci_doc_repo_ref) \
-		ci_doc_repo_name=$(ci_doc_repo_name) \
-		ci_doc_repo_user_name=$(ci_doc_repo_user_name) \
-		ci_doc_repo_user_email=$(ci_doc_repo_user_email) \
-		ci_doc_repo_token=$(ci_doc_repo_token) \
-		ci_build_number=$(ci_build_number) \
-		ci_commit=$(ci_commit) \
-		./tools/ci/deploy-documentation.sh)
+	@ "$(project_directory)"/tools/ci/deploy-documentation.sh
 
 ################################################################################################################################################################
 
@@ -526,8 +522,8 @@ clean:
 		build-release-image-cpp-debian build-release-image-python-debian build-release-image-python-fedora \
 		build-documentation \
 		build-packages-cpp build-packages-cpp-debian build-packages-cpp-fedora \
-		run-development run-development-debian run-development-fedora \
-		run-python run-python-debian run-python-fedora \
+		start-development start-development-debian start-development-fedora \
+		start-python start-python-debian start-python-fedora \
 		debug-development-debian debug-cpp-release-debian debug-python-release-debian \
 		debug-development-fedora debug-cpp-release-fedora debug-python-release-fedora \
 		test \
