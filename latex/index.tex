@@ -1,186 +1,181 @@
-Fundamental types, containers and utilities.
+Common types, containers and utilities.
 
-\href{https://travis-ci.com/open-space-collective/library-core}{\texttt{ }} \href{https://codecov.io/gh/open-space-collective/library-core}{\texttt{ }} \href{https://open-space-collective.github.io/library-core}{\texttt{ }} \href{https://badge.fury.io/gh/open-space-collective%2Flibrary-core}{\texttt{ }} \href{https://badge.fury.io/py/LibraryCorePy}{\texttt{ }} \href{https://opensource.org/licenses/Apache-2.0}{\texttt{ }}
+\href{https://travis-ci.com/open-space-collective/library-core}{\tt } \href{https://codecov.io/gh/open-space-collective/library-core}{\tt } \href{https://open-space-collective.github.io/library-core}{\tt } \href{https://badge.fury.io/gh/open-space-collective%2Flibrary-core}{\tt } \href{https://badge.fury.io/py/LibraryCorePy}{\tt } \href{https://opensource.org/licenses/Apache-2.0}{\tt }
 
 \subsection*{Warning}
 
-Library {\bfseries{name}} is yet to be defined.
+Library {\bfseries name} is yet to be defined.
 
 Please check the following projects\+:
 
 
 \begin{DoxyItemize}
-\item \href{https://github.com/orgs/open-space-collective/projects/1}{\texttt{ Naming Project}}
+\item \href{https://github.com/orgs/open-space-collective/projects/1}{\tt Naming Project}
 \end{DoxyItemize}
 
 {\itshape ⚠ This library is still under heavy development. Do not use!}
 
 \subsection*{Structure}
 
-The {\bfseries{Core}} library exhibits the following structure\+:
+The {\bfseries Core} library exhibits the following structure\+:
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{├── Types}
-\DoxyCodeLine{│   ├── Integer}
-\DoxyCodeLine{│   ├── Real}
-\DoxyCodeLine{│   ├── String}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_ae37635b89098069fb3b8c5181edd0945}{Byte}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_ae37635b89098069fb3b8c5181edd0945}{Byte}} Array}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87d}{Sign}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_ac12d38691838fbc9a36765ee62ace52a}{Unique}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_a3dae1a00f899bac0366794fa85eda8ee}{Shared}}}
-\DoxyCodeLine{│   └── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_a26c13c272f9fba4ce17ee4980be6703c}{Weak}}}
-\DoxyCodeLine{├── Containers}
-\DoxyCodeLine{│   ├── Array}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1ctnr_a87ccf40619002299b341a5e76e989912}{List}}}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1ctnr_a248e088a0b4ec44aff451a5c3663dcee}{Map}}}
-\DoxyCodeLine{│   ├── Ordered \mbox{\hyperlink{namespacelibrary_1_1core_1_1ctnr_a248e088a0b4ec44aff451a5c3663dcee}{Map}}}
-\DoxyCodeLine{│   ├── Object}
-\DoxyCodeLine{│   ├── Dictionary}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1ctnr_aad6f8de4c0f279c10436d59d4ace74bd}{Pair}}}
-\DoxyCodeLine{│   ├── Triple}
-\DoxyCodeLine{│   ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1ctnr_a551ef72e2adb570c4d6bdf5e1bbc96b9}{Tuple}}}
-\DoxyCodeLine{│   ├── Table}
-\DoxyCodeLine{│   ├── Queue}
-\DoxyCodeLine{│   ├── Stack}
-\DoxyCodeLine{│   ├── Graph}
-\DoxyCodeLine{│   └── Tree}
-\DoxyCodeLine{├── File System}
-\DoxyCodeLine{│   ├── Path}
-\DoxyCodeLine{│   ├── File}
-\DoxyCodeLine{│   ├── Directory}
-\DoxyCodeLine{│   ├── Symbolic Link}
-\DoxyCodeLine{│   └── Permission}
-\DoxyCodeLine{├── System}
-\DoxyCodeLine{│   ├── User}
-\DoxyCodeLine{│   ├── Group}
-\DoxyCodeLine{│   ├── CPU}
-\DoxyCodeLine{│   ├── Memory}
-\DoxyCodeLine{│   ├── Disk}
-\DoxyCodeLine{│   └── Process}
-\DoxyCodeLine{├── Logger}
-\DoxyCodeLine{├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1logger_a35f71353edf64f68f7fe3874b01abaa8a902b0d55fddef6f8d651fe1035b7d4bd}{Error}}}
-\DoxyCodeLine{│   ├── Exception}
-\DoxyCodeLine{│   ├── Runtime \mbox{\hyperlink{namespacelibrary_1_1core_1_1logger_a35f71353edf64f68f7fe3874b01abaa8a902b0d55fddef6f8d651fe1035b7d4bd}{Error}}}
-\DoxyCodeLine{│   └── Runtime}
-\DoxyCodeLine{│       ├── \mbox{\hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87daec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}}}
-\DoxyCodeLine{│       ├── Wrong}
-\DoxyCodeLine{│       └── To Be Implemented}
-\DoxyCodeLine{└── Utilities}
-\DoxyCodeLine{    ├── Iterators}
-\DoxyCodeLine{    └── Version}
+\begin{DoxyCode}
+├── Types
+│   ├── Integer
+│   ├── Real
+│   ├── String
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_ae37635b89098069fb3b8c5181edd0945}{Byte}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_ae37635b89098069fb3b8c5181edd0945}{Byte} Array
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_ad87eeb821d7067ec94e06ed1980d6350}{Index}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_a701626ea1027888ebbb8cfd0ff7adab0}{Size}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87d}{Sign}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_ac12d38691838fbc9a36765ee62ace52a}{Unique}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1types_a3dae1a00f899bac0366794fa85eda8ee}{Shared}
+│   └── \hyperlink{namespacelibrary_1_1core_1_1types_a26c13c272f9fba4ce17ee4980be6703c}{Weak}
+├── Containers
+│   ├── Array
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1ctnr_a87ccf40619002299b341a5e76e989912}{List}
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1ctnr_a248e088a0b4ec44aff451a5c3663dcee}{Map}
+│   ├── Ordered \hyperlink{namespacelibrary_1_1core_1_1ctnr_a248e088a0b4ec44aff451a5c3663dcee}{Map}
+│   ├── Object
+│   ├── Dictionary
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1ctnr_aad6f8de4c0f279c10436d59d4ace74bd}{Pair}
+│   ├── Triple
+│   ├── \hyperlink{namespacelibrary_1_1core_1_1ctnr_a551ef72e2adb570c4d6bdf5e1bbc96b9}{Tuple}
+│   ├── Table
+│   ├── Queue
+│   ├── Stack
+│   ├── Graph
+│   └── Tree
+├── File System
+│   ├── Path
+│   ├── File
+│   ├── Directory
+│   ├── Symbolic Link
+│   └── Permission
+├── System
+│   ├── User
+│   ├── Group
+│   ├── CPU
+│   ├── Memory
+│   ├── Disk
+│   └── Process
+├── Logger
+├── \hyperlink{namespacelibrary_1_1core_1_1logger_a35f71353edf64f68f7fe3874b01abaa8a902b0d55fddef6f8d651fe1035b7d4bd}{Error}
+│   ├── Exception
+│   ├── Runtime \hyperlink{namespacelibrary_1_1core_1_1logger_a35f71353edf64f68f7fe3874b01abaa8a902b0d55fddef6f8d651fe1035b7d4bd}{Error}
+│   └── Runtime
+│       ├── \hyperlink{namespacelibrary_1_1core_1_1types_a06d9eaa410d43a0fa3f383040618e87daec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}
+│       ├── Wrong
+│       └── To Be Implemented
+└── Utilities
+    ├── Iterators
+    └── Version
 \end{DoxyCode}
 
 
 \subsection*{Documentation}
 
-The documentation can be found here\+:
+Documentation is available here\+:
 
 
 \begin{DoxyItemize}
-\item \href{https://open-space-collective.github.io/library-core}{\texttt{ C++}}
-\item \href{./bindings/python/docs}{\texttt{ Python}}
+\item \href{https://open-space-collective.github.io/library-core}{\tt C++}
+\item \href{./bindings/python/docs}{\tt Python}
 \end{DoxyItemize}
 
 \subsection*{Tutorials}
 
-Various tutorials are available here\+:
+Tutorials are available here\+:
 
 
 \begin{DoxyItemize}
-\item \href{./tutorials/cpp}{\texttt{ C++}}
-\item \href{./tutorials/python}{\texttt{ Python}}
+\item \href{./tutorials/cpp}{\tt C++}
+\item \href{./tutorials/python}{\tt Python}
 \end{DoxyItemize}
 
 \subsection*{Setup}
 
-\subsubsection*{Development}
+\subsubsection*{Development Environment}
 
-Using \href{https://www.docker.com}{\texttt{ Docker}} is recommended, as the development tools and dependencies setup is described in the provided \href{./tools/development/docker/Dockerfile}{\texttt{ Dockerfile}}.
+Using \href{https://www.docker.com}{\tt Docker} for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available \href{https://docs.docker.com/install/}{\tt here}.
 
-Instructions on how to install Docker can be found \href{https://docs.docker.com/install/}{\texttt{ here}}.
-
-To start a development environment\+:
+To start the development environment\+:
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./tools/development/start.sh}
+\begin{DoxyCode}
+make start-development
 \end{DoxyCode}
 
 
-This will also build the {\ttfamily openspacecollective/library-\/core\+:latest} Docker image, if not already.
+This will\+:
 
-If installing Docker is not an option, please manually install the development tools (G\+CC, C\+Make) and all required dependencies. The procedure should be similar to the one described in the \href{./tools/development/docker/Dockerfile}{\texttt{ Dockerfile}}.
+
+\begin{DoxyEnumerate}
+\item Build the {\ttfamily openspacecollective/library-\/core-\/development} Docker image.
+\item Create a development environment container with local source files and helper scripts mounted.
+\item Start a {\ttfamily bash} shell from the {\ttfamily ./build} working directory.
+\end{DoxyEnumerate}
+
+If installing Docker is not an option, you can manually install the development tools (G\+CC, C\+Make) and all required dependencies, by following a procedure similar to the one described in the \href{./docker/development/Dockerfile}{\tt Development Dockerfile}.
 
 \subsubsection*{Build}
 
-From the development environment\+:
+From the {\ttfamily ./build} directory\+:
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./build.sh}
+\begin{DoxyCode}
+cmake ..
+make
 \end{DoxyCode}
 
 
-Manually\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{mkdir -p build}
-\DoxyCodeLine{cd build}
-\DoxyCodeLine{cmake ..}
-\DoxyCodeLine{make}
-\end{DoxyCode}
-
+{\itshape Tip\+: {\ttfamily helpers/build.\+sh} simplifies building from within the development environment.}
 
 \subsubsection*{Test}
 
-From the development environment\+:
+To start a container to build and run the tests\+:
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./test.sh}
+\begin{DoxyCode}
+make test
 \end{DoxyCode}
 
 
-Manually\+:
+Or to run them manually\+:
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./bin/library-core.test}
+\begin{DoxyCode}
+./bin/library-core.test
 \end{DoxyCode}
 
+
+{\itshape Tip\+: {\ttfamily helpers/test.\+sh} simplifies running tests from within the development environment.}
 
 \subsection*{Dependencies}
 
-The {\bfseries{Core}} library internally uses the following dependencies\+:
-
 \tabulinesep=1mm
-\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ License  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Link   }\\\cline{1-4}
+\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
 \endfirsthead
 \hline
 \endfoot
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ License  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Link   }\\\cline{1-4}
+\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
 \endhead
-Boost  &1.\+67.\+0  &Boost Software License  &\href{https://www.boost.org}{\texttt{ boost.\+org}}   \\\cline{1-4}
-Rapid\+J\+S\+ON  &master  &M\+IT  &\href{http://rapidjson.org}{\texttt{ rapidjson.\+org}}   \\\cline{1-4}
-ordered-\/map  &master  &M\+IT  &\href{https://github.com/Tessil/ordered-map}{\texttt{ github.\+com/\+Tessil/ordered-\/map}}   \\\cline{1-4}
-\{fmt\}  &master  &B\+S\+D-\/2-\/\+Clause  &\href{https://github.com/fmtlib/fmt}{\texttt{ github.\+com/fmtlib/fmt}}   \\\cline{1-4}
-Rapidcsv  &master  &B\+S\+D-\/3-\/\+Clause  &\href{https://github.com/d99kris/rapidcsv}{\texttt{ github.\+com/d99kris/rapidcsv}}   \\\cline{1-4}
+Boost &1.\+69.\+0 &Boost Software License &\href{https://www.boost.org}{\tt boost.\+org} \\\cline{1-4}
+Rapid\+J\+S\+ON &master &M\+IT &\href{http://rapidjson.org}{\tt rapidjson.\+org} \\\cline{1-4}
+ordered-\/map &master &M\+IT &\href{https://github.com/Tessil/ordered-map}{\tt github.\+com/\+Tessil/ordered-\/map} \\\cline{1-4}
+\{fmt\} &master &B\+S\+D-\/2-\/\+Clause &\href{https://github.com/fmtlib/fmt}{\tt github.\+com/fmtlib/fmt} \\\cline{1-4}
+Rapidcsv &master &B\+S\+D-\/3-\/\+Clause &\href{https://github.com/d99kris/rapidcsv}{\tt github.\+com/d99kris/rapidcsv} \\\cline{1-4}
 \end{longtabu}
-
-
 \subsection*{Contribution}
 
 Contributions are more than welcome!
 
-Please read our \mbox{\hyperlink{_c_o_n_t_r_i_b_u_t_i_n_g_8md}{contributing guide}} to learn about our development process, how to propose fixes and improvements, and how to build and test the code.
+Please read our \hyperlink{_c_o_n_t_r_i_b_u_t_i_n_g_8md}{contributing guide} to learn about our development process, how to propose fixes and improvements, and how to build and test the code.
 
 \subsection*{Special Thanks}
 

@@ -1,4 +1,4 @@
-var namespaces_dup =
+var namespaces =
 [
     [ "library", "namespacelibrary.html", "namespacelibrary" ]
 ];

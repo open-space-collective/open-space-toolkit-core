@@ -23,10 +23,10 @@ var hierarchy =
     [ "library::core::system::Group", "classlibrary_1_1core_1_1system_1_1_group.html", null ],
     [ "library::core::types::HasToString< T >", "classlibrary_1_1core_1_1types_1_1_has_to_string.html", null ],
     [ "library::core::types::Integer", "classlibrary_1_1core_1_1types_1_1_integer.html", null ],
-    [ "library::core::ctnr::Dictionary::Iterator", "classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html", null ],
     [ "iterator", null, [
       [ "library::core::ctnr::iterators::ZipIterator< T >::Iterator", "classlibrary_1_1core_1_1ctnr_1_1iterators_1_1_zip_iterator_1_1_iterator.html", null ]
     ] ],
+    [ "library::core::ctnr::Dictionary::Iterator", "classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html", null ],
     [ "library::core::utils::Print::LineBuffer", "classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html", null ],
     [ "library::core::Logger", "classlibrary_1_1core_1_1_logger.html", null ],
     [ "library::core::ctnr::Object", "classlibrary_1_1core_1_1ctnr_1_1_object.html", null ],
@@ -41,8 +41,8 @@ var hierarchy =
     [ "library::core::logger::sinks::Sink", "classlibrary_1_1core_1_1logger_1_1sinks_1_1_sink.html", [
       [ "library::core::logger::sinks::Console", "classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html", null ]
     ] ],
-    [ "library::core::logger::sources::Source", "classlibrary_1_1core_1_1logger_1_1sources_1_1_source.html", null ],
     [ "library::core::logger::Source", "classlibrary_1_1core_1_1logger_1_1_source.html", null ],
+    [ "library::core::logger::sources::Source", "classlibrary_1_1core_1_1logger_1_1sources_1_1_source.html", null ],
     [ "library::core::ctnr::Stack", "classlibrary_1_1core_1_1ctnr_1_1_stack.html", null ],
     [ "library::core::ctnr::Table", "classlibrary_1_1core_1_1ctnr_1_1_table.html", null ],
     [ "library::core::ctnr::Tree", "classlibrary_1_1core_1_1ctnr_1_1_tree.html", null ],
