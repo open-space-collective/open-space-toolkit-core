@@ -122,7 +122,7 @@ cmake ..
 make
 ```
 
-*Tip: The `build.sh` helper simplifies building from within the development environment.*
+*Tip: `helpers/build.sh` simplifies building from within the development environment.*
 
 ### Test
 
@@ -138,7 +138,7 @@ Or to run them manually:
 ./bin/library-core.test
 ```
 
-*Tip: The `test.sh` helper simplifies running tests from within the development environment.*
+*Tip: `helpers/test.sh` simplifies running tests from within the development environment.*
 
 ## Dependencies
 
