@@ -19,6 +19,10 @@ export development_base_image_version := 0.1.10
 
 export docker_development_image_repository := $(docker_image_repository)-development
 export docker_release_image_python_repository := $(docker_image_repository)-python
+export docker_jupyter_notebook_image_repository := $(docker_image_repository)-jupyter
+
+export jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
+export jupyter_notebook_port := 8888
 
 export ci_build_number := $(TRAVIS_BUILD_NUMBER)
 export ci_commit := $(TRAVIS_COMMIT)
@@ -117,6 +121,20 @@ _build-release-image-python:
 	--build-arg="VERSION=$(docker_image_version)" \
 	--target=python-release \
 	"$(project_directory)"
+
+build-jupyter-notebook-image:
+
+	@ echo "Building Jupyter Notebook image..."
+
+	docker pull $(docker_jupyter_notebook_image_repository):latest || true
+
+	docker build \
+	--cache-from=$(docker_jupyter_notebook_image_repository):latest \
+	--file="$(project_directory)/docker/jupyter/Dockerfile" \
+	--tag=$(docker_jupyter_notebook_image_repository):$(docker_image_version) \
+	--tag=$(docker_jupyter_notebook_image_repository):latest \
+	--build-arg="JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=$(jupyter_notebook_image_repository)" \
+	"$(project_directory)/docker/jupyter"
 
 build-documentation: target := debian
 
@@ -238,6 +256,20 @@ _start-python: _build-release-image-python
 	-it \
 	--rm \
 	$(docker_release_image_python_repository):$(docker_image_version)-$(target)
+
+start-jupyter-notebook: build-jupyter-notebook-image
+
+	@ echo "Starting Jupyter Notebook environment..."
+
+	docker run \
+	-it \
+	--rm \
+	--publish="${jupyter_notebook_port}:8888" \
+	--volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+	--volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+	--workdir="/home/jovyan" \
+	$(docker_jupyter_notebook_image_repository):$(docker_image_version) \
+	bash -c "start-notebook.sh --NotebookApp.token=''"
 
 ################################################################################################################################################################
 
@@ -400,6 +432,7 @@ deploy-images:
 
 	@ make deploy-development-images
 	@ make deploy-release-images
+	@ make deploy-jupyter-notebook-image
 
 deploy-development-images:
 
@@ -431,6 +464,12 @@ _deploy-release-images: _build-release-image-cpp _build-release-image-python
 
 	docker push $(docker_release_image_python_repository):$(docker_image_version)-$(target)
 	docker push $(docker_release_image_python_repository):latest-$(target)
+
+deploy-jupyter-notebook-image:
+
+	@ echo "Deploying Jupyter Notebook image..."
+
+	docker push $(docker_jupyter_notebook_image_repository):$(docker_image_version)
 
 deploy-packages:
 
@@ -525,10 +564,12 @@ clean:
 .PHONY: build build-images \
 		build-development-images build-development-image-debian build-development-image-fedora \
 		build-release-image-cpp-debian build-release-image-python-debian build-release-image-python-fedora \
+		build-jupyter-notebook-image \
 		build-documentation \
 		build-packages-cpp build-packages-cpp-debian build-packages-cpp-fedora \
 		start-development start-development-debian start-development-fedora \
 		start-python start-python-debian start-python-fedora \
+		start-jupyter-notebook \
 		debug-development-debian debug-cpp-release-debian debug-python-release-debian \
 		debug-development-fedora debug-cpp-release-fedora debug-python-release-fedora \
 		test \
@@ -538,7 +579,9 @@ clean:
 		test-coverage \
 		test-coverage-cpp \
 		test-coverage-cpp-debian test-coverage-cpp-fedora \
-		deploy deploy-images deploy-packages deploy-coverage-cpp-results deploy-documentation \
+		deploy \
+		deploy-images deploy-development-images deploy-release-images deploy-jupyter-notebook-image \
+		deploy-packages deploy-coverage-cpp-results deploy-documentation \
 		deploy-packages-cpp deploy-packages-python \
 		clean
 
