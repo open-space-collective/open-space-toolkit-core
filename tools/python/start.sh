@@ -49,7 +49,7 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     && echo 'from .LibraryCorePy import *' > /opt/conda/lib/python3.7/site-packages/Library/Core/__init__.py \
     && start-notebook.sh --NotebookApp.token=''"
 
-    # && ln -s /opt/lib/libboost_python36.so.1.68.0 /opt/conda/lib/python3.7/site-packages/Library/Core/libboost_python36.so.1.68.0 \
+    # && ln -s /opt/lib/libboost_python37.so.1.70.0 /opt/conda/lib/python3.7/site-packages/Library/Core/libboost_python37.so.1.70.0 \
 
 else
 
@@ -79,10 +79,11 @@ else
     --rm \
     --publish="${python_port}:8888" \
     --user="root" \
+    --env-file="${script_directory}/.env" \
     --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
     --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
     --workdir="/home/jovyan" \
-    "${image_name}-python:${image_version}" \
+    "${image_name}-jupyter:${image_version}" \
     bash -c "start-notebook.sh --NotebookApp.token=''"
 
 fi

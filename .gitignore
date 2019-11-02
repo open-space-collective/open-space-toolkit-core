@@ -41,6 +41,8 @@ build/
 *.a
 *.exe*
 *.rpm*
+packages/
+coverage/
 
 ## Documentation
 

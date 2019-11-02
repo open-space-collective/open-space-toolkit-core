@@ -3,31 +3,55 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           tools/ci/documentation.sh
+# @file           tools/ci/deploy-documentation.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
+if [[ -z "${project_directory}" ]]; then
+    echo "Missing [project_directory] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_doc_repo_ref}" ]]; then
+    echo "Missing [ci_doc_repo_ref] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_doc_repo_name}" ]]; then
+    echo "Missing [ci_doc_repo_name] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_doc_repo_user_name}" ]]; then
+    echo "Missing [ci_doc_repo_user_name] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_doc_repo_user_email}" ]]; then
+    echo "Missing [ci_doc_repo_user_email] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_doc_repo_token}" ]]; then
+    echo "Missing [ci_doc_repo_token] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_build_number}" ]]; then
+    echo "Missing [ci_build_number] variable."
+    exit 1
+fi
+
+if [[ -z "${ci_commit}" ]]; then
+    echo "Missing [ci_commit] variable."
+    exit 1
+fi
+
+################################################################################################################################################################
+
 # https://gist.github.com/vidavidorra/548ffbcdae99d752da02
-
-script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-project_directory="${script_directory}/../.."
-
-source "${project_directory}/tools/.env"
-
-# Generate documentation
-
-docker run \
---rm \
---volume="${project_directory}:/app:rw" \
---volume="/app/build" \
---workdir="/app/build" \
-${image_name}:${image_version} \
-/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
-
-# Deploy documentation
 
 mkdir -p "./gh-pages"
 
@@ -35,7 +59,7 @@ pushd "./gh-pages" > /dev/null
 
 git clone -b gh-pages https://git@${ci_doc_repo_ref}
 
-pushd ${ci_doc_repo_name} > /dev/null
+pushd "${ci_doc_repo_name}" > /dev/null
 
 # Set the push default to simple i.e. push only the current branch.
 
@@ -78,7 +102,7 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
     # Commit the added files with a title and description containing the Travis CI
     # build number and the GitHub commit reference that issued this build.
 
-    git commit -m "[feature] Deploy documentation to GitHub Pages" -m "Travis build: ${TRAVIS_BUILD_NUMBER}" -m "Commit: ${TRAVIS_COMMIT}"
+    git commit -m "[feature] Deploy documentation to GitHub Pages" -m "Travis build: ${ci_build_number}" -m "Commit: ${ci_commit}"
 
     # Force push to the remote gh-pages branch.
     # The ouput is redirected to /dev/null to hide any sensitive credential data that might otherwise be exposed.

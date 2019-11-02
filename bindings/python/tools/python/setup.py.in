@@ -21,19 +21,19 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url = "https://github.com/open-space-collective/library-core",
-    classifiers=(
+    classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: POSIX :: Linux"
-    ),
+    ],
     keywords="open-space-collective core",
     packages=setuptools.find_packages(),
     package_data = {
         '': [
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so',
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0',
-            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python37.so.1.70.0'
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0'
         ]
     }
 )

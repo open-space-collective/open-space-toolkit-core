@@ -1,13 +1,16 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ Core
-# @file           tools/development/docker/Dockerfile
+# @file           docker/development/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-base:0.1.7
+ARG BASE_IMAGE_VERSION=latest
+ARG BASE_IMAGE_SYSTEM=debian
+
+FROM openspacecollective/library-base:${BASE_IMAGE_VERSION}-${BASE_IMAGE_SYSTEM}
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -15,7 +18,7 @@ LABEL maintainer="lucas@loftorbital.com"
 
 ## RapidJSON [1.1.0]
 
-RUN pushd /tmp > /dev/null \
+RUN cd /tmp \
  && git clone https://github.com/miloyip/rapidjson.git \
  && cd rapidjson \
  && mkdir build \
@@ -23,21 +26,19 @@ RUN pushd /tmp > /dev/null \
  && cmake .. \
  && make --silent -j $(nproc) \
  && make install \
- && rm -rf /tmp/rapidjson \
- && popd > /dev/null
+ && rm -rf /tmp/rapidjson
 
 ## ordered-map [0.6.0]
 
-RUN pushd /tmp > /dev/null \
+RUN cd /tmp \
  && git clone --branch v0.6.0 --depth 1 https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
  && cp -r ./include/tsl /usr/local/include \
- && rm -rf /tmp/ordered-map \
- && popd > /dev/null
+ && rm -rf /tmp/ordered-map
 
 ## {fmt} [5.2.0]
 
-RUN pushd /tmp > /dev/null \
+RUN cd /tmp \
  && git clone --branch 5.2.0 --depth 1 https://github.com/fmtlib/fmt.git \
  && cd fmt \
  && mkdir build \
@@ -45,18 +46,16 @@ RUN pushd /tmp > /dev/null \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
  && make --silent -j $(nproc) \
  && make install \
- && rm -rf /tmp/fmt \
- && popd > /dev/null
+ && rm -rf /tmp/fmt
 
 ## Rapidcsv [master]
 
-RUN pushd /tmp > /dev/null \
+RUN cd /tmp \
  && git clone https://github.com/d99kris/rapidcsv.git \
  && cd rapidcsv \
  && mkdir -p /usr/local/include/rapidcsv \
  && cp src/*.h /usr/local/include/rapidcsv/ \
- && rm -rf /tmp/rapidcsv \
- && popd > /dev/null
+ && rm -rf /tmp/rapidcsv
 
 # Labels
 
