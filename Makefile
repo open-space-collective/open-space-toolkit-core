@@ -470,6 +470,11 @@ deploy-packages-python:
 
 	@ make deploy-packages-python-debian
 
+deploy-packages-python-debian: target := debian
+deploy-packages-python-fedora: target := fedora
+
+deploy-packages-python-debian deploy-packages-python-fedora: _deploy-packages-python
+
 _deploy-packages-python: _build-packages-python
 
 	@ echo "Deploying [$(target)] Python packages..."
