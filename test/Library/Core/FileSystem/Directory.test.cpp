@@ -184,13 +184,13 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 
     {
 
-        const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
+        const Directory directory = Directory::Path(Path::Parse("/app/include/Library/Core")) ;
 
-        EXPECT_TRUE(directory.containsFileWithName("exec.sh")) ;
-        EXPECT_TRUE(directory.containsFileWithName("start.sh")) ;
+        EXPECT_TRUE(directory.containsFileWithName("Error.hpp")) ;
+        EXPECT_TRUE(directory.containsFileWithName("Utilities.hpp")) ;
 
-        EXPECT_FALSE(directory.containsFileWithName("docker")) ;
-        EXPECT_FALSE(directory.containsFileWithName("helpers")) ;
+        EXPECT_FALSE(directory.containsFileWithName("Error")) ;
+        EXPECT_FALSE(directory.containsFileWithName("Utilities")) ;
         EXPECT_FALSE(directory.containsFileWithName("abc")) ;
 
     }
@@ -384,15 +384,15 @@ TEST (Library_Core_FileSystem_Directory, GetDirectories)
 
     {
 
-        const Directory directory = Directory::Path(Path::Parse("/app/tools/development")) ;
+        const Directory directory = Directory::Path(Path::Parse("/app/tools")) ;
 
         const Array<Directory> subDirectories = directory.getDirectories() ;
 
-        EXPECT_EQ(2, subDirectories.getSize()) ;
+        EXPECT_EQ(3, subDirectories.getSize()) ;
 
         const Array<String> subDirectoryNames = subDirectories.map<String>([] (const Directory& aDirectory) -> String { return aDirectory.getName() ; }) ;
 
-        const Array<String> referenceSubDirectoryNames = {"docker", "helpers"} ;
+        const Array<String> referenceSubDirectoryNames = {"ci", "cmake", "development"} ;
 
         EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames) ;
 
