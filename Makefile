@@ -141,8 +141,6 @@ _build-release-image-cpp: _build-development-image _pull-release-image-cpp
 
 	@ echo "Building [$(target)] C++ release image..."
 
-	docker pull --quiet $(docker_image_repository):latest-$(target) || true
-
 	docker build \
 	--cache-from=$(docker_image_repository):latest-$(target) \
 	--file="$(project_directory)/docker/release/$(target)/Dockerfile" \
