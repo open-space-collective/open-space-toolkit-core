@@ -61,8 +61,10 @@ LABEL maintainer="lucas@loftorbital.com"
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
+RUN pip install ipython
+
 COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["ipython"]
 
 ################################################################################################################################################################
