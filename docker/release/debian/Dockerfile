@@ -59,8 +59,10 @@ FROM python:3.7-slim as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
+RUN pip install ipython
+
 COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["ipython"]
 
 ################################################################################################################################################################
