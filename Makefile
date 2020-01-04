@@ -444,10 +444,10 @@ _test-unit-python: _build-release-image-python
 
 	docker run \
 	--rm \
-	--workdir=/usr/local/lib/python3.7/site-packages/Library/Core \
+	--workdir=/usr/local/lib/python3.7/site-packages/library/core \
 	--entrypoint="" \
 	$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
-	/bin/bash -c "pip install pytest && pytest ."
+	/bin/bash -c "pip install pytest && pytest -sv ."
 
 test-coverage:
 

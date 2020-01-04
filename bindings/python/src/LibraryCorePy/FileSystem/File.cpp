@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/FileSystem/File.cpp
+/// @file           bindings/python/src/LibraryCorePy/FileSystem/File.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -26,24 +26,24 @@ inline void                     LibraryCorePy_FileSystem_File               ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-        .def("isDefined", &File::isDefined)
+        .def("is_defined", &File::isDefined)
         .def("exists", &File::exists)
-        .def("getName", &File::getName)
-        .def("getExtension", &File::getExtension)
-        .def("getPath", &File::getPath)
-        .def("getPermissions", &File::getPermissions)
-        .def("getParentDirectory", &File::getParentDirectory)
-        .def("getContents", &File::getContents)
-        .def("toString", &File::toString)
-        // .def("renameTo", &File::renameTo)
-        // .def("copyToDirectory", &File::copyToDirectory)
-        .def("moveToDirectory", &File::moveToDirectory)
+        .def("get_name", &File::getName)
+        .def("get_extension", &File::getExtension)
+        .def("get_path", &File::getPath)
+        .def("get_permissions", &File::getPermissions)
+        .def("get_parent_directory", &File::getParentDirectory)
+        .def("get_contents", &File::getContents)
+        .def("to_string", &File::toString)
+        // .def("rename_to", &File::renameTo)
+        // .def("copy_to_directory", &File::copyToDirectory)
+        .def("move_to_directory", &File::moveToDirectory)
         .def("create", &File::create)
         // .def("clear", &File::clear)
         .def("remove", &File::remove)
 
-        .def("Undefined", &File::Undefined).staticmethod("Undefined")
-        .def("Path", &File::Path).staticmethod("Path")
+        .def("undefined", &File::Undefined).staticmethod("undefined")
+        .def("path", &File::Path).staticmethod("path")
 
     ;
 

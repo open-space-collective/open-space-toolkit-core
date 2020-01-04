@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/FileSystem/PermissionSet.cpp
+/// @file           bindings/python/src/LibraryCorePy/FileSystem/PermissionSet.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -29,19 +29,19 @@ inline void                     LibraryCorePy_FileSystem_PermissionSet      ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-        .def("isNone", &PermissionSet::isNone)
-        .def("isAll", &PermissionSet::isAll)
-        .def("canRead", &PermissionSet::canRead)
-        .def("canWrite", &PermissionSet::canWrite)
-        .def("canExecute", &PermissionSet::canExecute)
+        .def("is_none", &PermissionSet::isNone)
+        .def("is_all", &PermissionSet::isAll)
+        .def("can_read", &PermissionSet::canRead)
+        .def("can_write", &PermissionSet::canWrite)
+        .def("can_execute", &PermissionSet::canExecute)
 
-        .def("None", &PermissionSet::None).staticmethod("None")
-        .def("R", &PermissionSet::R).staticmethod("R")
-        .def("W", &PermissionSet::W).staticmethod("W")
-        .def("X", &PermissionSet::X).staticmethod("X")
-        .def("RW", &PermissionSet::RW).staticmethod("RW")
-        .def("RX", &PermissionSet::RX).staticmethod("RX")
-        .def("RWX", &PermissionSet::RWX).staticmethod("RWX")
+        .def("none", &PermissionSet::None).staticmethod("none")
+        .def("r", &PermissionSet::R).staticmethod("r")
+        .def("w", &PermissionSet::W).staticmethod("w")
+        .def("x", &PermissionSet::X).staticmethod("x")
+        .def("rw", &PermissionSet::RW).staticmethod("rw")
+        .def("rx", &PermissionSet::RX).staticmethod("rx")
+        .def("rwx", &PermissionSet::RWX).staticmethod("rwx")
 
     ;
 

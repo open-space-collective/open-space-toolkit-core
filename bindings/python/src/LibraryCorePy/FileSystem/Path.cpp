@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/FileSystem/Path.cpp
+/// @file           bindings/python/src/LibraryCorePy/FileSystem/Path.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -29,21 +29,21 @@ inline void                     LibraryCorePy_FileSystem_Path               ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-        .def("isDefined", &Path::isDefined)
-        .def("isAbsolute", &Path::isAbsolute)
-        .def("isRelative", &Path::isRelative)
-        .def("getParentPath", &Path::getParentPath)
-        .def("getLastElement", &Path::getLastElement)
-        .def("getNormalizedPath", &Path::getNormalizedPath)
-        .def("getAbsolutePath", &Path::getAbsolutePath)
-        // .def("getRelativePathTo", &Path::getRelativePathTo)
-        .def("toString", &Path::toString)
+        .def("is_defined", &Path::isDefined)
+        .def("is_absolute", &Path::isAbsolute)
+        .def("is_relative", &Path::isRelative)
+        .def("get_parent_path", &Path::getParentPath)
+        .def("get_last_element", &Path::getLastElement)
+        .def("get_normalized_path", &Path::getNormalizedPath)
+        .def("get_absolute_path", &Path::getAbsolutePath)
+        // .def("get_relative_path_to", &Path::getRelativePathTo)
+        .def("to_string", &Path::toString)
 
-        .def("Undefined", &Path::Undefined).staticmethod("Undefined")
-        .def("Root", &Path::Root).staticmethod("Root")
-        .def("Current", &Path::Current).staticmethod("Current")
-        .def("Parse", &Path::Parse).staticmethod("Parse")
-        // .def("Strings", &Path::Strings).staticmethod("Strings")
+        .def("undefined", &Path::Undefined).staticmethod("undefined")
+        .def("root", &Path::Root).staticmethod("root")
+        .def("current", &Path::Current).staticmethod("current")
+        .def("parse", &Path::Parse).staticmethod("parse")
+        // .def("strings", &Path::Strings).staticmethod("strings")
 
     ;
 

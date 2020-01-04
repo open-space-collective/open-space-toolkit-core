@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/FileSystem.cpp
+/// @file           bindings/python/src/LibraryCorePy/FileSystem.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -18,9 +18,9 @@
 inline void                     LibraryCorePy_FileSystem                    ( )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.Core.FileSystem")))) ;
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.filesystem")))) ;
 
-    boost::python::scope().attr("FileSystem") = module ;
+    boost::python::scope().attr("filesystem") = module ;
 
     boost::python::scope scope = module ;
 

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/FileSystem/Directory.cpp
+/// @file           bindings/python/src/LibraryCorePy/FileSystem/Directory.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -26,27 +26,27 @@ inline void                     LibraryCorePy_FileSystem_Directory          ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-        .def("isDefined", &Directory::isDefined)
+        .def("is_defined", &Directory::isDefined)
         .def("exists", &Directory::exists)
-        .def("isEmpty", &Directory::isEmpty)
-        .def("containsFileWithName", &Directory::containsFileWithName)
-        // .def("containsDirectoryWithName", &Directory::containsDirectoryWithName)
-        .def("getName", &Directory::getName)
-        .def("getPath", &Directory::getPath)
-        // .def("getPermissions", &Directory::getPermissions)
-        .def("getParentDirectory", &Directory::getParentDirectory)
-        // .def("getFiles", &Directory::getFiles)
-        .def("getDirectories", &Directory::getDirectories)
-        .def("toString", &Directory::toString)
-        // .def("renameTo", &Directory::renameTo)
-        // .def("copyToDirectory", &Directory::copyToDirectory)
-        // .def("moveToDirectory", &Directory::moveToDirectory)
+        .def("is_empty", &Directory::isEmpty)
+        .def("contains_file_with_name", &Directory::containsFileWithName)
+        // .def("contains_directory_with_name", &Directory::containsDirectoryWithName)
+        .def("get_name", &Directory::getName)
+        .def("get_path", &Directory::getPath)
+        // .def("get_permissions", &Directory::getPermissions)
+        .def("get_parent_directory", &Directory::getParentDirectory)
+        // .def("get_files", &Directory::getFiles)
+        .def("get_directories", &Directory::getDirectories)
+        .def("to_string", &Directory::toString)
+        // .def("rename_to", &Directory::renameTo)
+        // .def("copy_to_directory", &Directory::copyToDirectory)
+        // .def("move_to_directory", &Directory::moveToDirectory)
         .def("create", &Directory::create)
         .def("remove", &Directory::remove)
 
-        .def("Undefined", &Directory::Undefined).staticmethod("Undefined")
-        .def("Root", &Directory::Root).staticmethod("Root")
-        .def("Path", &Directory::Path).staticmethod("Path")
+        .def("undefined", &Directory::Undefined).staticmethod("undefined")
+        .def("root", &Directory::Root).staticmethod("root")
+        .def("path", &Directory::Path).staticmethod("path")
 
     ;
 
