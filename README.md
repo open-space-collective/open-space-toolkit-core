@@ -1,4 +1,4 @@
-# Library ▸ Core
+# Open Space Toolkit ▸ Core
 
 Common types, containers and utilities.
 
