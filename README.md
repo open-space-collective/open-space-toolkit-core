@@ -11,13 +11,7 @@ Common types, containers and utilities.
 
 ## Warning
 
-Library **name** is yet to be defined.
-
-Please check the following projects:
-
-- [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
-
-*⚠ This library is still under heavy development. Do not use!*
+*⚠ This component is under development.*
 
 ## Structure
 
