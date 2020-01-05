@@ -13,7 +13,7 @@ with open("${CMAKE_CURRENT_SOURCE_DIR}/README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="LibraryCorePy",
+    name="library-core",
     version="${PROJECT_VERSION_STRING}",
     author="Open Space Collective",
     author_email="contact@open-space-collective.org",
