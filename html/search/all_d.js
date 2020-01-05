@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['name',['Name',['../classlibrary_1_1core_1_1system_1_1_group.html#a81dda2a1d0e251b40dabbde24be380d1',1,'library::core::system::Group::Name()'],['../classlibrary_1_1core_1_1system_1_1_user.html#a2088b7516e89adf5b6fc9f13e58acc61',1,'library::core::system::User::Name()']]],
-  ['negative',['Negative',['../namespacelibrary_1_1core_1_1types.html#a06d9eaa410d43a0fa3f383040618e87daffb9356ff2b7da85c75c92fa7ea03b8b',1,'library::core::types']]],
-  ['negativeinfinity',['NegativeInfinity',['../classlibrary_1_1core_1_1types_1_1_integer.html#aa8151c3b615012ec215d20da6de593bd',1,'library::core::types::Integer::NegativeInfinity()'],['../classlibrary_1_1core_1_1types_1_1_real.html#a04f125b4861a4f348b9754fc65fbbb43',1,'library::core::types::Real::NegativeInfinity()']]],
-  ['none',['None',['../classlibrary_1_1core_1_1fs_1_1_permission_set.html#a23fef193e66e47d7319ce3a707bb9cfe',1,'library::core::fs::PermissionSet::None()'],['../namespacelibrary_1_1core_1_1types.html#a06d9eaa410d43a0fa3f383040618e87da6adf97f83acf6453d4a6a4b1070f3754',1,'library::core::types::None()']]]
+  ['name',['Name',['../classostk_1_1core_1_1system_1_1_group.html#a694c3ccaf1a870ab3c7e81aac8b776c6',1,'ostk::core::system::Group::Name()'],['../classostk_1_1core_1_1system_1_1_user.html#a83abc0dd6771386923d28c2106e107b7',1,'ostk::core::system::User::Name()']]],
+  ['negative',['Negative',['../namespaceostk_1_1core_1_1types.html#ae10e15cf66b50aaec17f4f78c984d7bfaffb9356ff2b7da85c75c92fa7ea03b8b',1,'ostk::core::types']]],
+  ['negativeinfinity',['NegativeInfinity',['../classostk_1_1core_1_1types_1_1_integer.html#a65f0693362d3f0bffb5aabcb8c4d933d',1,'ostk::core::types::Integer::NegativeInfinity()'],['../classostk_1_1core_1_1types_1_1_real.html#a9f9fec381e2d2f1212f5595b2fd2084e',1,'ostk::core::types::Real::NegativeInfinity()']]],
+  ['none',['None',['../classostk_1_1core_1_1fs_1_1_permission_set.html#a32af3f0195b5ec761282521823edc12e',1,'ostk::core::fs::PermissionSet::None()'],['../namespaceostk_1_1core_1_1types.html#ae10e15cf66b50aaec17f4f78c984d7bfa6adf97f83acf6453d4a6a4b1070f3754',1,'ostk::core::types::None()']]]
 ];

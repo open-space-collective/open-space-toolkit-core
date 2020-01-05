@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weak',['Weak',['../namespacelibrary_1_1core_1_1types.html#a26c13c272f9fba4ce17ee4980be6703c',1,'library::core::types']]]
+  ['weak',['Weak',['../namespaceostk_1_1core_1_1types.html#a0dd80951dd3139e43b5c0b3e5928d08a',1,'ostk::core::types']]]
 ];

@@ -1,6 +1,6 @@
 var _logger_8hpp =
 [
-    [ "Logger", "classlibrary_1_1core_1_1_logger.html", "classlibrary_1_1core_1_1_logger" ],
+    [ "Logger", "classostk_1_1core_1_1_logger.html", "classostk_1_1core_1_1_logger" ],
     [ "GET_MACRO", "_logger_8hpp.html#a19f198f1db10b2d1e5d220ca4077e0f5", null ],
     [ "GLOBAL_LOG_DEBUG", "_logger_8hpp.html#afdf5052e4b73c2b24484df7dfcf13924", null ],
     [ "GLOBAL_LOG_ERROR", "_logger_8hpp.html#af690cf01e722c46f0a16af876af0b4f0", null ],

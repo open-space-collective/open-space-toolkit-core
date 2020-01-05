@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tuple',['Tuple',['../namespacelibrary_1_1core_1_1ctnr.html#a551ef72e2adb570c4d6bdf5e1bbc96b9',1,'library::core::ctnr']]]
+  ['tuple',['Tuple',['../namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88',1,'ostk::core::ctnr']]]
 ];

@@ -1,4 +1,4 @@
 var namespaces =
 [
-    [ "library", "namespacelibrary.html", "namespacelibrary" ]
+    [ "ostk", "namespaceostk.html", "namespaceostk" ]
 ];

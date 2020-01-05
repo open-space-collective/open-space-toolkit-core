@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['magenta',['Magenta',['../classlibrary_1_1core_1_1logger_1_1sinks_1_1_console.html#aa7a07d8165e1df74ad4d289d5220bc96ab91cc2c1416fcca942b61c7ac5b1a9ac',1,'library::core::logger::sinks::Console']]],
-  ['make_5ftriple',['make_triple',['../namespacelibrary_1_1core_1_1ctnr.html#a96a0b941c0de59772cb5e073d0c2b8a8',1,'library::core::ctnr']]],
-  ['map',['map',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#a442dd11b5ef8bf12e84921f6d2296767',1,'library::core::ctnr::Array::map()'],['../namespacelibrary_1_1core_1_1ctnr.html#a248e088a0b4ec44aff451a5c3663dcee',1,'library::core::ctnr::Map()']]],
+  ['magenta',['Magenta',['../classostk_1_1core_1_1logger_1_1sinks_1_1_console.html#abfacace5be69257cad68f802040c050bab91cc2c1416fcca942b61c7ac5b1a9ac',1,'ostk::core::logger::sinks::Console']]],
+  ['make_5ftriple',['make_triple',['../namespaceostk_1_1core_1_1ctnr.html#ae073c65f208c5d6ff9cfdb026ded7fea',1,'ostk::core::ctnr']]],
+  ['map',['map',['../classostk_1_1core_1_1ctnr_1_1_array.html#abf98d57cd72f4f544c16b1ad716858c1',1,'ostk::core::ctnr::Array::map()'],['../namespaceostk_1_1core_1_1ctnr.html#a2184a633cc52230b0617fab960393bc5',1,'ostk::core::ctnr::Map()']]],
   ['map_2ehpp',['Map.hpp',['../_map_8hpp.html',1,'']]],
-  ['mapconstiterator',['MapConstIterator',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_const_iterator.html#a34426ebde79ee2bb93040f498f09b9ca',1,'library::core::ctnr::Dictionary::ConstIterator']]],
-  ['mapiterator',['MapIterator',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html#a990205e908ac1bafcd754993219b805e',1,'library::core::ctnr::Dictionary::Iterator']]],
-  ['match',['match',['../classlibrary_1_1core_1_1types_1_1_string.html#abab50e9c0d620b246d0bfde0dad0add5',1,'library::core::types::String']]],
+  ['mapconstiterator',['MapConstIterator',['../classostk_1_1core_1_1ctnr_1_1_dictionary_1_1_const_iterator.html#a7c7a0e5a0a15da39cbb2115306fdef4c',1,'ostk::core::ctnr::Dictionary::ConstIterator']]],
+  ['mapiterator',['MapIterator',['../classostk_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html#a0d5a95dd4a931ded2d8d156da4499348',1,'ostk::core::ctnr::Dictionary::Iterator']]],
+  ['match',['match',['../classostk_1_1core_1_1types_1_1_string.html#ac6fd01a3b12e86f08e61019799d8dc4d',1,'ostk::core::types::String']]],
   ['memory_2ehpp',['Memory.hpp',['../_memory_8hpp.html',1,'']]],
-  ['mergewith',['mergeWith',['../classlibrary_1_1core_1_1ctnr_1_1_array.html#abe72cec38e65761df3eaddcfa9b7a44a',1,'library::core::ctnr::Array']]],
-  ['movetodirectory',['moveToDirectory',['../classlibrary_1_1core_1_1fs_1_1_directory.html#a666a1ac6f84535bb113979115a760f11',1,'library::core::fs::Directory::moveToDirectory()'],['../classlibrary_1_1core_1_1fs_1_1_file.html#ac81efdfeb17ea50abe23d96f69bc15ae',1,'library::core::fs::File::moveToDirectory()']]]
+  ['mergewith',['mergeWith',['../classostk_1_1core_1_1ctnr_1_1_array.html#a7b436feb27e4b0c81cf218bc61b6f5f2',1,'ostk::core::ctnr::Array']]],
+  ['movetodirectory',['moveToDirectory',['../classostk_1_1core_1_1fs_1_1_directory.html#a068eb2c941fb6f9852cb4d22bf4dcec1',1,'ostk::core::fs::Directory::moveToDirectory()'],['../classostk_1_1core_1_1fs_1_1_file.html#a30689af3e982cf9ae611312695b812ab',1,'ostk::core::fs::File::moveToDirectory()']]]
 ];

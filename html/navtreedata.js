@@ -1,24 +1,23 @@
 var NAVTREE =
 [
-  [ "LibraryCore", "index.html", [
-    [ "Library ▸ Core", "index.html", null ],
-    [ "Contributing", "md__c_o_n_t_r_i_b_u_t_i_n_g.html", [
-      [ "Introduction", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Introduction", null ],
-      [ "Guidelines", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Guidelines", [
-        [ "Codebase", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Codebase", [
-          [ "C++", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#C", null ],
-          [ "Python", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Python", null ]
-        ] ],
-        [ "Version Control", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Version", [
-          [ "Rules", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Rules", null ],
-          [ "Commit Messages", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Commit", null ]
-        ] ]
-      ] ],
-      [ "Code of Conduct", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#CodeOfConduct", null ]
-    ] ],
+  [ "OpenSpaceToolkitCore", "index.html", [
+    [ "Open Space Toolkit ▸ Core", "index.html", null ],
+    [ "Contributing", "md__c_o_n_t_r_i_b_u_t_i_n_g.html", null ],
     [ "Tutorial", "md_docs__tutorial.html", [
       [ "Setup", "md_docs__tutorial.html#Setup", null ],
       [ "Examples", "md_docs__tutorial.html#Examples", [
+        [ "Introduction", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Introduction", null ],
+        [ "Guidelines", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Guidelines", [
+          [ "Codebase", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Codebase", [
+            [ "C++", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#C", null ],
+            [ "Python", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Python", null ]
+          ] ],
+          [ "Version Control", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Version", [
+            [ "Rules", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Rules", null ],
+            [ "Commit Messages", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#Commit", null ]
+          ] ]
+        ] ],
+        [ "Code of Conduct", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#CodeOfConduct", null ],
         [ "Load / Write JSON", "md_docs__tutorial.html#JSON", null ]
       ] ]
     ] ],
@@ -57,9 +56,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_array_8hpp.html",
-"classlibrary_1_1core_1_1ctnr_1_1_array.html#ad6ea47ab09dfeebd6de0878d3ad2de25",
-"classlibrary_1_1core_1_1fs_1_1_file.html#a0addf18f7510955e48fdef2416b98423",
-"classlibrary_1_1core_1_1types_1_1_real.html#a1f5ed9019063814bd13c0cebc7c9fa1a"
+"classostk_1_1core_1_1ctnr_1_1_array.html#ad26e8cf9b109bc6c821c7408cac2935b",
+"classostk_1_1core_1_1fs_1_1_file.html#a10f822f5146c5ee5fe43e35bfd39f88e",
+"classostk_1_1core_1_1types_1_1_real.html#a24a0a87f547ebe623bff469a01ec8420"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

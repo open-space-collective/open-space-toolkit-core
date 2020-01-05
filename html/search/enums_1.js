@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['format',['Format',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a7bf8961c4ef65f691aa2993ec405c647',1,'library::core::ctnr::Object::Format()'],['../classlibrary_1_1core_1_1ctnr_1_1_table.html#ab1d81689432c3a6bc960d33db1e11a4c',1,'library::core::ctnr::Table::Format()']]]
+  ['format',['Format',['../classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24',1,'ostk::core::ctnr::Object::Format()'],['../classostk_1_1core_1_1ctnr_1_1_table.html#aacb867db63d74cac28a388029bf161d2',1,'ostk::core::ctnr::Table::Format()']]]
 ];

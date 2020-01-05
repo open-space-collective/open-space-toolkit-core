@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['severity',['Severity',['../namespacelibrary_1_1core_1_1logger.html#a35f71353edf64f68f7fe3874b01abaa8',1,'library::core::logger']]],
-  ['sign',['Sign',['../namespacelibrary_1_1core_1_1types.html#a06d9eaa410d43a0fa3f383040618e87d',1,'library::core::types']]]
+  ['severity',['Severity',['../namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9',1,'ostk::core::logger']]],
+  ['sign',['Sign',['../namespaceostk_1_1core_1_1types.html#ae10e15cf66b50aaec17f4f78c984d7bf',1,'ostk::core::types']]]
 ];

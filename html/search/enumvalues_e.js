@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string',['String',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#a0766006ad111133d70349019551b31d6a27118326006d3829667a400ad23d5d98',1,'library::core::ctnr::Object']]]
+  ['string',['String',['../classostk_1_1core_1_1ctnr_1_1_object.html#a49b70d4dce2d24126cd1df9aaf04d1eaa27118326006d3829667a400ad23d5d98',1,'ostk::core::ctnr::Object']]]
 ];

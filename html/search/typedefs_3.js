@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key',['Key',['../classlibrary_1_1core_1_1ctnr_1_1_dictionary.html#a987cae687cce70d81a2a483c5e05e842',1,'library::core::ctnr::Dictionary']]]
+  ['key',['Key',['../classostk_1_1core_1_1ctnr_1_1_dictionary.html#aa3b171525039535f342d271d27f90407',1,'ostk::core::ctnr::Dictionary']]]
 ];

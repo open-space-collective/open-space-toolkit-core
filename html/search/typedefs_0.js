@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['byte',['Byte',['../namespacelibrary_1_1core_1_1types.html#ae37635b89098069fb3b8c5181edd0945',1,'library::core::types']]]
+  ['byte',['Byte',['../namespaceostk_1_1core_1_1types.html#a0733eebee5d093ea04df859028e2649f',1,'ostk::core::types']]]
 ];

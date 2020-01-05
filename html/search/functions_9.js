@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['line',['Line',['../classlibrary_1_1core_1_1utils_1_1_print.html#ab4d98c65fbb58213358df534dd1f6d65',1,'library::core::utils::Print']]],
-  ['linebuffer',['LineBuffer',['../classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#a241c89010e599cd15025fdaa240c66f8',1,'library::core::utils::Print::LineBuffer::LineBuffer(std::ostream &amp;anOutputStream, uint anIndentation)'],['../classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#afc353daf14e3a1f76f6d7b73907e3bbe',1,'library::core::utils::Print::LineBuffer::LineBuffer(const LineBuffer &amp;aLineBuffer)=delete'],['../classlibrary_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#a45f71ed47bf91cb76c31135e04a60a7b',1,'library::core::utils::Print::LineBuffer::LineBuffer(LineBuffer &amp;&amp;aLineBuffer)=default']]],
-  ['load',['Load',['../classlibrary_1_1core_1_1ctnr_1_1_object.html#adab45c2029a462f75d8a397571f92e63',1,'library::core::ctnr::Object::Load()'],['../classlibrary_1_1core_1_1ctnr_1_1_table.html#a423b5a739e3ed0127bc14572042c158e',1,'library::core::ctnr::Table::Load()']]],
-  ['logger',['Logger',['../classlibrary_1_1core_1_1_logger.html#a0bc89b6aca42f5c7f08df824be5a8f2b',1,'library::core::Logger']]]
+  ['line',['Line',['../classostk_1_1core_1_1utils_1_1_print.html#a1aeb071e217dabc5df02b5692d3d3e10',1,'ostk::core::utils::Print']]],
+  ['linebuffer',['LineBuffer',['../classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#a068be8d7623e32d2d1cbe11c42ecd1bb',1,'ostk::core::utils::Print::LineBuffer::LineBuffer(std::ostream &amp;anOutputStream, uint anIndentation)'],['../classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#a2e4d7000658fc88f76dfee037ef12adb',1,'ostk::core::utils::Print::LineBuffer::LineBuffer(const LineBuffer &amp;aLineBuffer)=delete'],['../classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer.html#ae41cb4c25cf9091302402efb6e221f68',1,'ostk::core::utils::Print::LineBuffer::LineBuffer(LineBuffer &amp;&amp;aLineBuffer)=default']]],
+  ['load',['Load',['../classostk_1_1core_1_1ctnr_1_1_object.html#a76b915fecff0936648e8a86958eca6b0',1,'ostk::core::ctnr::Object::Load()'],['../classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099',1,'ostk::core::ctnr::Table::Load()']]],
+  ['logger',['Logger',['../classostk_1_1core_1_1_logger.html#afc4760c6468b14aa75abec4624dfd7ea',1,'ostk::core::Logger']]]
 ];

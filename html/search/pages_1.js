@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_20▸_20core',['Library ▸ Core',['../index.html',1,'']]]
+  ['open_20space_20toolkit_20▸_20core',['Open Space Toolkit ▸ Core',['../index.html',1,'']]]
 ];
