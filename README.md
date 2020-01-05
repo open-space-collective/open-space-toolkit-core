@@ -2,10 +2,10 @@
 
 Common types, containers and utilities.
 
-[![Build Status](https://travis-ci.com/open-space-collective/library-core.svg?branch=master)](https://travis-ci.com/open-space-collective/library-core)
-[![Code Coverage](https://codecov.io/gh/open-space-collective/library-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-core)
-[![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/library-core)
-[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-core.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-core)
+[![Build Status](https://travis-ci.com/open-space-collective/open-space-toolkit-core.svg?branch=master)](https://travis-ci.com/open-space-collective/open-space-toolkit-core)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-core)
+[![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-core)
+[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core)
 [![PyPI version](https://badge.fury.io/py/LibraryCorePy.svg)](https://badge.fury.io/py/LibraryCorePy)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -81,7 +81,7 @@ The **Core** library exhibits the following structure:
 
 Documentation is available here:
 
-- [C++](https://open-space-collective.github.io/library-core)
+- [C++](https://open-space-collective.github.io/open-space-toolkit-core)
 - [Python](./bindings/python/docs)
 
 ## Tutorials
@@ -106,7 +106,7 @@ make start-development
 
 This will:
 
-1. Build the `openspacecollective/library-core-development` Docker image.
+1. Build the `openspacecollective/open-space-toolkit-core-development` Docker image.
 2. Create a development environment container with local source files and helper scripts mounted.
 3. Start a `bash` shell from the `./build` working directory.
 
@@ -135,7 +135,7 @@ make test
 Or to run them manually:
 
 ```bash
-./bin/library-core.test
+./bin/open-space-toolkit-core.test
 ```
 
 *Tip: `helpers/test.sh` simplifies running tests from within the development environment.*

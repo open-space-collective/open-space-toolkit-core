@@ -498,7 +498,7 @@ TEST (Library_Core_FileSystem_Directory, Create)
 
     {
 
-        Directory directory = Directory::Path(Path::Parse("/tmp/library-core-filesystem-directory-create")) ;
+        Directory directory = Directory::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-directory-create")) ;
 
         EXPECT_FALSE(directory.exists()) ;
 
@@ -528,7 +528,7 @@ TEST (Library_Core_FileSystem_Directory, Remove)
 
     {
 
-        Directory directory = Directory::Path(Path::Parse("/tmp/library-core-filesystem-directory-remove")) ;
+        Directory directory = Directory::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-directory-remove")) ;
 
         directory.create() ;
 

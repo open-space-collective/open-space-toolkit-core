@@ -10,7 +10,7 @@
 SET (LibraryCore_ROOT_DIR ${LibraryCore_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
 FIND_PATH (LibraryCore_INCLUDE_DIR "Library/Core/Utilities.hpp" PATHS ${LibraryCore_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
-FIND_LIBRARY (LibraryCore_LIBRARY NAMES "liblibrary-core.so" PATHS ${LibraryCore_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
+FIND_LIBRARY (LibraryCore_LIBRARY NAMES "libopen-space-toolkit-core.so" PATHS ${LibraryCore_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
 
 # MESSAGE (STATUS "LibraryCore_ROOT_DIR = ${LibraryCore_ROOT_DIR}")
 # MESSAGE (STATUS "LibraryCore_INCLUDE_DIR = ${LibraryCore_INCLUDE_DIR}")

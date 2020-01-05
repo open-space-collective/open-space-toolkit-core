@@ -329,7 +329,7 @@ TEST (Library_Core_FileSystem_File, GetPermissions)
 
     {
 
-        const Path path = Path::Parse("/app/bin/library-core.test") ;
+        const Path path = Path::Parse("/app/bin/open-space-toolkit-core.test") ;
 
         const File file = File::Path(path) ;
 
@@ -607,7 +607,7 @@ TEST (Library_Core_FileSystem_File, Remove)
 
     {
 
-        File file = File::Path(Path::Parse("/tmp/library-core-filesystem-file-remove")) ;
+        File file = File::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-file-remove")) ;
 
         file.create() ;
 
