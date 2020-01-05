@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           bindings/python/test/types/test_integer.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

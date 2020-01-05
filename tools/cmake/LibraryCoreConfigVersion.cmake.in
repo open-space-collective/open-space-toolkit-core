@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           tools/cmake/LibraryCoreConfigVersion.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

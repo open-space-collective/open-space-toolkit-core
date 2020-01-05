@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library ▸ Core
+/// @project        Open Space Toolkit ▸ Core
 /// @file           Library/Core/Containers/Iterators/Zip.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0

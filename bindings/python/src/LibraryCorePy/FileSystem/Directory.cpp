@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library ▸ Core
+/// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/LibraryCorePy/FileSystem/Directory.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
