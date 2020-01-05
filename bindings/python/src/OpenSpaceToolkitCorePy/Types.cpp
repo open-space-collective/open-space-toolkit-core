@@ -16,7 +16,7 @@
 inline void                     OpenSpaceToolkitCorePy_Types                         ( )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.types")))) ;
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.types")))) ;
 
     boost::python::scope().attr("types") = module ;
 

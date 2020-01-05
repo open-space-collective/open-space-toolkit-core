@@ -14,7 +14,7 @@
 inline void                     OpenSpaceToolkitCorePy_Containers                    ( )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.containers")))) ;
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.containers")))) ;
 
     boost::python::scope().attr("containers") = module ;
 

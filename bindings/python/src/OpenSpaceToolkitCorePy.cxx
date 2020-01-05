@@ -20,7 +20,7 @@ BOOST_PYTHON_MODULE (OpenSpaceToolkitCorePy)
 
     boost::python::object package = boost::python::scope() ;
 
-    package.attr("__path__") = "library" ;
+    package.attr("__path__") = "ostk" ;
 
     OpenSpaceToolkitCorePy_Types() ;
     OpenSpaceToolkitCorePy_Containers() ;

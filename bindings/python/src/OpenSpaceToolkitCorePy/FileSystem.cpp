@@ -18,7 +18,7 @@
 inline void                     OpenSpaceToolkitCorePy_FileSystem                    ( )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.filesystem")))) ;
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.filesystem")))) ;
 
     boost::python::scope().attr("filesystem") = module ;
 
