@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_FileSystem__
-#define __Library_Core_FileSystem__
+#ifndef __OpenSpaceToolkit_Core_FileSystem__
+#define __OpenSpaceToolkit_Core_FileSystem__
 
 #include <Library/Core/FileSystem/SymbolicLink.hpp>
 #include <Library/Core/FileSystem/Directory.hpp>

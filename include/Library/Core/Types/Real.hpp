@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_Real__
-#define __Library_Core_Types_Real__
+#ifndef __OpenSpaceToolkit_Core_Types_Real__
+#define __OpenSpaceToolkit_Core_Types_Real__
 
 #include <Library/Core/Types/Sign.hpp>
 #include <Library/Core/Types/String.hpp>

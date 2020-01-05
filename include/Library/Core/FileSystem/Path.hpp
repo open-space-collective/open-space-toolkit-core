@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_FileSystem_Path__
-#define __Library_Core_FileSystem_Path__
+#ifndef __OpenSpaceToolkit_Core_FileSystem_Path__
+#define __OpenSpaceToolkit_Core_FileSystem_Path__
 
 #include <Library/Core/Types/String.hpp>
 #include <Library/Core/Types/Unique.hpp>

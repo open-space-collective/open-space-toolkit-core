@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Object__
-#define __Library_Core_Containers_Object__
+#ifndef __OpenSpaceToolkit_Core_Containers_Object__
+#define __OpenSpaceToolkit_Core_Containers_Object__
 
 #include <Library/Core/FileSystem/File.hpp>
 #include <Library/Core/Containers/Array.hpp>

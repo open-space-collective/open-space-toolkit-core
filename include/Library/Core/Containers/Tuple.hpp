@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Tuple__
-#define __Library_Core_Containers_Tuple__
+#ifndef __OpenSpaceToolkit_Core_Containers_Tuple__
+#define __OpenSpaceToolkit_Core_Containers_Tuple__
 
 #include <Library/Core/Types/String.hpp>
 #include <Library/Core/Types/Size.hpp>

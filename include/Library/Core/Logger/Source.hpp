@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Logger_Source__
-#define __Library_Core_Logger_Source__
+#ifndef __OpenSpaceToolkit_Core_Logger_Source__
+#define __OpenSpaceToolkit_Core_Logger_Source__
 
 #include <Library/Core/Types/Unique.hpp>
 #include <Library/Core/Types/String.hpp>

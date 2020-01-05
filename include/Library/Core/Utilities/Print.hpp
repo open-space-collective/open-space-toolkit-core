@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Utilities_Print__
-#define __Library_Core_Utilities_Print__
+#ifndef __OpenSpaceToolkit_Core_Utilities_Print__
+#define __OpenSpaceToolkit_Core_Utilities_Print__
 
 #include <Library/Core/Types/String.hpp>
 

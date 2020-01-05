@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_OrderedMap__
-#define __Library_Core_Containers_OrderedMap__
+#ifndef __OpenSpaceToolkit_Core_Containers_OrderedMap__
+#define __OpenSpaceToolkit_Core_Containers_OrderedMap__
 
 #include <tsl/ordered_map.h>
 

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_Integer__
-#define __Library_Core_Types_Integer__
+#ifndef __OpenSpaceToolkit_Core_Types_Integer__
+#define __OpenSpaceToolkit_Core_Types_Integer__
 
 #include <Library/Core/Types/Sign.hpp>
 #include <Library/Core/Types/Index.hpp>

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Error_Runtime_Undefined__
-#define __Library_Core_Error_Runtime_Undefined__
+#ifndef __OpenSpaceToolkit_Core_Error_Runtime_Undefined__
+#define __OpenSpaceToolkit_Core_Error_Runtime_Undefined__
 
 #include <Library/Core/Types/String.hpp>
 #include <Library/Core/Error/RuntimeError.hpp>

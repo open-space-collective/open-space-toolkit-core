@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_Unique__
-#define __Library_Core_Types_Unique__
+#ifndef __OpenSpaceToolkit_Core_Types_Unique__
+#define __OpenSpaceToolkit_Core_Types_Unique__
 
 #include <memory>
 #include <functional>

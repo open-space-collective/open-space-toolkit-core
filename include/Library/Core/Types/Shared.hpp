@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_Shared__
-#define __Library_Core_Types_Shared__
+#ifndef __OpenSpaceToolkit_Core_Types_Shared__
+#define __OpenSpaceToolkit_Core_Types_Shared__
 
 #include <memory>
 #include <functional>

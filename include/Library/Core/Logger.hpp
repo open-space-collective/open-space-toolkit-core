@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Logger__
-#define __Library_Core_Logger__
+#ifndef __OpenSpaceToolkit_Core_Logger__
+#define __OpenSpaceToolkit_Core_Logger__
 
 #include <Library/Core/Types/Integer.hpp>
 #include <Library/Core/Types/String.hpp>

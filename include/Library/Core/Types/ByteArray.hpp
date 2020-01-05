@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_ByteArray__
-#define __Library_Core_Types_ByteArray__
+#ifndef __OpenSpaceToolkit_Core_Types_ByteArray__
+#define __OpenSpaceToolkit_Core_Types_ByteArray__
 
 #include <Library/Core/Types/Array.hpp>
 #include <Library/Core/Types/Byte.hpp>

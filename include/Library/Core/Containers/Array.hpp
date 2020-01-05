@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Array__
-#define __Library_Core_Containers_Array__
+#ifndef __OpenSpaceToolkit_Core_Containers_Array__
+#define __OpenSpaceToolkit_Core_Containers_Array__
 
 #include <Library/Core/Containers/Iterators/Zip.hpp>
 #include <Library/Core/Types/Index.hpp>

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Table__
-#define __Library_Core_Containers_Table__
+#ifndef __OpenSpaceToolkit_Core_Containers_Table__
+#define __OpenSpaceToolkit_Core_Containers_Table__
 
 #include <Library/Core/FileSystem/File.hpp>
 #include <Library/Core/Containers/Table/Cell.hpp>

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_FileSystem_File__
-#define __Library_Core_FileSystem_File__
+#ifndef __OpenSpaceToolkit_Core_FileSystem_File__
+#define __OpenSpaceToolkit_Core_FileSystem_File__
 
 #include <Library/Core/FileSystem/Path.hpp>
 #include <Library/Core/FileSystem/PermissionSet.hpp>

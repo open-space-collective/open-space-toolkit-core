@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Iterators_Zip__
-#define __Library_Core_Containers_Iterators_Zip__
+#ifndef __OpenSpaceToolkit_Core_Containers_Iterators_Zip__
+#define __OpenSpaceToolkit_Core_Containers_Iterators_Zip__
 
 #include <iterator>
 #include <tuple>

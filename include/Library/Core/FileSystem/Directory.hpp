@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_FileSystem_Directory__
-#define __Library_Core_FileSystem_Directory__
+#ifndef __OpenSpaceToolkit_Core_FileSystem_Directory__
+#define __OpenSpaceToolkit_Core_FileSystem_Directory__
 
 #include <Library/Core/FileSystem/File.hpp>
 #include <Library/Core/FileSystem/Path.hpp>

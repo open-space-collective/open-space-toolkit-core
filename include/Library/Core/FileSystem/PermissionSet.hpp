@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_FileSystem_PermissionSet__
-#define __Library_Core_FileSystem_PermissionSet__
+#ifndef __OpenSpaceToolkit_Core_FileSystem_PermissionSet__
+#define __OpenSpaceToolkit_Core_FileSystem_PermissionSet__
 
 #include <ostream>
 

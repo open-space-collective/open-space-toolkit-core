@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Logger_Pump__
-#define __Library_Core_Logger_Pump__
+#ifndef __OpenSpaceToolkit_Core_Logger_Pump__
+#define __OpenSpaceToolkit_Core_Logger_Pump__
 
 #include <Library/Core/Types/Unique.hpp>
 #include <Library/Core/Types/Integer.hpp>

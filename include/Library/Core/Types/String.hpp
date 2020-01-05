@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Types_String__
-#define __Library_Core_Types_String__
+#ifndef __OpenSpaceToolkit_Core_Types_String__
+#define __OpenSpaceToolkit_Core_Types_String__
 
 #include <Library/Core/Types/Index.hpp>
 #include <Library/Core/Types/Size.hpp>

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Triple__
-#define __Library_Core_Containers_Triple__
+#ifndef __OpenSpaceToolkit_Core_Containers_Triple__
+#define __OpenSpaceToolkit_Core_Containers_Triple__
 
 #include <Library/Core/Containers/Tuple.hpp>
 #include <Library/Core/Types/String.hpp>

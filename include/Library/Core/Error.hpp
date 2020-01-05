@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Error__
-#define __Library_Core_Error__
+#ifndef __OpenSpaceToolkit_Core_Error__
+#define __OpenSpaceToolkit_Core_Error__
 
 #include <Library/Core/Error/Exception.hpp>
 #include <Library/Core/Error/RuntimeError.hpp>

@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_Core_Containers_Table_Cell__
-#define __Library_Core_Containers_Table_Cell__
+#ifndef __OpenSpaceToolkit_Core_Containers_Table_Cell__
+#define __OpenSpaceToolkit_Core_Containers_Table_Cell__
 
 #include <Library/Core/Containers/Object.hpp>
 
