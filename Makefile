@@ -58,8 +58,8 @@ _pull-development-image:
 
 	@ echo "Pulling [$(target)] development image..."
 
-	docker pull --quiet $(docker_development_image_repository):$(docker_image_version)-$(target) || true
-	docker pull --quiet $(docker_development_image_repository):latest-$(target) || true
+	docker pull $(docker_development_image_repository):$(docker_image_version)-$(target) || true
+	docker pull $(docker_development_image_repository):latest-$(target) || true
 
 build: build-images
 
@@ -117,8 +117,8 @@ _pull-release-image-cpp:
 
 	@ echo "Pull [$(target)] C++ release image..."
 
-	docker pull --quiet $(docker_image_repository):$(docker_image_version)-$(target) || true
-	docker pull --quiet $(docker_image_repository):latest-$(target) || true
+	docker pull $(docker_image_repository):$(docker_image_version)-$(target) || true
+	docker pull $(docker_image_repository):latest-$(target) || true
 
 build-release-images:
 
@@ -159,8 +159,8 @@ _pull-release-image-python: _pull-development-image
 
 	@ echo "Pulling [$(target)] Python release image..."
 
-	docker pull --quiet $(docker_release_image_python_repository):$(docker_image_version)-$(target) || true
-	docker pull --quiet $(docker_release_image_python_repository):latest-$(target) || true
+	docker pull $(docker_release_image_python_repository):$(docker_image_version)-$(target) || true
+	docker pull $(docker_release_image_python_repository):latest-$(target) || true
 
 build-release-image-python-debian: target := debian
 build-release-image-python-fedora: target := fedora
@@ -184,8 +184,8 @@ pull-jupyter-notebook-image:
 
 	@ echo "Pulling Jupyter Notebook image..."
 
-	docker pull --quiet $(docker_jupyter_notebook_image_repository):$(docker_image_version) || true
-	docker pull --quiet $(docker_jupyter_notebook_image_repository):latest || true
+	docker pull $(docker_jupyter_notebook_image_repository):$(docker_image_version) || true
+	docker pull $(docker_jupyter_notebook_image_repository):latest || true
 
 build-jupyter-notebook-image: pull-jupyter-notebook-image
 
