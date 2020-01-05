@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/Types/String.cpp
+/// @file           bindings/python/src/LibraryCorePy/Types/String.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -38,24 +38,24 @@ inline void                     LibraryCorePy_Types_String                  ( )
         .def("__str__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
         .def("__repr__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
 
-        .def("isEmpty", &String::isEmpty)
-        .def("isUppercase", &String::isUppercase)
-        .def("isLowercase", &String::isLowercase)
+        .def("is_empty", &String::isEmpty)
+        .def("is_uppercase", &String::isUppercase)
+        .def("is_lowercase", &String::isLowercase)
         .def("match", &String::match)
 
-        .def("getLength", &String::getLength)
-        .def("getFirst", &String::getFirst)
-        .def("getLast", &String::getLast)
-        .def("getHead", &String::getHead)
-        .def("getTail", &String::getTail)
-        .def("getSubstring", &String::getSubstring)
+        .def("get_length", &String::getLength)
+        .def("get_first", &String::getFirst)
+        .def("get_last", &String::getLast)
+        .def("get_head", &String::getHead)
+        .def("get_tail", &String::getTail)
+        .def("get_substring", &String::getSubstring)
         // .def("trim", &String::trim)
 
-        // .def("Empty", &String::Empty).staticmethod("Empty")
-        // .def("Boolean", &String::Empty).staticmethod("Boolean")
-        // .def("Char", &String::Empty).staticmethod("Char")
-        // .def("Replicate", static_cast<String(*)(const String&, Size)>(&String::Replicate)).staticmethod("Replicate")
-        // .def("Format", &String::Empty).staticmethod("Format")
+        // .def("empty", &String::Empty).staticmethod("empty")
+        // .def("boolean", &String::Empty).staticmethod("boolean")
+        // .def("char", &String::Empty).staticmethod("char")
+        // .def("replicate", static_cast<String(*)(const String&, Size)>(&String::Replicate)).staticmethod("replicate")
+        // .def("format", &String::Empty).staticmethod("format")
 
     ;
 

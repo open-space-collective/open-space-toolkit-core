@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/Containers/Array.cpp
+/// @file           bindings/python/src/LibraryCorePy/Containers/Array.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -79,7 +79,7 @@ struct IterableConverter
 
     static void*                convertible                                 (           PyObject*                   anObject                                    )
     {
-    return PyObject_GetIter(anObject) ? anObject : nullptr ;
+        return PyObject_GetIter(anObject) ? anObject : nullptr ;
     }
 
     /// @brief Convert iterable PyObject to C++ container type.
@@ -161,17 +161,17 @@ inline void                     LibraryCorePy_Containers_Array              ( )
 
     ;
 
-    def("GetIntArray", +[] () -> Array<int> { Array<int> vector = { 1, 2, 3 } ; return vector ; }) ;
-    def("GetDoubleArray", +[] () -> Array<double> { Array<double> vector = { 1.0, 2.0, 3.0 } ; return vector ; }) ;
-    def("GetIntegerArray", +[] () -> Array<Integer> { Array<Integer> vector = { 1, 2, 3 } ; return vector ; }) ;
-    def("GetRealArray", +[] () -> Array<Real> { Array<Real> vector = { 1.0, 2.0, 3.0 } ; return vector ; }) ;
-    def("GetStringArray", +[] () -> Array<String> { Array<String> vector = { "abc", "def", "ghi" } ; return vector ; }) ;
+    def("get_int_array", +[] () -> Array<int> { Array<int> vector = { 1, 2, 3 } ; return vector ; }) ;
+    def("get_double_array", +[] () -> Array<double> { Array<double> vector = { 1.0, 2.0, 3.0 } ; return vector ; }) ;
+    def("get_integer_array", +[] () -> Array<Integer> { Array<Integer> vector = { 1, 2, 3 } ; return vector ; }) ;
+    def("get_real_array", +[] () -> Array<Real> { Array<Real> vector = { 1.0, 2.0, 3.0 } ; return vector ; }) ;
+    def("get_string_array", +[] () -> Array<String> { Array<String> vector = { "abc", "def", "ghi" } ; return vector ; }) ;
 
-    def("SetIntArray", +[] (const Array<int>& anArray) -> void { (void) anArray ; }) ;
-    def("SetDoubleArray", +[] (const Array<double>& anArray) -> void { (void) anArray ; }) ;
-    def("SetIntegerArray", +[] (const Array<Integer>& anArray) -> void { (void) anArray ; }) ;
-    def("SetRealArray", +[] (const Array<Real>& anArray) -> void { (void) anArray ; }) ;
-    def("SetStringArray", +[] (const Array<String>& anArray) -> void { (void) anArray ; ; }) ;
+    def("set_int_array", +[] (const Array<int>& anArray) -> void { (void) anArray ; }) ;
+    def("set_double_array", +[] (const Array<double>& anArray) -> void { (void) anArray ; }) ;
+    def("set_integer_array", +[] (const Array<Integer>& anArray) -> void { (void) anArray ; }) ;
+    def("set_real_array", +[] (const Array<Real>& anArray) -> void { (void) anArray ; }) ;
+    def("set_string_array", +[] (const Array<String>& anArray) -> void { (void) anArray ; ; }) ;
 
 }
 

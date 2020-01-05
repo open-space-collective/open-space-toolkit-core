@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy/Types/Integer.cpp
+/// @file           bindings/python/src/LibraryCorePy/Types/Integer.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -57,38 +57,38 @@ inline void                     LibraryCorePy_Types_Integer                 ( )
         .def("__str__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
         .def("__repr__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
 
-        .def("isDefined", &Integer::isDefined)
-        .def("isZero", &Integer::isZero)
-        .def("isPositive", &Integer::isPositive)
-        .def("isNegative", &Integer::isNegative)
-        .def("isStrictlyPositive", &Integer::isStrictlyPositive)
-        .def("isStrictlyNegative", &Integer::isStrictlyNegative)
-        .def("isInfinity", &Integer::isInfinity)
-        .def("isPositiveInfinity", &Integer::isPositiveInfinity)
-        .def("isNegativeInfinity", &Integer::isNegativeInfinity)
-        .def("isFinite", &Integer::isFinite)
-        .def("isEven", &Integer::isEven)
-        .def("isOdd", &Integer::isOdd)
+        .def("is_defined", &Integer::isDefined)
+        .def("is_zero", &Integer::isZero)
+        .def("is_positive", &Integer::isPositive)
+        .def("is_negative", &Integer::isNegative)
+        .def("is_strictly_positive", &Integer::isStrictlyPositive)
+        .def("is_strictly_negative", &Integer::isStrictlyNegative)
+        .def("is_infinity", &Integer::isInfinity)
+        .def("is_positive_infinity", &Integer::isPositiveInfinity)
+        .def("is_negative_infinity", &Integer::isNegativeInfinity)
+        .def("is_finite", &Integer::isFinite)
+        .def("is_even", &Integer::isEven)
+        .def("is_odd", &Integer::isOdd)
 
-        .def("getSign", &Integer::getSign)
-        .def("toString", &Integer::toString)
+        .def("get_sign", &Integer::getSign)
+        .def("to_string", &Integer::toString)
 
-        .def("Undefined", &Integer::Undefined).staticmethod("Undefined")
-        .def("Zero", &Integer::Zero).staticmethod("Zero")
-        .def("PositiveInfinity", &Integer::PositiveInfinity).staticmethod("PositiveInfinity")
-        .def("NegativeInfinity", &Integer::NegativeInfinity).staticmethod("NegativeInfinity")
-        .def("Int8", &Integer::Int8).staticmethod("Int8")
-        .def("Int16", &Integer::Int16).staticmethod("Int16")
-        .def("Int32", &Integer::Int32).staticmethod("Int32")
-        .def("Int64", &Integer::Int64).staticmethod("Int64")
-        .def("Uint8", &Integer::Uint8).staticmethod("Uint8")
-        .def("Uint16", &Integer::Uint16).staticmethod("Uint16")
-        .def("Uint32", &Integer::Uint32).staticmethod("Uint32")
-        .def("Uint64", &Integer::Uint64).staticmethod("Uint64")
-        .def("Index", &Integer::Index).staticmethod("Index")
-        .def("Size", &Integer::Size).staticmethod("Size")
-        .def("CanParse", static_cast<bool(*)(const String&)>(&Integer::CanParse)).staticmethod("CanParse")
-        .def("Parse", static_cast<Integer(*)(const String&)>(&Integer::Parse)).staticmethod("Parse")
+        .def("undefined", &Integer::Undefined).staticmethod("undefined")
+        .def("zero", &Integer::Zero).staticmethod("zero")
+        .def("positive_infinity", &Integer::PositiveInfinity).staticmethod("positive_infinity")
+        .def("negative_infinity", &Integer::NegativeInfinity).staticmethod("negative_infinity")
+        .def("int8", &Integer::Int8).staticmethod("int8")
+        .def("int16", &Integer::Int16).staticmethod("int16")
+        .def("int32", &Integer::Int32).staticmethod("int32")
+        .def("int64", &Integer::Int64).staticmethod("int64")
+        .def("uint8", &Integer::Uint8).staticmethod("uint8")
+        .def("uint16", &Integer::Uint16).staticmethod("uint16")
+        .def("uint32", &Integer::Uint32).staticmethod("uint32")
+        .def("uint64", &Integer::Uint64).staticmethod("uint64")
+        .def("index", &Integer::Index).staticmethod("index")
+        .def("size", &Integer::Size).staticmethod("size")
+        .def("can_parse", static_cast<bool(*)(const String&)>(&Integer::CanParse)).staticmethod("can_parse")
+        .def("parse", static_cast<Integer(*)(const String&)>(&Integer::Parse)).staticmethod("parse")
 
     ;
 

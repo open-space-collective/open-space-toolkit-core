@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library ▸ Core
-/// @file           LibraryCorePy.cxx
+/// @file           bindings/python/src/LibraryCorePy.cxx
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -20,7 +20,7 @@ BOOST_PYTHON_MODULE (LibraryCorePy)
 
     boost::python::object package = boost::python::scope() ;
 
-    package.attr("__path__") = "Library" ;
+    package.attr("__path__") = "library" ;
 
     LibraryCorePy_Types() ;
     LibraryCorePy_Containers() ;

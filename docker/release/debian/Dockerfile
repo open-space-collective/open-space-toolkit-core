@@ -61,7 +61,7 @@ LABEL maintainer="lucas@loftorbital.com"
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
+COPY --from=python-builder /usr/local/lib/python3.7/site-packages/library /usr/local/lib/python3.7/site-packages/library
 
 ENTRYPOINT ["ipython"]
 

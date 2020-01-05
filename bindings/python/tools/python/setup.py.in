@@ -13,7 +13,7 @@ with open("${CMAKE_CURRENT_SOURCE_DIR}/README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="LibraryCorePy",
+    name="library-core",
     version="${PROJECT_VERSION_STRING}",
     author="Open Space Collective",
     author_email="contact@open-space-collective.org",
@@ -31,8 +31,8 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     package_data = {
         '': [
-            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryCorePy.so',
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}',
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0'
         ]
     }
