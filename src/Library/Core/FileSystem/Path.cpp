@@ -16,7 +16,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -102,12 +102,12 @@ Path&                           Path::operator +=                           (   
 
     if (!aPath.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     try
@@ -116,7 +116,7 @@ Path&                           Path::operator +=                           (   
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return *this ;
@@ -127,11 +127,11 @@ std::ostream&                   operator <<                                 (   
                                                                                 const    Path&                      aPath                                       )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Path") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Path") ;
 
-    library::core::utils::Print::Line(anOutputStream)                           << (aPath.isDefined() ? aPath.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream)                           << (aPath.isDefined() ? aPath.toString() : "Undefined") ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -147,7 +147,7 @@ bool                            Path::isAbsolute                            ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     return implUPtr_->path_.is_absolute() ;
@@ -159,7 +159,7 @@ bool                            Path::isRelative                            ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     return implUPtr_->path_.is_relative() ;
@@ -171,7 +171,7 @@ Path                            Path::getParentPath                         ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     Path path ;
@@ -182,7 +182,7 @@ Path                            Path::getParentPath                         ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return path ;
@@ -194,7 +194,7 @@ String                          Path::getLastElement                        ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     try
@@ -203,7 +203,7 @@ String                          Path::getLastElement                        ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return String::Empty() ;
@@ -215,7 +215,7 @@ Path                            Path::getNormalizedPath                     ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     Path path ;
@@ -226,7 +226,7 @@ Path                            Path::getNormalizedPath                     ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return path ;
@@ -238,12 +238,12 @@ Path                            Path::getAbsolutePath                       (   
 
     if (!aBasePath.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Base path") ;
+        throw ostk::core::error::runtime::Undefined("Base path") ;
     }
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     Path path ;
@@ -254,7 +254,7 @@ Path                            Path::getAbsolutePath                       (   
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return path ;
@@ -271,7 +271,7 @@ String                          Path::toString                              ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     try
@@ -280,7 +280,7 @@ String                          Path::toString                              ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return String::Empty() ;
@@ -314,7 +314,7 @@ Path                            Path::Current                               ( )
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return path ;
@@ -326,7 +326,7 @@ Path                            Path::Parse                                 (   
 
     if (aString.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("String") ;
+        throw ostk::core::error::runtime::Undefined("String") ;
     }
 
     Path path ;

@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (Real_toString_overloads, library::core::types::Real::toString, 0, 1)
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (Real_toString_overloads, ostk::core::types::Real::toString, 0, 1)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -20,9 +20,9 @@ inline void                     LibraryCorePy_Types_Real                    ( )
 
     using namespace boost::python ;
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
 
     class_<Real>("Real", init<double>())
 
@@ -58,8 +58,8 @@ inline void                     LibraryCorePy_Types_Real                    ( )
         .def(double() * self)
         .def(double() / self)
 
-        .def("__str__", +[] (const library::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
-        .def("__repr__", +[] (const library::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
+        .def("__str__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
+        .def("__repr__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
 
         .def("is_defined", &Real::isDefined)
         .def("is_zero", &Real::isZero)

@@ -19,8 +19,8 @@ inline void                     LibraryCorePy_Types_String                  ( )
 
     using namespace boost::python ;
 
-    using library::core::types::Size ;
-    using library::core::types::String ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::String ;
 
     class_<String>("String", init<std::string>())
 
@@ -35,8 +35,8 @@ inline void                     LibraryCorePy_Types_String                  ( )
 
         // .def(string() + self)
 
-        .def("__str__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
-        .def("__repr__", +[] (const library::core::types::String& aString) -> std::string { return aString ; })
+        .def("__str__", +[] (const ostk::core::types::String& aString) -> std::string { return aString ; })
+        .def("__repr__", +[] (const ostk::core::types::String& aString) -> std::string { return aString ; })
 
         .def("is_empty", &String::isEmpty)
         .def("is_uppercase", &String::isUppercase)

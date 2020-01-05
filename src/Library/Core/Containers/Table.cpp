@@ -16,7 +16,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -36,7 +36,7 @@ namespace ctnr
 
         if (row.getSize() > header_.getSize())
         {
-            throw library::core::error::RuntimeError("Header size [{}] lower than maximum row size [{}].", header_.getSize(), row.getSize()) ;
+            throw ostk::core::error::RuntimeError("Header size [{}] lower than maximum row size [{}].", header_.getSize(), row.getSize()) ;
         }
 
         row.associateTable(this) ;
@@ -99,7 +99,7 @@ const Row&                      Table::operator []                          (   
 
     if (aRowIndex >= rows_.getSize())
     {
-        throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
+        throw ostk::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
     }
 
     return rows_[aRowIndex] ;
@@ -112,7 +112,7 @@ const Cell&                     Table::operator ()                          (   
 
     if (aRowIndex >= rows_.getSize())
     {
-        throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
+        throw ostk::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
     }
 
     return rows_[aRowIndex][aColumnIndex] ;
@@ -125,7 +125,7 @@ const Cell&                     Table::operator ()                          (   
 
     if (aRowIndex >= rows_.getSize())
     {
-        throw library::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
+        throw ostk::core::error::RuntimeError("Row index [{}] out of range [0 - {}].", aRowIndex, rows_.getSize()) ;
     }
 
     return rows_[aRowIndex][this->getIndexOfColumnWithName(aColumnName)] ;
@@ -166,43 +166,43 @@ std::ostream&                   operator <<                                 (   
 
     } ;
 
-    library::core::utils::Print::Header(anOutputStream, "Table") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Table") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Rows:" << aTable.getRowCount() ;
-    library::core::utils::Print::Line(anOutputStream) << "Columns:" << aTable.getColumnCount() ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Rows:" << aTable.getRowCount() ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Columns:" << aTable.getColumnCount() ;
 
-    library::core::utils::Print::Separator(anOutputStream) ;
+    ostk::core::utils::Print::Separator(anOutputStream) ;
 
-    library::core::utils::Print::Line(anOutputStream) << formatLine(aTable.header_) ;
+    ostk::core::utils::Print::Line(anOutputStream) << formatLine(aTable.header_) ;
 
-    library::core::utils::Print::Separator(anOutputStream) ;
+    ostk::core::utils::Print::Separator(anOutputStream) ;
 
     if (aTable.getRowCount() > 0)
     {
-        library::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[0])) ;
+        ostk::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[0])) ;
     }
 
     if (aTable.getRowCount() > 1)
     {
-        library::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[1])) ;
+        ostk::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[1])) ;
     }
 
     if (aTable.getRowCount() > 4)
     {
-        library::core::utils::Print::Line(anOutputStream) << "..." ;
+        ostk::core::utils::Print::Line(anOutputStream) << "..." ;
     }
 
     if (aTable.getRowCount() > 3)
     {
-        library::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[aTable.getRowCount() - 2])) ;
+        ostk::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[aTable.getRowCount() - 2])) ;
     }
 
     if (aTable.getRowCount() > 2)
     {
-        library::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[aTable.getRowCount() - 1])) ;
+        ostk::core::utils::Print::Line(anOutputStream) << formatLine(convertRowToStringArray(aTable[aTable.getRowCount() - 1])) ;
     }
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -218,7 +218,7 @@ bool                            Table::hasColumnWithName                    (   
 
     if (aColumnName.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Column name") ;
+        throw ostk::core::error::runtime::Undefined("Column name") ;
     }
 
     return header_.contains(aColumnName) ;
@@ -240,12 +240,12 @@ Index                           Table::getIndexOfColumnWithName             (   
 
     if (aColumnName.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Column name") ;
+        throw ostk::core::error::runtime::Undefined("Column name") ;
     }
 
     if (!header_.contains(aColumnName)) // Double query... should be optimized
     {
-        throw library::core::error::RuntimeError("Table does not have any column with name [{}].", aColumnName) ;
+        throw ostk::core::error::RuntimeError("Table does not have any column with name [{}].", aColumnName) ;
     }
 
     return header_.getIndexOf(aColumnName) ;
@@ -293,12 +293,12 @@ Table                           Table::Load                                 (   
 
     if (!aFile.isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     if (!aFile.exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", aFile.toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", aFile.toString()) ;
     }
 
     switch (aFormat)
@@ -313,7 +313,7 @@ Table                           Table::Load                                 (   
             }
             else
             {
-                throw library::core::error::RuntimeError("Cannot automatically detect format of table file [{}].", aFile.toString()) ;
+                throw ostk::core::error::RuntimeError("Cannot automatically detect format of table file [{}].", aFile.toString()) ;
             }
 
             break ;
@@ -324,7 +324,7 @@ Table                           Table::Load                                 (   
             return Table::LoadCsv(aFile, hasHeader) ;
 
         default:
-            throw library::core::error::runtime::Wrong("Format") ;
+            throw ostk::core::error::runtime::Wrong("Format") ;
             break ;
 
     }
@@ -337,8 +337,8 @@ Table                           Table::LoadCsv                              (   
                                                                                         bool                        hasHeader                                   )
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
 
     try
     {
@@ -429,7 +429,7 @@ Table                           Table::LoadCsv                              (   
     }
     catch (const std::exception& anException)
     {
-        throw library::core::error::RuntimeError("Cannot load table file [{}]: ({}).", aFile.toString(), anException.what()) ;
+        throw ostk::core::error::RuntimeError("Cannot load table file [{}]: ({}).", aFile.toString(), anException.what()) ;
     }
 
     return Table::Empty() ;

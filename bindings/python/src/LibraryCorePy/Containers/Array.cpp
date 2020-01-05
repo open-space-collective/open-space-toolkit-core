@@ -131,11 +131,11 @@ inline void                     LibraryCorePy_Containers_Array              ( )
 
     using namespace boost::python ;
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
 
-    using library::core::ctnr::Array ;
+    using ostk::core::ctnr::Array ;
 
     IterableConverter()
 

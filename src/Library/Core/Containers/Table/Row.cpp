@@ -14,7 +14,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -102,7 +102,7 @@ const Cell&                     Row::operator []                            (   
 
     if (aColumnIndex >= cells_.getSize())
     {
-        throw library::core::error::RuntimeError("Column index [{}] out of range [0 - {}].", aColumnIndex, cells_.getSize()) ;
+        throw ostk::core::error::RuntimeError("Column index [{}] out of range [0 - {}].", aColumnIndex, cells_.getSize()) ;
     }
 
     return cells_[aColumnIndex] ;
@@ -114,7 +114,7 @@ const Cell&                     Row::operator []                            (   
 
     if (tablePtr_ == nullptr)
     {
-        throw library::core::error::RuntimeError("No associated table.") ;
+        throw ostk::core::error::RuntimeError("No associated table.") ;
     }
 
     return (*this)[tablePtr_->getIndexOfColumnWithName(aColumnName)] ;

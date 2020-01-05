@@ -16,7 +16,7 @@
 TEST (Library_Core_Error_RuntimeError, Constructor)
 {
 
-    using library::core::error::RuntimeError ;
+    using ostk::core::error::RuntimeError ;
 
     {
 

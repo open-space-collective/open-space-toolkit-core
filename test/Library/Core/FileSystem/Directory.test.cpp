@@ -16,8 +16,8 @@
 TEST (Library_Core_FileSystem_Directory, EqualToOperator)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -47,8 +47,8 @@ TEST (Library_Core_FileSystem_Directory, EqualToOperator)
 TEST (Library_Core_FileSystem_Directory, NotEqualToOperator)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -78,8 +78,8 @@ TEST (Library_Core_FileSystem_Directory, NotEqualToOperator)
 TEST (Library_Core_FileSystem_Directory, StreamOperator)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -98,8 +98,8 @@ TEST (Library_Core_FileSystem_Directory, StreamOperator)
 TEST (Library_Core_FileSystem_Directory, IsDefined)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -120,8 +120,8 @@ TEST (Library_Core_FileSystem_Directory, IsDefined)
 TEST (Library_Core_FileSystem_Directory, Exists)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -149,8 +149,8 @@ TEST (Library_Core_FileSystem_Directory, Exists)
 TEST (Library_Core_FileSystem_Directory, IsEmpty)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -179,8 +179,8 @@ TEST (Library_Core_FileSystem_Directory, IsEmpty)
 TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -210,8 +210,8 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 // TEST (Library_Core_FileSystem_Directory, ContainsDirectoryWithName)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -224,8 +224,8 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 TEST (Library_Core_FileSystem_Directory, GetName)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -248,8 +248,8 @@ TEST (Library_Core_FileSystem_Directory, GetName)
 TEST (Library_Core_FileSystem_Directory, GetPath)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -272,9 +272,9 @@ TEST (Library_Core_FileSystem_Directory, GetPath)
 // TEST (Library_Core_FileSystem_Directory, GetPermissions)
 // {
 
-//     using library::core::fs::PermissionSet ;
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::PermissionSet ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -328,8 +328,8 @@ TEST (Library_Core_FileSystem_Directory, GetPath)
 TEST (Library_Core_FileSystem_Directory, GetParentDirectory)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -357,8 +357,8 @@ TEST (Library_Core_FileSystem_Directory, GetParentDirectory)
 // TEST (Library_Core_FileSystem_Directory, GetFiles)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -377,10 +377,10 @@ TEST (Library_Core_FileSystem_Directory, GetParentDirectory)
 TEST (Library_Core_FileSystem_Directory, GetDirectories)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -409,8 +409,8 @@ TEST (Library_Core_FileSystem_Directory, GetDirectories)
 TEST (Library_Core_FileSystem_Directory, ToString)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -433,8 +433,8 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 // TEST (Library_Core_FileSystem_Directory, RenameTo)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -453,8 +453,8 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 // TEST (Library_Core_FileSystem_Directory, CopyToDirectory)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -473,8 +473,8 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 // TEST (Library_Core_FileSystem_Directory, MoveToDirectory)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::Directory ;
 
 //     {
 
@@ -493,8 +493,8 @@ TEST (Library_Core_FileSystem_Directory, ToString)
 TEST (Library_Core_FileSystem_Directory, Create)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -523,8 +523,8 @@ TEST (Library_Core_FileSystem_Directory, Create)
 TEST (Library_Core_FileSystem_Directory, Remove)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -553,8 +553,8 @@ TEST (Library_Core_FileSystem_Directory, Remove)
 TEST (Library_Core_FileSystem_Directory, Undefined)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -568,8 +568,8 @@ TEST (Library_Core_FileSystem_Directory, Undefined)
 TEST (Library_Core_FileSystem_Directory, Root)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 
@@ -584,8 +584,8 @@ TEST (Library_Core_FileSystem_Directory, Root)
 TEST (Library_Core_FileSystem_Directory, Path)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::Directory ;
 
     {
 

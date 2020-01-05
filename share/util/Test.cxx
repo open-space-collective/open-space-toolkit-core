@@ -54,9 +54,9 @@ int                             main                                        ( )
 
     LOG_SCOPE("Test") ;
 
-    using library::core::types::Integer ;
-    using library::core::Logger ;
-    using library::core::logger::Severity ;
+    using ostk::core::types::Integer ;
+    using ostk::core::Logger ;
+    using ostk::core::logger::Severity ;
 
     Logger logger = Logger::Console(Severity::Info) ;
 

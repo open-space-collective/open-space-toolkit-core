@@ -23,7 +23,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -125,7 +125,7 @@ bool                            Object::Impl::operator ==                   (   
         return boost::any_cast<ctnr::Dictionary>(value_) == boost::any_cast<ctnr::Dictionary>(anObject.value_) ;
     }
 
-    throw library::core::error::runtime::Wrong("Type") ;
+    throw ostk::core::error::runtime::Wrong("Type") ;
 
     return false ;
 
@@ -174,7 +174,7 @@ const bool&                     Object::Impl::accessBoolean                 ( ) 
         return boost::any_cast<const bool&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Boolean].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Boolean].") ;
 
 }
 
@@ -186,7 +186,7 @@ const types::Integer&           Object::Impl::accessInteger                 ( ) 
         return boost::any_cast<const types::Integer&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Integer].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Integer].") ;
 
 }
 
@@ -198,7 +198,7 @@ const types::Real&              Object::Impl::accessReal                    ( ) 
         return boost::any_cast<const types::Real&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Real].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Real].") ;
 
 }
 
@@ -210,7 +210,7 @@ const types::String&            Object::Impl::accessString                  ( ) 
         return boost::any_cast<const types::String&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [String].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [String].") ;
 
 }
 
@@ -222,7 +222,7 @@ const ctnr::Dictionary&         Object::Impl::accessDictionary              ( ) 
         return boost::any_cast<const ctnr::Dictionary&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Dictionary].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].") ;
 
 }
 
@@ -234,7 +234,7 @@ const ctnr::Array<Object>&      Object::Impl::accessArray                   ( ) 
         return boost::any_cast<const ctnr::Array<Object>&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Array].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Array].") ;
 
 }
 
@@ -283,7 +283,7 @@ bool&                           Object::Impl::accessBoolean                 ( )
         return boost::any_cast<bool&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Boolean].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Boolean].") ;
 
 }
 
@@ -295,7 +295,7 @@ types::Integer&                 Object::Impl::accessInteger                 ( )
         return boost::any_cast<types::Integer&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Integer].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Integer].") ;
 
 }
 
@@ -307,7 +307,7 @@ types::Real&                    Object::Impl::accessReal                    ( )
         return boost::any_cast<types::Real&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Real].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Real].") ;
 
 }
 
@@ -319,7 +319,7 @@ types::String&                  Object::Impl::accessString                  ( )
         return boost::any_cast<types::String&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [String].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [String].") ;
 
 }
 
@@ -331,7 +331,7 @@ ctnr::Dictionary&               Object::Impl::accessDictionary              ( )
         return boost::any_cast<ctnr::Dictionary&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Dictionary].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].") ;
 
 }
 
@@ -343,7 +343,7 @@ ctnr::Array<Object>&            Object::Impl::accessArray                   ( )
         return boost::any_cast<ctnr::Array<Object>&>(value_) ;
     }
 
-    throw library::core::error::RuntimeError("Object is not of type [Array].") ;
+    throw ostk::core::error::RuntimeError("Object is not of type [Array].") ;
 
 }
 
@@ -393,7 +393,7 @@ const Object&                   Object::operator []                         (   
 
     if (!this->isDictionary())
     {
-        throw library::core::error::RuntimeError("Object is not a dictionary.") ;
+        throw ostk::core::error::RuntimeError("Object is not a dictionary.") ;
     }
 
     return this->accessDictionary()[aKey] ;
@@ -407,7 +407,7 @@ const Object&                   Object::operator []                         (   
 
     if (!this->isArray())
     {
-        throw library::core::error::RuntimeError("Object is not an array.") ;
+        throw ostk::core::error::RuntimeError("Object is not an array.") ;
     }
 
     return this->accessArray()[anIndex] ;
@@ -457,13 +457,13 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Object&                     anObject                                    )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Object") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Object") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Type:" << Object::StringFromType(anObject.getType()) ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Type:" << Object::StringFromType(anObject.getType()) ;
 
     if (anObject.isDefined())
     {
-        library::core::utils::Print::Separator(anOutputStream) ;
+        ostk::core::utils::Print::Separator(anOutputStream) ;
     }
 
     switch (anObject.getType())
@@ -473,23 +473,23 @@ std::ostream&                   operator <<                                 (   
             break ;
 
         case Object::Type::Boolean:
-            library::core::utils::Print::Line(anOutputStream) << anObject.accessBoolean() ;
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessBoolean() ;
             break ;
 
         case Object::Type::Integer:
-            library::core::utils::Print::Line(anOutputStream) << anObject.accessInteger() ;
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessInteger() ;
             break ;
 
         case Object::Type::Real:
-            library::core::utils::Print::Line(anOutputStream) << anObject.accessReal() ;
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessReal() ;
             break ;
 
         case Object::Type::String:
-            library::core::utils::Print::Line(anOutputStream) << anObject.accessString() ;
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessString() ;
             break ;
 
         case Object::Type::Dictionary:
-            library::core::utils::Print::Line(anOutputStream) << anObject.accessDictionary() ;
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessDictionary() ;
             break ;
 
         case Object::Type::Array:
@@ -500,7 +500,7 @@ std::ostream&                   operator <<                                 (   
             for (const auto& arrayElement: anObject.accessArray())
             {
 
-                library::core::utils::Print::Line(anOutputStream) << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON) ;
+                ostk::core::utils::Print::Line(anOutputStream) << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON) ;
 
                 index++ ;
 
@@ -511,12 +511,12 @@ std::ostream&                   operator <<                                 (   
         }
 
         default:
-            throw library::core::error::runtime::Wrong("Type") ;
+            throw ostk::core::error::runtime::Wrong("Type") ;
             break ;
 
     }
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -586,7 +586,7 @@ const bool&                     Object::accessBoolean                       ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessBoolean() ;
@@ -598,7 +598,7 @@ const types::Integer&           Object::accessInteger                       ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessInteger() ;
@@ -610,7 +610,7 @@ const types::Real&              Object::accessReal                          ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessReal() ;
@@ -622,7 +622,7 @@ const types::String&            Object::accessString                        ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessString() ;
@@ -634,7 +634,7 @@ const ctnr::Dictionary&         Object::accessDictionary                    ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessDictionary() ;
@@ -646,7 +646,7 @@ const ctnr::Array<Object>&      Object::accessArray                         ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessArray() ;
@@ -710,7 +710,7 @@ types::String                   Object::toString                            (   
 
     }
 
-    throw library::core::error::runtime::Wrong("Format") ;
+    throw ostk::core::error::runtime::Wrong("Format") ;
 
     return types::String::Empty() ;
 
@@ -802,7 +802,7 @@ types::String                   Object::getJsonString                       ( ) 
             }
 
             default:
-                throw library::core::error::runtime::Wrong("Type") ;
+                throw ostk::core::error::runtime::Wrong("Type") ;
                 break ;
 
         }
@@ -828,7 +828,7 @@ bool&                           Object::accessBoolean                       ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessBoolean() ;
@@ -840,7 +840,7 @@ types::Integer&                 Object::accessInteger                       ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessInteger() ;
@@ -852,7 +852,7 @@ types::Real&                    Object::accessReal                          ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessReal() ;
@@ -864,7 +864,7 @@ types::String&                  Object::accessString                        ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessString() ;
@@ -876,7 +876,7 @@ ctnr::Dictionary&               Object::accessDictionary                    ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessDictionary() ;
@@ -888,7 +888,7 @@ ctnr::Array<Object>&            Object::accessArray                         ( )
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Object") ;
+        throw ostk::core::error::runtime::Undefined("Object") ;
     }
 
     return objectImplUPtr_->accessArray() ;
@@ -948,7 +948,7 @@ Object                          Object::Parse                               (   
             }
             else
             {
-                throw library::core::error::RuntimeError("Cannot detect format.") ;
+                throw ostk::core::error::RuntimeError("Cannot detect format.") ;
             }
 
             break ;
@@ -962,7 +962,7 @@ Object                          Object::Parse                               (   
             break ;
     }
 
-    throw library::core::error::runtime::Wrong("Format") ;
+    throw ostk::core::error::runtime::Wrong("Format") ;
 
     return Object::Undefined() ;
 
@@ -1004,7 +1004,7 @@ Object                          Object::ParseJson                           (   
             }
             else
             {
-                throw library::core::error::runtime::Wrong("Number") ;
+                throw ostk::core::error::runtime::Wrong("Number") ;
             }
 
         }
@@ -1049,7 +1049,7 @@ Object                          Object::ParseJson                           (   
         }
         else
         {
-            throw library::core::error::runtime::Wrong("Value") ;
+            throw ostk::core::error::runtime::Wrong("Value") ;
         }
 
         return Object::Undefined() ;
@@ -1062,7 +1062,7 @@ Object                          Object::ParseJson                           (   
 
     if (jsonDocument.ParseStream<rapidjson::kParseNanAndInfFlag | rapidjson::kParseCommentsFlag>(jsonStream).HasParseError())
     {
-        throw library::core::error::RuntimeError("Cannot parse JSON string [" + aString + "].") ;
+        throw ostk::core::error::RuntimeError("Cannot parse JSON string [" + aString + "].") ;
     }
 
     const Object object = parseJson(jsonDocument) ;
@@ -1079,12 +1079,12 @@ Object                          Object::Load                                (   
 
     if (!aFile.isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     if (!aFile.exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", aFile.toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", aFile.toString()) ;
     }
 
     return Object::Parse(aFile.getContents(), aFormat) ;
@@ -1121,7 +1121,7 @@ types::String                   Object::StringFromType                      (   
             return "Array" ;
 
         default:
-            throw library::core::error::runtime::Wrong("Type") ;
+            throw ostk::core::error::runtime::Wrong("Type") ;
             break ;
 
     }
@@ -1170,7 +1170,7 @@ Object::Type                    Object::TypeFromString                      (   
         return Object::Type::Array ;
     }
 
-    throw library::core::error::runtime::Wrong("Type", aString) ;
+    throw ostk::core::error::runtime::Wrong("Type", aString) ;
 
     return Object::Type::Undefined ;
 

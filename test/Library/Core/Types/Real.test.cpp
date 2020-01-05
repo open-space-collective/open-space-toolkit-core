@@ -21,7 +21,7 @@
 TEST (Library_Core_Types_Real, DefaultConstructor)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real(0.0)) ;
     EXPECT_NO_THROW(Real(1.0)) ;
@@ -34,7 +34,7 @@ TEST (Library_Core_Types_Real, DefaultConstructor)
 TEST (Library_Core_Types_Real, AssignmentOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real a = 0.0 ; (void) a ; ) ;
     EXPECT_NO_THROW(Real a = 0.0 ; (void) a ; ) ;
@@ -48,7 +48,7 @@ TEST (Library_Core_Types_Real, AssignmentOperator)
 TEST (Library_Core_Types_Real, EqualToOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -78,7 +78,7 @@ TEST (Library_Core_Types_Real, EqualToOperator)
 TEST (Library_Core_Types_Real, NotEqualToOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -108,7 +108,7 @@ TEST (Library_Core_Types_Real, NotEqualToOperator)
 TEST (Library_Core_Types_Real, LessThanOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -142,7 +142,7 @@ TEST (Library_Core_Types_Real, LessThanOperator)
 TEST (Library_Core_Types_Real, LessThanOrEqualToOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -176,7 +176,7 @@ TEST (Library_Core_Types_Real, LessThanOrEqualToOperator)
 TEST (Library_Core_Types_Real, GreaterThanOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -210,7 +210,7 @@ TEST (Library_Core_Types_Real, GreaterThanOperator)
 TEST (Library_Core_Types_Real, GreaterThanOrEqualToOperator)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -244,9 +244,9 @@ TEST (Library_Core_Types_Real, GreaterThanOrEqualToOperator)
 TEST (Library_Core_Types_Real, AdditionOperator)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Triple ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Triple ;
+    using ostk::core::ctnr::Array ;
 
     Array<Triple<Real, Real, Real>> testCases =
     {
@@ -399,9 +399,9 @@ TEST (Library_Core_Types_Real, AdditionOperator)
 TEST (Library_Core_Types_Real, SubtractionOperator)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Triple ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Triple ;
+    using ostk::core::ctnr::Array ;
 
     Array<Triple<Real, Real, Real>> testCases =
     {
@@ -554,9 +554,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, MultiplicationOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -735,9 +735,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, DivisionOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -890,9 +890,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, AdditionAssignmentOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1047,9 +1047,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, SubtractionAssignmentOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1204,9 +1204,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, MultiplicationAssignmentOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1387,9 +1387,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, DivisionAssignmentOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1544,9 +1544,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, UnaryPlusOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Pair ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Pair ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {
@@ -1601,9 +1601,9 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, UnaryMinusOperator)
 // {
 
-//     using library::core::types::Real ;
-//     using library::core::ctnr::Pair ;
-//     using library::core::ctnr::Array ;
+//     using ostk::core::types::Real ;
+//     using ostk::core::ctnr::Pair ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {
@@ -1658,7 +1658,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // TEST (Library_Core_Types_Real, ValueTypeOperator)
 // {
 
-//     using library::core::types::Real ;
+//     using ostk::core::types::Real ;
 
 //     {
 
@@ -1715,7 +1715,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 // // TEST (Library_Core_Types_Real, StreamOperator)
 // // {
 
-// //     using library::core::types::Real ;
+// //     using ostk::core::types::Real ;
 
 // //     FAIL() ;
 
@@ -1724,7 +1724,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 TEST (Library_Core_Types_Real, IsDefined)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(0.0).isDefined()) ;
     EXPECT_TRUE(Real(-1.0).isDefined()) ;
@@ -1742,7 +1742,7 @@ TEST (Library_Core_Types_Real, IsDefined)
 TEST (Library_Core_Types_Real, IsZero)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(0.0).isZero()) ;
     EXPECT_TRUE(Real(+0.0).isZero()) ;
@@ -1760,7 +1760,7 @@ TEST (Library_Core_Types_Real, IsZero)
 TEST (Library_Core_Types_Real, IsPositive)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(0.0).isPositive()) ;
     EXPECT_TRUE(Real(+0.0).isPositive()) ;
@@ -1778,7 +1778,7 @@ TEST (Library_Core_Types_Real, IsPositive)
 TEST (Library_Core_Types_Real, IsNegative)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(0.0).isNegative()) ;
     EXPECT_TRUE(Real(-1.0).isNegative()) ;
@@ -1796,7 +1796,7 @@ TEST (Library_Core_Types_Real, IsNegative)
 TEST (Library_Core_Types_Real, IsStrictlyPositive)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(+1.0).isStrictlyPositive()) ;
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::max()).isStrictlyPositive()) ;
@@ -1814,7 +1814,7 @@ TEST (Library_Core_Types_Real, IsStrictlyPositive)
 TEST (Library_Core_Types_Real, IsStrictlyNegative)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real(-1.0).isStrictlyNegative()) ;
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::lowest()).isStrictlyNegative()) ;
@@ -1832,7 +1832,7 @@ TEST (Library_Core_Types_Real, IsStrictlyNegative)
 TEST (Library_Core_Types_Real, IsInfinity)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity()) ;
     EXPECT_TRUE(Real::PositiveInfinity().isInfinity()) ;
@@ -1850,7 +1850,7 @@ TEST (Library_Core_Types_Real, IsInfinity)
 TEST (Library_Core_Types_Real, IsPositiveInfinity)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real::PositiveInfinity().isPositiveInfinity()) ;
 
@@ -1868,7 +1868,7 @@ TEST (Library_Core_Types_Real, IsPositiveInfinity)
 TEST (Library_Core_Types_Real, IsNegativeInfinity)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity()) ;
 
@@ -1886,7 +1886,7 @@ TEST (Library_Core_Types_Real, IsNegativeInfinity)
 TEST (Library_Core_Types_Real, IsInteger)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -1931,7 +1931,7 @@ TEST (Library_Core_Types_Real, IsInteger)
 TEST (Library_Core_Types_Real, IsFinite)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -1961,7 +1961,7 @@ TEST (Library_Core_Types_Real, IsFinite)
 TEST (Library_Core_Types_Real, IsNear)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -1998,8 +1998,8 @@ TEST (Library_Core_Types_Real, IsNear)
 TEST (Library_Core_Types_Real, GetSign)
 {
 
-    using library::core::types::Sign ;
-    using library::core::types::Real ;
+    using ostk::core::types::Sign ;
+    using ostk::core::types::Real ;
 
     EXPECT_EQ(Sign::Undefined, Real::Undefined().getSign()) ;
     EXPECT_EQ(Sign::None, Real(0.0).getSign()) ;
@@ -2016,7 +2016,7 @@ TEST (Library_Core_Types_Real, GetSign)
 TEST (Library_Core_Types_Real, ToString)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2259,8 +2259,8 @@ TEST (Library_Core_Types_Real, ToString)
 TEST (Library_Core_Types_Real, ToInteger)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2287,7 +2287,7 @@ TEST (Library_Core_Types_Real, ToInteger)
 TEST (Library_Core_Types_Real, Abs)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2325,7 +2325,7 @@ TEST (Library_Core_Types_Real, Abs)
 TEST (Library_Core_Types_Real, Floor)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2356,7 +2356,7 @@ TEST (Library_Core_Types_Real, Floor)
 TEST (Library_Core_Types_Real, Sqrt)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2401,7 +2401,7 @@ TEST (Library_Core_Types_Real, Sqrt)
 TEST (Library_Core_Types_Real, Undefined)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::Undefined()) ;
 
@@ -2413,7 +2413,7 @@ TEST (Library_Core_Types_Real, Undefined)
 TEST (Library_Core_Types_Real, Zero)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::Zero()) ;
     EXPECT_TRUE(Real::Zero().isDefined()) ;
@@ -2425,7 +2425,7 @@ TEST (Library_Core_Types_Real, Zero)
 TEST (Library_Core_Types_Real, Pi)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::Pi()) ;
     EXPECT_TRUE(Real::Pi().isDefined()) ;
@@ -2437,7 +2437,7 @@ TEST (Library_Core_Types_Real, Pi)
 TEST (Library_Core_Types_Real, HalfPi)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::HalfPi()) ;
     EXPECT_TRUE(Real::HalfPi().isDefined()) ;
@@ -2449,7 +2449,7 @@ TEST (Library_Core_Types_Real, HalfPi)
 TEST (Library_Core_Types_Real, TwoPi)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::TwoPi()) ;
     EXPECT_TRUE(Real::TwoPi().isDefined()) ;
@@ -2461,7 +2461,7 @@ TEST (Library_Core_Types_Real, TwoPi)
 TEST (Library_Core_Types_Real, Epsilon)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::Epsilon()) ;
     EXPECT_TRUE(Real::Epsilon().isDefined()) ;
@@ -2474,7 +2474,7 @@ TEST (Library_Core_Types_Real, Epsilon)
 TEST (Library_Core_Types_Real, PositiveInfinity)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::PositiveInfinity()) ;
 
@@ -2487,7 +2487,7 @@ TEST (Library_Core_Types_Real, PositiveInfinity)
 TEST (Library_Core_Types_Real, NegativeInfinity)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_NO_THROW(Real::NegativeInfinity()) ;
 
@@ -2500,8 +2500,8 @@ TEST (Library_Core_Types_Real, NegativeInfinity)
 TEST (Library_Core_Types_Real, Integer)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
 
     {
 
@@ -2528,7 +2528,7 @@ TEST (Library_Core_Types_Real, Integer)
 TEST (Library_Core_Types_Real, CanParse)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_TRUE(Real::CanParse("Undefined")) ;
 
@@ -2573,7 +2573,7 @@ TEST (Library_Core_Types_Real, CanParse)
 TEST (Library_Core_Types_Real, Parse)
 {
 
-    using library::core::types::Real ;
+    using ostk::core::types::Real ;
 
     EXPECT_FALSE(Real::Parse("Undefined").isDefined()) ;
     EXPECT_FALSE(Real::Parse("NaN").isDefined()) ;

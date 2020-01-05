@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -24,7 +24,7 @@ namespace types
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-using library::core::types::Integer ;
+using ostk::core::types::Integer ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -77,7 +77,7 @@ String                          String::getHead                             (   
 
     if (aLength > this->length())
     {
-        throw library::core::error::RuntimeError("Head length [{}] greater than string length [{}].", aLength, this->length()) ;
+        throw ostk::core::error::RuntimeError("Head length [{}] greater than string length [{}].", aLength, this->length()) ;
     }
 
     return this->substr(0, aLength) ;
@@ -89,7 +89,7 @@ String                          String::getTail                             (   
 
     if (aLength > this->length())
     {
-        throw library::core::error::RuntimeError("Tail length [{}] greater than string length [{}].", aLength, this->length()) ;
+        throw ostk::core::error::RuntimeError("Tail length [{}] greater than string length [{}].", aLength, this->length()) ;
     }
 
     return this->substr(this->length() - aLength , aLength) ;
@@ -101,7 +101,7 @@ char                            String::getFirst                            ( ) 
 
     if (this->empty())
     {
-        throw library::core::error::RuntimeError("String is empty.") ;
+        throw ostk::core::error::RuntimeError("String is empty.") ;
     }
 
     return (*this)[0] ;
@@ -113,7 +113,7 @@ char                            String::getLast                             ( ) 
 
     if (this->empty())
     {
-        throw library::core::error::RuntimeError("String is empty.") ;
+        throw ostk::core::error::RuntimeError("String is empty.") ;
     }
 
     return (*this)[this->length() - 1] ;
@@ -126,22 +126,22 @@ String                          String::getSubstring                        (   
 
     if (aLength == 0)
     {
-        throw library::core::error::runtime::Wrong("Length") ;
+        throw ostk::core::error::runtime::Wrong("Length") ;
     }
 
     if (this->empty())
     {
-        throw library::core::error::RuntimeError("String is empty.") ;
+        throw ostk::core::error::RuntimeError("String is empty.") ;
     }
 
     if (aStartPosition >= this->length())
     {
-        throw library::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
+        throw ostk::core::error::RuntimeError("Start position [" + Integer::Index(aStartPosition).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
     }
 
     if ((aStartPosition + aLength) > this->length())
     {
-        throw library::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
+        throw ostk::core::error::RuntimeError("End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" + Integer::Size(this->length() - 1).toString() + "].") ;
     }
 
     return this->substr(aStartPosition, aLength) ;

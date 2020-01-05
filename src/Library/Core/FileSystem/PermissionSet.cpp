@@ -14,7 +14,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -86,13 +86,13 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   PermissionSet&              aPermissionSet                              )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Permission Set") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Permission Set") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Read:"                << aPermissionSet.read_ ;
-    library::core::utils::Print::Line(anOutputStream) << "Write:"               << aPermissionSet.write_ ;
-    library::core::utils::Print::Line(anOutputStream) << "Execute:"             << aPermissionSet.execute_ ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Read:"                << aPermissionSet.read_ ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Write:"               << aPermissionSet.write_ ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Execute:"             << aPermissionSet.execute_ ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 

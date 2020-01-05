@@ -23,7 +23,7 @@
 TEST (Library_Core_Containers_Object, InitializerListConstructor)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -57,10 +57,10 @@ TEST (Library_Core_Containers_Object, InitializerListConstructor)
 TEST (Library_Core_Containers_Object, CopyConstructor)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -79,10 +79,10 @@ TEST (Library_Core_Containers_Object, CopyConstructor)
 TEST (Library_Core_Containers_Object, AssignmentOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -112,10 +112,10 @@ TEST (Library_Core_Containers_Object, AssignmentOperator)
 TEST (Library_Core_Containers_Object, EqualToOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -142,10 +142,10 @@ TEST (Library_Core_Containers_Object, EqualToOperator)
 TEST (Library_Core_Containers_Object, NotEqualToOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -172,8 +172,8 @@ TEST (Library_Core_Containers_Object, NotEqualToOperator)
 TEST (Library_Core_Containers_Object, KeySubscriptOperator)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -193,8 +193,8 @@ TEST (Library_Core_Containers_Object, KeySubscriptOperator)
 TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
 {
 
-    using library::core::types::Size ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Size ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -241,7 +241,7 @@ TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
 TEST (Library_Core_Containers_Object, StreamOperator)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -264,9 +264,9 @@ TEST (Library_Core_Containers_Object, StreamOperator)
 TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::File ;
 
     {
 
@@ -312,9 +312,9 @@ TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
 TEST (Library_Core_Containers_Object, InputFileStreamOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::File ;
 
     {
 
@@ -353,12 +353,12 @@ TEST (Library_Core_Containers_Object, InputFileStreamOperator)
 TEST (Library_Core_Containers_Object, IsDefined)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -381,9 +381,9 @@ TEST (Library_Core_Containers_Object, IsDefined)
 TEST (Library_Core_Containers_Object, IsBoolean)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_TRUE(Object::Boolean(true).isBoolean()) ;
     EXPECT_TRUE(Object::Boolean(false).isBoolean()) ;
@@ -400,10 +400,10 @@ TEST (Library_Core_Containers_Object, IsBoolean)
 TEST (Library_Core_Containers_Object, IsInteger)
 {
 
-    using library::core::types::Integer ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_TRUE(Object::Integer(123).isInteger()) ;
 
@@ -419,10 +419,10 @@ TEST (Library_Core_Containers_Object, IsInteger)
 TEST (Library_Core_Containers_Object, IsReal)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_TRUE(Object::Real(123.456).isReal()) ;
 
@@ -438,10 +438,10 @@ TEST (Library_Core_Containers_Object, IsReal)
 TEST (Library_Core_Containers_Object, IsString)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_TRUE(Object::String("abc").isString()) ;
     EXPECT_TRUE(Object::String("123").isString()) ;
@@ -458,10 +458,10 @@ TEST (Library_Core_Containers_Object, IsString)
 TEST (Library_Core_Containers_Object, IsDictionary)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -493,9 +493,9 @@ TEST (Library_Core_Containers_Object, IsDictionary)
 TEST (Library_Core_Containers_Object, IsArray)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -516,7 +516,7 @@ TEST (Library_Core_Containers_Object, IsArray)
 TEST (Library_Core_Containers_Object, AccessBoolean)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -535,7 +535,7 @@ TEST (Library_Core_Containers_Object, AccessBoolean)
 TEST (Library_Core_Containers_Object, AccessInteger)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -554,7 +554,7 @@ TEST (Library_Core_Containers_Object, AccessInteger)
 TEST (Library_Core_Containers_Object, AccessReal)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -573,7 +573,7 @@ TEST (Library_Core_Containers_Object, AccessReal)
 TEST (Library_Core_Containers_Object, AccessString)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -592,8 +592,8 @@ TEST (Library_Core_Containers_Object, AccessString)
 TEST (Library_Core_Containers_Object, AccessDictionary)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -612,8 +612,8 @@ TEST (Library_Core_Containers_Object, AccessDictionary)
 TEST (Library_Core_Containers_Object, AccessArray)
 {
 
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -637,10 +637,10 @@ TEST (Library_Core_Containers_Object, AccessArray)
 TEST (Library_Core_Containers_Object, GetType)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -656,7 +656,7 @@ TEST (Library_Core_Containers_Object, GetType)
 TEST (Library_Core_Containers_Object, GetBoolean)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -687,8 +687,8 @@ TEST (Library_Core_Containers_Object, GetBoolean)
 TEST (Library_Core_Containers_Object, GetInteger)
 {
 
-    using library::core::types::Integer ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -719,8 +719,8 @@ TEST (Library_Core_Containers_Object, GetInteger)
 TEST (Library_Core_Containers_Object, GetReal)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -751,8 +751,8 @@ TEST (Library_Core_Containers_Object, GetReal)
 TEST (Library_Core_Containers_Object, GetString)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -783,9 +783,9 @@ TEST (Library_Core_Containers_Object, GetString)
 TEST (Library_Core_Containers_Object, GetDictionary)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -811,7 +811,7 @@ TEST (Library_Core_Containers_Object, GetDictionary)
 TEST (Library_Core_Containers_Object, Undefined)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_FALSE(Object::Undefined().isDefined()) ;
 
@@ -820,8 +820,8 @@ TEST (Library_Core_Containers_Object, Undefined)
 TEST (Library_Core_Containers_Object, Integer)
 {
 
-    using library::core::types::Integer ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_NO_THROW(Object::Integer(123)) ;
 
@@ -835,8 +835,8 @@ TEST (Library_Core_Containers_Object, Integer)
 TEST (Library_Core_Containers_Object, Real)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_NO_THROW(Object::Real(123.456)) ;
 
@@ -850,8 +850,8 @@ TEST (Library_Core_Containers_Object, Real)
 TEST (Library_Core_Containers_Object, String)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_NO_THROW(Object::String("abc")) ;
 
@@ -865,8 +865,8 @@ TEST (Library_Core_Containers_Object, String)
 TEST (Library_Core_Containers_Object, Dictionary)
 {
 
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -884,8 +884,8 @@ TEST (Library_Core_Containers_Object, Dictionary)
 TEST (Library_Core_Containers_Object, Array)
 {
 
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     {
 
@@ -903,10 +903,10 @@ TEST (Library_Core_Containers_Object, Array)
 TEST (Library_Core_Containers_Object, Parse)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Dictionary ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
 
     // JSON
 
@@ -1120,7 +1120,7 @@ TEST (Library_Core_Containers_Object, Parse)
 // TEST (Library_Core_Containers_Object, Load)
 // {
 
-//     using library::core::ctnr::Object ;
+//     using ostk::core::ctnr::Object ;
 
 //     {
 
@@ -1133,7 +1133,7 @@ TEST (Library_Core_Containers_Object, Parse)
 TEST (Library_Core_Containers_Object, StringFromType)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_EQ("Undefined", Object::StringFromType(Object::Type::Undefined)) ;
     EXPECT_EQ("Boolean", Object::StringFromType(Object::Type::Boolean)) ;
@@ -1148,7 +1148,7 @@ TEST (Library_Core_Containers_Object, StringFromType)
 TEST (Library_Core_Containers_Object, TypeFromString)
 {
 
-    using library::core::ctnr::Object ;
+    using ostk::core::ctnr::Object ;
 
     EXPECT_EQ(Object::Type::Undefined, Object::TypeFromString("Undefined")) ;
     EXPECT_EQ(Object::Type::Boolean, Object::TypeFromString("Boolean")) ;

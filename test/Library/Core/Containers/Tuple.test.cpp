@@ -18,9 +18,9 @@
 TEST (Library_Core_Containers_Tuple, Constructor)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Tuple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Tuple ;
 
     {
 
@@ -33,9 +33,9 @@ TEST (Library_Core_Containers_Tuple, Constructor)
 TEST (Library_Core_Containers_Tuple, Getters)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Tuple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Tuple ;
 
     {
 
@@ -53,9 +53,9 @@ TEST (Library_Core_Containers_Tuple, Getters)
 TEST (Library_Core_Containers_Tuple, Setters)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Tuple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Tuple ;
 
     {
 
@@ -81,10 +81,10 @@ TEST (Library_Core_Containers_Tuple, Setters)
 TEST (Library_Core_Containers_Tuple, Unpack)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Tuple ;
-    using library::core::ctnr::Unpack ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Tuple ;
+    using ostk::core::ctnr::Unpack ;
 
     {
 

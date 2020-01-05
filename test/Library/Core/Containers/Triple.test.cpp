@@ -18,9 +18,9 @@
 TEST (Library_Core_Containers_Triple, Constructor)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Triple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Triple ;
 
     {
 
@@ -33,9 +33,9 @@ TEST (Library_Core_Containers_Triple, Constructor)
 TEST (Library_Core_Containers_Triple, Getters)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Triple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Triple ;
 
     {
 
@@ -52,9 +52,9 @@ TEST (Library_Core_Containers_Triple, Getters)
 TEST (Library_Core_Containers_Triple, Setters)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Triple ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Triple ;
 
     {
 
@@ -79,10 +79,10 @@ TEST (Library_Core_Containers_Triple, Setters)
 // TEST (Library_Core_Containers_Triple, Unpack)
 // {
 
-//     using library::core::types::Integer ;
-//     using library::core::types::String ;
-//     using library::core::ctnr::Triple ;
-//     using library::core::ctnr::Unpack ;
+//     using ostk::core::types::Integer ;
+//     using ostk::core::types::String ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Unpack ;
 
 //     {
 

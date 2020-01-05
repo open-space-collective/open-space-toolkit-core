@@ -20,7 +20,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -83,14 +83,14 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   File&                       aFile                                       )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "File") ;
+    ostk::core::utils::Print::Header(anOutputStream, "File") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Name:"                << (aFile.isDefined() ? aFile.getName() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Extension:"           << (aFile.isDefined() ? aFile.getExtension() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Path:"                << (aFile.isDefined() ? aFile.path_.toString() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Exists:"              << (aFile.isDefined() ? String::Boolean(aFile.exists()) : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Name:"                << (aFile.isDefined() ? aFile.getName() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Extension:"           << (aFile.isDefined() ? aFile.getExtension() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Path:"                << (aFile.isDefined() ? aFile.path_.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Exists:"              << (aFile.isDefined() ? String::Boolean(aFile.exists()) : "Undefined") ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -106,7 +106,7 @@ bool                            File::exists                                ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     try
@@ -115,7 +115,7 @@ bool                            File::exists                                ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return false ;
@@ -127,7 +127,7 @@ bool                            File::isOpen                                ( ) 
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     return (fileStreamUPtr_ != nullptr) && fileStreamUPtr_->is_open() ;
@@ -139,7 +139,7 @@ String                          File::getName                               (   
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     try
@@ -155,7 +155,7 @@ String                          File::getName                               (   
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return String::Empty() ;
@@ -167,7 +167,7 @@ String                          File::getExtension                          ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     try
@@ -185,7 +185,7 @@ String                          File::getExtension                          ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return String::Empty() ;
@@ -197,7 +197,7 @@ fs::Path                        File::getPath                               ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     return path_ ;
@@ -216,40 +216,40 @@ fs::PermissionSet               File::getPermissions                        ( ) 
         {
 
             case EACCES:
-                throw library::core::error::RuntimeError("[EACCES] The requested access would be denied to the file, or search permission is denied for one of the directories in the path prefix of [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[EACCES] The requested access would be denied to the file, or search permission is denied for one of the directories in the path prefix of [{}].", aPath.toString()) ;
 
             case ELOOP:
-                throw library::core::error::RuntimeError("[ELOOP] Too many symbolic links were encountered in resolving [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ELOOP] Too many symbolic links were encountered in resolving [{}].", aPath.toString()) ;
 
             case ENAMETOOLONG:
-                throw library::core::error::RuntimeError("[ENAMETOOLONG] [{}] is too long.", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ENAMETOOLONG] [{}] is too long.", aPath.toString()) ;
 
             case ENOENT:
-                throw library::core::error::RuntimeError("[ENOENT] A component of [{}] does not exist or is a dangling symbolic link.", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ENOENT] A component of [{}] does not exist or is a dangling symbolic link.", aPath.toString()) ;
 
             case ENOTDIR:
-                throw library::core::error::RuntimeError("[ENOTDIR] A component used as a directory in [{}] is not, in fact, a directory.", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ENOTDIR] A component used as a directory in [{}] is not, in fact, a directory.", aPath.toString()) ;
 
             case EROFS:
-                throw library::core::error::RuntimeError("[EROFS] Write permission was requested for a file on a read-only file system [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[EROFS] Write permission was requested for a file on a read-only file system [{}].", aPath.toString()) ;
 
             case EFAULT:
-                throw library::core::error::RuntimeError("[EFAULT] Path [{}] points outside your accessible address space [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[EFAULT] Path [{}] points outside your accessible address space [{}].", aPath.toString()) ;
 
             case EINVAL:
-                throw library::core::error::RuntimeError("[EINVAL] Mode was incorrectly specified [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[EINVAL] Mode was incorrectly specified [{}].", aPath.toString()) ;
 
             case EIO:
-                throw library::core::error::RuntimeError("[EIO] An I/O error occurred [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[EIO] An I/O error occurred [{}].", aPath.toString()) ;
 
             case ENOMEM:
-                throw library::core::error::RuntimeError("[ENOMEM] Insufficient kernel memory was available [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ENOMEM] Insufficient kernel memory was available [{}].", aPath.toString()) ;
 
             case ETXTBSY:
-                throw library::core::error::RuntimeError("[ETXTBSY] Write access was requested to an executable which is being executed [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("[ETXTBSY] Write access was requested to an executable which is being executed [{}].", aPath.toString()) ;
 
             default:
-                throw library::core::error::RuntimeError("Unknown error for path [{}].", aPath.toString()) ;
+                throw ostk::core::error::RuntimeError("Unknown error for path [{}].", aPath.toString()) ;
 
         }
 
@@ -299,7 +299,7 @@ fs::PermissionSet               File::getPermissions                        ( ) 
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     return { canRead(path_), canWrite(path_), canExecute(path_) } ;
@@ -311,7 +311,7 @@ fs::Directory                   File::getParentDirectory                    ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     String filePathString = path_.getNormalizedPath().toString() ;
@@ -342,14 +342,14 @@ String                          File::getContents                           ( ) 
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     std::fstream fileStream { path_.toString(), std::fstream::in } ;
 
     if (!fileStream.is_open())
     {
-        throw library::core::error::RuntimeError("Cannot open file [{}].", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Cannot open file [{}].", this->toString()) ;
     }
 
     String contents ;
@@ -363,7 +363,7 @@ String                          File::getContents                           ( ) 
 
         fileStream.close() ;
 
-        throw library::core::error::RuntimeError("Cannot get contents of file [{}].", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Cannot get contents of file [{}].", this->toString()) ;
 
     }
 
@@ -378,7 +378,7 @@ String                          File::toString                              ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     return path_.toString() ;
@@ -392,12 +392,12 @@ void                            File::open                                  (   
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     if (this->isOpen())
     {
-        throw library::core::error::RuntimeError("File [{}] is already open.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] is already open.", this->toString()) ;
     }
 
     std::ios_base::openmode fileOpenMode ;
@@ -430,7 +430,7 @@ void                            File::open                                  (   
             break ;
 
         default:
-            throw library::core::error::runtime::Wrong("Open mode") ;
+            throw ostk::core::error::runtime::Wrong("Open mode") ;
             break ;
 
     }
@@ -439,7 +439,7 @@ void                            File::open                                  (   
 
 	if (!fileStreamUPtr_->is_open())
     {
-        throw library::core::error::RuntimeError("Error when opening file [{}].", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Error when opening file [{}].", this->toString()) ;
     }
 
 }
@@ -449,12 +449,12 @@ void                            File::close                                 ( )
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     if (!this->isOpen())
     {
-        throw library::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
     }
 
     if (fileStreamUPtr_->is_open())
@@ -471,12 +471,12 @@ std::fstream&                   File::accessStream                          ( )
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     if (!this->isOpen())
     {
-        throw library::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] is not open.", this->toString()) ;
     }
 
     return *fileStreamUPtr_ ;
@@ -499,12 +499,12 @@ void                            File::moveToDirectory                       (   
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString()) ;
     }
 
     if (!aDestination.exists())
     {
-        throw library::core::error::RuntimeError("Destination [{}] does not exist.", aDestination.toString()) ;
+        throw ostk::core::error::RuntimeError("Destination [{}] does not exist.", aDestination.toString()) ;
     }
 
     const fs::Path destinationPath = aDestination.getPath() + Path::Parse(this->getName()) ;
@@ -519,7 +519,7 @@ void                            File::moveToDirectory                       (   
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
 }
@@ -531,7 +531,7 @@ void                            File::create                                (   
 
     if (this->exists())
     {
-        throw library::core::error::RuntimeError("File [{}] already exists.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] already exists.", this->toString()) ;
     }
 
     fs::Directory parentDirectory = this->getParentDirectory() ;
@@ -558,7 +558,7 @@ void                            File::create                                (   
     }
     catch (const std::ifstream::failure& e)
     {
-        throw library::core::error::RuntimeError("Cannot create file [{}].", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Cannot create file [{}].", this->toString()) ;
     }
 
     (void) anOwnerPermissionSet ;
@@ -581,7 +581,7 @@ void                            File::remove                                ( )
 
     if (!(this->getPermissions().canWrite()))
     {
-        throw library::core::error::RuntimeError("Not enough permissions to remove file [{}].", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Not enough permissions to remove file [{}].", this->toString()) ;
     }
 
     try
@@ -590,7 +590,7 @@ void                            File::remove                                ( )
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
 }
@@ -605,7 +605,7 @@ File                            File::Path                                  (   
 
     if (!aPath.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     return { aPath } ;

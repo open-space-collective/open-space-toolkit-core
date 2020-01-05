@@ -16,7 +16,7 @@ inline void                     LibraryCorePy_FileSystem_PermissionSet      ( )
 
     using namespace boost::python ;
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     scope in_PermissionSet = class_<PermissionSet>("PermissionSet", init<const bool, const bool, const bool>())
 

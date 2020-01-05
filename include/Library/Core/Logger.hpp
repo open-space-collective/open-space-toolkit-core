@@ -22,21 +22,21 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-using library::core::types::Unique ;
-using library::core::types::Integer ;
-using library::core::types::String ;
-using library::core::ctnr::Array ;
-using library::core::logger::Severity ;
-using library::core::logger::Source ;
-using library::core::logger::Sink ;
-using library::core::logger::Pump ;
+using ostk::core::types::Unique ;
+using ostk::core::types::Integer ;
+using ostk::core::types::String ;
+using ostk::core::ctnr::Array ;
+using ostk::core::logger::Severity ;
+using ostk::core::logger::Source ;
+using ostk::core::logger::Sink ;
+using ostk::core::logger::Pump ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,19 +92,19 @@ class Logger
 
 #define                         LOG(aLogger, aSeverity)                         aLogger(aSeverity, __LINE__, __FILE__, __PRETTY_FUNCTION__)
 
-#define                         LOG_TRACE(aLogger)                              LOG(aLogger, library::core::logger::Severity::Trace)
-#define                         LOG_DEBUG(aLogger)                              LOG(aLogger, library::core::logger::Severity::Debug)
-#define                         LOG_INFO(aLogger)                               LOG(aLogger, library::core::logger::Severity::Info)
-#define                         LOG_WARNING(aLogger)                            LOG(aLogger, library::core::logger::Severity::Warning)
-#define                         LOG_ERROR(aLogger)                              LOG(aLogger, library::core::logger::Severity::Error)
-#define                         LOG_FATAL(aLogger)                              LOG(aLogger, library::core::logger::Severity::Fatal)
+#define                         LOG_TRACE(aLogger)                              LOG(aLogger, ostk::core::logger::Severity::Trace)
+#define                         LOG_DEBUG(aLogger)                              LOG(aLogger, ostk::core::logger::Severity::Debug)
+#define                         LOG_INFO(aLogger)                               LOG(aLogger, ostk::core::logger::Severity::Info)
+#define                         LOG_WARNING(aLogger)                            LOG(aLogger, ostk::core::logger::Severity::Warning)
+#define                         LOG_ERROR(aLogger)                              LOG(aLogger, ostk::core::logger::Severity::Error)
+#define                         LOG_FATAL(aLogger)                              LOG(aLogger, ostk::core::logger::Severity::Fatal)
 
-#define                         GLOBAL_LOG_TRACE                                LOG_TRACE(library::core::Logger::Global())
-#define                         GLOBAL_LOG_DEBUG                                LOG_DEBUG(library::core::Logger::Global())
-#define                         GLOBAL_LOG_INFO                                 LOG_INFO(library::core::Logger::Global())
-#define                         GLOBAL_LOG_WARNING                              LOG_WARNING(library::core::Logger::Global())
-#define                         GLOBAL_LOG_ERROR                                LOG_ERROR(library::core::Logger::Global())
-#define                         GLOBAL_LOG_FATAL                                LOG_FATAL(library::core::Logger::Global())
+#define                         GLOBAL_LOG_TRACE                                LOG_TRACE(ostk::core::Logger::Global())
+#define                         GLOBAL_LOG_DEBUG                                LOG_DEBUG(ostk::core::Logger::Global())
+#define                         GLOBAL_LOG_INFO                                 LOG_INFO(ostk::core::Logger::Global())
+#define                         GLOBAL_LOG_WARNING                              LOG_WARNING(ostk::core::Logger::Global())
+#define                         GLOBAL_LOG_ERROR                                LOG_ERROR(ostk::core::Logger::Global())
+#define                         GLOBAL_LOG_FATAL                                LOG_FATAL(ostk::core::Logger::Global())
 
 #define                         GET_MACRO(_0, _1, _2, NAME, ...)                NAME
 

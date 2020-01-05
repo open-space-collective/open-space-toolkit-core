@@ -16,9 +16,9 @@ inline void                     LibraryCorePy_Types_Integer                 ( )
 
     using namespace boost::python ;
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
 
     class_<Integer>("Integer", init<int>())
 
@@ -54,8 +54,8 @@ inline void                     LibraryCorePy_Types_Integer                 ( )
         .def(int() * self)
         .def(int() / self)
 
-        .def("__str__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
-        .def("__repr__", +[] (const library::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
+        .def("__str__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
+        .def("__repr__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
 
         .def("is_defined", &Integer::isDefined)
         .def("is_zero", &Integer::isZero)

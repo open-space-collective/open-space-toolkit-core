@@ -18,7 +18,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -559,7 +559,7 @@ Real                            Real::operator -                            ( ) 
 
     if (type_ != Real::Type::Defined)
     {
-        throw library::core::error::runtime::Undefined("Real") ;
+        throw ostk::core::error::runtime::Undefined("Real") ;
     }
 
     return value_ ;
@@ -593,12 +593,12 @@ std::ostream&                   operator <<                                 (   
 
     }
 
-    // library::core::utilities::Output::Header(anOutputStream, "Real") ;
+    // ostk::core::utilities::Output::Header(anOutputStream, "Real") ;
 
-    // library::core::utilities::Output::Line(anOutputStream) << "Type:" << aReal.type_ ;
-    // library::core::utilities::Output::Line(anOutputStream) << "Value:" << aReal.value_ ;
+    // ostk::core::utilities::Output::Line(anOutputStream) << "Type:" << aReal.type_ ;
+    // ostk::core::utilities::Output::Line(anOutputStream) << "Value:" << aReal.value_ ;
 
-    // library::core::utilities::Output::Footer(anOutputStream) ;
+    // ostk::core::utilities::Output::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -676,17 +676,17 @@ bool                            Real::isNear                                (   
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Real") ;
+        throw ostk::core::error::runtime::Undefined("Real") ;
     }
 
     if (!aValue.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Real") ;
+        throw ostk::core::error::runtime::Undefined("Real") ;
     }
 
     if (!aTolerance.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Tolerance") ;
+        throw ostk::core::error::runtime::Undefined("Tolerance") ;
     }
 
     if ((!this->isFinite()) || (!aValue.isFinite()))
@@ -820,7 +820,7 @@ types::Integer                  Real::toInteger                         ( ) cons
         return types::Integer(static_cast<types::Integer::ValueType>(value_)) ;
     }
 
-    throw library::core::error::RuntimeError("Real is not integer.") ;
+    throw ostk::core::error::RuntimeError("Real is not integer.") ;
 
     return types::Integer::Undefined() ;
 
@@ -843,7 +843,7 @@ Real                            Real::abs                                   ( ) 
             return Real::PositiveInfinity() ;
 
         default:
-            throw library::core::error::runtime::Undefined("Type") ;
+            throw ostk::core::error::runtime::Undefined("Type") ;
             break ;
 
     }
@@ -869,7 +869,7 @@ types::Integer                  Real::floor                                 ( ) 
             return types::Integer::Undefined() ;
 
         default:
-            throw library::core::error::runtime::Undefined("Type") ;
+            throw ostk::core::error::runtime::Undefined("Type") ;
             break ;
 
     }
@@ -906,7 +906,7 @@ Real                            Real::sqrt                                  ( ) 
             return Real::Undefined() ;
 
         default:
-            throw library::core::error::runtime::Undefined("Type") ;
+            throw ostk::core::error::runtime::Undefined("Type") ;
             break ;
 
     }
@@ -991,7 +991,7 @@ Real                            Real::Parse                                 (   
 
     if (aString.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("String") ;
+        throw ostk::core::error::runtime::Undefined("String") ;
     }
 
     if ((aString == "Undefined") || (aString == "NaN"))
@@ -1016,7 +1016,7 @@ Real                            Real::Parse                                 (   
 
         if (value != value)
         {
-            throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
+            throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
         }
 
         return Real(value) ;
@@ -1024,7 +1024,7 @@ Real                            Real::Parse                                 (   
     }
     catch (const boost::bad_lexical_cast&)
     {
-        throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
+        throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.") ;
     }
 
     return Real::Undefined() ;

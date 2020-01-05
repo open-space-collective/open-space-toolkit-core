@@ -21,10 +21,10 @@
 TEST (Library_Core_Containers_Array, VectorConstructor)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -63,10 +63,10 @@ TEST (Library_Core_Containers_Array, VectorConstructor)
 TEST (Library_Core_Containers_Array, SizeValueConstructor)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -107,10 +107,10 @@ TEST (Library_Core_Containers_Array, SizeValueConstructor)
 TEST (Library_Core_Containers_Array, InitializerListConstructor)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -145,8 +145,8 @@ TEST (Library_Core_Containers_Array, InitializerListConstructor)
 TEST (Library_Core_Containers_Array, AdditionOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -164,9 +164,9 @@ TEST (Library_Core_Containers_Array, AdditionOperator)
 TEST (Library_Core_Containers_Array, IsEmpty)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -186,9 +186,9 @@ TEST (Library_Core_Containers_Array, IsEmpty)
 TEST (Library_Core_Containers_Array, Contains)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -220,8 +220,8 @@ TEST (Library_Core_Containers_Array, Contains)
 TEST (Library_Core_Containers_Array, IsNear)
 {
 
-    using library::core::types::Real ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Real ;
+    using ostk::core::ctnr::Array ;
 
     // Tolerance
 
@@ -282,9 +282,9 @@ TEST (Library_Core_Containers_Array, IsNear)
 TEST (Library_Core_Containers_Array, AccessFirst)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -319,9 +319,9 @@ TEST (Library_Core_Containers_Array, AccessFirst)
 TEST (Library_Core_Containers_Array, AccessLast)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -356,10 +356,10 @@ TEST (Library_Core_Containers_Array, AccessLast)
 TEST (Library_Core_Containers_Array, GetSize)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     EXPECT_EQ(Size(0), Array<Integer>({}).getSize()) ;
     EXPECT_EQ(Size(0), Array<Integer>::Empty().getSize()) ;
@@ -372,10 +372,10 @@ TEST (Library_Core_Containers_Array, GetSize)
 TEST (Library_Core_Containers_Array, GetIndexOf)
 {
 
-    using library::core::types::Index ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Index ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -407,9 +407,9 @@ TEST (Library_Core_Containers_Array, GetIndexOf)
 TEST (Library_Core_Containers_Array, ToString)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -439,7 +439,7 @@ TEST (Library_Core_Containers_Array, ToString)
 // TEST (Library_Core_Containers_Array, GetObject)
 // {
 
-//     using library::core::ctnr::Array ;
+//     using ostk::core::ctnr::Array ;
 
 //     FAIL() ;
 
@@ -448,10 +448,10 @@ TEST (Library_Core_Containers_Array, ToString)
 TEST (Library_Core_Containers_Array, AccessWhere)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -478,10 +478,10 @@ TEST (Library_Core_Containers_Array, AccessWhere)
 TEST (Library_Core_Containers_Array, GetWhere)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -510,9 +510,9 @@ TEST (Library_Core_Containers_Array, GetWhere)
 TEST (Library_Core_Containers_Array, Find)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -567,9 +567,9 @@ TEST (Library_Core_Containers_Array, Find)
 TEST (Library_Core_Containers_Array, Map)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -596,8 +596,8 @@ TEST (Library_Core_Containers_Array, Map)
 TEST (Library_Core_Containers_Array, Reduce)
 {
 
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -630,10 +630,10 @@ TEST (Library_Core_Containers_Array, Reduce)
 TEST (Library_Core_Containers_Array, Add)
 {
 
-    using library::core::types::Index ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Index ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -672,10 +672,10 @@ TEST (Library_Core_Containers_Array, Add)
 TEST (Library_Core_Containers_Array, Remove)
 {
 
-    using library::core::types::Index ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Index ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -726,10 +726,10 @@ TEST (Library_Core_Containers_Array, Remove)
 TEST (Library_Core_Containers_Array, MergeWith)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -780,10 +780,10 @@ TEST (Library_Core_Containers_Array, MergeWith)
 TEST (Library_Core_Containers_Array, RemoveWhere)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -802,9 +802,9 @@ TEST (Library_Core_Containers_Array, RemoveWhere)
 TEST (Library_Core_Containers_Array, Empty)
 {
 
-    using library::core::types::Size ;
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Size ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -819,9 +819,9 @@ TEST (Library_Core_Containers_Array, Empty)
 TEST (Library_Core_Containers_Array, Zip)
 {
 
-    using library::core::types::Index ;
-    using library::core::types::Integer ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::Index ;
+    using ostk::core::types::Integer ;
+    using ostk::core::ctnr::Array ;
 
     {
 
@@ -830,7 +830,7 @@ TEST (Library_Core_Containers_Array, Zip)
 
         Index index = 0 ;
 
-        for (const auto tuple : library::core::ctnr::iterators::Zip(firstArray, secondArray))
+        for (const auto tuple : ostk::core::ctnr::iterators::Zip(firstArray, secondArray))
         {
 
             EXPECT_EQ(std::get<0>(tuple) * 2, std::get<1>(tuple)) ;

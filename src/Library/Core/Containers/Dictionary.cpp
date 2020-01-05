@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -291,14 +291,14 @@ const Dictionary::Value&        Dictionary::operator []                     (   
 
     if (aKey.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Key") ;
+        throw ostk::core::error::runtime::Undefined("Key") ;
     }
 
     auto mapIt = map_.find(aKey) ;
 
     if (mapIt == map_.end())
     {
-        throw library::core::error::RuntimeError("No value for key [" + aKey + "].") ;
+        throw ostk::core::error::RuntimeError("No value for key [" + aKey + "].") ;
     }
 
     return mapIt.value() ;
@@ -312,7 +312,7 @@ Dictionary::Value&              Dictionary::operator []                     (   
 
     if (aKey.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Key") ;
+        throw ostk::core::error::runtime::Undefined("Key") ;
     }
 
     auto mapIt = map_.find(aKey) ;
@@ -347,7 +347,7 @@ std::ostream&                   operator <<                                 (   
             if (value.isDictionary())
             {
 
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") ;
 
                 printDictionary(value.accessDictionary(), anIndentation + 1) ;
 
@@ -355,14 +355,14 @@ std::ostream&                   operator <<                                 (   
             else if (value.isArray())
             {
 
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") ;
 
                 printArray(value.accessArray(), anIndentation + 1) ;
 
             }
             else
             {
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") << value.toString(Object::Format::JSON) ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ") << value.toString(Object::Format::JSON) ;
             }
 
         }
@@ -382,7 +382,7 @@ std::ostream&                   operator <<                                 (   
             if (arrayElement.isDictionary())
             {
 
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") ;
 
                 printDictionary(arrayElement.accessDictionary(), anIndentation + 1) ;
 
@@ -390,14 +390,14 @@ std::ostream&                   operator <<                                 (   
             else if (arrayElement.isArray())
             {
 
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") ;
 
                 printArray(arrayElement.accessArray(), anIndentation + 1) ;
 
             }
             else
             {
-                library::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON) ;
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON) ;
             }
 
             index++ ;
@@ -406,15 +406,15 @@ std::ostream&                   operator <<                                 (   
 
     } ;
 
-    library::core::utils::Print::Header(anOutputStream, "Dictionary") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Dictionary") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Size:" << aDictionary.map_.size() ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Size:" << aDictionary.map_.size() ;
 
-    library::core::utils::Print::Separator(anOutputStream) ;
+    ostk::core::utils::Print::Separator(anOutputStream) ;
 
     printDictionary(aDictionary, 1) ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -443,12 +443,12 @@ void                            Dictionary::addValueForKey                  (   
 
     if (aKey.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Key") ;
+        throw ostk::core::error::runtime::Undefined("Key") ;
     }
 
     if (this->hasValueForKey(aKey))
     {
-        throw library::core::error::RuntimeError("Value for key [" + aKey + "] already exists.") ;
+        throw ostk::core::error::RuntimeError("Value for key [" + aKey + "] already exists.") ;
     }
 
     map_.emplace(aKey, aValue) ;
@@ -490,7 +490,7 @@ Dictionary                      Dictionary::Parse                           (   
 
     if (!object.isDictionary())
     {
-        throw library::core::error::runtime::Wrong("String") ;
+        throw ostk::core::error::runtime::Wrong("String") ;
     }
 
     return object.accessDictionary() ;

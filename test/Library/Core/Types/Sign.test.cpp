@@ -16,7 +16,7 @@
 TEST (Library_Core_Types_Sign, DefaultConstructor)
 {
 
-    using library::core::types::Sign ;
+    using ostk::core::types::Sign ;
 
     EXPECT_NO_THROW(Sign sign = Sign::Undefined ; (void) sign ; ) ;
     EXPECT_NO_THROW(Sign sign = Sign::Positive ; (void) sign ; ) ;

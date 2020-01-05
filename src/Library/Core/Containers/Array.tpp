@@ -14,7 +14,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -79,14 +79,14 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Array<U>&                   anArray                                     )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Array") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Array") ;
 
     for (const auto& element : anArray)
     {
         anOutputStream << element << std::endl ;
     }
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -98,7 +98,7 @@ const T&                        Array<T>::accessFirst                       ( ) 
 
     if (this->isEmpty())
     {
-        throw library::core::error::RuntimeError("Array is empty.") ;
+        throw ostk::core::error::RuntimeError("Array is empty.") ;
     }
 
     return this->front() ;
@@ -111,7 +111,7 @@ const T&                        Array<T>::accessLast                        ( ) 
 
     if (this->isEmpty())
     {
-        throw library::core::error::RuntimeError("Array is empty.") ;
+        throw ostk::core::error::RuntimeError("Array is empty.") ;
     }
 
     return this->back() ;
@@ -140,7 +140,7 @@ bool                            Array<T>::isNear                            (   
         return false ;
     }
 
-    for (const auto elementTuple : library::core::ctnr::iterators::Zip(*this, anArray))
+    for (const auto elementTuple : ostk::core::ctnr::iterators::Zip(*this, anArray))
     {
 
         if (!std::get<0>(elementTuple).isNear(std::get<1>(elementTuple), aTolerance))
@@ -164,7 +164,7 @@ bool                            Array<T>::isNear                            (   
         return false ;
     }
 
-    for (const auto elementTuple : library::core::ctnr::iterators::Zip(*this, anArray))
+    for (const auto elementTuple : ostk::core::ctnr::iterators::Zip(*this, anArray))
     {
 
         if (!aComparator(std::get<0>(elementTuple), std::get<1>(elementTuple)))
@@ -192,7 +192,7 @@ Index                           Array<T>::getIndexOf                        (   
 
     if (arrayIt == this->end())
     {
-        throw library::core::error::RuntimeError("Array does not contain element.") ;
+        throw ostk::core::error::RuntimeError("Array does not contain element.") ;
     }
 
     return std::distance(this->begin(), arrayIt) ;
@@ -200,7 +200,7 @@ Index                           Array<T>::getIndexOf                        (   
 }
 
 template <typename T>
-typename std::enable_if<library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
+typename std::enable_if<ostk::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 {
     return aType.toString() ;
 }
@@ -212,7 +212,7 @@ typename std::enable_if<std::is_same<T, types::String>::value, types::String>::t
 }
 
 // template <typename T>
-// typename std::enable_if<!library::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
+// typename std::enable_if<!ostk::core::types::HasToString<T>::value, types::String>::type extractString (const T& aType)
 // {
 //     return aType ;
 // }
@@ -298,7 +298,7 @@ T                               Array<T>::reduce                            (   
 
     if (this->isEmpty())
     {
-        throw library::core::error::RuntimeError("Array is empty.") ;
+        throw ostk::core::error::RuntimeError("Array is empty.") ;
     }
 
     typename Array<T>::ConstIterator it = this->cbegin() ;
@@ -361,7 +361,7 @@ T&                              Array<T>::accessFirst                       ( )
 
     if (this->isEmpty())
     {
-        throw library::core::error::RuntimeError("Array is empty.") ;
+        throw ostk::core::error::RuntimeError("Array is empty.") ;
     }
 
     return this->front() ;
@@ -374,7 +374,7 @@ T&                              Array<T>::accessLast                        ( )
 
     if (this->isEmpty())
     {
-        throw library::core::error::RuntimeError("Array is empty.") ;
+        throw ostk::core::error::RuntimeError("Array is empty.") ;
     }
 
     return this->back() ;

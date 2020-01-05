@@ -17,7 +17,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -773,7 +773,7 @@ Integer                         Integer::operator --                        (   
 
     if (type_ != Integer::Type::Defined)
     {
-        throw library::core::error::runtime::Undefined("Integer") ;
+        throw ostk::core::error::runtime::Undefined("Integer") ;
     }
 
     return value_ ;
@@ -807,12 +807,12 @@ std::ostream&                   operator <<                                 (   
 
     }
 
-    // library::core::utilities::Output::Header(anOutputStream, "Integer") ;
+    // ostk::core::utilities::Output::Header(anOutputStream, "Integer") ;
 
-    // library::core::utilities::Output::Line(anOutputStream) << "Type:" << anInteger.type_ ;
-    // library::core::utilities::Output::Line(anOutputStream) << "Value:" << anInteger.value_ ;
+    // ostk::core::utilities::Output::Line(anOutputStream) << "Type:" << anInteger.type_ ;
+    // ostk::core::utilities::Output::Line(anOutputStream) << "Value:" << anInteger.value_ ;
 
-    // library::core::utilities::Output::Footer(anOutputStream) ;
+    // ostk::core::utilities::Output::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -982,7 +982,7 @@ Integer                         Integer::Int64                              (   
 
     if ((anInteger < static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::min())) || (anInteger > static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::max())))
     {
-        throw library::core::error::RuntimeError("Int64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+        throw ostk::core::error::RuntimeError("Int64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
@@ -1004,7 +1004,7 @@ Integer                         Integer::Uint32                             (   
 
     if (anInteger > static_cast<types::Uint32>(std::numeric_limits<Integer::ValueType>::max()))
     {
-        throw library::core::error::RuntimeError("Uint32 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+        throw ostk::core::error::RuntimeError("Uint32 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
@@ -1016,7 +1016,7 @@ Integer                         Integer::Uint64                             (   
 
     if (anInteger > static_cast<types::Uint64>(std::numeric_limits<Integer::ValueType>::max()))
     {
-        throw library::core::error::RuntimeError("Uint64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
+        throw ostk::core::error::RuntimeError("Uint64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::min()) + ", " + boost::lexical_cast<std::string>(std::numeric_limits<Integer::ValueType>::max()) + "].") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger)) ;
@@ -1028,7 +1028,7 @@ Integer                         Integer::Index                              (   
 
     if (!(anIndex < std::numeric_limits<Integer::ValueType>::max()))
     {
-        throw library::core::error::RuntimeError("Index out of bounds.") ;
+        throw ostk::core::error::RuntimeError("Index out of bounds.") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anIndex)) ;
@@ -1040,7 +1040,7 @@ Integer                         Integer::Size                               (   
 
     if (!(aSize < std::numeric_limits<Integer::ValueType>::max()))
     {
-        throw library::core::error::RuntimeError("Size out of bounds.") ;
+        throw ostk::core::error::RuntimeError("Size out of bounds.") ;
     }
 
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(aSize)) ;
@@ -1080,7 +1080,7 @@ Integer                         Integer::Parse                              (   
     }
     catch (const boost::bad_lexical_cast&)
     {
-        throw library::core::error::RuntimeError("Cannot cast character [" + String::Char(aCharacter) + "] to Integer.") ;
+        throw ostk::core::error::RuntimeError("Cannot cast character [" + String::Char(aCharacter) + "] to Integer.") ;
     }
 
     return Integer::Undefined() ;
@@ -1092,7 +1092,7 @@ Integer                         Integer::Parse                              (   
 
     if (aString.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("String") ;
+        throw ostk::core::error::runtime::Undefined("String") ;
     }
 
     if (aString == "Undefined")
@@ -1116,7 +1116,7 @@ Integer                         Integer::Parse                              (   
     }
     catch (const boost::bad_lexical_cast&)
     {
-        throw library::core::error::RuntimeError("Cannot cast string [" + aString + "] to Integer.") ;
+        throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Integer.") ;
     }
 
     return Integer::Undefined() ;

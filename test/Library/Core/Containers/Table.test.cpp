@@ -16,11 +16,11 @@
 TEST (Library_Core_Containers_Table, Constructor)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -63,11 +63,11 @@ TEST (Library_Core_Containers_Table, Constructor)
 TEST (Library_Core_Containers_Table, CopyConstructor)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -93,11 +93,11 @@ TEST (Library_Core_Containers_Table, CopyConstructor)
 TEST (Library_Core_Containers_Table, CopyAssignmentOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -123,11 +123,11 @@ TEST (Library_Core_Containers_Table, CopyAssignmentOperator)
 TEST (Library_Core_Containers_Table, EqualToOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -218,11 +218,11 @@ TEST (Library_Core_Containers_Table, EqualToOperator)
 TEST (Library_Core_Containers_Table, NotEqualToOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -313,11 +313,11 @@ TEST (Library_Core_Containers_Table, NotEqualToOperator)
 TEST (Library_Core_Containers_Table, SubscriptOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -372,11 +372,11 @@ TEST (Library_Core_Containers_Table, SubscriptOperator)
 TEST (Library_Core_Containers_Table, FunctionCallOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -437,11 +437,11 @@ TEST (Library_Core_Containers_Table, FunctionCallOperator)
 TEST (Library_Core_Containers_Table, StreamOperator)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -468,12 +468,12 @@ TEST (Library_Core_Containers_Table, StreamOperator)
 TEST (Library_Core_Containers_Table, Iterator)
 {
 
-    using library::core::types::Index ;
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::Index ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -530,11 +530,11 @@ TEST (Library_Core_Containers_Table, Iterator)
 TEST (Library_Core_Containers_Table, IsEmpty)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -573,11 +573,11 @@ TEST (Library_Core_Containers_Table, IsEmpty)
 TEST (Library_Core_Containers_Table, HasColumnWithName)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -628,11 +628,11 @@ TEST (Library_Core_Containers_Table, HasColumnWithName)
 TEST (Library_Core_Containers_Table, GetRowCount)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -661,11 +661,11 @@ TEST (Library_Core_Containers_Table, GetRowCount)
 TEST (Library_Core_Containers_Table, GetColumnCount)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -694,11 +694,11 @@ TEST (Library_Core_Containers_Table, GetColumnCount)
 TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -731,11 +731,11 @@ TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
 TEST (Library_Core_Containers_Table, AddRow)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -775,11 +775,11 @@ TEST (Library_Core_Containers_Table, AddRow)
 TEST (Library_Core_Containers_Table, Clear)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
 
     {
 
@@ -806,7 +806,7 @@ TEST (Library_Core_Containers_Table, Clear)
 TEST (Library_Core_Containers_Table, Empty)
 {
 
-    using library::core::ctnr::Table ;
+    using ostk::core::ctnr::Table ;
 
     {
 
@@ -820,13 +820,13 @@ TEST (Library_Core_Containers_Table, Empty)
 TEST (Library_Core_Containers_Table, Load)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Table ;
-    using library::core::ctnr::table::Row ;
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Table ;
+    using ostk::core::ctnr::table::Row ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::File ;
 
     {
 

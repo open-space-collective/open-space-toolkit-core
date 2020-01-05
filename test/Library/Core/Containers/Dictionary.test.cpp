@@ -21,9 +21,9 @@
 TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
 {
 
-    using library::core::types::Size ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::types::Size ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -126,8 +126,8 @@ TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
 TEST (Library_Core_Containers_Dictionary, CopyConstructor)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -158,8 +158,8 @@ TEST (Library_Core_Containers_Dictionary, CopyConstructor)
 TEST (Library_Core_Containers_Dictionary, AssignmentOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -190,8 +190,8 @@ TEST (Library_Core_Containers_Dictionary, AssignmentOperator)
 TEST (Library_Core_Containers_Dictionary, EqualToOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -261,8 +261,8 @@ TEST (Library_Core_Containers_Dictionary, EqualToOperator)
 TEST (Library_Core_Containers_Dictionary, NotEqualToOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -332,8 +332,8 @@ TEST (Library_Core_Containers_Dictionary, NotEqualToOperator)
 TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -381,8 +381,8 @@ TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
 TEST (Library_Core_Containers_Dictionary, Iterators)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -560,8 +560,8 @@ TEST (Library_Core_Containers_Dictionary, Iterators)
 TEST (Library_Core_Containers_Dictionary, IsEmpty)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -580,8 +580,8 @@ TEST (Library_Core_Containers_Dictionary, IsEmpty)
 TEST (Library_Core_Containers_Dictionary, HasValueForKey)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -600,9 +600,9 @@ TEST (Library_Core_Containers_Dictionary, HasValueForKey)
 TEST (Library_Core_Containers_Dictionary, GetSize)
 {
 
-    using library::core::types::Size ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::types::Size ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -666,8 +666,8 @@ TEST (Library_Core_Containers_Dictionary, GetSize)
 TEST (Library_Core_Containers_Dictionary, AddValueForKey)
 {
 
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -690,7 +690,7 @@ TEST (Library_Core_Containers_Dictionary, AddValueForKey)
 TEST (Library_Core_Containers_Dictionary, Empty)
 {
 
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 
@@ -703,9 +703,9 @@ TEST (Library_Core_Containers_Dictionary, Empty)
 TEST (Library_Core_Containers_Dictionary, Parse)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Object ;
-    using library::core::ctnr::Dictionary ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Object ;
+    using ostk::core::ctnr::Dictionary ;
 
     {
 

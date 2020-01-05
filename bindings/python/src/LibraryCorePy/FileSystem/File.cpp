@@ -16,7 +16,7 @@ inline void                     LibraryCorePy_FileSystem_File               ( )
 
     using namespace boost::python ;
 
-    using library::core::fs::File ;
+    using ostk::core::fs::File ;
 
     scope in_File = class_<File>("File", no_init)
 

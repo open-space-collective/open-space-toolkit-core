@@ -16,7 +16,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace core
 {
@@ -46,13 +46,13 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Directory&                  aDirectory                                  )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Directory") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Directory") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Name:"                << (aDirectory.isDefined() ? aDirectory.getName() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Path:"                << (aDirectory.isDefined() ? aDirectory.path_.toString() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Exists:"              << (aDirectory.isDefined() ? String::Boolean(aDirectory.exists()) : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Name:"                << (aDirectory.isDefined() ? aDirectory.getName() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Path:"                << (aDirectory.isDefined() ? aDirectory.path_.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Exists:"              << (aDirectory.isDefined() ? String::Boolean(aDirectory.exists()) : "Undefined") ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -68,7 +68,7 @@ bool                            Directory::exists                           ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Directory") ;
+        throw ostk::core::error::runtime::Undefined("Directory") ;
     }
 
     try
@@ -77,7 +77,7 @@ bool                            Directory::exists                           ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return false ;
@@ -89,7 +89,7 @@ bool                            Directory::isEmpty                          ( ) 
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
     }
 
     try
@@ -98,7 +98,7 @@ bool                            Directory::isEmpty                          ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return false ;
@@ -110,12 +110,12 @@ bool                            Directory::containsFileWithName             (   
 
     if (aFileName.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("File name") ;
+        throw ostk::core::error::runtime::Undefined("File name") ;
     }
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
     }
 
     try
@@ -143,7 +143,7 @@ bool                            Directory::containsFileWithName             (   
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return false ;
@@ -159,7 +159,7 @@ String                          Directory::getName                          ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     try
@@ -177,7 +177,7 @@ String                          Directory::getName                          ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     return String::Empty() ;
@@ -189,7 +189,7 @@ fs::Path                        Directory::getPath                          ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     return path_ ;
@@ -216,7 +216,7 @@ ctnr::Array<Directory>          Directory::getDirectories                   ( ) 
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
     }
 
     ctnr::Array<Directory> subDirectories = ctnr::Array<Directory>::Empty() ;
@@ -241,7 +241,7 @@ ctnr::Array<Directory>          Directory::getDirectories                   ( ) 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     std::sort
@@ -260,7 +260,7 @@ String                          Directory::toString                         ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Directory") ;
+        throw ostk::core::error::runtime::Undefined("Directory") ;
     }
 
     return path_.toString() ;
@@ -287,7 +287,7 @@ void                            Directory::create                           (   
 
     if (this->exists())
     {
-        throw library::core::error::RuntimeError("Directory [{}] already exists.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Directory [{}] already exists.", this->toString()) ;
     }
 
     try
@@ -302,13 +302,13 @@ void                            Directory::create                           (   
 
         if (!boost::filesystem::create_directories(boost::filesystem::path(directoryPathString).branch_path()))
         {
-            throw library::core::error::RuntimeError("Cannot create directory [{}].", this->toString()) ;
+            throw ostk::core::error::RuntimeError("Cannot create directory [{}].", this->toString()) ;
         }
 
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
     (void) anOwnerPermissionSet ;
@@ -326,7 +326,7 @@ void                            Directory::remove                           ( )
 
     if (!this->exists())
     {
-        throw library::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
+        throw ostk::core::error::RuntimeError("Directory [{}] does not exist.", this->toString()) ;
     }
 
     try
@@ -335,7 +335,7 @@ void                            Directory::remove                           ( )
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw library::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what()) ;
     }
 
 }
@@ -355,7 +355,7 @@ Directory                       Directory::Path                             (   
 
     if (!aPath.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path") ;
     }
 
     return { aPath } ;

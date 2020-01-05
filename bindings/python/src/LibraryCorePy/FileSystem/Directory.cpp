@@ -16,7 +16,7 @@ inline void                     LibraryCorePy_FileSystem_Directory          ( )
 
     using namespace boost::python ;
 
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Directory ;
 
     scope in_Directory = class_<Directory>("Directory", no_init)
 

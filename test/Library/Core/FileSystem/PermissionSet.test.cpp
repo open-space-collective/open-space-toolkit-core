@@ -16,7 +16,7 @@
 TEST (Library_Core_FileSystem_PermissionSet, Constructor)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -33,7 +33,7 @@ TEST (Library_Core_FileSystem_PermissionSet, Constructor)
 TEST (Library_Core_FileSystem_PermissionSet, EqualToOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -54,7 +54,7 @@ TEST (Library_Core_FileSystem_PermissionSet, EqualToOperator)
 TEST (Library_Core_FileSystem_PermissionSet, NotEqualToOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -75,7 +75,7 @@ TEST (Library_Core_FileSystem_PermissionSet, NotEqualToOperator)
 TEST (Library_Core_FileSystem_PermissionSet, AdditionOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -89,7 +89,7 @@ TEST (Library_Core_FileSystem_PermissionSet, AdditionOperator)
 TEST (Library_Core_FileSystem_PermissionSet, SubtractionOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -103,7 +103,7 @@ TEST (Library_Core_FileSystem_PermissionSet, SubtractionOperator)
 TEST (Library_Core_FileSystem_PermissionSet, LogicalAndOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -119,7 +119,7 @@ TEST (Library_Core_FileSystem_PermissionSet, LogicalAndOperator)
 TEST (Library_Core_FileSystem_PermissionSet, LogicalOOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -134,7 +134,7 @@ TEST (Library_Core_FileSystem_PermissionSet, LogicalOOperator)
 TEST (Library_Core_FileSystem_PermissionSet, StreamOperator)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -153,7 +153,7 @@ TEST (Library_Core_FileSystem_PermissionSet, StreamOperator)
 TEST (Library_Core_FileSystem_PermissionSet, IsNone)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -174,7 +174,7 @@ TEST (Library_Core_FileSystem_PermissionSet, IsNone)
 TEST (Library_Core_FileSystem_PermissionSet, IsAll)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -195,7 +195,7 @@ TEST (Library_Core_FileSystem_PermissionSet, IsAll)
 TEST (Library_Core_FileSystem_PermissionSet, CanRead)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -216,7 +216,7 @@ TEST (Library_Core_FileSystem_PermissionSet, CanRead)
 TEST (Library_Core_FileSystem_PermissionSet, CanWrite)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -237,7 +237,7 @@ TEST (Library_Core_FileSystem_PermissionSet, CanWrite)
 TEST (Library_Core_FileSystem_PermissionSet, CanExecute)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -258,7 +258,7 @@ TEST (Library_Core_FileSystem_PermissionSet, CanExecute)
 TEST (Library_Core_FileSystem_PermissionSet, None)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -277,7 +277,7 @@ TEST (Library_Core_FileSystem_PermissionSet, None)
 TEST (Library_Core_FileSystem_PermissionSet, R)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -296,7 +296,7 @@ TEST (Library_Core_FileSystem_PermissionSet, R)
 TEST (Library_Core_FileSystem_PermissionSet, W)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -315,7 +315,7 @@ TEST (Library_Core_FileSystem_PermissionSet, W)
 TEST (Library_Core_FileSystem_PermissionSet, X)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -334,7 +334,7 @@ TEST (Library_Core_FileSystem_PermissionSet, X)
 TEST (Library_Core_FileSystem_PermissionSet, RW)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -353,7 +353,7 @@ TEST (Library_Core_FileSystem_PermissionSet, RW)
 TEST (Library_Core_FileSystem_PermissionSet, RX)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 
@@ -372,7 +372,7 @@ TEST (Library_Core_FileSystem_PermissionSet, RX)
 TEST (Library_Core_FileSystem_PermissionSet, RWX)
 {
 
-    using library::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet ;
 
     {
 

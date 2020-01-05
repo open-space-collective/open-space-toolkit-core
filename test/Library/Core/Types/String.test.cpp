@@ -18,7 +18,7 @@
 TEST (Library_Core_Types_String, DefaultConstructor)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_NO_THROW(String()) ;
     EXPECT_NO_THROW(String("abc")) ;
@@ -28,7 +28,7 @@ TEST (Library_Core_Types_String, DefaultConstructor)
 TEST (Library_Core_Types_String, StringConstructor)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_NO_THROW(String(std::string(""))) ;
     EXPECT_NO_THROW(String(std::string("abc"))) ;
@@ -38,7 +38,7 @@ TEST (Library_Core_Types_String, StringConstructor)
 TEST (Library_Core_Types_String, StringOperator)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -55,7 +55,7 @@ TEST (Library_Core_Types_String, StringOperator)
 TEST (Library_Core_Types_String, IsEmpty)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_TRUE(String().isEmpty()) ;
     EXPECT_TRUE(String("").isEmpty()) ;
@@ -68,7 +68,7 @@ TEST (Library_Core_Types_String, IsEmpty)
 TEST (Library_Core_Types_String, IsUppercase)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_TRUE(String("ABC").isUppercase()) ;
     EXPECT_TRUE(String("A_B_C").isUppercase()) ;
@@ -86,7 +86,7 @@ TEST (Library_Core_Types_String, IsUppercase)
 TEST (Library_Core_Types_String, IsLowercase)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_TRUE(String("abc").isLowercase()) ;
     EXPECT_TRUE(String("a_b_c").isLowercase()) ;
@@ -104,7 +104,7 @@ TEST (Library_Core_Types_String, IsLowercase)
 TEST (Library_Core_Types_String, Match)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -123,7 +123,7 @@ TEST (Library_Core_Types_String, Match)
 TEST (Library_Core_Types_String, GetLength)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_EQ(size_t(0), String().getLength()) ;
     EXPECT_EQ(size_t(0), String("").getLength()) ;
@@ -136,7 +136,7 @@ TEST (Library_Core_Types_String, GetLength)
 TEST (Library_Core_Types_String, GetHead)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -158,7 +158,7 @@ TEST (Library_Core_Types_String, GetHead)
 TEST (Library_Core_Types_String, GetTail)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -180,7 +180,7 @@ TEST (Library_Core_Types_String, GetTail)
 TEST (Library_Core_Types_String, GetFirst)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_EQ('H', String("Hello World!").getFirst()) ;
     EXPECT_ANY_THROW(String("").getFirst()) ;
@@ -190,7 +190,7 @@ TEST (Library_Core_Types_String, GetFirst)
 TEST (Library_Core_Types_String, GetLast)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_EQ('!', String("Hello World!").getLast()) ;
     EXPECT_ANY_THROW(String("").getLast()) ;
@@ -200,7 +200,7 @@ TEST (Library_Core_Types_String, GetLast)
 TEST (Library_Core_Types_String, GetSubstring)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -223,7 +223,7 @@ TEST (Library_Core_Types_String, GetSubstring)
 TEST (Library_Core_Types_String, Trim)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -249,7 +249,7 @@ TEST (Library_Core_Types_String, Trim)
 TEST (Library_Core_Types_String, Replace)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     // Char
 
@@ -294,7 +294,7 @@ TEST (Library_Core_Types_String, Replace)
 TEST (Library_Core_Types_String, Empty)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     EXPECT_TRUE(String::Empty().isEmpty()) ;
 
@@ -303,7 +303,7 @@ TEST (Library_Core_Types_String, Empty)
 TEST (Library_Core_Types_String, Boolean)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -317,7 +317,7 @@ TEST (Library_Core_Types_String, Boolean)
 TEST (Library_Core_Types_String, Char)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -331,7 +331,7 @@ TEST (Library_Core_Types_String, Char)
 TEST (Library_Core_Types_String, Replicate)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
     {
 
@@ -353,9 +353,9 @@ TEST (Library_Core_Types_String, Replicate)
 TEST (Library_Core_Types_String, Format)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::Real ;
-    using library::core::types::String ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::Real ;
+    using ostk::core::types::String ;
 
     {
 

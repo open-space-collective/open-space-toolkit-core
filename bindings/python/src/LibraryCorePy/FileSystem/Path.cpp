@@ -16,7 +16,7 @@ inline void                     LibraryCorePy_FileSystem_Path               ( )
 
     using namespace boost::python ;
 
-    using library::core::fs::Path ;
+    using ostk::core::fs::Path ;
 
     scope in_Path = class_<Path>("Path", no_init)
 
