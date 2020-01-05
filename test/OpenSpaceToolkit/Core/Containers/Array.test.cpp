@@ -18,7 +18,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Array, VectorConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Array, VectorConstructor)
 {
 
     using ostk::core::types::Size ;
@@ -60,7 +60,7 @@ TEST (Library_Core_Containers_Array, VectorConstructor)
 
 }
 
-TEST (Library_Core_Containers_Array, SizeValueConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Array, SizeValueConstructor)
 {
 
     using ostk::core::types::Size ;
@@ -104,7 +104,7 @@ TEST (Library_Core_Containers_Array, SizeValueConstructor)
 
 }
 
-TEST (Library_Core_Containers_Array, InitializerListConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Array, InitializerListConstructor)
 {
 
     using ostk::core::types::Size ;
@@ -142,7 +142,7 @@ TEST (Library_Core_Containers_Array, InitializerListConstructor)
 
 }
 
-TEST (Library_Core_Containers_Array, AdditionOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Array, AdditionOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -161,7 +161,7 @@ TEST (Library_Core_Containers_Array, AdditionOperator)
 
 }
 
-TEST (Library_Core_Containers_Array, IsEmpty)
+TEST (OpenSpaceToolkit_Core_Containers_Array, IsEmpty)
 {
 
     using ostk::core::types::Size ;
@@ -183,7 +183,7 @@ TEST (Library_Core_Containers_Array, IsEmpty)
 
 }
 
-TEST (Library_Core_Containers_Array, Contains)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Contains)
 {
 
     using ostk::core::types::Integer ;
@@ -217,7 +217,7 @@ TEST (Library_Core_Containers_Array, Contains)
 
 }
 
-TEST (Library_Core_Containers_Array, IsNear)
+TEST (OpenSpaceToolkit_Core_Containers_Array, IsNear)
 {
 
     using ostk::core::types::Real ;
@@ -279,7 +279,7 @@ TEST (Library_Core_Containers_Array, IsNear)
 
 }
 
-TEST (Library_Core_Containers_Array, AccessFirst)
+TEST (OpenSpaceToolkit_Core_Containers_Array, AccessFirst)
 {
 
     using ostk::core::types::Integer ;
@@ -316,7 +316,7 @@ TEST (Library_Core_Containers_Array, AccessFirst)
 
 }
 
-TEST (Library_Core_Containers_Array, AccessLast)
+TEST (OpenSpaceToolkit_Core_Containers_Array, AccessLast)
 {
 
     using ostk::core::types::Integer ;
@@ -353,7 +353,7 @@ TEST (Library_Core_Containers_Array, AccessLast)
 
 }
 
-TEST (Library_Core_Containers_Array, GetSize)
+TEST (OpenSpaceToolkit_Core_Containers_Array, GetSize)
 {
 
     using ostk::core::types::Size ;
@@ -369,7 +369,7 @@ TEST (Library_Core_Containers_Array, GetSize)
 
 }
 
-TEST (Library_Core_Containers_Array, GetIndexOf)
+TEST (OpenSpaceToolkit_Core_Containers_Array, GetIndexOf)
 {
 
     using ostk::core::types::Index ;
@@ -404,7 +404,7 @@ TEST (Library_Core_Containers_Array, GetIndexOf)
 
 }
 
-TEST (Library_Core_Containers_Array, ToString)
+TEST (OpenSpaceToolkit_Core_Containers_Array, ToString)
 {
 
     using ostk::core::types::Integer ;
@@ -436,7 +436,7 @@ TEST (Library_Core_Containers_Array, ToString)
 
 }
 
-// TEST (Library_Core_Containers_Array, GetObject)
+// TEST (OpenSpaceToolkit_Core_Containers_Array, GetObject)
 // {
 
 //     using ostk::core::ctnr::Array ;
@@ -445,7 +445,7 @@ TEST (Library_Core_Containers_Array, ToString)
 
 // }
 
-TEST (Library_Core_Containers_Array, AccessWhere)
+TEST (OpenSpaceToolkit_Core_Containers_Array, AccessWhere)
 {
 
     using ostk::core::types::Size ;
@@ -475,7 +475,7 @@ TEST (Library_Core_Containers_Array, AccessWhere)
 
 }
 
-TEST (Library_Core_Containers_Array, GetWhere)
+TEST (OpenSpaceToolkit_Core_Containers_Array, GetWhere)
 {
 
     using ostk::core::types::Size ;
@@ -507,7 +507,7 @@ TEST (Library_Core_Containers_Array, GetWhere)
 
 }
 
-TEST (Library_Core_Containers_Array, Find)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Find)
 {
 
     using ostk::core::types::Size ;
@@ -564,7 +564,7 @@ TEST (Library_Core_Containers_Array, Find)
 
 }
 
-TEST (Library_Core_Containers_Array, Map)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Map)
 {
 
     using ostk::core::types::Integer ;
@@ -593,7 +593,7 @@ TEST (Library_Core_Containers_Array, Map)
 
 }
 
-TEST (Library_Core_Containers_Array, Reduce)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Reduce)
 {
 
     using ostk::core::types::Integer ;
@@ -627,7 +627,7 @@ TEST (Library_Core_Containers_Array, Reduce)
 
 }
 
-TEST (Library_Core_Containers_Array, Add)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Add)
 {
 
     using ostk::core::types::Index ;
@@ -669,7 +669,7 @@ TEST (Library_Core_Containers_Array, Add)
 
 }
 
-TEST (Library_Core_Containers_Array, Remove)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Remove)
 {
 
     using ostk::core::types::Index ;
@@ -723,7 +723,7 @@ TEST (Library_Core_Containers_Array, Remove)
 
 }
 
-TEST (Library_Core_Containers_Array, MergeWith)
+TEST (OpenSpaceToolkit_Core_Containers_Array, MergeWith)
 {
 
     using ostk::core::types::Size ;
@@ -777,7 +777,7 @@ TEST (Library_Core_Containers_Array, MergeWith)
 
 }
 
-TEST (Library_Core_Containers_Array, RemoveWhere)
+TEST (OpenSpaceToolkit_Core_Containers_Array, RemoveWhere)
 {
 
     using ostk::core::types::Size ;
@@ -799,7 +799,7 @@ TEST (Library_Core_Containers_Array, RemoveWhere)
 
 }
 
-TEST (Library_Core_Containers_Array, Empty)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Empty)
 {
 
     using ostk::core::types::Size ;
@@ -816,7 +816,7 @@ TEST (Library_Core_Containers_Array, Empty)
 
 }
 
-TEST (Library_Core_Containers_Array, Zip)
+TEST (OpenSpaceToolkit_Core_Containers_Array, Zip)
 {
 
     using ostk::core::types::Index ;

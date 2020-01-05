@@ -14,7 +14,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_FileSystem_File, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, EqualToOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -45,7 +45,7 @@ TEST (Library_Core_FileSystem_File, EqualToOperator)
 
 }
 
-TEST (Library_Core_FileSystem_File, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, NotEqualToOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -76,7 +76,7 @@ TEST (Library_Core_FileSystem_File, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_FileSystem_File, StreamOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, StreamOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -96,7 +96,7 @@ TEST (Library_Core_FileSystem_File, StreamOperator)
 
 }
 
-TEST (Library_Core_FileSystem_File, FileStreamOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, FileStreamOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -129,7 +129,7 @@ TEST (Library_Core_FileSystem_File, FileStreamOperator)
 
 }
 
-TEST (Library_Core_FileSystem_File, IsDefined)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, IsDefined)
 {
 
     using ostk::core::fs::Path ;
@@ -151,7 +151,7 @@ TEST (Library_Core_FileSystem_File, IsDefined)
 
 }
 
-TEST (Library_Core_FileSystem_File, Exists)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Exists)
 {
 
     using ostk::core::fs::Path ;
@@ -180,7 +180,7 @@ TEST (Library_Core_FileSystem_File, Exists)
 
 }
 
-TEST (Library_Core_FileSystem_File, IsOpen)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, IsOpen)
 {
 
     using ostk::core::fs::Path ;
@@ -211,7 +211,7 @@ TEST (Library_Core_FileSystem_File, IsOpen)
 
 }
 
-TEST (Library_Core_FileSystem_File, GetName)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, GetName)
 {
 
     using ostk::core::fs::Path ;
@@ -249,7 +249,7 @@ TEST (Library_Core_FileSystem_File, GetName)
 
 }
 
-TEST (Library_Core_FileSystem_File, GetExtension)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, GetExtension)
 {
 
     using ostk::core::fs::Path ;
@@ -278,7 +278,7 @@ TEST (Library_Core_FileSystem_File, GetExtension)
 
 }
 
-TEST (Library_Core_FileSystem_File, GetPath)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, GetPath)
 {
 
     using ostk::core::fs::Path ;
@@ -300,7 +300,7 @@ TEST (Library_Core_FileSystem_File, GetPath)
 
 }
 
-TEST (Library_Core_FileSystem_File, GetPermissions)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, GetPermissions)
 {
 
     using ostk::core::fs::PermissionSet ;
@@ -345,7 +345,7 @@ TEST (Library_Core_FileSystem_File, GetPermissions)
 
 }
 
-TEST (Library_Core_FileSystem_File, GetParentDirectory)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, GetParentDirectory)
 {
 
     using ostk::core::fs::Path ;
@@ -367,7 +367,7 @@ TEST (Library_Core_FileSystem_File, GetParentDirectory)
 
 }
 
-TEST (Library_Core_FileSystem_File, ToString)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, ToString)
 {
 
     using ostk::core::fs::Path ;
@@ -389,7 +389,7 @@ TEST (Library_Core_FileSystem_File, ToString)
 
 }
 
-TEST (Library_Core_FileSystem_File, Open)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Open)
 {
 
     using ostk::core::fs::Path ;
@@ -418,7 +418,7 @@ TEST (Library_Core_FileSystem_File, Open)
 
 }
 
-TEST (Library_Core_FileSystem_File, Close)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Close)
 {
 
     using ostk::core::fs::Path ;
@@ -451,7 +451,7 @@ TEST (Library_Core_FileSystem_File, Close)
 
 }
 
-TEST (Library_Core_FileSystem_File, AccessStream)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
 {
 
     using ostk::core::fs::Path ;
@@ -484,7 +484,7 @@ TEST (Library_Core_FileSystem_File, AccessStream)
 
 }
 
-// TEST (Library_Core_FileSystem_File, RenameTo)
+// TEST (OpenSpaceToolkit_Core_FileSystem_File, RenameTo)
 // {
 
 //     using ostk::core::fs::Path ;
@@ -498,7 +498,7 @@ TEST (Library_Core_FileSystem_File, AccessStream)
 
 // }
 
-// TEST (Library_Core_FileSystem_File, CopyToDirectory)
+// TEST (OpenSpaceToolkit_Core_FileSystem_File, CopyToDirectory)
 // {
 
 //     using ostk::core::fs::Path ;
@@ -512,7 +512,7 @@ TEST (Library_Core_FileSystem_File, AccessStream)
 
 // }
 
-TEST (Library_Core_FileSystem_File, MoveToDirectory)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, MoveToDirectory)
 {
 
     using ostk::core::fs::Path ;
@@ -555,7 +555,7 @@ TEST (Library_Core_FileSystem_File, MoveToDirectory)
 
 }
 
-TEST (Library_Core_FileSystem_File, Create)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Create)
 {
 
     using ostk::core::fs::Path ;
@@ -585,7 +585,7 @@ TEST (Library_Core_FileSystem_File, Create)
 
 }
 
-// TEST (Library_Core_FileSystem_File, Clear)
+// TEST (OpenSpaceToolkit_Core_FileSystem_File, Clear)
 // {
 
 //     using ostk::core::fs::Path ;
@@ -599,7 +599,7 @@ TEST (Library_Core_FileSystem_File, Create)
 
 // }
 
-TEST (Library_Core_FileSystem_File, Remove)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Remove)
 {
 
     using ostk::core::fs::Path ;
@@ -629,7 +629,7 @@ TEST (Library_Core_FileSystem_File, Remove)
 
 }
 
-TEST (Library_Core_FileSystem_File, Undefined)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Undefined)
 {
 
     using ostk::core::fs::Path ;
@@ -644,7 +644,7 @@ TEST (Library_Core_FileSystem_File, Undefined)
 
 }
 
-TEST (Library_Core_FileSystem_File, Path)
+TEST (OpenSpaceToolkit_Core_FileSystem_File, Path)
 {
 
     using ostk::core::fs::Path ;

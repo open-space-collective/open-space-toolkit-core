@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_FileSystem_Path, CopyConstructor)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, CopyConstructor)
 {
 
     using ostk::core::fs::Path ;
@@ -30,7 +30,7 @@ TEST (Library_Core_FileSystem_Path, CopyConstructor)
 
 }
 
-TEST (Library_Core_FileSystem_Path, AssignmentOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, AssignmentOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -47,7 +47,7 @@ TEST (Library_Core_FileSystem_Path, AssignmentOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, EqualToOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -77,7 +77,7 @@ TEST (Library_Core_FileSystem_Path, EqualToOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, NotEqualToOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -107,7 +107,7 @@ TEST (Library_Core_FileSystem_Path, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, AdditionOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, AdditionOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -160,7 +160,7 @@ TEST (Library_Core_FileSystem_Path, AdditionOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, AdditionAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, AdditionAssignmentOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -221,7 +221,7 @@ TEST (Library_Core_FileSystem_Path, AdditionAssignmentOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, StreamOperator)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, StreamOperator)
 {
 
     using ostk::core::fs::Path ;
@@ -240,7 +240,7 @@ TEST (Library_Core_FileSystem_Path, StreamOperator)
 
 }
 
-TEST (Library_Core_FileSystem_Path, IsDefined)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, IsDefined)
 {
 
     using ostk::core::fs::Path ;
@@ -263,7 +263,7 @@ TEST (Library_Core_FileSystem_Path, IsDefined)
 
 }
 
-TEST (Library_Core_FileSystem_Path, IsAbsolute)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, IsAbsolute)
 {
 
     using ostk::core::fs::Path ;
@@ -305,7 +305,7 @@ TEST (Library_Core_FileSystem_Path, IsAbsolute)
 
 }
 
-TEST (Library_Core_FileSystem_Path, IsRelative)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, IsRelative)
 {
 
     using ostk::core::fs::Path ;
@@ -347,7 +347,7 @@ TEST (Library_Core_FileSystem_Path, IsRelative)
 
 }
 
-TEST (Library_Core_FileSystem_Path, GetParentPath)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetParentPath)
 {
 
     using ostk::core::fs::Path ;
@@ -372,7 +372,7 @@ TEST (Library_Core_FileSystem_Path, GetParentPath)
 
 }
 
-TEST (Library_Core_FileSystem_Path, GetLastElement)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetLastElement)
 {
 
     using ostk::core::fs::Path ;
@@ -410,7 +410,7 @@ TEST (Library_Core_FileSystem_Path, GetLastElement)
 
 }
 
-TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
 {
 
     using ostk::core::fs::Path ;
@@ -438,7 +438,7 @@ TEST (Library_Core_FileSystem_Path, GetNormalizedPath)
 
 }
 
-TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetAbsolutePath)
 {
 
     using ostk::core::fs::Path ;
@@ -488,7 +488,7 @@ TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
 
 }
 
-// TEST (Library_Core_FileSystem_Path, GetRelativePathTo)
+// TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetRelativePathTo)
 // {
 
 //     using ostk::core::fs::Path ;
@@ -501,7 +501,7 @@ TEST (Library_Core_FileSystem_Path, GetAbsolutePath)
 
 // }
 
-TEST (Library_Core_FileSystem_Path, ToString)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, ToString)
 {
 
     using ostk::core::fs::Path ;
@@ -524,7 +524,7 @@ TEST (Library_Core_FileSystem_Path, ToString)
 
 }
 
-TEST (Library_Core_FileSystem_Path, Undefined)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, Undefined)
 {
 
     using ostk::core::fs::Path ;
@@ -538,7 +538,7 @@ TEST (Library_Core_FileSystem_Path, Undefined)
 
 }
 
-TEST (Library_Core_FileSystem_Path, Root)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, Root)
 {
 
     using ostk::core::fs::Path ;
@@ -553,7 +553,7 @@ TEST (Library_Core_FileSystem_Path, Root)
 
 }
 
-TEST (Library_Core_FileSystem_Path, Current)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, Current)
 {
 
     using ostk::core::fs::Path ;
@@ -567,7 +567,7 @@ TEST (Library_Core_FileSystem_Path, Current)
 
 }
 
-TEST (Library_Core_FileSystem_Path, Parse)
+TEST (OpenSpaceToolkit_Core_FileSystem_Path, Parse)
 {
 
     using ostk::core::fs::Path ;
@@ -588,7 +588,7 @@ TEST (Library_Core_FileSystem_Path, Parse)
 
 }
 
-// TEST (Library_Core_FileSystem_Path, Strings)
+// TEST (OpenSpaceToolkit_Core_FileSystem_Path, Strings)
 // {
 
 //     using ostk::core::fs::Path ;

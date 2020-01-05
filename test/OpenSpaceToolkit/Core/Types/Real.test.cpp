@@ -18,7 +18,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Types_Real, DefaultConstructor)
+TEST (OpenSpaceToolkit_Core_Types_Real, DefaultConstructor)
 {
 
     using ostk::core::types::Real ;
@@ -31,7 +31,7 @@ TEST (Library_Core_Types_Real, DefaultConstructor)
 
 }
 
-TEST (Library_Core_Types_Real, AssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, AssignmentOperator)
 {
 
     using ostk::core::types::Real ;
@@ -45,7 +45,7 @@ TEST (Library_Core_Types_Real, AssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Real, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, EqualToOperator)
 {
 
     using ostk::core::types::Real ;
@@ -75,7 +75,7 @@ TEST (Library_Core_Types_Real, EqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Real, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, NotEqualToOperator)
 {
 
     using ostk::core::types::Real ;
@@ -105,7 +105,7 @@ TEST (Library_Core_Types_Real, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Real, LessThanOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, LessThanOperator)
 {
 
     using ostk::core::types::Real ;
@@ -139,7 +139,7 @@ TEST (Library_Core_Types_Real, LessThanOperator)
 
 }
 
-TEST (Library_Core_Types_Real, LessThanOrEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, LessThanOrEqualToOperator)
 {
 
     using ostk::core::types::Real ;
@@ -173,7 +173,7 @@ TEST (Library_Core_Types_Real, LessThanOrEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Real, GreaterThanOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, GreaterThanOperator)
 {
 
     using ostk::core::types::Real ;
@@ -207,7 +207,7 @@ TEST (Library_Core_Types_Real, GreaterThanOperator)
 
 }
 
-TEST (Library_Core_Types_Real, GreaterThanOrEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, GreaterThanOrEqualToOperator)
 {
 
     using ostk::core::types::Real ;
@@ -241,7 +241,7 @@ TEST (Library_Core_Types_Real, GreaterThanOrEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Real, AdditionOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, AdditionOperator)
 {
 
     using ostk::core::types::Real ;
@@ -396,7 +396,7 @@ TEST (Library_Core_Types_Real, AdditionOperator)
 
 }
 
-TEST (Library_Core_Types_Real, SubtractionOperator)
+TEST (OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 {
 
     using ostk::core::types::Real ;
@@ -551,7 +551,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 }
 
-// TEST (Library_Core_Types_Real, MultiplicationOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, MultiplicationOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -732,7 +732,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, DivisionOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, DivisionOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -887,7 +887,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, AdditionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, AdditionAssignmentOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1044,7 +1044,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, SubtractionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, SubtractionAssignmentOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1201,7 +1201,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, MultiplicationAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, MultiplicationAssignmentOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1384,7 +1384,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, DivisionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, DivisionAssignmentOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1541,7 +1541,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, UnaryPlusOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, UnaryPlusOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1598,7 +1598,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, UnaryMinusOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, UnaryMinusOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1655,7 +1655,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (Library_Core_Types_Real, ValueTypeOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Real, ValueTypeOperator)
 // {
 
 //     using ostk::core::types::Real ;
@@ -1712,7 +1712,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// // TEST (Library_Core_Types_Real, StreamOperator)
+// // TEST (OpenSpaceToolkit_Core_Types_Real, StreamOperator)
 // // {
 
 // //     using ostk::core::types::Real ;
@@ -1721,7 +1721,7 @@ TEST (Library_Core_Types_Real, SubtractionOperator)
 
 // // }
 
-TEST (Library_Core_Types_Real, IsDefined)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsDefined)
 {
 
     using ostk::core::types::Real ;
@@ -1739,7 +1739,7 @@ TEST (Library_Core_Types_Real, IsDefined)
 
 }
 
-TEST (Library_Core_Types_Real, IsZero)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsZero)
 {
 
     using ostk::core::types::Real ;
@@ -1757,7 +1757,7 @@ TEST (Library_Core_Types_Real, IsZero)
 
 }
 
-TEST (Library_Core_Types_Real, IsPositive)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsPositive)
 {
 
     using ostk::core::types::Real ;
@@ -1775,7 +1775,7 @@ TEST (Library_Core_Types_Real, IsPositive)
 
 }
 
-TEST (Library_Core_Types_Real, IsNegative)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsNegative)
 {
 
     using ostk::core::types::Real ;
@@ -1793,7 +1793,7 @@ TEST (Library_Core_Types_Real, IsNegative)
 
 }
 
-TEST (Library_Core_Types_Real, IsStrictlyPositive)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsStrictlyPositive)
 {
 
     using ostk::core::types::Real ;
@@ -1811,7 +1811,7 @@ TEST (Library_Core_Types_Real, IsStrictlyPositive)
 
 }
 
-TEST (Library_Core_Types_Real, IsStrictlyNegative)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsStrictlyNegative)
 {
 
     using ostk::core::types::Real ;
@@ -1829,7 +1829,7 @@ TEST (Library_Core_Types_Real, IsStrictlyNegative)
 
 }
 
-TEST (Library_Core_Types_Real, IsInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsInfinity)
 {
 
     using ostk::core::types::Real ;
@@ -1847,7 +1847,7 @@ TEST (Library_Core_Types_Real, IsInfinity)
 
 }
 
-TEST (Library_Core_Types_Real, IsPositiveInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsPositiveInfinity)
 {
 
     using ostk::core::types::Real ;
@@ -1865,7 +1865,7 @@ TEST (Library_Core_Types_Real, IsPositiveInfinity)
 
 }
 
-TEST (Library_Core_Types_Real, IsNegativeInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsNegativeInfinity)
 {
 
     using ostk::core::types::Real ;
@@ -1883,7 +1883,7 @@ TEST (Library_Core_Types_Real, IsNegativeInfinity)
 
 }
 
-TEST (Library_Core_Types_Real, IsInteger)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsInteger)
 {
 
     using ostk::core::types::Real ;
@@ -1928,7 +1928,7 @@ TEST (Library_Core_Types_Real, IsInteger)
 
 }
 
-TEST (Library_Core_Types_Real, IsFinite)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsFinite)
 {
 
     using ostk::core::types::Real ;
@@ -1958,7 +1958,7 @@ TEST (Library_Core_Types_Real, IsFinite)
 
 }
 
-TEST (Library_Core_Types_Real, IsNear)
+TEST (OpenSpaceToolkit_Core_Types_Real, IsNear)
 {
 
     using ostk::core::types::Real ;
@@ -1995,7 +1995,7 @@ TEST (Library_Core_Types_Real, IsNear)
 
 }
 
-TEST (Library_Core_Types_Real, GetSign)
+TEST (OpenSpaceToolkit_Core_Types_Real, GetSign)
 {
 
     using ostk::core::types::Sign ;
@@ -2013,7 +2013,7 @@ TEST (Library_Core_Types_Real, GetSign)
 
 }
 
-TEST (Library_Core_Types_Real, ToString)
+TEST (OpenSpaceToolkit_Core_Types_Real, ToString)
 {
 
     using ostk::core::types::Real ;
@@ -2256,7 +2256,7 @@ TEST (Library_Core_Types_Real, ToString)
 
 }
 
-TEST (Library_Core_Types_Real, ToInteger)
+TEST (OpenSpaceToolkit_Core_Types_Real, ToInteger)
 {
 
     using ostk::core::types::Integer ;
@@ -2284,7 +2284,7 @@ TEST (Library_Core_Types_Real, ToInteger)
 
 }
 
-TEST (Library_Core_Types_Real, Abs)
+TEST (OpenSpaceToolkit_Core_Types_Real, Abs)
 {
 
     using ostk::core::types::Real ;
@@ -2322,7 +2322,7 @@ TEST (Library_Core_Types_Real, Abs)
 
 }
 
-TEST (Library_Core_Types_Real, Floor)
+TEST (OpenSpaceToolkit_Core_Types_Real, Floor)
 {
 
     using ostk::core::types::Real ;
@@ -2353,7 +2353,7 @@ TEST (Library_Core_Types_Real, Floor)
 
 }
 
-TEST (Library_Core_Types_Real, Sqrt)
+TEST (OpenSpaceToolkit_Core_Types_Real, Sqrt)
 {
 
     using ostk::core::types::Real ;
@@ -2398,7 +2398,7 @@ TEST (Library_Core_Types_Real, Sqrt)
 
 }
 
-TEST (Library_Core_Types_Real, Undefined)
+TEST (OpenSpaceToolkit_Core_Types_Real, Undefined)
 {
 
     using ostk::core::types::Real ;
@@ -2410,7 +2410,7 @@ TEST (Library_Core_Types_Real, Undefined)
 
 }
 
-TEST (Library_Core_Types_Real, Zero)
+TEST (OpenSpaceToolkit_Core_Types_Real, Zero)
 {
 
     using ostk::core::types::Real ;
@@ -2422,7 +2422,7 @@ TEST (Library_Core_Types_Real, Zero)
 
 }
 
-TEST (Library_Core_Types_Real, Pi)
+TEST (OpenSpaceToolkit_Core_Types_Real, Pi)
 {
 
     using ostk::core::types::Real ;
@@ -2434,7 +2434,7 @@ TEST (Library_Core_Types_Real, Pi)
 
 }
 
-TEST (Library_Core_Types_Real, HalfPi)
+TEST (OpenSpaceToolkit_Core_Types_Real, HalfPi)
 {
 
     using ostk::core::types::Real ;
@@ -2446,7 +2446,7 @@ TEST (Library_Core_Types_Real, HalfPi)
 
 }
 
-TEST (Library_Core_Types_Real, TwoPi)
+TEST (OpenSpaceToolkit_Core_Types_Real, TwoPi)
 {
 
     using ostk::core::types::Real ;
@@ -2458,7 +2458,7 @@ TEST (Library_Core_Types_Real, TwoPi)
 
 }
 
-TEST (Library_Core_Types_Real, Epsilon)
+TEST (OpenSpaceToolkit_Core_Types_Real, Epsilon)
 {
 
     using ostk::core::types::Real ;
@@ -2471,7 +2471,7 @@ TEST (Library_Core_Types_Real, Epsilon)
 
 }
 
-TEST (Library_Core_Types_Real, PositiveInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Real, PositiveInfinity)
 {
 
     using ostk::core::types::Real ;
@@ -2484,7 +2484,7 @@ TEST (Library_Core_Types_Real, PositiveInfinity)
 
 }
 
-TEST (Library_Core_Types_Real, NegativeInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Real, NegativeInfinity)
 {
 
     using ostk::core::types::Real ;
@@ -2497,7 +2497,7 @@ TEST (Library_Core_Types_Real, NegativeInfinity)
 
 }
 
-TEST (Library_Core_Types_Real, Integer)
+TEST (OpenSpaceToolkit_Core_Types_Real, Integer)
 {
 
     using ostk::core::types::Integer ;
@@ -2525,7 +2525,7 @@ TEST (Library_Core_Types_Real, Integer)
 
 }
 
-TEST (Library_Core_Types_Real, CanParse)
+TEST (OpenSpaceToolkit_Core_Types_Real, CanParse)
 {
 
     using ostk::core::types::Real ;
@@ -2570,7 +2570,7 @@ TEST (Library_Core_Types_Real, CanParse)
 
 }
 
-TEST (Library_Core_Types_Real, Parse)
+TEST (OpenSpaceToolkit_Core_Types_Real, Parse)
 {
 
     using ostk::core::types::Real ;

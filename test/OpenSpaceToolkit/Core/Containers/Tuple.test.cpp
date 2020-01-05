@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Tuple, Constructor)
+TEST (OpenSpaceToolkit_Core_Containers_Tuple, Constructor)
 {
 
     using ostk::core::types::Integer ;
@@ -30,7 +30,7 @@ TEST (Library_Core_Containers_Tuple, Constructor)
 
 }
 
-TEST (Library_Core_Containers_Tuple, Getters)
+TEST (OpenSpaceToolkit_Core_Containers_Tuple, Getters)
 {
 
     using ostk::core::types::Integer ;
@@ -50,7 +50,7 @@ TEST (Library_Core_Containers_Tuple, Getters)
 
 }
 
-TEST (Library_Core_Containers_Tuple, Setters)
+TEST (OpenSpaceToolkit_Core_Containers_Tuple, Setters)
 {
 
     using ostk::core::types::Integer ;
@@ -78,7 +78,7 @@ TEST (Library_Core_Containers_Tuple, Setters)
 
 }
 
-TEST (Library_Core_Containers_Tuple, Unpack)
+TEST (OpenSpaceToolkit_Core_Containers_Tuple, Unpack)
 {
 
     using ostk::core::types::Integer ;

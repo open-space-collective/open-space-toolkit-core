@@ -18,7 +18,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, InitializerListConstructor)
 {
 
     using ostk::core::types::Size ;
@@ -123,7 +123,7 @@ TEST (Library_Core_Containers_Dictionary, InitializerListConstructor)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, CopyConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, CopyConstructor)
 {
 
     using ostk::core::ctnr::Object ;
@@ -155,7 +155,7 @@ TEST (Library_Core_Containers_Dictionary, CopyConstructor)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, AssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, AssignmentOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -187,7 +187,7 @@ TEST (Library_Core_Containers_Dictionary, AssignmentOperator)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -258,7 +258,7 @@ TEST (Library_Core_Containers_Dictionary, EqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -329,7 +329,7 @@ TEST (Library_Core_Containers_Dictionary, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, KeySubscriptOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -378,7 +378,7 @@ TEST (Library_Core_Containers_Dictionary, KeySubscriptOperator)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, Iterators)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, Iterators)
 {
 
     using ostk::core::ctnr::Object ;
@@ -557,7 +557,7 @@ TEST (Library_Core_Containers_Dictionary, Iterators)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, IsEmpty)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, IsEmpty)
 {
 
     using ostk::core::ctnr::Object ;
@@ -577,7 +577,7 @@ TEST (Library_Core_Containers_Dictionary, IsEmpty)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, HasValueForKey)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, HasValueForKey)
 {
 
     using ostk::core::ctnr::Object ;
@@ -597,7 +597,7 @@ TEST (Library_Core_Containers_Dictionary, HasValueForKey)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, GetSize)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, GetSize)
 {
 
     using ostk::core::types::Size ;
@@ -663,7 +663,7 @@ TEST (Library_Core_Containers_Dictionary, GetSize)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, AddValueForKey)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, AddValueForKey)
 {
 
     using ostk::core::ctnr::Object ;
@@ -687,7 +687,7 @@ TEST (Library_Core_Containers_Dictionary, AddValueForKey)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, Empty)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, Empty)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -700,7 +700,7 @@ TEST (Library_Core_Containers_Dictionary, Empty)
 
 }
 
-TEST (Library_Core_Containers_Dictionary, Parse)
+TEST (OpenSpaceToolkit_Core_Containers_Dictionary, Parse)
 {
 
     using ostk::core::types::String ;

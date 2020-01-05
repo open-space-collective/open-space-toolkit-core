@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Types_String, DefaultConstructor)
+TEST (OpenSpaceToolkit_Core_Types_String, DefaultConstructor)
 {
 
     using ostk::core::types::String ;
@@ -25,7 +25,7 @@ TEST (Library_Core_Types_String, DefaultConstructor)
 
 }
 
-TEST (Library_Core_Types_String, StringConstructor)
+TEST (OpenSpaceToolkit_Core_Types_String, StringConstructor)
 {
 
     using ostk::core::types::String ;
@@ -35,7 +35,7 @@ TEST (Library_Core_Types_String, StringConstructor)
 
 }
 
-TEST (Library_Core_Types_String, StringOperator)
+TEST (OpenSpaceToolkit_Core_Types_String, StringOperator)
 {
 
     using ostk::core::types::String ;
@@ -52,7 +52,7 @@ TEST (Library_Core_Types_String, StringOperator)
 
 }
 
-TEST (Library_Core_Types_String, IsEmpty)
+TEST (OpenSpaceToolkit_Core_Types_String, IsEmpty)
 {
 
     using ostk::core::types::String ;
@@ -65,7 +65,7 @@ TEST (Library_Core_Types_String, IsEmpty)
 
 }
 
-TEST (Library_Core_Types_String, IsUppercase)
+TEST (OpenSpaceToolkit_Core_Types_String, IsUppercase)
 {
 
     using ostk::core::types::String ;
@@ -83,7 +83,7 @@ TEST (Library_Core_Types_String, IsUppercase)
 
 }
 
-TEST (Library_Core_Types_String, IsLowercase)
+TEST (OpenSpaceToolkit_Core_Types_String, IsLowercase)
 {
 
     using ostk::core::types::String ;
@@ -101,7 +101,7 @@ TEST (Library_Core_Types_String, IsLowercase)
 
 }
 
-TEST (Library_Core_Types_String, Match)
+TEST (OpenSpaceToolkit_Core_Types_String, Match)
 {
 
     using ostk::core::types::String ;
@@ -120,7 +120,7 @@ TEST (Library_Core_Types_String, Match)
 
 }
 
-TEST (Library_Core_Types_String, GetLength)
+TEST (OpenSpaceToolkit_Core_Types_String, GetLength)
 {
 
     using ostk::core::types::String ;
@@ -133,7 +133,7 @@ TEST (Library_Core_Types_String, GetLength)
 
 }
 
-TEST (Library_Core_Types_String, GetHead)
+TEST (OpenSpaceToolkit_Core_Types_String, GetHead)
 {
 
     using ostk::core::types::String ;
@@ -155,7 +155,7 @@ TEST (Library_Core_Types_String, GetHead)
 
 }
 
-TEST (Library_Core_Types_String, GetTail)
+TEST (OpenSpaceToolkit_Core_Types_String, GetTail)
 {
 
     using ostk::core::types::String ;
@@ -177,7 +177,7 @@ TEST (Library_Core_Types_String, GetTail)
 
 }
 
-TEST (Library_Core_Types_String, GetFirst)
+TEST (OpenSpaceToolkit_Core_Types_String, GetFirst)
 {
 
     using ostk::core::types::String ;
@@ -187,7 +187,7 @@ TEST (Library_Core_Types_String, GetFirst)
 
 }
 
-TEST (Library_Core_Types_String, GetLast)
+TEST (OpenSpaceToolkit_Core_Types_String, GetLast)
 {
 
     using ostk::core::types::String ;
@@ -197,7 +197,7 @@ TEST (Library_Core_Types_String, GetLast)
 
 }
 
-TEST (Library_Core_Types_String, GetSubstring)
+TEST (OpenSpaceToolkit_Core_Types_String, GetSubstring)
 {
 
     using ostk::core::types::String ;
@@ -220,7 +220,7 @@ TEST (Library_Core_Types_String, GetSubstring)
 
 }
 
-TEST (Library_Core_Types_String, Trim)
+TEST (OpenSpaceToolkit_Core_Types_String, Trim)
 {
 
     using ostk::core::types::String ;
@@ -246,7 +246,7 @@ TEST (Library_Core_Types_String, Trim)
 
 }
 
-TEST (Library_Core_Types_String, Replace)
+TEST (OpenSpaceToolkit_Core_Types_String, Replace)
 {
 
     using ostk::core::types::String ;
@@ -291,7 +291,7 @@ TEST (Library_Core_Types_String, Replace)
 
 }
 
-TEST (Library_Core_Types_String, Empty)
+TEST (OpenSpaceToolkit_Core_Types_String, Empty)
 {
 
     using ostk::core::types::String ;
@@ -300,7 +300,7 @@ TEST (Library_Core_Types_String, Empty)
 
 }
 
-TEST (Library_Core_Types_String, Boolean)
+TEST (OpenSpaceToolkit_Core_Types_String, Boolean)
 {
 
     using ostk::core::types::String ;
@@ -314,7 +314,7 @@ TEST (Library_Core_Types_String, Boolean)
 
 }
 
-TEST (Library_Core_Types_String, Char)
+TEST (OpenSpaceToolkit_Core_Types_String, Char)
 {
 
     using ostk::core::types::String ;
@@ -328,7 +328,7 @@ TEST (Library_Core_Types_String, Char)
 
 }
 
-TEST (Library_Core_Types_String, Replicate)
+TEST (OpenSpaceToolkit_Core_Types_String, Replicate)
 {
 
     using ostk::core::types::String ;
@@ -350,7 +350,7 @@ TEST (Library_Core_Types_String, Replicate)
 
 }
 
-TEST (Library_Core_Types_String, Format)
+TEST (OpenSpaceToolkit_Core_Types_String, Format)
 {
 
     using ostk::core::types::Integer ;

@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Table, Constructor)
+TEST (OpenSpaceToolkit_Core_Containers_Table, Constructor)
 {
 
     using ostk::core::types::String ;
@@ -60,7 +60,7 @@ TEST (Library_Core_Containers_Table, Constructor)
 
 }
 
-TEST (Library_Core_Containers_Table, CopyConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Table, CopyConstructor)
 {
 
     using ostk::core::types::String ;
@@ -90,7 +90,7 @@ TEST (Library_Core_Containers_Table, CopyConstructor)
 
 }
 
-TEST (Library_Core_Containers_Table, CopyAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, CopyAssignmentOperator)
 {
 
     using ostk::core::types::String ;
@@ -120,7 +120,7 @@ TEST (Library_Core_Containers_Table, CopyAssignmentOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
 {
 
     using ostk::core::types::String ;
@@ -215,7 +215,7 @@ TEST (Library_Core_Containers_Table, EqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
 {
 
     using ostk::core::types::String ;
@@ -310,7 +310,7 @@ TEST (Library_Core_Containers_Table, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, SubscriptOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, SubscriptOperator)
 {
 
     using ostk::core::types::String ;
@@ -369,7 +369,7 @@ TEST (Library_Core_Containers_Table, SubscriptOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, FunctionCallOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, FunctionCallOperator)
 {
 
     using ostk::core::types::String ;
@@ -434,7 +434,7 @@ TEST (Library_Core_Containers_Table, FunctionCallOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, StreamOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, StreamOperator)
 {
 
     using ostk::core::types::String ;
@@ -465,7 +465,7 @@ TEST (Library_Core_Containers_Table, StreamOperator)
 
 }
 
-TEST (Library_Core_Containers_Table, Iterator)
+TEST (OpenSpaceToolkit_Core_Containers_Table, Iterator)
 {
 
     using ostk::core::types::Index ;
@@ -527,7 +527,7 @@ TEST (Library_Core_Containers_Table, Iterator)
 
 }
 
-TEST (Library_Core_Containers_Table, IsEmpty)
+TEST (OpenSpaceToolkit_Core_Containers_Table, IsEmpty)
 {
 
     using ostk::core::types::String ;
@@ -570,7 +570,7 @@ TEST (Library_Core_Containers_Table, IsEmpty)
 
 }
 
-TEST (Library_Core_Containers_Table, HasColumnWithName)
+TEST (OpenSpaceToolkit_Core_Containers_Table, HasColumnWithName)
 {
 
     using ostk::core::types::String ;
@@ -625,7 +625,7 @@ TEST (Library_Core_Containers_Table, HasColumnWithName)
 
 }
 
-TEST (Library_Core_Containers_Table, GetRowCount)
+TEST (OpenSpaceToolkit_Core_Containers_Table, GetRowCount)
 {
 
     using ostk::core::types::String ;
@@ -658,7 +658,7 @@ TEST (Library_Core_Containers_Table, GetRowCount)
 
 }
 
-TEST (Library_Core_Containers_Table, GetColumnCount)
+TEST (OpenSpaceToolkit_Core_Containers_Table, GetColumnCount)
 {
 
     using ostk::core::types::String ;
@@ -691,7 +691,7 @@ TEST (Library_Core_Containers_Table, GetColumnCount)
 
 }
 
-TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
+TEST (OpenSpaceToolkit_Core_Containers_Table, GetIndexOfColumnWithName)
 {
 
     using ostk::core::types::String ;
@@ -728,7 +728,7 @@ TEST (Library_Core_Containers_Table, GetIndexOfColumnWithName)
 
 }
 
-TEST (Library_Core_Containers_Table, AddRow)
+TEST (OpenSpaceToolkit_Core_Containers_Table, AddRow)
 {
 
     using ostk::core::types::String ;
@@ -772,7 +772,7 @@ TEST (Library_Core_Containers_Table, AddRow)
 
 }
 
-TEST (Library_Core_Containers_Table, Clear)
+TEST (OpenSpaceToolkit_Core_Containers_Table, Clear)
 {
 
     using ostk::core::types::String ;
@@ -803,7 +803,7 @@ TEST (Library_Core_Containers_Table, Clear)
 
 }
 
-TEST (Library_Core_Containers_Table, Empty)
+TEST (OpenSpaceToolkit_Core_Containers_Table, Empty)
 {
 
     using ostk::core::ctnr::Table ;
@@ -817,7 +817,7 @@ TEST (Library_Core_Containers_Table, Empty)
 
 }
 
-TEST (Library_Core_Containers_Table, Load)
+TEST (OpenSpaceToolkit_Core_Containers_Table, Load)
 {
 
     using ostk::core::types::String ;

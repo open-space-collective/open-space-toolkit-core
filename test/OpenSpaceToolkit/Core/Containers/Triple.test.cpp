@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Triple, Constructor)
+TEST (OpenSpaceToolkit_Core_Containers_Triple, Constructor)
 {
 
     using ostk::core::types::Integer ;
@@ -30,7 +30,7 @@ TEST (Library_Core_Containers_Triple, Constructor)
 
 }
 
-TEST (Library_Core_Containers_Triple, Getters)
+TEST (OpenSpaceToolkit_Core_Containers_Triple, Getters)
 {
 
     using ostk::core::types::Integer ;
@@ -49,7 +49,7 @@ TEST (Library_Core_Containers_Triple, Getters)
 
 }
 
-TEST (Library_Core_Containers_Triple, Setters)
+TEST (OpenSpaceToolkit_Core_Containers_Triple, Setters)
 {
 
     using ostk::core::types::Integer ;
@@ -76,7 +76,7 @@ TEST (Library_Core_Containers_Triple, Setters)
 
 }
 
-// TEST (Library_Core_Containers_Triple, Unpack)
+// TEST (OpenSpaceToolkit_Core_Containers_Triple, Unpack)
 // {
 
 //     using ostk::core::types::Integer ;

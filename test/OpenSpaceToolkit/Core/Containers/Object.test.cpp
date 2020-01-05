@@ -20,7 +20,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Containers_Object, InitializerListConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Object, InitializerListConstructor)
 {
 
     using ostk::core::ctnr::Object ;
@@ -54,7 +54,7 @@ TEST (Library_Core_Containers_Object, InitializerListConstructor)
 
 }
 
-TEST (Library_Core_Containers_Object, CopyConstructor)
+TEST (OpenSpaceToolkit_Core_Containers_Object, CopyConstructor)
 {
 
     using ostk::core::types::Integer ;
@@ -76,7 +76,7 @@ TEST (Library_Core_Containers_Object, CopyConstructor)
 
 }
 
-TEST (Library_Core_Containers_Object, AssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -109,7 +109,7 @@ TEST (Library_Core_Containers_Object, AssignmentOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, EqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -139,7 +139,7 @@ TEST (Library_Core_Containers_Object, EqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, NotEqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -169,7 +169,7 @@ TEST (Library_Core_Containers_Object, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, KeySubscriptOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, KeySubscriptOperator)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -190,7 +190,7 @@ TEST (Library_Core_Containers_Object, KeySubscriptOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IndexSubscriptOperator)
 {
 
     using ostk::core::types::Size ;
@@ -238,7 +238,7 @@ TEST (Library_Core_Containers_Object, IndexSubscriptOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, StreamOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, StreamOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -261,7 +261,7 @@ TEST (Library_Core_Containers_Object, StreamOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, OutputFileStreamOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -309,7 +309,7 @@ TEST (Library_Core_Containers_Object, OutputFileStreamOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, InputFileStreamOperator)
+TEST (OpenSpaceToolkit_Core_Containers_Object, InputFileStreamOperator)
 {
 
     using ostk::core::ctnr::Object ;
@@ -350,7 +350,7 @@ TEST (Library_Core_Containers_Object, InputFileStreamOperator)
 
 }
 
-TEST (Library_Core_Containers_Object, IsDefined)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsDefined)
 {
 
     using ostk::core::types::Integer ;
@@ -378,7 +378,7 @@ TEST (Library_Core_Containers_Object, IsDefined)
 
 }
 
-TEST (Library_Core_Containers_Object, IsBoolean)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsBoolean)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -397,7 +397,7 @@ TEST (Library_Core_Containers_Object, IsBoolean)
 
 }
 
-TEST (Library_Core_Containers_Object, IsInteger)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsInteger)
 {
 
     using ostk::core::types::Integer ;
@@ -416,7 +416,7 @@ TEST (Library_Core_Containers_Object, IsInteger)
 
 }
 
-TEST (Library_Core_Containers_Object, IsReal)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsReal)
 {
 
     using ostk::core::types::Real ;
@@ -435,7 +435,7 @@ TEST (Library_Core_Containers_Object, IsReal)
 
 }
 
-TEST (Library_Core_Containers_Object, IsString)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsString)
 {
 
     using ostk::core::types::String ;
@@ -455,7 +455,7 @@ TEST (Library_Core_Containers_Object, IsString)
 
 }
 
-TEST (Library_Core_Containers_Object, IsDictionary)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsDictionary)
 {
 
     using ostk::core::types::String ;
@@ -490,7 +490,7 @@ TEST (Library_Core_Containers_Object, IsDictionary)
 
 }
 
-TEST (Library_Core_Containers_Object, IsArray)
+TEST (OpenSpaceToolkit_Core_Containers_Object, IsArray)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -513,7 +513,7 @@ TEST (Library_Core_Containers_Object, IsArray)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessBoolean)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessBoolean)
 {
 
     using ostk::core::ctnr::Object ;
@@ -532,7 +532,7 @@ TEST (Library_Core_Containers_Object, AccessBoolean)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessInteger)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessInteger)
 {
 
     using ostk::core::ctnr::Object ;
@@ -551,7 +551,7 @@ TEST (Library_Core_Containers_Object, AccessInteger)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessReal)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessReal)
 {
 
     using ostk::core::ctnr::Object ;
@@ -570,7 +570,7 @@ TEST (Library_Core_Containers_Object, AccessReal)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessString)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessString)
 {
 
     using ostk::core::ctnr::Object ;
@@ -589,7 +589,7 @@ TEST (Library_Core_Containers_Object, AccessString)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessDictionary)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessDictionary)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -609,7 +609,7 @@ TEST (Library_Core_Containers_Object, AccessDictionary)
 
 }
 
-TEST (Library_Core_Containers_Object, AccessArray)
+TEST (OpenSpaceToolkit_Core_Containers_Object, AccessArray)
 {
 
     using ostk::core::ctnr::Array ;
@@ -634,7 +634,7 @@ TEST (Library_Core_Containers_Object, AccessArray)
 
 }
 
-TEST (Library_Core_Containers_Object, GetType)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetType)
 {
 
     using ostk::core::types::Integer ;
@@ -653,7 +653,7 @@ TEST (Library_Core_Containers_Object, GetType)
 
 }
 
-TEST (Library_Core_Containers_Object, GetBoolean)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetBoolean)
 {
 
     using ostk::core::ctnr::Object ;
@@ -684,7 +684,7 @@ TEST (Library_Core_Containers_Object, GetBoolean)
 
 }
 
-TEST (Library_Core_Containers_Object, GetInteger)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetInteger)
 {
 
     using ostk::core::types::Integer ;
@@ -716,7 +716,7 @@ TEST (Library_Core_Containers_Object, GetInteger)
 
 }
 
-TEST (Library_Core_Containers_Object, GetReal)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetReal)
 {
 
     using ostk::core::types::Real ;
@@ -748,7 +748,7 @@ TEST (Library_Core_Containers_Object, GetReal)
 
 }
 
-TEST (Library_Core_Containers_Object, GetString)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetString)
 {
 
     using ostk::core::types::String ;
@@ -780,7 +780,7 @@ TEST (Library_Core_Containers_Object, GetString)
 
 }
 
-TEST (Library_Core_Containers_Object, GetDictionary)
+TEST (OpenSpaceToolkit_Core_Containers_Object, GetDictionary)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -808,7 +808,7 @@ TEST (Library_Core_Containers_Object, GetDictionary)
 
 }
 
-TEST (Library_Core_Containers_Object, Undefined)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Undefined)
 {
 
     using ostk::core::ctnr::Object ;
@@ -817,7 +817,7 @@ TEST (Library_Core_Containers_Object, Undefined)
 
 }
 
-TEST (Library_Core_Containers_Object, Integer)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Integer)
 {
 
     using ostk::core::types::Integer ;
@@ -832,7 +832,7 @@ TEST (Library_Core_Containers_Object, Integer)
 
 }
 
-TEST (Library_Core_Containers_Object, Real)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Real)
 {
 
     using ostk::core::types::Real ;
@@ -847,7 +847,7 @@ TEST (Library_Core_Containers_Object, Real)
 
 }
 
-TEST (Library_Core_Containers_Object, String)
+TEST (OpenSpaceToolkit_Core_Containers_Object, String)
 {
 
     using ostk::core::types::String ;
@@ -862,7 +862,7 @@ TEST (Library_Core_Containers_Object, String)
 
 }
 
-TEST (Library_Core_Containers_Object, Dictionary)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Dictionary)
 {
 
     using ostk::core::ctnr::Dictionary ;
@@ -881,7 +881,7 @@ TEST (Library_Core_Containers_Object, Dictionary)
 
 }
 
-TEST (Library_Core_Containers_Object, Array)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Array)
 {
 
     using ostk::core::ctnr::Array ;
@@ -900,7 +900,7 @@ TEST (Library_Core_Containers_Object, Array)
 
 }
 
-TEST (Library_Core_Containers_Object, Parse)
+TEST (OpenSpaceToolkit_Core_Containers_Object, Parse)
 {
 
     using ostk::core::types::String ;
@@ -1117,7 +1117,7 @@ TEST (Library_Core_Containers_Object, Parse)
 
 }
 
-// TEST (Library_Core_Containers_Object, Load)
+// TEST (OpenSpaceToolkit_Core_Containers_Object, Load)
 // {
 
 //     using ostk::core::ctnr::Object ;
@@ -1130,7 +1130,7 @@ TEST (Library_Core_Containers_Object, Parse)
 
 // }
 
-TEST (Library_Core_Containers_Object, StringFromType)
+TEST (OpenSpaceToolkit_Core_Containers_Object, StringFromType)
 {
 
     using ostk::core::ctnr::Object ;
@@ -1145,7 +1145,7 @@ TEST (Library_Core_Containers_Object, StringFromType)
 
 }
 
-TEST (Library_Core_Containers_Object, TypeFromString)
+TEST (OpenSpaceToolkit_Core_Containers_Object, TypeFromString)
 {
 
     using ostk::core::ctnr::Object ;

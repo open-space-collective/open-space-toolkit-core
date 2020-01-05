@@ -18,7 +18,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_Core_Types_Integer, DefaultConstructor)
+TEST (OpenSpaceToolkit_Core_Types_Integer, DefaultConstructor)
 {
 
     using ostk::core::types::Integer ;
@@ -31,7 +31,7 @@ TEST (Library_Core_Types_Integer, DefaultConstructor)
 
 }
 
-TEST (Library_Core_Types_Integer, AssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, AssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -45,7 +45,7 @@ TEST (Library_Core_Types_Integer, AssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, EqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, EqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -84,7 +84,7 @@ TEST (Library_Core_Types_Integer, EqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, NotEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, NotEqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -123,7 +123,7 @@ TEST (Library_Core_Types_Integer, NotEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, LessThanOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, LessThanOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -170,7 +170,7 @@ TEST (Library_Core_Types_Integer, LessThanOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, LessThanOrEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, LessThanOrEqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -217,7 +217,7 @@ TEST (Library_Core_Types_Integer, LessThanOrEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, GreaterThanOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, GreaterThanOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -264,7 +264,7 @@ TEST (Library_Core_Types_Integer, GreaterThanOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, GreaterThanOrEqualToOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, GreaterThanOrEqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -311,7 +311,7 @@ TEST (Library_Core_Types_Integer, GreaterThanOrEqualToOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, AdditionOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, AdditionOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -466,7 +466,7 @@ TEST (Library_Core_Types_Integer, AdditionOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, SubtractionOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, SubtractionOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -621,7 +621,7 @@ TEST (Library_Core_Types_Integer, SubtractionOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, MultiplicationOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, MultiplicationOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -802,7 +802,7 @@ TEST (Library_Core_Types_Integer, MultiplicationOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, DivisionOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, DivisionOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -957,7 +957,7 @@ TEST (Library_Core_Types_Integer, DivisionOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, ModuloOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, ModuloOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1124,7 +1124,7 @@ TEST (Library_Core_Types_Integer, ModuloOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, AdditionAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, AdditionAssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1281,7 +1281,7 @@ TEST (Library_Core_Types_Integer, AdditionAssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, SubtractionAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, SubtractionAssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1438,7 +1438,7 @@ TEST (Library_Core_Types_Integer, SubtractionAssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, MultiplicationAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, MultiplicationAssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1621,7 +1621,7 @@ TEST (Library_Core_Types_Integer, MultiplicationAssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, DivisionAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, DivisionAssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1778,7 +1778,7 @@ TEST (Library_Core_Types_Integer, DivisionAssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, ModuloAssignmentOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, ModuloAssignmentOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -1947,7 +1947,7 @@ TEST (Library_Core_Types_Integer, ModuloAssignmentOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, UnaryPlusOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, UnaryPlusOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2004,7 +2004,7 @@ TEST (Library_Core_Types_Integer, UnaryPlusOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, UnaryMinusOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, UnaryMinusOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2061,7 +2061,7 @@ TEST (Library_Core_Types_Integer, UnaryMinusOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, PrefixIncrementOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, PrefixIncrementOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2137,7 +2137,7 @@ TEST (Library_Core_Types_Integer, PrefixIncrementOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, PrefixDecrementOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, PrefixDecrementOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2213,7 +2213,7 @@ TEST (Library_Core_Types_Integer, PrefixDecrementOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, PostfixIncrementOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, PostfixIncrementOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2309,7 +2309,7 @@ TEST (Library_Core_Types_Integer, PostfixIncrementOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, PostfixDecrementOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, PostfixDecrementOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2405,7 +2405,7 @@ TEST (Library_Core_Types_Integer, PostfixDecrementOperator)
 
 }
 
-TEST (Library_Core_Types_Integer, ValueTypeOperator)
+TEST (OpenSpaceToolkit_Core_Types_Integer, ValueTypeOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -2462,7 +2462,7 @@ TEST (Library_Core_Types_Integer, ValueTypeOperator)
 
 }
 
-// TEST (Library_Core_Types_Integer, StreamOperator)
+// TEST (OpenSpaceToolkit_Core_Types_Integer, StreamOperator)
 // {
 
 //     using ostk::core::types::Integer ;
@@ -2471,7 +2471,7 @@ TEST (Library_Core_Types_Integer, ValueTypeOperator)
 
 // }
 
-TEST (Library_Core_Types_Integer, IsDefined)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsDefined)
 {
 
     using ostk::core::types::Integer ;
@@ -2489,7 +2489,7 @@ TEST (Library_Core_Types_Integer, IsDefined)
 
 }
 
-TEST (Library_Core_Types_Integer, IsZero)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsZero)
 {
 
     using ostk::core::types::Integer ;
@@ -2507,7 +2507,7 @@ TEST (Library_Core_Types_Integer, IsZero)
 
 }
 
-TEST (Library_Core_Types_Integer, IsPositive)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsPositive)
 {
 
     using ostk::core::types::Integer ;
@@ -2525,7 +2525,7 @@ TEST (Library_Core_Types_Integer, IsPositive)
 
 }
 
-TEST (Library_Core_Types_Integer, IsNegative)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsNegative)
 {
 
     using ostk::core::types::Integer ;
@@ -2543,7 +2543,7 @@ TEST (Library_Core_Types_Integer, IsNegative)
 
 }
 
-TEST (Library_Core_Types_Integer, IsStrictlyPositive)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsStrictlyPositive)
 {
 
     using ostk::core::types::Integer ;
@@ -2561,7 +2561,7 @@ TEST (Library_Core_Types_Integer, IsStrictlyPositive)
 
 }
 
-TEST (Library_Core_Types_Integer, IsStrictlyNegative)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsStrictlyNegative)
 {
 
     using ostk::core::types::Integer ;
@@ -2579,7 +2579,7 @@ TEST (Library_Core_Types_Integer, IsStrictlyNegative)
 
 }
 
-TEST (Library_Core_Types_Integer, IsInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsInfinity)
 {
 
     using ostk::core::types::Integer ;
@@ -2597,7 +2597,7 @@ TEST (Library_Core_Types_Integer, IsInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, IsPositiveInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsPositiveInfinity)
 {
 
     using ostk::core::types::Integer ;
@@ -2615,7 +2615,7 @@ TEST (Library_Core_Types_Integer, IsPositiveInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, IsNegativeInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsNegativeInfinity)
 {
 
     using ostk::core::types::Integer ;
@@ -2633,7 +2633,7 @@ TEST (Library_Core_Types_Integer, IsNegativeInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, IsFinite)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsFinite)
 {
 
     using ostk::core::types::Integer ;
@@ -2651,7 +2651,7 @@ TEST (Library_Core_Types_Integer, IsFinite)
 
 }
 
-TEST (Library_Core_Types_Integer, IsEven)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsEven)
 {
 
     using ostk::core::types::Integer ;
@@ -2675,7 +2675,7 @@ TEST (Library_Core_Types_Integer, IsEven)
 
 }
 
-TEST (Library_Core_Types_Integer, IsOdd)
+TEST (OpenSpaceToolkit_Core_Types_Integer, IsOdd)
 {
 
     using ostk::core::types::Integer ;
@@ -2695,7 +2695,7 @@ TEST (Library_Core_Types_Integer, IsOdd)
 
 }
 
-TEST (Library_Core_Types_Integer, GetSign)
+TEST (OpenSpaceToolkit_Core_Types_Integer, GetSign)
 {
 
     using ostk::core::types::Sign ;
@@ -2713,7 +2713,7 @@ TEST (Library_Core_Types_Integer, GetSign)
 
 }
 
-TEST (Library_Core_Types_Integer, ToString)
+TEST (OpenSpaceToolkit_Core_Types_Integer, ToString)
 {
 
     using ostk::core::types::Integer ;
@@ -2728,7 +2728,7 @@ TEST (Library_Core_Types_Integer, ToString)
 
 }
 
-// TEST (Library_Core_Types_Integer, GetObject)
+// TEST (OpenSpaceToolkit_Core_Types_Integer, GetObject)
 // {
 
 //     using ostk::core::types::Integer ;
@@ -2737,7 +2737,7 @@ TEST (Library_Core_Types_Integer, ToString)
 
 // }
 
-TEST (Library_Core_Types_Integer, Undefined)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Undefined)
 {
 
     using ostk::core::types::Integer ;
@@ -2749,7 +2749,7 @@ TEST (Library_Core_Types_Integer, Undefined)
 
 }
 
-TEST (Library_Core_Types_Integer, PositiveInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Integer, PositiveInfinity)
 {
 
     using ostk::core::types::Integer ;
@@ -2762,7 +2762,7 @@ TEST (Library_Core_Types_Integer, PositiveInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, NegativeInfinity)
+TEST (OpenSpaceToolkit_Core_Types_Integer, NegativeInfinity)
 {
 
     using ostk::core::types::Integer ;
@@ -2775,7 +2775,7 @@ TEST (Library_Core_Types_Integer, NegativeInfinity)
 
 }
 
-TEST (Library_Core_Types_Integer, Int8)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Int8)
 {
 
     using ostk::core::types::Integer ;
@@ -2806,7 +2806,7 @@ TEST (Library_Core_Types_Integer, Int8)
 
 }
 
-TEST (Library_Core_Types_Integer, Int16)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Int16)
 {
 
     using ostk::core::types::Integer ;
@@ -2843,7 +2843,7 @@ TEST (Library_Core_Types_Integer, Int16)
 
 }
 
-TEST (Library_Core_Types_Integer, Int32)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Int32)
 {
 
     using ostk::core::types::Integer ;
@@ -2886,7 +2886,7 @@ TEST (Library_Core_Types_Integer, Int32)
 
 }
 
-TEST (Library_Core_Types_Integer, Int64)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Int64)
 {
 
     using ostk::core::types::Integer ;
@@ -2935,7 +2935,7 @@ TEST (Library_Core_Types_Integer, Int64)
 
 }
 
-TEST (Library_Core_Types_Integer, Uint8)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Uint8)
 {
 
     using ostk::core::types::Integer ;
@@ -2964,7 +2964,7 @@ TEST (Library_Core_Types_Integer, Uint8)
 
 }
 
-TEST (Library_Core_Types_Integer, Uint16)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Uint16)
 {
 
     using ostk::core::types::Integer ;
@@ -2999,7 +2999,7 @@ TEST (Library_Core_Types_Integer, Uint16)
 
 }
 
-TEST (Library_Core_Types_Integer, Uint32)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Uint32)
 {
 
     using ostk::core::types::Integer ;
@@ -3040,7 +3040,7 @@ TEST (Library_Core_Types_Integer, Uint32)
 
 }
 
-TEST (Library_Core_Types_Integer, Uint64)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Uint64)
 {
 
     using ostk::core::types::Integer ;
@@ -3086,7 +3086,7 @@ TEST (Library_Core_Types_Integer, Uint64)
 
 }
 
-TEST (Library_Core_Types_Integer, Index)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Index)
 {
 
     using ostk::core::types::Index ;
@@ -3107,7 +3107,7 @@ TEST (Library_Core_Types_Integer, Index)
 
 }
 
-TEST (Library_Core_Types_Integer, Size)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Size)
 {
 
     using ostk::core::types::Size ;
@@ -3128,7 +3128,7 @@ TEST (Library_Core_Types_Integer, Size)
 
 }
 
-TEST (Library_Core_Types_Integer, CanParse)
+TEST (OpenSpaceToolkit_Core_Types_Integer, CanParse)
 {
 
     using ostk::core::types::Integer ;
@@ -3178,7 +3178,7 @@ TEST (Library_Core_Types_Integer, CanParse)
 
 }
 
-TEST (Library_Core_Types_Integer, Parse)
+TEST (OpenSpaceToolkit_Core_Types_Integer, Parse)
 {
 
     using ostk::core::types::Integer ;
