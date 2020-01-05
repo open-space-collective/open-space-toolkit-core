@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           docker/development/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -10,7 +10,7 @@
 ARG BASE_IMAGE_VERSION=latest
 ARG BASE_IMAGE_SYSTEM=debian
 
-FROM openspacecollective/library-base:${BASE_IMAGE_VERSION}-${BASE_IMAGE_SYSTEM}
+FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}-${BASE_IMAGE_SYSTEM}
 
 LABEL maintainer="lucas@loftorbital.com"
 

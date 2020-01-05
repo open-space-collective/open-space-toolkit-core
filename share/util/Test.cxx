@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library ▸ Core
+/// @project        Open Space Toolkit ▸ Core
 /// @file           Test.cxx
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Logger.hpp>
+#include <OpenSpaceToolkit/Core/Logger.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -54,9 +54,9 @@ int                             main                                        ( )
 
     LOG_SCOPE("Test") ;
 
-    using library::core::types::Integer ;
-    using library::core::Logger ;
-    using library::core::logger::Severity ;
+    using ostk::core::types::Integer ;
+    using ostk::core::Logger ;
+    using ostk::core::logger::Severity ;
 
     Logger logger = Logger::Console(Severity::Info) ;
 

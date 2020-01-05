@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           bindings/python/CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -9,10 +9,10 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryCorePy")
-SET (PROJECT_DESCRIPTION "Python bindings for Library / Core.")
-SET (PROJECT_PACKAGE_NAME "LibraryCorePy")
-SET (PROJECT_GROUP "library")
+SET (PROJECT_NAME "OpenSpaceToolkitCorePy")
+SET (PROJECT_DESCRIPTION "Python bindings for Open Space Toolkit / Core.")
+SET (PROJECT_PACKAGE_NAME "OpenSpaceToolkitCorePy")
+SET (PROJECT_GROUP "ostk")
 SET (PROJECT_SUBGROUP "core")
 SET (PROJECT_PATH "${PROJECT_GROUP}/${PROJECT_SUBGROUP}")
 SET (PROJECT_LICENSE "Apache License 2.0")
@@ -139,7 +139,7 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_GROUP}/__init__.py"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
                     COMMAND cp "/usr/local/lib/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-core.so.0"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}

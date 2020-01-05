@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -9,10 +9,10 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryCore")
+SET (PROJECT_NAME "OpenSpaceToolkitCore")
 SET (PROJECT_DESCRIPTION "Core library.")
-SET (PROJECT_PATH "Library/Core")
-SET (PROJECT_PACKAGE_NAME "library-core")
+SET (PROJECT_PATH "OpenSpaceToolkit/Core")
+SET (PROJECT_PACKAGE_NAME "open-space-toolkit-core")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "org.open-space-collective")
 SET (PROJECT_VENDOR_NAME "Open Space Collective")

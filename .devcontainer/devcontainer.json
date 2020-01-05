@@ -1,11 +1,11 @@
 {
-    "name": "Library Core",
+    "name": "Open Space Toolkit Core",
     "extensions": [
         "ms-vscode.cpptools",
         "ms-python.python",
         "mhutchie.git-graph"
     ],
-    "image": "openspacecollective/library-core-development:latest-debian",
+    "image": "openspacecollective/open-space-toolkit-core-development:latest-debian",
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},

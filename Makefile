@@ -1,13 +1,13 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Open Space Toolkit ▸ Core
 # @file           Makefile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-export project_name := library-core
+export project_name := open-space-toolkit-core
 export project_version := $(shell git describe --tags --always)
 export project_directory := $(shell git rev-parse --show-toplevel)
 
@@ -444,7 +444,7 @@ _test-unit-python: _build-release-image-python
 
 	docker run \
 	--rm \
-	--workdir=/usr/local/lib/python3.7/site-packages/library/core \
+	--workdir=/usr/local/lib/python3.7/site-packages/ostk/core \
 	--entrypoint="" \
 	$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "pip install pytest && pytest -sv ."
