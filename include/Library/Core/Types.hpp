@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types.hpp
+/// @file           OpenSpaceToolkit/Core/Types.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,15 +10,15 @@
 #ifndef __OpenSpaceToolkit_Core_Types__
 #define __OpenSpaceToolkit_Core_Types__
 
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/Real.hpp>
-#include <Library/Core/Types/Shared.hpp>
-#include <Library/Core/Types/Sign.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Unique.hpp>
-#include <Library/Core/Types/Weak.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/Shared.hpp>
+#include <OpenSpaceToolkit/Core/Types/Sign.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Types/Weak.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

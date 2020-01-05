@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Error/Runtime/ToBeImplemented.hpp
+/// @file           OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,8 +10,8 @@
 #ifndef __OpenSpaceToolkit_Core_Error_Runtime_ToBeImplemented__
 #define __OpenSpaceToolkit_Core_Error_Runtime_ToBeImplemented__
 
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Error/RuntimeError.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

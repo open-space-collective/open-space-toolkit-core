@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Error/Exception.hpp
+/// @file           OpenSpaceToolkit/Core/Error/Exception.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,7 +10,7 @@
 #ifndef __OpenSpaceToolkit_Core_Error_Exception__
 #define __OpenSpaceToolkit_Core_Error_Exception__
 
-#include <Library/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 #include <exception>
 

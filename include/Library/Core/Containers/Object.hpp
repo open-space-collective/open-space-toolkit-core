@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Object.hpp
+/// @file           OpenSpaceToolkit/Core/Containers/Object.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,14 +10,14 @@
 #ifndef __OpenSpaceToolkit_Core_Containers_Object__
 #define __OpenSpaceToolkit_Core_Containers_Object__
 
-#include <Library/Core/FileSystem/File.hpp>
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Containers/Pair.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Real.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Pair.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
 
 #include <fstream>
 #include <ostream>

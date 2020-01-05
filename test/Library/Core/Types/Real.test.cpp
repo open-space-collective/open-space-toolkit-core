@@ -1,16 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/Real.test.cpp
+/// @file           OpenSpaceToolkit/Core/Types/Real.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Containers/Triple.hpp>
-#include <Library/Core/Containers/Pair.hpp>
-#include <Library/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Triple.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Pair.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
 #include <cmath>
 

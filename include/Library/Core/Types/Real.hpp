@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/Real.hpp
+/// @file           OpenSpaceToolkit/Core/Types/Real.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,9 +10,9 @@
 #ifndef __OpenSpaceToolkit_Core_Types_Real__
 #define __OpenSpaceToolkit_Core_Types_Real__
 
-#include <Library/Core/Types/Sign.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Sign.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

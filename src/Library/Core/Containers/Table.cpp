@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Table.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Table.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Table.hpp>
-#include <Library/Core/Error.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Table.hpp>
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 // #include <fast-cpp-csv-parser/csv.h>
 #include <rapidcsv/rapidcsv.h>

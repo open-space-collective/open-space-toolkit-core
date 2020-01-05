@@ -1,20 +1,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Object.test.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Object.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/FileSystem/File.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/Real.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Containers/Dictionary.hpp>
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Containers/Object.hpp>
-#include <Library/Core/Logger.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Dictionary.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Object.hpp>
+#include <OpenSpaceToolkit/Core/Logger.hpp>
 
 #include <Global.test.hpp>
 

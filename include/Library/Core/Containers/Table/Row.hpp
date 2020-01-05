@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Table/Row.hpp
+/// @file           OpenSpaceToolkit/Core/Containers/Table/Row.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,10 +10,10 @@
 #ifndef __OpenSpaceToolkit_Core_Containers_Table_Row__
 #define __OpenSpaceToolkit_Core_Containers_Table_Row__
 
-#include <Library/Core/Containers/Table/Cell.hpp>
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Table/Cell.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

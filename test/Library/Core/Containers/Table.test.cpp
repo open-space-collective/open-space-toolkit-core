@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Table.test.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Table.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Table.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Table.hpp>
 
 #include <Global.test.hpp>
 
@@ -840,7 +840,7 @@ TEST (Library_Core_Containers_Table, Load)
 
         const Table referenceTable = { header, rows } ;
 
-        const File file = File::Path(Path::Parse("/app/test/Library/Core/Containers/Table/A.csv")) ;
+        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Containers/Table/A.csv")) ;
 
         const Table table = Table::Load(file) ;
 
@@ -859,7 +859,7 @@ TEST (Library_Core_Containers_Table, Load)
 
         const Table referenceTable = { header, rows } ;
 
-        const File file = File::Path(Path::Parse("/app/test/Library/Core/Containers/Table/B.csv")) ;
+        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Containers/Table/B.csv")) ;
 
         const Table table = Table::Load(file) ;
 

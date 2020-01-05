@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Logger/Pump.hpp
+/// @file           OpenSpaceToolkit/Core/Logger/Pump.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,11 +10,11 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Pump__
 #define __OpenSpaceToolkit_Core_Logger_Pump__
 
-#include <Library/Core/Types/Unique.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Logger/Severity.hpp>
-#include <Library/Core/Logger/Source.hpp>
+#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Source.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -20,8 +20,8 @@ Include order from specific to generic:
 ```cpp
 #include <Library/Astrodynamics/Orbit.hpp>
 
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 #include <map>
 #include <string>

@@ -1,18 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Dictionary.test.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Dictionary.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Dictionary.hpp>
-#include <Library/Core/Containers/Object.hpp>
-#include <Library/Core/Types/Real.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Dictionary.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Object.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
 
 #include <Global.test.hpp>
 

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Logger.hpp
+/// @file           OpenSpaceToolkit/Core/Logger.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,13 +10,13 @@
 #ifndef __OpenSpaceToolkit_Core_Logger__
 #define __OpenSpaceToolkit_Core_Logger__
 
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Logger/Severity.hpp>
-#include <Library/Core/Logger/Source.hpp>
-#include <Library/Core/Logger/Sink.hpp>
-#include <Library/Core/Logger/Pump.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Source.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Sink.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Pump.hpp>
 
 #include <boost/log/attributes.hpp>
 

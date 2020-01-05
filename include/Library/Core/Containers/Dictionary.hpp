@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Dictionary.hpp
+/// @file           OpenSpaceToolkit/Core/Containers/Dictionary.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,12 +10,12 @@
 #ifndef __OpenSpaceToolkit_Core_Containers_Dictionary__
 #define __OpenSpaceToolkit_Core_Containers_Dictionary__
 
-#include <Library/Core/FileSystem/File.hpp>
-#include <Library/Core/Containers/List.hpp>
-#include <Library/Core/Containers/OrderedMap.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Containers/Object.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Containers/List.hpp>
+#include <OpenSpaceToolkit/Core/Containers/OrderedMap.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Object.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Triple.hpp
+/// @file           OpenSpaceToolkit/Core/Containers/Triple.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,10 +10,10 @@
 #ifndef __OpenSpaceToolkit_Core_Containers_Triple__
 #define __OpenSpaceToolkit_Core_Containers_Triple__
 
-#include <Library/Core/Containers/Tuple.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Tuple.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
 
 #include <utility>
 #include <ostream>
@@ -60,7 +60,7 @@ Triple<T,U,V>                   make_triple                                (    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Triple.tpp>
+#include <OpenSpaceToolkit/Core/Containers/Triple.tpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/String.test.cpp
+/// @file           OpenSpaceToolkit/Core/Types/String.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Real.hpp>
-#include <Library/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
 #include <Global.test.hpp>
 

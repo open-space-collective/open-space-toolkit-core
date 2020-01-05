@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Tuple.test.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Tuple.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Tuple.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Tuple.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
 #include <Global.test.hpp>
 

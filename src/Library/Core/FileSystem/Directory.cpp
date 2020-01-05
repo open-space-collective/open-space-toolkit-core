@@ -1,16 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/FileSystem/Directory.cpp
+/// @file           OpenSpaceToolkit/Core/FileSystem/Directory.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
-#include <Library/Core/Error.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 #include <boost/filesystem.hpp>
 

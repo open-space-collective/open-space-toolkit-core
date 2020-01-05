@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Error/RuntimeError.hpp
+/// @file           OpenSpaceToolkit/Core/Error/RuntimeError.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,8 +10,8 @@
 #ifndef __OpenSpaceToolkit_Core_Error_RuntimeError__
 #define __OpenSpaceToolkit_Core_Error_RuntimeError__
 
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Error/Exception.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Error/Exception.hpp>
 
 #include <stdexcept>
 

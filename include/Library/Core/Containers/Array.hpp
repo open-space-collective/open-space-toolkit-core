@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Array.hpp
+/// @file           OpenSpaceToolkit/Core/Containers/Array.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,10 +10,10 @@
 #ifndef __OpenSpaceToolkit_Core_Containers_Array__
 #define __OpenSpaceToolkit_Core_Containers_Array__
 
-#include <Library/Core/Containers/Iterators/Zip.hpp>
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Iterators/Zip.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 #include <functional>
 #include <vector>
@@ -446,7 +446,7 @@ class Array : public std::vector<T>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Array.tpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.tpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

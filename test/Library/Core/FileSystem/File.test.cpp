@@ -1,14 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/FileSystem/File.test.cpp
+/// @file           OpenSpaceToolkit/Core/FileSystem/File.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/FileSystem/Directory.hpp>
-#include <Library/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
 #include <Global.test.hpp>
 

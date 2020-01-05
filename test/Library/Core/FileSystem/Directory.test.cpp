@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/FileSystem/Directory.test.cpp
+/// @file           OpenSpaceToolkit/Core/FileSystem/Directory.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
 #include <Global.test.hpp>
 
@@ -184,7 +184,7 @@ TEST (Library_Core_FileSystem_Directory, ContainsFileWithName)
 
     {
 
-        const Directory directory = Directory::Path(Path::Parse("/app/include/Library/Core")) ;
+        const Directory directory = Directory::Path(Path::Parse("/app/include/OpenSpaceToolkit/Core")) ;
 
         EXPECT_TRUE(directory.containsFileWithName("Error.hpp")) ;
         EXPECT_TRUE(directory.containsFileWithName("Utilities.hpp")) ;

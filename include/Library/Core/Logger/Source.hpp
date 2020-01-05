@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Logger/Source.hpp
+/// @file           OpenSpaceToolkit/Core/Logger/Source.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,9 +10,9 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Source__
 #define __OpenSpaceToolkit_Core_Logger_Source__
 
-#include <Library/Core/Types/Unique.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Logger/Sources/Source.hpp>
+#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Sources/Source.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

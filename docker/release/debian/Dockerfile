@@ -43,7 +43,7 @@ COPY --from=cpp-builder /usr/local/lib/libopen-space-toolkit-core.* /usr/local/l
 COPY --from=cpp-builder /usr/local/share/Library /usr/local/share/Library
 COPY --from=cpp-builder /usr/local/test/Library /usr/local/test/Library
 
-ENTRYPOINT ["/usr/local/test/Library/Core/open-space-toolkit-core.test"]
+ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"]
 
 ################################################################################################################################################################
 

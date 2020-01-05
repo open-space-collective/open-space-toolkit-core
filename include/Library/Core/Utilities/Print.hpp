@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Utilities/Print.hpp
+/// @file           OpenSpaceToolkit/Core/Utilities/Print.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,7 +10,7 @@
 #ifndef __OpenSpaceToolkit_Core_Utilities_Print__
 #define __OpenSpaceToolkit_Core_Utilities_Print__
 
-#include <Library/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 #include <iomanip>
 #include <ostream>

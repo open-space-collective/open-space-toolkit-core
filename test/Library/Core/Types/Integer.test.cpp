@@ -1,18 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/Integer.test.cpp
+/// @file           OpenSpaceToolkit/Core/Types/Integer.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Containers/Triple.hpp>
-#include <Library/Core/Containers/Pair.hpp>
-#include <Library/Core/Types/Integer.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Triple.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Pair.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
 
 #include <Global.test.hpp>
 

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/FileSystem.hpp
+/// @file           OpenSpaceToolkit/Core/FileSystem.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,11 +10,11 @@
 #ifndef __OpenSpaceToolkit_Core_FileSystem__
 #define __OpenSpaceToolkit_Core_FileSystem__
 
-#include <Library/Core/FileSystem/SymbolicLink.hpp>
-#include <Library/Core/FileSystem/Directory.hpp>
-#include <Library/Core/FileSystem/File.hpp>
-#include <Library/Core/FileSystem/Path.hpp>
-#include <Library/Core/FileSystem/PermissionSet.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/SymbolicLink.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

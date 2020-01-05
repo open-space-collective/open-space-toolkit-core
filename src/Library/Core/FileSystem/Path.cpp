@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/FileSystem/Path.cpp
+/// @file           OpenSpaceToolkit/Core/FileSystem/Path.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/FileSystem/Path.hpp>
-#include <Library/Core/Error.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 #include <boost/filesystem.hpp>
 #include <boost/range/iterator_range.hpp>

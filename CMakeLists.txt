@@ -11,7 +11,7 @@
 
 SET (PROJECT_NAME "LibraryCore")
 SET (PROJECT_DESCRIPTION "Core library.")
-SET (PROJECT_PATH "Library/Core")
+SET (PROJECT_PATH "OpenSpaceToolkit/Core")
 SET (PROJECT_PACKAGE_NAME "open-space-toolkit-core")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "org.open-space-collective")

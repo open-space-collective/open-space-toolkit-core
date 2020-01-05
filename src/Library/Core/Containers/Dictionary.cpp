@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Containers/Dictionary.cpp
+/// @file           OpenSpaceToolkit/Core/Containers/Dictionary.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <Library/Core/Containers/Dictionary.hpp>
-#include <Library/Core/Logger.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Dictionary.hpp>
+#include <OpenSpaceToolkit/Core/Logger.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 #include <tsl/ordered_map.h>
 

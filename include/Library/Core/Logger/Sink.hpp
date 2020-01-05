@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Logger/Sink.hpp
+/// @file           OpenSpaceToolkit/Core/Logger/Sink.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,10 +10,10 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Sink__
 #define __OpenSpaceToolkit_Core_Logger_Sink__
 
-#include <Library/Core/Types/Unique.hpp>
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Logger/Severity.hpp>
-#include <Library/Core/Logger/Sinks/Sink.hpp>
+#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Sinks/Sink.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

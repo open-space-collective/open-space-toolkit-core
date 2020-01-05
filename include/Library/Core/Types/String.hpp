@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/String.hpp
+/// @file           OpenSpaceToolkit/Core/Types/String.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,8 +10,8 @@
 #ifndef __OpenSpaceToolkit_Core_Types_String__
 #define __OpenSpaceToolkit_Core_Types_String__
 
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
 
 #define FMT_HEADER_ONLY
 #include <fmt/format.h>

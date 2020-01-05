@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/Integer.hpp
+/// @file           OpenSpaceToolkit/Core/Types/Integer.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,10 +10,10 @@
 #ifndef __OpenSpaceToolkit_Core_Types_Integer__
 #define __OpenSpaceToolkit_Core_Types_Integer__
 
-#include <Library/Core/Types/Sign.hpp>
-#include <Library/Core/Types/Index.hpp>
-#include <Library/Core/Types/Size.hpp>
-#include <Library/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Sign.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 #include <ostream>
 

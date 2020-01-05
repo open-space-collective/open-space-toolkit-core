@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           Library/Core/Types/ByteArray.hpp
+/// @file           OpenSpaceToolkit/Core/Types/ByteArray.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,8 +10,8 @@
 #ifndef __OpenSpaceToolkit_Core_Types_ByteArray__
 #define __OpenSpaceToolkit_Core_Types_ByteArray__
 
-#include <Library/Core/Types/Array.hpp>
-#include <Library/Core/Types/Byte.hpp>
+#include <OpenSpaceToolkit/Core/Types/Array.hpp>
+#include <OpenSpaceToolkit/Core/Types/Byte.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
