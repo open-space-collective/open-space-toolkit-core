@@ -1,19 +1,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Types.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <LibraryCorePy/Types/String.cpp>
-#include <LibraryCorePy/Types/Real.cpp>
-#include <LibraryCorePy/Types/Integer.cpp>
+#include <OpenSpaceToolkitCorePy/Types/String.cpp>
+#include <OpenSpaceToolkitCorePy/Types/Real.cpp>
+#include <OpenSpaceToolkitCorePy/Types/Integer.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryCorePy_Types                         ( )
+inline void                     OpenSpaceToolkitCorePy_Types                         ( )
 {
 
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.types")))) ;
@@ -22,9 +22,9 @@ inline void                     LibraryCorePy_Types                         ( )
 
     boost::python::scope scope = module ;
 
-    LibraryCorePy_Types_Integer() ;
-    LibraryCorePy_Types_Real() ;
-    LibraryCorePy_Types_String() ;
+    OpenSpaceToolkitCorePy_Types_Integer() ;
+    OpenSpaceToolkitCorePy_Types_Real() ;
+    OpenSpaceToolkitCorePy_Types_String() ;
 
 }
 

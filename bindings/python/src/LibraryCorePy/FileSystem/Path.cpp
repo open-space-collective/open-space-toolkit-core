@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/FileSystem/Path.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/FileSystem/Path.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryCorePy_FileSystem_Path               ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_Path               ( )
 {
 
     using namespace boost::python ;

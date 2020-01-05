@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Types/String.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/String.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -14,7 +14,7 @@
 
 // http://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/faq/how_can_i_automatically_convert_.html
 
-inline void                     LibraryCorePy_Types_String                  ( )
+inline void                     OpenSpaceToolkitCorePy_Types_String                  ( )
 {
 
     using namespace boost::python ;

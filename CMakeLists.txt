@@ -9,7 +9,7 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryCore")
+SET (PROJECT_NAME "OpenSpaceToolkitCore")
 SET (PROJECT_DESCRIPTION "Core library.")
 SET (PROJECT_PATH "OpenSpaceToolkit/Core")
 SET (PROJECT_PACKAGE_NAME "open-space-toolkit-core")

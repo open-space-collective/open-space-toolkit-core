@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Containers/Array.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers/Array.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -126,7 +126,7 @@ struct IterableConverter
 
 } ;
 
-inline void                     LibraryCorePy_Containers_Array              ( )
+inline void                     OpenSpaceToolkitCorePy_Containers_Array              ( )
 {
 
     using namespace boost::python ;

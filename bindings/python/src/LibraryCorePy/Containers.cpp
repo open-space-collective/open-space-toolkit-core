@@ -1,17 +1,17 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Containers.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <LibraryCorePy/Containers/Array.cpp>
+#include <OpenSpaceToolkitCorePy/Containers/Array.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryCorePy_Containers                    ( )
+inline void                     OpenSpaceToolkitCorePy_Containers                    ( )
 {
 
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("library.core.containers")))) ;
@@ -20,7 +20,7 @@ inline void                     LibraryCorePy_Containers                    ( )
 
     boost::python::scope scope = module ;
 
-    LibraryCorePy_Containers_Array() ;
+    OpenSpaceToolkitCorePy_Containers_Array() ;
 
 }
 

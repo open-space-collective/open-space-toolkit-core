@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy.cxx
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy.cxx
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -9,22 +9,22 @@
 
 #include <boost/python.hpp>
 
-#include <LibraryCorePy/FileSystem.cpp>
-#include <LibraryCorePy/Containers.cpp>
-#include <LibraryCorePy/Types.cpp>
+#include <OpenSpaceToolkitCorePy/FileSystem.cpp>
+#include <OpenSpaceToolkitCorePy/Containers.cpp>
+#include <OpenSpaceToolkitCorePy/Types.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (LibraryCorePy)
+BOOST_PYTHON_MODULE (OpenSpaceToolkitCorePy)
 {
 
     boost::python::object package = boost::python::scope() ;
 
     package.attr("__path__") = "library" ;
 
-    LibraryCorePy_Types() ;
-    LibraryCorePy_Containers() ;
-    LibraryCorePy_FileSystem() ;
+    OpenSpaceToolkitCorePy_Types() ;
+    OpenSpaceToolkitCorePy_Containers() ;
+    OpenSpaceToolkitCorePy_FileSystem() ;
 
 }
 

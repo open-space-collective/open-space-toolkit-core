@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Types/Integer.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Integer.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryCorePy_Types_Integer                 ( )
+inline void                     OpenSpaceToolkitCorePy_Types_Integer                 ( )
 {
 
     using namespace boost::python ;

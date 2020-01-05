@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/LibraryCorePy/Types/Real.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Real.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -15,7 +15,7 @@ BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (Real_toString_overloads, ostk::core::typ
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryCorePy_Types_Real                    ( )
+inline void                     OpenSpaceToolkitCorePy_Types_Real                    ( )
 {
 
     using namespace boost::python ;

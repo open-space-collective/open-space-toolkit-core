@@ -9,9 +9,9 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryCorePy")
+SET (PROJECT_NAME "OpenSpaceToolkitCorePy")
 SET (PROJECT_DESCRIPTION "Python bindings for Open Space Toolkit / Core.")
-SET (PROJECT_PACKAGE_NAME "LibraryCorePy")
+SET (PROJECT_PACKAGE_NAME "OpenSpaceToolkitCorePy")
 SET (PROJECT_GROUP "library")
 SET (PROJECT_SUBGROUP "core")
 SET (PROJECT_PATH "${PROJECT_GROUP}/${PROJECT_SUBGROUP}")
