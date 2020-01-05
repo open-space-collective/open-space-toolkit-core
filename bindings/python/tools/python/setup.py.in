@@ -27,7 +27,7 @@ setuptools.setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: POSIX :: Linux"
     ],
-    keywords="open-space-collective core",
+    keywords="open-space-collective open-space-toolkit core",
     packages=setuptools.find_packages(),
     package_data = {
         '': [
