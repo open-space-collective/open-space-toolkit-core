@@ -38,10 +38,10 @@ FROM fedora:30 as cpp-release
 
 ENV LD_LIBRARY_PATH /usr/local/lib
 
-COPY --from=cpp-builder /usr/local/include/Library /usr/local/include/Library
+COPY --from=cpp-builder /usr/local/include/OpenSpaceToolkit /usr/local/include/OpenSpaceToolkit
 COPY --from=cpp-builder /usr/local/lib/libopen-space-toolkit-core.* /usr/local/lib/
-COPY --from=cpp-builder /usr/local/share/Library /usr/local/share/Library
-COPY --from=cpp-builder /usr/local/test/Library /usr/local/test/Library
+COPY --from=cpp-builder /usr/local/share/OpenSpaceToolkit /usr/local/share/OpenSpaceToolkit
+COPY --from=cpp-builder /usr/local/test/OpenSpaceToolkit /usr/local/test/OpenSpaceToolkit
 
 ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"]
 
@@ -63,7 +63,7 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.7/site-packages/library /usr/local/lib/python3.7/site-packages/library
+COPY --from=python-builder /usr/local/lib/python3.7/site-packages/ostk /usr/local/lib/python3.7/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
 
