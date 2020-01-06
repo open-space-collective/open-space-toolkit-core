@@ -496,7 +496,6 @@ deploy-images:
 
 	@ make deploy-development-images
 	@ make deploy-release-images
-	@ make deploy-release-image-jupyter
 
 deploy-development-images:
 
@@ -518,6 +517,8 @@ deploy-release-images:
 
 	@ make _deploy-release-images target=debian
 	@ make _deploy-release-images target=fedora
+
+	@ make deploy-release-image-jupyter
 
 _deploy-release-images: _build-release-image-cpp _build-release-image-python
 
