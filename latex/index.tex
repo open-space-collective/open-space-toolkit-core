@@ -1,10 +1,88 @@
-Common types, containers and utilities.
-
 \href{https://travis-ci.com/open-space-collective/open-space-toolkit-core}{\tt } \href{https://codecov.io/gh/open-space-collective/open-space-toolkit-core}{\tt } \href{https://open-space-collective.github.io/open-space-toolkit-core}{\tt } \href{https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core}{\tt } \href{https://badge.fury.io/py/open-space-toolkit-core}{\tt } \href{https://opensource.org/licenses/Apache-2.0}{\tt }
+
+Common types, containers and utilities.
 
 \subsection*{Warning}
 
 {\itshape ⚠ This component is under development.}
+
+\subsection*{Installation}
+
+\subsubsection*{C++}
+
+The binary packages are hosted using \href{https://github.com/open-space-collective/open-space-toolkit-core/releases}{\tt Git\+Hub Releases}.
+
+{\itshape Note\+: Don\textquotesingle{}t forget to set the desired version number in the U\+R\+Ls!}
+
+\paragraph*{Debian / Ubuntu}
+
+
+\begin{DoxyCode}
+# Download .deb packages
+
+wget
+       https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86\_64-runtime.deb
+wget
+       https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86\_64-devel.deb
+
+# Install .deb packages
+
+apt install -y open-space-toolkit-core-0.3.0-*.deb
+\end{DoxyCode}
+
+
+\paragraph*{Fedora / Cent\+OS}
+
+
+\begin{DoxyCode}
+# Download .rpm packages
+
+wget
+       https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86\_64-runtime.rpm
+wget
+       https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86\_64-devel.rpm
+
+# Install .rpm packages
+
+dnf install -y open-space-toolkit-core-0.3.0-*.rpm
+\end{DoxyCode}
+
+
+\subsubsection*{Python}
+
+The binary packages are hosted on \href{https://pypi.org/project/open-space-toolkit-core/}{\tt Py\+PI}\+:
+
+
+\begin{DoxyCode}
+pip install open-space-toolkit-core
+\end{DoxyCode}
+
+
+\subsection*{Getting Started}
+
+Want to quickly get started? It\textquotesingle{}s pretty simple.
+
+Install \href{https://www.docker.com/}{\tt Docker} and try this\+:
+
+
+\begin{DoxyCode}
+docker run -it openspacecollective/open-space-toolkit-core-python
+\end{DoxyCode}
+
+
+This will start an \href{https://ipython.org/}{\tt i\+Python} shell within a container where the O\+S\+Tk Core component is already installed.
+
+Once the shell is up and running, playing with it is easy\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{from} ostk.core.filesystem \textcolor{keyword}{import} Directory \textcolor{comment}{# Directory class}
+
+Directory.root().is\_empty() \textcolor{comment}{# True if the root directory is empty}
+\end{DoxyCode}
+
+
+{\itshape Tip\+: Use tab for auto-\/completion!}
 
 \subsection*{Structure}
 
