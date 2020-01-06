@@ -51,7 +51,7 @@ dnf install -y open-space-toolkit-core-0.3.0-*.rpm
 
 The binary packages are hosted on [PyPI](https://pypi.org/project/open-space-toolkit-core/):
 
-```py
+```bash
 pip install open-space-toolkit-core
 ```
 
