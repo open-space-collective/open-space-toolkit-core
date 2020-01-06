@@ -1,4 +1,4 @@
-# Open Space Toolkit ▸ Core ▸ Bindings ▸ Python
+# Open Space Toolkit ▸ Core
 
 Common types, containers and utilities.
 
@@ -9,4 +9,4 @@ Common types, containers and utilities.
 [![PyPI version](https://badge.fury.io/py/open-space-toolkit-core.svg)](https://badge.fury.io/py/open-space-toolkit-core)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[Open Space Toolkit ▸ Core](https://github.com/open-space-collective/open-space-toolkit-core)
+[GitHub](https://github.com/open-space-collective/open-space-toolkit-core)
