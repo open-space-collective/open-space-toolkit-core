@@ -432,7 +432,7 @@ _test-unit-cpp: _build-development-image
 	--volume="/app/build" \
 	--workdir=/app/build \
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
-	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j && make test"
+	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON .. && make -j 4 && make test"
 
 test-unit-python-debian: target := debian
 test-unit-python-fedora: target := fedora
