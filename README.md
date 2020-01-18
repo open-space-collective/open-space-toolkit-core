@@ -5,7 +5,6 @@
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-core)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core)
 [![PyPI version](https://badge.fury.io/py/open-space-toolkit-core.svg)](https://badge.fury.io/py/open-space-toolkit-core)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit-core/master?urlpath=lab/tree/tutorials%2Fpython%2Fnotebooks)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Common types, containers and utilities.
@@ -14,59 +13,27 @@ Common types, containers and utilities.
 
 *⚠ This component is under development.*
 
-## Installation
-
-### C++
-
-The binary packages are hosted using [GitHub Releases](https://github.com/open-space-collective/open-space-toolkit-core/releases).
-
-*Note: Don't forget to set the desired version number in the URLs!*
-
-#### Debian / Ubuntu
-
-```bash
-# Download .deb packages
-
-wget https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86_64-runtime.deb
-wget https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86_64-devel.deb
-
-# Install .deb packages
-
-apt install -y open-space-toolkit-core-0.3.0-*.deb
-```
-
-#### Fedora / CentOS
-
-```bash
-# Download .rpm packages
-
-wget https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86_64-runtime.rpm
-wget https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.3.0/open-space-toolkit-core-0.3.0-1.x86_64-devel.rpm
-
-# Install .rpm packages
-
-dnf install -y open-space-toolkit-core-0.3.0-*.rpm
-```
-
-### Python
-
-The binary packages are hosted on [PyPI](https://pypi.org/project/open-space-toolkit-core/):
-
-```bash
-pip install open-space-toolkit-core
-```
-
 ## Getting Started
 
-Want to quickly get started? It's pretty simple.
+Want to get started? This is the simplest and quickest way:
 
-Install [Docker](https://www.docker.com/) and try this:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/master?urlpath=lab/tree/notebooks)
+
+*Nothing to download or install! This will automatically start a [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.*
+
+### Alternatives
+
+#### Docker Images
+
+[Docker](https://www.docker.com/) must be installed on your system.
+
+##### iPython
+
+The following command will start an [iPython](https://ipython.org/) shell within a container where the OSTk components are already installed:
 
 ```bash
 docker run -it openspacecollective/open-space-toolkit-core-python
 ```
-
-This will start an [iPython](https://ipython.org/) shell within a container where the OSTk Core component is already installed.
 
 Once the shell is up and running, playing with it is easy:
 
@@ -77,6 +44,50 @@ Directory.root().is_empty() # True if the root directory is empty
 ```
 
 *Tip: Use tab for auto-completion!*
+
+##### JupyterLab
+
+The following command will start a [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) server within a container where the OSTk components are already installed:
+
+```bash
+docker run --publish=8888:8888 openspacecollective/open-space-toolkit-core-jupyter
+```
+
+Once the container is running, access [http://localhost:8888/lab](http://localhost:8888/lab) and create a Python 3 Notebook.
+
+## Installation
+
+### C++
+
+The binary packages are hosted using [GitHub Releases](https://github.com/open-space-collective/open-space-toolkit-core/releases):
+
+- Runtime libraries: `open-space-toolkit-core-X.Y.Z-1.x86_64-runtime`
+- C++ headers: `open-space-toolkit-core-X.Y.Z-1.x86_64-devel`
+- Python bindings: `open-space-toolkit-core-X.Y.Z-1.x86_64-python`
+
+#### Debian / Ubuntu
+
+After downloading the relevant `.deb` binary packages, install:
+
+```bash
+apt install open-space-toolkit-core-*.deb
+```
+
+#### Fedora / CentOS
+
+After downloading the relevant `.rpm` binary packages, install:
+
+```bash
+dnf install open-space-toolkit-core-*.rpm
+```
+
+### Python
+
+Install from [PyPI](https://pypi.org/project/open-space-toolkit-core/):
+
+```bash
+pip install open-space-toolkit-core
+```
 
 ## Structure
 
