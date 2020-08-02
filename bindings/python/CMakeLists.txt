@@ -26,7 +26,7 @@ SET (PROJECT_VENDOR_URL "lucas.bremond.info")
 ## Project Options
 
 SET (BOOST_VERSION "1.69" CACHE STRING "Boost version.")
-SET (PYTHON_VERSION "python37" CACHE STRING "Python version.")
+SET (PYTHON_VERSION "python38" CACHE STRING "Python version.")
 
 ################################################################################################################################################################
 

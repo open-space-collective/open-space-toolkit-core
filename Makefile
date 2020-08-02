@@ -445,7 +445,7 @@ _test-unit-python: _build-release-image-python
 
 	docker run \
 	--rm \
-	--workdir=/usr/local/lib/python3.7/site-packages/ostk/core \
+	--workdir=/usr/local/lib/python3.8/site-packages/ostk/core \
 	--entrypoint="" \
 	$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "pip install pytest && pytest -sv ."
@@ -601,7 +601,7 @@ _deploy-packages-python: _build-packages-python
 	--volume="$(project_directory)/packages/python:/packages:ro" \
 	--env="TWINE_USERNAME=${PYPI_USERNAME}" \
 	--env="TWINE_PASSWORD=${PYPI_PASSWORD}" \
-	python:3.7-slim \
+	python:3.8-slim \
 	/bin/bash -c "pip install twine && python3 -m twine upload /packages/*"
 
 deploy-coverage-cpp-results: target := debian

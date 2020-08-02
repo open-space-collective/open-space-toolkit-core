@@ -63,7 +63,7 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.7/site-packages/ostk /usr/local/lib/python3.7/site-packages/ostk
+COPY --from=python-builder /usr/local/lib/python3.8/site-packages/ostk /usr/local/lib/python3.8/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
 
