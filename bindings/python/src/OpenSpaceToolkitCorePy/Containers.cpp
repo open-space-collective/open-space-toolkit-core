@@ -11,16 +11,21 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Containers                    ( )
+inline void                     OpenSpaceToolkitCorePy_Containers                    ( py::module&                       aModule )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.containers")))) ;
 
-    boost::python::scope().attr("containers") = module ;
+    auto containers = aModule.def_submodule("containers") ;
 
-    boost::python::scope scope = module ;
+    OpenSpaceToolkitCorePy_Types_Containers_Array(containers) ;
 
-    OpenSpaceToolkitCorePy_Containers_Array() ;
+    // boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.containers")))) ;
+
+    // boost::python::scope().attr("containers") = module ;
+
+    // boost::python::scope scope = module ;
+
+    // OpenSpaceToolkitCorePy_Containers_Array() ;
 
 }
 

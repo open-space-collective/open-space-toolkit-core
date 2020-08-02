@@ -15,19 +15,27 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem                    ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem                    (py::module&                       aModule)
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.filesystem")))) ;
+    auto filesystem = aModule.def_submodule("filesystem") ;
 
-    boost::python::scope().attr("filesystem") = module ;
+    OpenSpaceToolkitCorePy_FileSystem_PermissionSet(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_Path(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_File(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_Directory(filesystem) ;
 
-    boost::python::scope scope = module ;
 
-    OpenSpaceToolkitCorePy_FileSystem_PermissionSet() ;
-    OpenSpaceToolkitCorePy_FileSystem_Path() ;
-    OpenSpaceToolkitCorePy_FileSystem_File() ;
-    OpenSpaceToolkitCorePy_FileSystem_Directory() ;
+    // boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.filesystem")))) ;
+
+    // boost::python::scope().attr("filesystem") = module ;
+
+    // boost::python::scope scope = module ;
+
+    // OpenSpaceToolkitCorePy_FileSystem_PermissionSet() ;
+    // OpenSpaceToolkitCorePy_FileSystem_Path() ;
+    // OpenSpaceToolkitCorePy_FileSystem_File() ;
+    // OpenSpaceToolkitCorePy_FileSystem_Directory() ;
 
 }
 

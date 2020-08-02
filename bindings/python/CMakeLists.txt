@@ -23,13 +23,6 @@ SET (PROJECT_VENDOR_URL "lucas.bremond.info")
 
 ################################################################################################################################################################
 
-## Project Options
-
-SET (BOOST_VERSION "1.69" CACHE STRING "Boost version.")
-SET (PYTHON_VERSION "python37" CACHE STRING "Python version.")
-
-################################################################################################################################################################
-
 ## Setup
 
 ### Compatibility Check
@@ -54,53 +47,54 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
 ## Dependencies
 
-### Boost
+# SET (PYBIND11_FINDPYTHON ON)
+# find_package(Python3 COMPONENTS Interpreter Development)
 
-UNSET (Boost_USE_STATIC_LIBS CACHE)
-UNSET (Boost_USE_MULTITHREADED CACHE)
+# SET (PYBIND11_PYTHON_VERSION 3.8 CACHE STRING "")
 
-SET (BUILD_SHARED_LIBS ON)
-SET (Boost_USE_STATIC_LIBS OFF)
-SET (Boost_USE_MULTITHREADED ON)
+FIND_PACKAGE(pybind11 REQUIRED)
 
-FIND_PACKAGE ("Boost" ${BOOST_VERSION} REQUIRED COMPONENTS ${PYTHON_VERSION})
+#unset(PYTHONINTERP_FOUND CACHE)
+#unset(PYTHON_EXECUTABLE CACHE)
+#unset(PYTHON_VERSION_STRING CACHE)
+#unset(PYTHON_VERSION_MAJOR CACHE)
+#unset(PYTHON_VERSION_MINOR CACHE)
+#unset(PYTHON_VERSION_PATCH CACHE)
 
-IF (NOT Boost_FOUND)
-    MESSAGE (SEND_ERROR "[Boost ${BOOST_VERSION}] not found.")
-ENDIF ()
+#unset(PYBIND11_INCLUDE_DIR CACHE)
+#unset(PYTHON_INCLUDE_DIRS CACHE)
+#unset(PYTHON_LIBRARIES CACHE)
+#unset(PYTHON_MODULE_PREFIX CACHE)
+#unset(PYTHON_MODULE_EXTENSION CACHE)
+#unset(PYTHON_LIBRARY CACHE)
 
-### Python
+#SET (PYBIND11_PYTHON_VERSION 3.8)
+#find_package(PythonInterp "/usr/local/bin/python3.8")
+#find_package(PythonLibs "/usr/local/lib/libpython3.8.so")
+#SET (PYTHON_LIBRARY "/usr/local/lib/libpython3.8.so")
 
-FIND_PACKAGE ("Python3" COMPONENTS "Development")
-
-IF (NOT Python3_FOUND)
-    MESSAGE (SEND_ERROR "[Python 3] not found.")
-ENDIF ()
+#MESSAGE (WARNING ${PythonInterp})
+#MESSAGE (WARNING ${PythonLibs})
 
 ################################################################################################################################################################
 
 ## Target
 
 SET (LIBRARY_NAME ${PROJECT_PACKAGE_NAME})
-SET (LIBRARY_TARGET "${LIBRARY_NAME}.so")
+SET (LIBRARY_TARGET "${LIBRARY_NAME}")
 
 FILE (GLOB_RECURSE PROJECT_SRCS "${PROJECT_SOURCE_DIR}/src/*.cxx")
 
-ADD_LIBRARY (${LIBRARY_TARGET} SHARED ${PROJECT_SRCS})
+PYBIND11_ADD_MODULE (${LIBRARY_TARGET} ${PROJECT_SRCS})
 
-ADD_DEPENDENCIES (${LIBRARY_TARGET} ${SHARED_LIBRARY_TARGET})
-
-TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC ${PYTHON_INCLUDE_DIR})
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${CMAKE_SOURCE_DIR}/include")
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${CMAKE_SOURCE_DIR}/src")
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/include")
 TARGET_INCLUDE_DIRECTORIES (${LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Python3::Python")
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} "Boost::${PYTHON_VERSION}")
-TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} ${SHARED_LIBRARY_TARGET})
+TARGET_LINK_LIBRARIES (${LIBRARY_TARGET} PRIVATE ${SHARED_LIBRARY_TARGET})
 
-SET_TARGET_PROPERTIES ( ${LIBRARY_TARGET} PROPERTIES
+SET_TARGET_PROPERTIES (${LIBRARY_TARGET} PROPERTIES
                         VERSION ${PROJECT_VERSION_STRING}
                         SOVERSION ${PROJECT_VERSION_MAJOR}
                         OUTPUT_NAME ${PROJECT_PACKAGE_NAME}
@@ -113,7 +107,7 @@ INSTALL (TARGETS ${LIBRARY_TARGET} DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" 
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_GROUP}" COMPONENT "python")
 INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
 
-################################################################################################################################################################
+###############################################################################################################################################################
 
 FIND_PROGRAM (PYTHON "python3")
 
@@ -138,9 +132,8 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/test"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_GROUP}/__init__.py"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
-                    COMMAND cp "/usr/local/lib/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*.so" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                     DEPENDS ${DEPS})
@@ -149,10 +142,6 @@ ADD_CUSTOM_TARGET (${PACKAGE_TARGET} ALL DEPENDS ${OUTPUT})
 
 ADD_DEPENDENCIES (${PACKAGE_TARGET} ${LIBRARY_TARGET})
 
-# INSTALL (CODE "execute_process(COMMAND ${PYTHON} ${SETUP_PY} install)")
-
-################################################################################################################################################################
-
-ADD_CUSTOM_TARGET ("publish" COMMAND python3 -m twine upload "${CMAKE_CURRENT_BINARY_DIR}/dist/*" DEPENDS ${OUTPUT})
+INSTALL (CODE "execute_process(COMMAND ${PYTHON} ${SETUP_PY} install)")
 
 ################################################################################################################################################################

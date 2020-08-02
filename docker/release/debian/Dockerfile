@@ -47,7 +47,7 @@ ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"
 
 ################################################################################################################################################################
 
-FROM python:3.7-slim as python-builder
+FROM python:3.8-slim as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
@@ -55,13 +55,13 @@ RUN pip install /dist/*.whl
 
 ################################################################################################################################################################
 
-FROM python:3.7-slim as python-release
+FROM python:3.8-slim as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.7/site-packages/ostk /usr/local/lib/python3.7/site-packages/ostk
+COPY --from=python-builder /usr/local/lib/python3.8/site-packages/ostk /usr/local/lib/python3.8/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
 

@@ -48,10 +48,10 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/fmt
 
-## Rapidcsv [master]
+## Rapidcsv [6.11]
 
 RUN cd /tmp \
- && git clone https://github.com/d99kris/rapidcsv.git \
+ && git clone --branch v6.11 --depth 1 https://github.com/d99kris/rapidcsv.git \
  && cd rapidcsv \
  && mkdir -p /usr/local/include/rapidcsv \
  && cp src/*.h /usr/local/include/rapidcsv/ \

@@ -17,7 +17,7 @@ USER root
 
 # Install extensions
 
-RUN jupyter labextension install @jupyterlab/plotly-extension
+# RUN jupyter labextension install @jupyterlab/plotly-extension
 
 COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension
 
@@ -32,8 +32,8 @@ USER ${NB_UID}
 
 ENV JUPYTER_ENABLE_LAB yes
 
-ENV LD_LIBRARY_PATH "/usr/local/lib:/usr/lib/x86_64-linux-gnu:/opt/conda/lib/python3.7/site-packages:/home/jovyan/lib:/opt/conda/lib"
-ENV PYTHONPATH "/opt/conda/lib/python3.7/site-packages:/home/jovyan/lib"
+ENV LD_LIBRARY_PATH "/usr/local/lib:/usr/lib/x86_64-linux-gnu:/opt/conda/lib/python3.8/site-packages:/home/jovyan/lib:/opt/conda/lib"
+ENV PYTHONPATH "/opt/conda/lib/python3.8/site-packages:/home/jovyan/lib"
 
 RUN pip install open-space-toolkit-core
 
