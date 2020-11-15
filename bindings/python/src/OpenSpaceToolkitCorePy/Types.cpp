@@ -7,24 +7,34 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitCorePy/Types/String.cpp>
-#include <OpenSpaceToolkitCorePy/Types/Real.cpp>
+#include <pybind11/pybind11.h>
+
+// #include <OpenSpaceToolkitCorePy/Types/String.cpp>
+// #include <OpenSpaceToolkitCorePy/Types/Real.cpp>
 #include <OpenSpaceToolkitCorePy/Types/Integer.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types                         ( )
+namespace py = pybind11 ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+inline void                     OpenSpaceToolkitCorePy_Types                (           auto&                       aModule                                     )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.types")))) ;
+    auto types = aModule.def_submodule("types") ;
 
-    boost::python::scope().attr("types") = module ;
+    // py::module m("example", "pybind11 example plugin") ;
 
-    boost::python::scope scope = module ;
+    // boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.types")))) ;
 
-    OpenSpaceToolkitCorePy_Types_Integer() ;
-    OpenSpaceToolkitCorePy_Types_Real() ;
-    OpenSpaceToolkitCorePy_Types_String() ;
+    // boost::python::scope().attr("types") = module ;
+
+    // boost::python::scope scope = module ;
+
+    Integer(types) ;
+    // OpenSpaceToolkitCorePy_Types_Real() ;
+    // OpenSpaceToolkitCorePy_Types_String() ;
 
 }
 
