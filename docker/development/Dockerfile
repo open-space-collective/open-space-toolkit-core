@@ -57,6 +57,12 @@ RUN cd /tmp \
  && cp src/*.h /usr/local/include/rapidcsv/ \
  && rm -rf /tmp/rapidcsv
 
+## Python3.7 tools
+
+RUN apt-get -y update \
+ && apt-get -y install python3-pip \
+ && python3.7 -m pip install setuptools
+
 # Labels
 
 ARG VERSION

@@ -2,30 +2,32 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <pybind11/pybind11.h>
 
 #include <OpenSpaceToolkitCorePy/Containers/Array.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Containers                    ( py::module&                       aModule )
+namespace py = pybind11 ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+inline void                     OpenSpaceToolkitCorePy_Containers                     (          py::module&                     aModule                       )
 {
 
-
+    // Create "containers" python submodule
     auto containers = aModule.def_submodule("containers") ;
 
+    // Add __path__ attribute for "containers" submodule
+    containers.attr("__path__") = "ostk.core.containers" ;
+
+    // Add objects to python "containers" submodules
     OpenSpaceToolkitCorePy_Types_Containers_Array(containers) ;
-
-    // boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.containers")))) ;
-
-    // boost::python::scope().attr("containers") = module ;
-
-    // boost::python::scope scope = module ;
-
-    // OpenSpaceToolkitCorePy_Containers_Array() ;
 
 }
 

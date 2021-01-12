@@ -1,0 +1,5 @@
+# setup.cfg
+[bdist_wheel]
+python-tag=py${EXTENSION}
+
+# add other relevant tags...

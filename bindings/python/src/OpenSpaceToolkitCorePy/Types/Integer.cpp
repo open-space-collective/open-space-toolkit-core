@@ -2,7 +2,7 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Integer.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,26 +18,20 @@ namespace py = pybind11 ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types_Integer                                    (           py::module&                       aModule               )
+inline void                     OpenSpaceToolkitCorePy_Types_Integer                     (          py::module&                     aModule                    )
 {
-
-    // auto integer = aModule.def_submodule("integer") ; Not needed Integer in sublibraries types rn
 
     using ostk::core::types::Integer ;
     using ostk::core::types::Real ;
     using ostk::core::types::String ;
 
-    // py::class_<Pet>(aModule, "Pet")
-    //     .def(py::init<const std::string &>())
-    //     .def("setName", &Pet::setName)
-    //     .def("getName", &Pet::getName) ;
-
     py::class_<Integer>(aModule, "Integer")
 
+        // Define init method using pybind11 "init" convenience method
         .def(py::init<Integer::ValueType>())
-
         // .def(py::init<py::int_>())
 
+        // Define methods
         .def(py::self == py::self)
         .def(py::self != py::self)
         .def(py::self < py::self)
@@ -87,9 +81,10 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
         .def("get_sign", &Integer::getSign)
         .def("to_string", &Integer::toString)
 
-        // Substitution for implicitly_convertible not working in that direction
+        // Temporary substitution for implicitly_convertible not working in that direction
         .def("to_int", &Integer::toInt)
 
+        // Define static methods
         .def_static("undefined", &Integer::Undefined)
         .def_static("zero", &Integer::Zero)
         .def_static("positive_infinity", &Integer::PositiveInfinity)
@@ -109,10 +104,8 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
 
     ;
 
+    // Implicit conversion to be further investigated
     // py::implicitly_convertible<Integer::ValueType, Integer>() ;
-
-
-
 
 }
 

@@ -7,83 +7,125 @@
 
 ################################################################################################################################################################
 
-branches:
-  only:
-    - /^\d+\.\d+(\.\d+)?(-\S*)?$/
-    - master
-    - dev
+# branches:
+#   only:
+#     - /^\d+\.\d+(\.\d+)?(-\S*)?$/
+#     - master
+#     - dev
 
-os:
-  - linux
+# os:
+#   - linux
 
-sudo: false
+# sudo: false
 
-services:
-  - docker
+# services:
+#   - docker
 
-language: cpp
+# language: cpp
 
-env:
-  global:
-    - LANG="en_US.UTF-8"
+# env:
+#   global:
+#     - LANG="en_US.UTF-8"
 
-stages:
-  - build
-  - test
-  - name: deploy
-    if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
+# stages:
+#   - build
+#   - test
+#   - name: deploy
+#     if: tag =~ ^\d+\.\d+(\.\d+)?(-\S*)?$
 
-before_script:
-  - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+# before_script:
+#   - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+# jobs:
+#   include:
+#     - stage: build
+#       name: "Image Building"
+#       script:
+#         - make build-development-images
+#         - make deploy-development-images
+
+#     - stage: test
+#       name: "Unit Testing"
+#       script:
+#         - make test-unit-cpp-debian
+#         - make test-unit-python-debian
+
+    # - stage: test
+    #   name: "Coverage Analysis"
+    #   script:
+    #     - make deploy-coverage-cpp-results
+
+    # - stage: deploy
+    #   name: "Image Deployment"
+    #   script:
+    #     - make deploy-images
+
+    # - stage: deploy
+    #   name: "Documentation Deployment"
+    #   script:
+    #     - make deploy-documentation
+
+    # - stage: deploy
+    #   name: "Package Deployment"
+    #   script:
+    #     - make build-packages
+    #   before_deploy:
+    #     - echo "Deploying packages to GitHub Releases..."
+    #   deploy:
+    #     - provider: releases
+    #       api_key: ${GITHUB_API_KEY}
+    #       file_glob: true
+    #       file:
+    #         - ./packages/cpp/*
+    #         - ./packages/python/*
+    #       skip_cleanup: true
+    #       on:
+    #         branch: master
+    #         tags: true
+    #   after_deploy:
+    #     - echo "Deploying Python package to PyPI..."
+    #     - make deploy-packages-python
+
+
+# WIP part
+# https://github.com/joerick/cibuildwheel/blob/master/examples/travis-ci-deploy.yml
+# As written, this configuration will build your wheels on every
+# commit, but will only push to PyPI on tagged commits.
+
+language: python
 
 jobs:
   include:
-    - stage: build
-      name: "Image Building"
-      script:
-        - make build-development-images
-        - make deploy-development-images
+    # perform a linux build
+    - services: docker
+    # and a mac build
+    - os: osx
+      language: shell
+    # and a windows build
+    - os: windows
+      language: shell
+      before_install:
+        - choco install python --version 3.8.0
+        - export PATH="/c/Python38:/c/Python38/Scripts:$PATH"
+        # make sure it's on PATH as 'python3'
+        - ln -s /c/Python38/python.exe /c/Python38/python3.exe
 
-    - stage: test
-      name: "Unit Testing"
-      script:
-        - make test-unit-cpp-debian
-        - make test-unit-python-debian
+install:
+  - python3 -m pip install cibuildwheel==1.7.4
 
-    - stage: test
-      name: "Coverage Analysis"
-      script:
-        - make deploy-coverage-cpp-results
+script:
+  # build the wheels, put them into './wheelhouse'
+  - make build-packages-python
+  - cd bindings/python/
+  - python3 -m cibuildwheel --output-dir wheelhouse
 
-    - stage: deploy
-      name: "Image Deployment"
-      script:
-        - make deploy-images
-
-    - stage: deploy
-      name: "Documentation Deployment"
-      script:
-        - make deploy-documentation
-
-    - stage: deploy
-      name: "Package Deployment"
-      script:
-        - make build-packages
-      before_deploy:
-        - echo "Deploying packages to GitHub Releases..."
-      deploy:
-        - provider: releases
-          api_key: ${GITHUB_API_KEY}
-          file_glob: true
-          file:
-            - ./packages/cpp/*
-            - ./packages/python/*
-          skip_cleanup: true
-          on:
-            branch: master
-            tags: true
-      after_deploy:
-        - echo "Deploying Python package to PyPI..."
-        - make deploy-packages-python
+# deploy:
+#   provider: pypi
+#   username: "__token__"
+#   skip_cleanup: true
+#   on:
+#     tags: true
+#   password:
+#     secure: "" # Set to an encrypted API token. See https://docs.travis-ci.com/user/deployment/pypi/
 
 ################################################################################################################################################################

@@ -2,7 +2,7 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Real.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,26 +14,23 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (Real_toString_overloads, ostk::core::types::Real::toString, 0, 1)
-
 namespace py = pybind11 ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// inline void                     OpenSpaceToolkitCorePy_Types_Real                    ( )
-inline void                     OpenSpaceToolkitCorePy_Types_Real                    (           py::module&                       aModule                                     )
+inline void                     OpenSpaceToolkitCorePy_Types_Real                     (          py::module&                     aModule                       )
 {
-
-    // using namespace boost::python ;
 
     using ostk::core::types::Integer ;
     using ostk::core::types::Real ;
     using ostk::core::types::String ;
 
     py::class_<Real>(aModule, "Real")
-        // .def(float_(py::self))
+
+        // Define init method using pybind11 "init" convenience method
         .def(py::init<double>())
 
+        // Define methods
         .def(py::self == py::self)
         .def(py::self != py::self)
         .def(py::self < py::self)
@@ -88,6 +85,7 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real               
         .def("floor", &Real::floor)
         .def("sqrt", &Real::sqrt)
 
+        // Define static methods
         .def_static("undefined", &Real::Undefined)
         .def_static("zero", &Real::Zero)
         .def_static("pi", &Real::Pi)
@@ -100,22 +98,7 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real               
         .def_static("can_parse", &Real::CanParse)
         .def_static("parse", &Real::Parse)
 
-        // .def("undefined", &Real::Undefined).staticmethod("undefined")
-        // .def("zero", &Real::Zero).staticmethod("zero")
-        // .def("pi", &Real::Pi).staticmethod("pi")
-        // .def("half_pi", &Real::HalfPi).staticmethod("half_pi")
-        // .def("two_pi", &Real::TwoPi).staticmethod("two_pi")
-        // .def("epsilon", &Real::Epsilon).staticmethod("epsilon")
-        // .def("positive_infinity", &Real::PositiveInfinity).staticmethod("positive_infinity")
-        // .def("negative_infinity", &Real::NegativeInfinity).staticmethod("negative_infinity")
-        // .def("integer", &Real::Integer).staticmethod("integer")
-        // .def("can_parse", &Real::CanParse).staticmethod("can_parse")
-        // .def("parse", &Real::Parse).staticmethod("parse")
-
     ;
-
-    // py::implicitly_convertible<Real, double>() ;
-    // py::implicitly_convertible<double, Real>() ;
 
 }
 

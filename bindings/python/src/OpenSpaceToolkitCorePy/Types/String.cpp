@@ -2,7 +2,7 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/String.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -21,20 +21,19 @@ namespace py = pybind11 ;
 
 // http://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/faq/how_can_i_automatically_convert_.html
 
-// inline void                     OpenSpaceToolkitCorePy_Types_String                  ( )
-inline void                     OpenSpaceToolkitCorePy_Types_String                    (           py::module&                       aModule                                     )
+inline void                     OpenSpaceToolkitCorePy_Types_String                     (          py::module&                     aModule                     )
 {
-
-    // using namespace boost::python ;
 
     using ostk::core::types::Size ;
     using ostk::core::types::String ;
 
     py::class_<String>(aModule, "String")
-        .def(py::init<std::string>())
 
+        // Define init method using pybind11 "init" convenience method
+        .def(py::init<std::string>())
         // .def(py::str(py::self))
 
+        // Define methods
         .def(py::self == py::self)
         .def(py::self != py::self)
 
@@ -70,6 +69,7 @@ inline void                     OpenSpaceToolkitCorePy_Types_String             
 
     ;
 
+    // Implicit conversion to be further investigated
     // py::implicitly_convertible<std::string, String>() ;
     // py::implicitly_convertible<String, std::string>() ;
 
