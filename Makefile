@@ -272,7 +272,8 @@ _build-packages-python: _build-development-image
 	--volume="/app/build" \
 	--workdir=/app/build \
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
-	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. && make -j 4 && mkdir -p /app/packages/python && mv /app/build/bindings/python/dist/*.whl /app/packages/python"
+	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. && make -j 4 \
+	&& mkdir -p /app/packages/python && mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
 ################################################################################################################################################################
 

@@ -32,7 +32,7 @@ setuptools.setup(
     package_data = {
         '': [
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0',
-            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}.*.so'
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}.*${EXTENSION}*.so'
         ]
     }
 )

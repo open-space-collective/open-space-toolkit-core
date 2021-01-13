@@ -812,6 +812,12 @@ types::String                   Real::toString                              (   
 
 }
 
+// Temporary casting (TBR depending on type_)
+Real::ValueType                 Real::toFloat                           ( ) const
+{
+    return value_ ;
+}
+
 types::Integer                  Real::toInteger                         ( ) const
 {
 

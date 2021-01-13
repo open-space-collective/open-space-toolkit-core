@@ -10,6 +10,8 @@
 #include <pybind11/pybind11.h>
 
 #include <OpenSpaceToolkitCorePy/Types.cpp>
+// #include <OpenSpaceToolkitCorePy/Containers.cpp>
+#include <OpenSpaceToolkitCorePy/FileSystem.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -39,7 +41,7 @@ PYBIND11_MODULE (OpenSpaceToolkitCorePy, m)
     // Add python submodules to OpenSpaceToolkitCorePy
     OpenSpaceToolkitCorePy_Types(m) ;
     // OpenSpaceToolkitCorePy_Containers(m) ;  // WIP
-    // OpenSpaceToolkitCorePy_FileSystem(m) ;  // WIP
+    OpenSpaceToolkitCorePy_FileSystem(m) ;  // WIP
 
 }
 

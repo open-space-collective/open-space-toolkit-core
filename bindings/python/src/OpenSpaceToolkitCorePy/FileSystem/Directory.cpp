@@ -9,6 +9,7 @@
 
 #include <pybind11/pybind11.h>
 #include <pybind11/operators.h>  // exposes py::self
+
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
 namespace py = pybind11 ;
@@ -18,35 +19,44 @@ namespace py = pybind11 ;
 inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory          (  py::module&                       aModule    )
 {
 
-    using namespace boost::python ;
-
     using ostk::core::fs::Directory ;
 
+    py::class_<Directory>(aModule, "Directory")
 
-    py::class_<Directory>(aModule, "Integer")
+        // Define init method using pybind11 "init" convenience method
+        // No init here
 
-        .def(py::init<Integer::ValueType>())
-
-        // .def(py::init<py::int_>())
-
+        // Define methods
         .def(py::self == py::self)
         .def(py::self != py::self)
-        .def(py::self < py::self)
-        .def(py::self <= py::self)
-        .def(py::self > py::self)
-        .def(py::self >= py::self)
 
-        .def(py::self + py::self)
-        .def(py::self += py::self)
-        .def(py::self - py::self)
-        .def(py::self -= py::self)
-        .def(py::self * py::self)
-        .def(py::self *= py::self)
-        .def(py::self / py::self)
-        .def(py::self /= py::self)
+        // .def(self_ns::str(self_ns::self))
+        // .def(self_ns::repr(self_ns::self))
 
-        .def(py::self + int())
+        .def("is_defined", &Directory::isDefined)
+        .def("exists", &Directory::exists)
+        .def("is_empty", &Directory::isEmpty)
+        .def("contains_file_with_name", &Directory::containsFileWithName)
+        // .def("contains_directory_with_name", &Directory::containsDirectoryWithName)
+        .def("get_name", &Directory::getName)
+        .def("get_path", &Directory::getPath)
+        // .def("get_permissions", &Directory::getPermissions)
+        .def("get_parent_directory", &Directory::getParentDirectory)
+        // .def("get_files", &Directory::getFiles)
+        .def("get_directories", &Directory::getDirectories)
+        .def("to_string", &Directory::toString)
+        // .def("rename_to", &Directory::renameTo)
+        // .def("copy_to_directory", &Directory::copyToDirectory)
+        // .def("move_to_directory", &Directory::moveToDirectory)
+        .def("create", &Directory::create)
+        .def("remove", &Directory::remove)
 
+        // Define static methods
+        .def_static("undefined", &Directory::Undefined)
+        .def_static("root", &Directory::Root)
+        .def_static("path", &Directory::Path)
+
+    ;
 
     // scope in_Directory = class_<Directory>("Directory", no_init)
 
@@ -78,7 +88,7 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory     
     //     .def("root", &Directory::Root).staticmethod("root")
     //     .def("path", &Directory::Path).staticmethod("path")
 
-    ;
+    // ;
 
 }
 

@@ -107,7 +107,7 @@ struct IterableConverter
 
         namespace python = boost::python ;
 
-        // Object is a borrowed reference, so create a handle indicting it is borrowed for proper reference counting
+        // Object is a borrowed reference, so create a handle indicating it is borrowed for proper reference counting
 
         python::handle<> handle(python::borrowed(object)) ;
 
@@ -136,7 +136,7 @@ struct IterableConverter
 
 } ;
 
-inline void                     OpenSpaceToolkitCorePy_Containers_Array              ( )
+inline void                     OpenSpaceToolkitCorePy_Containers_Array                     (           py::module&                     aModule                  )
 {
 
     using namespace boost::python ;
