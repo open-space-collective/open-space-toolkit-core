@@ -36,14 +36,14 @@ export ci_codecov_token := $(CODECOV_TOKEN)
 
 ################################################################################################################################################################
 
-pull:
+pull: ## Pull all images
 
 	@ echo "Pulling images..."
 
 	@ make pull-development-images
 	@ make pull-release-images
 
-pull-development-images:
+pull-development-images: ## Pull development images
 
 	@ echo "Pulling development images..."
 
@@ -62,16 +62,54 @@ _pull-development-image:
 	docker pull $(docker_development_image_repository):$(docker_image_version)-$(target) || true
 	docker pull $(docker_development_image_repository):latest-$(target) || true
 
-build: build-images
+pull-release-images: ## Pull release images
 
-build-images:
+	@ echo "Pull release images..."
+
+	@ make pull-release-image-cpp-debian
+	@ make pull-release-image-cpp-fedora
+
+	@ make pull-release-image-python-debian
+	@ make pull-release-image-python-fedora
+
+	@ make pull-release-image-jupyter
+
+pull-release-image-cpp-debian: target := debian
+pull-release-image-cpp-fedora: target := fedora
+
+pull-release-image-cpp-debian pull-release-image-cpp-fedora: _pull-release-image-cpp
+
+_pull-release-image-cpp:
+
+	@ echo "Pull [$(target)] C++ release image..."
+
+	docker pull $(docker_release_image_cpp_repository):$(docker_image_version)-$(target) || true
+	docker pull $(docker_release_image_cpp_repository):latest-$(target) || true
+
+pull-release-image-python-debian: target := debian
+pull-release-image-python-fedora: target := fedora
+
+pull-release-image-python-debian pull-release-image-python-fedora: _pull-release-image-python
+
+_pull-release-image-python: _pull-development-image
+
+	@ echo "Pulling [$(target)] Python release image..."
+
+	docker pull $(docker_release_image_python_repository):$(docker_image_version)-$(target) || true
+	docker pull $(docker_release_image_python_repository):latest-$(target) || true
+
+################################################################################################################################################################
+
+build: build-images ## Build all images
+
+build-images: ## Build development and release images
 
 	@ echo "Building images..."
 
 	@ make build-development-images
 	@ make build-release-images
 
-build-development-images:
+build-development-images: ## Build development images
 
 	@ echo "Building development images..."
 
@@ -97,31 +135,7 @@ _build-development-image: _pull-development-image
 	--build-arg="VERSION=$(docker_image_version)" \
 	"$(project_directory)"
 
-pull-release-images:
-
-	@ echo "Pull release images..."
-
-	@ make pull-release-image-cpp-debian
-	@ make pull-release-image-cpp-fedora
-
-	@ make pull-release-image-python-debian
-	@ make pull-release-image-python-fedora
-
-	@ make pull-release-image-jupyter
-
-pull-release-image-cpp-debian: target := debian
-pull-release-image-cpp-fedora: target := fedora
-
-pull-release-image-cpp-debian pull-release-image-cpp-fedora: _pull-release-image-cpp
-
-_pull-release-image-cpp:
-
-	@ echo "Pull [$(target)] C++ release image..."
-
-	docker pull $(docker_release_image_cpp_repository):$(docker_image_version)-$(target) || true
-	docker pull $(docker_release_image_cpp_repository):latest-$(target) || true
-
-build-release-images:
+build-release-images: ## Build release images
 
 	@ echo "Building release images..."
 
@@ -150,18 +164,6 @@ _build-release-image-cpp: _build-development-image _pull-release-image-cpp
 	--build-arg="VERSION=$(docker_image_version)" \
 	--target=cpp-release \
 	"$(project_directory)"
-
-pull-release-image-python-debian: target := debian
-pull-release-image-python-fedora: target := fedora
-
-pull-release-image-python-debian pull-release-image-python-fedora: _pull-release-image-python
-
-_pull-release-image-python: _pull-development-image
-
-	@ echo "Pulling [$(target)] Python release image..."
-
-	docker pull $(docker_release_image_python_repository):$(docker_image_version)-$(target) || true
-	docker pull $(docker_release_image_python_repository):latest-$(target) || true
 
 build-release-image-python-debian: target := debian
 build-release-image-python-fedora: target := fedora
@@ -200,7 +202,7 @@ build-release-image-jupyter: pull-release-image-jupyter
 	--build-arg="JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=$(jupyter_notebook_image_repository)" \
 	"$(project_directory)/docker/jupyter"
 
-build-documentation: target := debian
+build-documentation: target := debian ## Build documentation
 
 build-documentation: _build-development-image
 
@@ -214,14 +216,14 @@ build-documentation: _build-development-image
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
 
-build-packages:
+build-packages: ## Build packages
 
 	@ echo "Building packages..."
 
 	@ make build-packages-cpp
 	@ make build-packages-python
 
-build-packages-cpp:
+build-packages-cpp: ## Build C++ packages
 
 	@ echo "Building C++ packages..."
 
@@ -251,7 +253,7 @@ _build-packages-cpp: _build-development-image
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=$(package_generator) .. && make package && mkdir -p /app/packages/cpp && mv /app/build/*.$(package_extension) /app/packages/cpp"
 
-build-packages-python:
+build-packages-python: ## Build Python packages
 
 	@ echo "Building Python packages..."
 
@@ -277,7 +279,7 @@ _build-packages-python: _build-development-image
 
 ################################################################################################################################################################
 
-start-development:
+start-development: ## Start development environment
 
 	@ echo "Starting development environment..."
 
@@ -302,7 +304,7 @@ _start-development: _build-development-image
 	$(docker_development_image_repository):$(docker_image_version)-$(target) \
 	/bin/bash
 
-start-python:
+start-python: ## Start Python runtime environment
 
 	@ echo "Starting Python runtime environment..."
 
@@ -322,7 +324,7 @@ _start-python: _build-release-image-python
 	--rm \
 	$(docker_release_image_python_repository):$(docker_image_version)-$(target)
 
-start-jupyter-notebook: build-release-image-jupyter
+start-jupyter-notebook: build-release-image-jupyter ## Starting Jupyter Notebook environment
 
 	@ echo "Starting Jupyter Notebook environment..."
 
@@ -666,5 +668,13 @@ clean:
 		deploy-packages deploy-coverage-cpp-results deploy-documentation \
 		deploy-packages-cpp deploy-packages-python \
 		clean
+
+################################################################################################################################################################
+
+help:
+
+	@grep -E '^[0-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+.DEFAULT_GOAL := help
 
 ################################################################################################################################################################

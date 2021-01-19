@@ -7,60 +7,57 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <pybind11/pybind11.h>
-#include <pybind11/operators.h>  // exposes py::self
-
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace py = pybind11 ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Types_Integer                     (          py::module&                     aModule                    )
+inline void                     OpenSpaceToolkitCorePy_Types_Integer                     (          pybind11::module&                     aModule             )
 {
+
+    using namespace pybind11 ;
 
     using ostk::core::types::Integer ;
     using ostk::core::types::Real ;
     using ostk::core::types::String ;
 
-    py::class_<Integer>(aModule, "Integer")
+    class_<Integer>(aModule, "Integer")
 
         // Define init method using pybind11 "init" convenience method
-        .def(py::init<Integer::ValueType>())
-        // .def(py::init<py::int_>())
+        .def(init<Integer::ValueType>())
+
+        // Define __int__ method for direct conversion (previously .def(int_(self)))
+        .def("__int__", +[] (const ostk::core::types::Integer& anInteger) -> int_ { return anInteger.toInt() ; })
 
         // Define methods
-        .def(py::self == py::self)
-        .def(py::self != py::self)
-        .def(py::self < py::self)
-        .def(py::self <= py::self)
-        .def(py::self > py::self)
-        .def(py::self >= py::self)
+        .def(self == self)
+        .def(self != self)
+        .def(self < self)
+        .def(self <= self)
+        .def(self > self)
+        .def(self >= self)
 
-        .def(py::self + py::self)
-        .def(py::self += py::self)
-        .def(py::self - py::self)
-        .def(py::self -= py::self)
-        .def(py::self * py::self)
-        .def(py::self *= py::self)
-        .def(py::self / py::self)
-        .def(py::self /= py::self)
+        .def(self + self)
+        .def(self += self)
+        .def(self - self)
+        .def(self -= self)
+        .def(self * self)
+        .def(self *= self)
+        .def(self / self)
+        .def(self /= self)
 
-        .def(py::self + int())
-        .def(py::self += int())
-        .def(py::self - int())
-        .def(py::self -= int())
-        .def(py::self * int())
-        .def(py::self *= int())
-        .def(py::self / int())
-        .def(py::self /= int())
+        .def(self + int())
+        .def(self += int())
+        .def(self - int())
+        .def(self -= int())
+        .def(self * int())
+        .def(self *= int())
+        .def(self / int())
+        .def(self /= int())
 
-        .def(int() + py::self)
-        .def(int() - py::self)
-        .def(int() * py::self)
-        .def(int() / py::self)
+        .def(int() + self)
+        .def(int() - self)
+        .def(int() * self)
+        .def(int() / self)
 
         .def("__str__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
         .def("__repr__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
@@ -81,8 +78,8 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
         .def("get_sign", &Integer::getSign)
         .def("to_string", &Integer::toString)
 
-        // Temporary substitution for implicitly_convertible not working in that direction
-        .def("to_int", &Integer::toInt)
+        // Substitution for implicitly_convertible not working in that direction
+        // .def("to_int", &Integer::toInt)
 
         // Define static methods
         .def_static("undefined", &Integer::Undefined)
@@ -104,8 +101,8 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
 
     ;
 
-    // Implicit conversion to be further investigated
-    // py::implicitly_convertible<Integer::ValueType, Integer>() ;
+    // Implicit conversion (allowed in the direction of the binded custom type only in pybind11)
+    implicitly_convertible<Integer::ValueType, Integer>() ;
 
 }
 

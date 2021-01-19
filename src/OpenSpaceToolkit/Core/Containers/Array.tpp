@@ -24,6 +24,12 @@ namespace ctnr
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                                 template <class T>
+                                Array<T>::Array                             ( )
+{
+
+}
+
+                                template <class T>
                                 Array<T>::Array                             (   const   Size&                       aSize,
                                                                                 const   T&                          anElement                                   )
                                 :    std::vector<T>(aSize, anElement)
@@ -445,6 +451,24 @@ Array<T>                        Array<T>::Empty                             ( )
     return std::move(std::vector<T>()) ;
 }
 
+//                                template <class T>
+//void                            Array<T>::push_back                         (   const   T&                          anElement                                   )
+//{
+//    (*this).push_back(anElement) ;
+//}
+//
+//                                template <class T>
+//void                            Array<T>::clear                             ( )
+//{
+//    (*this).clear() ;
+//}
+//
+//                                template <class T>
+// void                           Array<T>::reserve                           ( size_t n )
+//{
+//    (*this).reserve(n) ;
+//}
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }

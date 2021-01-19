@@ -7,59 +7,57 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <pybind11/pybind11.h>
-#include <pybind11/operators.h>  // exposes py::py::self
-
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace py = pybind11 ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Types_Real                     (          py::module&                     aModule                       )
+inline void                     OpenSpaceToolkitCorePy_Types_Real                     (          pybind11::module&                     aModule                 )
 {
+
+    using namespace pybind11 ;
 
     using ostk::core::types::Integer ;
     using ostk::core::types::Real ;
     using ostk::core::types::String ;
 
-    py::class_<Real>(aModule, "Real")
+    class_<Real>(aModule, "Real")
 
         // Define init method using pybind11 "init" convenience method
-        .def(py::init<double>())
+        .def(init<Real::ValueType>())
+
+        // Define __int__ method for direct conversion
+        .def("__float__", +[] (const ostk::core::types::Real& aReal) -> float_ { return aReal.toFloat() ; })
 
         // Define methods
-        .def(py::self == py::self)
-        .def(py::self != py::self)
-        .def(py::self < py::self)
-        .def(py::self <= py::self)
-        .def(py::self > py::self)
-        .def(py::self >= py::self)
+        .def(self == self)
+        .def(self != self)
+        .def(self < self)
+        .def(self <= self)
+        .def(self > self)
+        .def(self >= self)
 
-        .def(py::self + py::self)
-        .def(py::self += py::self)
-        .def(py::self - py::self)
-        .def(py::self -= py::self)
-        .def(py::self * py::self)
-        .def(py::self *= py::self)
-        .def(py::self / py::self)
-        .def(py::self /= py::self)
+        .def(self + self)
+        .def(self += self)
+        .def(self - self)
+        .def(self -= self)
+        .def(self * self)
+        .def(self *= self)
+        .def(self / self)
+        .def(self /= self)
 
-        .def(py::self + double())
-        .def(py::self += double())
-        .def(py::self - double())
-        .def(py::self -= double())
-        .def(py::self * double())
-        .def(py::self *= double())
-        .def(py::self / double())
-        .def(py::self /= double())
+        .def(self + double())
+        .def(self += double())
+        .def(self - double())
+        .def(self -= double())
+        .def(self * double())
+        .def(self *= double())
+        .def(self / double())
+        .def(self /= double())
 
-        .def(double() + py::self)
-        .def(double() - py::self)
-        .def(double() * py::self)
-        .def(double() / py::self)
+        .def(double() + self)
+        .def(double() - self)
+        .def(double() * self)
+        .def(double() / self)
 
         .def("__str__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
         .def("__repr__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
@@ -99,6 +97,8 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real               
         .def_static("parse", &Real::Parse)
 
     ;
+
+    implicitly_convertible<Real::ValueType, Real>() ;
 
 }
 

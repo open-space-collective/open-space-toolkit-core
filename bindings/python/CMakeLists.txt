@@ -2,7 +2,7 @@
 
 # @project        Open Space Toolkit ▸ Core
 # @file           bindings/python/CMakeLists.txt
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @author         Remy Derollez <remy@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
@@ -52,10 +52,10 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
 ## Helper Functions
 
-# Largely inspired by https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/pull/655/files
+# Inspired by https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/pull/655/files
 # Possibly move these generic functions to a PythonBuilding.cmake hosted on base image and use the command INCLUDE (PythonBuilding) in this CMakeLists file
 
-# Improved FIND_PYTHON macro
+### Improved FIND_PYTHON macro
 
 MACRO (FIND_PYTHON version)
     FIND_PROGRAM (PYTHON_CONFIG_${version} python${version}-config)
@@ -73,7 +73,7 @@ MACRO (FIND_PYTHON version)
     ENDIF ()
 ENDMACRO ()
 
-# Function to grab python extension and use for target
+### Function to grab python extension and use for target
 
 FUNCTION (PY_EXTENSION name version)
     SET (_python_module_extension)
@@ -82,7 +82,7 @@ FUNCTION (PY_EXTENSION name version)
     SET_TARGET_PROPERTIES (${name} PROPERTIES PREFIX "" SUFFIX "${_python_module_extension}")
 ENDFUNCTION ()
 
-# Function to add python module using python::headers directly
+### Function to add python module using python::headers directly
 
 FUNCTION (PY_ADD_MODULE NAME)
     SET (options)
@@ -114,7 +114,7 @@ FUNCTION (PY_ADD_MODULE NAME)
     )
 ENDFUNCTION ()
 
-# Function preparing python package directory/build wheel for each python version
+### Function preparing python package directory/build wheel for each python version
 
 FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
     SET (options)
@@ -179,14 +179,14 @@ ENDFUNCTION ()
 
 ## Dependencies
 
-# Pybind11
+### Pybind11
 
 SET (PYBIND11_NOPYTHON ON)
 FIND_PACKAGE (pybind11 2.6.0 REQUIRED)
 
-# Python
+### Python
 
-# Decide on the versions to build for and support
+# Python versions to build for and support
 SET (PYTHON_SEARCH_VERSIONS 2.7 3.5 3.6 3.7 3.8 3.9)
 
 MESSAGE (STATUS "Looking for available python versions...")

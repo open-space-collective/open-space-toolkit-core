@@ -7,36 +7,33 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <pybind11/pybind11.h>
-#include <pybind11/operators.h>  // exposes py::self
-
 #include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace py = pybind11 ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet                     (           py::module&                     aModule        )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet                     (     pybind11::module&                     aModule        )
 {
+
+    using namespace pybind11 ;
 
     using ostk::core::fs::PermissionSet ;
 
-    py::class_<PermissionSet>(aModule, "PermissionSet")
+    class_<PermissionSet>(aModule, "PermissionSet")
 
         // Define init method using pybind11 "init" convenience method
-        .def(py::init<const bool, const bool, const bool>())
+        .def(init<const bool, const bool, const bool>())
 
         // Define methods
-        .def(py::self == py::self)
-        .def(py::self != py::self)
+        .def(self == self)
+        .def(self != self)
 
-        .def(py::self + py::self)
-        .def(py::self - py::self)
+        .def(self + self)
+        .def(self - self)
 
-        // .def(py::self_ns::str(py::self_ns::py::self))
-        // .def(py::self_ns::repr(py::self_ns::py::self))
+        // .def("__str__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
+        .def("__str__", &(shift_to_string<PermissionSet>))
+        .def("__repr__", &(shift_to_string<PermissionSet>))
 
         .def("is_none", &PermissionSet::isNone)
         .def("is_all", &PermissionSet::isAll)
@@ -54,33 +51,6 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet 
         .def_static("rwx", &PermissionSet::RWX)
 
     ;
-
-    // scope in_PermissionSet = class_<PermissionSet>("PermissionSet", init<const bool, const bool, const bool>())
-
-    //     .def(self == self)
-    //     .def(self != self)
-
-    //     .def(self + self)
-    //     .def(self - self)
-
-    //     .def(self_ns::str(self_ns::self))
-    //     .def(self_ns::repr(self_ns::self))
-
-    //     .def("is_none", &PermissionSet::isNone)
-    //     .def("is_all", &PermissionSet::isAll)
-    //     .def("can_read", &PermissionSet::canRead)
-    //     .def("can_write", &PermissionSet::canWrite)
-    //     .def("can_execute", &PermissionSet::canExecute)
-
-    //     .def("none", &PermissionSet::None).staticmethod("none")
-    //     .def("r", &PermissionSet::R).staticmethod("r")
-    //     .def("w", &PermissionSet::W).staticmethod("w")
-    //     .def("x", &PermissionSet::X).staticmethod("x")
-    //     .def("rw", &PermissionSet::RW).staticmethod("rw")
-    //     .def("rx", &PermissionSet::RX).staticmethod("rx")
-    //     .def("rwx", &PermissionSet::RWX).staticmethod("rwx")
-
-    // ;
 
 }
 
