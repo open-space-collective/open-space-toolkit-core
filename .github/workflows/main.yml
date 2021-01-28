@@ -1,0 +1,36 @@
+name: Open Space Toolkit Core GitHub Actions CI
+
+on:
+  push:
+    branches:
+      - /^\d+\.\d+(\.\d+)?(-\S*)?$/
+      - users/remy/switch_to_github_actions
+      - master
+      - main
+      - dev
+  pull_request:
+    branches:
+      - master
+      - main
+
+env:
+  LANG: "en_US.UTF-8"
+
+defaults:
+  run: |
+    echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+jobs:
+  build:
+    runs-on: linux
+    steps:
+      - name: Build Development Images
+      - run: make build-development-images
+
+  test:
+    runs-on: linux
+    steps:
+      - name: Run Unit Tests Cpp
+      - run: make test-unit-cpp-debian
+      - name: Run Unit Tests Python
+      - run: make test-unit-python-debian
