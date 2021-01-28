@@ -31,12 +31,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Credentials
-        run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
       - name: Run Unit Tests Cpp
         run: make test-unit-cpp-debian
-      - name: Credentials
-        run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
       - name: Run Unit Tests Python
         run: make test-unit-python-debian
       - name: Deploy Cpp Coverage Analysis Results
