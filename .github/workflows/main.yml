@@ -25,12 +25,12 @@ jobs:
     runs-on: linux
     steps:
       - name: Build Development Images
-      - run: make build-development-images
+        run: make build-development-images
 
   test:
     runs-on: linux
     steps:
       - name: Run Unit Tests Cpp
-      - run: make test-unit-cpp-debian
+        run: make test-unit-cpp-debian
       - name: Run Unit Tests Python
-      - run: make test-unit-python-debian
+        run: make test-unit-python-debian
