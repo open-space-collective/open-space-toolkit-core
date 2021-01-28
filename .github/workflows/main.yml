@@ -21,13 +21,13 @@ env:
 
 jobs:
   build:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Build Development Images
         run: make build-development-images
 
   test:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Run Unit Tests Cpp
         run: make test-unit-cpp-debian
