@@ -32,6 +32,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Run Unit Tests Cpp
         run: make test-unit-cpp-debian
       - name: Run Unit Tests Python
