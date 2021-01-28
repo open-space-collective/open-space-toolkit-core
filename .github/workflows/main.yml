@@ -17,14 +17,17 @@ env:
   LANG: "en_US.UTF-8"
 
 # defaults:
-#   run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+#   run: echo "'${DOCKER_PASSWORD}' | docker login -u '${DOCKER_USERNAME}' --password-stdin"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Build Development Images
-        run: make build-development-images
+        run: |
+          make build-development-images
 
   test:
     runs-on: ubuntu-latest
