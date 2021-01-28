@@ -16,9 +16,8 @@ on:
 env:
   LANG: "en_US.UTF-8"
 
-defaults:
-  run: |
-    echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+# defaults:
+#   run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
 jobs:
   build:
