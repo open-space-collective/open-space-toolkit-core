@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - /^\d+\.\d+(\.\d+)?(-\S*)?$/
-      - users/remy/switch_to_github_actions
       - master
       - main
       - dev
@@ -25,8 +24,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Build Development Images
-        run: |
-          make build-development-images
+        run: make build-development-images
 
   test:
     runs-on: ubuntu-latest
