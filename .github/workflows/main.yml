@@ -22,9 +22,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Build Development Images
         run: |
-          git describe --tags --always
           make build-development-images
 
   test:
@@ -32,6 +33,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Run Unit Tests Cpp
         run: make test-unit-cpp-debian
       - name: Run Unit Tests Python
@@ -46,6 +49,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Deploy Image
         run: make deploy-images
