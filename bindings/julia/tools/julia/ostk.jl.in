@@ -1,0 +1,25 @@
+################################################################################################################################################################
+
+### @project        Open Space Toolkit ▸ Core
+### @file           bindings/julia/tools/julia/ostk.jl
+### @author         Remy Derollez <remy@loftorbital.com>
+### @license        Apache License 2.0
+
+################################################################################################################################################################
+
+# Defining Examplej Julia module based on the shared library generated
+
+# Need to make sure CxxWrap is added to the correct Julia environment (TBM)
+import Pkg
+Pkg.add("CxxWrap")
+
+# Probably use a configuration file for the following, to be defined in the CMake file
+module ostk
+    using CxxWrap
+    @wrapmodule(joinpath("lib/", "OpenSpaceToolkitCoreJl"))
+        function __init__()
+           @initcxx
+    end
+
+    export World
+end
