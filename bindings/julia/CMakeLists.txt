@@ -61,6 +61,9 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
 ## Dependencies
 
+# Need to find a way to automate that part of data fetching
+SET (CMAKE_PREFIX_PATH "/root/.julia/artifacts/2a6fdb6b1893826a3949ec0b4857a8277daa2eb9")
+
 ### Julia CxxWrap
 
 FIND_PACKAGE (JlCxx)
@@ -131,24 +134,18 @@ INSTALL (TARGETS ${LIBRARY_TARGET} LIBRARY DESTINATION lib ARCHIVE DESTINATION l
 # SET (PACKAGE_NAME ${PROJECT_PACKAGE_NAME})
 # SET (PACKAGE_TARGET "${PACKAGE_NAME}-python-package")
 
-# SET (SETUP_PY_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.py.in")
-# SET (SETUP_PY "${CMAKE_CURRENT_BINARY_DIR}/setup.py")
-# SET (DEPS "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py")
-# SET (OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build/timestamp")
+SET (MODULE_JL_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/ostk.jl.in")
+SET (MODULE_JL "${CMAKE_CURRENT_BINARY_DIR}/ostk.jl")
+SET (OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build/timestamp")
 
-# CONFIGURE_FILE (${SETUP_PY_IN} ${SETUP_PY})
+CONFIGURE_FILE (${MODULE_JL_IN} ${MODULE_JL})
 
-# ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
-#                     COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
-#                     COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/test"
-#                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_GROUP}/__init__.py"
-#                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
-#                     COMMAND cp "/usr/local/lib/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0"
-#                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
-#                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/${LIBRARY_TARGET}"
-#                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
-#                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
-#                     DEPENDS ${DEPS})
+ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/ostk.jl" "${CMAKE_CURRENT_BINARY_DIR}/ostk.jl"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/lib/${LIBRARY_TARGET}"
+                    COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
+                    DEPENDS ${DEPS})
 
 # ADD_CUSTOM_TARGET (${PACKAGE_TARGET} ALL DEPENDS ${OUTPUT})
 
