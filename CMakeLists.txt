@@ -28,6 +28,7 @@ OPTION (BUILD_STATIC_LIBRARY "Build static library." OFF)
 OPTION (BUILD_UTILITY "Build utility." OFF)
 OPTION (BUILD_UNIT_TESTS "Build tests" ON)
 OPTION (BUILD_PYTHON_BINDINGS "Build Python bindings." ON)
+OPTION (BUILD_JULIA_BINDINGS "Build Julia bindings." ON)
 OPTION (BUILD_CODE_COVERAGE "Build code coverage" OFF)
 OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
 
@@ -435,6 +436,14 @@ ENDIF ()
 IF (BUILD_PYTHON_BINDINGS)
 
     ADD_SUBDIRECTORY ("${PROJECT_SOURCE_DIR}/bindings/python")
+
+ENDIF ()
+
+### Julia Bindings
+
+IF (BUILD_JULIA_BINDINGS)
+
+    ADD_SUBDIRECTORY ("${PROJECT_SOURCE_DIR}/bindings/julia")
 
 ENDIF ()
 
