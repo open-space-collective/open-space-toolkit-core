@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_Path                     (            pybind11::module&                     aModule          )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_Path      (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -32,8 +32,8 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Path          
 
         // .def("__str__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
         // .def("__repr__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
-        .def("__str__", &(shift_to_string<Path>))
-        .def("__repr__", &(shift_to_string<Path>))
+        .def("__str__", &(shiftToString<Path>))
+        .def("__repr__", &(shiftToString<Path>))
 
         .def("is_defined", &Path::isDefined)
         .def("is_absolute", &Path::isAbsolute)
@@ -41,7 +41,7 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Path          
         .def("get_parent_path", &Path::getParentPath)
         .def("get_last_element", &Path::getLastElement)
         .def("get_normalized_path", &Path::getNormalizedPath)
-        .def("get_absolute_path", &Path::getAbsolutePath)
+        .def("get_absolute_path", &Path::getAbsolutePath, "aBasePath"_a = Path::Current())
         // .def("get_relative_path_to", &Path::getRelativePathTo)
         .def("to_string", &Path::toString)
 

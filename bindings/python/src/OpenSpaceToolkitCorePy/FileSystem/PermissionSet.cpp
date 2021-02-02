@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet                     (     pybind11::module&                     aModule        )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet (        pybind11::module&          aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -32,8 +32,8 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet 
 
         // .def("__str__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
         // .def("__repr__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
-        .def("__str__", &(shift_to_string<PermissionSet>))
-        .def("__repr__", &(shift_to_string<PermissionSet>))
+        .def("__str__", &(shiftToString<PermissionSet>))
+        .def("__repr__", &(shiftToString<PermissionSet>))
 
         .def("is_none", &PermissionSet::isNone)
         .def("is_all", &PermissionSet::isAll)

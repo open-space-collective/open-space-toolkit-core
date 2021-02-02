@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types_Real                     (          pybind11::module&                     aModule                 )
+inline void                     OpenSpaceToolkitCorePy_Types_Real           (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -25,8 +25,8 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real               
         // Define init method using pybind11 "init" convenience method
         .def(init<Real::ValueType>())
 
-        // Define __int__ method for direct conversion
-        .def("__float__", +[] (const ostk::core::types::Real& aReal) -> float_ { return aReal.toFloat() ; })
+        // Define __float__ method for direct conversion
+        .def("__float__", +[] (const ostk::core::types::Real& aReal) -> double { return static_cast<double>(aReal) ; })
 
         // Define methods
         .def(self == self)
@@ -76,8 +76,6 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real               
         .def("is_near", &Real::isNear)
 
         .def("get_sign", &Real::getSign)
-        // .def("to_string", Real_toString_overloads(args("aPrecision"), "Convert Real to String."))
-        // .def("to_string", Real_toString_overloads())
         .def("to_integer", &Real::toInteger)
         .def("abs", &Real::abs)
         .def("floor", &Real::floor)

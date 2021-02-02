@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Containers                     (          pybind11::module&                     aModule                 )
+inline void                     OpenSpaceToolkitCorePy_Containers           (           pybind11::module&           aModule                                     )
 {
 
     // Create "containers" python submodule

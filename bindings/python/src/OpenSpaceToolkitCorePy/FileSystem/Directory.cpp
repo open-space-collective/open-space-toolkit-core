@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory                     (      pybind11::module&                       aModule         )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -29,8 +29,8 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory     
 
         // .def("__str__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
         // .def("__repr__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
-        .def("__str__", &(shift_to_string<Directory>))
-        .def("__repr__", &(shift_to_string<Directory>))
+        .def("__str__", &(shiftToString<Directory>))
+        .def("__repr__", &(shiftToString<Directory>))
 
         .def("is_defined", &Directory::isDefined)
         .def("exists", &Directory::exists)

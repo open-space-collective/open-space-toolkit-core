@@ -153,7 +153,7 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/"
                             COMMAND python${PYTHON_VERSION} ${SETUP_PY} bdist_wheel --python-tag=py${EXTENSION}
-                            COMMAND rm -r "${CMAKE_CURRENT_BINARY_DIR}/build/lib"
+                            COMMAND rm -rf "${CMAKE_CURRENT_BINARY_DIR}/build/lib"
                             COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                             DEPENDS ${DEPS})
 

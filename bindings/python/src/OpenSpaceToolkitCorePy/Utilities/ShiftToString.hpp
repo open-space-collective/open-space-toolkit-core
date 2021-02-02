@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Utilities/.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Utilities/ShiftToString.cpp
 /// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -11,12 +11,19 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Shift to string. Template function used for __str__ and __repr__ methods on exposed classes
-template <class T>
-std::string shift_to_string(const T& x) {
+/// @brief                      Shift to String Template Function
+///
+///                             Template function used for __str__ and __repr__
+///                             methods on classes exposed in python.
+
+                                template <class T>
+std::string                     shiftToString                               (   const   T&                          aClass                                      )
+{
+
     std::ostringstream out;
-    out << x;
+    out << aClass;
     return out.str();
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

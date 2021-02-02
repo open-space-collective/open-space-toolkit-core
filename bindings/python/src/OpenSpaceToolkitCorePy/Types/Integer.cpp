@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types_Integer                     (          pybind11::module&                     aModule             )
+inline void                     OpenSpaceToolkitCorePy_Types_Integer        (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -26,7 +26,7 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
         .def(init<Integer::ValueType>())
 
         // Define __int__ method for direct conversion (previously .def(int_(self)))
-        .def("__int__", +[] (const ostk::core::types::Integer& anInteger) -> int_ { return anInteger.toInt() ; })
+        .def("__int__", +[] (const ostk::core::types::Integer& anInteger) -> int { return static_cast<int>(anInteger) ; })
 
         // Define methods
         .def(self == self)
@@ -77,9 +77,6 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
 
         .def("get_sign", &Integer::getSign)
         .def("to_string", &Integer::toString)
-
-        // Substitution for implicitly_convertible not working in that direction
-        // .def("to_int", &Integer::toInt)
 
         // Define static methods
         .def_static("undefined", &Integer::Undefined)

@@ -116,8 +116,6 @@ class Real
 
         types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   types::Integer::Undefined() ) const ;
 
-        Real::ValueType         toFloat                                     ( ) const ;
-
         types::Integer          toInteger                                   ( ) const ;
 
         Real                    abs                                         ( ) const ;

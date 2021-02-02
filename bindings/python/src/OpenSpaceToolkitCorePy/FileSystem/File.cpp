@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_File                     (             pybind11::module&                     aModule         )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_File      (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -29,12 +29,12 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_File          
 
         // .def("__str__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
         // .def("__repr__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
-        .def("__str__", &(shift_to_string<File>))
-        .def("__repr__", &(shift_to_string<File>))
+        .def("__str__", &(shiftToString<File>))
+        .def("__repr__", &(shiftToString<File>))
 
         .def("is_defined", &File::isDefined)
         .def("exists", &File::exists)
-        .def("get_name", &File::getName)
+        .def("get_name", &File::getName, "withExtension"_a=true)
         .def("get_extension", &File::getExtension)
         .def("get_path", &File::getPath)
         .def("get_permissions", &File::getPermissions)

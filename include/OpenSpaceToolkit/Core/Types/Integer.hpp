@@ -51,7 +51,7 @@ class Integer
 
     public:
 
-        typedef int32_t         ValueType ;  // ValueType defined to int32_t for now, could be switched to something else if needed.
+        typedef int32_t         ValueType ;
 
         /// @brief              Default constructor (disabled)
 
@@ -235,8 +235,6 @@ class Integer
         types::Sign             getSign                                     ( ) const ;
 
         types::String           toString                                    ( ) const ;
-
-        Integer::ValueType      toInt                                       ( ) const ;
 
         static Integer          Undefined                                   ( ) ;
 

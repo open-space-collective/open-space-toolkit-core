@@ -918,12 +918,6 @@ types::Sign                     Integer::getSign                            ( ) 
 
 }
 
-// Temporary casting (TBR depending on type_)
-Integer::ValueType              Integer::toInt                             ( ) const
-{
-    return value_ ;
-}
-
 types::String                   Integer::toString                          ( ) const
 {
 

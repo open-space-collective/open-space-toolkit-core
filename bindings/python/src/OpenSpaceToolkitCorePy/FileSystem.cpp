@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem                     (          pybind11::module&                     aModule                 )
+inline void                     OpenSpaceToolkitCorePy_FileSystem           (           pybind11::module&           aModule                                     )
 {
 
     // Create "filesystem" python submodule

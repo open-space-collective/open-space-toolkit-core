@@ -12,7 +12,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types_String                     (          pybind11::module&                     aModule               )
+inline void                     OpenSpaceToolkitCorePy_Types_String         (          pybind11::module&            aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -55,10 +55,10 @@ inline void                     OpenSpaceToolkitCorePy_Types_String             
 
         // Define static methods
         .def_static("empty", &String::Empty)
-        .def_static("boolean", &String::Empty)
-        .def_static("char", &String::Empty)
+        .def_static("boolean", &String::Boolean)
+        .def_static("char", &String::Char)
         .def_static("replicate", static_cast<String(*)(const String&, Size)>(&String::Replicate))
-        .def_static("format", &String::Empty)
+        // .def_static("format", &String::Format)
 
     ;
 

@@ -53,7 +53,7 @@ class Array : public std::vector<T>
 
         /// @brief              Default constructor (disabled)
 
-                                Array                                       ( )  ;
+                                Array                                       ( ) ;
 
         /// @brief              Constructs an array from a C++ Standard Library vector
         ///
@@ -435,18 +435,6 @@ class Array : public std::vector<T>
         /// @return             Empty array
 
         static Array<T>         Empty                                       ( ) ;
-
-        // /// @brief              push_back function for type casting
-
-        // void                    push_back                                   (   const   T&                          anElement                                   ) ;
-
-        // /// @brief              clear function for type casting
-
-        // void                    clear                                       ( ) ;
-
-        // /// @brief              reserve function for type casting
-
-        // void                    reserve                                     (size_t n) ;
 
 } ;
 
