@@ -202,9 +202,9 @@ build-release-image-jupyter: pull-release-image-jupyter
 	--build-arg="JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=$(jupyter_notebook_image_repository)" \
 	"$(project_directory)/docker/jupyter"
 
-build-documentation: target := debian ## Build documentation
+build-documentation: target := debian
 
-build-documentation: _build-development-image
+build-documentation: _build-development-image ## Build documentation
 
 	@ echo "Building [$(target)] documentation..."
 
