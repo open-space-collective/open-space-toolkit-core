@@ -9,10 +9,6 @@
 
 Common types, containers and utilities.
 
-## Warning
-
-*⚠ This component is under development.*
-
 ## Getting Started
 
 Want to get started? This is the simplest and quickest way:
@@ -89,9 +85,17 @@ Install from [PyPI](https://pypi.org/project/open-space-toolkit-core/):
 pip install open-space-toolkit-core
 ```
 
-## Structure
+## Documentation
 
-The **Core** library exhibits the following structure:
+Documentation is available here:
+
+- [C++](https://open-space-collective.github.io/open-space-toolkit-core)
+- [Python](./bindings/python/docs)
+
+<details>
+<summary>Structure</summary>
+<p>
+The library exhibits the following structure:
 
 ```txt
 ├── Types
@@ -146,15 +150,10 @@ The **Core** library exhibits the following structure:
     ├── Iterators
     └── Version
 ```
+</p>
+</details>
 
-## Documentation
-
-Documentation is available here:
-
-- [C++](https://open-space-collective.github.io/open-space-toolkit-core)
-- [Python](./bindings/python/docs)
-
-## Tutorials
+### Tutorials
 
 Tutorials are available here:
 
@@ -211,13 +210,13 @@ Or to run them manually:
 
 ## Dependencies
 
-| Name                | Version | License                | Link                                                                                               |
-|---------------------|---------|------------------------|----------------------------------------------------------------------------------------------------|
-| Boost               | 1.69.0  | Boost Software License | [boost.org](https://www.boost.org)                                                                 |
-| RapidJSON           | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                                              |
-| ordered-map         | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map)                             |
-| {fmt}               | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                                             |
-| Rapidcsv            | master  | BSD-3-Clause           | [github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)                                 |
+| Name        | Version | License                | Link                                                                   |
+| ----------- | ------- | ---------------------- | ---------------------------------------------------------------------- |
+| Pybind11    | 2.6.1   | BSD-3-Clause           | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
+| RapidJSON   | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                  |
+| ordered-map | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
+| {fmt}       | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |
+| Rapidcsv    | master  | BSD-3-Clause           | [github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)     |
 
 ## Contribution
 
