@@ -212,7 +212,7 @@ Or to run them manually:
 
 | Name        | Version | License                | Link                                                                   |
 | ----------- | ------- | ---------------------- | ---------------------------------------------------------------------- |
-| Boost       | 1.69.0  | Boost Software License | [boost.org](https://www.boost.org)                                     |
+| Pybind11    | 2.6.1   | BSD-3-Clause           | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
 | RapidJSON   | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                  |
 | ordered-map | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
 | {fmt}       | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |

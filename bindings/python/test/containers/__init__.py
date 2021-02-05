@@ -1,8 +1,8 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/tools/python/ostk/__init__.py
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @file           bindings/python/test/containers/__init__.py
+# @author         Remy Derollez <remy@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################

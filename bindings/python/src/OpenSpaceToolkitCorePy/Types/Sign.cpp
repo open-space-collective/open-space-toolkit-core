@@ -1,27 +1,31 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Sign.cpp
 /// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitCorePy/Containers/Array.cpp>
+#include <OpenSpaceToolkit/Core/Types/Sign.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Containers           (           pybind11::module&           aModule                                     )
+inline void                     OpenSpaceToolkitCorePy_Types_Sign           (           pybind11::module&           aModule                                     )
 {
 
-    // Create "containers" python submodule
-    auto containers = aModule.def_submodule("containers") ;
+    using namespace pybind11 ;
 
-    // Add __path__ attribute for "containers" submodule
-    containers.attr("__path__") = "ostk.core.containers" ;
+    using ostk::core::types::Sign ;
 
-    // Add objects to python "containers" submodules
-    OpenSpaceToolkitCorePy_Containers_Array(containers) ;
+    enum_<Sign>(aModule, "Sign")
+        .value("Undefined", Sign::Undefined)
+        .value("Positive", Sign::Positive)
+        .value("Negative", Sign::Negative)
+        .value("NoSign", Sign::None)
+        .export_values()
+
+    ;
 
 }
 

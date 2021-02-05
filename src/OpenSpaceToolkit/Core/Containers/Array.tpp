@@ -24,6 +24,12 @@ namespace ctnr
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                                 template <class T>
+                                Array<T>::Array                             ( )
+{
+
+}
+
+                                template <class T>
                                 Array<T>::Array                             (   const   Size&                       aSize,
                                                                                 const   T&                          anElement                                   )
                                 :    std::vector<T>(aSize, anElement)

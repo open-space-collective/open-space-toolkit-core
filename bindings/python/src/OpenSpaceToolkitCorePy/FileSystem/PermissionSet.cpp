@@ -11,23 +11,29 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet      ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet (        pybind11::module&          aModule                                     )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::fs::PermissionSet ;
 
-    scope in_PermissionSet = class_<PermissionSet>("PermissionSet", init<const bool, const bool, const bool>())
+    class_<PermissionSet>(aModule, "PermissionSet")
 
+        // Define init method using pybind11 "init" convenience method
+        .def(init<const bool, const bool, const bool>())
+
+        // Define methods
         .def(self == self)
         .def(self != self)
 
         .def(self + self)
         .def(self - self)
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+        // .def("__str__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
+        .def("__str__", &(shiftToString<PermissionSet>))
+        .def("__repr__", &(shiftToString<PermissionSet>))
 
         .def("is_none", &PermissionSet::isNone)
         .def("is_all", &PermissionSet::isAll)
@@ -35,13 +41,14 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet 
         .def("can_write", &PermissionSet::canWrite)
         .def("can_execute", &PermissionSet::canExecute)
 
-        .def("none", &PermissionSet::None).staticmethod("none")
-        .def("r", &PermissionSet::R).staticmethod("r")
-        .def("w", &PermissionSet::W).staticmethod("w")
-        .def("x", &PermissionSet::X).staticmethod("x")
-        .def("rw", &PermissionSet::RW).staticmethod("rw")
-        .def("rx", &PermissionSet::RX).staticmethod("rx")
-        .def("rwx", &PermissionSet::RWX).staticmethod("rwx")
+        // Define static methods
+        .def_static("none", &PermissionSet::None)
+        .def_static("r", &PermissionSet::R)
+        .def_static("w", &PermissionSet::W)
+        .def_static("x", &PermissionSet::X)
+        .def_static("rw", &PermissionSet::RW)
+        .def_static("rx", &PermissionSet::RX)
+        .def_static("rwx", &PermissionSet::RWX)
 
     ;
 

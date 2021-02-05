@@ -2,7 +2,7 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/FileSystem.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,19 +15,20 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem                    ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem           (           pybind11::module&           aModule                                     )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.core.filesystem")))) ;
+    // Create "filesystem" python submodule
+    auto filesystem = aModule.def_submodule("filesystem") ;
 
-    boost::python::scope().attr("filesystem") = module ;
+    // Add __path__ attribute for "filesystem" submodule
+    filesystem.attr("__path__") = "ostk.core.filesystem" ;
 
-    boost::python::scope scope = module ;
-
-    OpenSpaceToolkitCorePy_FileSystem_PermissionSet() ;
-    OpenSpaceToolkitCorePy_FileSystem_Path() ;
-    OpenSpaceToolkitCorePy_FileSystem_File() ;
-    OpenSpaceToolkitCorePy_FileSystem_Directory() ;
+    // Add custom objects to python "filesystem" submodule
+    OpenSpaceToolkitCorePy_FileSystem_PermissionSet(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_Path(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_File(filesystem) ;
+    OpenSpaceToolkitCorePy_FileSystem_Directory(filesystem) ;
 
 }
 

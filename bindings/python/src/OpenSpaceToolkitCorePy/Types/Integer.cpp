@@ -2,7 +2,7 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Integer.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -11,19 +11,24 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Types_Integer                 ( )
+inline void                     OpenSpaceToolkitCorePy_Types_Integer        (           pybind11::module&           aModule                                     )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::types::Integer ;
     using ostk::core::types::Real ;
     using ostk::core::types::String ;
 
-    class_<Integer>("Integer", init<int>())
+    class_<Integer>(aModule, "Integer")
 
-        .def(int_(self))
+        // Define init method using pybind11 "init" convenience method
+        .def(init<Integer::ValueType>())
 
+        // Define __int__ method for direct conversion (previously .def(int_(self)))
+        .def("__int__", +[] (const ostk::core::types::Integer& anInteger) -> int { return static_cast<int>(anInteger) ; })
+
+        // Define methods
         .def(self == self)
         .def(self != self)
         .def(self < self)
@@ -73,27 +78,28 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer            
         .def("get_sign", &Integer::getSign)
         .def("to_string", &Integer::toString)
 
-        .def("undefined", &Integer::Undefined).staticmethod("undefined")
-        .def("zero", &Integer::Zero).staticmethod("zero")
-        .def("positive_infinity", &Integer::PositiveInfinity).staticmethod("positive_infinity")
-        .def("negative_infinity", &Integer::NegativeInfinity).staticmethod("negative_infinity")
-        .def("int8", &Integer::Int8).staticmethod("int8")
-        .def("int16", &Integer::Int16).staticmethod("int16")
-        .def("int32", &Integer::Int32).staticmethod("int32")
-        .def("int64", &Integer::Int64).staticmethod("int64")
-        .def("uint8", &Integer::Uint8).staticmethod("uint8")
-        .def("uint16", &Integer::Uint16).staticmethod("uint16")
-        .def("uint32", &Integer::Uint32).staticmethod("uint32")
-        .def("uint64", &Integer::Uint64).staticmethod("uint64")
-        .def("index", &Integer::Index).staticmethod("index")
-        .def("size", &Integer::Size).staticmethod("size")
-        .def("can_parse", static_cast<bool(*)(const String&)>(&Integer::CanParse)).staticmethod("can_parse")
-        .def("parse", static_cast<Integer(*)(const String&)>(&Integer::Parse)).staticmethod("parse")
+        // Define static methods
+        .def_static("undefined", &Integer::Undefined)
+        .def_static("zero", &Integer::Zero)
+        .def_static("positive_infinity", &Integer::PositiveInfinity)
+        .def_static("negative_infinity", &Integer::NegativeInfinity)
+        .def_static("int8", &Integer::Int8)
+        .def_static("int16", &Integer::Int16)
+        .def_static("int32", &Integer::Int32)
+        .def_static("int64", &Integer::Int64)
+        .def_static("uint8", &Integer::Uint8)
+        .def_static("uint16", &Integer::Uint16)
+        .def_static("uint32", &Integer::Uint32)
+        .def_static("uint64", &Integer::Uint64)
+        .def_static("index", &Integer::Index)
+        .def_static("size", &Integer::Size)
+        .def_static("can_parse", static_cast<bool(*)(const String&)>(&Integer::CanParse))
+        .def_static("parse", static_cast<Integer(*)(const String&)>(&Integer::Parse))
 
     ;
 
-    implicitly_convertible<Integer, int>() ;
-    implicitly_convertible<int, Integer>() ;
+    // Implicit conversion (allowed in the direction of the binded custom type only in pybind11)
+    implicitly_convertible<Integer::ValueType, Integer>() ;
 
 }
 

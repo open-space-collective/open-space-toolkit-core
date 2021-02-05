@@ -1,27 +1,28 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Utilities/ShiftToString.cpp
 /// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitCorePy/Containers/Array.cpp>
+#include <sstream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_Containers           (           pybind11::module&           aModule                                     )
+/// @brief                      Shift to String Template Function
+///
+///                             Template function used for __str__ and __repr__
+///                             methods on classes exposed in python.
+
+                                template <class T>
+std::string                     shiftToString                               (   const   T&                          aClass                                      )
 {
 
-    // Create "containers" python submodule
-    auto containers = aModule.def_submodule("containers") ;
-
-    // Add __path__ attribute for "containers" submodule
-    containers.attr("__path__") = "ostk.core.containers" ;
-
-    // Add objects to python "containers" submodules
-    OpenSpaceToolkitCorePy_Containers_Array(containers) ;
+    std::ostringstream out;
+    out << aClass;
+    return out.str();
 
 }
 

@@ -11,24 +11,30 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_File               ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_File      (           pybind11::module&           aModule                                     )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::fs::File ;
 
-    scope in_File = class_<File>("File", no_init)
+    class_<File>(aModule, "File")
 
+        // Define init method using pybind11 "init" convenience method
+        // No init here
+
+        // Define methods
         .def(self == self)
         .def(self != self)
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+        // .def("__str__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
+        .def("__str__", &(shiftToString<File>))
+        .def("__repr__", &(shiftToString<File>))
 
         .def("is_defined", &File::isDefined)
         .def("exists", &File::exists)
-        .def("get_name", &File::getName)
+        .def("get_name", &File::getName, "withExtension"_a=true)
         .def("get_extension", &File::getExtension)
         .def("get_path", &File::getPath)
         .def("get_permissions", &File::getPermissions)
@@ -42,8 +48,9 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_File          
         // .def("clear", &File::clear)
         .def("remove", &File::remove)
 
-        .def("undefined", &File::Undefined).staticmethod("undefined")
-        .def("path", &File::Path).staticmethod("path")
+        // Define static methods
+        .def_static("undefined", &File::Undefined)
+        .def_static("path", &File::Path)
 
     ;
 

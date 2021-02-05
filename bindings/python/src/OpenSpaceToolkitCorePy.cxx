@@ -2,29 +2,45 @@
 
 /// @project        Open Space Toolkit ▸ Core
 /// @file           bindings/python/src/OpenSpaceToolkitCorePy.cxx
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <boost/python.hpp>
+#include <pybind11/pybind11.h>
+#include <pybind11/operators.h>
 
-#include <OpenSpaceToolkitCorePy/FileSystem.cpp>
-#include <OpenSpaceToolkitCorePy/Containers.cpp>
+#include <OpenSpaceToolkitCorePy/Utilities/ShiftToString.hpp>
+
 #include <OpenSpaceToolkitCorePy/Types.cpp>
+#include <OpenSpaceToolkitCorePy/Containers.cpp>
+#include <OpenSpaceToolkitCorePy/FileSystem.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (OpenSpaceToolkitCorePy)
+PYBIND11_MODULE (OpenSpaceToolkitCorePy, m)
 {
 
-    boost::python::object package = boost::python::scope() ;
+    // Add optional docstring for package OpenSpaceToolkitCorePy
+    m.doc() = "Fundamental types, containers and utilities for OpenSpaceToolkit." ;
 
-    package.attr("__path__") = "ostk" ;
+    // Add __path__ attribute to python package
+    m.attr("__path__") = "ostk.core" ;
 
-    OpenSpaceToolkitCorePy_Types() ;
-    OpenSpaceToolkitCorePy_Containers() ;
-    OpenSpaceToolkitCorePy_FileSystem() ;
+    // Change attribute __name__ to make OpenSpaceToolkitCorePy invisible in import path
+    m.attr("__name__") = "ostk.core" ;
+
+    // Package version information
+    #ifdef VERSION_INFO
+        m.attr("__version__") = VERSION_INFO ;
+    #else
+        m.attr("__version__") = "dev" ;
+    #endif
+
+    // Add python submodules to OpenSpaceToolkitCorePy
+    OpenSpaceToolkitCorePy_Types(m) ;
+    OpenSpaceToolkitCorePy_Containers(m) ;
+    OpenSpaceToolkitCorePy_FileSystem(m) ;
 
 }
 

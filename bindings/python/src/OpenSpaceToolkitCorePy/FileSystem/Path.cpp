@@ -11,23 +11,29 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_Path               ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_Path      (           pybind11::module&           aModule                                     )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::fs::Path ;
 
-    scope in_Path = class_<Path>("Path", no_init)
+    class_<Path>(aModule, "Path")
 
+        // Define init method using pybind11 "init" convenience method
+        // No init here
+
+        // Define methods
         .def(self == self)
         .def(self != self)
 
         .def(self + self)
         .def(self += self)
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+        // .def("__str__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
+        .def("__str__", &(shiftToString<Path>))
+        .def("__repr__", &(shiftToString<Path>))
 
         .def("is_defined", &Path::isDefined)
         .def("is_absolute", &Path::isAbsolute)
@@ -35,15 +41,16 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Path          
         .def("get_parent_path", &Path::getParentPath)
         .def("get_last_element", &Path::getLastElement)
         .def("get_normalized_path", &Path::getNormalizedPath)
-        .def("get_absolute_path", &Path::getAbsolutePath)
+        .def("get_absolute_path", &Path::getAbsolutePath, "aBasePath"_a = Path::Current())
         // .def("get_relative_path_to", &Path::getRelativePathTo)
         .def("to_string", &Path::toString)
 
-        .def("undefined", &Path::Undefined).staticmethod("undefined")
-        .def("root", &Path::Root).staticmethod("root")
-        .def("current", &Path::Current).staticmethod("current")
-        .def("parse", &Path::Parse).staticmethod("parse")
-        // .def("strings", &Path::Strings).staticmethod("strings")
+        // Define static methods
+        .def_static("undefined", &Path::Undefined)
+        .def_static("root", &Path::Root)
+        .def_static("current", &Path::Current)
+        .def_static("parse", &Path::Parse)
+        // .def_static("strings", &Path::Strings)
 
     ;
 

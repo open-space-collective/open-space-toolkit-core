@@ -53,7 +53,7 @@ class Array : public std::vector<T>
 
         /// @brief              Default constructor (disabled)
 
-                                Array                                       ( ) = delete ;
+                                Array                                       ( ) ;
 
         /// @brief              Constructs an array from a C++ Standard Library vector
         ///

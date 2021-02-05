@@ -11,20 +11,26 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory          ( )
+inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory (           pybind11::module&           aModule                                     )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::fs::Directory ;
 
-    scope in_Directory = class_<Directory>("Directory", no_init)
+    class_<Directory>(aModule, "Directory")
 
+        // Define init method using pybind11 "init" convenience method
+        // No init here
+
+        // Define methods
         .def(self == self)
         .def(self != self)
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+        // .def("__str__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
+        .def("__str__", &(shiftToString<Directory>))
+        .def("__repr__", &(shiftToString<Directory>))
 
         .def("is_defined", &Directory::isDefined)
         .def("exists", &Directory::exists)
@@ -44,9 +50,10 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory     
         .def("create", &Directory::create)
         .def("remove", &Directory::remove)
 
-        .def("undefined", &Directory::Undefined).staticmethod("undefined")
-        .def("root", &Directory::Root).staticmethod("root")
-        .def("path", &Directory::Path).staticmethod("path")
+        // Define static methods
+        .def_static("undefined", &Directory::Undefined)
+        .def_static("root", &Directory::Root)
+        .def_static("path", &Directory::Path)
 
     ;
 
