@@ -17,7 +17,7 @@ USER root
 
 # Install extensions
 
-RUN jupyter labextension install @jupyterlab/plotly-extension
+RUN jupyter labextension install jupyterlab-plotly
 
 COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension
 
