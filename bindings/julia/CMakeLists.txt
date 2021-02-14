@@ -141,8 +141,10 @@ SET (OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/build/timestamp")
 CONFIGURE_FILE (${MODULE_JL_IN} ${MODULE_JL})
 
 ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
-                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/ostk.jl" "${CMAKE_CURRENT_BINARY_DIR}/ostk.jl"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/ostk.jl" "${CMAKE_CURRENT_BINARY_DIR}/ostk/src/ostk.jl"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/Project.toml" "${CMAKE_CURRENT_BINARY_DIR}/ostk/Project.toml"
+                    COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/julia/Manifest.toml" "${CMAKE_CURRENT_BINARY_DIR}/ostk/Manifest.toml"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/core/libopen-space-toolkit-core.so.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/lib/${LIBRARY_TARGET}"
                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                     DEPENDS ${DEPS})
