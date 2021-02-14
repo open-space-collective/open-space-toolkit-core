@@ -17,7 +17,8 @@ Pkg.add("CxxWrap")
 module ostk
     using CxxWrap
     @wrapmodule(joinpath("lib/", "OpenSpaceToolkitCoreJl"))
-        function __init__()
+
+    function __init__()
            @initcxx
     end
 
