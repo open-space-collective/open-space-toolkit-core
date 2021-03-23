@@ -39,7 +39,6 @@ CMAKE_POLICY (SET "CMP0048" NEW)
 
 ### Options
 
-# Add a subdirectory with a CMakeLists.txt file specifically for wheels generation ?
 OPTION (BUILD_WHEELS_IN_CMAKE "Build python wheels with cmake." ON)
 
 ################################################################################################################################################################
@@ -51,9 +50,6 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 ################################################################################################################################################################
 
 ## Helper Functions
-
-# Inspired by https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/pull/655/files
-# Possibly move these generic functions to a PythonBuilding.cmake hosted on base image and use the command INCLUDE (PythonBuilding) in this CMakeLists file
 
 ### Improved FIND_PYTHON macro
 
@@ -146,15 +142,13 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
 
         # Build wheels with cmake
         ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
-                            COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
-                            COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/test"
-                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_GROUP}/__init__.py"
-                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
-                            COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
-                            COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/"
-                            COMMAND python${PYTHON_VERSION} ${SETUP_PY} bdist_wheel --python-tag=py${EXTENSION}
-                            COMMAND rm -rf "${CMAKE_CURRENT_BINARY_DIR}/build/lib"
-                            COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
+                            COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}"
+                            COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/test"
+                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_GROUP}/__init__.py"
+                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/__init__.py"
+                            COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
+                            COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
+                            COMMAND python${PYTHON_VERSION} ${SETUP_PY} build --build-base=./lib${EXTENSION} bdist_wheel --python-tag=py${EXTENSION} --bdist-dir=./dist${EXTENSION}
                             DEPENDS ${DEPS})
 
         # Install package on the machine
@@ -187,7 +181,7 @@ FIND_PACKAGE (pybind11 2.6.0 REQUIRED)
 ### Python
 
 # Python versions to build for and support
-SET (PYTHON_SEARCH_VERSIONS 2.7 3.5 3.6 3.7 3.8 3.9)
+SET (PYTHON_SEARCH_VERSIONS 2.7 3.5 3.6 3.7 3.8 3.9 3.10)
 
 MESSAGE (STATUS "Looking for available python versions...")
 FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})
@@ -217,11 +211,6 @@ FOREACH (PYTHON_VERSION ${PYTHON_VERSIONS})
     MESSAGE (STATUS "Building shared library for python ${PYTHON_VERSION}...")
     PY_ADD_MODULE ("${LIBRARY_TARGET}_${PYTHON_VERSION}" ${PROJECT_SRCS} PYTHON_VERSION ${PYTHON_VERSION})
     ADD_DEPENDENCIES (${LIBRARY_TARGET} "${LIBRARY_TARGET}_${PYTHON_VERSION}")
-
-    # Install make commands for each python version
-    INSTALL (TARGETS ${LIBRARY_TARGET}_${PYTHON_VERSION} DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
-    INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_GROUP}" COMPONENT "python")
-    INSTALL (FILES "${PROJECT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" DESTINATION "${INSTALL_LIB}/${PROJECT_PATH}" COMPONENT "python")
 ENDFOREACH ()
 
 ################################################################################################################################################################
