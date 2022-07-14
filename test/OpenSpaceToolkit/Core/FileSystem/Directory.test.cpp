@@ -392,7 +392,7 @@ TEST (OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 
         const Array<String> subDirectoryNames = subDirectories.map<String>([] (const Directory& aDirectory) -> String { return aDirectory.getName() ; }) ;
 
-        const Array<String> referenceSubDirectoryNames = {"ci", "cmake", "development"} ;
+        const Array<String> referenceSubDirectoryNames = {"cmake", "development"} ;
 
         EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames) ;
 
