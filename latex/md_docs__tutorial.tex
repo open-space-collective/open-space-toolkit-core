@@ -1,0 +1,51 @@
+Below are examples illustrating a few common use-\/cases.\hypertarget{md_docs__tutorial_Setup}{}\section{Setup}\label{md_docs__tutorial_Setup}
+{\itshape To be completed...}\hypertarget{md_docs__tutorial_Examples}{}\section{Examples}\label{md_docs__tutorial_Examples}
+\hypertarget{md_docs__tutorial_JSON}{}\subsection{Load / Write J\+S\+ON}\label{md_docs__tutorial_JSON}
+\href{https://en.wikipedia.org/wiki/JSON}{\tt J\+S\+ON} is a great format for configuring applications and for exchanging data over the internet\+:
+
+Assuming an {\ttfamily input.\+json} file as follows\+:
+
+
+\begin{DoxyCode}
+\{
+    "Key 1": "Hello World!"
+\}
+\end{DoxyCode}
+
+
+the following code\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Setup JSON file}
+
+File jsonFile = File::Path(Path::String(\textcolor{stringliteral}{"/path/to/input.json"})) ;
+
+\textcolor{comment}{// Create object by loading JSON file}
+
+Object \textcolor{keywordtype}{object} = Object::Load(jsonFile) ;
+
+\textcolor{comment}{// Get object value}
+
+String value = \textcolor{keywordtype}{object}[\textcolor{stringliteral}{"Key 1"}].toString() ; \textcolor{comment}{// "Hello World!"}
+
+\textcolor{comment}{// Set object value}
+
+\textcolor{keywordtype}{object}[\textcolor{stringliteral}{"Key 2"}] = Object::Integer(123) ;
+
+\textcolor{comment}{// Save object}
+
+\textcolor{keywordtype}{object}.writeToFile(File::Path(Path::String(\textcolor{stringliteral}{"/path/to/output.json"}))) ;
+\end{DoxyCode}
+
+
+will return an {\ttfamily output.\+json} file as\+:
+
+
+\begin{DoxyCode}
+\{
+    "Key 1": "Hello World!",
+    "Key 2": 123
+\}
+\end{DoxyCode}
+ 
