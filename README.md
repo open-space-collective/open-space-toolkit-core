@@ -1,6 +1,6 @@
 # Open Space Toolkit ▸ Core
 
-[![Build Status](https://travis-ci.com/open-space-collective/open-space-toolkit-core.svg?branch=master)](https://travis-ci.com/open-space-collective/open-space-toolkit-core)
+[![Build Status](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/main.yml/badge.svg)](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/main.yml)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-core)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-core)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core)
