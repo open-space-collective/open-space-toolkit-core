@@ -1,13 +1,13 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           docker/development/Dockerfile
+# @file           docker/development/debian/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-ARG BASE_IMAGE_VERSION=latest
+ARG BASE_IMAGE_VERSION=0.2.1
 ARG BASE_IMAGE_SYSTEM=debian
 
 FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}-${BASE_IMAGE_SYSTEM}
