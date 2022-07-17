@@ -7,14 +7,12 @@
 
 ################################################################################################################################################################
 
-project_name := open-space-toolkit-core
+project_name := core
 project_version := $(shell git describe --tags --always)
 
 docker_registry_path := openspacecollective
-docker_image_repository := $(docker_registry_path)/$(project_name)
+docker_image_repository := $(docker_registry_path)/open-space-toolkit-$(project_name)
 docker_image_version := $(project_version)
-
-development_base_image_version := 0.2.1
 
 docker_development_image_repository := $(docker_image_repository)-development
 docker_release_image_cpp_repository := $(docker_image_repository)-cpp
@@ -23,6 +21,8 @@ docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
 jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
 jupyter_notebook_port := 9001
+
+project_name_camel_case := $(shell P=$(project_name); echo $${P^})
 
 ################################################################################################################################################################
 
@@ -88,6 +88,13 @@ _pull-release-image-python: _pull-development-image
 	docker pull $(docker_release_image_python_repository):$(docker_image_version)-$(target) || true
 	docker pull $(docker_release_image_python_repository):latest-$(target) || true
 
+pull-release-image-jupyter:
+
+	@ echo "Pulling Jupyter Notebook release image..."
+
+	docker pull $(docker_release_image_jupyter_repository):$(docker_image_version) || true
+	docker pull $(docker_release_image_jupyter_repository):latest || true
+
 ################################################################################################################################################################
 
 build: build-images ## Build all images
@@ -117,11 +124,9 @@ _build-development-image: _pull-development-image
 
 	docker build \
 		--cache-from=$(docker_development_image_repository):latest-$(target) \
-		--file="$(CURDIR)/docker/development/Dockerfile" \
+		--file="$(CURDIR)/docker/development/$(target)/Dockerfile" \
 		--tag=$(docker_development_image_repository):$(docker_image_version)-$(target) \
 		--tag=$(docker_development_image_repository):latest-$(target) \
-		--build-arg="BASE_IMAGE_VERSION=$(development_base_image_version)" \
-		--build-arg="BASE_IMAGE_SYSTEM=$(target)" \
 		--build-arg="VERSION=$(docker_image_version)" \
 		"$(CURDIR)"
 
@@ -173,13 +178,6 @@ _build-release-image-python: _build-development-image _pull-release-image-python
 		--target=python-release \
 		"$(CURDIR)"
 
-pull-release-image-jupyter:
-
-	@ echo "Pulling Jupyter Notebook release image..."
-
-	docker pull $(docker_release_image_jupyter_repository):$(docker_image_version) || true
-	docker pull $(docker_release_image_jupyter_repository):latest || true
-
 build-release-image-jupyter: pull-release-image-jupyter
 
 	@ echo "Building Jupyter Notebook release image..."
@@ -204,7 +202,8 @@ build-documentation: _build-development-image ## Build documentation
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version)-$(target) \
-		/bin/bash -c "cmake -DBUILD_DOCUMENTATION=ON .. && make docs"
+		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_DOCUMENTATION=ON .. \
+		&& make docs"
 
 build-packages: ## Build packages
 
@@ -267,7 +266,8 @@ _build-packages-python: _build-development-image
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version)-$(target) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. && make -j 4 \
+		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. \
+		&& make -j 4 \
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
@@ -286,6 +286,8 @@ start-development-debian start-development-fedora: _start-development
 
 _start-development: _build-development-image
 
+_start-development-no-link:
+
 	@ echo "Starting [$(target)] development environment..."
 
 	docker run \
@@ -297,6 +299,18 @@ _start-development: _build-development-image
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version)-$(target) \
 		/bin/bash
+
+_start-development-link:
+
+	@ echo "Starting [$(target)] development environment (linked)..."
+
+	@ target=$(target) "$(CURDIR)/tools/development/start.sh" --link
+
+ifndef link
+_start-development: _start-development-no-link
+else
+_start-development: _start-development-link
+endif
 
 start-python: ## Start Python runtime environment
 
@@ -327,7 +341,22 @@ start-jupyter-notebook: build-release-image-jupyter ## Starting Jupyter Notebook
 		--rm \
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs" \
+		--workdir="/home/jovyan" \
+		$(docker_release_image_jupyter_repository):$(docker_image_version) \
+		bash -c "start-notebook.sh --NotebookApp.token=''"
+
+debug-jupyter-notebook: build-release-image-jupyter
+
+	@ echo "Debugging Jupyter Notebook environment..."
+
+	docker run \
+		-it \
+		--rm \
+		--publish="$(jupyter_notebook_port):8888" \
+		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs" \
 		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials" \
+		--volume="$(CURDIR)/lib/libopen-space-toolkit-$(project_name).so.0:/opt/conda/lib/python3.7/site-packages/ostk/$(project_name)/libopen-space-toolkit-$(project_name).so.0:ro" \
+		--volume="$(CURDIR)/lib/OpenSpaceToolkit$(project_name_camel_case)Py.so:/opt/conda/lib/python3.7/site-packages/ostk/$(project_name)/OpenSpaceToolkit$(project_name_camel_case)Py.so:ro" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		bash -c "start-notebook.sh --NotebookApp.token=''"
@@ -387,14 +416,14 @@ _debug-python-release: _build-release-image-python
 
 ################################################################################################################################################################
 
-test: ## Run Tests
+test: ## Run tests
 
 	@ echo "Running tests..."
 
 	@ make test-unit
 	@ make test-coverage
 
-test-unit: ## Run Unit Tests
+test-unit: ## Run unit tests
 
 	@ echo "Running unit tests..."
 
@@ -426,10 +455,11 @@ _test-unit-cpp: _build-development-image
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
+		--volume="$(CURDIR)/share:/usr/local/share/OpenSpaceToolkit/$(project_name_camel_case):delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version)-$(target) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF .. \
+		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
 		&& make -j 4 \
 		&& make test"
 
@@ -444,12 +474,13 @@ _test-unit-python: _build-release-image-python
 
 	docker run \
 		--rm \
-		--workdir=/usr/local/lib/python3.8/site-packages/ostk/core \
+		--volume="$(CURDIR)/share:/usr/local/share/OpenSpaceToolkit/$(project_name_camel_case):delegated" \
+		--workdir=/usr/local/lib/python3.8/site-packages/ostk/astrodynamics \
 		--entrypoint="" \
 		$(docker_release_image_python_repository):$(docker_image_version)-$(target) \
 		/bin/bash -c "pip install pytest && pytest -sv ."
 
-test-coverage: ## Run Test Coverage C++
+test-coverage: ## Run test coverage cpp
 
 	@ echo "Running coverage tests..."
 
@@ -473,6 +504,7 @@ _test-coverage-cpp: _build-development-image
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
+		--volume="$(CURDIR)/share:/usr/local/share/OpenSpaceToolkit/$(project_name_camel_case):delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version)-$(target) \
@@ -489,13 +521,14 @@ clean: ## Clean
 
 	@ echo "Cleaning up..."
 
-	rm -r "$(CURDIR)/build" || true
-	rm -r "$(CURDIR)/bin/"*.test* || true
-	rm -r "$(CURDIR)/docs/html" || true
-	rm -r "$(CURDIR)/docs/latex" || true
-	rm -r "$(CURDIR)/lib/"*.so* || true
-	rm -r "$(CURDIR)/coverage" || true
-	rm -r "$(CURDIR)/packages" || true
+	rm -rf "$(CURDIR)/build"
+	rm -rf "$(CURDIR)/bin/"*.test*
+	rm -rf "$(CURDIR)/docs/html"
+	rm -rf "$(CURDIR)/docs/latex"
+	rm -rf "$(CURDIR)/lib/"*.so*
+	rm -rf "$(CURDIR)/coverage"
+	rm -rf "$(CURDIR)/packages"
+	rm -rf "$(CURDIR)/.open-space-toolkit"
 
 ################################################################################################################################################################
 
@@ -504,14 +537,14 @@ clean: ## Clean
 		build-development-images build-development-image-debian build-development-image-fedora \
 		pull-release-images pull-release-image-cpp-debian pull-release-image-cpp-fedora _pull-release-image-cpp \
 		pull-release-image-python-debian pull-release-image-python-fedora _pull-release-image-python \
-		build-release-image-cpp-debian build-release-image-python-debian build-release-image-python-fedora \
 		pull-release-image-jupyter \
+		build-release-image-cpp-debian build-release-image-python-debian build-release-image-python-fedora \
 		build-release-image-jupyter \
 		build-documentation \
 		build-packages-cpp build-packages-cpp-debian build-packages-cpp-fedora \
 		start-development start-development-debian start-development-fedora \
 		start-python start-python-debian start-python-fedora \
-		start-jupyter-notebook \
+		start-jupyter-notebook debug-jupyter-notebook \
 		debug-development-debian debug-cpp-release-debian debug-python-release-debian \
 		debug-development-fedora debug-cpp-release-fedora debug-python-release-fedora \
 		test \
