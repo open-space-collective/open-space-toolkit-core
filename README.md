@@ -226,7 +226,7 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about our develop
 
 ## Special Thanks
 
-[![Loft Orbital](./assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)
+[![Loft Orbital](https://github.com/open-space-collective/open-space-toolkit/blob/master/assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)
 
 ## License
 
