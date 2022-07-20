@@ -153,7 +153,7 @@ The library exhibits the following structure:
 </p>
 </details>
 
-### Tutorials
+## Tutorials
 
 Tutorials are available here:
 
@@ -226,7 +226,7 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about our develop
 
 ## Special Thanks
 
-*To be completed...*
+[![Loft Orbital](./assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)
 
 ## License
 
