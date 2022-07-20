@@ -55,6 +55,7 @@ jobs:
     name: Release
     needs:
       - prepare-environment
+      - build-and-test
     uses: open-space-collective/open-space-toolkit/.github/workflows/release.yml@users/lucas/add-workflows
     with:
       project_name: ${{ needs.prepare-environment.outputs.project_name }}
