@@ -1,7 +1,7 @@
 # Open Space Toolkit ▸ Core
 
-[![Build and Test](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml/badge.svg?branch=master)](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml)
-[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-core)
+[![Build and Test](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/main/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-core)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-core)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core)
 [![PyPI version](https://badge.fury.io/py/open-space-toolkit-core.svg)](https://badge.fury.io/py/open-space-toolkit-core)
@@ -13,7 +13,7 @@ Common types, containers and utilities.
 
 Want to get started? This is the simplest and quickest way:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/master?urlpath=lab/tree/notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks)
 
 *Nothing to download or install! This will automatically start a [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.*
 
@@ -226,7 +226,7 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about our develop
 
 ## Special Thanks
 
-[![Loft Orbital](https://github.com/open-space-collective/open-space-toolkit/blob/master/assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)
+[![Loft Orbital](https://github.com/open-space-collective/open-space-toolkit/blob/main/assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)
 
 ## License
 
