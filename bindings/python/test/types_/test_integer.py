@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types/test_integer.py
+# @file           bindings/python/test/types_/test_integer.py
 # @author         Remy Derollez <remy@loftorbital.com>
 # @license        Apache License 2.0
 

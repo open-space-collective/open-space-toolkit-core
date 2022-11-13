@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types/__init__.py
+# @file           bindings/python/test/types_/__init__.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
