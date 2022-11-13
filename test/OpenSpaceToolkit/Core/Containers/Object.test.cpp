@@ -912,206 +912,467 @@ TEST (OpenSpaceToolkit_Core_Containers_Object, Parse)
 
     {
 
-        String jsonString = "" ;
+        {
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            const String jsonString = "" ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
 
-        EXPECT_EQ(Object::Type::Undefined, object.getType()) ;
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Undefined, object.getType()) ;
+
+        }
+
+        {
+
+            const String jsonString = "false" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
+
+            EXPECT_EQ(false, object.getBoolean()) ;
+
+        }
+
+        {
+
+            const String jsonString = "true" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
+
+            EXPECT_EQ(true, object.getBoolean()) ;
+
+        }
+
+        {
+
+            const String jsonString = "0" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+
+            EXPECT_EQ(0, object.getInteger()) ;
+
+        }
+
+        {
+
+            const String jsonString = "-123" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+
+            EXPECT_EQ(-123, object.getInteger()) ;
+
+        }
+
+        {
+
+            const String jsonString = "123" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+
+            EXPECT_EQ(123, object.getInteger()) ;
+
+        }
+
+        {
+
+            const String jsonString = "0.0" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
+
+            EXPECT_EQ(0.0, object.getReal()) ;
+
+        }
+
+        {
+
+            const String jsonString = "-123.456" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
+
+            EXPECT_EQ(-123.456, object.getReal()) ;
+
+        }
+
+        {
+
+            const String jsonString = "123.456" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
+
+            EXPECT_EQ(123.456, object.getReal()) ;
+
+        }
+
+        {
+
+            const String jsonString = "\"abc\"" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
+
+            EXPECT_EQ("abc", object.getString()) ;
+
+        }
+
+        {
+
+            const String jsonString = "\"abcdef,./<>?;:[]{}|-=!@#$%^&*()_+\"" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
+
+            EXPECT_EQ("abcdef,./<>?;:[]{}|-=!@#$%^&*()_+", object.getString()) ;
+
+        }
+
+        {
+
+            const String jsonString = "\"abc\\\"'def\"" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
+
+            EXPECT_EQ("abc\"'def", object.getString()) ;
+
+        }
+
+        {
+
+            const String jsonString = "{\"Key\": \"Value\"}" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Dictionary, object.getType()) ;
+
+            EXPECT_EQ(Dictionary({{ "Key", Object::String("Value") }}), object.getDictionary()) ;
+
+        }
+
+        {
+
+            const String jsonString = "[null, true, 123, 456.789, \"abc\"]" ;
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+
+            EXPECT_EQ(Object::Type::Array, object.getType()) ;
+
+            EXPECT_TRUE(object.isArray()) ;
+
+            EXPECT_FALSE(object[0].isDefined()) ;
+            EXPECT_TRUE(object[1].isBoolean()) ;
+            EXPECT_TRUE(object[2].isInteger()) ;
+            EXPECT_TRUE(object[3].isReal()) ;
+            EXPECT_TRUE(object[4].isString()) ;
+
+            EXPECT_EQ(true, object[1].getBoolean()) ;
+            EXPECT_EQ(123, object[2].getInteger()) ;
+            EXPECT_EQ(456.789, object[3].getReal()) ;
+            EXPECT_EQ("abc", object[4].getString()) ;
+
+        }
 
     }
 
-    {
-
-        String jsonString = "false" ;
-
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
-
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
-
-        EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
-
-        EXPECT_EQ(false, object.getBoolean()) ;
-
-    }
+    // YAML
 
     {
 
-        String jsonString = "true" ;
+        {
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            const String yamlString = "" ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(true, object.getBoolean()) ;
+            EXPECT_EQ(Object::Type::Undefined, object.getType()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "0" ;
+            const String yamlString = "false" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+            EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
 
-        EXPECT_EQ(0, object.getInteger()) ;
+            EXPECT_EQ(false, object.getBoolean()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "-123" ;
+            const String yamlString = "true" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+            EXPECT_EQ(Object::Type::Boolean, object.getType()) ;
 
-        EXPECT_EQ(-123, object.getInteger()) ;
+            EXPECT_EQ(true, object.getBoolean()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "123" ;
+            const String yamlString = "0" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Integer, object.getType()) ;
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
 
-        EXPECT_EQ(123, object.getInteger()) ;
+            EXPECT_EQ(0, object.getInteger()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "0.0" ;
+            const String yamlString = "-123" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Real, object.getType()) ;
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
 
-        EXPECT_EQ(0.0, object.getReal()) ;
+            EXPECT_EQ(-123, object.getInteger()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "-123.456" ;
+            const String yamlString = "123" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Real, object.getType()) ;
+            EXPECT_EQ(Object::Type::Integer, object.getType()) ;
 
-        EXPECT_EQ(-123.456, object.getReal()) ;
+            EXPECT_EQ(123, object.getInteger()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "123.456" ;
+            const String yamlString = "0.0" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Real, object.getType()) ;
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
 
-        EXPECT_EQ(123.456, object.getReal()) ;
+            EXPECT_EQ(0.0, object.getReal()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "\"abc\"" ;
+            const String yamlString = "-123.456" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::String, object.getType()) ;
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
 
-        EXPECT_EQ("abc", object.getString()) ;
+            EXPECT_EQ(-123.456, object.getReal()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "\"abcdef,./<>?;:[]{}|-=!@#$%^&*()_+\"" ;
+            const String yamlString = "123.456" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::String, object.getType()) ;
+            EXPECT_EQ(Object::Type::Real, object.getType()) ;
 
-        EXPECT_EQ("abcdef,./<>?;:[]{}|-=!@#$%^&*()_+", object.getString()) ;
+            EXPECT_EQ(123.456, object.getReal()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "\"abc\\\"'def\"" ;
+            const String yamlString = "abc" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::String, object.getType()) ;
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
 
-        EXPECT_EQ("abc\"'def", object.getString()) ;
+            EXPECT_EQ("abc", object.getString()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "{\"Key\": \"Value\"}" ;
+            const String yamlString = "\"abc\"" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Dictionary, object.getType()) ;
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
 
-        EXPECT_EQ(Dictionary({{ "Key", Object::String("Value") }}), object.getDictionary()) ;
+            EXPECT_EQ("abc", object.getString()) ;
 
-    }
+        }
 
-    {
+        {
 
-        String jsonString = "[null, true, 123, 456.789, \"abc\"]" ;
+            const String yamlString = "\"abcdef,./<>?;:[]{}|-=!@#$%^&*()_+\"" ;
 
-        EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON)) ;
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
 
-        Object object = Object::Parse(jsonString, Object::Format::JSON) ;
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
 
-        EXPECT_EQ(Object::Type::Array, object.getType()) ;
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
 
-        EXPECT_TRUE(object.isArray()) ;
+            EXPECT_EQ("abcdef,./<>?;:[]{}|-=!@#$%^&*()_+", object.getString()) ;
 
-        EXPECT_FALSE(object[0].isDefined()) ;
-        EXPECT_TRUE(object[1].isBoolean()) ;
-        EXPECT_TRUE(object[2].isInteger()) ;
-        EXPECT_TRUE(object[3].isReal()) ;
-        EXPECT_TRUE(object[4].isString()) ;
+        }
 
-        EXPECT_EQ(true, object[1].getBoolean()) ;
-        EXPECT_EQ(123, object[2].getInteger()) ;
-        EXPECT_EQ(456.789, object[3].getReal()) ;
-        EXPECT_EQ("abc", object[4].getString()) ;
+        {
+
+            const String yamlString = "\"abc\\\"'def\"" ;
+
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
+
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
+
+            EXPECT_EQ(Object::Type::String, object.getType()) ;
+
+            EXPECT_EQ("abc\"'def", object.getString()) ;
+
+        }
+
+        {
+
+            const String yamlString = "Key: Value" ;
+
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
+
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
+
+            EXPECT_EQ(Object::Type::Dictionary, object.getType()) ;
+
+            EXPECT_EQ(Dictionary({{ "Key", Object::String("Value") }}), object.getDictionary()) ;
+
+        }
+
+        {
+
+            const String yamlString = "{\"Key\": \"Value\"}" ;
+
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
+
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
+
+            EXPECT_EQ(Object::Type::Dictionary, object.getType()) ;
+
+            EXPECT_EQ(Dictionary({{ "Key", Object::String("Value") }}), object.getDictionary()) ;
+
+        }
+
+        // {
+
+        //     const String yamlString = "- true\n false" ;
+
+        //     EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
+
+        //     const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
+
+        //     EXPECT_EQ(Object::Type::Array, object.getType()) ;
+
+        //     EXPECT_TRUE(object.isArray()) ;
+
+        //     EXPECT_FALSE(object[0].isDefined()) ;
+
+        //     EXPECT_EQ(true, object[0].getBoolean()) ;
+
+        // }
+
+        {
+
+            const String yamlString = "[null, true, 123, 456.789, \"abc\"]" ;
+
+            EXPECT_NO_THROW(Object::Parse(yamlString, Object::Format::YAML)) ;
+
+            const Object object = Object::Parse(yamlString, Object::Format::YAML) ;
+
+            EXPECT_EQ(Object::Type::Array, object.getType()) ;
+
+            EXPECT_TRUE(object.isArray()) ;
+
+            EXPECT_FALSE(object[0].isDefined()) ;
+            EXPECT_TRUE(object[1].isBoolean()) ;
+            EXPECT_TRUE(object[2].isInteger()) ;
+            EXPECT_TRUE(object[3].isReal()) ;
+            EXPECT_TRUE(object[4].isString()) ;
+
+            EXPECT_EQ(true, object[1].getBoolean()) ;
+            EXPECT_EQ(123, object[2].getInteger()) ;
+            EXPECT_EQ(456.789, object[3].getReal()) ;
+            EXPECT_EQ("abc", object[4].getString()) ;
+
+        }
 
     }
 

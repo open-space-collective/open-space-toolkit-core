@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types/test_string.py
+# @file           bindings/python/test/types_/test_string.py
 # @author         Remy Derollez <remy@loftorbital.com>
 # @license        Apache License 2.0
 

@@ -1,27 +1,25 @@
+#!/bin/bash
+
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types/test_sign.py
-# @author         Remy Derollez <remy@loftorbital.com>
+# @file           tools/development/helpers/test-python.sh
+# @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-import pytest
-
-from ostk.core.types import Sign
+PYTHON_VERSION="3.9"
 
 ################################################################################################################################################################
 
-def test_sign_enum ():
+project_directory="$(git rev-parse --show-toplevel)"
+test_directory="${project_directory}/bindings/python/test"
 
-    sign_pos = Sign.Positive
-    sign_neg = Sign.Negative
-    sign_undef = Sign.Undefined
-    sign_no = Sign.NoSign
+pushd "${test_directory}" > /dev/null
 
-    enum_members = Sign.__members__
-    assert list(enum_members.keys()) == ['Undefined', 'Positive', 'Negative', 'NoSign']
-    assert list(enum_members.values()) == [Sign.Undefined, Sign.Positive, Sign.Negative, Sign.NoSign]
+python${PYTHON_VERSION} -m pytest -svx ${@}
+
+popd > /dev/null
 
 ################################################################################################################################################################

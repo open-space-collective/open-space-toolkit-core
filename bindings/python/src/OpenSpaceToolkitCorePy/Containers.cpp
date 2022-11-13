@@ -7,6 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include <OpenSpaceToolkitCorePy/Containers/Dictionary.cpp>
+#include <OpenSpaceToolkitCorePy/Containers/Object.cpp>
 #include <OpenSpaceToolkitCorePy/Containers/Array.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +24,8 @@ inline void                     OpenSpaceToolkitCorePy_Containers           (   
 
     // Add objects to python "containers" submodules
     OpenSpaceToolkitCorePy_Containers_Array(containers) ;
+    OpenSpaceToolkitCorePy_Containers_Object(containers) ;
+    OpenSpaceToolkitCorePy_Containers_Dictionary(containers) ;
 
 }
 

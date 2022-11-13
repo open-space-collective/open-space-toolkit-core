@@ -13,6 +13,8 @@
 #include <OpenSpaceToolkit/Core/Logger.hpp>
 #include <OpenSpaceToolkit/Core/Utilities.hpp>
 
+#include <yaml-cpp/yaml.h>
+
 #include <rapidjson/document.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
@@ -702,8 +704,9 @@ types::String                   Object::toString                            (   
         case Object::Format::JSON:
             return this->getJsonString() ;
 
-        // case Object::Format::XML:
-        //     break ;
+        // TBI
+        // case Object::Format::YAML:
+        //     return this->getYamlString() ;
 
         default:
             break ;
@@ -958,6 +961,9 @@ Object                          Object::Parse                               (   
         case Object::Format::JSON:
             return Object::ParseJson(aString) ;
 
+        case Object::Format::YAML:
+            return Object::ParseYaml(aString) ;
+
         default:
             break ;
     }
@@ -1068,6 +1074,118 @@ Object                          Object::ParseJson                           (   
     const Object object = parseJson(jsonDocument) ;
 
     return object ;
+
+}
+
+Object                          Object::ParseYaml                           (   const   types::String&              aString                                     )
+{
+
+    LOG_SCOPE("Object", "ParseYaml") ;
+
+    if (aString.isEmpty())
+    {
+        return Object::Undefined() ;
+    }
+
+    std::function<Object (const YAML::Node&)> parseYaml =
+    [&parseYaml]
+    (const YAML::Node& aNode) -> Object
+    {
+
+        switch (aNode.Type())
+        {
+
+            case YAML::NodeType::Undefined:
+            case YAML::NodeType::Null:
+            {
+                return Object::Undefined() ;
+            }
+
+            case YAML::NodeType::Scalar:
+            {
+
+                try
+                {
+                    return Object::Boolean(aNode.as<bool>()) ;
+                }
+                catch (const YAML::BadConversion& e)
+                {
+                    // Do nothing.
+                }
+
+                try
+                {
+                    return Object::Integer(aNode.as<int>()) ;
+                }
+                catch (const YAML::BadConversion& e)
+                {
+                    // Do nothing.
+                }
+
+                try
+                {
+                    return Object::Real(aNode.as<double>()) ;
+                }
+                catch (const YAML::BadConversion& e)
+                {
+                    // Do nothing.
+                }
+
+                return Object::String(aNode.as<std::string>()) ;
+
+            }
+
+            case YAML::NodeType::Sequence:
+            {
+
+                ctnr::Array<Object> array = ctnr::Array<Object>::Empty() ;
+
+                for (const auto& node : aNode)
+                {
+                    array.add(parseYaml(node)) ;
+                }
+
+                return Object::Array(array) ;
+
+            }
+
+            case YAML::NodeType::Map:
+            {
+
+                ctnr::Dictionary dictionary = ctnr::Dictionary::Empty() ;
+
+                for (const auto& node : aNode)
+                {
+                    dictionary[node.first.as<std::string>()] = parseYaml(node.second) ;
+                }
+
+                return Object::Dictionary(dictionary) ;
+
+            }
+
+            default:
+            {
+                throw ostk::core::error::runtime::Wrong("Node") ;
+            }
+
+        }
+
+        return Object::Undefined() ;
+
+    } ;
+
+    try
+    {
+
+        const YAML::Node node = YAML::Load(aString) ;
+
+        return parseYaml(node) ;
+
+    }
+    catch (const std::exception& anException)
+    {
+        throw ostk::core::error::RuntimeError("Cannot parse YAML string [{}]: [{}].", aString, anException.what()) ;
+    }
 
 }
 
