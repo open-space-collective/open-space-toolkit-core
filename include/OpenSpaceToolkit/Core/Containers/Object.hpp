@@ -69,7 +69,7 @@ class Object
 
             Undefined,
             JSON,
-            // XML // [TBI]
+            YAML
 
         } ;
 
@@ -213,7 +213,7 @@ class Object
 
         static Object           ParseJson                                   (   const   types::String&              aString                                     ) ;
 
-        static Object           ParseXml                                    (   const   types::String&              aString                                     ) ; // [TBI]
+        static Object           ParseYaml                                   (   const   types::String&              aString                                     ) ;
 
 } ;
 
