@@ -2,7 +2,8 @@ var classostk_1_1core_1_1ctnr_1_1_object =
 [
     [ "Format", "classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24", [
       [ "Undefined", "classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24aec0fc0100c4fc1ce4eea230c3dc10360", null ],
-      [ "JSON", "classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24a0ecd11c1d7a287401d148a23bbd7a2f8", null ]
+      [ "JSON", "classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24a0ecd11c1d7a287401d148a23bbd7a2f8", null ],
+      [ "YAML", "classostk_1_1core_1_1ctnr_1_1_object.html#a3266b14cf7e3df39858f6572120e3b24a9463f87bbed1fcdacfb8d40e185ca2bc", null ]
     ] ],
     [ "Type", "classostk_1_1core_1_1ctnr_1_1_object.html#a49b70d4dce2d24126cd1df9aaf04d1ea", [
       [ "Undefined", "classostk_1_1core_1_1ctnr_1_1_object.html#a49b70d4dce2d24126cd1df9aaf04d1eaaec0fc0100c4fc1ce4eea230c3dc10360", null ],
