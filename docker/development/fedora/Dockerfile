@@ -28,6 +28,19 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/rapidjson
 
+## yaml-cpp [0.7.0]
+
+RUN cd /tmp \
+ && git clone https://github.com/jbeder/yaml-cpp.git \
+ && cd yaml-cpp \
+ && git checkout tags/yaml-cpp-0.7.0 \
+ && mkdir build \
+ && cd build \
+ && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DYAML_BUILD_SHARED_LIBS=OFF .. \
+ && make --silent -j $(nproc) \
+ && make install \
+ && rm -rf /tmp/yaml-cpp
+
 ## ordered-map [0.6.0]
 
 RUN cd /tmp \
