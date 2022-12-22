@@ -36,7 +36,7 @@ RUN cmake .. \
 
 FROM fedora:32 as cpp-release
 
-ENV LD_LIBRARY_PATH /usr/local/lib
+ENV LD_LIBRARY_PATH="/usr/local/lib"
 
 COPY --from=cpp-builder /usr/local/include/OpenSpaceToolkit /usr/local/include/OpenSpaceToolkit
 COPY --from=cpp-builder /usr/local/lib/libopen-space-toolkit-core.* /usr/local/lib/

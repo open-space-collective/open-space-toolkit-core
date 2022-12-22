@@ -36,7 +36,7 @@ RUN cmake .. \
 
 FROM debian:buster as cpp-release
 
-ENV LD_LIBRARY_PATH /usr/local/lib
+ENV LD_LIBRARY_PATH="/usr/local/lib"
 
 COPY --from=cpp-builder /usr/local/include/OpenSpaceToolkit /usr/local/include/OpenSpaceToolkit
 COPY --from=cpp-builder /usr/local/lib/libopen-space-toolkit-core.* /usr/local/lib/
@@ -47,21 +47,21 @@ ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"
 
 ################################################################################################################################################################
 
-FROM python:3.8-slim as python-builder
+FROM python:3.11-slim as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
-RUN python3.8 -m pip install /dist/*38*.whl
+RUN python3.11 -m pip install /dist/*311*.whl
 
 ################################################################################################################################################################
 
-FROM python:3.8-slim as python-release
+FROM python:3.11-slim as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.8/site-packages/ostk /usr/local/lib/python3.8/site-packages/ostk
+COPY --from=python-builder /usr/local/lib/python3.11/site-packages/ostk /usr/local/lib/python3.11/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
 
