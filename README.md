@@ -210,14 +210,14 @@ Or to run them manually:
 
 ## Dependencies
 
-| Name        | Version | License                | Link                                                                   |
-| ----------- | ------- | ---------------------- | ---------------------------------------------------------------------- |
-| Pybind11    | 2.6.1   | BSD-3-Clause           | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
-| RapidJSON   | master  | MIT                    | [rapidjson.org](http://rapidjson.org)                                  |
-| yaml-cpp    | 0.7.0   | MIT                    | [github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)       |
-| ordered-map | master  | MIT                    | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
-| {fmt}       | master  | BSD-2-Clause           | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |
-| Rapidcsv    | master  | BSD-3-Clause           | [github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)     |
+| Name        | Version  | License      | Link                                                                   |
+| ----------- | -------- | ------------ | ---------------------------------------------------------------------- |
+| Pybind11    | `2.10.1` | BSD-3-Clause | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
+| RapidJSON   | `master` | MIT          | [rapidjson.org](http://rapidjson.org)                                  |
+| yaml-cpp    | `0.7.0`  | MIT          | [github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)       |
+| ordered-map | `0.6.0`  | MIT          | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
+| {fmt}       | `5.2.0`  | BSD-2-Clause | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |
+| Rapidcsv    | `6.11`   | BSD-3-Clause | [github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)     |
 
 ## Contribution
 

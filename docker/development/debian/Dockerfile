@@ -7,19 +7,20 @@
 
 ################################################################################################################################################################
 
-ARG BASE_IMAGE_VERSION=0.2.1
-ARG BASE_IMAGE_SYSTEM=debian
+ARG BASE_IMAGE_VERSION="latest"
 
-FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}-${BASE_IMAGE_SYSTEM}
+FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}-debian
 
 LABEL maintainer="lucas@loftorbital.com"
 
 # Dependencies
 
-## RapidJSON [1.1.0]
+## RapidJSON
+
+ARG RAPIDJSON_VERSION="master"
 
 RUN cd /tmp \
- && git clone https://github.com/miloyip/rapidjson.git \
+ && git clone --branch ${RAPIDJSON_VERSION} --depth 1 https://github.com/Tencent/rapidjson.git \
  && cd rapidjson \
  && mkdir build \
  && cd build \
@@ -28,12 +29,14 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/rapidjson
 
-## yaml-cpp [0.7.0]
+## yaml-cpp
+
+ARG YAML_CPP_VERSION="0.7.0"
 
 RUN cd /tmp \
  && git clone https://github.com/jbeder/yaml-cpp.git \
  && cd yaml-cpp \
- && git checkout tags/yaml-cpp-0.7.0 \
+ && git checkout tags/yaml-cpp-${YAML_CPP_VERSION} \
  && mkdir build \
  && cd build \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DYAML_BUILD_SHARED_LIBS=OFF .. \
@@ -41,18 +44,22 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/yaml-cpp
 
-## ordered-map [0.6.0]
+## ordered-map
+
+ARG ORDERED_MAP_VERSION="0.6.0"
 
 RUN cd /tmp \
- && git clone --branch v0.6.0 --depth 1 https://github.com/Tessil/ordered-map.git \
+ && git clone --branch v${ORDERED_MAP_VERSION} --depth 1 https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
  && cp -r ./include/tsl /usr/local/include \
  && rm -rf /tmp/ordered-map
 
-## {fmt} [5.2.0]
+## {fmt}
+
+ARG FMT_VERSION="5.2.0"
 
 RUN cd /tmp \
- && git clone --branch 5.2.0 --depth 1 https://github.com/fmtlib/fmt.git \
+ && git clone --branch ${FMT_VERSION} --depth 1 https://github.com/fmtlib/fmt.git \
  && cd fmt \
  && mkdir build \
  && cd build \
@@ -61,10 +68,12 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/fmt
 
-## Rapidcsv [6.11]
+## Rapidcsv
+
+ARG RAPIDCSV_VERSION="6.11"
 
 RUN cd /tmp \
- && git clone --branch v6.11 --depth 1 https://github.com/d99kris/rapidcsv.git \
+ && git clone --branch v${RAPIDCSV_VERSION} --depth 1 https://github.com/d99kris/rapidcsv.git \
  && cd rapidcsv \
  && mkdir -p /usr/local/include/rapidcsv \
  && cp src/*.h /usr/local/include/rapidcsv/ \
@@ -73,9 +82,7 @@ RUN cd /tmp \
 # Labels
 
 ARG VERSION
-
-ENV VERSION ${VERSION}
-
+ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
 
 # Execution
