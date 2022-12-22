@@ -28,6 +28,8 @@ COPY LICENSE /app/LICENSE
 COPY README.md /app/README.md
 COPY .git /app/.git
 
+RUN git config --global --add safe.directory /app
+
 RUN cmake .. \
  && make -j $(nproc) \
  && make install
