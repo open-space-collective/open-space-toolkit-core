@@ -85,10 +85,6 @@ ARG VERSION
 ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
 
-# Git config
-
-RUN git config --global --add safe.directory /app
-
 # Execution
 
 CMD ["/bin/bash"]
