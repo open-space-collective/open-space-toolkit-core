@@ -300,7 +300,7 @@ void                            Directory::create                           (   
             directoryPathString += "/" ;
         }
 
-        if (!boost::filesystem::create_directories(boost::filesystem::path(directoryPathString).branch_path()))
+        if (!boost::filesystem::create_directories(boost::filesystem::path(directoryPathString).parent_path()))
         {
             throw ostk::core::error::RuntimeError("Cannot create directory [{}].", this->toString()) ;
         }
