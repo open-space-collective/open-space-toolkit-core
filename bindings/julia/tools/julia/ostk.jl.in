@@ -7,7 +7,7 @@
 
 ################################################################################################################################################################
 
-# Defining Examplej Julia module based on the shared library generated
+# Defining Example Julia module based on the shared library generated
 
 # Need to make sure CxxWrap is added to the correct Julia environment (TBM)
 import Pkg
@@ -16,11 +16,14 @@ Pkg.add("CxxWrap")
 # Probably use a configuration file for the following, to be defined in the CMake file
 module ostk
     using CxxWrap
-    @wrapmodule(joinpath("lib/", "OpenSpaceToolkitCoreJl"))
+    @wrapmodule(joinpath("/app/lib/", "OpenSpaceToolkitCoreJl"), "OpenSpaceToolkitCore")
 
     function __init__()
            @initcxx
     end
 
     export World
+    export Sign
+    export Integer
+    export String
 end

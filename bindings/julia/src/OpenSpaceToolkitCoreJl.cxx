@@ -14,7 +14,10 @@
 #include "jlcxx/jlcxx.hpp"
 #include "jlcxx/functions.hpp"
 
+#include <OpenSpaceToolkit/Core/Types/Sign.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -22,7 +25,13 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using ostk::core::types::String ;
+using ostk::core::types::Sign ;
 using ostk::core::types::Integer ;
+using ostk::core::types::Real ;
+
+// Case and naming conventions to be used
+// https://docs.julialang.org/en/v1/manual/style-guide/#Use-naming-conventions-consistent-with-Julia-base/
 
 // C++ code defining classes
 struct World
@@ -34,6 +43,15 @@ struct World
   ~World() { std::cout << "Destroying World with message " << msg << std::endl; }
 };
 
+// https://github.com/JuliaInterop/CxxWrap.jl/issues/271
+namespace jlcxx
+{
+  // template<> struct IsMirroredType<Sign> : std::false_type { };
+  template<> struct IsMirroredType<String> : std::false_type { } ;
+  template<> struct IsMirroredType<Integer> : std::false_type { } ;
+  template<> struct IsMirroredType<Real> : std::false_type { } ;
+}
+
 // Seems to be needed to mirror types directly without exposing the Integer type
 // template<> struct IsMirroredType<Integer> : std::false_type { };
 
@@ -41,15 +59,33 @@ struct World
 JLCXX_MODULE OpenSpaceToolkitCore(jlcxx::Module& Core)
 {
 
-  // Dummy Example to add type in the main module directly
-
+  // Dummy Example for World
   Core.add_type<World>("World")
     .constructor<const std::string&>()
     .method("set", &World::set)
     .method("greet", &World::greet);
 
-  // Adding Integer types to Julia
+  // Sign
+  Core.add_bits<Sign>("Sign", jlcxx::julia_type("CppEnum")) ;
 
+  // String
+  Core.add_type<String>("String")
+
+    .constructor<std::string>()
+
+    .method("is_empty", &String::isEmpty)
+    .method("is_uppercase", &String::isUppercase)
+    .method("is_lowercase", &String::isLowercase)
+    // .method("match", &String::match)
+
+    .method("get_length", &String::getLength)
+    .method("get_first", &String::getFirst)
+    .method("get_last", &String::getLast)
+    .method("get_head", &String::getHead)
+    .method("get_tail", &String::getTail)
+    .method("get_substring", &String::getSubstring) ;
+
+  // Integer
   Core.add_type<Integer>("Integer")
 
     // add constructor
@@ -63,7 +99,7 @@ JLCXX_MODULE OpenSpaceToolkitCore(jlcxx::Module& Core)
     // .method(">", &Integer::operator>)
     // .method(">=", &Integer::operator>=)
 
-    // .method("+", &Integer::operator==)
+    // .method("+", &Integer::operator+)
     // .method("+=", &Integer::operator+=)
     // .method("-", &Integer::operator-)
     // .method("-=", &Integer::operator-=)
@@ -90,7 +126,27 @@ JLCXX_MODULE OpenSpaceToolkitCore(jlcxx::Module& Core)
 
     // add static methods
 
+  // Real
+  Core.add_type<Real>("Real")
 
+    .method("is_defined", &Real::isDefined)
+    .method("is_zero", &Real::isZero)
+    .method("is_positive", &Real::isPositive)
+    .method("is_negative", &Real::isNegative)
+    .method("is_strictly_positive", &Real::isStrictlyPositive)
+    .method("is_strictly_negative", &Real::isStrictlyNegative)
+    .method("is_infinity", &Real::isInfinity)
+    .method("is_positive_infinity", &Real::isPositiveInfinity)
+    .method("is_negative_infinity", &Real::isNegativeInfinity)
+    .method("is_integer", &Real::isInteger)
+    .method("is_finite", &Real::isFinite)
+    .method("is_near", &Real::isNear)
+
+    .method("get_sign", &Real::getSign)
+    .method("to_integer", &Real::toInteger)
+    .method("abs", &Real::abs)
+    .method("floor", &Real::floor)
+    .method("sqrt", &Real::sqrt) ;
 
   // Adding submodules to main module core [TBR]
 
