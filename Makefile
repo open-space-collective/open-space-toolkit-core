@@ -323,7 +323,7 @@ test-unit-cpp: build-development-image
 		&& make -j 4 \
 		&& make test"
 
-test-unit-python: build-release-image-python
+test-unit-python: build-release-image-python  ## Run Python unit tests
 
 	@ echo "Running Python unit tests..."
 
@@ -333,7 +333,7 @@ test-unit-python: build-release-image-python
 		--workdir=/usr/local/lib/python3.11/site-packages/ostk/$(project_name) \
 		--entrypoint="" \
 		$(docker_release_image_python_repository):$(docker_image_version) \
-		/bin/bash -c "pip install pytest && pytest -sv ."
+		/bin/bash -c "python3.11 -m pip install pytest && python3.11 -m pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
 

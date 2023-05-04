@@ -34,7 +34,7 @@ RUN cmake .. \
 
 ################################################################################################################################################################
 
-FROM debian:buster as cpp-release
+FROM cpp-builder as cpp-release
 
 ENV LD_LIBRARY_PATH="/usr/local/lib"
 
@@ -47,7 +47,7 @@ ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"
 
 ################################################################################################################################################################
 
-FROM python:3.11-slim as python-builder
+FROM cpp-builder as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
@@ -55,7 +55,7 @@ RUN python3.11 -m pip install /dist/*311*.whl
 
 ################################################################################################################################################################
 
-FROM python:3.11-slim as python-release
+FROM cpp-builder as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
