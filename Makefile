@@ -162,7 +162,7 @@ build-packages: ## Build packages
 	@ make build-packages-cpp
 	@ make build-packages-python
 
-build-packages-cpp: build-development-image
+build-packages-cpp: build-development-image ## Build C++ packages
 
 	@ echo "Building C++ packages..."
 
