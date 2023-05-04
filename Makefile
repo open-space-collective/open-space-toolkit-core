@@ -82,7 +82,7 @@ build-images: ## Build development and release images
 	@ make build-development-image
 	@ make build-release-images
 
-build-development-image: pull-development-image  ## Build development image
+build-development-image: pull-development-image ## Build development image
 
 	@ echo "Building development image..."
 
@@ -177,7 +177,7 @@ build-packages-cpp: build-development-image
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.$(package_extension) /app/packages/cpp"
 
-build-packages-python: build-development-image
+build-packages-python: build-development-image ## Build Python packages
 
 	@ echo "Building Python packages..."
 
@@ -194,7 +194,7 @@ build-packages-python: build-development-image
 
 ################################################################################################################################################################
 
-start-development: build-development-image  ## Start development environment
+start-development: build-development-image ## Start development environment
 
 start-development-no-link:
 
