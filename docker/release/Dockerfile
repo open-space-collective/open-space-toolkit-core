@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           docker/release/debian/Dockerfile
+# @file           docker/release/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
@@ -9,7 +9,7 @@
 
 ARG VERSION
 
-FROM openspacecollective/open-space-toolkit-core-development:${VERSION}-debian as cpp-builder
+FROM openspacecollective/open-space-toolkit-core-development:${VERSION} as cpp-builder
 
 RUN mkdir -p /app/bin /app/build /app/lib
 
