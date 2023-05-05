@@ -301,14 +301,14 @@ test: ## Run tests
 	@ make test-unit
 	@ make test-coverage
 
-test-unit:
+test-unit: ## Run unit tests
 
 	@ echo "Running unit tests..."
 
 	@ make test-unit-cpp
 	@ make test-unit-python
 
-test-unit-cpp: build-development-image
+test-unit-cpp: build-development-image ## Run C++ unit tests
 
 	@ echo "Running C++ unit tests..."
 
@@ -323,7 +323,7 @@ test-unit-cpp: build-development-image
 		&& make -j 4 \
 		&& make test"
 
-test-unit-python: build-release-image-python  ## Run Python unit tests
+test-unit-python: build-release-image-python ## Run Python unit tests
 
 	@ echo "Running Python unit tests..."
 
