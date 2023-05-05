@@ -1,5 +1,5 @@
-\hypertarget{classostk_1_1core_1_1ctnr_1_1_tree}{}\section{ostk\+:\+:core\+:\+:ctnr\+:\+:Tree Class Reference}
-\label{classostk_1_1core_1_1ctnr_1_1_tree}\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
+\hypertarget{classostk_1_1core_1_1ctnr_1_1_tree}{}\doxysection{ostk\+::core\+::ctnr\+::Tree Class Reference}
+\label{classostk_1_1core_1_1ctnr_1_1_tree}\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
 
 
 Undirected graph in which any two vertices are connected by exactly one path.  
@@ -9,97 +9,101 @@ Undirected graph in which any two vertices are connected by exactly one path.
 
 {\ttfamily \#include $<$Tree.\+hpp$>$}
 
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a3960a2c77a482f88cdcdf5271b295815}{Tree} ()=delete
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a3960a2c77a482f88cdcdf5271b295815}{Tree}} ()=delete
 \item 
-\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a45d8c4d19771271433f1fcd525b9aaaf}{Tree} (const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&a\+Tree)
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a45d8c4d19771271433f1fcd525b9aaaf}{Tree}} (const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&a\+Tree)
 \item 
-\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a1fbbf116265bc413c82188dc8f406883}{$\sim$\+Tree} ()
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a1fbbf116265bc413c82188dc8f406883}{$\sim$\+Tree}} ()
 \item 
-\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \& \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a9ef0c73b6fa96d246ae34b2131365fa1}{operator=} (const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&a\+Tree) const
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \& \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a9ef0c73b6fa96d246ae34b2131365fa1}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&a\+Tree) const
 \item 
-bool \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_ac8fbfabe34924004a96cd5ad154bbfcc}{is\+Defined} () const
+bool \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_ac8fbfabe34924004a96cd5ad154bbfcc}{is\+Defined}} () const
 \end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_ace228911fa1c6f8e5a14d208ebb7717e}{Empty} ()
+static \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_ace228911fa1c6f8e5a14d208ebb7717e}{Empty}} ()
 \item 
-static \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a958ec32a53858072b339952c7a69d8b7}{Object} (const \hyperlink{classostk_1_1core_1_1ctnr_1_1_object}{Object} \&an\+Object)
+static \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_a958ec32a53858072b339952c7a69d8b7}{Object}} (const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_object}{Object}} \&an\+Object)
 \end{DoxyCompactItemize}
-\subsection*{Friends}
+\doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostream \& \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&a\+Tree)
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&a\+Tree)
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Undirected graph in which any two vertices are connected by exactly one path. 
 
-A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the \char`\"{}children\char`\"{}), with the constraints that no reference is duplicated, and none points to the root.
+\begin{DoxyVerb}                        A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node),
+                        where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"),
+                        with the constraints that no reference is duplicated, and none points to the root.
+\end{DoxyVerb}
 
-https\+://en.wikipedia.\+org/wiki/\+Tree\+\_\+(graph\+\_\+theory) https\+://en.wikipedia.\+org/wiki/\+Tree\+\_\+(data\+\_\+structure) 
 
-\subsection{Constructor \& Destructor Documentation}
+\href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(graph\+\_\+theory) \href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(data\+\_\+structure) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_a3960a2c77a482f88cdcdf5271b295815}\label{classostk_1_1core_1_1ctnr_1_1_tree_a3960a2c77a482f88cdcdf5271b295815}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!Tree@{Tree}}
-\index{Tree@{Tree}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::ctnr\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_a45d8c4d19771271433f1fcd525b9aaaf}\label{classostk_1_1core_1_1ctnr_1_1_tree_a45d8c4d19771271433f1fcd525b9aaaf}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!Tree@{Tree}}
-\index{Tree@{Tree}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily ostk\+::core\+::ctnr\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption})}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::ctnr\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_a1fbbf116265bc413c82188dc8f406883}\label{classostk_1_1core_1_1ctnr_1_1_tree_a1fbbf116265bc413c82188dc8f406883}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!````~Tree@{$\sim$\+Tree}}
-\index{````~Tree@{$\sim$\+Tree}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{$\sim$\+Tree()}{~Tree()}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!````~Tree@{$\sim$Tree}}
+\index{````~Tree@{$\sim$Tree}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
 {\footnotesize\ttfamily ostk\+::core\+::ctnr\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_ace228911fa1c6f8e5a14d208ebb7717e}\label{classostk_1_1core_1_1ctnr_1_1_tree_ace228911fa1c6f8e5a14d208ebb7717e}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!Empty@{Empty}}
-\index{Empty@{Empty}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{Empty()}{Empty()}}
-{\footnotesize\ttfamily static \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} ostk\+::core\+::ctnr\+::\+Tree\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} ostk\+::core\+::ctnr\+::\+Tree\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_ac8fbfabe34924004a96cd5ad154bbfcc}\label{classostk_1_1core_1_1ctnr_1_1_tree_ac8fbfabe34924004a96cd5ad154bbfcc}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!is\+Defined@{is\+Defined}}
-\index{is\+Defined@{is\+Defined}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::ctnr\+::\+Tree\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_a958ec32a53858072b339952c7a69d8b7}\label{classostk_1_1core_1_1ctnr_1_1_tree_a958ec32a53858072b339952c7a69d8b7}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!Object@{Object}}
-\index{Object@{Object}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{Object()}{Object()}}
-{\footnotesize\ttfamily static \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} ostk\+::core\+::ctnr\+::\+Tree\+::\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1core_1_1ctnr_1_1_object}{Object} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!Object@{Object}}
+\index{Object@{Object}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} ostk\+::core\+::ctnr\+::\+Tree\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_a9ef0c73b6fa96d246ae34b2131365fa1}\label{classostk_1_1core_1_1ctnr_1_1_tree_a9ef0c73b6fa96d246ae34b2131365fa1}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!operator=@{operator=}}
-\index{operator=@{operator=}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}\& ostk\+::core\+::ctnr\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption}) const}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}}\& ostk\+::core\+::ctnr\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption}) const}
 
 
 
-\subsection{Friends And Related Function Documentation}
+\doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}\label{classostk_1_1core_1_1ctnr_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}} 
-\index{ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!ostk\+::core\+::ctnr\+::\+Tree@{ostk\+::core\+::ctnr\+::\+Tree}}
-\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree} \&}]{a\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::ctnr::Tree@{ostk::core::ctnr::Tree}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Open\+Space\+Toolkit/\+Core/\+Containers/\hyperlink{_tree_8hpp}{Tree.\+hpp}\end{DoxyCompactItemize}
+include/\+Open\+Space\+Toolkit/\+Core/\+Containers/\mbox{\hyperlink{_tree_8hpp}{Tree.\+hpp}}\end{DoxyCompactItemize}

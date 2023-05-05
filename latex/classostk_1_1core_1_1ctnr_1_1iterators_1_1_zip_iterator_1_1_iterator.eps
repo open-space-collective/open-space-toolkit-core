@@ -53,7 +53,7 @@
   /boxwidth boxwidth str stringwidth pop max def
 } def
 
-/box % draws a box with text `arg1' at grid pos (arg2,arg3)
+/box % draws a box with text 'arg1' at grid pos (arg2,arg3)
 { gsave
   2 setlinewidth
   newpath
@@ -155,7 +155,7 @@
   stroke
 } def
 
-/conn % connections the blocks from col `arg1' to `arg2' of row `arg3'
+/conn % connections the blocks from col 'arg1' to 'arg2' of row 'arg3'
 {
   /ys exch def
   /xe exch def
@@ -174,7 +174,7 @@
 boxfont setfont
 1 boundaspect scale
 (ostk::core::ctnr::iterators::ZipIterator< T >::Iterator) cw
-(std::iterator< std::forward_iterator_tag, std::tuple< decltype(*std::declval< T >().begin())... > >) cw
+(std::iterator< std::forward_iterator_tag, std::tuple< decltype\(*std::declval< T >\(\).begin\(\)\)... > >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -187,7 +187,7 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- classes -----
 
  (ostk::core::ctnr::iterators::ZipIterator< T >::Iterator) 0.000000 0.000000 box
- (std::iterator< std::forward_iterator_tag, std::tuple< decltype(*std::declval< T >().begin())... > >) 0.000000 1.000000 box
+ (std::iterator< std::forward_iterator_tag, std::tuple< decltype\(*std::declval< T >\(\).begin\(\)\)... > >) 0.000000 1.000000 box
 
 % ----- relations -----
 
