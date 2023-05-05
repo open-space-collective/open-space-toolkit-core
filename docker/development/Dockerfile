@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ Core
-# @file           docker/development/debian/Dockerfile
+# @file           docker/development/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
@@ -9,7 +9,7 @@
 
 ARG BASE_IMAGE_VERSION="latest"
 
-FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}-debian
+FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -39,7 +39,7 @@ RUN cd /tmp \
  && git checkout tags/yaml-cpp-${YAML_CPP_VERSION} \
  && mkdir build \
  && cd build \
- && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DYAML_BUILD_SHARED_LIBS=OFF .. \
+ && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DYAML_BUILD_SHARED_LIBS=OFF -DYAML_CPP_BUILD_TESTS=OFF .. \
  && make --silent -j $(nproc) \
  && make install \
  && rm -rf /tmp/yaml-cpp
