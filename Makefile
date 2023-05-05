@@ -172,10 +172,10 @@ build-packages-cpp: build-development-image ## Build C++ packages
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=$(package_generator) .. \
+		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=DEB .. \
 		&& make package \
 		&& mkdir -p /app/packages/cpp \
-		&& mv /app/build/*.$(package_extension) /app/packages/cpp"
+		&& mv /app/build/*.deb /app/packages/cpp"
 
 build-packages-python: build-development-image ## Build Python packages
 
