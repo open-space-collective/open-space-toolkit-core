@@ -34,7 +34,7 @@ RUN cmake .. \
 
 ################################################################################################################################################################
 
-FROM openspacecollective/open-space-toolkit-core-development:${VERSION} as cpp-release
+FROM debian:buster as cpp-release
 
 ENV LD_LIBRARY_PATH="/usr/local/lib"
 
