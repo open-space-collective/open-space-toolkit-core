@@ -12,8 +12,6 @@
 
 #include <boost/lexical_cast.hpp>
 
-#include <boost/multiprecision/cpp_dec_float.hpp>
-
 #include <limits>
 #include <iomanip>
 #include <iostream>
@@ -742,7 +740,6 @@ types::Sign                     Real::getSign                               ( ) 
 
 types::String                   Real::toString                              (   const   types::Integer&             aPrecision                                  ) const
 {
-    using Double = boost::multiprecision::cpp_dec_float_50;
 
     switch (type_)
     {
@@ -770,9 +767,8 @@ types::String                   Real::toString                              (   
 
                 }
 
-                Double precise_value(value_) ;
                 // types::String realString = std::to_string(value_) ;
-                types::String realString = boost::lexical_cast<std::string>(precise_value) ;
+                types::String realString = boost::lexical_cast<std::string>(value_) ;
 
                 // std::ostringstream stringStream ;
 
