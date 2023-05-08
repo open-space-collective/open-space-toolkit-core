@@ -312,11 +312,29 @@ test-unit-cpp-standalone: ## Test with no build for CI
 
 test-unit-python:
 
-	@ make build-release-image-python
+	@ make build-development-image
 
 	@ make test-unit-python-standalone
 
 test-unit-python-standalone: ## Test with no build for CI
+
+	@ echo "Running Python unit tests..."
+
+	docker run \
+	-it \
+		--rm \
+		--volume="$(CURDIR):/app:delegated" \
+		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
+		--volume="/app/build" \
+		--workdir=/app/build \
+		--entrypoint="" \
+		$(docker_development_image_repository):$(docker_image_version) \
+		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
+		&& make -j 4 && pip install bindings/python/dist/*311*.whl \
+		&& cd /usr/local/lib/python3.11/site-packages/ostk/core/ \
+		&& python3.11 -m pytest -sv ."
+
+test-unit-python-standalone-original: ## Test with no build for CI
 
 	@ echo "Running Python unit tests..."
 
