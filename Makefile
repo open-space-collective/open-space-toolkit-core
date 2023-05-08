@@ -19,10 +19,10 @@ docker_release_image_cpp_repository := $(docker_image_repository)-cpp
 docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
-jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
-jupyter_notebook_port := 9001
-
-project_name_camel_case := $(shell P=$(project_name); echo $${P^})
+jupyter_notebook_image_repository := jupyter/scipy-notebook:python-3.8.8
+jupyter_notebook_port := 9003
+jupyter_python_version := 3.8
+jupyter_project_name_python_shared_object := OpenSpaceToolkitAstrodynamicsPy.cpython-38-x86_64-linux-gnu
 
 ################################################################################################################################################################
 
@@ -88,7 +88,7 @@ build-development-image: pull-development-image ## Build development image
 
 	docker build \
 		--cache-from=$(docker_development_image_repository):latest \
-		--file="$(CURDIR)/docker/development/$(target)/Dockerfile" \
+		--file="$(CURDIR)/docker/development/Dockerfile" \
 		--tag=$(docker_development_image_repository):$(docker_image_version) \
 		--tag=$(docker_development_image_repository):latest \
 		--build-arg="VERSION=$(docker_image_version)" \
@@ -110,7 +110,7 @@ build-release-image-cpp: build-development-image pull-release-image-cpp
 
 	docker build \
 		--cache-from=$(docker_release_image_cpp_repository):latest \
-		--file="$(CURDIR)/docker/release/$(target)/Dockerfile" \
+		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_cpp_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_cpp_repository):latest \
 		--build-arg="VERSION=$(docker_image_version)" \
@@ -123,7 +123,7 @@ build-release-image-python: build-development-image pull-release-image-python
 
 	docker build \
 		--cache-from=$(docker_release_image_python_repository):latest \
-		--file="$(CURDIR)/docker/release/$(target)/Dockerfile" \
+		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_python_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_python_repository):latest \
 		--build-arg="VERSION=$(docker_image_version)" \
@@ -196,8 +196,6 @@ build-packages-python: build-development-image ## Build Python packages
 
 start-development: build-development-image ## Start development environment
 
-start-development-no-link:
-
 	@ echo "Starting development environment..."
 
 	docker run \
@@ -209,18 +207,6 @@ start-development-no-link:
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash
-
-start-development-link:
-
-	@ echo "Starting development environment (linked)..."
-
-	@ target=$(target) "$(CURDIR)/tools/development/start.sh" --link
-
-ifndef link
-start-development: start-development-no-link
-else
-start-development: start-development-link
-endif
 
 start-python: build-release-image-python ## Start Python runtime environment
 
@@ -242,7 +228,7 @@ start-jupyter-notebook: build-release-image-jupyter ## Starting Jupyter Notebook
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
-		bash -c "start-notebook.sh --NotebookApp.token=''"
+		bash -c "start-notebook.sh --ServerApp.token=''"
 
 debug-jupyter-notebook: build-release-image-jupyter
 
@@ -254,11 +240,11 @@ debug-jupyter-notebook: build-release-image-jupyter
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs" \
 		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials" \
-		--volume="$(CURDIR)/lib/libopen-space-toolkit-$(project_name).so.0:/opt/conda/lib/python3.7/site-packages/ostk/$(project_name)/libopen-space-toolkit-$(project_name).so.0:ro" \
-		--volume="$(CURDIR)/lib/OpenSpaceToolkit$(project_name_camel_case)Py.so:/opt/conda/lib/python3.7/site-packages/ostk/$(project_name)/OpenSpaceToolkit$(project_name_camel_case)Py.so:ro" \
+		--volume="$(CURDIR)/lib/libopen-space-toolkit-$(project_name).so.0:/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)/libopen-space-toolkit-$(project_name).so.0:ro" \
+		--volume="$(CURDIR)/lib/$(jupyter_project_name_python_shared_object).so:/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)/$(jupyter_project_name_python_shared_object).so:ro" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
-		bash -c "start-notebook.sh --NotebookApp.token=''"
+		bash -c "start-notebook.sh --ServerApp.token=''"
 
 ################################################################################################################################################################
 
@@ -333,7 +319,7 @@ test-unit-python: build-release-image-python ## Run Python unit tests
 		--workdir=/usr/local/lib/python3.11/site-packages/ostk/$(project_name) \
 		--entrypoint="" \
 		$(docker_release_image_python_repository):$(docker_image_version) \
-		/bin/bash -c "python3.11 -m pip install pytest && python3.11 -m pytest -sv ."
+		/bin/bash -c "pip install pytest && pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
 
@@ -377,16 +363,13 @@ clean: ## Clean
 ################################################################################################################################################################
 
 .PHONY: pull pull-development-image \
-		build build-images \
-		build-development-image \
+		build build-images build-development-image \
 		pull-release-images pull-release-image-cpp pull-release-image-python pull-release-image-jupyter \
 		build-release-image-cpp build-release-image-python build-release-image-jupyter \
-		build-documentation \
-		build-packages-cpp \
+		build-documentation build-packages-cpp \
 		start-development start-python start-jupyter-notebook debug-jupyter-notebook \
 		debug-development debug-cpp-release debug-python-release \
-		test test-unit test-unit-cpp test-unit-python \
-		test-coverage test-coverage-cpp \
+		test test-unit test-unit-cpp test-unit-python test-coverage test-coverage-cpp \
 		clean
 
 ################################################################################################################################################################
@@ -394,6 +377,8 @@ clean: ## Clean
 help:
 
 	@grep -E '^[0-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+export DOCKER_BUILDKIT = 1
 
 .DEFAULT_GOAL := help
 
