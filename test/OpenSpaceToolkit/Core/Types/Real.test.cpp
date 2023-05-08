@@ -2019,39 +2019,6 @@ TEST (OpenSpaceToolkit_Core_Types_Real, ToString)
     using ostk::core::types::Real ;
 
     {
-        // Test for precision preservation
-
-        EXPECT_EQ("0.0",                        Real(0.0).toString()) ;
-
-        EXPECT_EQ("-1.0",                       Real(-1.0).toString()) ;
-        EXPECT_EQ("0.0",                        Real(+0.0).toString()) ;
-        EXPECT_EQ("1.0",                        Real(+1.0).toString()) ;
-
-        EXPECT_EQ("1.1",                        Real(1.1).toString()) ;
-        EXPECT_EQ("1.12",                       Real(1.12).toString()) ;
-        EXPECT_EQ("1.123",                      Real(1.123).toString()) ;
-        EXPECT_EQ("1.1234",                     Real(1.1234).toString()) ;
-        EXPECT_EQ("1.12345",                    Real(1.12345).toString()) ;
-        EXPECT_EQ("1.123456",                   Real(1.123456).toString()) ;
-        EXPECT_EQ("1.1234567",                  Real(1.1234567).toString()) ;
-        /*
-        EXPECT_EQ("1.1234567799999999",         Real(1.12345678).toString()) ;
-        EXPECT_EQ("1.123456789",                Real(1.123456789).toString()) ;
-        EXPECT_EQ("1.1234567891",               Real(1.1234567891).toString()) ;
-        EXPECT_EQ("1.12345678912",              Real(1.12345678912).toString()) ;
-        EXPECT_EQ("1.1234567891230001",         Real(1.123456789123).toString()) ;
-        EXPECT_EQ("1.1234567891234",            Real(1.1234567891234).toString()) ;
-        EXPECT_EQ("1.1234567891234499",         Real(1.12345678912345).toString()) ;
-        EXPECT_EQ("1.1234567891234559",         Real(1.123456789123456).toString()) ;
-        EXPECT_EQ("1.1234567891234566",         Real(1.1234567891234567).toString()) ;
-        EXPECT_EQ("1.1234567891234568",         Real(1.12345678912345678).toString()) ;
-        EXPECT_EQ("1.1234567891234568",         Real(1.123456789123456789).toString()) ;
-        */
-
-    }
-
-/*
-    {
 
         EXPECT_EQ("0.0",                        Real(0.0).toString()) ;
 
@@ -2286,7 +2253,7 @@ TEST (OpenSpaceToolkit_Core_Types_Real, ToString)
         EXPECT_EQ("Undefined", Real::Undefined().toString(3)) ;
 
     }
-*/
+
 }
 
 TEST (OpenSpaceToolkit_Core_Types_Real, ToInteger)
