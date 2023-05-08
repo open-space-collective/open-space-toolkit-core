@@ -2027,12 +2027,11 @@ TEST (OpenSpaceToolkit_Core_Types_Real, ToString)
         EXPECT_EQ("0.0",                        Real(+0.0).toString()) ;
         EXPECT_EQ("1.0",                        Real(+1.0).toString()) ;
 
-        EXPECT_EQ("1.1",         Real(1.1).toString()) ;
-        EXPECT_EQ("1.12",         Real(1.12).toString()) ;
+        EXPECT_EQ("1.1",                        Real(1.1).toString()) ;
+        EXPECT_EQ("1.12",                       Real(1.12).toString()) ;
         EXPECT_EQ("1.123",                      Real(1.123).toString()) ;
         EXPECT_EQ("1.1234",                     Real(1.1234).toString()) ;
-        EXPECT_EQ("1.12345",         Real(1.12345).toString()) ;
-        std::cout << std::fixed << Real(1.123423452345234556).toString() << std::endl ;
+        EXPECT_EQ("1.12345",                    Real(1.12345).toString()) ;
         EXPECT_EQ("1.123456",                   Real(1.123456).toString()) ;
         EXPECT_EQ("1.1234567",                  Real(1.1234567).toString()) ;
         /*
