@@ -308,14 +308,14 @@ test-unit-cpp-standalone: ## Test with no build for CI
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
 		&& make -j 4 \
-		&& make test"
+		&& make test
 
 test-unit-python:
 
 	@ make build-release-image-python
 
 	@ make test-unit-python-standalone
-	
+
 test-unit-python-standalone: ## Test with no build for CI
 
 	@ echo "Running Python unit tests..."
