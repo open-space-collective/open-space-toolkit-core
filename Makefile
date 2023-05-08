@@ -87,7 +87,6 @@ build-development-image: pull-development-image ## Build development image
 	@ echo "Building development image..."
 
 	docker build \
-		--cache-from=$(docker_development_image_repository):latest \
 		--file="$(CURDIR)/docker/development/Dockerfile" \
 		--tag=$(docker_development_image_repository):$(docker_image_version) \
 		--tag=$(docker_development_image_repository):latest \
@@ -109,7 +108,6 @@ build-release-image-cpp: build-development-image pull-release-image-cpp
 	@ echo "Building C++ release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_cpp_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_cpp_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_cpp_repository):latest \
@@ -122,7 +120,6 @@ build-release-image-python: build-development-image pull-release-image-python
 	@ echo "Building Python release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_python_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_python_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_python_repository):latest \
@@ -135,7 +132,6 @@ build-release-image-jupyter: pull-release-image-jupyter
 	@ echo "Building Jupyter Notebook release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_jupyter_repository):latest \
 		--file="$(CURDIR)/docker/jupyter/Dockerfile" \
 		--tag=$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_jupyter_repository):latest \
@@ -294,8 +290,13 @@ test-unit: ## Run unit tests
 	@ make test-unit-cpp
 	@ make test-unit-python
 
-test-unit-cpp: build-development-image ## Run C++ unit tests
+test-unit-cpp: 
+	
+	@ make build-development-image
 
+	@ make test-unit-cpp-standalone
+
+test-unit-cpp-standalone: ## Test with no build for CI
 	@ echo "Running C++ unit tests..."
 
 	docker run \
@@ -309,7 +310,13 @@ test-unit-cpp: build-development-image ## Run C++ unit tests
 		&& make -j 4 \
 		&& make test"
 
-test-unit-python: build-release-image-python ## Run Python unit tests
+test-unit-python:
+
+	@ make build-release-image-python
+
+	@ make test-unit-python-standalone
+	
+test-unit-python-standalone: ## Test with no build for CI
 
 	@ echo "Running Python unit tests..."
 
@@ -327,7 +334,13 @@ test-coverage: ## Run test coverage cpp
 
 	@ make test-coverage-cpp
 
-test-coverage-cpp: build-development-image
+test-coverage-cpp:
+
+	@ make build-development-image
+
+	@ make test-coverage-cpp-standalone
+
+test-coverage-cpp-standalone: ## Test with no build for CI
 
 	@ echo "Running C++ coverage tests..."
 
@@ -343,7 +356,7 @@ test-coverage-cpp: build-development-image
 		&& make coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
-		&& mv /app/build/coverage* /app/coverage"
+		&& mv /app/build/coverage* /app/coverage
 
 ################################################################################################################################################################
 
