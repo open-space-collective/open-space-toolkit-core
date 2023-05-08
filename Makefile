@@ -308,7 +308,7 @@ test-unit-cpp-standalone: ## Test with no build for CI
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
 		&& make -j 4 \
-		&& make test
+		&& make test"
 
 test-unit-python:
 
@@ -356,7 +356,7 @@ test-coverage-cpp-standalone: ## Test with no build for CI
 		&& make coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
-		&& mv /app/build/coverage* /app/coverage
+		&& mv /app/build/coverage* /app/coverage"
 
 ################################################################################################################################################################
 
