@@ -138,7 +138,13 @@ build-release-image-jupyter: pull-release-image-jupyter
 		--build-arg="JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=$(jupyter_notebook_image_repository)" \
 		"$(CURDIR)/docker/jupyter"
 
-build-documentation: build-development-image ## Build documentation
+build-documentation:
+
+	@ make build-development-image
+
+	@ make build-documentation-standalone
+
+build-documentation-standalone: ## Build documentation
 
 	@ echo "Building documentation..."
 
@@ -158,7 +164,13 @@ build-packages: ## Build packages
 	@ make build-packages-cpp
 	@ make build-packages-python
 
-build-packages-cpp: build-development-image ## Build C++ packages
+build-packages-cpp:
+
+	@ make build-development-image
+
+	@ make build-packages-cpp-standalone
+
+build-packages-cpp-standalone: ## Build C++ packages
 
 	@ echo "Building C++ packages..."
 
@@ -173,7 +185,13 @@ build-packages-cpp: build-development-image ## Build C++ packages
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-build-packages-python: build-development-image ## Build Python packages
+build-packages-python:
+	
+	@ make build-development-image
+
+	@ make build-packages-python-standalone
+
+build-packages-python-standalone: ## Build Python packages
 
 	@ echo "Building Python packages..."
 
@@ -332,18 +350,6 @@ test-unit-python-standalone: ## Test with no build for CI
 		&& make -j 4 && pip install bindings/python/dist/*311*.whl \
 		&& cd /usr/local/lib/python3.11/site-packages/ostk/core/ \
 		&& python3.11 -m pytest -sv ."
-
-test-unit-python-standalone-original: ## Test with no build for CI
-
-	@ echo "Running Python unit tests..."
-
-	docker run \
-		--rm \
-		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
-		--workdir=/usr/local/lib/python3.11/site-packages/ostk/$(project_name) \
-		--entrypoint="" \
-		$(docker_release_image_python_repository):$(docker_image_version) \
-		/bin/bash -c "pip install pytest && pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
 
