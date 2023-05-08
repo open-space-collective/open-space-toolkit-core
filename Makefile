@@ -321,7 +321,6 @@ test-unit-python-standalone: ## Test with no build for CI
 	@ echo "Running Python unit tests..."
 
 	docker run \
-	-it \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
