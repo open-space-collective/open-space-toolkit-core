@@ -22,7 +22,7 @@ docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 jupyter_notebook_image_repository := jupyter/scipy-notebook:python-3.8.8
 jupyter_notebook_port := 9003
 jupyter_python_version := 3.8
-jupyter_project_name_python_shared_object := OpenSpaceToolkitAstrodynamicsPy.cpython-38-x86_64-linux-gnu
+jupyter_project_name_python_shared_object := $(shell echo "OpenSpaceToolkit${project_name_camel_case}.cpython-38-x86_64-linux-gnu")
 
 ################################################################################################################################################################
 
