@@ -138,13 +138,11 @@ build-release-image-jupyter: pull-release-image-jupyter
 		--build-arg="JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=$(jupyter_notebook_image_repository)" \
 		"$(CURDIR)/docker/jupyter"
 
-build-documentation:
+build-documentation: build-development-image ## Build documentation
 
-	@ make build-development-image
+	@ $(MAKE) build-documentation-standalone
 
-	@ make build-documentation-standalone
-
-build-documentation-standalone: ## Build documentation
+build-documentation-standalone: ## Build documentation (standalone)
 
 	@ echo "Building documentation..."
 
@@ -164,13 +162,11 @@ build-packages: ## Build packages
 	@ make build-packages-cpp
 	@ make build-packages-python
 
-build-packages-cpp:
+build-packages-cpp: build-development-image ## Build C++ packages
 
-	@ make build-development-image
+	@ $(MAKE) build-packages-cpp-standalone
 
-	@ make build-packages-cpp-standalone
-
-build-packages-cpp-standalone: ## Build C++ packages
+build-packages-cpp-standalone: ## Build C++ packages (standalone)
 
 	@ echo "Building C++ packages..."
 
@@ -185,13 +181,11 @@ build-packages-cpp-standalone: ## Build C++ packages
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-build-packages-python:
+build-packages-python: build-development-image ## Build Python packages
 	
-	@ make build-development-image
+	@ $(MAKE) build-packages-python-standalone
 
-	@ make build-packages-python-standalone
-
-build-packages-python-standalone: ## Build Python packages
+build-packages-python-standalone: ## Build Python packages (standalone)
 
 	@ echo "Building Python packages..."
 
@@ -308,13 +302,12 @@ test-unit: ## Run unit tests
 	@ make test-unit-cpp
 	@ make test-unit-python
 
-test-unit-cpp: 
+test-unit-cpp: build-development-image ## Run C++ unit tests
 	
-	@ make build-development-image
+	@ $(MAKE) test-unit-cpp-standalone
 
-	@ make test-unit-cpp-standalone
+test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 
-test-unit-cpp-standalone: ## Test with no build for CI
 	@ echo "Running C++ unit tests..."
 
 	docker run \
@@ -328,13 +321,11 @@ test-unit-cpp-standalone: ## Test with no build for CI
 		&& make -j 4 \
 		&& make test"
 
-test-unit-python:
+test-unit-python: build-development-image ## Run Python unit tests
 
-	@ make build-development-image
+	@ $(MAKE) test-unit-python-standalone
 
-	@ make test-unit-python-standalone
-
-test-unit-python-standalone: ## Test with no build for CI
+test-unit-python-standalone: ## Run Python unit tests (standalone)
 
 	@ echo "Running Python unit tests..."
 
@@ -348,7 +339,7 @@ test-unit-python-standalone: ## Test with no build for CI
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
 		&& make -j 4 && pip install bindings/python/dist/*311*.whl \
-		&& cd /usr/local/lib/python3.11/site-packages/ostk/core/ \
+		&& cd /usr/local/lib/python3.11/site-packages/ostk/$(project_name)/ \
 		&& python3.11 -m pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
@@ -357,13 +348,11 @@ test-coverage: ## Run test coverage cpp
 
 	@ make test-coverage-cpp
 
-test-coverage-cpp:
+test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
-	@ make build-development-image
+	@ $(MAKE) test-coverage-cpp-standalone
 
-	@ make test-coverage-cpp-standalone
-
-test-coverage-cpp-standalone: ## Test with no build for CI
+test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 
 	@ echo "Running C++ coverage tests..."
 
