@@ -1,21 +1,12 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Utilities/Print.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Utilities_Print__
 #define __OpenSpaceToolkit_Core_Utilities_Print__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-
 #include <iomanip>
 #include <ostream>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 namespace ostk
 {
@@ -24,67 +15,46 @@ namespace core
 namespace utils
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 class Print
 {
+   public:
+    class LineBuffer
+    {
+       public:
+        LineBuffer(std::ostream& anOutputStream, uint anIndentation);
 
-    public:
+        LineBuffer(const LineBuffer& aLineBuffer) = delete;
 
-        class LineBuffer
+        LineBuffer(LineBuffer&& aLineBuffer) = default;
+
+        ~LineBuffer();
+
+        template <class T>
+        LineBuffer& operator<<(const T& anObject)
         {
+            stream_ << std::setw(40) << std::setfill(' ') << anObject << " ";
 
-            public:
+            return *this;
+        }
 
-                                LineBuffer                                  (           std::ostream&               anOutputStream,
-                                                                                        uint                        anIndentation                               ) ;
+       private:
+        std::ostream& stream_;
+        uint indentation_;
+    };
 
-                                LineBuffer                                  (   const   LineBuffer&                 aLineBuffer                                 ) = delete ;
+    Print() = delete;
 
-                                LineBuffer                                  (           LineBuffer&&                aLineBuffer                                 ) = default ;
+    static void Header(std::ostream& anOutputStream, const types::String& aName);
 
-                                ~LineBuffer                                 ( ) ;
+    static Print::LineBuffer Line(std::ostream& anOutputStream, uint anIndentation = 1);
 
-                template <class T>
-                LineBuffer&     operator <<                                 (   const   T&                          anObject                                    )
-                {
+    static void Separator(std::ostream& anOutputStream, const types::String& aName = "");
 
-                    stream_ << std::setw(40) << std::setfill(' ') << anObject << " " ;
+    static void Footer(std::ostream& anOutputStream);
+};
 
-                    return *this ;
-
-                }
-
-            private:
-
-                std::ostream&   stream_ ;
-                uint            indentation_ ;
-
-        } ;
-
-                                Print                                       ( ) = delete ;
-
-        static void             Header                                      (           std::ostream&               anOutputStream,
-                                                                                const   types::String&              aName                                       ) ;
-
-        static Print::LineBuffer Line                                       (           std::ostream&               anOutputStream,
-                                                                                        uint                        anIndentation                               =   1 ) ;
-
-        static void             Separator                                   (           std::ostream&               anOutputStream,
-                                                                                const   types::String&              aName                                       =   "") ;
-
-        static void             Footer                                      (           std::ostream&               anOutputStream                              ) ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace utils
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

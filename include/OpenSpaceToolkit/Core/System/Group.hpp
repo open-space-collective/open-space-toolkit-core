@@ -1,18 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/System/Group.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_System_Group__
 #define __OpenSpaceToolkit_Core_System_Group__
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -21,11 +12,7 @@ namespace core
 namespace system
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::String ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::String;
 
 /// @brief                      Group
 ///
@@ -35,57 +22,43 @@ using ostk::core::types::String ;
 
 class Group
 {
+   public:
+    Group(const uint& aGID, const String& aName);
 
-    public:
+    Group(const uint& aGID, const uint& aEGID, const String& aName);
 
-                                Group                                       (   const   uint&                       aGID,
-                                                                                const   String&                     aName                                       ) ;
+    bool operator==(const Group& aGroup) const;
 
-                                Group                                       (   const   uint&                       aGID,
-                                                                                const   uint&                       aEGID,
-                                                                                const   String&                     aName                                       ) ;
+    bool operator!=(const Group& aGroup) const;
 
-        bool                    operator ==                                 (   const   Group&                      aGroup                                      ) const ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Group& aGroup);
 
-        bool                    operator !=                                 (   const   Group&                      aGroup                                      ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Group&                      aGroup                                      ) ;
+    int getGID() const;
 
-        bool                    isDefined                                   ( ) const ;
+    int getEGID() const;
 
-        int                     getGID                                      ( ) const ;
+    int getSGID() const;
 
-        int                     getEGID                                     ( ) const ;
+    String getName() const;
 
-        int                     getSGID                                     ( ) const ;
+    static Group Undefined();
 
-        String                  getName                                     ( ) const ;
+    static Group Process();
 
-        static Group            Undefined                                   ( ) ;
+    static Group GID(const uint& aGID);
 
-        static Group            Process                                     ( ) ;
+    static Group Name(const String& aName);
 
-        static Group            GID                                         (   const   uint&                       aGID                                        ) ;
+   private:
+    int gid_;
+    int egid_;
+    String name_;
+};
 
-        static Group            Name                                        (   const   String&                     aName                                       ) ;
-
-    private:
-
-        int gid_ ;
-        int egid_ ;
-        String name_ ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace system
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,79 +1,58 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Triple.test.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Containers/Triple.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 #include <Global.test.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-TEST (OpenSpaceToolkit_Core_Containers_Triple, Constructor)
+TEST(OpenSpaceToolkit_Core_Containers_Triple, Constructor)
 {
-
-    using ostk::core::types::Integer ;
-    using ostk::core::types::String ;
-    using ostk::core::ctnr::Triple ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::String;
+    using ostk::core::ctnr::Triple;
 
     {
-
-        const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
-
+        const Triple<bool, Integer, String> triple = {true, 123, "abc"};
     }
-
 }
 
-TEST (OpenSpaceToolkit_Core_Containers_Triple, Getters)
+TEST(OpenSpaceToolkit_Core_Containers_Triple, Getters)
 {
-
-    using ostk::core::types::Integer ;
-    using ostk::core::types::String ;
-    using ostk::core::ctnr::Triple ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::String;
+    using ostk::core::ctnr::Triple;
 
     {
+        const Triple<bool, Integer, String> triple = {true, 123, "abc"};
 
-        const Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
-
-        EXPECT_EQ(true, triple.first) ;
-        EXPECT_EQ(123, triple.second) ;
-        EXPECT_EQ("abc", triple.third) ;
-
+        EXPECT_EQ(true, triple.first);
+        EXPECT_EQ(123, triple.second);
+        EXPECT_EQ("abc", triple.third);
     }
-
 }
 
-TEST (OpenSpaceToolkit_Core_Containers_Triple, Setters)
+TEST(OpenSpaceToolkit_Core_Containers_Triple, Setters)
 {
-
-    using ostk::core::types::Integer ;
-    using ostk::core::types::String ;
-    using ostk::core::ctnr::Triple ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::String;
+    using ostk::core::ctnr::Triple;
 
     {
+        Triple<bool, Integer, String> triple = {true, 123, "abc"};
 
-        Triple<bool, Integer, String> triple = {true, 123, "abc"} ;
+        EXPECT_EQ(true, triple.first);
+        EXPECT_EQ(123, triple.second);
+        EXPECT_EQ("abc", triple.third);
 
-        EXPECT_EQ(true, triple.first) ;
-        EXPECT_EQ(123, triple.second) ;
-        EXPECT_EQ("abc", triple.third) ;
+        triple.first = false;
+        triple.second = 456;
+        triple.third = "def";
 
-        triple.first = false ;
-        triple.second = 456 ;
-        triple.third = "def" ;
-
-        EXPECT_EQ(false, triple.first) ;
-        EXPECT_EQ(456, triple.second) ;
-        EXPECT_EQ("def", triple.third) ;
-
+        EXPECT_EQ(false, triple.first);
+        EXPECT_EQ(456, triple.second);
+        EXPECT_EQ("def", triple.third);
     }
-
 }
 
 // TEST (OpenSpaceToolkit_Core_Containers_Triple, Unpack)
@@ -101,5 +80,3 @@ TEST (OpenSpaceToolkit_Core_Containers_Triple, Setters)
 //     }
 
 // }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

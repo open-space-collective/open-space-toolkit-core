@@ -1,19 +1,10 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Error_Runtime_Wrong__
 #define __OpenSpaceToolkit_Core_Error_Runtime_Wrong__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 namespace ostk
 {
@@ -24,45 +15,30 @@ namespace error
 namespace runtime
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::String ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::String;
 
 /// @brief                      Wrong variable error class
 
 class Wrong : public RuntimeError
 {
+   public:
+    Wrong(const String& aVariableName);
 
-    public:
+    template <typename... Args>
+    Wrong(const String& aVariableName, Args... anArgumentList)
+        : RuntimeError("{} = {} is wrong.", aVariableName, anArgumentList...)
+    {
+    }
 
-                                Wrong                                       (   const   String&                     aVariableName                               ) ;
+    // Wrong                                       (   const   String&                     aScope,
+    //                                                 const   String&                     aVariableName ) ;
 
-                                template <typename ...Args>
-                                Wrong                                       (   const   String&                     aVariableName,
-                                                                                        Args...                     anArgumentList                              )
-                                :   RuntimeError("{} = {} is wrong.", aVariableName, anArgumentList...)
-        {
+    ~Wrong();
+};
 
-        }
-
-                                // Wrong                                       (   const   String&                     aScope,
-                                //                                                 const   String&                     aVariableName                               ) ;
-
-                                ~Wrong                                      ( ) ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace runtime
+}  // namespace error
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

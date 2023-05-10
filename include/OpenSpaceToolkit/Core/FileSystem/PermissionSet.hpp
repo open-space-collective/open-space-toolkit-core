@@ -1,18 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_FileSystem_PermissionSet__
 #define __OpenSpaceToolkit_Core_FileSystem_PermissionSet__
 
 #include <ostream>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -21,9 +12,8 @@ namespace core
 namespace fs
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @brief                      Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system.
+/// @brief                      Permissions control the ability of the users to view, change, navigate, and execute the
+/// contents of the file system.
 ///
 ///                             This class is modeled after the Traditional Unix permissions.
 ///
@@ -31,261 +21,248 @@ namespace fs
 
 class PermissionSet
 {
+   public:
+    /// @brief              Default constructor (disabled)
 
-    public:
+    PermissionSet() = delete;
 
-        /// @brief              Default constructor (disabled)
+    /// @brief              Full constructor
+    ///
+    /// @param              [in] canRead Can read if set to true
+    /// @param              [in] canWrite Can write if set to true
+    /// @param              [in] canExecute Can execute if set to true
 
-                                PermissionSet                               ( ) = delete ;
+    PermissionSet(const bool canRead, const bool canWrite, const bool canExecute);
 
-        /// @brief              Full constructor
-        ///
-        /// @param              [in] canRead Can read if set to true
-        /// @param              [in] canWrite Can write if set to true
-        /// @param              [in] canExecute Can execute if set to true
+    /// @brief              Equal to operator
+    ///
+    /// @code
+    ///                     PermissionSet::RWX() == PermissionSet::RWX() ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             True if permissions are equal
 
-                                PermissionSet                               (   const   bool                        canRead,
-                                                                                const   bool                        canWrite,
-                                                                                const   bool                        canExecute                                  ) ;
+    bool operator==(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Equal to operator
-        ///
-        /// @code
-        ///                     PermissionSet::RWX() == PermissionSet::RWX() ; // True
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             True if permissions are equal
+    /// @brief              Not equal to operator
+    ///
+    /// @code
+    ///                     PermissionSet::RW() != PermissionSet::RWX() ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             True if permissions are not equal
 
-        bool                    operator ==                                 (   const   PermissionSet&              aPermissionSet                              ) const ;
+    bool operator!=(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Not equal to operator
-        ///
-        /// @code
-        ///                     PermissionSet::RW() != PermissionSet::RWX() ; // True
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             True if permissions are not equal
+    /// @brief              Addition operator
+    ///
+    ///                     Add permissions
+    ///
+    /// @code
+    ///                     PermissionSet rw = PermissionSet::RW() ;
+    ///                     PermissionSet x = PermissionSet::X() ;
+    ///                     PermissionSet rwx = rw + x ;
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             Permission set
 
-        bool                    operator !=                                 (   const   PermissionSet&              aPermissionSet                              ) const ;
+    PermissionSet operator+(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Addition operator
-        ///
-        ///                     Add permissions
-        ///
-        /// @code
-        ///                     PermissionSet rw = PermissionSet::RW() ;
-        ///                     PermissionSet x = PermissionSet::X() ;
-        ///                     PermissionSet rwx = rw + x ;
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             Permission set
+    /// @brief              Subtraction operator
+    ///
+    ///                     Remove permissions
+    ///
+    /// @code
+    ///                     PermissionSet rwx = PermissionSet::RWX() ;
+    ///                     PermissionSet x = PermissionSet::X() ;
+    ///                     PermissionSet rw = rwx - x ;
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             Permission set
 
-        PermissionSet           operator +                                  (   const   PermissionSet&              aPermissionSet                              ) const ;
+    PermissionSet operator-(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Subtraction operator
-        ///
-        ///                     Remove permissions
-        ///
-        /// @code
-        ///                     PermissionSet rwx = PermissionSet::RWX() ;
-        ///                     PermissionSet x = PermissionSet::X() ;
-        ///                     PermissionSet rw = rwx - x ;
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             Permission set
+    /// @brief              Logical AND operator
+    ///
+    ///                     AND permissions
+    ///
+    /// @code
+    ///                     PermissionSet rw = PermissionSet::RW() ;
+    ///                     PermissionSet rx = PermissionSet::RX() ;
+    ///                     PermissionSet r = rw && rx ;
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             Permission set
 
-        PermissionSet           operator -                                  (   const   PermissionSet&              aPermissionSet                              ) const ;
+    PermissionSet operator&&(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Logical AND operator
-        ///
-        ///                     AND permissions
-        ///
-        /// @code
-        ///                     PermissionSet rw = PermissionSet::RW() ;
-        ///                     PermissionSet rx = PermissionSet::RX() ;
-        ///                     PermissionSet r = rw && rx ;
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             Permission set
+    /// @brief              Logical OR operator
+    ///
+    ///                     OR permissions
+    ///
+    /// @code
+    ///                     PermissionSet rw = PermissionSet::RW() ;
+    ///                     PermissionSet rx = PermissionSet::RX() ;
+    ///                     PermissionSet rwx = rw || rx ;
+    /// @endcode
+    ///
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             Permission set
 
-        PermissionSet           operator &&                                 (   const   PermissionSet&              aPermissionSet                              ) const ;
+    PermissionSet operator||(const PermissionSet& aPermissionSet) const;
 
-        /// @brief              Logical OR operator
-        ///
-        ///                     OR permissions
-        ///
-        /// @code
-        ///                     PermissionSet rw = PermissionSet::RW() ;
-        ///                     PermissionSet rx = PermissionSet::RX() ;
-        ///                     PermissionSet rwx = rw || rx ;
-        /// @endcode
-        ///
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             Permission set
+    /// @brief              Output stream operator
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::RWX()
+    ///                     std::cout << permissions ;
+    /// @endcode
+    ///
+    /// @param              [in] anOutputStream An output stream
+    /// @param              [in] aPermissionSet A permission set
+    /// @return             A reference to output stream
 
-        PermissionSet           operator ||                                 (   const   PermissionSet&              aPermissionSet                              ) const ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const PermissionSet& aPermissionSet);
 
-        /// @brief              Output stream operator
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::RWX()
-        ///                     std::cout << permissions ;
-        /// @endcode
-        ///
-        /// @param              [in] anOutputStream An output stream
-        /// @param              [in] aPermissionSet A permission set
-        /// @return             A reference to output stream
+    /// @brief              Check if permission set is none
+    ///
+    /// @code
+    ///                     PermissionSet::None().isNone() ; // True
+    /// @endcode
+    ///
+    /// @return             True if permission set is none
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   PermissionSet&              aPermissionSet                              ) ;
+    bool isNone() const;
 
-        /// @brief              Check if permission set is none
-        ///
-        /// @code
-        ///                     PermissionSet::None().isNone() ; // True
-        /// @endcode
-        ///
-        /// @return             True if permission set is none
+    /// @brief              Check if permission set is all
+    ///
+    /// @code
+    ///                     PermissionSet::RWX().isAll() ; // True
+    /// @endcode
+    ///
+    /// @return             True if permission set is all
 
-        bool                    isNone                                      ( ) const ;
+    bool isAll() const;
 
-        /// @brief              Check if permission set is all
-        ///
-        /// @code
-        ///                     PermissionSet::RWX().isAll() ; // True
-        /// @endcode
-        ///
-        /// @return             True if permission set is all
+    /// @brief              Check if permission set can read
+    ///
+    /// @code
+    ///                     PermissionSet::R().canRead() ; // True
+    ///                     PermissionSet::RW().canRead() ; // True
+    ///                     PermissionSet::RWX().canRead() ; // True
+    /// @endcode
+    ///
+    /// @return             True if permission set can read
 
-        bool                    isAll                                       ( ) const ;
+    bool canRead() const;
 
-        /// @brief              Check if permission set can read
-        ///
-        /// @code
-        ///                     PermissionSet::R().canRead() ; // True
-        ///                     PermissionSet::RW().canRead() ; // True
-        ///                     PermissionSet::RWX().canRead() ; // True
-        /// @endcode
-        ///
-        /// @return             True if permission set can read
+    /// @brief              Check if permission set can write
+    ///
+    /// @code
+    ///                     PermissionSet::R().canWrite() ; // False
+    ///                     PermissionSet::RW().canWrite() ; // True
+    ///                     PermissionSet::RWX().canWrite() ; // True
+    /// @endcode
+    ///
+    /// @return             True if permission set can write
 
-        bool                    canRead                                     ( ) const ;
+    bool canWrite() const;
 
-        /// @brief              Check if permission set can write
-        ///
-        /// @code
-        ///                     PermissionSet::R().canWrite() ; // False
-        ///                     PermissionSet::RW().canWrite() ; // True
-        ///                     PermissionSet::RWX().canWrite() ; // True
-        /// @endcode
-        ///
-        /// @return             True if permission set can write
+    /// @brief              Check if permission set can execute
+    ///
+    /// @code
+    ///                     PermissionSet::R().canExecute() ; // False
+    ///                     PermissionSet::RW().canExecute() ; // False
+    ///                     PermissionSet::RWX().canExecute() ; // True
+    /// @endcode
+    ///
+    /// @return             True if permission set can execute
 
-        bool                    canWrite                                    ( ) const ;
+    bool canExecute() const;
 
-        /// @brief              Check if permission set can execute
-        ///
-        /// @code
-        ///                     PermissionSet::R().canExecute() ; // False
-        ///                     PermissionSet::RW().canExecute() ; // False
-        ///                     PermissionSet::RWX().canExecute() ; // True
-        /// @endcode
-        ///
-        /// @return             True if permission set can execute
+    /// @brief              Constructs a none permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::None() ; // ---
+    /// @endcode
+    ///
+    /// @return             None permissions
 
-        bool                    canExecute                                  ( ) const ;
+    static PermissionSet None();
 
-        /// @brief              Constructs a none permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::None() ; // ---
-        /// @endcode
-        ///
-        /// @return             None permissions
+    /// @brief              Constructs a read permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::R() ; // r--
+    /// @endcode
+    ///
+    /// @return             Read permissions
 
-        static PermissionSet    None                                        ( ) ;
+    static PermissionSet R();
 
-        /// @brief              Constructs a read permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::R() ; // r--
-        /// @endcode
-        ///
-        /// @return             Read permissions
+    /// @brief              Constructs a write permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::W() ; // -w-
+    /// @endcode
+    ///
+    /// @return             Write permissions
 
-        static PermissionSet    R                                           ( ) ;
+    static PermissionSet W();
 
-        /// @brief              Constructs a write permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::W() ; // -w-
-        /// @endcode
-        ///
-        /// @return             Write permissions
+    /// @brief              Constructs an execute permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::X() ; // --x
+    /// @endcode
+    ///
+    /// @return             Execute permissions
 
-        static PermissionSet    W                                           ( ) ;
+    static PermissionSet X();
 
-        /// @brief              Constructs an execute permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::X() ; // --x
-        /// @endcode
-        ///
-        /// @return             Execute permissions
+    /// @brief              Constructs a read-write permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::RW() ; // rw-
+    /// @endcode
+    ///
+    /// @return             Read-Write permissions
 
-        static PermissionSet    X                                           ( ) ;
+    static PermissionSet RW();
 
-        /// @brief              Constructs a read-write permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::RW() ; // rw-
-        /// @endcode
-        ///
-        /// @return             Read-Write permissions
+    /// @brief              Constructs a read-execute permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::RX() ; // r-x
+    /// @endcode
+    ///
+    /// @return             Read-Execute permissions
 
-        static PermissionSet    RW                                          ( ) ;
+    static PermissionSet RX();
 
-        /// @brief              Constructs a read-execute permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::RX() ; // r-x
-        /// @endcode
-        ///
-        /// @return             Read-Execute permissions
+    /// @brief              Constructs a read-write-execute permission set
+    ///
+    /// @code
+    ///                     PermissionSet permissions = PermissionSet::RWX() ; // rwx
+    /// @endcode
+    ///
+    /// @return             Read-Write-Execute permissions
 
-        static PermissionSet    RX                                          ( ) ;
+    static PermissionSet RWX();
 
-        /// @brief              Constructs a read-write-execute permission set
-        ///
-        /// @code
-        ///                     PermissionSet permissions = PermissionSet::RWX() ; // rwx
-        /// @endcode
-        ///
-        /// @return             Read-Write-Execute permissions
+   private:
+    bool read_;
+    bool write_;
+    bool execute_;
+};
 
-        static PermissionSet    RWX                                         ( ) ;
-
-    private:
-
-        bool                    read_ ;
-        bool                    write_ ;
-        bool                    execute_ ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace fs
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

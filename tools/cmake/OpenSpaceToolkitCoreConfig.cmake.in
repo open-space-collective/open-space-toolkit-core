@@ -1,11 +1,4 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ Core
-# @file           tools/cmake/OpenSpaceToolkitCoreConfig.cmake.in
-# @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 SET (OpenSpaceToolkitCore_ROOT_DIR ${OpenSpaceToolkitCore_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
@@ -25,5 +18,3 @@ IF (OpenSpaceToolkitCore_INCLUDE_DIR)
     SET (OpenSpaceToolkitCore_FOUND TRUE)
 
 ENDIF ()
-
-################################################################################################################################################################

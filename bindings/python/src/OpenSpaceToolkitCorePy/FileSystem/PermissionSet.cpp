@@ -1,22 +1,12 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/FileSystem/PermissionSet.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet (        pybind11::module&          aModule                                     )
+inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::fs::PermissionSet ;
+    using ostk::core::fs::PermissionSet;
 
     class_<PermissionSet>(aModule, "PermissionSet")
 
@@ -30,8 +20,9 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet 
         .def(self + self)
         .def(self - self)
 
-        // .def("__str__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
-        // .def("__repr__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return aPermissionSet.toString() ; })
+        // .def("__str__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) -> str { return
+        // aPermissionSet.toString() ; }) .def("__repr__", +[] (const ostk::core::fs::PermissionSet& aPermissionSet) ->
+        // str { return aPermissionSet.toString() ; })
         .def("__str__", &(shiftToString<PermissionSet>))
         .def("__repr__", &(shiftToString<PermissionSet>))
 
@@ -50,8 +41,5 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_PermissionSet 
         .def_static("rx", &PermissionSet::RX)
         .def_static("rwx", &PermissionSet::RWX)
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

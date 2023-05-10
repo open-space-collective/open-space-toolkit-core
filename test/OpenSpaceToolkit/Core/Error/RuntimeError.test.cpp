@@ -1,42 +1,29 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Error/RuntimeError.test.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
 
 #include <Global.test.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-TEST (OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
+TEST(OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
 {
-
-    using ostk::core::error::RuntimeError ;
+    using ostk::core::error::RuntimeError;
 
     {
-
-        EXPECT_THROW(throw RuntimeError("This is a test."), RuntimeError) ;
+        EXPECT_THROW(throw RuntimeError("This is a test."), RuntimeError);
         // EXPECT_THROW(throw RuntimeError("This is a scope.", "This is a test."), RuntimeError) ;
 
-        EXPECT_THROW(throw RuntimeError("This is a list [{}, {}, {}].", 123, 456, 789), RuntimeError) ;
-
+        EXPECT_THROW(throw RuntimeError("This is a list [{}, {}, {}].", 123, 456, 789), RuntimeError);
     }
 
     {
-
         try
         {
-            throw RuntimeError("This is a test.") ;
+            throw RuntimeError("This is a test.");
         }
         catch (const RuntimeError& anError)
         {
-            EXPECT_EQ("", anError.getScope()) ;
-            EXPECT_EQ("This is a test.", std::string(anError.what())) ;
+            EXPECT_EQ("", anError.getScope());
+            EXPECT_EQ("This is a test.", std::string(anError.what()));
         }
 
         // try
@@ -51,16 +38,12 @@ TEST (OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
 
         try
         {
-            throw RuntimeError("This is a list [{}, {}, {}].", 123, 456, 789) ;
+            throw RuntimeError("This is a list [{}, {}, {}].", 123, 456, 789);
         }
         catch (const RuntimeError& anError)
         {
-            EXPECT_EQ("", anError.getScope()) ;
-            EXPECT_EQ("This is a list [123, 456, 789].", std::string(anError.what())) ;
+            EXPECT_EQ("", anError.getScope());
+            EXPECT_EQ("This is a list [123, 456, 789].", std::string(anError.what()));
         }
-
     }
-
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

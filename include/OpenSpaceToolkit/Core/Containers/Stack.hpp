@@ -1,16 +1,7 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Stack.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Containers_Stack__
 #define __OpenSpaceToolkit_Core_Containers_Stack__
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -19,46 +10,33 @@ namespace core
 namespace ctnr
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 /// @brief                      First-in, last-out (FILO) container
 
 class Stack
 {
+   public:
+    Stack() = delete;
 
-    public:
+    Stack(const Stack& aStack);
 
-                                Stack                                       ( ) = delete ;
+    ~Stack();
 
-                                Stack                                       (   const   Stack&                      aStack                                      ) ;
+    Stack& operator=(const Stack& aStack) const;
 
-                                ~Stack                                      ( ) ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Stack& aStack);
 
-        Stack&                  operator =                                  (   const   Stack&                      aStack                                      ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Stack&                      aStack                                      ) ;
+    static Stack Empty();
 
-        bool                    isDefined                                   ( ) const ;
+    static Stack Object(const Object& anObject);
 
-        static Stack            Empty                                       ( ) ;
+   private:
+    // [TBI]
+};
 
-        static Stack            Object                                      (   const   Object&                     anObject                                    ) ;
-
-    private:
-
-        // [TBI]
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace ctnr
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

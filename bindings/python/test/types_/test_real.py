@@ -1,11 +1,4 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types_/test_real.py
-# @author         Remy Derollez <remy@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 import pytest
 
@@ -13,10 +6,8 @@ import math
 
 from ostk.core.types import Real, Sign
 
-################################################################################################################################################################
 
-def test_real_constructors ():
-
+def test_real_constructors():
     a = Real(0)
     b = Real(1)
     c = Real(123456789)
@@ -38,8 +29,8 @@ def test_real_constructors ():
     assert isinstance(h, Real)
     assert isinstance(i, Real)
 
-def test_real_comparators ():
 
+def test_real_comparators():
     a = Real(5.54)
 
     assert a == a
@@ -52,8 +43,8 @@ def test_real_comparators ():
     assert (a + 1.34) >= a
     assert a >= a
 
-def test_real_operators () :
 
+def test_real_operators():
     a = Real(15.34)
     b = Real(30.46)
 
@@ -101,8 +92,8 @@ def test_real_operators () :
     assert a == Real(1.2767370572207102)
     assert isinstance(a, Real)
 
-def test_real_casting ():
 
+def test_real_casting():
     a = Real(0.0)
     b = Real(5.2)
     c = Real(-7.65)
@@ -120,8 +111,8 @@ def test_real_casting ():
     assert isinstance(float(b), float)
     assert isinstance(float(c), float)
 
-def test_real_is_defined ():
 
+def test_real_is_defined():
     a = Real(10.0)
     b = Real(-1346.67)
     c = Real(0.0)
@@ -134,8 +125,8 @@ def test_real_is_defined ():
     assert d.is_defined() is True
     assert e.is_defined() is False
 
-def test_real_is_zero ():
 
+def test_real_is_zero():
     a = Real(4.0)
     b = Real(0)
     c = Real.zero()
@@ -146,34 +137,34 @@ def test_real_is_zero ():
     assert c.is_zero() is True
     assert d.is_zero() is True
 
-def test_real_is_positive ():
 
+def test_real_is_positive():
     assert Real(-3.0).is_positive() is False
     assert Real(0.0).is_positive() is True
     assert Real(4.0).is_positive() is True
 
-def test_real_is_negative ():
 
+def test_real_is_negative():
     assert Real(-5.2).is_negative() is True
     assert Real(0.0).is_negative() is True
     assert Real(7.45687).is_negative() is False
 
-def test_real_is_strictly_positive ():
 
+def test_real_is_strictly_positive():
     assert Real(-15.534).is_strictly_positive() is False
     assert Real(0.0).is_strictly_positive() is False
     assert Real(1.346).is_strictly_positive() is True
     assert Real(5 / 6).is_strictly_positive() is True
 
-def test_real_is_strictly_negative ():
 
+def test_real_is_strictly_negative():
     assert Real(-1.34).is_strictly_negative() is True
     assert Real(-18.54).is_strictly_negative() is True
     assert Real(0.0).is_strictly_negative() is False
     assert Real(2 / 3).is_strictly_negative() is False
 
-def test_real_is_infinity ():
 
+def test_real_is_infinity():
     a = Real.positive_infinity()
     b = Real.negative_infinity()
     c = Real(3467670)
@@ -196,8 +187,8 @@ def test_real_is_infinity ():
     assert e.is_positive_infinity() is False
     assert e.is_negative_infinity() is False
 
-def test_real_is_integer ():
 
+def test_real_is_integer():
     assert Real(1.2).is_integer() is False
     assert Real(0).is_integer() is True
     assert Real(1.0).is_integer() is True
@@ -207,70 +198,69 @@ def test_real_is_integer ():
     assert Real(450.00001).is_integer() is False
     assert Real(458.99999999).is_integer() is False
 
-def test_real_is_finite ():
 
+def test_real_is_finite():
     assert Real(0).is_finite() is True
     assert Real(1).is_finite() is True
     assert Real(-1).is_finite() is True
     assert Real(45).is_finite() is True
 
-def test_real_is_near ():
 
+def test_real_is_near():
     assert Real(0.9999999999999).is_near(Real(1.0), 1e-9) is True
     assert Real(0.999999999999).is_near(1.0, 1e-8) is True
     assert Real(0.95).is_near(Real(1.0), 0.01) is False
     assert Real(0.97).is_near(Real(1.0), 0.05) is True
     assert Real(-0.9999999999999).is_near(Real(-1.0), 1e-9) is True
 
-def test_real_get_sign ():
 
+def test_real_get_sign():
     assert Real.undefined().get_sign() == Sign.Undefined
     assert Real(456).get_sign() == Sign.Positive
     assert Real(457.3455).get_sign() == Sign.Positive
     assert Real(0.0).get_sign() == Sign.NoSign
     assert Real(-40.54).get_sign() == Sign.Negative
 
-def test_real_abs ():
 
+def test_real_abs():
     assert Real(43.4).abs() == 43.4
     assert Real(-43.43).abs() == 43.43
     assert Real.zero().abs() == 0.0
 
-def test_real_floor ():
 
+def test_real_floor():
     assert Real(43.4).floor() == 43
     assert Real(-3.2).floor() == -4
     assert Real(-23.0).floor() == -23
     assert Real(43.6).floor() == 43
     assert Real(90.999).floor() == 90
 
-def test_real_sqrt ():
 
+def test_real_sqrt():
     assert Real(64.0).sqrt() == 8.0
     assert Real(16.0).sqrt() == 4.0
     assert Real(45.6).sqrt() == math.sqrt(45.6)
     assert Real(-3.56).sqrt().is_defined() is False
 
-def test_real_pi ():
 
+def test_real_pi():
     assert Real.pi() == math.pi
     assert Real.half_pi() == math.pi / 2
     assert Real.two_pi() == 2 * math.pi
 
-def test_real_epsilon ():
 
+def test_real_epsilon():
     assert Real.epsilon() == 1e-15
     assert isinstance(Real.epsilon(), Real)
 
-def test_real_integer ():
 
+def test_real_integer():
     assert Real.integer(19) == 19.0
     assert Real.integer(0) == 0.0
     assert Real.integer(-45) == -45.0
     assert Real.integer(76) == Real(76.0)
 
+
 # def test_real_parse ():
 
 # def test_real_can_parse ():
-
-################################################################################################################################################################

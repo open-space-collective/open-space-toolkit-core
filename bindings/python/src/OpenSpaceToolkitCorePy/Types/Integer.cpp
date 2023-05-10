@@ -1,24 +1,14 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Integer.cpp
-/// @author         Remy Derollez <remy@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Types_Integer        (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitCorePy_Types_Integer(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::types::Integer ;
-    using ostk::core::types::Real ;
-    using ostk::core::types::String ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::Real;
+    using ostk::core::types::String;
 
     class_<Integer>(aModule, "Integer")
 
@@ -26,7 +16,13 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer        (   
         .def(init<Integer::ValueType>())
 
         // Define __int__ method for direct conversion (previously .def(int_(self)))
-        .def("__int__", +[] (const ostk::core::types::Integer& anInteger) -> int { return static_cast<int>(anInteger) ; })
+        .def(
+            "__int__",
+            +[](const ostk::core::types::Integer& anInteger) -> int
+            {
+                return static_cast<int>(anInteger);
+            }
+        )
 
         // Define methods
         .def(self == self)
@@ -59,8 +55,20 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer        (   
         .def(int() * self)
         .def(int() / self)
 
-        .def("__str__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
-        .def("__repr__", +[] (const ostk::core::types::Integer& anInteger) -> std::string { return anInteger.toString() ; })
+        .def(
+            "__str__",
+            +[](const ostk::core::types::Integer& anInteger) -> std::string
+            {
+                return anInteger.toString();
+            }
+        )
+        .def(
+            "__repr__",
+            +[](const ostk::core::types::Integer& anInteger) -> std::string
+            {
+                return anInteger.toString();
+            }
+        )
 
         .def("is_defined", &Integer::isDefined)
         .def("is_zero", &Integer::isZero)
@@ -93,14 +101,11 @@ inline void                     OpenSpaceToolkitCorePy_Types_Integer        (   
         .def_static("uint64", &Integer::Uint64)
         .def_static("index", &Integer::Index)
         .def_static("size", &Integer::Size)
-        .def_static("can_parse", static_cast<bool(*)(const String&)>(&Integer::CanParse))
-        .def_static("parse", static_cast<Integer(*)(const String&)>(&Integer::Parse))
+        .def_static("can_parse", static_cast<bool (*)(const String&)>(&Integer::CanParse))
+        .def_static("parse", static_cast<Integer (*)(const String&)>(&Integer::Parse))
 
-    ;
+        ;
 
     // Implicit conversion (allowed in the direction of the binded custom type only in pybind11)
-    implicitly_convertible<Integer::ValueType, Integer>() ;
-
+    implicitly_convertible<Integer::ValueType, Integer>();
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

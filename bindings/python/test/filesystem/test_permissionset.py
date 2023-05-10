@@ -1,11 +1,4 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/filesystem/test_permissionset.py
-# @author         Remy Derollez <remy@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 import itertools
 
@@ -13,10 +6,8 @@ import pytest
 
 from ostk.core.filesystem import Path, Directory, File, PermissionSet
 
-################################################################################################################################################################
 
-def test_permissionset_constructors ():
-
+def test_permissionset_constructors():
     # Test all combinations of permissions wit default constructor
     l = [False, True]
     permission_sets = list(itertools.product(l, repeat=3))
@@ -75,8 +66,8 @@ def test_permissionset_constructors ():
     assert permissionset.can_execute() is True
     assert permissionset.is_all() is True
 
-def test_permissionset_operators ():
 
+def test_permissionset_operators():
     permissionset_1 = PermissionSet.r()
     permissionset_2 = PermissionSet(False, True, True)
     permissionset_3 = PermissionSet(True, False, False)
@@ -92,5 +83,3 @@ def test_permissionset_operators ():
     assert isinstance(permissionset_5, PermissionSet)
     assert permissionset_4.is_all() is True
     assert permissionset_5 == permissionset_3
-
-################################################################################################################################################################

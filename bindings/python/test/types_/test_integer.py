@@ -1,20 +1,11 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/test/types_/test_integer.py
-# @author         Remy Derollez <remy@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 import pytest
 
 from ostk.core.types import Integer, Sign
 
-################################################################################################################################################################
 
-def test_integer_constructors ():
-
+def test_integer_constructors():
     a = Integer(0)
     b = Integer(1)
     c = Integer(123456789)
@@ -28,11 +19,10 @@ def test_integer_constructors ():
     assert isinstance(u, Integer)
 
     with pytest.raises(TypeError):
-
         e = Integer(1.2)
 
-def test_integer_comparators ():
 
+def test_integer_comparators():
     a = Integer(5)
 
     assert a == a
@@ -45,8 +35,8 @@ def test_integer_comparators ():
     assert (a + 1) >= a
     assert a >= a
 
-def test_integer_operators () :
 
+def test_integer_operators():
     a = Integer(15)
     b = Integer(30)
     c = Integer(-45)
@@ -91,8 +81,8 @@ def test_integer_operators () :
     a /= -3
     assert a == Integer(2)
 
-def test_integer_casting ():
 
+def test_integer_casting():
     a = Integer(0)
     b = Integer(5)
     c = Integer(-7)
@@ -110,8 +100,8 @@ def test_integer_casting ():
     assert isinstance(int(b), int)
     assert isinstance(int(c), int)
 
-def test_integer_is_defined ():
 
+def test_integer_is_defined():
     a = Integer(10)
     b = Integer(-1346)
     c = Integer(0)
@@ -122,8 +112,8 @@ def test_integer_is_defined ():
     assert c.is_defined() is True
     assert u.is_defined() is False
 
-def test_integer_zero ():
 
+def test_integer_zero():
     a = Integer(4)
     b = Integer(0)
     c = Integer.zero()
@@ -132,34 +122,34 @@ def test_integer_zero ():
     assert b.is_zero() is True
     assert c.is_zero() is True
 
-def test_integer_is_positive ():
 
+def test_integer_is_positive():
     assert Integer(-3).is_positive() is False
     assert Integer(0).is_positive() is True
     assert Integer(4).is_positive() is True
 
-def test_integer_is_negative ():
 
+def test_integer_is_negative():
     assert Integer(-5).is_negative() is True
     assert Integer(0).is_negative() is True
     assert Integer(7).is_negative() is False
 
-def test_integer_is_strictly_positive ():
 
+def test_integer_is_strictly_positive():
     assert Integer(-15).is_strictly_positive() is False
     assert Integer(0).is_strictly_positive() is False
     assert Integer(1).is_strictly_positive() is True
     assert Integer(40).is_strictly_positive() is True
 
-def test_integer_is_strictly_negative ():
 
+def test_integer_is_strictly_negative():
     assert Integer(-1).is_strictly_negative() is True
     assert Integer(-18).is_strictly_negative() is True
     assert Integer(0).is_strictly_negative() is False
     assert Integer(2).is_strictly_negative() is False
 
-def test_integer_is_infinity ():
 
+def test_integer_is_infinity():
     assert Integer(10).is_infinity() is False
     assert Integer(0).is_infinity() is False
     assert Integer(2000000).is_infinity() is False
@@ -169,12 +159,13 @@ def test_integer_is_infinity ():
         assert Integer(200000000000000000000)
         assert Integer(-200000000000000000000)
 
+
 # def test_integer_is_positive_infinity ():
 
 # def test_integer_is_negative_infinity ():
 
-def test_integer_is_finite ():
 
+def test_integer_is_finite():
     assert Integer(0).is_finite() is True
     assert Integer(1).is_finite() is True
     assert Integer(-1).is_finite() is True
@@ -183,8 +174,8 @@ def test_integer_is_finite ():
     # assert Integer(23000000000000000000).is_finite() is False
     # assert Integer(-23000000000000000000).is_finite() is False
 
-def test_integer_is_even ():
 
+def test_integer_is_even():
     assert Integer(2).is_even() is True
     assert Integer(4).is_even() is True
     assert Integer(6).is_even() is True
@@ -197,8 +188,8 @@ def test_integer_is_even ():
     assert Integer(3).is_even() is False
     assert Integer(0).is_even() is True
 
-def test_integer_is_odd ():
 
+def test_integer_is_odd():
     assert Integer(2).is_odd() is False
     assert Integer(4).is_odd() is False
     assert Integer(6).is_odd() is False
@@ -213,8 +204,8 @@ def test_integer_is_odd ():
     assert Integer(3).is_odd() is True
     assert Integer(0).is_odd() is False
 
-def test_integer_get_sign ():
 
+def test_integer_get_sign():
     assert isinstance(Integer(4).get_sign(), Sign)
     assert Integer(2).get_sign() == Sign.Positive
     assert Integer(-1).get_sign() == Sign.Negative
@@ -222,8 +213,8 @@ def test_integer_get_sign ():
     assert Integer(0).get_sign() == Sign.NoSign
     assert Integer.undefined().get_sign() == Sign.Undefined
 
-def test_integer_static_methods ():
 
+def test_integer_static_methods():
     a = Integer(34)
 
     assert Integer.undefined()
@@ -240,5 +231,3 @@ def test_integer_static_methods ():
 
     # assert Integer.index()
     # assert Integer.size()
-
-################################################################################################################################################################

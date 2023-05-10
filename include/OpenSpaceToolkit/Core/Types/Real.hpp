@@ -1,20 +1,11 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Types/Real.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Types_Real__
 #define __OpenSpaceToolkit_Core_Types_Real__
 
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Types/Sign.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -23,157 +14,138 @@ namespace core
 namespace types
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 /// @brief                      Real type
 
 class Real
 {
+   public:
+    typedef double ValueType;
 
-    public:
+    Real() = delete;
 
-        typedef double          ValueType ;
+    Real(Real::ValueType aReal);
 
-                                Real                                        ( ) = delete ;
+    Real& operator=(Real::ValueType aReal);
 
-                                Real                                        (           Real::ValueType             aReal                                       ) ;
+    bool operator==(const Real& aReal) const;
+    bool operator!=(const Real& aReal) const;
+    bool operator<(const Real& aReal) const;
+    bool operator<=(const Real& aReal) const;
+    bool operator>(const Real& aReal) const;
+    bool operator>=(const Real& aReal) const;
 
-        Real&                   operator =                                  (           Real::ValueType             aReal                                       ) ;
+    bool operator==(const Real::ValueType& aReal) const;
+    bool operator!=(const Real::ValueType& aReal) const;
+    bool operator<(const Real::ValueType& aReal) const;
+    bool operator<=(const Real::ValueType& aReal) const;
+    bool operator>(const Real::ValueType& aReal) const;
+    bool operator>=(const Real::ValueType& aReal) const;
 
-        bool                    operator ==                                 (   const   Real&                       aReal                                       ) const ;
-        bool                    operator !=                                 (   const   Real&                       aReal                                       ) const ;
-        bool                    operator <                                  (   const   Real&                       aReal                                       ) const ;
-        bool                    operator <=                                 (   const   Real&                       aReal                                       ) const ;
-        bool                    operator >                                  (   const   Real&                       aReal                                       ) const ;
-        bool                    operator >=                                 (   const   Real&                       aReal                                       ) const ;
+    Real operator+(const Real& aReal) const;
+    Real operator-(const Real& aReal) const;
+    Real operator*(const Real& aReal) const;
+    Real operator/(const Real& aReal) const;
 
-        bool                    operator ==                                 (   const   Real::ValueType&            aReal                                       ) const ;
-        bool                    operator !=                                 (   const   Real::ValueType&            aReal                                       ) const ;
-        bool                    operator <                                  (   const   Real::ValueType&            aReal                                       ) const ;
-        bool                    operator <=                                 (   const   Real::ValueType&            aReal                                       ) const ;
-        bool                    operator >                                  (   const   Real::ValueType&            aReal                                       ) const ;
-        bool                    operator >=                                 (   const   Real::ValueType&            aReal                                       ) const ;
+    Real operator+(const Real::ValueType& aReal) const;
+    Real operator-(const Real::ValueType& aReal) const;
+    Real operator*(const Real::ValueType& aReal) const;
+    Real operator/(const Real::ValueType& aReal) const;
 
-        Real                    operator +                                  (   const   Real&                       aReal                                       ) const ;
-        Real                    operator -                                  (   const   Real&                       aReal                                       ) const ;
-        Real                    operator *                                  (   const   Real&                       aReal                                       ) const ;
-        Real                    operator /                                  (   const   Real&                       aReal                                       ) const ;
+    Real operator+(const Integer& anInteger) const;
+    Real operator-(const Integer& anInteger) const;
+    Real operator*(const Integer& anInteger) const;
+    Real operator/(const Integer& anInteger) const;
 
-        Real                    operator +                                  (   const   Real::ValueType&            aReal                                       ) const ;
-        Real                    operator -                                  (   const   Real::ValueType&            aReal                                       ) const ;
-        Real                    operator *                                  (   const   Real::ValueType&            aReal                                       ) const ;
-        Real                    operator /                                  (   const   Real::ValueType&            aReal                                       ) const ;
+    Real& operator+=(const Real& aReal);
+    Real& operator-=(const Real& aReal);
+    Real& operator*=(const Real& aReal);
+    Real& operator/=(const Real& aReal);
 
-        Real                    operator +                                  (   const   Integer&                    anInteger                                   ) const ;
-        Real                    operator -                                  (   const   Integer&                    anInteger                                   ) const ;
-        Real                    operator *                                  (   const   Integer&                    anInteger                                   ) const ;
-        Real                    operator /                                  (   const   Integer&                    anInteger                                   ) const ;
+    Real& operator+=(const Real::ValueType& aReal);
+    Real& operator-=(const Real::ValueType& aReal);
+    Real& operator*=(const Real::ValueType& aReal);
+    Real& operator/=(const Real::ValueType& aReal);
 
-        Real&                   operator +=                                 (   const   Real&                       aReal                                       ) ;
-        Real&                   operator -=                                 (   const   Real&                       aReal                                       ) ;
-        Real&                   operator *=                                 (   const   Real&                       aReal                                       ) ;
-        Real&                   operator /=                                 (   const   Real&                       aReal                                       ) ;
+    friend Real operator+(const Real::ValueType& aDouble, const Real& aReal);
+    friend Real operator-(const Real::ValueType& aDouble, const Real& aReal);
+    friend Real operator*(const Real::ValueType& aDouble, const Real& aReal);
+    friend Real operator/(const Real::ValueType& aDouble, const Real& aReal);
 
-        Real&                   operator +=                                 (   const   Real::ValueType&            aReal                                       ) ;
-        Real&                   operator -=                                 (   const   Real::ValueType&            aReal                                       ) ;
-        Real&                   operator *=                                 (   const   Real::ValueType&            aReal                                       ) ;
-        Real&                   operator /=                                 (   const   Real::ValueType&            aReal                                       ) ;
+    Real operator+() const;
+    Real operator-() const;
 
-        friend Real             operator +                                  (   const    Real::ValueType&           aDouble,
-                                                                                const    Real&                      aReal                                       ) ;
-        friend Real             operator -                                  (   const    Real::ValueType&           aDouble,
-                                                                                const    Real&                      aReal                                       ) ;
-        friend Real             operator *                                  (   const    Real::ValueType&           aDouble,
-                                                                                const    Real&                      aReal                                       ) ;
-        friend Real             operator /                                  (   const    Real::ValueType&           aDouble,
-                                                                                const    Real&                      aReal                                       ) ;
+    operator Real::ValueType() const;
 
-        Real                    operator +                                  ( ) const ;
-        Real                    operator -                                  ( ) const ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal);
 
-                                operator Real::ValueType                    ( ) const ;
+    bool isDefined() const;
+    bool isZero() const;
+    bool isPositive() const;
+    bool isNegative() const;
+    bool isStrictlyPositive() const;
+    bool isStrictlyNegative() const;
+    bool isInfinity() const;
+    bool isPositiveInfinity() const;
+    bool isNegativeInfinity() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Real&                       aReal                                       ) ;
+    bool isInteger() const;
+    bool isFinite() const;
 
-        bool                    isDefined                                   ( ) const ;
-        bool                    isZero                                      ( ) const ;
-        bool                    isPositive                                  ( ) const ;
-        bool                    isNegative                                  ( ) const ;
-        bool                    isStrictlyPositive                          ( ) const ;
-        bool                    isStrictlyNegative                          ( ) const ;
-        bool                    isInfinity                                  ( ) const ;
-        bool                    isPositiveInfinity                          ( ) const ;
-        bool                    isNegativeInfinity                          ( ) const ;
+    bool isNear(const Real& aValue, const Real& aTolerance = Real::Epsilon()) const;
 
-        bool                    isInteger                                   ( ) const ;
-        bool                    isFinite                                    ( ) const ;
+    types::Sign getSign() const;
 
-        bool                    isNear                                      (   const   Real&                       aValue,
-                                                                                const   Real&                       aTolerance                                  =   Real::Epsilon() ) const ;
+    types::String toString(const types::Integer& aPrecision = types::Integer::Undefined()) const;
 
-        types::Sign             getSign                                     ( ) const ;
+    types::Integer toInteger() const;
 
-        types::String           toString                                    (   const   types::Integer&             aPrecision                                  =   types::Integer::Undefined() ) const ;
+    Real abs() const;
 
-        types::Integer          toInteger                                   ( ) const ;
+    types::Integer floor() const;
 
-        Real                    abs                                         ( ) const ;
+    Real sqrt() const;
 
-        types::Integer          floor                                       ( ) const ;
+    static Real Undefined();
 
-        Real                    sqrt                                        ( ) const ;
+    static Real Zero();
 
-        static Real             Undefined                                   ( ) ;
+    static Real Pi();
 
-        static Real             Zero                                        ( ) ;
+    static Real HalfPi();
 
-        static Real             Pi                                          ( ) ;
+    static Real TwoPi();
 
-        static Real             HalfPi                                      ( ) ;
+    static Real Epsilon();
 
-        static Real             TwoPi                                       ( ) ;
+    static Real PositiveInfinity();
 
-        static Real             Epsilon                                     ( ) ;
+    static Real NegativeInfinity();
 
-        static Real             PositiveInfinity                            ( ) ;
+    static Real Integer(const types::Integer& anInteger);
 
-        static Real             NegativeInfinity                            ( ) ;
+    static Real CanParse(const types::String& aString);
 
-        static Real             Integer                                     (   const   types::Integer&             anInteger                                   ) ;
+    static Real Parse(const types::String& aString);
 
-        static Real             CanParse                                    (   const   types::String&              aString                                     ) ;
+   private:
+    enum class Type
+    {
 
-        static Real             Parse                                       (   const   types::String&              aString                                     ) ;
+        Undefined,
+        Defined,
+        PositiveInfinity,
+        NegativeInfinity
 
-    private:
+    };
 
-        enum class Type
-        {
+    Real::Type type_;
+    Real::ValueType value_;
 
-            Undefined,
-            Defined,
-            PositiveInfinity,
-            NegativeInfinity
+    Real(const Real::Type& aType, const Real::ValueType& aReal);
+};
 
-        } ;
-
-        Real::Type              type_ ;
-        Real::ValueType         value_ ;
-
-                                Real                                        (   const   Real::Type&                 aType,
-                                                                                const   Real::ValueType&            aReal                                       ) ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace types
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

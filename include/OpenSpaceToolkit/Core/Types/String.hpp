@@ -1,11 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Types/String.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Types_String__
 #define __OpenSpaceToolkit_Core_Types_String__
@@ -14,14 +7,12 @@
 #include <OpenSpaceToolkit/Core/Types/Size.hpp>
 
 #define FMT_HEADER_ONLY
-#include <fmt/format.h>
-
-#include <regex>
 #include <ostream>
+#include <regex>
 #include <string>
 #include <type_traits>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <fmt/format.h>
 
 namespace ostk
 {
@@ -30,177 +21,150 @@ namespace core
 namespace types
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::Index ;
-using ostk::core::types::Size ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::Index;
+using ostk::core::types::Size;
 
 /// @brief                      A sequence of characters
-/// @note                       The current implementation (derived for std::string) is temporary, as this type of inheritance this is not recommended.
+/// @note                       The current implementation (derived for std::string) is temporary, as this type of
+/// inheritance this is not recommended.
 
 class String : public std::string
 {
+   public:
+    using std::string::string;
 
-    public:
+    String();
 
-        using std::string::string ;
+    String(const std::string& aString);
 
-                                String                                      ( ) ;
+    ~String();
 
-                                String                                      (   const   std::string&                aString                                     ) ;
+    bool isEmpty() const;
 
-                                ~String                                     ( ) ;
+    bool isUppercase() const;
 
-        bool                    isEmpty                                     ( ) const ;
+    bool isLowercase() const;
 
-        bool                    isUppercase                                 ( ) const ;
+    /// @brief              Returns whether the string matches a regular expression
+    ///
+    /// @code
+    ///                     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aRegularExpression A regular expression
+    /// @return             True if matches regular expression
 
-        bool                    isLowercase                                 ( ) const ;
+    bool match(const std::regex& aRegularExpression) const;
 
-        /// @brief              Returns whether the string matches a regular expression
-        ///
-        /// @code
-        ///                     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
-        /// @endcode
-        ///
-        /// @param              [in] aRegularExpression A regular expression
-        /// @return             True if matches regular expression
+    Size getLength() const;
 
-        bool                    match                                       (   const   std::regex&                 aRegularExpression                          ) const ;
+    char getFirst() const;
 
-        Size                    getLength                                   ( ) const ;
+    char getLast() const;
 
-        char                    getFirst                                    ( ) const ;
+    String getHead(const Size& aLength) const;
 
-        char                    getLast                                     ( ) const ;
+    String getTail(const Size& aLength) const;
 
-        String                  getHead                                     (   const   Size&                       aLength                                     ) const ;
+    String getSubstring(const Index& aStartPosition, const Size& aLength) const;
 
-        String                  getTail                                     (   const   Size&                       aLength                                     ) const ;
+    /// @brief              Removes whitespace from both ends
+    ///
+    /// @return             Reference to string
 
-        String                  getSubstring                                (   const   Index&                      aStartPosition,
-                                                                                const   Size&                       aLength                                     ) const ;
+    String& trim();
 
-        /// @brief              Removes whitespace from both ends
-        ///
-        /// @return             Reference to string
+    /// @brief              Replace all occurences of character by other character
+    ///
+    /// @param              [in] aCharacter A character
+    /// @param              [in] aNewCharacter A replacement character
+    /// @return             Reference to string
 
-        String&                 trim                                        ( ) ;
+    String& replace(const char aCharacter, const char aNewCharacter);
 
-        /// @brief              Replace all occurences of character by other character
-        ///
-        /// @param              [in] aCharacter A character
-        /// @param              [in] aNewCharacter A replacement character
-        /// @return             Reference to string
+    /// @brief              Replace all occurences of string by other string
+    ///
+    /// @param              [in] aCharacter A string
+    /// @param              [in] aNewCharacter A replacement string
+    /// @return             Reference to string
 
-        String&                 replace                                     (   const   char                        aCharacter,
-                                                                                const   char                        aNewCharacter                               ) ;
+    String& replace(const String& aString, const String& aNewString);
 
-        /// @brief              Replace all occurences of string by other string
-        ///
-        /// @param              [in] aCharacter A string
-        /// @param              [in] aNewCharacter A replacement string
-        /// @return             Reference to string
+    static String Empty();
 
-        String&                 replace                                     (   const   String&                     aString,
-                                                                                const   String&                     aNewString                                  ) ;
+    static String Boolean(bool aBoolean);
 
-        static String           Empty                                       ( ) ;
+    static String Char(char aCharacter);
 
-        static String           Boolean                                     (           bool                        aBoolean                                    ) ;
+    static String Replicate(char aCharacter, Size aCount);
 
-        static String           Char                                        (           char                        aCharacter                                  ) ;
+    static String Replicate(const String& aString, Size aCount);
 
-        static String           Replicate                                   (           char                        aCharacter,
-                                                                                        Size                        aCount                                      ) ;
+    /// @brief              Create formatted string
+    ///
+    /// @code
+    ///                     String::Format("{0}, {1}!", "Hello", "World") ; // "Hello, World!"
+    ///                     String::Format("Let's operate {0} {1}!", 123, "satellites") ; // "Let's operate 123
+    ///                     satellites!"
+    /// @endcode
+    ///
+    /// @param              [in] aFormat A format
+    /// @param              [in] anArgumentList A list of arguments
+    /// @return             Formatted string
 
-        static String           Replicate                                   (   const   String&                     aString,
-                                                                                        Size                        aCount                                      ) ;
-
-        /// @brief              Create formatted string
-        ///
-        /// @code
-        ///                     String::Format("{0}, {1}!", "Hello", "World") ; // "Hello, World!"
-        ///                     String::Format("Let's operate {0} {1}!", 123, "satellites") ; // "Let's operate 123 satellites!"
-        /// @endcode
-        ///
-        /// @param              [in] aFormat A format
-        /// @param              [in] anArgumentList A list of arguments
-        /// @return             Formatted string
-
-        template <typename ...Args>
-        static String           Format                                      (   const   char*                       aFormat,
-                                                                                        Args...                     anArgumentList                              )
-        {
-            return fmt::format(aFormat, anArgumentList...) ;
-        }
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    template <typename... Args>
+    static String Format(const char* aFormat, Args... anArgumentList)
+    {
+        return fmt::format(aFormat, anArgumentList...);
+    }
+};
 
 /// @ref                        https://gist.github.com/fenbf/d2cd670704b82e2ce7fd
 
 template <typename T>
 class HasToString
 {
+   private:
+    typedef char YesType[1];
+    typedef char NoType[2];
 
-    private:
+    template <typename C>
+    static YesType& test(decltype(&C::toString));
+    template <typename C>
+    static NoType& test(...);
 
-        typedef char YesType[1] ;
-        typedef char NoType[2] ;
+   public:
+    enum
+    {
+        value = sizeof(test<T>(0)) == sizeof(YesType)
+    };
+};
 
-        template <typename C> static YesType& test( decltype(&C::toString) ) ;
-        template <typename C> static NoType& test(...) ;
-
-    public:
-
-        enum { value = sizeof(test<T>(0)) == sizeof(YesType) } ;
-
-} ;
-
-template<typename T>
-typename std::enable_if<HasToString<T>::value, std::string>::type
-CallToString (T * t)
+template <typename T>
+typename std::enable_if<HasToString<T>::value, std::string>::type CallToString(T* t)
 {
-    return t->toString() ;
+    return t->toString();
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace types
+}  // namespace core
+}  // namespace ostk
 
 namespace std
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-template<>
+template <>
 struct hash<ostk::core::types::String>
 {
+    typedef ostk::core::types::String argument_type;
+    typedef std::size_t result_type;
 
-    typedef ostk::core::types::String argument_type ;
-    typedef std::size_t result_type ;
-
-    result_type                 operator ()                                 (   const   argument_type&              aString                                     ) const
+    result_type operator()(const argument_type& aString) const
     {
-        return std::hash<std::string>{}(aString) ;
+        return std::hash<std::string> {}(aString);
     }
+};
 
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace std
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
