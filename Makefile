@@ -22,7 +22,9 @@ docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 jupyter_notebook_image_repository := jupyter/scipy-notebook:python-3.8.8
 jupyter_notebook_port := 9003
 jupyter_python_version := 3.8
-jupyter_project_name_python_shared_object := OpenSpaceToolkitAstrodynamicsPy.cpython-38-x86_64-linux-gnu
+
+project_name_camel_case := $(shell echo $(project_name) | sed -r 's/(^|-)([a-z])/\U\2/g')
+jupyter_project_name_python_shared_object := $(shell echo "OpenSpaceToolkit${project_name_camel_case}.cpython-38-x86_64-linux-gnu")
 
 ################################################################################################################################################################
 
@@ -30,8 +32,8 @@ pull: ## Pull all images
 
 	@ echo "Pulling images..."
 
-	@ make pull-development-image
-	@ make pull-release-images
+	@ $(MAKE) pull-development-image
+	@ $(MAKE) pull-release-images
 
 pull-development-image: ## Pull development image
 
@@ -44,11 +46,11 @@ pull-release-images: ## Pull release images
 
 	@ echo "Pull release images..."
 
-	@ make pull-release-image-cpp
+	@ $(MAKE) pull-release-image-cpp
 
-	@ make pull-release-image-python
+	@ $(MAKE) pull-release-image-python
 
-	@ make pull-release-image-jupyter
+	@ $(MAKE) pull-release-image-jupyter
 
 pull-release-image-cpp:
 
@@ -79,15 +81,14 @@ build-images: ## Build development and release images
 
 	@ echo "Building images..."
 
-	@ make build-development-image
-	@ make build-release-images
+	@ $(MAKE) build-development-image
+	@ $(MAKE) build-release-images
 
 build-development-image: pull-development-image ## Build development image
 
 	@ echo "Building development image..."
 
 	docker build \
-		--cache-from=$(docker_development_image_repository):latest \
 		--file="$(CURDIR)/docker/development/Dockerfile" \
 		--tag=$(docker_development_image_repository):$(docker_image_version) \
 		--tag=$(docker_development_image_repository):latest \
@@ -98,18 +99,17 @@ build-release-images: ## Build release images
 
 	@ echo "Building release images..."
 
-	@ make build-release-image-cpp
+	@ $(MAKE) build-release-image-cpp
 
-	@ make build-release-image-python
+	@ $(MAKE) build-release-image-python
 
-	@ make build-release-image-jupyter
+	@ $(MAKE) build-release-image-jupyter
 
 build-release-image-cpp: build-development-image pull-release-image-cpp
 
 	@ echo "Building C++ release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_cpp_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_cpp_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_cpp_repository):latest \
@@ -122,7 +122,6 @@ build-release-image-python: build-development-image pull-release-image-python
 	@ echo "Building Python release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_python_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_python_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_python_repository):latest \
@@ -135,7 +134,6 @@ build-release-image-jupyter: pull-release-image-jupyter
 	@ echo "Building Jupyter Notebook release image..."
 
 	docker build \
-		--cache-from=$(docker_release_image_jupyter_repository):latest \
 		--file="$(CURDIR)/docker/jupyter/Dockerfile" \
 		--tag=$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		--tag=$(docker_release_image_jupyter_repository):latest \
@@ -143,6 +141,10 @@ build-release-image-jupyter: pull-release-image-jupyter
 		"$(CURDIR)/docker/jupyter"
 
 build-documentation: build-development-image ## Build documentation
+
+	@ $(MAKE) build-documentation-standalone
+
+build-documentation-standalone: ## Build documentation (standalone)
 
 	@ echo "Building documentation..."
 
@@ -153,16 +155,20 @@ build-documentation: build-development-image ## Build documentation
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_DOCUMENTATION=ON .. \
-		&& make docs"
+		&& $(MAKE) docs"
 
 build-packages: ## Build packages
 
 	@ echo "Building packages..."
 
-	@ make build-packages-cpp
-	@ make build-packages-python
+	@ $(MAKE) build-packages-cpp
+	@ $(MAKE) build-packages-python
 
 build-packages-cpp: build-development-image ## Build C++ packages
+
+	@ $(MAKE) build-packages-cpp-standalone
+
+build-packages-cpp-standalone: ## Build C++ packages (standalone)
 
 	@ echo "Building C++ packages..."
 
@@ -173,11 +179,15 @@ build-packages-cpp: build-development-image ## Build C++ packages
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=DEB .. \
-		&& make package \
+		&& $(MAKE) package \
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
 build-packages-python: build-development-image ## Build Python packages
+	
+	@ $(MAKE) build-packages-python-standalone
+
+build-packages-python-standalone: ## Build Python packages (standalone)
 
 	@ echo "Building Python packages..."
 
@@ -188,7 +198,7 @@ build-packages-python: build-development-image ## Build Python packages
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. \
-		&& make -j 4 \
+		&& $(MAKE) -j 4 \
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
@@ -284,17 +294,21 @@ test: ## Run tests
 
 	@ echo "Running tests..."
 
-	@ make test-unit
-	@ make test-coverage
+	@ $(MAKE) test-unit
+	@ $(MAKE) test-coverage
 
 test-unit: ## Run unit tests
 
 	@ echo "Running unit tests..."
 
-	@ make test-unit-cpp
-	@ make test-unit-python
+	@ $(MAKE) test-unit-cpp
+	@ $(MAKE) test-unit-python
 
 test-unit-cpp: build-development-image ## Run C++ unit tests
+	
+	@ $(MAKE) test-unit-cpp-standalone
+
+test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 
 	@ echo "Running C++ unit tests..."
 
@@ -306,28 +320,41 @@ test-unit-cpp: build-development-image ## Run C++ unit tests
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
-		&& make -j 4 \
-		&& make test"
+		&& $(MAKE) -j 4 \
+		&& $(MAKE) test"
 
-test-unit-python: build-release-image-python ## Run Python unit tests
+test-unit-python: build-development-image ## Run Python unit tests
+
+	@ $(MAKE) test-unit-python-standalone
+
+test-unit-python-standalone: ## Run Python unit tests (standalone)
 
 	@ echo "Running Python unit tests..."
 
 	docker run \
 		--rm \
+		--volume="$(CURDIR):/app:delegated" \
 		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
-		--workdir=/usr/local/lib/python3.11/site-packages/ostk/$(project_name) \
+		--volume="/app/build" \
+		--workdir=/app/build \
 		--entrypoint="" \
-		$(docker_release_image_python_repository):$(docker_image_version) \
-		/bin/bash -c "pip install pytest && pytest -sv ."
+		$(docker_development_image_repository):$(docker_image_version) \
+		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
+		&& $(MAKE) -j 4 && pip install bindings/python/dist/*311*.whl \
+		&& cd /usr/local/lib/python3.11/site-packages/ostk/$(project_name)/ \
+		&& python3.11 -m pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
 
 	@ echo "Running coverage tests..."
 
-	@ make test-coverage-cpp
+	@ $(MAKE) test-coverage-cpp
 
-test-coverage-cpp: build-development-image
+test-coverage-cpp: build-development-image ## Run C++ tests with coverage
+
+	@ $(MAKE) test-coverage-cpp-standalone
+
+test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 
 	@ echo "Running C++ coverage tests..."
 
@@ -339,8 +366,8 @@ test-coverage-cpp: build-development-image
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
-		&& make -j 4 \
-		&& make coverage \
+		&& $(MAKE) -j 4 \
+		&& $(MAKE) coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
 		&& mv /app/build/coverage* /app/coverage"
