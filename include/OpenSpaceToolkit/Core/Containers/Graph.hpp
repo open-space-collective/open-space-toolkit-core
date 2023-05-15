@@ -1,16 +1,7 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Graph.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Containers_Graph__
 #define __OpenSpaceToolkit_Core_Containers_Graph__
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -19,48 +10,36 @@ namespace core
 namespace ctnr
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @brief                      Structure consisting of a finite set of vertices, together with a set of pairs of these vertices (edges).
+/// @brief                      Structure consisting of a finite set of vertices, together with a set of pairs of these
+/// vertices (edges).
 ///
 /// @ref                        https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
 
 class Graph
 {
+   public:
+    Graph() = delete;
 
-    public:
+    Graph(const Graph& aGraph);
 
-                                Graph                                       ( ) = delete ;
+    ~Graph();
 
-                                Graph                                       (   const   Graph&                      aGraph                                      ) ;
+    Graph& operator=(const Graph& aGraph) const;
 
-                                ~Graph                                      ( ) ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Graph& aGraph);
 
-        Graph&                  operator =                                  (   const   Graph&                      aGraph                                      ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Graph&                      aGraph                                      ) ;
+    static Graph Empty();
 
-        bool                    isDefined                                   ( ) const ;
+    static Graph Object(const Object& anObject);
 
-        static Graph            Empty                                       ( ) ;
+   private:
+    // [TBI]
+};
 
-        static Graph            Object                                      (   const   Object&                     anObject                                    ) ;
-
-    private:
-
-        // [TBI]
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace ctnr
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

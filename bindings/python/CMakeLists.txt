@@ -1,11 +1,4 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ Core
-# @file           bindings/python/CMakeLists.txt
-# @author         Remy Derollez <remy@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 ## Project Properties
 
@@ -20,8 +13,6 @@ SET (PROJECT_VENDOR_ID "com.bremond.lucas")
 SET (PROJECT_VENDOR_NAME "Lucas Brémond")
 SET (PROJECT_VENDOR_CONTACT "lucas.bremond@gmail.com")
 SET (PROJECT_VENDOR_URL "lucas.bremond.info")
-
-################################################################################################################################################################
 
 ## Setup
 
@@ -41,13 +32,9 @@ CMAKE_POLICY (SET "CMP0048" NEW)
 
 OPTION (BUILD_WHEELS_IN_CMAKE "Build python wheels with cmake." ON)
 
-################################################################################################################################################################
-
 ## Project Configuration
 
 PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
-
-################################################################################################################################################################
 
 ## Helper Functions
 
@@ -169,8 +156,6 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
     ADD_DEPENDENCIES (${NAME} "${LIBRARY_TARGET}_${PYTHON_VERSION}")
 ENDFUNCTION ()
 
-################################################################################################################################################################
-
 ## Dependencies
 
 ### Pybind11
@@ -194,8 +179,6 @@ FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})
     ENDIF ()
 ENDFOREACH ()
 
-################################################################################################################################################################
-
 ## Target
 
 SET (LIBRARY_NAME ${PROJECT_PACKAGE_NAME})
@@ -212,8 +195,6 @@ FOREACH (PYTHON_VERSION ${PYTHON_VERSIONS})
     PY_ADD_MODULE ("${LIBRARY_TARGET}_${PYTHON_VERSION}" ${PROJECT_SRCS} PYTHON_VERSION ${PYTHON_VERSION})
     ADD_DEPENDENCIES (${LIBRARY_TARGET} "${LIBRARY_TARGET}_${PYTHON_VERSION}")
 ENDFOREACH ()
-
-################################################################################################################################################################
 
 ## Generate python package directory/wheels
 

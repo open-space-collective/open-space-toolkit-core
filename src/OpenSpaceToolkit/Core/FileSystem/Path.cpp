@@ -1,20 +1,11 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/FileSystem/Path.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
-#include <OpenSpaceToolkit/Core/Error.hpp>
-#include <OpenSpaceToolkit/Core/Utilities.hpp>
+/// Apache License 2.0
 
 #include <boost/filesystem.hpp>
 #include <boost/range/iterator_range.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 namespace ostk
 {
@@ -23,337 +14,287 @@ namespace core
 namespace fs
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 class Path::Impl
 {
+   public:
+    boost::filesystem::path path_;
 
-    public:
+    Impl(const boost::filesystem::path& aPath);
+};
 
-        boost::filesystem::path path_ ;
-
-                                Impl                                        (   const   boost::filesystem::path&    aPath                                       ) ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                                Path::Impl::Impl                            (   const   boost::filesystem::path&    aPath                                       )
-                                :   path_(aPath)
+Path::Impl::Impl(const boost::filesystem::path& aPath)
+    : path_(aPath)
 {
-
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                                Path::Path                                  (   const   Path&                       aPath                                       )
-                                :   implUPtr_((aPath.implUPtr_ != nullptr) ? std::make_unique<Path::Impl>(*aPath.implUPtr_) : nullptr)
+Path::Path(const Path& aPath)
+    : implUPtr_((aPath.implUPtr_ != nullptr) ? std::make_unique<Path::Impl>(*aPath.implUPtr_) : nullptr)
 {
-
 }
 
-                                Path::~Path                                 ( )
+Path::~Path() {}
+
+Path& Path::operator=(const Path& aPath)
 {
-
-}
-
-Path&                           Path::operator =                            (   const   Path&                       aPath                                       )
-{
-
     if (this != &aPath)
     {
-        implUPtr_.reset((aPath.implUPtr_ != nullptr) ? new Path::Impl(*aPath.implUPtr_) : nullptr) ;
+        implUPtr_.reset((aPath.implUPtr_ != nullptr) ? new Path::Impl(*aPath.implUPtr_) : nullptr);
     }
 
-    return *this ;
-
+    return *this;
 }
 
-bool                            Path::operator ==                           (   const   Path&                       aPath                                       ) const
+bool Path::operator==(const Path& aPath) const
 {
-
     if ((!this->isDefined()) || (!aPath.isDefined()))
     {
-        return false ;
+        return false;
     }
 
-    return implUPtr_->path_ == aPath.implUPtr_->path_ ;
-
+    return implUPtr_->path_ == aPath.implUPtr_->path_;
 }
 
-bool                            Path::operator !=                           (   const   Path&                       aPath                                       ) const
+bool Path::operator!=(const Path& aPath) const
 {
-    return !((*this) == aPath) ;
+    return !((*this) == aPath);
 }
 
-Path                            Path::operator +                            (   const   Path&                       aPath                                       ) const
+Path Path::operator+(const Path& aPath) const
 {
+    Path path = {*this};
 
-    Path path = { *this } ;
+    path += aPath;
 
-    path += aPath ;
-
-    return path ;
-
+    return path;
 }
 
-Path&                           Path::operator +=                           (   const   Path&                       aPath                                       )
+Path& Path::operator+=(const Path& aPath)
 {
-
     if (!aPath.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
     try
     {
-        implUPtr_->path_ /= aPath.implUPtr_->path_ ;
+        implUPtr_->path_ /= aPath.implUPtr_->path_;
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return *this ;
-
+    return *this;
 }
 
-std::ostream&                   operator <<                                 (            std::ostream&              anOutputStream,
-                                                                                const    Path&                      aPath                                       )
+std::ostream& operator<<(std::ostream& anOutputStream, const Path& aPath)
 {
+    ostk::core::utils::Print::Header(anOutputStream, "Path");
 
-    ostk::core::utils::Print::Header(anOutputStream, "Path") ;
+    ostk::core::utils::Print::Line(anOutputStream) << (aPath.isDefined() ? aPath.toString() : "Undefined");
 
-    ostk::core::utils::Print::Line(anOutputStream)                           << (aPath.isDefined() ? aPath.toString() : "Undefined") ;
+    ostk::core::utils::Print::Footer(anOutputStream);
 
-    ostk::core::utils::Print::Footer(anOutputStream) ;
-
-    return anOutputStream ;
-
+    return anOutputStream;
 }
 
-bool                            Path::isDefined                             ( ) const
+bool Path::isDefined() const
 {
-    return implUPtr_ != nullptr ;
+    return implUPtr_ != nullptr;
 }
 
-bool                            Path::isAbsolute                            ( ) const
+bool Path::isAbsolute() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
-    return implUPtr_->path_.is_absolute() ;
-
+    return implUPtr_->path_.is_absolute();
 }
 
-bool                            Path::isRelative                            ( ) const
+bool Path::isRelative() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
-    return implUPtr_->path_.is_relative() ;
-
+    return implUPtr_->path_.is_relative();
 }
 
-Path                            Path::getParentPath                         ( ) const
+Path Path::getParentPath() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
-    Path path ;
+    Path path;
 
     try
     {
-        path.implUPtr_ = std::make_unique<Path::Impl>(implUPtr_->path_.parent_path()) ;
+        path.implUPtr_ = std::make_unique<Path::Impl>(implUPtr_->path_.parent_path());
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return path ;
-
+    return path;
 }
 
-String                          Path::getLastElement                        ( ) const
+String Path::getLastElement() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
     try
     {
-        return implUPtr_->path_.filename().string() ;
+        return implUPtr_->path_.filename().string();
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return String::Empty() ;
-
+    return String::Empty();
 }
 
-Path                            Path::getNormalizedPath                     ( ) const
+Path Path::getNormalizedPath() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
-    Path path ;
+    Path path;
 
     try
     {
-        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::weakly_canonical(implUPtr_->path_)) ;
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::weakly_canonical(implUPtr_->path_));
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return path ;
-
+    return path;
 }
 
-Path                            Path::getAbsolutePath                       (   const   Path&                       aBasePath                                   ) const
+Path Path::getAbsolutePath(const Path& aBasePath) const
 {
-
     if (!aBasePath.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Base path") ;
+        throw ostk::core::error::runtime::Undefined("Base path");
     }
 
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
-    Path path ;
+    Path path;
 
     try
     {
-        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::absolute(implUPtr_->path_, aBasePath.implUPtr_->path_)) ;
+        path.implUPtr_ =
+            std::make_unique<Path::Impl>(boost::filesystem::absolute(implUPtr_->path_, aBasePath.implUPtr_->path_));
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return path ;
-
+    return path;
 }
 
-// Path                            Path::getRelativePathTo                     (   const   Path&                       aReferencePath                              ) const
+// Path                            Path::getRelativePathTo                     (   const   Path& aReferencePath ) const
 // {
 
 // }
 
-String                          Path::toString                              ( ) const
+String Path::toString() const
 {
-
     if (!this->isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Path") ;
+        throw ostk::core::error::runtime::Undefined("Path");
     }
 
     try
     {
-        return implUPtr_->path_.string() ;
+        return implUPtr_->path_.string();
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return String::Empty() ;
-
+    return String::Empty();
 }
 
-Path                            Path::Undefined                             ( )
+Path Path::Undefined()
 {
-    return {} ;
+    return {};
 }
 
-Path                            Path::Root                                  ( )
+Path Path::Root()
 {
+    Path path;
 
-    Path path ;
+    path.implUPtr_ = std::make_unique<Path::Impl>("/");
 
-    path.implUPtr_ = std::make_unique<Path::Impl>("/") ;
-
-    return path ;
-
+    return path;
 }
 
-Path                            Path::Current                               ( )
+Path Path::Current()
 {
-
-    Path path ;
+    Path path;
 
     try
     {
-        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::current_path()) ;
+        path.implUPtr_ = std::make_unique<Path::Impl>(boost::filesystem::current_path());
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
-        throw ostk::core::error::RuntimeError(e.what()) ;
+        throw ostk::core::error::RuntimeError(e.what());
     }
 
-    return path ;
-
+    return path;
 }
 
-Path                            Path::Parse                                 (   const   String&                     aString                                     )
+Path Path::Parse(const String& aString)
 {
-
     if (aString.isEmpty())
     {
-        throw ostk::core::error::runtime::Undefined("String") ;
+        throw ostk::core::error::runtime::Undefined("String");
     }
 
-    Path path ;
+    Path path;
 
-    path.implUPtr_ = std::make_unique<Path::Impl>(aString) ;
+    path.implUPtr_ = std::make_unique<Path::Impl>(aString);
 
-    return path ;
-
+    return path;
 }
 
-// Path                            Path::Strings                               (   const   std::initializer_list<types::String> aStringList                        )
+// Path                            Path::Strings                               (   const
+// std::initializer_list<types::String> aStringList                        )
 // {
 
 // }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                                Path::Path                                  ( )
-                                :   implUPtr_(nullptr)
+Path::Path()
+    : implUPtr_(nullptr)
 {
-
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace fs
+}  // namespace core
+}  // namespace ostk

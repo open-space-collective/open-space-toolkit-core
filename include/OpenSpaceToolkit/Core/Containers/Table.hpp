@@ -1,24 +1,15 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Table.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Containers_Table__
 #define __OpenSpaceToolkit_Core_Containers_Table__
 
-#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Containers/Table/Cell.hpp>
 #include <OpenSpaceToolkit/Core/Containers/Table/Row.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/Types/Index.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 namespace ostk
 {
@@ -27,270 +18,253 @@ namespace core
 namespace ctnr
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::Index ;
-using ostk::core::types::Size ;
-using ostk::core::types::String ;
-using ostk::core::ctnr::Array ;
-using ostk::core::ctnr::table::Row ;
-using ostk::core::ctnr::table::Cell ;
-using ostk::core::fs::File ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::Index;
+using ostk::core::types::Size;
+using ostk::core::types::String;
+using ostk::core::ctnr::Array;
+using ostk::core::ctnr::table::Row;
+using ostk::core::ctnr::table::Cell;
+using ostk::core::fs::File;
 
 /// @brief                      Table container
 
 class Table
 {
+   public:
+    /// @brief              Table format
 
-    public:
+    enum class Format
+    {
 
-        /// @brief              Table format
+        Undefined,  ///< Undefined format
+        CSV         ///< Comma-Separated Values format
 
-        enum class Format
-        {
+    };
 
-            Undefined,          ///< Undefined format
-            CSV                 ///< Comma-Separated Values format
+    /// @brief              Table constant iterator
 
-        } ;
+    typedef Array<Row>::ConstIterator ConstIterator;
 
-        /// @brief              Table constant iterator
+    /// @brief              Constructor
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ;
+    /// @endcode
+    ///
+    /// @param              [in] aHeader A column name array
+    /// @param              [in] aRowArray A table row array
 
-        typedef                 Array<Row>::ConstIterator                       ConstIterator ;
+    Table(const Array<String>& aHeader, const Array<Row>& aRowArray);
 
-        /// @brief              Constructor
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        /// @endcode
-        ///
-        /// @param              [in] aHeader A column name array
-        /// @param              [in] aRowArray A table row array
+    /// @brief              Constructor
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" } } ;
+    /// @endcode
+    ///
+    /// @param              [in] aHeader A column name array
 
-                                Table                                       (   const   Array<String>&              aHeader,
-                                                                                const   Array<Row>&                 aRowArray                                   ) ;
+    Table(const Array<String>& aHeader);
 
-        /// @brief              Constructor
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" } } ;
-        /// @endcode
-        ///
-        /// @param              [in] aHeader A column name array
+    /// @brief              Copy constructor
+    ///
+    /// @param              [in] aTable A table
 
-                                Table                                       (   const   Array<String>&              aHeader                                     ) ;
+    Table(const Table& aTable);
 
-        /// @brief              Copy constructor
-        ///
-        /// @param              [in] aTable A table
+    /// @brief              Copy assignment operator
+    ///
+    /// @param              [in] aTable A table
+    /// @return             Reference to table
 
-                                Table                                       (   const   Table&                      aTable                                      ) ;
+    Table& operator=(const Table& aTable);
 
-        /// @brief              Copy assignment operator
-        ///
-        /// @param              [in] aTable A table
-        /// @return             Reference to table
+    /// @brief              Equal to operator
+    ///
+    /// @code
+    ///                     Table(...) == Table(...) ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aTable A table
+    /// @return             True if tables are equal
 
-        Table&                  operator =                                  (   const   Table&                      aTable                                      ) ;
+    bool operator==(const Table& aTable) const;
 
-        /// @brief              Equal to operator
-        ///
-        /// @code
-        ///                     Table(...) == Table(...) ; // True
-        /// @endcode
-        ///
-        /// @param              [in] aTable A table
-        /// @return             True if tables are equal
+    /// @brief              Not equal to operator
+    ///
+    /// @code
+    ///                     Table(...) != Table(1.0, 0.0, 0.0, 0.0) ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aTable A table
+    /// @return             True if tables are not equal
 
-        bool                    operator ==                                 (   const   Table&                      aTable                                      ) const ;
+    bool operator!=(const Table& aTable) const;
 
-        /// @brief              Not equal to operator
-        ///
-        /// @code
-        ///                     Table(...) != Table(1.0, 0.0, 0.0, 0.0) ; // True
-        /// @endcode
-        ///
-        /// @param              [in] aTable A table
-        /// @return             True if tables are not equal
+    /// @brief              Subscript operator (row accessor)
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; const Row& row = table[0] ; // { Cell::Integer(123), Cell::Real(123.456) }
+    /// @endcode
+    ///
+    /// @param              [in] aRowIndex A row index
+    /// @return             Reference to row
 
-        bool                    operator !=                                 (   const   Table&                      aTable                                      ) const ;
+    const Row& operator[](const Index& aRowIndex) const;
 
-        /// @brief              Subscript operator (row accessor)
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     const Row& row = table[0] ; // { Cell::Integer(123), Cell::Real(123.456) }
-        /// @endcode
-        ///
-        /// @param              [in] aRowIndex A row index
-        /// @return             Reference to row
+    /// @brief              Function call operator (cell accessor)
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; const Cell& cell = table(0, 0) ; // Cell::Integer(123)
+    /// @endcode
+    ///
+    /// @param              [in] aRowIndex A row index
+    /// @param              [in] aColumnIndex A column index
+    /// @return             Reference to cell
 
-        const Row&              operator []                                 (   const   Index&                      aRowIndex                                   ) const ;
+    const Cell& operator()(const Index& aRowIndex, const Index& aColumnIndex) const;
 
-        /// @brief              Function call operator (cell accessor)
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     const Cell& cell = table(0, 0) ; // Cell::Integer(123)
-        /// @endcode
-        ///
-        /// @param              [in] aRowIndex A row index
-        /// @param              [in] aColumnIndex A column index
-        /// @return             Reference to cell
+    /// @brief              Function call operator (cell accessor)
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; const Cell& cell = table(0, "Column A") ; // Cell::Integer(123)
+    /// @endcode
+    ///
+    /// @param              [in] aRowIndex A row index
+    /// @param              [in] aColumnName A column name
+    /// @return             Reference to cell
 
-        const Cell&             operator ()                                 (   const   Index&                      aRowIndex,
-                                                                                const   Index&                      aColumnIndex                                ) const ;
+    const Cell& operator()(const Index& aRowIndex, const String& aColumnName) const;
 
-        /// @brief              Function call operator (cell accessor)
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     const Cell& cell = table(0, "Column A") ; // Cell::Integer(123)
-        /// @endcode
-        ///
-        /// @param              [in] aRowIndex A row index
-        /// @param              [in] aColumnName A column name
-        /// @return             Reference to cell
+    /// @brief              Output stream operator
+    ///
+    /// @code
+    ///                     std::cout << Table(...) ;
+    /// @endcode
+    ///
+    /// @param              [in] anOutputStream An output stream
+    /// @param              [in] aTable A table
+    /// @return             A reference to output stream
 
-        const Cell&             operator ()                                 (   const   Index&                      aRowIndex,
-                                                                                const   String&                     aColumnName                                 ) const ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Table& aTable);
 
-        /// @brief              Output stream operator
-        ///
-        /// @code
-        ///                     std::cout << Table(...) ;
-        /// @endcode
-        ///
-        /// @param              [in] anOutputStream An output stream
-        /// @param              [in] aTable A table
-        /// @return             A reference to output stream
+    /// @brief              Check if table is empty
+    ///
+    /// @code
+    ///                     Table::Empty().isEmpty() ; // True
+    /// @endcode
+    ///
+    /// @return             True if table is empty
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Table&                      aTable                                      ) ;
+    bool isEmpty() const;
 
-        /// @brief              Check if table is empty
-        ///
-        /// @code
-        ///                     Table::Empty().isEmpty() ; // True
-        /// @endcode
-        ///
-        /// @return             True if table is empty
+    /// @brief              Returns true is table has column with a given name
+    ///
+    /// @param              [in] aColumnName A column name
+    /// @return             True is table has column with a given name
 
-        bool                    isEmpty                                     ( ) const ;
+    bool hasColumnWithName(const String& aColumnName) const;
 
-        /// @brief              Returns true is table has column with a given name
-        ///
-        /// @param              [in] aColumnName A column name
-        /// @return             True is table has column with a given name
+    /// @brief              Get number of rows
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; table.getRowCount() ; // 1
+    /// @endcode
+    ///
+    /// @return             Number of rows
 
-        bool                    hasColumnWithName                           (   const   String&                     aColumnName                                 ) const ;
+    Size getRowCount() const;
 
-        /// @brief              Get number of rows
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     table.getRowCount() ; // 1
-        /// @endcode
-        ///
-        /// @return             Number of rows
+    /// @brief              Get number of columns
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; table.getColumnCount() ; // 2
+    /// @endcode
+    ///
+    /// @return             Number of columns
 
-        Size                    getRowCount                                 ( ) const ;
+    Size getColumnCount() const;
 
-        /// @brief              Get number of columns
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     table.getColumnCount() ; // 2
-        /// @endcode
-        ///
-        /// @return             Number of columns
+    /// @brief              Returns the index of column with a given name
+    ///
+    /// @param              [in] aColumnName A column name
+    /// @return             Index of column with a given name
 
-        Size                    getColumnCount                              ( ) const ;
+    Index getIndexOfColumnWithName(const String& aColumnName) const;
 
-        /// @brief              Returns the index of column with a given name
-        ///
-        /// @param              [in] aColumnName A column name
-        /// @return             Index of column with a given name
+    /// @brief              Add row
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; table.addRow({ Cell::Integer(456), Cell::Real(456.789) }) ;
+    /// @endcode
+    ///
+    /// @param              [in] aRow A row to add
 
-        Index                   getIndexOfColumnWithName                    (   const   String&                     aColumnName                                 ) const ;
+    void addRow(const Row& aRow);
 
-        /// @brief              Add row
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     table.addRow({ Cell::Integer(456), Cell::Real(456.789) }) ;
-        /// @endcode
-        ///
-        /// @param              [in] aRow A row to add
+    /// @brief              Clear table
+    ///
+    /// @code
+    ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } }
+    ///                     } ; table.clear() ;
+    /// @endcode
 
-        void                    addRow                                      (   const   Row&                        aRow                                        ) ;
+    void clear();
 
-        /// @brief              Clear table
-        ///
-        /// @code
-        ///                     Table table = { { "Column A", "Column B" }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;
-        ///                     table.clear() ;
-        /// @endcode
+    /// @brief              Get begin constant interator
+    ///
+    /// @return             Begin constant interator
 
-        void                    clear                                       ( ) ;
+    Table::ConstIterator begin() const;
 
-        /// @brief              Get begin constant interator
-        ///
-        /// @return             Begin constant interator
+    /// @brief              Get end constant interator
+    ///
+    /// @return             End constant interator
 
-        Table::ConstIterator    begin                                       ( ) const ;
+    Table::ConstIterator end() const;
 
-        /// @brief              Get end constant interator
-        ///
-        /// @return             End constant interator
+    /// @brief              Constructs an empty table
+    ///
+    /// @code
+    ///                     Table table = Table::Empty() ;
+    /// @endcode
+    ///
+    /// @return             Empty table
 
-        Table::ConstIterator    end                                         ( ) const ;
+    static Table Empty();
 
-        /// @brief              Constructs an empty table
-        ///
-        /// @code
-        ///                     Table table = Table::Empty() ;
-        /// @endcode
-        ///
-        /// @return             Empty table
+    /// @brief              Constructs a table from a file
+    ///
+    /// @code
+    ///                     Table table = Table::Load(File::Path(Path::Parse("/path/to/file.csv")), Table::Format::CSV,
+    ///                     true) ;
+    /// @endcode
+    ///
+    /// @param              [in] aFile A table file
+    /// @param              [in] (optional) aFormat A table format
+    /// @param              [in] (optional) hasHeader True if file has a header
+    /// @return             Table
 
-        static Table            Empty                                       ( ) ;
+    static Table Load(
+        const File& aFile, const Table::Format& aFormat = Table::Format::Undefined, bool hasHeader = true
+    );
 
-        /// @brief              Constructs a table from a file
-        ///
-        /// @code
-        ///                     Table table = Table::Load(File::Path(Path::Parse("/path/to/file.csv")), Table::Format::CSV, true) ;
-        /// @endcode
-        ///
-        /// @param              [in] aFile A table file
-        /// @param              [in] (optional) aFormat A table format
-        /// @param              [in] (optional) hasHeader True if file has a header
-        /// @return             Table
+   private:
+    Array<String> header_;
+    Array<Row> rows_;
 
-        static Table            Load                                        (   const   File&                       aFile,
-                                                                                const   Table::Format&              aFormat                                     =   Table::Format::Undefined,
-                                                                                        bool                        hasHeader                                   =   true ) ;
+    static Table LoadCsv(const File& aFile, bool hasHeader = true);
+};
 
-    private:
-
-        Array<String>           header_ ;
-        Array<Row>              rows_ ;
-
-        static Table            LoadCsv                                     (   const   File&                       aFile,
-                                                                                        bool                        hasHeader                                   =   true ) ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace ctnr
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

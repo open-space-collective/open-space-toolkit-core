@@ -1,22 +1,11 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Logger/Sinks/Sink.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Logger_Sinks_Sink__
 #define __OpenSpaceToolkit_Core_Logger_Sinks_Sink__
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
 #include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 namespace ostk
 {
@@ -27,76 +16,62 @@ namespace logger
 namespace sinks
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::String ;
-using ostk::core::ctnr::Array ;
-using ostk::core::logger::Severity ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::String;
+using ostk::core::ctnr::Array;
+using ostk::core::logger::Severity;
 
 /// @brief                      Log sink base
 
 class Sink
 {
+   public:
+    Sink(const Severity& aSeverity);
 
-    public:
+    virtual ~Sink() = 0;
 
-                                Sink                                        (   const   Severity&                   aSeverity                                   ) ;
+    virtual Sink* clone() const = 0;
 
-        virtual                 ~Sink                                       ( ) = 0 ;
+    bool isEnabled() const;
 
-        virtual Sink*           clone                                       ( ) const = 0 ;
+    bool isLineIdLogged() const;
+    bool isSeverityLogged() const;
+    bool isTimestampLogged() const;
+    bool isThreadLogged() const;
+    bool isScopeLogged() const;
+    bool isFileLogged() const;
+    bool isLineLogged() const;
+    bool isFunctionLogged() const;
+    bool isChannelLogged() const;
 
-        bool                    isEnabled                                   ( ) const ;
+    virtual void enable() = 0;
+    virtual void disable() = 0;
 
-        bool                    isLineIdLogged                              ( ) const ;
-        bool                    isSeverityLogged                            ( ) const ;
-        bool                    isTimestampLogged                           ( ) const ;
-        bool                    isThreadLogged                              ( ) const ;
-        bool                    isScopeLogged                               ( ) const ;
-        bool                    isFileLogged                                ( ) const ;
-        bool                    isLineLogged                                ( ) const ;
-        bool                    isFunctionLogged                            ( ) const ;
-        bool                    isChannelLogged                             ( ) const ;
+    void addChannel(const String& aChannel);
+    void removeChannel(const String& aChannel);
 
-        virtual void            enable                                      ( ) = 0 ;
-        virtual void            disable                                     ( ) = 0 ;
+   protected:
+    // String                  name_ ;
 
-        void                    addChannel                                  (   const   String&                     aChannel                                    ) ;
-        void                    removeChannel                               (   const   String&                     aChannel                                    ) ;
+    bool enabled_;
 
-    protected:
+    Severity severity_;
 
-        // String                  name_ ;
+    bool lineIdEnabled_;
+    bool severityEnabled_;
+    bool timestampEnabled_;
+    bool threadEnabled_;
+    bool scopeEnabled_;
+    bool fileEnabled_;
+    bool lineEnabled_;
+    bool functionEnabled_;
+    bool channelEnabled_;
 
-        bool                    enabled_ ;
+    Array<String> channels_;
+};
 
-        Severity                severity_ ;
-
-        bool                    lineIdEnabled_ ;
-        bool                    severityEnabled_ ;
-        bool                    timestampEnabled_ ;
-        bool                    threadEnabled_ ;
-        bool                    scopeEnabled_ ;
-        bool                    fileEnabled_ ;
-        bool                    lineEnabled_ ;
-        bool                    functionEnabled_ ;
-        bool                    channelEnabled_ ;
-
-        Array<String>           channels_ ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace sinks
+}  // namespace logger
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

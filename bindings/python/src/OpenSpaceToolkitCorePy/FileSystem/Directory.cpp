@@ -1,22 +1,12 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/FileSystem/Directory.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::fs::Directory ;
+    using ostk::core::fs::Directory;
 
     class_<Directory>(aModule, "Directory")
 
@@ -55,8 +45,5 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_Directory (   
         .def_static("root", &Directory::Root)
         .def_static("path", &Directory::Path)
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

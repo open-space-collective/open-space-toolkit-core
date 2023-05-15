@@ -1,15 +1,6 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -20,31 +11,21 @@ namespace error
 namespace runtime
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                                Undefined::Undefined                        (   const   String&                     aVariableName                               )
-                                :   RuntimeError("{" + aVariableName + "} is undefined.")
+Undefined::Undefined(const String& aVariableName)
+    : RuntimeError("{" + aVariableName + "} is undefined.")
 {
-
 }
 
-//                                 Undefined::Undefined                        (   const   String&                     aScope,
-//                                                                                 const   String&                     aVariableName                               )
+//                                 Undefined::Undefined                        (   const   String& aScope,
+//                                                                                 const   String& aVariableName )
 //                                 :   RuntimeError(aScope, "{" + aVariableName + "} is undefined.")
 // {
 
 // }
 
-                                Undefined::~Undefined                       ( )
-{
+Undefined::~Undefined() {}
 
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace runtime
+}  // namespace error
+}  // namespace core
+}  // namespace ostk

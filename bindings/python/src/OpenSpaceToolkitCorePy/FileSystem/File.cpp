@@ -1,22 +1,12 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/FileSystem/File.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_FileSystem_File      (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::fs::File ;
+    using ostk::core::fs::File;
 
     class_<File>(aModule, "File")
 
@@ -34,7 +24,7 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_File      (   
 
         .def("is_defined", &File::isDefined)
         .def("exists", &File::exists)
-        .def("get_name", &File::getName, "withExtension"_a=true)
+        .def("get_name", &File::getName, "withExtension"_a = true)
         .def("get_extension", &File::getExtension)
         .def("get_path", &File::getPath)
         .def("get_permissions", &File::getPermissions)
@@ -52,8 +42,5 @@ inline void                     OpenSpaceToolkitCorePy_FileSystem_File      (   
         .def_static("undefined", &File::Undefined)
         .def_static("path", &File::Path)
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

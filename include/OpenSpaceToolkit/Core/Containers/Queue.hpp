@@ -1,16 +1,7 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Graph.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Containers_Graph__
 #define __OpenSpaceToolkit_Core_Containers_Graph__
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -19,46 +10,33 @@ namespace core
 namespace ctnr
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 /// @brief                      First-in, first-out (FIFO) container
 
 class Queue
 {
+   public:
+    Queue() = delete;
 
-    public:
+    Queue(const Queue& aQueue);
 
-                                Queue                                       ( ) = delete ;
+    ~Queue();
 
-                                Queue                                       (   const   Queue&                      aQueue                                      ) ;
+    Queue& operator=(const Queue& aQueue) const;
 
-                                ~Queue                                      ( ) ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Queue& aQueue);
 
-        Queue&                  operator =                                  (   const   Queue&                      aQueue                                      ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Queue&                      aQueue                                      ) ;
+    static Queue Empty();
 
-        bool                    isDefined                                   ( ) const ;
+    static Queue Object(const Object& anObject);
 
-        static Queue            Empty                                       ( ) ;
+   private:
+    // [TBI]
+};
 
-        static Queue            Object                                      (   const   Object&                     anObject                                    ) ;
-
-    private:
-
-        // [TBI]
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace ctnr
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

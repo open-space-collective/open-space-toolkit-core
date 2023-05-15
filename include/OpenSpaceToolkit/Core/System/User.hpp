@@ -1,18 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/System/User.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_System_User__
 #define __OpenSpaceToolkit_Core_System_User__
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -21,11 +12,7 @@ namespace core
 namespace system
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-using ostk::core::types::String ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using ostk::core::types::String;
 
 /// @brief                      User
 ///
@@ -35,55 +22,41 @@ using ostk::core::types::String ;
 
 class User
 {
+   public:
+    User(const uint& aUID, const String& aName);
 
-    public:
+    User(const uint& aUID, const uint& aEUID, const String& aName);
 
-                                User                                        (   const   uint&                       aUID,
-                                                                                const   String&                     aName                                       ) ;
+    bool operator==(const User& aUser) const;
 
-                                User                                        (   const   uint&                       aUID,
-                                                                                const   uint&                       aEUID,
-                                                                                const   String&                     aName                                       ) ;
+    bool operator!=(const User& aUser) const;
 
-        bool                    operator ==                                 (   const   User&                       aUser                                       ) const ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const User& aUser);
 
-        bool                    operator !=                                 (   const   User&                       aUser                                       ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   User&                       aUser                                       ) ;
+    int getUID() const;
 
-        bool                    isDefined                                   ( ) const ;
+    int getEUID() const;
 
-        int                     getUID                                      ( ) const ;
+    String getName() const;
 
-        int                     getEUID                                     ( ) const ;
+    static User Undefined();
 
-        String                  getName                                     ( ) const ;
+    static User Process();
 
-        static User             Undefined                                   ( ) ;
+    static User UID(const uint& aUID);
 
-        static User             Process                                     ( ) ;
+    static User Name(const String& aName);
 
-        static User             UID                                         (   const   uint&                       aUID                                        ) ;
+   private:
+    int uid_;
+    int euid_;
+    String name_;
+};
 
-        static User             Name                                        (   const   String&                     aName                                       ) ;
-
-    private:
-
-        int uid_ ;
-        int euid_ ;
-        String name_ ;
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace system
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

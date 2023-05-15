@@ -1,24 +1,14 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Real.cpp
-/// @author         Remy Derollez <remy@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Types_Real           (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::types::Integer ;
-    using ostk::core::types::Real ;
-    using ostk::core::types::String ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::Real;
+    using ostk::core::types::String;
 
     class_<Real>(aModule, "Real")
 
@@ -26,7 +16,13 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real           (   
         .def(init<Real::ValueType>())
 
         // Define __float__ method for direct conversion
-        .def("__float__", +[] (const ostk::core::types::Real& aReal) -> double { return static_cast<double>(aReal) ; })
+        .def(
+            "__float__",
+            +[](const ostk::core::types::Real& aReal) -> double
+            {
+                return static_cast<double>(aReal);
+            }
+        )
 
         // Define methods
         .def(self == self)
@@ -59,8 +55,20 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real           (   
         .def(double() * self)
         .def(double() / self)
 
-        .def("__str__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
-        .def("__repr__", +[] (const ostk::core::types::Real& aReal) -> std::string { return aReal.toString() ; })
+        .def(
+            "__str__",
+            +[](const ostk::core::types::Real& aReal) -> std::string
+            {
+                return aReal.toString();
+            }
+        )
+        .def(
+            "__repr__",
+            +[](const ostk::core::types::Real& aReal) -> std::string
+            {
+                return aReal.toString();
+            }
+        )
 
         .def("is_defined", &Real::isDefined)
         .def("is_zero", &Real::isZero)
@@ -94,10 +102,7 @@ inline void                     OpenSpaceToolkitCorePy_Types_Real           (   
         .def_static("can_parse", &Real::CanParse)
         .def_static("parse", &Real::Parse)
 
-    ;
+        ;
 
-    implicitly_convertible<Real::ValueType, Real>() ;
-
+    implicitly_convertible<Real::ValueType, Real>();
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

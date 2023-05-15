@@ -1,31 +1,21 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Containers/Object.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Containers/Object.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Real.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Containers_Object   (         pybind11::module&              aModule                                     )
+inline void OpenSpaceToolkitCorePy_Containers_Object(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
+    using ostk::core::types::Index;
+    using ostk::core::types::Integer;
+    using ostk::core::types::Real;
+    using ostk::core::types::String;
+    using ostk::core::ctnr::Object;
 
-    using ostk::core::types::Index ;
-    using ostk::core::types::Integer ;
-    using ostk::core::types::Real ;
-    using ostk::core::types::String ;
-    using ostk::core::ctnr::Object ;
-
-    class_<Object> object_class(aModule, "Object") ;
+    class_<Object> object_class(aModule, "Object");
 
     object_class
 
@@ -35,8 +25,20 @@ inline void                     OpenSpaceToolkitCorePy_Containers_Object   (    
         .def("__getitem__", overload_cast<const String&>(&Object::operator[]))
         .def("__getitem__", overload_cast<const Index&>(&Object::operator[]))
 
-        .def("__str__", [] (const Object& anObject) -> std::string { return anObject.toString(Object::Format::JSON) ; })
-        .def("__repr__", [] (const Object& anObject) -> std::string { return anObject.toString(Object::Format::JSON) ; })
+        .def(
+            "__str__",
+            [](const Object& anObject) -> std::string
+            {
+                return anObject.toString(Object::Format::JSON);
+            }
+        )
+        .def(
+            "__repr__",
+            [](const Object& anObject) -> std::string
+            {
+                return anObject.toString(Object::Format::JSON);
+            }
+        )
 
         .def("is_defined", &Object::isDefined)
         .def("is_boolean", &Object::isBoolean)
@@ -67,7 +69,7 @@ inline void                     OpenSpaceToolkitCorePy_Containers_Object   (    
         .def_static("string_from_type", &Object::StringFromType, arg("type"))
         .def_static("type_from_string", &Object::TypeFromString, arg("string"))
 
-    ;
+        ;
 
     enum_<Object::Type>(object_class, "Type")
 
@@ -79,7 +81,7 @@ inline void                     OpenSpaceToolkitCorePy_Containers_Object   (    
         .value("Dictionary", Object::Type::Dictionary)
         .value("Array", Object::Type::Array)
 
-    ;
+        ;
 
     enum_<Object::Format>(object_class, "Format")
 
@@ -87,8 +89,5 @@ inline void                     OpenSpaceToolkitCorePy_Containers_Object   (    
         .value("JSON", Object::Format::JSON)
         .value("YAML", Object::Format::YAML)
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

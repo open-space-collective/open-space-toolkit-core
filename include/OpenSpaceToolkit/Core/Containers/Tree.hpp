@@ -1,16 +1,7 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           OpenSpaceToolkit/Core/Containers/Tree.hpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #ifndef __OpenSpaceToolkit_Core_Containers_Tree__
 #define __OpenSpaceToolkit_Core_Containers_Tree__
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace ostk
 {
@@ -19,53 +10,41 @@ namespace core
 namespace ctnr
 {
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 /// @brief                      Undirected graph in which any two vertices are connected by exactly one path
 ///
-///                             A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node),
-///                             where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"),
-///                             with the constraints that no reference is duplicated, and none points to the root.
+///                             A tree data structure can be defined recursively (locally) as a collection of nodes
+///                             (starting at a root node), where each node is a data structure consisting of a value,
+///                             together with a list of references to nodes (the "children"), with the constraints that
+///                             no reference is duplicated, and none points to the root.
 ///
 /// @ref                        https://en.wikipedia.org/wiki/Tree_(graph_theory)
 /// @ref                        https://en.wikipedia.org/wiki/Tree_(data_structure)
 
 class Tree
 {
+   public:
+    Tree() = delete;
 
-    public:
+    Tree(const Tree& aTree);
 
-                                Tree                                        ( ) = delete ;
+    ~Tree();
 
-                                Tree                                        (   const   Tree&                       aTree                                       ) ;
+    Tree& operator=(const Tree& aTree) const;
 
-                                ~Tree                                       ( ) ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Tree& aTree);
 
-        Tree&                   operator =                                  (   const   Tree&                       aTree                                       ) const ;
+    bool isDefined() const;
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Tree&                       aTree                                       ) ;
+    static Tree Empty();
 
-        bool                    isDefined                                   ( ) const ;
+    static Tree Object(const Object& anObject);
 
-        static Tree             Empty                                       ( ) ;
+   private:
+    // [TBI]
+};
 
-        static Tree             Object                                      (   const   Object&                     anObject                                    ) ;
-
-    private:
-
-        // [TBI]
-
-} ;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}
-}
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}  // namespace ctnr
+}  // namespace core
+}  // namespace ostk
 
 #endif
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

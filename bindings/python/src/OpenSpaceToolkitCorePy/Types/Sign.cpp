@@ -1,22 +1,12 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ Core
-/// @file           bindings/python/src/OpenSpaceToolkitCorePy/Types/Sign.cpp
-/// @author         Remy Derollez <remy@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Types/Sign.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitCorePy_Types_Sign           (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitCorePy_Types_Sign(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
-
-    using ostk::core::types::Sign ;
+    using ostk::core::types::Sign;
 
     enum_<Sign>(aModule, "Sign")
         .value("Undefined", Sign::Undefined)
@@ -25,8 +15,5 @@ inline void                     OpenSpaceToolkitCorePy_Types_Sign           (   
         .value("NoSign", Sign::None)
         .export_values()
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
