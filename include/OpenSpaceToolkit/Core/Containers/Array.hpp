@@ -264,7 +264,7 @@ class Array : public std::vector<T>
     ///
     /// @code
     ///                     Array<Integer> array = {0, 1, 2, 3, 4} ;
-    ///                     Array<const Integer*> elements = array.accessWhere([] (const Integer& anInteger) -> bool {
+    ///                     Array<Integer> elements = array.getWhere([] (const Integer& anInteger) -> bool {
     ///                     return anInteger.isEven() ; }) ; // [0, 2, 4]
     /// @endcode
     ///
