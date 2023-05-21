@@ -115,15 +115,15 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
     # Get python extension for relevant shared library spotting
     STRING (REPLACE "." "" EXTENSION "${PYTHON_VERSION}")
 
-    # Configure setup.py file
-    SET (SETUP_PY_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.py.in")
-    SET (SETUP_PY "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/setup.py")
-    CONFIGURE_FILE (${SETUP_PY_IN} ${SETUP_PY})
-
     # Configure setup.cfg file
-    # SET (SETUP_CFG_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.cfg.in")
-    # SET (SETUP_CFG "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/setup.cfg")
-    # CONFIGURE_FILE (${SETUP_CFG_IN} ${SETUP_CFG})
+    SET (SETUP_CFG_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/setup.cfg.in")
+    SET (SETUP_CFG "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/setup.cfg")
+    CONFIGURE_FILE (${SETUP_CFG_IN} ${SETUP_CFG})
+
+    # Configure pyproject.toml file
+    SET (PYPROJECT_TOML_IN "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/pyproject.toml.in")
+    SET (PYPROJECT_TOML "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/pyproject.toml")
+    CONFIGURE_FILE (${PYPROJECT_TOML_IN} ${PYPROJECT_TOML})
 
     IF (BUILD_WHEELS_IN_CMAKE)
 
@@ -135,7 +135,7 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/__init__.py"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
-                            COMMAND python${PYTHON_VERSION} ${SETUP_PY} build --build-base=./lib${EXTENSION} bdist_wheel --python-tag=py${EXTENSION} --bdist-dir=./dist${EXTENSION}
+                            COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m build -w
                             DEPENDS ${DEPS})
 
         # Install package on the machine
@@ -166,7 +166,7 @@ FIND_PACKAGE (pybind11 2.6.0 REQUIRED)
 ### Python
 
 # Python versions to build for and support
-SET (PYTHON_SEARCH_VERSIONS 2.7 3.5 3.6 3.7 3.8 3.9 3.10 3.11)
+SET (PYTHON_SEARCH_VERSIONS 3.9)
 
 MESSAGE (STATUS "Looking for available python versions...")
 FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})

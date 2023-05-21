@@ -1,7 +1,38 @@
 # Apache License 2.0
 
-# setup.cfg
 [bdist_wheel]
 python-tag=py${EXTENSION}
+# build-base=./lib${EXTENSION}  # TBI: Not recognized
+bdist-dir=./dist${EXTENSION}    # TBI: Not taken into account
 
-# add other relevant tags...
+[metadata]
+name = open-space-toolkit-core
+version = ${PROJECT_VERSION_STRING}
+author = Open Space Collective
+author_email = contact@open-space-collective.org
+description = Fundamental types, containers and utilities.
+# long_description =
+keywords = open-space-collective, open-space-toolkit core
+license = Apache License 2.0
+classifiers =
+    Development Status :: 3 - Alpha
+    Programming Language :: Python :: 3
+    License :: OSI Approved :: Apache Software License
+    Operating System :: POSIX :: Linux
+
+[options]
+zip_safe = False
+include_package_data = True
+# packages = find: ${CMAKE_CURRENT_BINARY_DIR}/${NAME}
+#package_dir =
+#    = ${CMAKE_CURRENT_BINARY_DIR}/${NAME}
+python_requires = >=3.7
+
+[options.package_data]
+ostk.core=libopen-space-toolkit-core.so.0, ${LIBRARY_TARGET}.*${EXTENSION}*.so
+
+[options.packages.find]
+exclude =
+    examples*
+    tools*
+    docs*
