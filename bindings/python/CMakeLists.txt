@@ -136,13 +136,11 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
                             COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/requirements.txt" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/requirements.txt"
+                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/README.md" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/README.md"
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m build -w
                             COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             COMMAND cp "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/dist/*" "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             DEPENDS ${DEPS})
-
-        # Install package on the machine
-        # INSTALL (CODE "execute_process(COMMAND python${PYTHON_VERSION} ${SETUP_PY} install)")
     ELSE ()
 
         # Build package directories only to integrate with a ci build wheel process
