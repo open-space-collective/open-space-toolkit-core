@@ -135,7 +135,10 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/__init__.py"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/libopen-space-toolkit-core.so.0"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
+                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/requirements.txt" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/requirements.txt"
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m build -w
+                            COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/dist"
+                            COMMAND cp "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/dist/*" "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             DEPENDS ${DEPS})
 
         # Install package on the machine
@@ -166,7 +169,7 @@ FIND_PACKAGE (pybind11 2.6.0 REQUIRED)
 ### Python
 
 # Python versions to build for and support
-SET (PYTHON_SEARCH_VERSIONS 3.9)
+SET (PYTHON_SEARCH_VERSIONS 3.8 3.9 3.10 3.11)
 
 MESSAGE (STATUS "Looking for available python versions...")
 FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})
@@ -207,5 +210,3 @@ FOREACH (PYTHON_VERSION ${PYTHON_VERSIONS})
     MESSAGE (STATUS "Building package directory for python ${PYTHON_VERSION}...")
     PY_ADD_PACKAGE_DIRECTORY ("${PACKAGE_TARGET}-${PYTHON_VERSION}" PYTHON_VERSION ${PYTHON_VERSION})
 ENDFOREACH ()
-
-###############################################################################################################################################################
