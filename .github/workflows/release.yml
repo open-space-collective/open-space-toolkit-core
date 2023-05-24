@@ -25,7 +25,7 @@ jobs:
       - id: project-name
         name: Get Project Name
         run: |
-          echo "Project name: ${project_version}"
+          echo "Project name: ${{ env.PROJECT_NAME }}
           echo "value::${{ env.PROJECT_NAME }}" >> $GITHUB_OUTPUT
       - id: project-version
         name: Get Project Version
