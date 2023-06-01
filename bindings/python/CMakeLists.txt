@@ -167,7 +167,7 @@ FIND_PACKAGE (pybind11 2.6.0 REQUIRED)
 ### Python
 
 # Python versions to build for and support
-SET (PYTHON_SEARCH_VERSIONS 3.8 3.9 3.10 3.11)
+SET (PYTHON_SEARCH_VERSIONS 3.10)
 
 MESSAGE (STATUS "Looking for available python versions...")
 FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})
