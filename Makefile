@@ -221,7 +221,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. \
-		&& $(MAKE) -j $(nproc) \
+		&& $(MAKE) -j 6 \
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
@@ -393,7 +393,7 @@ test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
-		&& $(MAKE) -j $(nproc) \
+		&& $(MAKE) -j 6 \
 		&& $(MAKE) test"
 
 test-unit-python: build-development-image ## Run Python unit tests
@@ -441,7 +441,7 @@ test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
-		&& $(MAKE) -j $(nproc) \
+		&& $(MAKE) -j 6 \
 		&& $(MAKE) coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
