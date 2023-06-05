@@ -413,7 +413,7 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		--entrypoint="" \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
-		&& $(MAKE) -j $(nproc) && pip install bindings/python/dist/*311*.whl \
+		&& $(MAKE) -j 6 && pip install bindings/python/dist/*311*.whl \
 		&& cd /usr/local/lib/python3.11/site-packages/ostk/$(project_name)/ \
 		&& python3.11 -m pytest -sv ."
 
