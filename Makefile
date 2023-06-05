@@ -221,7 +221,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON .. \
-		&& $(MAKE) -j 4 \
+		&& $(MAKE) -j $(nproc) \
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
@@ -393,7 +393,7 @@ test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
-		&& $(MAKE) -j 4 \
+		&& $(MAKE) -j $(nproc) \
 		&& $(MAKE) test"
 
 test-unit-python: build-development-image ## Run Python unit tests
@@ -413,7 +413,7 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		--entrypoint="" \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
-		&& $(MAKE) -j 4 && pip install bindings/python/dist/*311*.whl \
+		&& $(MAKE) -j $(nproc) && pip install bindings/python/dist/*311*.whl \
 		&& cd /usr/local/lib/python3.11/site-packages/ostk/$(project_name)/ \
 		&& python3.11 -m pytest -sv ."
 
@@ -441,7 +441,7 @@ test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
-		&& $(MAKE) -j 4 \
+		&& $(MAKE) -j $(nproc) \
 		&& $(MAKE) coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
