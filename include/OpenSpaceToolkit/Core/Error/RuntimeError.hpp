@@ -5,6 +5,8 @@
 
 #include <stdexcept>
 
+#include <boost/stacktrace.hpp>
+
 #include <OpenSpaceToolkit/Core/Error/Exception.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 
@@ -24,32 +26,24 @@ class RuntimeError : public Exception
    public:
     RuntimeError(const String& aMessage);
 
-    // RuntimeError                                (   const   String&                     aScope,
-    //                                                 const   String&                     aMessage ) ;
-
     template <typename... Args>
     RuntimeError(const char* aFormat, Args... anArgumentList)
         : Exception(String::Empty()),
-          message_(String::Format(aFormat, anArgumentList...))
+          message_(String::Format(aFormat, anArgumentList...)),
+          stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace()))
     {
     }
 
-    //                         template <typename ...Args>
-    //                         RuntimeError                                (   const   String& aScope,
-    //                                                                         const   char* aFormat,
-    //                                                                                 Args... anArgumentList )
-    //                         :   Exception(aScope),
-    //                             message_(String::Format(aFormat, anArgumentList...))
-    // {
-
-    // }
-
     ~RuntimeError();
+
+    String getMessage() const;
+    String getStackTrace() const;
 
     virtual const char* what() const noexcept override;
 
    private:
     String message_;
+    String stackTrace_;
 };
 
 }  // namespace error
