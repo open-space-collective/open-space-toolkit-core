@@ -1,7 +1,5 @@
 /// Apache License 2.0
 
-#include <iostream>
-
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
 
 #include <Global.test.hpp>
