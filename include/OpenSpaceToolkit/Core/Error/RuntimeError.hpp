@@ -30,7 +30,8 @@ class RuntimeError : public Exception
     RuntimeError(const char* aFormat, Args... anArgumentList)
         : Exception(String::Empty()),
           message_(String::Format(aFormat, anArgumentList...)),
-          stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace()))
+          stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace())),
+          what_(stackTrace_ + message_)
     {
     }
 
@@ -44,6 +45,7 @@ class RuntimeError : public Exception
    private:
     String message_;
     String stackTrace_;
+    String what_;
 };
 
 }  // namespace error
