@@ -1,6 +1,8 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
+#include <boost/stacktrace.hpp>
+#include <iostream>
 
 namespace ostk
 {
@@ -27,7 +29,7 @@ RuntimeError::~RuntimeError() {}
 
 const char* RuntimeError::what() const noexcept
 {
-    return message_.data();
+    return (boost::stacktrace::to_string(boost::stacktrace::stacktrace()) + message_).data();
 }
 
 }  // namespace error

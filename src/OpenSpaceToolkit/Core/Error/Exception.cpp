@@ -1,5 +1,5 @@
 /// Apache License 2.0
-
+#include <iostream>
 #include <OpenSpaceToolkit/Core/Error/Exception.hpp>
 
 namespace ostk
