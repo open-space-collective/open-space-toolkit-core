@@ -10,7 +10,6 @@ TEST(OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
 
     {
         EXPECT_THROW(throw RuntimeError("This is a test."), RuntimeError);
-        // EXPECT_THROW(throw RuntimeError("This is a scope.", "This is a test."), RuntimeError) ;
 
         EXPECT_THROW(throw RuntimeError("This is a list [{}, {}, {}].", 123, 456, 789), RuntimeError);
     }
@@ -23,18 +22,13 @@ TEST(OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
         catch (const RuntimeError& anError)
         {
             EXPECT_EQ("", anError.getScope());
-            EXPECT_EQ("This is a test.", std::string(anError.what()));
-        }
+            EXPECT_EQ("This is a test.", anError.getMessage());
 
-        // try
-        // {
-        //     throw RuntimeError("This is a scope.", "This is a test.") ;
-        // }
-        // catch (const RuntimeError& anError)
-        // {
-        //     EXPECT_EQ("This is a scope.", anError.getScope()) ;
-        //     EXPECT_EQ("This is a test.", std::string(anError.what())) ;
-        // }
+            EXPECT_FALSE(anError.getStackTrace().empty());
+            EXPECT_EQ(anError.getStackTrace().getHead(3), " 0#");
+
+            EXPECT_EQ(anError.getStackTrace() + anError.getMessage(), std::string(anError.what()));
+        }
 
         try
         {
@@ -43,7 +37,12 @@ TEST(OpenSpaceToolkit_Core_Error_RuntimeError, Constructor)
         catch (const RuntimeError& anError)
         {
             EXPECT_EQ("", anError.getScope());
-            EXPECT_EQ("This is a list [123, 456, 789].", std::string(anError.what()));
+            EXPECT_EQ("This is a list [123, 456, 789].", anError.getMessage());
+
+            EXPECT_FALSE(anError.getStackTrace().empty());
+            EXPECT_EQ(anError.getStackTrace().getHead(3), " 0#");
+
+            EXPECT_EQ(anError.getStackTrace() + anError.getMessage(), std::string(anError.what()));
         }
     }
 }
