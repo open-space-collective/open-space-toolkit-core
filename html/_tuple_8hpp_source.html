@@ -85,60 +85,54 @@ $(document).ready(function(){initNavTree('_tuple_8hpp_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="_tuple_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __OpenSpaceToolkit_Core_Containers_Tuple__</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __OpenSpaceToolkit_Core_Containers_Tuple__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef __OpenSpaceToolkit_Core_Containers_Tuple__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define __OpenSpaceToolkit_Core_Containers_Tuple__</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_index_8hpp.html">OpenSpaceToolkit/Core/Types/Index.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_size_8hpp.html">OpenSpaceToolkit/Core/Types/Size.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_string_8hpp.html">OpenSpaceToolkit/Core/Types/String.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_string_8hpp.html">OpenSpaceToolkit/Core/Types/String.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_size_8hpp.html">OpenSpaceToolkit/Core/Types/Size.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_index_8hpp.html">OpenSpaceToolkit/Core/Types/Index.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk.html">ostk</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1ctnr.html">ctnr</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk.html">ostk</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1ctnr.html">ctnr</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> <a class="code" href="classostk_1_1core_1_1types_1_1_string.html">ostk::core::types::String</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">Tuple</a> = std::tuple&lt;Args...&gt;;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a> ;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a> ;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> <a class="code" href="classostk_1_1core_1_1types_1_1_string.html">ostk::core::types::String</a> ;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">   30</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">Unpack</a>(Args&amp;... args)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> std::tuple&lt;Args&amp;...&gt;(args...);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}  <span class="comment">// namespace ctnr</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}  <span class="comment">// namespace ostk</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">   39</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt; <span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">Tuple</a> = std::tuple&lt;Args...&gt; ;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt; <span class="keyword">auto</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">Unpack</a> (Args&amp;... args)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> std::tuple&lt;Args&amp;...&gt;(args...) ;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_index_8hpp_html"><div class="ttname"><a href="_index_8hpp.html">Index.hpp</a></div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html_a625c2cc96b397db1d78934d7fc9d55d4"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">ostk::core::ctnr::Unpack</a></div><div class="ttdeci">auto Unpack(Args &amp;... args)</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:41</div></div>
-<div class="ttc" id="anamespaceostk_html"><div class="ttname"><a href="namespaceostk.html">ostk</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:24</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html_a625c2cc96b397db1d78934d7fc9d55d4"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html#a625c2cc96b397db1d78934d7fc9d55d4">ostk::core::ctnr::Unpack</a></div><div class="ttdeci">auto Unpack(Args &amp;... args)</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:30</div></div>
+<div class="ttc" id="anamespaceostk_html"><div class="ttname"><a href="namespaceostk.html">ostk</a></div><div class="ttdoc">Apache License 2.0.</div><div class="ttdef"><b>Definition:</b> Array.hpp:15</div></div>
 <div class="ttc" id="a_size_8hpp_html"><div class="ttname"><a href="_size_8hpp.html">Size.hpp</a></div></div>
 <div class="ttc" id="a_string_8hpp_html"><div class="ttname"><a href="_string_8hpp.html">String.hpp</a></div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_a6e63c1b15b2e5bc87a43771c09fa913a"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:28</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html">ostk::core::types::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:43</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_acf68f214a245e35a7c1994c84dc56746"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:28</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html">ostk::core::ctnr</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:28</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html_a7f01ca040222e5b0c02a90aa68cc8e88"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">ostk::core::ctnr::Tuple</a></div><div class="ttdeci">std::tuple&lt; Args... &gt; Tuple</div><div class="ttdoc">Tuple container.</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:39</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_a6e63c1b15b2e5bc87a43771c09fa913a"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:17</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html">ostk::core::types::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:31</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_acf68f214a245e35a7c1994c84dc56746"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:17</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html">ostk::core::ctnr</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:19</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html_a7f01ca040222e5b0c02a90aa68cc8e88"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88">ostk::core::ctnr::Tuple</a></div><div class="ttdeci">std::tuple&lt; Args... &gt; Tuple</div><div class="ttdoc">Tuple container.</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:27</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

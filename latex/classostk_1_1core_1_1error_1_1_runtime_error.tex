@@ -20,9 +20,13 @@ Inheritance diagram for ostk\+::core\+::error\+::Runtime\+Error\+:\begin{figure}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_ab86f511d582bd8904b8314ae71025498}{Runtime\+Error}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+Message)
 \item 
-{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a9affbbaa722f639547f9c4d1c9f0a421}{Runtime\+Error}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
+{\footnotesize template$<$typename... Args$>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a9affbbaa722f639547f9c4d1c9f0a421}{Runtime\+Error}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}{$\sim$\+Runtime\+Error}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a40d4dae4c7626fb646970a0b4a6facc6}{get\+Message}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}{get\+Stack\+Trace}} () const
 \item 
 virtual const char $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}{what}} () const noexcept override
 \end{DoxyCompactItemize}
@@ -42,7 +46,7 @@ Runtime error class.
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!RuntimeError@{RuntimeError}}
 \index{RuntimeError@{RuntimeError}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
 \doxysubsubsection{\texorpdfstring{RuntimeError()}{RuntimeError()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
 ostk\+::core\+::error\+::\+Runtime\+Error\+::\+Runtime\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}\label{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}} 
@@ -54,6 +58,18 @@ ostk\+::core\+::error\+::\+Runtime\+Error\+::\+Runtime\+Error (\begin{DoxyParamC
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a40d4dae4c7626fb646970a0b4a6facc6}\label{classostk_1_1core_1_1error_1_1_runtime_error_a40d4dae4c7626fb646970a0b4a6facc6}} 
+\index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::error\+::\+Runtime\+Error\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}\label{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}} 
+\index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!getStackTrace@{getStackTrace}}
+\index{getStackTrace@{getStackTrace}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
+\doxysubsubsection{\texorpdfstring{getStackTrace()}{getStackTrace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::error\+::\+Runtime\+Error\+::get\+Stack\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}\label{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}} 
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!what@{what}}
 \index{what@{what}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}

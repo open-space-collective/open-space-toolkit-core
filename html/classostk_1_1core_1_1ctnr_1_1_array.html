@@ -662,7 +662,8 @@ template&lt;class T &gt; </div>
 
 <p>Get array of pointers to element based on condition. </p>
 <div class="fragment"><div class="line">Array&lt;Integer&gt; array = {0, 1, 2, 3, 4} ;</div>
-<div class="line">Array&lt;const Integer*&gt; elements = array.accessWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> anInteger.isEven() ; }) ; <span class="comment">// [&amp;0, &amp;2, &amp;4]</span></div>
+<div class="line">Array&lt;const Integer*&gt; elements = array.accessWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><span class="keywordflow">return</span> anInteger.isEven() ; }) ; <span class="comment">// [&amp;0, &amp;2, &amp;4]</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aPredicate</td><td>A predicate </td></tr>
@@ -932,7 +933,8 @@ template&lt;class T &gt; </div>
 
 <p>Get array of elements based on condition. </p>
 <div class="fragment"><div class="line">Array&lt;Integer&gt; array = {0, 1, 2, 3, 4} ;</div>
-<div class="line">Array&lt;const Integer*&gt; elements = array.accessWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> anInteger.isEven() ; }) ; <span class="comment">// [0, 2, 4]</span></div>
+<div class="line">Array&lt;Integer&gt; elements = array.getWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><span class="keywordflow">return</span> anInteger.isEven() ; }) ; <span class="comment">// [0, 2, 4]</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aPredicate</td><td>A predicate </td></tr>
@@ -1077,7 +1079,8 @@ template&lt;typename U &gt; </div>
 
 <p>Get mapped array. </p>
 <div class="fragment"><div class="line">Array&lt;String&gt; strings = { <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2&quot;</span>, <span class="stringliteral">&quot;3&quot;</span> } ;</div>
-<div class="line">Array&lt;Integer&gt; integers = strings.map&lt;Integer&gt;([] (<span class="keyword">const</span> String&amp; aString) -&gt; Integer { <span class="keywordflow">return</span> <a class="code" href="classostk_1_1core_1_1types_1_1_integer.html#aa2c633a4aa1d2fd969c067c5b45e28a8">Integer::Parse</a>(aString) ; }) ; <span class="comment">// [1, 2, 3]</span></div>
+<div class="line">Array&lt;Integer&gt; integers = strings.map&lt;Integer&gt;([] (<span class="keyword">const</span> String&amp; aString) -&gt; Integer {</div>
+<div class="line"><span class="keywordflow">return</span> <a class="code" href="classostk_1_1core_1_1types_1_1_integer.html#aa2c633a4aa1d2fd969c067c5b45e28a8">Integer::Parse</a>(aString) ; }) ; <span class="comment">// [1, 2, 3]</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aMappingFunction</td><td>A mapping function </td></tr>
@@ -1336,7 +1339,8 @@ template&lt;class T &gt; </div>
 
 <p>Remove elements based on condition. </p>
 <div class="fragment"><div class="line">Array&lt;Integer&gt; array = {1, 2, 3, 4, 5} ;</div>
-<div class="line">array.removeWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> anInteger.isEven() ; }) ; <span class="comment">// [1, 3, 5]</span></div>
+<div class="line">array.removeWhere([] (<span class="keyword">const</span> Integer&amp; anInteger) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> anInteger.isEven() ; }) ;</div>
+<div class="line"><span class="comment">// [1, 3, 5]</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aPredicate</td><td>A predicate </td></tr>
@@ -1428,10 +1432,10 @@ template&lt;class U &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_integer_html_aa2c633a4aa1d2fd969c067c5b45e28a8"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_integer.html#aa2c633a4aa1d2fd969c067c5b45e28a8">ostk::core::types::Integer::Parse</a></div><div class="ttdeci">static Integer Parse(char aCharacter)</div><div class="ttdef"><b>Definition:</b> Integer.cpp:1074</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_a6e63c1b15b2e5bc87a43771c09fa913a"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:28</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_integer_html_aa2c633a4aa1d2fd969c067c5b45e28a8"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_integer.html#aa2c633a4aa1d2fd969c067c5b45e28a8">ostk::core::types::Integer::Parse</a></div><div class="ttdeci">static Integer Parse(char aCharacter)</div><div class="ttdef"><b>Definition:</b> Integer.cpp:961</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_a6e63c1b15b2e5bc87a43771c09fa913a"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">ostk::core::types::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:17</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_array_html_a0d6dc521540ee128b43a66663c9f3dd8"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_array.html#a0d6dc521540ee128b43a66663c9f3dd8">ostk::core::ctnr::Array::Empty</a></div><div class="ttdeci">static Array&lt; T &gt; Empty()</div><div class="ttdoc">Constructs an empty array.</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_acf68f214a245e35a7c1994c84dc56746"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:28</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1types_html_acf68f214a245e35a7c1994c84dc56746"><div class="ttname"><a href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">ostk::core::types::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:17</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

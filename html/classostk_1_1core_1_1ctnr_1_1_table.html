@@ -257,7 +257,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aHeader</td><td>A column name array </td></tr>
@@ -339,8 +340,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add row. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line">table.addRow({ Cell::Integer(456), Cell::Real(456.789) }) ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; table.addRow({ Cell::Integer(456), Cell::Real(456.789) }) ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aRow</td><td>A row to add </td></tr>
@@ -386,8 +387,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear table. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line">table.clear() ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; table.clear() ;</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -456,8 +457,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get number of columns. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line">table.getColumnCount() ; <span class="comment">// 2</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; table.getColumnCount() ; <span class="comment">// 2</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Number of columns </dd></dl>
 
 </div>
@@ -505,8 +506,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get number of rows. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line">table.getRowCount() ; <span class="comment">// 1</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; table.getRowCount() ; <span class="comment">// 1</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Number of rows </dd></dl>
 
 </div>
@@ -600,7 +601,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a table from a file. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = <a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099">Table::Load</a>(<a class="code" href="classostk_1_1core_1_1fs_1_1_file.html#ad677c6a3edc1e88c18226edebff1da03">File::Path</a>(Path::Parse(<span class="stringliteral">&quot;/path/to/file.csv&quot;</span>)), <a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd">Table::Format::CSV</a>, <span class="keyword">true</span>) ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = <a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099">Table::Load</a>(<a class="code" href="classostk_1_1core_1_1fs_1_1_file.html#ad677c6a3edc1e88c18226edebff1da03">File::Path</a>(Path::Parse(<span class="stringliteral">&quot;/path/to/file.csv&quot;</span>)), <a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd">Table::Format::CSV</a>,</div>
+<div class="line"><span class="keyword">true</span>) ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aFile</td><td>A table file </td></tr>
@@ -668,8 +670,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function call operator (cell accessor) </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line"><span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">Cell</a>&amp; cell = table(0, 0) ; <span class="comment">// Cell::Integer(123)</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; <span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">Cell</a>&amp; cell = table(0, 0) ; <span class="comment">// Cell::Integer(123)</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aRowIndex</td><td>A row index </td></tr>
@@ -708,8 +710,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function call operator (cell accessor) </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line"><span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">Cell</a>&amp; cell = table(0, <span class="stringliteral">&quot;Column A&quot;</span>) ; <span class="comment">// Cell::Integer(123)</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; <span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">Cell</a>&amp; cell = table(0, <span class="stringliteral">&quot;Column A&quot;</span>) ; <span class="comment">// Cell::Integer(123)</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aRowIndex</td><td>A row index </td></tr>
@@ -793,8 +795,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Subscript operator (row accessor) </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } } } ;</div>
-<div class="line"><span class="keyword">const</span> Row&amp; row = table[0] ; <span class="comment">// { Cell::Integer(123), Cell::Real(123.456) }</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">Table</a> table = { { <span class="stringliteral">&quot;Column A&quot;</span>, <span class="stringliteral">&quot;Column B&quot;</span> }, { { Cell::Integer(123), Cell::Real(123.456) } }</div>
+<div class="line">} ; <span class="keyword">const</span> Row&amp; row = table[0] ; <span class="comment">// { Cell::Integer(123), Cell::Real(123.456) }</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aRowIndex</td><td>A row index </td></tr>
@@ -859,13 +861,13 @@ Friends</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a0bf37edce9a3680aad444469f813a099"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099">ostk::core::ctnr::Table::Load</a></div><div class="ttdeci">static Table Load(const File &amp;aFile, const Table::Format &amp;aFormat=Table::Format::Undefined, bool hasHeader=true)</div><div class="ttdoc">Constructs a table from a file.</div><div class="ttdef"><b>Definition:</b> Table.cpp:289</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a0bf37edce9a3680aad444469f813a099"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099">ostk::core::ctnr::Table::Load</a></div><div class="ttdeci">static Table Load(const File &amp;aFile, const Table::Format &amp;aFormat=Table::Format::Undefined, bool hasHeader=true)</div><div class="ttdoc">Constructs a table from a file.</div><div class="ttdef"><b>Definition:</b> Table.cpp:249</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd">ostk::core::ctnr::Table::Format::CSV</a></div><div class="ttdeci">@ CSV</div><div class="ttdoc">Comma-Separated Values format.</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_af7ec9c84859ac8809021556c1c26dd8b"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#af7ec9c84859ac8809021556c1c26dd8b">ostk::core::ctnr::Table::Empty</a></div><div class="ttdeci">static Table Empty()</div><div class="ttdoc">Constructs an empty table.</div><div class="ttdef"><b>Definition:</b> Table.cpp:284</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1fs_1_1_file_html_ad677c6a3edc1e88c18226edebff1da03"><div class="ttname"><a href="classostk_1_1core_1_1fs_1_1_file.html#ad677c6a3edc1e88c18226edebff1da03">ostk::core::fs::File::Path</a></div><div class="ttdeci">static File Path(const fs::Path &amp;aPath)</div><div class="ttdoc">Constructs a file from a given path.</div><div class="ttdef"><b>Definition:</b> File.cpp:603</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_1_1table_html_a697fb8eda17fde15703741a0c49036b9"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">ostk::core::ctnr::table::Cell</a></div><div class="ttdeci">ctnr::Object Cell</div><div class="ttdoc">Cell of table.</div><div class="ttdef"><b>Definition:</b> Cell.hpp:30</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a8e56fe6a310edb33ea1cbc69c2609ee0"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a8e56fe6a310edb33ea1cbc69c2609ee0">ostk::core::ctnr::Table::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdoc">Check if table is empty.</div><div class="ttdef"><b>Definition:</b> Table.cpp:211</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a1b799fa804faf23f9dd4905df90a5cd7"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">ostk::core::ctnr::Table::Table</a></div><div class="ttdeci">Table(const Array&lt; String &gt; &amp;aHeader, const Array&lt; Row &gt; &amp;aRowArray)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Table.cpp:28</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_af7ec9c84859ac8809021556c1c26dd8b"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#af7ec9c84859ac8809021556c1c26dd8b">ostk::core::ctnr::Table::Empty</a></div><div class="ttdeci">static Table Empty()</div><div class="ttdoc">Constructs an empty table.</div><div class="ttdef"><b>Definition:</b> Table.cpp:244</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1fs_1_1_file_html_ad677c6a3edc1e88c18226edebff1da03"><div class="ttname"><a href="classostk_1_1core_1_1fs_1_1_file.html#ad677c6a3edc1e88c18226edebff1da03">ostk::core::fs::File::Path</a></div><div class="ttdeci">static File Path(const fs::Path &amp;aPath)</div><div class="ttdoc">Constructs a file from a given path.</div><div class="ttdef"><b>Definition:</b> File.cpp:555</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_1_1table_html_a697fb8eda17fde15703741a0c49036b9"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr_1_1table.html#a697fb8eda17fde15703741a0c49036b9">ostk::core::ctnr::table::Cell</a></div><div class="ttdeci">ctnr::Object Cell</div><div class="ttdoc">Cell of table.</div><div class="ttdef"><b>Definition:</b> Cell.hpp:19</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a8e56fe6a310edb33ea1cbc69c2609ee0"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a8e56fe6a310edb33ea1cbc69c2609ee0">ostk::core::ctnr::Table::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdoc">Check if table is empty.</div><div class="ttdef"><b>Definition:</b> Table.cpp:177</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1ctnr_1_1_table_html_a1b799fa804faf23f9dd4905df90a5cd7"><div class="ttname"><a href="classostk_1_1core_1_1ctnr_1_1_table.html#a1b799fa804faf23f9dd4905df90a5cd7">ostk::core::ctnr::Table::Table</a></div><div class="ttdeci">Table(const Array&lt; String &gt; &amp;aHeader, const Array&lt; Row &gt; &amp;aRowArray)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Table.cpp:17</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

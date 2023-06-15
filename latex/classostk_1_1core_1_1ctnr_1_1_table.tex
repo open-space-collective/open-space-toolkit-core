@@ -123,7 +123,8 @@ Constructor.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ;}
 \end{DoxyCode}
 
 
@@ -185,8 +186,8 @@ Add row.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{table.addRow(\{ Cell::Integer(456), Cell::Real(456.789) \}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.addRow(\{ Cell::Integer(456), Cell::Real(456.789) \}) ;}
 \end{DoxyCode}
 
 
@@ -220,8 +221,8 @@ Clear table.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{table.clear() ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.clear() ;}
 \end{DoxyCode}
  \mbox{\Hypertarget{classostk_1_1core_1_1ctnr_1_1_table_af7ec9c84859ac8809021556c1c26dd8b}\label{classostk_1_1core_1_1ctnr_1_1_table_af7ec9c84859ac8809021556c1c26dd8b}} 
 \index{ostk::core::ctnr::Table@{ostk::core::ctnr::Table}!Empty@{Empty}}
@@ -267,8 +268,8 @@ Get number of columns.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{table.getColumnCount() ; \textcolor{comment}{// 2}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.getColumnCount() ; \textcolor{comment}{// 2}}
 \end{DoxyCode}
 
 
@@ -305,8 +306,8 @@ Get number of rows.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{table.getRowCount() ; \textcolor{comment}{// 1}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.getRowCount() ; \textcolor{comment}{// 1}}
 \end{DoxyCode}
 
 
@@ -362,7 +363,8 @@ Constructs a table from a file.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a0bf37edce9a3680aad444469f813a099}{Table::Load}}(\mbox{\hyperlink{classostk_1_1core_1_1fs_1_1_file_ad677c6a3edc1e88c18226edebff1da03}{File::Path}}(Path::Parse(\textcolor{stringliteral}{"/path/to/file.csv"})), \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd}{Table::Format::CSV}}, \textcolor{keyword}{true}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a0bf37edce9a3680aad444469f813a099}{Table::Load}}(\mbox{\hyperlink{classostk_1_1core_1_1fs_1_1_file_ad677c6a3edc1e88c18226edebff1da03}{File::Path}}(Path::Parse(\textcolor{stringliteral}{"/path/to/file.csv"})), \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_aacb867db63d74cac28a388029bf161d2acc8d68c551c4a9a6d5313e07de4deafd}{Table::Format::CSV}},}
+\DoxyCodeLine{\textcolor{keyword}{true}) ;}
 \end{DoxyCode}
 
 
@@ -414,8 +416,8 @@ Function call operator (cell accessor)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1ctnr_1_1table_a697fb8eda17fde15703741a0c49036b9}{Cell}}\& cell = table(0, 0) ; \textcolor{comment}{// Cell::Integer(123)}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1ctnr_1_1table_a697fb8eda17fde15703741a0c49036b9}{Cell}}\& cell = table(0, 0) ; \textcolor{comment}{// Cell::Integer(123)}}
 \end{DoxyCode}
 
 
@@ -441,8 +443,8 @@ Function call operator (cell accessor)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1ctnr_1_1table_a697fb8eda17fde15703741a0c49036b9}{Cell}}\& cell = table(0, \textcolor{stringliteral}{"Column A"}) ; \textcolor{comment}{// Cell::Integer(123)}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1ctnr_1_1table_a697fb8eda17fde15703741a0c49036b9}{Cell}}\& cell = table(0, \textcolor{stringliteral}{"Column A"}) ; \textcolor{comment}{// Cell::Integer(123)}}
 \end{DoxyCode}
 
 
@@ -510,8 +512,8 @@ Subscript operator (row accessor)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \} \} ;}
-\DoxyCodeLine{\textcolor{keyword}{const} Row\& row = table[0] ; \textcolor{comment}{// \{ Cell::Integer(123), Cell::Real(123.456) \}}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_table_a1b799fa804faf23f9dd4905df90a5cd7}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} Row\& row = table[0] ; \textcolor{comment}{// \{ Cell::Integer(123), Cell::Real(123.456) \}}}
 \end{DoxyCode}
 
 

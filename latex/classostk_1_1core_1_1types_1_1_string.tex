@@ -63,7 +63,7 @@ static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\h
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb3e7dae9340e7494ec875b6f65312d2}{Replicate}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String, \mbox{\hyperlink{namespaceostk_1_1core_1_1types_acf68f214a245e35a7c1994c84dc56746}{Size}} a\+Count)
 \item 
-{\footnotesize template$<$typename ... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{Format}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
+{\footnotesize template$<$typename... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{Format}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
 \begin{DoxyCompactList}\small\item\em Create formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -119,7 +119,7 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \index{ostk::core::types::String@{ostk::core::types::String}!Format@{Format}}
 \index{Format@{Format}!ostk::core::types::String@{ostk::core::types::String}}
 \doxysubsubsection{\texorpdfstring{Format()}{Format()}}
-{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
 static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::types\+::\+String\+::\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
@@ -129,7 +129,8 @@ Create formatted string.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{String::Format}}(\textcolor{stringliteral}{"\{0\}, \{1\}!"}, \textcolor{stringliteral}{"Hello"}, \textcolor{stringliteral}{"World"}) ; \textcolor{comment}{// "Hello, World!"}}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{String::Format}}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123 satellites!"}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{String::Format}}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123}}
+\DoxyCodeLine{satellites!\textcolor{stringliteral}{"}}
 \end{DoxyCode}
 
 

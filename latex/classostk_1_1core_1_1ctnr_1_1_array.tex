@@ -380,7 +380,8 @@ Get array of pointers to element based on condition.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
-\DoxyCodeLine{Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [\&0, \&2, \&4]}}
+\DoxyCodeLine{Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [\&0, \&2, \&4]}}
 \end{DoxyCode}
 
 
@@ -597,7 +598,8 @@ Get array of elements based on condition.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
-\DoxyCodeLine{Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [0, 2, 4]}}
+\DoxyCodeLine{Array<Integer> elements = array.getWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [0, 2, 4]}}
 \end{DoxyCode}
 
 
@@ -705,7 +707,8 @@ Get mapped array.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Array<String> strings = \{ \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"} \} ;}
-\DoxyCodeLine{Array<Integer> integers = strings.map<Integer>([] (\textcolor{keyword}{const} String\& aString) -\/> Integer \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_integer_aa2c633a4aa1d2fd969c067c5b45e28a8}{Integer::Parse}}(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}}
+\DoxyCodeLine{Array<Integer> integers = strings.map<Integer>([] (\textcolor{keyword}{const} String\& aString) -\/> Integer \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_integer_aa2c633a4aa1d2fd969c067c5b45e28a8}{Integer::Parse}}(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}}
 \end{DoxyCode}
 
 
@@ -892,7 +895,8 @@ Remove elements based on condition.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Array<Integer> array = \{1, 2, 3, 4, 5\} ;}
-\DoxyCodeLine{array.removeWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [1, 3, 5]}}
+\DoxyCodeLine{array.removeWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ;}
+\DoxyCodeLine{\textcolor{comment}{// [1, 3, 5]}}
 \end{DoxyCode}
 
 

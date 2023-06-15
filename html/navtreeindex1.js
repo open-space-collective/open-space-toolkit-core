@@ -209,8 +209,10 @@ var NAVTREEINDEX1 =
 "classostk_1_1core_1_1error_1_1_exception.html#ae34ebc20a97277da6e2472b6bb8e3812":[4,0,0,0,1,1,3],
 "classostk_1_1core_1_1error_1_1_exception.html#ae44d71ced961433d0b3325ff176e4974":[4,0,0,0,1,1,1],
 "classostk_1_1core_1_1error_1_1_runtime_error.html":[4,0,0,0,1,2],
+"classostk_1_1core_1_1error_1_1_runtime_error.html#a40d4dae4c7626fb646970a0b4a6facc6":[4,0,0,0,1,2,3],
 "classostk_1_1core_1_1error_1_1_runtime_error.html#a65b0f31efc6a6825703553b8383e1668":[4,0,0,0,1,2,2],
-"classostk_1_1core_1_1error_1_1_runtime_error.html#a671d71ab5483eaa1ce5cc3400747ded1":[4,0,0,0,1,2,3],
+"classostk_1_1core_1_1error_1_1_runtime_error.html#a671d71ab5483eaa1ce5cc3400747ded1":[4,0,0,0,1,2,5],
+"classostk_1_1core_1_1error_1_1_runtime_error.html#a747df8aef9222235e399d4b0b81ac5dd":[4,0,0,0,1,2,4],
 "classostk_1_1core_1_1error_1_1_runtime_error.html#a9affbbaa722f639547f9c4d1c9f0a421":[4,0,0,0,1,2,1],
 "classostk_1_1core_1_1error_1_1_runtime_error.html#ab86f511d582bd8904b8314ae71025498":[4,0,0,0,1,2,0],
 "classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented.html":[4,0,0,0,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classostk_1_1core_1_1fs_1_1_directory.html#adc130a2677b99fd23e1f816db521f857":[4,0,0,0,2,0,11],
 "classostk_1_1core_1_1fs_1_1_directory.html#adc893e10f55282be0d0455e9cfc5796b":[4,0,0,0,2,0,0],
 "classostk_1_1core_1_1fs_1_1_directory.html#ae71a158b5efa776be263679b2b69bd26":[4,0,0,0,2,0,20],
-"classostk_1_1core_1_1fs_1_1_directory.html#afe68c26e4ef0ce175220a02b14ee3932":[4,0,0,0,2,0,10],
-"classostk_1_1core_1_1fs_1_1_file.html":[4,0,0,0,2,1],
-"classostk_1_1core_1_1fs_1_1_file.html#a08ab15296e2baa61e7a023514cb46f31":[4,0,0,0,2,1,23]
+"classostk_1_1core_1_1fs_1_1_directory.html#afe68c26e4ef0ce175220a02b14ee3932":[4,0,0,0,2,0,10]
 };
