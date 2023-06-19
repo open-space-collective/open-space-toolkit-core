@@ -37,7 +37,7 @@ class Source
 
     virtual Source* clone() const;
 
-    Source& operator=(const Source& aSource) = default;
+    Source& operator=(const Source& aSource) = delete;
 
     void* accessLogger();
 

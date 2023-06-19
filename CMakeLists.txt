@@ -21,6 +21,7 @@ OPTION (BUILD_UNIT_TESTS "Build tests" ON)
 OPTION (BUILD_PYTHON_BINDINGS "Build Python bindings." ON)
 OPTION (BUILD_CODE_COVERAGE "Build code coverage" OFF)
 OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
+OPTION (BUILD_WITH_CLANG_COMPILER "Use Clang compiler." ON)
 
 ## Setup
 
@@ -97,6 +98,16 @@ IF (NOT DEFINED PROJECT_VERSION_STRING)
 ENDIF ()
 
 MESSAGE (STATUS "Version: ${PROJECT_VERSION_STRING}")
+
+## Clang
+
+if (BUILD_WITH_CLANG_COMPILER)
+    SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")
+    SET (CMAKE_C_COMPILER "/usr/bin/clang")
+ENDIF ()
+
+MESSAGE (STATUS "C compiler: ${CMAKE_C_COMPILER}")
+MESSAGE (STATUS "C++ compiler: ${CMAKE_CXX_COMPILER}")
 
 ## Project Configuration
 
