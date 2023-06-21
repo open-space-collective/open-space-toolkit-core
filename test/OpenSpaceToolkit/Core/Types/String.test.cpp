@@ -180,6 +180,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Split)
         EXPECT_EQ(Array<String>({"a","c"}), String("abc").split("b"));
         EXPECT_EQ(Array<String>({"a,b","","c","", ""}), String("a,b  c  ").split(" "));
         EXPECT_EQ(Array<String>({"ab","c"}), String("ab\nc").split("\n"));
+        EXPECT_EQ(Array<String>({"", "", "", ""}), String("abc").split("abcd"));
+        EXPECT_EQ(Array<String>({""}), String("").split("\n"));
+        EXPECT_EQ(Array<String>({"abc"}), String("abc").split(""));
     }
 }
 
