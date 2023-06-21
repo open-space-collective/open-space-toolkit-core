@@ -18,11 +18,19 @@ namespace ostk
 {
 namespace core
 {
+
+// Forward declare Array to avoid circular dependency
+namespace ctnr
+{
+    template <typename T> class Array;
+}
+
 namespace types
 {
 
 using ostk::core::types::Index;
 using ostk::core::types::Size;
+using ostk::core::ctnr::Array;
 
 /// @brief                      A sequence of characters
 /// @note                       The current implementation (derived for std::string) is temporary, as this type of
@@ -67,6 +75,13 @@ class String : public std::string
     String getTail(const Size& aLength) const;
 
     String getSubstring(const Index& aStartPosition, const Size& aLength) const;
+
+    /// @brief              Split the String into tokens separated by the given delimeter.
+    ///                     E.X. String("1yam2yamredyamblueyam").split("yam") -> ["1", "2", "red", "blue", ""]
+    ///
+    /// @return             Array of String tokens
+
+    Array<String> split(const String& aDelimiter) const;
 
     /// @brief              Removes whitespace from both ends
     ///
