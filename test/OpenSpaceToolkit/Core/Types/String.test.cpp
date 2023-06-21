@@ -1,9 +1,9 @@
 /// Apache License 2.0
 
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 
 #include <Global.test.hpp>
 
@@ -174,12 +174,12 @@ TEST(OpenSpaceToolkit_Core_Types_String, Split)
     using ostk::core::ctnr::Array;
 
     {
-        EXPECT_EQ(Array<String>({"a","b","c",""}), String("a,b,c,").split(","));
-        EXPECT_EQ(Array<String>({"","a","b","c"}), String(",a,b,c").split(","));
+        EXPECT_EQ(Array<String>({"a", "b", "c", ""}), String("a,b,c,").split(","));
+        EXPECT_EQ(Array<String>({"", "a", "b", "c"}), String(",a,b,c").split(","));
         EXPECT_EQ(Array<String>({"abc"}), String("abc").split(","));
-        EXPECT_EQ(Array<String>({"a","c"}), String("abc").split("b"));
-        EXPECT_EQ(Array<String>({"a,b","","c","", ""}), String("a,b  c  ").split(" "));
-        EXPECT_EQ(Array<String>({"ab","c"}), String("ab\nc").split("\n"));
+        EXPECT_EQ(Array<String>({"a", "c"}), String("abc").split("b"));
+        EXPECT_EQ(Array<String>({"a,b", "", "c", "", ""}), String("a,b  c  ").split(" "));
+        EXPECT_EQ(Array<String>({"ab", "c"}), String("ab\nc").split("\n"));
         EXPECT_EQ(Array<String>({"", "", "", ""}), String("abc").split("abcd"));
         EXPECT_EQ(Array<String>({""}), String("").split("\n"));
         EXPECT_EQ(Array<String>({"abc"}), String("abc").split(""));

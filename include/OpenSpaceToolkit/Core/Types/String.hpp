@@ -22,7 +22,8 @@ namespace core
 // Forward declare Array to avoid circular dependency
 namespace ctnr
 {
-    template <typename T> class Array;
+template <typename T>
+class Array;
 }
 
 namespace types

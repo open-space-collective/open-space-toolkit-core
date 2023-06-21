@@ -2,11 +2,10 @@
 
 #include <boost/algorithm/string.hpp>
 
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
-
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 
 namespace ostk
 {

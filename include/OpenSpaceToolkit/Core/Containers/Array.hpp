@@ -12,7 +12,6 @@
 #include <OpenSpaceToolkit/Core/Types/Size.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 
-
 namespace ostk
 {
 namespace core
