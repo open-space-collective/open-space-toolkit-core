@@ -77,7 +77,7 @@ class String : public std::string
     String getSubstring(const Index& aStartPosition, const Size& aLength) const;
 
     /// @brief              Split the String into tokens separated by the given delimeter.
-    ///                     E.X. String("1yam2yamredyamblueyam").split("yam") -> ["1", "2", "red", "blue", ""]
+    ///                     E.X. String("1sat2satredsatbluesat").split("sat") -> ["1", "2", "red", "blue", ""]
     ///
     /// @return             Array of String tokens
 
