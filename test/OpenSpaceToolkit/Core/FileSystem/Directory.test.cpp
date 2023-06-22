@@ -117,6 +117,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Exists)
     {
         EXPECT_ANY_THROW(Directory::Undefined().exists());
     }
+
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsEmpty)
