@@ -22,6 +22,7 @@ OPTION (BUILD_PYTHON_BINDINGS "Build Python bindings." ON)
 OPTION (BUILD_CODE_COVERAGE "Build code coverage" OFF)
 OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
 OPTION (BUILD_WITH_CLANG_COMPILER "Use Clang compiler." OFF)
+OPTION (BUILD_WITH_DEBUG_SYMBOLS "Build with debug symbols." ON)
 
 ## Setup
 
@@ -118,7 +119,7 @@ SET (CMAKE_CONFIGURATION_TYPES "Debug;Release;RelWithDebInfo" CACHE STRING "Limi
 IF (BUILD_CODE_COVERAGE)
     SET (CMAKE_BUILD_TYPE "Debug")
 ELSEIF (NOT CMAKE_BUILD_TYPE)
-    SET (CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING "Build type [None|Debug|Release|RelWithDebInfo|MinSizeRel]." FORCE)
+    SET (CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type [None|Debug|Release|RelWithDebInfo|MinSizeRel]." FORCE)
 ENDIF ()
 
 ## Flags
@@ -147,7 +148,11 @@ SET (CMAKE_CXX_STANDARD 17)
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 SET (CMAKE_CXX_EXTENSIONS OFF)
 
-## Debugging Options
+### Debug symbols
+
+SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+
+### Debugging Options
 
 SET (CMAKE_VERBOSE_MAKEFILE 0) # Use 1 for debugging, 0 for release
 
@@ -296,7 +301,6 @@ IF (BUILD_SHARED_LIBRARY)
                             SOVERSION ${PROJECT_VERSION_MAJOR}
                             OUTPUT_NAME ${SHARED_LIBRARY_NAME}
                             CLEAN_DIRECT_OUTPUT 1
-                            ENABLE_EXPORTS ON
                             INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
 
