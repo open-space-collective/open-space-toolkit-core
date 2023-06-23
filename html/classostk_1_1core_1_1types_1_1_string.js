@@ -15,5 +15,6 @@ var classostk_1_1core_1_1types_1_1_string =
     [ "match", "classostk_1_1core_1_1types_1_1_string.html#ac6fd01a3b12e86f08e61019799d8dc4d", null ],
     [ "replace", "classostk_1_1core_1_1types_1_1_string.html#a69b7f8a58ee5a55636b0dfd5d8b85e2c", null ],
     [ "replace", "classostk_1_1core_1_1types_1_1_string.html#ae5c391a85f0fb05c1c6c4c62e3ce1fcd", null ],
+    [ "split", "classostk_1_1core_1_1types_1_1_string.html#aee429f5f01efcf6d28af5b0a6dc0accd", null ],
     [ "trim", "classostk_1_1core_1_1types_1_1_string.html#a3fae6c7f00df2fb868949179fa20033e", null ]
 ];

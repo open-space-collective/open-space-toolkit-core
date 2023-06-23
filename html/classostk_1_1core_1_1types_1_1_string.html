@@ -129,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aac6bc1ec037565caf85886b2e4177446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d0043c1313395defb939d47a6717107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#a9d0043c1313395defb939d47a6717107">getSubstring</a> (const <a class="el" href="namespaceostk_1_1core_1_1types.html#a6e63c1b15b2e5bc87a43771c09fa913a">Index</a> &amp;aStartPosition, const <a class="el" href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">Size</a> &amp;aLength) const</td></tr>
 <tr class="separator:a9d0043c1313395defb939d47a6717107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee429f5f01efcf6d28af5b0a6dc0accd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classostk_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#aee429f5f01efcf6d28af5b0a6dc0accd">split</a> (const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;aDelimiter) const</td></tr>
+<tr class="memdesc:aee429f5f01efcf6d28af5b0a6dc0accd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split the <a class="el" href="classostk_1_1core_1_1types_1_1_string.html" title="A sequence of characters.">String</a> into tokens separated by the given delimeter. E.X. <a class="el" href="classostk_1_1core_1_1types_1_1_string.html" title="A sequence of characters.">String</a>("1sat2satredsatbluesat").split("sat") -&gt; ["1", "2", "red", "blue", ""].  <a href="classostk_1_1core_1_1types_1_1_string.html#aee429f5f01efcf6d28af5b0a6dc0accd">More...</a><br /></td></tr>
+<tr class="separator:aee429f5f01efcf6d28af5b0a6dc0accd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fae6c7f00df2fb868949179fa20033e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#a3fae6c7f00df2fb868949179fa20033e">trim</a> ()</td></tr>
 <tr class="memdesc:a3fae6c7f00df2fb868949179fa20033e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes whitespace from both ends.  <a href="classostk_1_1core_1_1types_1_1_string.html#a3fae6c7f00df2fb868949179fa20033e">More...</a><br /></td></tr>
 <tr class="separator:a3fae6c7f00df2fb868949179fa20033e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -683,6 +686,27 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="aee429f5f01efcf6d28af5b0a6dc0accd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee429f5f01efcf6d28af5b0a6dc0accd">&#9670;&nbsp;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classostk_1_1core_1_1ctnr_1_1_array.html">Array</a>&lt; <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &gt; ostk::core::types::String::split </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aDelimiter</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split the <a class="el" href="classostk_1_1core_1_1types_1_1_string.html" title="A sequence of characters.">String</a> into tokens separated by the given delimeter. E.X. <a class="el" href="classostk_1_1core_1_1types_1_1_string.html" title="A sequence of characters.">String</a>("1sat2satredsatbluesat").split("sat") -&gt; ["1", "2", "red", "blue", ""]. </p>
+<dl class="section return"><dt>Returns</dt><dd>Array of <a class="el" href="classostk_1_1core_1_1types_1_1_string.html" title="A sequence of characters.">String</a> tokens </dd></dl>
+
+</div>
+</div>
 <a id="a3fae6c7f00df2fb868949179fa20033e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3fae6c7f00df2fb868949179fa20033e">&#9670;&nbsp;</a></span>trim()</h2>
 
@@ -709,8 +733,8 @@ template&lt;typename... Args&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_a0f8e66f16108a449b1256c252c48ed3b"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#a0f8e66f16108a449b1256c252c48ed3b">ostk::core::types::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:18</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_afb00429ca478a722cd38904f52aa6f26"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">ostk::core::types::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:116</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_a0f8e66f16108a449b1256c252c48ed3b"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#a0f8e66f16108a449b1256c252c48ed3b">ostk::core::types::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:19</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_afb00429ca478a722cd38904f52aa6f26"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">ostk::core::types::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:132</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

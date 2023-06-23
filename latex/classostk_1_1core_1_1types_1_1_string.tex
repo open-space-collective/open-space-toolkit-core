@@ -44,6 +44,8 @@ char \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_a9e2d1e808250b0987fa
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_a9d0043c1313395defb939d47a6717107}{get\+Substring}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1types_a6e63c1b15b2e5bc87a43771c09fa913a}{Index}} \&a\+Start\+Position, const \mbox{\hyperlink{namespaceostk_1_1core_1_1types_acf68f214a245e35a7c1994c84dc56746}{Size}} \&a\+Length) const
 \item 
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_aee429f5f01efcf6d28af5b0a6dc0accd}{split}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+Delimiter) const
+\begin{DoxyCompactList}\small\item\em Split the \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} into tokens separated by the given delimeter. E.\+X. \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}}(\char`\"{}1sat2satredsatbluesat\char`\"{}).split(\char`\"{}sat\char`\"{}) -\/$>$ \mbox{[}\char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}red\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}\char`\"{}\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \& \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_a3fae6c7f00df2fb868949179fa20033e}{trim}} ()
 \begin{DoxyCompactList}\small\item\em Removes whitespace from both ends. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \& \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_a69b7f8a58ee5a55636b0dfd5d8b85e2c}{replace}} (const char a\+Character, const char a\+New\+Character)
@@ -274,6 +276,19 @@ Reference to string
 \doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::types\+::\+String\+::\+Replicate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String,  }\item[{\mbox{\hyperlink{namespaceostk_1_1core_1_1types_acf68f214a245e35a7c1994c84dc56746}{Size}}}]{a\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_aee429f5f01efcf6d28af5b0a6dc0accd}\label{classostk_1_1core_1_1types_1_1_string_aee429f5f01efcf6d28af5b0a6dc0accd}} 
+\index{ostk::core::types::String@{ostk::core::types::String}!split@{split}}
+\index{split@{split}!ostk::core::types::String@{ostk::core::types::String}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$ ostk\+::core\+::types\+::\+String\+::split (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+Delimiter }\end{DoxyParamCaption}) const}
+
+
+
+Split the \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} into tokens separated by the given delimeter. E.\+X. \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}}(\char`\"{}1sat2satredsatbluesat\char`\"{}).split(\char`\"{}sat\char`\"{}) -\/$>$ \mbox{[}\char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}red\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}\char`\"{}\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+Array of \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} tokens 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_a3fae6c7f00df2fb868949179fa20033e}\label{classostk_1_1core_1_1types_1_1_string_a3fae6c7f00df2fb868949179fa20033e}} 
 \index{ostk::core::types::String@{ostk::core::types::String}!trim@{trim}}
 \index{trim@{trim}!ostk::core::types::String@{ostk::core::types::String}}

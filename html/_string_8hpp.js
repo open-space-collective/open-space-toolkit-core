@@ -1,5 +1,6 @@
 var _string_8hpp =
 [
+    [ "Array", "classostk_1_1core_1_1ctnr_1_1_array.html", "classostk_1_1core_1_1ctnr_1_1_array" ],
     [ "String", "classostk_1_1core_1_1types_1_1_string.html", "classostk_1_1core_1_1types_1_1_string" ],
     [ "HasToString", "classostk_1_1core_1_1types_1_1_has_to_string.html", "classostk_1_1core_1_1types_1_1_has_to_string" ],
     [ "FMT_HEADER_ONLY", "_string_8hpp.html#a27b3249db8d77bd236109bda307bc263", null ],
