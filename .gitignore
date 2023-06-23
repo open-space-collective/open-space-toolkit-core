@@ -33,7 +33,6 @@ build/
 *.so*
 *.a
 *.exe*
-*.rpm*
 packages/
 coverage/
 
