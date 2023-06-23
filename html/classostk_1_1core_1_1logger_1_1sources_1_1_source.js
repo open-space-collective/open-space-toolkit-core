@@ -5,6 +5,6 @@ var classostk_1_1core_1_1logger_1_1sources_1_1_source =
     [ "~Source", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#a7b5d8956adcc78e593806111fc4e81f4", null ],
     [ "accessLogger", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#a2101c2fe9538ed093808309eba594513", null ],
     [ "clone", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#acab589eb280846091323d9b7d3157fc4", null ],
-    [ "operator=", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#a17c7f7ee66390536117fc77c997172be", null ],
+    [ "operator=", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#a2ad69abccc32a43e33db19b2cbb3a807", null ],
     [ "Pump", "classostk_1_1core_1_1logger_1_1sources_1_1_source.html#a64fbdb62a5c5f27e0d022da36aab93d9", null ]
 ];
