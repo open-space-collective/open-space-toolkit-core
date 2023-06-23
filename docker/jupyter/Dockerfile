@@ -9,8 +9,7 @@ LABEL maintainer="lucas@loftorbital.com"
 USER root
 
 # Install extensions
-
-RUN jupyter labextension install jupyterlab-plotly
+RUN pip install "jupyterlab>=3" "ipywidgets>=7.6"
 
 COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension
 
