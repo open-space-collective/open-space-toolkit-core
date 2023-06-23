@@ -2,6 +2,7 @@
 
 #include <boost/algorithm/string.hpp>
 
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
@@ -141,6 +142,13 @@ String String::getSubstring(const Index& aStartPosition, const Size& aLength) co
     }
 
     return this->substr(aStartPosition, aLength);
+}
+
+Array<String> String::split(const String& aDelimiter) const
+{
+    Array<String> result;
+    boost::split(result, *this, boost::is_any_of(aDelimiter));
+    return result;
 }
 
 String& String::trim()
