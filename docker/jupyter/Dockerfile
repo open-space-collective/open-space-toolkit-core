@@ -1,28 +1,40 @@
 # Apache License 2.0
 
-ARG JUPYTER_NOTEBOOK_IMAGE_REPOSITORY="jupyter/scipy-notebook:latest"
+ARG JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=jupyter/scipy-notebook:x86_64-python-3.11.3
 
 FROM ${JUPYTER_NOTEBOOK_IMAGE_REPOSITORY}
 
 LABEL maintainer="lucas@loftorbital.com"
 
+ENV JUPYTER_ENABLE_LAB yes
+
+# Set user to root
+
 USER root
 
-# Install extensions
+# Install Python utilities
 
-RUN pip install "plotly" "numpy" "ipywidgets>=7.6"
+RUN apt-get update \
+ && apt-get install -y curl \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --quiet "numpy" "pandas" "plotly" "ipywidgets>=7.6" "ipympl>=0.9.0"
 
 RUN jupyter labextension install --no-build \
         @jupyterlab/shortcuts-extension
 
 COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension
 
-RUN chown -R ${NB_UID}:${NB_UID} /home/jovyan/.jupyter
+RUN chown -R ${NB_UID}:${NB_GID} /home/jovyan
+
+# Install Open Space Toolkit
+
+RUN pip install open-space-toolkit-core
+
+# Restore user
 
 USER ${NB_UID}
 
-ENV JUPYTER_ENABLE_LAB="yes"
-ENV LD_LIBRARY_PATH="/usr/local/lib:/usr/lib/x86_64-linux-gnu:/opt/conda/lib/python3.8/site-packages:/home/jovyan/lib:/opt/conda/lib"
-ENV PYTHONPATH="/opt/conda/lib/python3.8/site-packages:/home/jovyan/lib"
+# Disable token
 
-RUN pip install open-space-toolkit-core
+CMD ["start-notebook.sh", "--NotebookApp.token=''"]
