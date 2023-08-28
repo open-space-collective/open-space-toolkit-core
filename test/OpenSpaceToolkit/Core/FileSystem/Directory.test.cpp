@@ -360,7 +360,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
             }
         );
 
-        const Array<String> referenceSubDirectoryNames = {"cmake", "development"};
+        const Array<String> referenceSubDirectoryNames = {"cmake"};
 
         EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames);
     }
