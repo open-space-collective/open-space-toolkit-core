@@ -19,8 +19,6 @@ jupyter_python_version := 3.11
 
 project_name_camel_case := $(shell echo $(project_name) | sed -r 's/(^|-)([a-z])/\U\2/g')
 
-clang_format_sources_path ?= $(shell find ~+ src/ include/ test/ bindings/python/src/ -name '*.cpp' -o -name '*.cxx' -o -name '*.hpp' -o -name '*.tpp')
-
 pull: ## Pull all images
 
 	@ echo "Pulling images..."
@@ -51,7 +49,7 @@ pull-release-images: ## Pull release images
 
 .PHONY: pull-release-images
 
-pull-release-image-cpp:
+pull-release-image-cpp: ## Pull release image cpp
 
 	@ echo "Pull C++ release image..."
 
@@ -60,7 +58,7 @@ pull-release-image-cpp:
 
 .PHONY: pull-release-image-cpp
 
-pull-release-image-python:
+pull-release-image-python: ## Pull release image python
 
 	@ echo "Pulling Python release image..."
 
@@ -69,7 +67,7 @@ pull-release-image-python:
 
 .PHONY: pull-release-image-python
 
-pull-release-image-jupyter:
+pull-release-image-jupyter: ## Pull release image jupyter
 
 	@ echo "Pulling Jupyter Notebook release image..."
 
@@ -116,7 +114,7 @@ build-release-images: ## Build release images
 
 .PHONY: build-release-images
 
-build-release-image-cpp: build-development-image pull-release-image-cpp
+build-release-image-cpp: build-development-image pull-release-image-cpp ## Build release image cpp
 
 	@ echo "Building C++ release image..."
 
@@ -130,7 +128,7 @@ build-release-image-cpp: build-development-image pull-release-image-cpp
 
 .PHONY: build-release-image-cpp
 
-build-release-image-python: build-development-image pull-release-image-python
+build-release-image-python: build-development-image pull-release-image-python ## Build release image python
 
 	@ echo "Building Python release image..."
 
@@ -144,7 +142,7 @@ build-release-image-python: build-development-image pull-release-image-python
 
 .PHONY: build-release-image-python
 
-build-release-image-jupyter: pull-release-image-jupyter
+build-release-image-jupyter: pull-release-image-jupyter ## Build release image jupyter
 
 	@ echo "Building Jupyter Notebook release image..."
 
@@ -161,6 +159,8 @@ build-documentation: build-development-image ## Build documentation
 
 	@ $(MAKE) build-documentation-standalone
 
+.PHONY: build-documentation
+
 build-documentation-standalone: ## Build documentation (standalone)
 
 	@ echo "Building documentation..."
@@ -174,7 +174,7 @@ build-documentation-standalone: ## Build documentation (standalone)
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_DOCUMENTATION=ON .. \
 		&& $(MAKE) docs"
 
-.PHONY: build-documentation
+.PHONY: build-documentation-standalone
 
 build-packages: ## Build packages
 
@@ -188,6 +188,8 @@ build-packages: ## Build packages
 build-packages-cpp: build-development-image ## Build C++ packages
 
 	@ $(MAKE) build-packages-cpp-standalone
+
+.PHONY: build-packages-cpp
 
 build-packages-cpp-standalone: ## Build C++ packages (standalone)
 
@@ -204,11 +206,13 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-.PHONY: build-packages-cpp
+.PHONY: build-packages-cpp-standalone
 
 build-packages-python: build-development-image ## Build Python packages
 
 	@ $(MAKE) build-packages-python-standalone
+
+.PHONY: build-packages-python
 
 build-packages-python-standalone: ## Build Python packages (standalone)
 
@@ -225,9 +229,9 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
-.PHONY: build-packages-python
+.PHONY: build-packages-python-standalone
 
-start-development: build-development-image ## Start development environment
+start-development dev: build-development-image ## Start development environment
 
 	@ echo "Starting development environment..."
 
@@ -236,12 +240,11 @@ start-development: build-development-image ## Start development environment
 		--rm \
 		--privileged \
 		--volume="$(CURDIR):/app:delegated" \
-		--volume="$(CURDIR)/tools/development/helpers:/app/build/helpers:ro,delegated" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash
 
-.PHONY: start-development
+.PHONY: start-development dev
 
 start-python: build-release-image-python ## Start Python runtime environment
 
@@ -254,7 +257,7 @@ start-python: build-release-image-python ## Start Python runtime environment
 
 .PHONY: start-python
 
-start-jupyter-notebook: build-release-image-jupyter ## Starting Jupyter Notebook environment
+start-jupyter-notebook: build-release-image-jupyter ## Start Jupyter Notebook environment
 
 	@ echo "Starting Jupyter Notebook environment..."
 
@@ -263,13 +266,14 @@ start-jupyter-notebook: build-release-image-jupyter ## Starting Jupyter Notebook
 		--rm \
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs" \
+		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		bash -c "start-notebook.sh --ServerApp.token=''"
 
 .PHONY: start-jupyter-notebook
 
-debug-jupyter-notebook: build-release-image-jupyter
+debug-jupyter-notebook: build-release-image-jupyter ## Debug jupyter notebook using the ostk-astro package built from current source code, must have run make start-development and ostk-build and ostk-install-python to use this
 
 	@ echo "Debugging Jupyter Notebook environment..."
 
@@ -339,23 +343,22 @@ format-cpp: build-development-image ## Format all of the source code with the ru
 
 	docker run \
 		--rm \
+		--user="$(shell id -u):$(shell id -g)" \
 		--volume="$(CURDIR):/app" \
 		--workdir=/app \
-		--user="$(shell id -u):$(shell id -g)" \
 		$(docker_development_image_repository):$(docker_image_version) \
-		clang-format -i -style=file:thirdparty/clang/.clang-format ${clang_format_sources_path}
+		ostk-format-cpp
 
-.PHONY: format
+.PHONY: format-cpp
 
 format-python: build-development-image ## Run the black format tool against python code
 
 	docker run \
 		--rm \
-		--privileged \
-		--volume="$(CURDIR):/app:delegated" \
+		--volume="$(CURDIR):/app" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "python3.11 -m black --line-length=90 bindings/python/"
+		ostk-format-python
 
 .PHONY: format-python
 
@@ -369,28 +372,39 @@ format-check: ## Run format checking
 .PHONY: format-check
 
 format-check-cpp: build-development-image ## Run the clang-format tool to check the code against rules and formatting
-
-	docker run \
-		--rm \
-		--volume="$(CURDIR):/app" \
-		--workdir=/app \
-		--user="$(shell id -u):$(shell id -g)" \
-		"$(docker_development_image_repository):$(docker_image_version)" \
-		clang-format -Werror --dry-run -style=file:thirdparty/clang/.clang-format ${clang_format_sources_path}
+	
+	@ $(MAKE) format-check-cpp-standalone
 
 .PHONY: format-check-cpp
 
-format-check-python: build-development-image ## Run the black format tool against python code
+format-check-cpp-standalone:
 
 	docker run \
 		--rm \
-		--privileged \
+		--volume="$(CURDIR):/app:delegated" \
+		--workdir=/app \
+		--user="$(shell id -u):$(shell id -g)" \
+		$(docker_development_image_repository):$(docker_image_version) \
+		ostk-check-format-cpp
+
+.PHONY: format-check-cpp-standalone
+
+format-check-python: build-development-image ## Run the black format tool against python code
+
+	@ $(MAKE) format-check-python-standalone
+
+.PHONY: format-check-python
+
+format-check-python-standalone:
+
+	docker run \
+		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "python3.11 -m black --line-length=90 --check --diff bindings/python/"
+		ostk-check-format-python
 
-.PHONY: format-check-python
+.PHONY: format-check-python-standalone
 
 test: ## Run tests
 
@@ -414,6 +428,9 @@ test-unit-cpp: build-development-image ## Run C++ unit tests
 
 	@ $(MAKE) test-unit-cpp-standalone
 
+.PHONY: test-unit-cpp
+
+
 test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 
 	@ echo "Running C++ unit tests..."
@@ -421,15 +438,16 @@ test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
-		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_UNIT_TESTS=ON .. \
-		&& $(MAKE) -j $(nproc) \
+		&& $(MAKE) -j 4 \
 		&& $(MAKE) test"
 
-test-unit-python: build-development-image ## Run Python unit tests
+.PHONY: test-unit-cpp-standalone
+
+test-unit-python: build-release-image-python ## Run Python unit tests
 
 	@ $(MAKE) test-unit-python-standalone
 
@@ -440,7 +458,6 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
-		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
 		--entrypoint="" \
@@ -450,13 +467,15 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		&& cd /usr/local/lib/python3.11/site-packages/ostk/$(project_name)/ \
 		&& python3.11 -m pytest -sv ."
 
-.PHONY: test-unit-python
+.PHONY: test-unit-python-standalone
 
 test-coverage: ## Run test coverage cpp
 
 	@ echo "Running coverage tests..."
 
 	@ $(MAKE) test-coverage-cpp
+
+.PHONY: test-coverage
 
 test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
@@ -469,18 +488,17 @@ test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
-		--volume="$(CURDIR)/share/OpenSpaceToolkit:/usr/local/share/OpenSpaceToolkit:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
-		&& $(MAKE) -j $(nproc) \
+		&& $(MAKE) -j 4 \
 		&& $(MAKE) coverage \
 		&& (rm -rf /app/coverage || true) \
 		&& mkdir /app/coverage \
 		&& mv /app/build/coverage* /app/coverage"
 
-.PHONY: test-coverage-cpp
+.PHONY: test-coverage-cpp-standalone
 
 clean: ## Clean
 
