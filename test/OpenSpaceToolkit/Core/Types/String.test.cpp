@@ -310,3 +310,14 @@ TEST(OpenSpaceToolkit_Core_Types_String, Format)
         );
     }
 }
+
+TEST(OpenSpaceToolkit_Core_Types_String, SanitizeUTF8)
+{
+    using ostk::core::types::String;
+
+    {
+        const String invalid = "okdata\xa0\xa1morevalid";
+        const String valid = String::SanitizeUTF8(invalid);
+        EXPECT_EQ("okdatamorevalid", valid);
+    }
+}

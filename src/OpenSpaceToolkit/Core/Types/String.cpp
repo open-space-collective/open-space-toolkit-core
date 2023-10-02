@@ -208,6 +208,84 @@ String String::Replicate(const String& aString, Size aCount)
     return stringStream.str();
 }
 
+bool String::IsValidUTF8(const String& string)
+{
+    const Size stringLength = string.getLength();
+
+    for (Size i = 0; i < stringLength; i++)
+    {
+        Integer c = (unsigned char)string[i];
+
+        Size n;
+    
+        if (0x00 <= c && c <= 0x7f)
+        {
+            n = 0;  // 0bbbbbbb
+        }
+        else if ((c & 0xE0) == 0xC0)
+        {
+            n = 1;  // 110bbbbb
+        }
+        else if (c == 0xed && i < (stringLength - 1) && ((unsigned char)string[i + 1] & 0xa0) == 0xa0)
+        {
+            return false;  // U+d800 to U+dfff
+        }
+        else if ((c & 0xF0) == 0xE0)
+        {
+            n = 2;  // 1110bbbb
+        }
+        else if ((c & 0xF8) == 0xF0)
+        {
+            n = 3;  // 11110bbb
+        }
+        else
+        {
+            return false;
+        }
+        for (Size j = 0; j < n && i < stringLength; j++)
+        {
+            if ((++i == stringLength) || (((unsigned char)string[i] & 0xC0) != 0x80))
+            {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+String String::SanitizeUTF8(const String& string)
+{
+    String result;
+
+    for (Size i = 0; i < string.getLength();)
+    {
+        Size len = 1;
+        bool valid = true;
+
+        unsigned char c = static_cast<unsigned char>(string[i]);
+        if (c >= 0xF0)
+            len = 4;
+        else if (c >= 0xE0)
+            len = 3;
+        else if (c >= 0xC0)
+            len = 2;
+
+        if (i + len > string.size())
+            break;
+
+        const String sub = string.getSubstring(i, len);
+        if (!IsValidUTF8(sub))
+            valid = false;
+
+        if (valid)
+            result += sub;
+
+        i += len;
+    }
+    return result;
+}
+
 }  // namespace types
 }  // namespace core
 }  // namespace ostk
