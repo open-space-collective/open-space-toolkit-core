@@ -116,6 +116,20 @@ class String : public std::string
 
     static String Replicate(const String& aString, Size aCount);
 
+    /// @brief              Checks if the string contains any invalid UTF-8 characters
+    ///
+    /// @param              [in] aString A string
+    /// @return             True if valid UTF-8 string
+
+    static bool IsValidUTF8(const String& aString);
+
+    /// @brief              Sanitizes the string by removing any invalid UTF-8 characters
+    ///
+    /// @param              [in] aString A string
+    /// @return             valid UTF-8 string
+
+    static String SanitizeUTF8(const String& aString);
+
     /// @brief              Create formatted string
     ///
     /// @code

@@ -39,7 +39,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, InitializerListConstructor)
                    {"Integer", Object::Integer(456)},
                    {"Real", Object::Real(456.789)}},
                   Object::Array({Object::Integer(123), Object::Integer(456), Object::Integer(789)})}
-             )}};
+             )}
+        };
 
         EXPECT_FALSE(dictionary.isEmpty());
 
@@ -101,7 +102,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, CopyConstructor)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary(firstDictionary);
 
@@ -127,7 +129,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, AssignmentOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary = firstDictionary;
 
@@ -153,7 +156,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_TRUE(firstDictionary == firstDictionary);
     }
@@ -164,14 +168,16 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary = {
             {"Undefined", Object::Undefined()},
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_TRUE(firstDictionary == secondDictionary);
     }
@@ -182,14 +188,16 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary = {
             {"Undefined", Object::Undefined()},
             {"Boolean", Object::Boolean(false)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_FALSE(firstDictionary == secondDictionary);
     }
@@ -206,7 +214,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_FALSE(firstDictionary != firstDictionary);
     }
@@ -217,14 +226,16 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary = {
             {"Undefined", Object::Undefined()},
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_FALSE(firstDictionary != secondDictionary);
     }
@@ -235,14 +246,16 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         const Dictionary secondDictionary = {
             {"Undefined", Object::Undefined()},
             {"Boolean", Object::Boolean(false)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_TRUE(firstDictionary != secondDictionary);
     }
@@ -264,9 +277,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, KeySubscriptOperator)
               {"Integer", Object::Integer(456)},
               {"Real", Object::Real(456.789)},
               {"Dictionary",
-               {{"Boolean", Object::Boolean(true)},
-                {"Integer", Object::Integer(789)},
-                {"Real", Object::Real(789.123)}}}}}};
+               {{"Boolean", Object::Boolean(true)}, {"Integer", Object::Integer(789)}, {"Real", Object::Real(789.123)}}}
+             }}
+        };
 
         EXPECT_EQ(true, dictionary["Boolean"].getBoolean());
         EXPECT_EQ(123, dictionary["Integer"].getInteger());
@@ -293,7 +306,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Iterators)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         uint idx = 0;
 
@@ -342,7 +356,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Iterators)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         {
             uint idx = 0;
@@ -500,7 +515,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, GetSize)
                    {"Integer", Object::Integer(456)},
                    {"Real", Object::Real(456.789)}},
                   Object::Array({Object::Integer(123), Object::Integer(456), Object::Integer(789)})}
-             )}};
+             )}
+        };
 
         EXPECT_EQ(Size(7), dictionary.getSize());
     }

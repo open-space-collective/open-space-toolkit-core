@@ -21,7 +21,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, InitializerListConstructor)
             {"Boolean", Object::Boolean(true)},
             {"Integer", Object::Integer(123)},
             {"Real", Object::Real(123.456)},
-            {"String", Object::String("Hello World!")}};
+            {"String", Object::String("Hello World!")}
+        };
 
         EXPECT_TRUE(object.isDefined());
         EXPECT_TRUE(object.isDictionary());

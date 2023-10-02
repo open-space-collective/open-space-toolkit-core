@@ -17,7 +17,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Constructor)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         EXPECT_NO_THROW(Table table(header, rows););
     }
@@ -33,7 +34,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Constructor)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         EXPECT_ANY_THROW(Table table(header, rows););
     }
@@ -52,7 +54,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, CopyConstructor)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -76,7 +79,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, CopyAssignmentOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -100,7 +104,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -112,7 +117,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header, rows};
         const Table table_B = {header, rows};
@@ -125,13 +131,15 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
         const Array<Row> rows_A = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header_A, rows_A};
 
         const Array<String> header_B = {"Column A", "Column B"};
         const Array<Row> rows_B = {
-            {Object::Integer(123), Object::Real(123.456)}, {Object::String("Hello"), Object::Undefined()}};
+            {Object::Integer(123), Object::Real(123.456)}, {Object::String("Hello"), Object::Undefined()}
+        };
 
         const Table table_B = {header_B, rows_B};
 
@@ -143,7 +151,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
         const Array<Row> rows_A = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header_A, rows_A};
 
@@ -151,7 +160,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
         const Array<Row> rows_B = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_B = {header_B, rows_B};
 
@@ -172,7 +182,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -184,7 +195,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header, rows};
         const Table table_B = {header, rows};
@@ -197,13 +209,15 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
         const Array<Row> rows_A = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header_A, rows_A};
 
         const Array<String> header_B = {"Column A", "Column B"};
         const Array<Row> rows_B = {
-            {Object::Integer(123), Object::Real(123.456)}, {Object::String("Hello"), Object::Undefined()}};
+            {Object::Integer(123), Object::Real(123.456)}, {Object::String("Hello"), Object::Undefined()}
+        };
 
         const Table table_B = {header_B, rows_B};
 
@@ -215,7 +229,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
         const Array<Row> rows_A = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_A = {header_A, rows_A};
 
@@ -223,7 +238,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
         const Array<Row> rows_B = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table_B = {header_B, rows_B};
 
@@ -244,7 +260,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, SubscriptOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -297,7 +314,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, FunctionCallOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -320,7 +338,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, FunctionCallOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -352,7 +371,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, StreamOperator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -378,7 +398,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Iterator)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -425,7 +446,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, IsEmpty)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -458,7 +480,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, HasColumnWithName)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -501,7 +524,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetRowCount)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -526,7 +550,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetColumnCount)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -551,7 +576,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetIndexOfColumnWithName)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         const Table table = {header, rows};
 
@@ -618,7 +644,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Clear)
         const Array<Row> rows = {
             {Object::Integer(123), Object::Real(123.456)},
             {Object::String("Hello"), Object::Undefined()},
-            {Object::String("World!")}};
+            {Object::String("World!")}
+        };
 
         Table table = {header, rows};
 
@@ -664,7 +691,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
              Object::String("!"),
              Object::String("Hello,"),
              Object::String("Wo\"\"rld")},
-            {Object::Integer(1), Object::Undefined(), Object::Integer(3), Object::Undefined(), Object::Integer(5)}};
+            {Object::Integer(1), Object::Undefined(), Object::Integer(3), Object::Undefined(), Object::Integer(5)}
+        };
 
         const Table referenceTable = {header, rows};
 
@@ -683,7 +711,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
             "Obstruction",
             "Current Condition",
             "Worst Condition",
-            "Total Duration (sec)"};
+            "Total Duration (sec)"
+        };
         const Array<Row> rows = {
             {Object::String("1 Jan 2018 00:00:00.000"),
              Object::String("1 Jan 2018 04:15:48.956"),
@@ -691,7 +720,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
              Object::String("Earth"),
              Object::String("Umbra"),
              Object::String("Umbra"),
-             Object::Real(15492.990)}};
+             Object::Real(15492.990)}
+        };
 
         const Table referenceTable = {header, rows};
 

@@ -2,79 +2,78 @@
 
 #include <OpenSpaceToolkit/Core/Logger.hpp>
 
-
 class TestClass
 {
+   public:
+    TestClass();
 
-    public:
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const TestClass& aTestClass);
 
-                                TestClass                                   ( ) ;
+   private:
+    int integer_;
+    double double_;
+};
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   TestClass&                  aTestClass                          ) ;
-
-    private:
-
-        int integer_ ;
-        double double_ ;
-
-} ;
-
-
-                                TestClass::TestClass                        ( )
-                                :   integer_(123),
-                                    double_(456.789)
+TestClass::TestClass()
+    : integer_(123),
+      double_(456.789)
 {
-
 }
 
-std::ostream&                   operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   TestClass&                  aTestClass                          )
+std::ostream& operator<<(std::ostream& anOutputStream, const TestClass& aTestClass)
 {
+    anOutputStream << "Class ▸ " << aTestClass.integer_ << " " << aTestClass.double_;
 
-    anOutputStream << "Class ▸ " << aTestClass.integer_ << " " << aTestClass.double_ ;
-
-    return anOutputStream ;
-
+    return anOutputStream;
 }
 
-
-int                             main                                        ( )
+int main()
 {
+    LOG_SCOPE("Test");
 
-    LOG_SCOPE("Test") ;
+    using ostk::core::types::Integer;
+    using ostk::core::Logger;
+    using ostk::core::logger::Severity;
 
-    using ostk::core::types::Integer ;
-    using ostk::core::Logger ;
-    using ostk::core::logger::Severity ;
+    Logger logger = Logger::Console(Severity::Info);
 
-    Logger logger = Logger::Console(Severity::Info) ;
+    logger << 1;
+    logger << 123.456;
+    logger << 'a';
+    logger << "Hello World!";
+    logger << "Hello"
+           << " "
+           << "World!";
+    logger << TestClass();
 
-    logger << 1 ;
-    logger << 123.456 ;
-    logger << 'a' ;
-    logger << "Hello World!" ;
-    logger << "Hello" << " " << "World!" ;
-    logger << TestClass() ;
+    LOG_TRACE(logger) << TestClass() << " !!!";
+    LOG_DEBUG(logger) << TestClass() << " !!!";
+    LOG_INFO(logger) << TestClass() << " !!!";
+    LOG_WARNING(logger) << TestClass() << " !!!";
+    LOG_ERROR(logger) << TestClass() << " !!!";
 
-    LOG_TRACE(logger) << TestClass() << " !!!" ;
-    LOG_DEBUG(logger) << TestClass() << " !!!" ;
-    LOG_INFO(logger) << TestClass() << " !!!" ;
-    LOG_WARNING(logger) << TestClass() << " !!!" ;
-    LOG_ERROR(logger) << TestClass() << " !!!" ;
+    GLOBAL_LOG_TRACE << "Hello "
+                     << " "
+                     << "World!";
+    GLOBAL_LOG_DEBUG << "Hello "
+                     << " "
+                     << "World!";
+    GLOBAL_LOG_INFO << "Hello "
+                    << " "
+                    << "World!";
+    GLOBAL_LOG_WARNING << "Hello "
+                       << " "
+                       << "World!";
+    GLOBAL_LOG_ERROR << "Hello "
+                     << " "
+                     << "World!";
+    GLOBAL_LOG_FATAL << "Hello "
+                     << " "
+                     << "World!";
 
-    GLOBAL_LOG_TRACE << "Hello " << " " << "World!" ;
-    GLOBAL_LOG_DEBUG << "Hello " << " " << "World!" ;
-    GLOBAL_LOG_INFO << "Hello " << " " << "World!" ;
-    GLOBAL_LOG_WARNING << "Hello " << " " << "World!" ;
-    GLOBAL_LOG_ERROR << "Hello " << " " << "World!" ;
-    GLOBAL_LOG_FATAL << "Hello " << " " << "World!" ;
-
-    Integer a = 6 ;
+    Integer a = 6;
 
     if (a < 5)
     {
-
     }
-
 }

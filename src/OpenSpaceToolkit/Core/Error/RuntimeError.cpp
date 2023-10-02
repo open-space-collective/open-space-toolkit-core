@@ -1,5 +1,4 @@
 /// Apache License 2.0
-
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
 
 namespace ostk
@@ -12,19 +11,19 @@ namespace error
 RuntimeError::RuntimeError(const String& aMessage)
     : Exception(String::Empty()),
       message_(aMessage),
-      stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace())),
-      what_(stackTrace_ + message_)
+      stackTrace_(String::SanitizeUTF8(boost::stacktrace::to_string(boost::stacktrace::stacktrace()))),
+      what_(aMessage + "\n" + stackTrace_)
 {
 }
 
 String RuntimeError::getMessage() const
 {
-    return message_.data();
+    return message_;
 }
 
 String RuntimeError::getStackTrace() const
 {
-    return stackTrace_.data();
+    return stackTrace_;
 }
 
 RuntimeError::~RuntimeError() {}
