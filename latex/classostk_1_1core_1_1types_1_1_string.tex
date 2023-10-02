@@ -65,6 +65,10 @@ static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\h
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb3e7dae9340e7494ec875b6f65312d2}{Replicate}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String, \mbox{\hyperlink{namespaceostk_1_1core_1_1types_acf68f214a245e35a7c1994c84dc56746}{Size}} a\+Count)
 \item 
+static bool \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_abfb54be98ea0f3d004e3d799a613566e}{Is\+Valid\+U\+T\+F8}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Checks if the string contains any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_a66d6d16e774352c7e6d461228660492d}{Sanitize\+U\+T\+F8}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Sanitizes the string by removing any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string_afb00429ca478a722cd38904f52aa6f26}{Format}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
 \begin{DoxyCompactList}\small\item\em Create formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -200,6 +204,24 @@ Formatted string
 \doxysubsubsection{\texorpdfstring{isUppercase()}{isUppercase()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::types\+::\+String\+::is\+Uppercase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_abfb54be98ea0f3d004e3d799a613566e}\label{classostk_1_1core_1_1types_1_1_string_abfb54be98ea0f3d004e3d799a613566e}} 
+\index{ostk::core::types::String@{ostk::core::types::String}!IsValidUTF8@{IsValidUTF8}}
+\index{IsValidUTF8@{IsValidUTF8}!ostk::core::types::String@{ostk::core::types::String}}
+\doxysubsubsection{\texorpdfstring{IsValidUTF8()}{IsValidUTF8()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::types\+::\+String\+::\+Is\+Valid\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if the string contains any invalid U\+T\+F-\/8 characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if valid U\+T\+F-\/8 string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_ac6fd01a3b12e86f08e61019799d8dc4d}\label{classostk_1_1core_1_1types_1_1_string_ac6fd01a3b12e86f08e61019799d8dc4d}} 
 \index{ostk::core::types::String@{ostk::core::types::String}!match@{match}}
 \index{match@{match}!ostk::core::types::String@{ostk::core::types::String}}
@@ -276,6 +298,24 @@ Reference to string
 \doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::types\+::\+String\+::\+Replicate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String,  }\item[{\mbox{\hyperlink{namespaceostk_1_1core_1_1types_acf68f214a245e35a7c1994c84dc56746}{Size}}}]{a\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_a66d6d16e774352c7e6d461228660492d}\label{classostk_1_1core_1_1types_1_1_string_a66d6d16e774352c7e6d461228660492d}} 
+\index{ostk::core::types::String@{ostk::core::types::String}!SanitizeUTF8@{SanitizeUTF8}}
+\index{SanitizeUTF8@{SanitizeUTF8}!ostk::core::types::String@{ostk::core::types::String}}
+\doxysubsubsection{\texorpdfstring{SanitizeUTF8()}{SanitizeUTF8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::types\+::\+String\+::\+Sanitize\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sanitizes the string by removing any invalid U\+T\+F-\/8 characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valid U\+T\+F-\/8 string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1types_1_1_string_aee429f5f01efcf6d28af5b0a6dc0accd}\label{classostk_1_1core_1_1types_1_1_string_aee429f5f01efcf6d28af5b0a6dc0accd}} 
 \index{ostk::core::types::String@{ostk::core::types::String}!split@{split}}
 \index{split@{split}!ostk::core::types::String@{ostk::core::types::String}}

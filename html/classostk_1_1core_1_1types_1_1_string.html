@@ -154,6 +154,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ace870e534ddbdfc01a56b849f7520c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb3e7dae9340e7494ec875b6f65312d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#afb3e7dae9340e7494ec875b6f65312d2">Replicate</a> (const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;aString, <a class="el" href="namespaceostk_1_1core_1_1types.html#acf68f214a245e35a7c1994c84dc56746">Size</a> aCount)</td></tr>
 <tr class="separator:afb3e7dae9340e7494ec875b6f65312d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb54be98ea0f3d004e3d799a613566e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#abfb54be98ea0f3d004e3d799a613566e">IsValidUTF8</a> (const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;aString)</td></tr>
+<tr class="memdesc:abfb54be98ea0f3d004e3d799a613566e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string contains any invalid UTF-8 characters.  <a href="classostk_1_1core_1_1types_1_1_string.html#abfb54be98ea0f3d004e3d799a613566e">More...</a><br /></td></tr>
+<tr class="separator:abfb54be98ea0f3d004e3d799a613566e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d6d16e774352c7e6d461228660492d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#a66d6d16e774352c7e6d461228660492d">SanitizeUTF8</a> (const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;aString)</td></tr>
+<tr class="memdesc:a66d6d16e774352c7e6d461228660492d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitizes the string by removing any invalid UTF-8 characters.  <a href="classostk_1_1core_1_1types_1_1_string.html#a66d6d16e774352c7e6d461228660492d">More...</a><br /></td></tr>
+<tr class="separator:a66d6d16e774352c7e6d461228660492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb00429ca478a722cd38904f52aa6f26"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:afb00429ca478a722cd38904f52aa6f26"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">Format</a> (const char *aFormat, Args... anArgumentList)</td></tr>
 <tr class="memdesc:afb00429ca478a722cd38904f52aa6f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create formatted string.  <a href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">More...</a><br /></td></tr>
@@ -510,6 +516,41 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="abfb54be98ea0f3d004e3d799a613566e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb54be98ea0f3d004e3d799a613566e">&#9670;&nbsp;</a></span>IsValidUTF8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ostk::core::types::String::IsValidUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the string contains any invalid UTF-8 characters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aString</td><td>A string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if valid UTF-8 string </dd></dl>
+
+</div>
+</div>
 <a id="ac6fd01a3b12e86f08e61019799d8dc4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6fd01a3b12e86f08e61019799d8dc4d">&#9670;&nbsp;</a></span>match()</h2>
 
@@ -686,6 +727,41 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="a66d6d16e774352c7e6d461228660492d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d6d16e774352c7e6d461228660492d">&#9670;&nbsp;</a></span>SanitizeUTF8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> ostk::core::types::String::SanitizeUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classostk_1_1core_1_1types_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>aString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sanitizes the string by removing any invalid UTF-8 characters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aString</td><td>A string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>valid UTF-8 string </dd></dl>
+
+</div>
+</div>
 <a id="aee429f5f01efcf6d28af5b0a6dc0accd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee429f5f01efcf6d28af5b0a6dc0accd">&#9670;&nbsp;</a></span>split()</h2>
 
@@ -734,7 +810,7 @@ template&lt;typename... Args&gt; </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_a0f8e66f16108a449b1256c252c48ed3b"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#a0f8e66f16108a449b1256c252c48ed3b">ostk::core::types::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:19</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_afb00429ca478a722cd38904f52aa6f26"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">ostk::core::types::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:132</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1types_1_1_string_html_afb00429ca478a722cd38904f52aa6f26"><div class="ttname"><a href="classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26">ostk::core::types::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:146</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
