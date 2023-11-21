@@ -7,8 +7,8 @@
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, EqualToOperator)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_TRUE(File::Path(Path::Parse("/")) == File::Path(Path::Parse("/")));
@@ -30,8 +30,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, EqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, NotEqualToOperator)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")) != File::Path(Path::Parse("/path/to/file/")));
@@ -53,8 +53,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, NotEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, StreamOperator)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         const File file = File::Path(Path::Parse("/path/to/file"));
@@ -69,8 +69,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, StreamOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, FileStreamOperator)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/tmp/file.txt"));
@@ -96,8 +96,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, FileStreamOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, IsDefined)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_TRUE(File::Path(Path::Parse("/")).isDefined());
@@ -112,8 +112,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, IsDefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Exists)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_TRUE(File::Path(Path::Parse("/")).exists());
@@ -133,8 +133,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Exists)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, IsOpen)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/app/CMakeLists.txt"));
@@ -158,8 +158,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, IsOpen)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetName)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     // With extension
 
@@ -188,8 +188,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetName)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetExtension)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_TRUE(File::Path(Path::Parse("/")).exists());
@@ -209,8 +209,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetExtension)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPath)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         const Path path = Path::Parse("/path/to/file");
@@ -225,9 +225,9 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPath)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPermissions)
 {
-    using ostk::core::filesystem::PermissionSet;
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::PermissionSet;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         const Path path = Path::Parse("/app/build");
@@ -260,9 +260,9 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPermissions)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetParentDirectory)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
-    using ostk::core::filesystem::Directory;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
+    using ostk::core::fs::Directory;
 
     {
         EXPECT_EQ(
@@ -280,8 +280,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetParentDirectory)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, ToString)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("CMakeLists.txt")).toString());
@@ -296,8 +296,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, ToString)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Open)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/app/CMakeLists.txt"));
@@ -319,8 +319,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Open)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Close)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/app/CMakeLists.txt"));
@@ -346,8 +346,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Close)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/tmp/file.txt"));
@@ -374,8 +374,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
 // TEST (OpenSpaceToolkit_Core_FileSystem_File, RenameTo)
 // {
 
-//     using ostk::core::filesystem::Path ;
-//     using ostk::core::filesystem::File ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::File ;
 
 //     {
 
@@ -388,8 +388,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
 // TEST (OpenSpaceToolkit_Core_FileSystem_File, CopyToDirectory)
 // {
 
-//     using ostk::core::filesystem::Path ;
-//     using ostk::core::filesystem::File ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::File ;
 
 //     {
 
@@ -401,9 +401,9 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, MoveToDirectory)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
-    using ostk::core::filesystem::Directory;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
+    using ostk::core::fs::Directory;
 
     {
         File file = File::Path(Path::Parse("/tmp/file"));
@@ -438,8 +438,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, MoveToDirectory)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Create)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/tmp/file"));
@@ -463,8 +463,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Create)
 // TEST (OpenSpaceToolkit_Core_FileSystem_File, Clear)
 // {
 
-//     using ostk::core::filesystem::Path ;
-//     using ostk::core::filesystem::File ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::File ;
 
 //     {
 
@@ -476,8 +476,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Create)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Remove)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         File file = File::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-file-remove"));
@@ -500,8 +500,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Remove)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Undefined)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         EXPECT_NO_THROW(File::Undefined());
@@ -511,8 +511,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Undefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Path)
 {
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         const Path path = Path::Parse("/path/to/file");

@@ -9,7 +9,7 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 /// @brief                      Permissions control the ability of the users to view, change, navigate, and execute the
@@ -261,7 +261,7 @@ class PermissionSet
     bool execute_;
 };
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk
 

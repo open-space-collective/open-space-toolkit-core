@@ -11,7 +11,7 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 class Path::Impl
@@ -295,6 +295,6 @@ Path::Path()
 {
 }
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk

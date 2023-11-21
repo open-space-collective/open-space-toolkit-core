@@ -24,7 +24,7 @@ using ostk::core::types::String;
 using ostk::core::ctnr::Array;
 using ostk::core::ctnr::table::Row;
 using ostk::core::ctnr::table::Cell;
-using ostk::core::filesystem::File;
+using ostk::core::fs::File;
 
 /// @brief                      Table container
 

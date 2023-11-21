@@ -13,7 +13,7 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 namespace ctnr = ostk::core::ctnr;
@@ -159,7 +159,7 @@ class Directory
     ///
     /// @return             Directory path
 
-    filesystem::Path getPath() const;
+    fs::Path getPath() const;
 
     /// @brief              Get directory permissions
     ///
@@ -170,7 +170,7 @@ class Directory
     ///
     /// @return             Directory permissions
 
-    filesystem::PermissionSet getPermissions() const;
+    fs::PermissionSet getPermissions() const;
 
     /// @brief              Get directory's parent directory
     ///
@@ -194,7 +194,7 @@ class Directory
     ///
     /// @return             Array of files in directory
 
-    ctnr::Array<filesystem::File> getFiles() const;
+    ctnr::Array<fs::File> getFiles() const;
 
     /// @brief              Get directories in directory
     ///
@@ -270,9 +270,9 @@ class Directory
     /// @param              [in] (optional) anOtherPermissionSet An other permission set
 
     void create(
-        const filesystem::PermissionSet& anOwnerPermissionSet = filesystem::PermissionSet::RWX(),
-        const filesystem::PermissionSet& aGroupPermissionSet = filesystem::PermissionSet::RX(),
-        const filesystem::PermissionSet& anOtherPermissionSet = filesystem::PermissionSet::RX()
+        const fs::PermissionSet& anOwnerPermissionSet = fs::PermissionSet::RWX(),
+        const fs::PermissionSet& aGroupPermissionSet = fs::PermissionSet::RX(),
+        const fs::PermissionSet& anOtherPermissionSet = fs::PermissionSet::RX()
     );
 
     /// @brief              Delete directory
@@ -317,15 +317,15 @@ class Directory
     /// @param              [in] aPath Path to directory
     /// @return             Directory
 
-    static Directory Path(const filesystem::Path& aPath);
+    static Directory Path(const fs::Path& aPath);
 
    private:
-    filesystem::Path path_;
+    fs::Path path_;
 
-    Directory(const filesystem::Path& aPath);
+    Directory(const fs::Path& aPath);
 };
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk
 
