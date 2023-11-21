@@ -6,7 +6,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::module& aModule)
 {
     using namespace pybind11;
 
-    using ostk::core::fs::File;
+    using ostk::core::filesystem::File;
 
     class_<File>(aModule, "File")
 
@@ -17,8 +17,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::module& aModule)
         .def(self == self)
         .def(self != self)
 
-        // .def("__str__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
-        // .def("__repr__", +[] (const ostk::core::fs::File& aFile) -> str { return aFile.toString() ; })
+        // .def("__str__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
         .def("__str__", &(shiftToString<File>))
         .def("__repr__", &(shiftToString<File>))
 

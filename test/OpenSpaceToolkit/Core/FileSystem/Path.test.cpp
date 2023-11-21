@@ -6,7 +6,7 @@
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, CopyConstructor)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         const Path path = Path::Parse("/abc/def.ghi");
@@ -19,7 +19,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, CopyConstructor)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, AssignmentOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         const Path path = Path::Parse("/abc/def.ghi");
@@ -32,7 +32,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, AssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, EqualToOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Path::Parse("/") == Path::Parse("/"));
@@ -54,7 +54,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, EqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, NotEqualToOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Path::Parse("/path/to/file") != Path::Parse("/path/to/file/"));
@@ -76,7 +76,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, NotEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         const Path firstPath = Path::Parse("/abc/def");
@@ -117,7 +117,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionAssignmentOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         Path firstPath = Path::Parse("/abc/def");
@@ -166,7 +166,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, StreamOperator)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         const Path path = Path::Parse("/abc/def.ghi");
@@ -181,7 +181,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, StreamOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsDefined)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Path::Parse("/").isDefined());
@@ -198,7 +198,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsDefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsAbsolute)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Path::Parse("/").isAbsolute());
@@ -232,7 +232,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsAbsolute)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsRelative)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Path::Parse("./").isRelative());
@@ -266,7 +266,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsRelative)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetParentPath)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/abc").getParentPath());
@@ -285,7 +285,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetParentPath)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetLastElement)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ("/", Path::Parse("/").getLastElement());
@@ -317,7 +317,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetLastElement)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getNormalizedPath());
@@ -339,7 +339,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetAbsolutePath)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getAbsolutePath());
@@ -393,7 +393,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetAbsolutePath)
 // TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetRelativePathTo)
 // {
 
-//     using ostk::core::fs::Path ;
+//     using ostk::core::filesystem::Path ;
 
 //     {
 
@@ -405,7 +405,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetAbsolutePath)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, ToString)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ("/", Path::Parse("/").toString());
@@ -422,7 +422,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, ToString)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, Undefined)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Path::Undefined());
@@ -432,7 +432,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Undefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, Root)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Path::Root());
@@ -443,7 +443,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Root)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, Current)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Path::Current());
@@ -453,7 +453,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Current)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, Parse)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Path::Parse("/"));
@@ -469,7 +469,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Parse)
 // TEST (OpenSpaceToolkit_Core_FileSystem_Path, Strings)
 // {
 
-//     using ostk::core::fs::Path ;
+//     using ostk::core::filesystem::Path ;
 
 //     {
 

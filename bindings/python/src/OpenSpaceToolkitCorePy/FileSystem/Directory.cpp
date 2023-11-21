@@ -6,7 +6,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::module& aModul
 {
     using namespace pybind11;
 
-    using ostk::core::fs::Directory;
+    using ostk::core::filesystem::Directory;
 
     class_<Directory>(aModule, "Directory")
 
@@ -17,8 +17,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::module& aModul
         .def(self == self)
         .def(self != self)
 
-        // .def("__str__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
-        // .def("__repr__", +[] (const ostk::core::fs::Directory& aDirectory) -> str { return aDirectory.toString() ; })
+        // .def("__str__", +[] (const ostk::core::filesystem::Directory& aDirectory) -> str { return aDirectory.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::filesystem::Directory& aDirectory) -> str { return aDirectory.toString() ; })
         .def("__str__", &(shiftToString<Directory>))
         .def("__repr__", &(shiftToString<Directory>))
 

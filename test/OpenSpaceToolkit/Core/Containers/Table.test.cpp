@@ -674,8 +674,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
     using ostk::core::ctnr::Object;
     using ostk::core::ctnr::Table;
     using ostk::core::ctnr::table::Row;
-    using ostk::core::fs::Path;
-    using ostk::core::fs::File;
+    using ostk::core::filesystem::Path;
+    using ostk::core::filesystem::File;
 
     {
         const Array<String> header = {"A", "B", "C", "D", "E", "F"};
