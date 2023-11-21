@@ -2,14 +2,39 @@
 
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
+using namespace pybind11;
+
+using ostk::core::types::Integer;
+using ostk::core::types::Real;
+using ostk::core::types::String;
+
+// Custom type caster for Real
+namespace pybind11
+{
+namespace detail
+{
+template <>
+struct type_caster<Real>
+{
+   public:
+    PYBIND11_TYPE_CASTER(Real, _("Real"));
+
+    bool load(handle src, bool convert)
+    {
+        value = Real(pybind11::cast<double>(src));
+        return true;
+    }
+
+    static handle cast(const Real& src, return_value_policy /* policy */, handle /* parent */)
+    {
+        return pybind11::cast((double)src).release();
+    }
+};
+}  // namespace detail
+}  // namespace pybind11
+
 inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
 {
-    using namespace pybind11;
-
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-
     class_<Real>(aModule, "Real")
 
         // Define init method using pybind11 "init" convenience method
@@ -101,6 +126,27 @@ inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
         .def_static("integer", &Real::Integer)
         .def_static("can_parse", &Real::CanParse)
         .def_static("parse", &Real::Parse)
+
+        .def(pickle(
+            [](const Real& aReal) -> double
+            {  // dump
+                return aReal;
+            },
+            [](double t)
+            {  // load
+                return Real(t);
+            }
+        ))
+
+        .def(
+            "__reduce__",
+            [](const Real& aReal)
+            {
+                auto py_json_module = module_::import("json");
+                auto py_json_dumps = py_json_module.attr("dumps");
+                return make_tuple(py_json_dumps, make_tuple(double(aReal)));
+            }
+        )
 
         ;
 

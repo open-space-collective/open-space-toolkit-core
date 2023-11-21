@@ -8,7 +8,7 @@ namespace ostk
 {
 namespace core
 {
-namespace fs
+namespace filesystem
 {
 
 PermissionSet::PermissionSet(const bool canRead, const bool canWrite, const bool canExecute)
@@ -140,6 +140,6 @@ PermissionSet PermissionSet::RWX()
     return {true, true, true};
 }
 
-}  // namespace fs
+}  // namespace filesystem
 }  // namespace core
 }  // namespace ostk

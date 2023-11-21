@@ -15,7 +15,7 @@ namespace ostk
 {
 namespace core
 {
-namespace fs
+namespace filesystem
 {
 
 class Directory;
@@ -189,7 +189,7 @@ class File
     ///
     /// @return             File path
 
-    fs::Path getPath() const;
+    filesystem::Path getPath() const;
 
     /// @brief              Get file permissions
     ///
@@ -200,7 +200,7 @@ class File
     ///
     /// @return             File permissions
 
-    fs::PermissionSet getPermissions() const;
+    filesystem::PermissionSet getPermissions() const;
 
     /// @brief              Get file's parent directory
     ///
@@ -211,7 +211,7 @@ class File
     ///
     /// @return             File's parent directory
 
-    fs::Directory getParentDirectory() const;
+    filesystem::Directory getParentDirectory() const;
 
     /// @brief              Get file contents
     ///
@@ -268,7 +268,7 @@ class File
     /// @param              [in] (optional) aNewFileName A copied file name
     /// @return             Copied file
 
-    File copyToDirectory(const fs::Directory& aDestination, const String& aNewFileName = "") const;
+    File copyToDirectory(const filesystem::Directory& aDestination, const String& aNewFileName = "") const;
 
     /// @brief              Move file to directory
     ///
@@ -280,7 +280,7 @@ class File
     ///
     /// @param              [in] aDestination A destination directory
 
-    void moveToDirectory(const fs::Directory& aDestination);
+    void moveToDirectory(const filesystem::Directory& aDestination);
 
     /// @brief              Create empty file
     ///
@@ -296,9 +296,9 @@ class File
     /// @param              [in] (optional) anOtherPermissionSet An other permission set
 
     void create(
-        const fs::PermissionSet& anOwnerPermissionSet = fs::PermissionSet::RW(),
-        const fs::PermissionSet& aGroupPermissionSet = fs::PermissionSet::R(),
-        const fs::PermissionSet& anOtherPermissionSet = fs::PermissionSet::R()
+        const filesystem::PermissionSet& anOwnerPermissionSet = filesystem::PermissionSet::RW(),
+        const filesystem::PermissionSet& aGroupPermissionSet = filesystem::PermissionSet::R(),
+        const filesystem::PermissionSet& anOtherPermissionSet = filesystem::PermissionSet::R()
     );
 
     /// @brief              Clear file contents
@@ -344,17 +344,17 @@ class File
     /// @param              [in] aPath Path to file
     /// @return             File
 
-    static File Path(const fs::Path& aPath);
+    static File Path(const filesystem::Path& aPath);
 
    private:
-    fs::Path path_;
+    filesystem::Path path_;
 
     Unique<std::fstream> fileStreamUPtr_;
 
-    File(const fs::Path& aPath);
+    File(const filesystem::Path& aPath);
 };
 
-}  // namespace fs
+}  // namespace filesystem
 }  // namespace core
 }  // namespace ostk
 

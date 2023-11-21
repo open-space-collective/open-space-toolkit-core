@@ -22,7 +22,7 @@ namespace core
 namespace ctnr
 {
 
-namespace fs = ostk::core::fs;
+namespace filesystem = ostk::core::filesystem;
 
 using ostk::core::types::Unique;
 
@@ -126,9 +126,9 @@ class Object
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject);
 
-    friend fs::File& operator<<(fs::File& aFile, const Object& anObject);
+    friend filesystem::File& operator<<(filesystem::File& aFile, const Object& anObject);
 
-    friend fs::File& operator>>(fs::File& aFile, Object& anObject);
+    friend filesystem::File& operator>>(filesystem::File& aFile, Object& anObject);
 
     bool isDefined() const;
     bool isBoolean() const;
@@ -180,7 +180,7 @@ class Object
 
     static Object Parse(const types::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
 
-    static Object Load(const fs::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
 
     static types::String StringFromType(const Object::Type& aType);
 

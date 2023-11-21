@@ -456,7 +456,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject)
     return anOutputStream;
 }
 
-fs::File& operator<<(fs::File& aFile, const Object& anObject)
+filesystem::File& operator<<(filesystem::File& aFile, const Object& anObject)
 {
     // [TBM] This should be improved, supporting format manipulators and iterative string generation
 
@@ -465,7 +465,7 @@ fs::File& operator<<(fs::File& aFile, const Object& anObject)
     return aFile;
 }
 
-fs::File& operator>>(fs::File& aFile, Object& anObject)
+filesystem::File& operator>>(filesystem::File& aFile, Object& anObject)
 {
     // [TBM] This should be improved, supporting format manipulators
 
@@ -1048,7 +1048,7 @@ Object Object::ParseYaml(const types::String& aString)
     }
 }
 
-Object Object::Load(const fs::File& aFile, const Object::Format& aFormat)
+Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat)
 {
     LOG_SCOPE("Object", "Load");
 
