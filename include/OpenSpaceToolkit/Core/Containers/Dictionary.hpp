@@ -17,7 +17,7 @@ namespace core
 namespace ctnr
 {
 
-namespace fs = ostk::core::fs;
+namespace filesystem = ostk::core::filesystem;
 
 using ostk::core::types::Size;
 using ostk::core::types::String;

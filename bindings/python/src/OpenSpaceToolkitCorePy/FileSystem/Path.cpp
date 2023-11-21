@@ -6,7 +6,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::module& aModule)
 {
     using namespace pybind11;
 
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     class_<Path>(aModule, "Path")
 
@@ -20,8 +20,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::module& aModule)
         .def(self + self)
         .def(self += self)
 
-        // .def("__str__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
-        // .def("__repr__", +[] (const ostk::core::fs::Path& aPath) -> str { return aPath.toString() ; })
+        // .def("__str__", +[] (const ostk::core::filesystem::Path& aPath) -> str { return aPath.toString() ; })
+        // .def("__repr__", +[] (const ostk::core::filesystem::Path& aPath) -> str { return aPath.toString() ; })
         .def("__str__", &(shiftToString<Path>))
         .def("__repr__", &(shiftToString<Path>))
 
