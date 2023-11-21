@@ -10,7 +10,7 @@ namespace ostk
 {
 namespace core
 {
-namespace fs
+namespace filesystem
 {
 
 bool Directory::operator==(const Directory& aDirectory) const
@@ -157,7 +157,7 @@ String Directory::getName() const
     return String::Empty();
 }
 
-fs::Path Directory::getPath() const
+filesystem::Path Directory::getPath() const
 {
     if (!this->isDefined())
     {
@@ -167,7 +167,7 @@ fs::Path Directory::getPath() const
     return path_;
 }
 
-// fs::PermissionSet               Directory::getPermissions                   ( ) const
+// filesystem::PermissionSet               Directory::getPermissions                   ( ) const
 // {
 //     return File::Path(path_).getPermissions() ;
 // }
@@ -177,7 +177,7 @@ Directory Directory::getParentDirectory() const
     return File::Path(path_).getParentDirectory();
 }
 
-// ctnr::Array<fs::File>           Directory::getFiles                         ( ) const
+// ctnr::Array<filesystem::File>           Directory::getFiles                         ( ) const
 // {
 
 // }
@@ -249,9 +249,9 @@ String Directory::toString() const
 // }
 
 void Directory::create(
-    const fs::PermissionSet& anOwnerPermissionSet,
-    const fs::PermissionSet& aGroupPermissionSet,
-    const fs::PermissionSet& anOtherPermissionSet
+    const filesystem::PermissionSet& anOwnerPermissionSet,
+    const filesystem::PermissionSet& aGroupPermissionSet,
+    const filesystem::PermissionSet& anOtherPermissionSet
 )
 {
     if (this->exists())
@@ -314,7 +314,7 @@ Directory Directory::Root()
     return {Path::Parse("/")};
 }
 
-Directory Directory::Path(const fs::Path& aPath)
+Directory Directory::Path(const filesystem::Path& aPath)
 {
     if (!aPath.isDefined())
     {
@@ -324,11 +324,11 @@ Directory Directory::Path(const fs::Path& aPath)
     return {aPath};
 }
 
-Directory::Directory(const fs::Path& aPath)
+Directory::Directory(const filesystem::Path& aPath)
     : path_(aPath)
 {
 }
 
-}  // namespace fs
+}  // namespace filesystem
 }  // namespace core
 }  // namespace ostk
