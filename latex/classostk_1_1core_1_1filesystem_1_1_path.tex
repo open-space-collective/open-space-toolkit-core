@@ -1,0 +1,549 @@
+\hypertarget{classostk_1_1core_1_1filesystem_1_1_path}{}\doxysection{ostk\+::core\+::filesystem\+::Path Class Reference}
+\label{classostk_1_1core_1_1filesystem_1_1_path}\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+
+
+{\ttfamily \#include $<$Path.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_adaf95b0c85488ad0e2adb367b0f6abdc}{$\sim$\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a1115a751ca2c6e9ba40adeb8de01b229}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_acac1dddfbbe0ba250cacfc2e3673224f}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a8225e86412c9c09a8829624b9d8d1283}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a8296e690dcfdb364d3414421052104b7}{operator+}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4b3ef62c4fb4d91d8ecd76f5e4afe4d4}{operator+=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Addition assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}{is\+Defined}} () const
+\begin{DoxyCompactList}\small\item\em Check if path is defined. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aa6d0534d0e162b76a623baa7ae421280}{is\+Absolute}} () const
+\begin{DoxyCompactList}\small\item\em Check if path is absolute. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}{is\+Relative}} () const
+\begin{DoxyCompactList}\small\item\em Check if path is relative. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5a9418eda9883fa2a72b067fc7145a6}{get\+Parent\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Get parent path of path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aa92eb9cc5209fd5c41cb1ecc8777cd06}{get\+Last\+Element}} () const
+\begin{DoxyCompactList}\small\item\em Get last element of path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a6eb6808eeb1d03810e485f91825aae98}{get\+Normalized\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Get normalized path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a22653239f49248fd5c081a6560baec8b}{get\+Absolute\+Path}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Base\+Path=\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Path\+::\+Current}}()) const
+\begin{DoxyCompactList}\small\item\em Get absolute path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab4309ce6b68c58c5befe2f479de6842f}{get\+Relative\+Path\+To}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Reference\+Path) const
+\begin{DoxyCompactList}\small\item\em Get path relative to path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get serialized path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Undefined}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined path. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac44f214afcd0a549eb46abbb58a91e45}{Root}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a root path. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Current}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a current path. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Constructs a path from a given string. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}{Strings}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$ a\+String\+List)
+\begin{DoxyCompactList}\small\item\em Constructs a path from a list of string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a87813ac3ede0b43b50ae6b9fdf0a2815}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}\label{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Path@{Path}}
+\index{Path@{Path}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily ostk\+::core\+::filesystem\+::\+Path\+::\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_adaf95b0c85488ad0e2adb367b0f6abdc}\label{classostk_1_1core_1_1filesystem_1_1_path_adaf95b0c85488ad0e2adb367b0f6abdc}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!````~Path@{$\sim$Path}}
+\index{````~Path@{$\sim$Path}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{$\sim$Path()}{~Path()}}
+{\footnotesize\ttfamily ostk\+::core\+::filesystem\+::\+Path\+::$\sim$\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}\label{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Current@{Current}}
+\index{Current@{Current}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a current path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Path::Current}}() ; \textcolor{comment}{// /app/build}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Current path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a22653239f49248fd5c081a6560baec8b}\label{classostk_1_1core_1_1filesystem_1_1_path_a22653239f49248fd5c081a6560baec8b}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getAbsolutePath@{getAbsolutePath}}
+\index{getAbsolutePath@{getAbsolutePath}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{getAbsolutePath()}{getAbsolutePath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Absolute\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Base\+Path = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Path\+::\+Current}}()} }\end{DoxyParamCaption}) const}
+
+
+
+Get absolute path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"./to/file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} absolutePath = path.getAbsolutePath() ; \textcolor{comment}{// /path/to/file}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Base\+Path A base path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Absolute path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_aa92eb9cc5209fd5c41cb1ecc8777cd06}\label{classostk_1_1core_1_1filesystem_1_1_path_aa92eb9cc5209fd5c41cb1ecc8777cd06}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getLastElement@{getLastElement}}
+\index{getLastElement@{getLastElement}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{getLastElement()}{getLastElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Last\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get last element of path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{String element = path.getLastElement() ; \textcolor{comment}{// file}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Last element of path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a6eb6808eeb1d03810e485f91825aae98}\label{classostk_1_1core_1_1filesystem_1_1_path_a6eb6808eeb1d03810e485f91825aae98}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getNormalizedPath@{getNormalizedPath}}
+\index{getNormalizedPath@{getNormalizedPath}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{getNormalizedPath()}{getNormalizedPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Normalized\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get normalized path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/../to/./file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} normalizedPath = path.getNormalizedPath() ; \textcolor{comment}{// /path/to/file}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Normalized path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ab5a9418eda9883fa2a72b067fc7145a6}\label{classostk_1_1core_1_1filesystem_1_1_path_ab5a9418eda9883fa2a72b067fc7145a6}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getParentPath@{getParentPath}}
+\index{getParentPath@{getParentPath}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{getParentPath()}{getParentPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Parent\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get parent path of path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} parentPath = path.getParentPath() ; \textcolor{comment}{// /path/to}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Parent path of path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ab4309ce6b68c58c5befe2f479de6842f}\label{classostk_1_1core_1_1filesystem_1_1_path_ab4309ce6b68c58c5befe2f479de6842f}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getRelativePathTo@{getRelativePathTo}}
+\index{getRelativePathTo@{getRelativePathTo}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{getRelativePathTo()}{getRelativePathTo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Relative\+Path\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Reference\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Get path relative to path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} referencePath = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} relativePath = path.getRelativePathTo(referencePath) ; \textcolor{comment}{// ./file}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Reference\+Path} & A reference path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Absolute path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_aa6d0534d0e162b76a623baa7ae421280}\label{classostk_1_1core_1_1filesystem_1_1_path_aa6d0534d0e162b76a623baa7ae421280}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!isAbsolute@{isAbsolute}}
+\index{isAbsolute@{isAbsolute}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{isAbsolute()}{isAbsolute()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::is\+Absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if path is absolute. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{path.isAbsolute() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if path is absolute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}\label{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if path is defined. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Path::Undefined}}() ;}
+\DoxyCodeLine{path.isDefined() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if path is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}\label{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!isRelative@{isRelative}}
+\index{isRelative@{isRelative}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{isRelative()}{isRelative()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::is\+Relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if path is relative. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"./path/to/file"}) ;}
+\DoxyCodeLine{path.isRelative() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if path is relative 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a8225e86412c9c09a8829624b9d8d1283}\label{classostk_1_1core_1_1filesystem_1_1_path_a8225e86412c9c09a8829624b9d8d1283}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} firstPath = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/first/file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} secondPath = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/second/file"}) ;}
+\DoxyCodeLine{firstPath != secondPath ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if paths are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a8296e690dcfdb364d3414421052104b7}\label{classostk_1_1core_1_1filesystem_1_1_path_a8296e690dcfdb364d3414421052104b7}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator+@{operator+}}
+\index{operator+@{operator+}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Addition operator. 
+
+\begin{DoxyVerb}                Append path to path
+\end{DoxyVerb}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path"}) + \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"./to/file"}) ; \textcolor{comment}{// /path/to/file}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a4b3ef62c4fb4d91d8ecd76f5e4afe4d4}\label{classostk_1_1core_1_1filesystem_1_1_path_a4b3ef62c4fb4d91d8ecd76f5e4afe4d4}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \& ostk\+::core\+::filesystem\+::\+Path\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+
+Addition assignment operator. 
+
+\begin{DoxyVerb}                Append path to path
+\end{DoxyVerb}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path"}) ;}
+\DoxyCodeLine{path += \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"./to/file"}) ; \textcolor{comment}{// /path/to/file}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a1115a751ca2c6e9ba40adeb8de01b229}\label{classostk_1_1core_1_1filesystem_1_1_path_a1115a751ca2c6e9ba40adeb8de01b229}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \& ostk\+::core\+::filesystem\+::\+Path\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_acac1dddfbbe0ba250cacfc2e3673224f}\label{classostk_1_1core_1_1filesystem_1_1_path_acac1dddfbbe0ba250cacfc2e3673224f}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} firstPath = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} secondPath = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{firstPath == secondPath ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if paths are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}\label{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Parse@{Parse}}
+\index{Parse@{Parse}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a path from a given string. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file.txt"}) ; \textcolor{comment}{// /path/to/file.txt}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ac44f214afcd0a549eb46abbb58a91e45}\label{classostk_1_1core_1_1filesystem_1_1_path_ac44f214afcd0a549eb46abbb58a91e45}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Root@{Root}}
+\index{Root@{Root}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a root path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac44f214afcd0a549eb46abbb58a91e45}{Path::Root}}() ; \textcolor{comment}{// /}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Root path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}\label{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Strings@{Strings}}
+\index{Strings@{Strings}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Strings()}{Strings()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Strings (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$}]{a\+String\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a path from a list of string. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}{Path::Strings}}(\{\textcolor{stringliteral}{"/"}, \textcolor{stringliteral}{"path"}, \textcolor{stringliteral}{"to"}, \textcolor{stringliteral}{"file.txt"}\}) ; \textcolor{comment}{// /path/to/file.txt}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String\+List} & A list of string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}\label{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!toString@{toString}}
+\index{toString@{toString}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}).\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}{toString}}() ; \textcolor{comment}{// "/path/to/file"}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Serialized path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}\label{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Path::Undefined}}() ;}
+\DoxyCodeLine{path.isDefined() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Undefined path 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a87813ac3ede0b43b50ae6b9fdf0a2815}\label{classostk_1_1core_1_1filesystem_1_1_path_a87813ac3ede0b43b50ae6b9fdf0a2815}} 
+\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{std::cout << path ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+File\+System/\mbox{\hyperlink{_path_8hpp}{Path.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+File\+System/\mbox{\hyperlink{_path_8cpp}{Path.\+cpp}}\end{DoxyCompactItemize}

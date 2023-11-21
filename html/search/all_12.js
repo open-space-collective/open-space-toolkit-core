@@ -28,6 +28,6 @@ var searchData=
   ['string_2ecpp_381',['String.cpp',['../_string_8cpp.html',1,'']]],
   ['string_2ehpp_382',['String.hpp',['../_string_8hpp.html',1,'']]],
   ['stringfromtype_383',['StringFromType',['../classostk_1_1core_1_1ctnr_1_1_object.html#a44338a6275cdfa67d6d1dcd193427d91',1,'ostk::core::ctnr::Object']]],
-  ['strings_384',['Strings',['../classostk_1_1core_1_1fs_1_1_path.html#a344d49d5962f0cdd908d898ed329224f',1,'ostk::core::fs::Path']]],
+  ['strings_384',['Strings',['../classostk_1_1core_1_1filesystem_1_1_path.html#a4203822b86cdaf2542b292d214e5e113',1,'ostk::core::filesystem::Path']]],
   ['symboliclink_2ehpp_385',['SymbolicLink.hpp',['../_symbolic_link_8hpp.html',1,'']]]
 ];

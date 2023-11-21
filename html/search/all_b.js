@@ -14,7 +14,7 @@ var searchData=
   ['lineidenabled_5f_229',['lineIdEnabled_',['../classostk_1_1core_1_1logger_1_1sinks_1_1_sink.html#a303e83d8ad7459122bae68e585163bf5',1,'ostk::core::logger::sinks::Sink']]],
   ['list_230',['List',['../namespaceostk_1_1core_1_1ctnr.html#a5802e21d045076175dcb310a7045c858',1,'ostk::core::ctnr']]],
   ['list_2ehpp_231',['List.hpp',['../_list_8hpp.html',1,'']]],
-  ['load_232',['Load',['../classostk_1_1core_1_1ctnr_1_1_object.html#a76b915fecff0936648e8a86958eca6b0',1,'ostk::core::ctnr::Object::Load()'],['../classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099',1,'ostk::core::ctnr::Table::Load()']]],
+  ['load_232',['Load',['../classostk_1_1core_1_1ctnr_1_1_object.html#a3f94ad841135fb75917831349bb0b00d',1,'ostk::core::ctnr::Object::Load()'],['../classostk_1_1core_1_1ctnr_1_1_table.html#a0bf37edce9a3680aad444469f813a099',1,'ostk::core::ctnr::Table::Load()']]],
   ['log_233',['LOG',['../_logger_8hpp.html#a8ac9d89e791f5cb9828a8c970e970db8',1,'Logger.hpp']]],
   ['log_5fdebug_234',['LOG_DEBUG',['../_logger_8hpp.html#ac871e9578d8f0db84bd5d6ae6fa3aede',1,'Logger.hpp']]],
   ['log_5ferror_235',['LOG_ERROR',['../_logger_8hpp.html#af82d42df573b733c1f607fc8a52775b9',1,'Logger.hpp']]],

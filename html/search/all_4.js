@@ -10,5 +10,5 @@ var searchData=
   ['exception_87',['Exception',['../classostk_1_1core_1_1error_1_1_exception.html',1,'ostk::core::error::Exception'],['../classostk_1_1core_1_1error_1_1_exception.html#a27647e55b84a7a32cf8b24e575651d71',1,'ostk::core::error::Exception::Exception()']]],
   ['exception_2ecpp_88',['Exception.cpp',['../_exception_8cpp.html',1,'']]],
   ['exception_2ehpp_89',['Exception.hpp',['../_exception_8hpp.html',1,'']]],
-  ['exists_90',['exists',['../classostk_1_1core_1_1fs_1_1_directory.html#a05eba0f3f165b8e50ae89fd26b07776c',1,'ostk::core::fs::Directory::exists()'],['../classostk_1_1core_1_1fs_1_1_file.html#afcd8f1b98fbbfe0736f91ddb5e14c4c4',1,'ostk::core::fs::File::exists()']]]
+  ['exists_90',['exists',['../classostk_1_1core_1_1filesystem_1_1_directory.html#affd6e4da6f153b1c961ff61178898c20',1,'ostk::core::filesystem::Directory::exists()'],['../classostk_1_1core_1_1filesystem_1_1_file.html#a34b7fed969550f1eab7fdc045bbddba9',1,'ostk::core::filesystem::File::exists()']]]
 ];

@@ -1,0 +1,643 @@
+\hypertarget{classostk_1_1core_1_1filesystem_1_1_directory}{}\doxysection{ostk\+::core\+::filesystem\+::Directory Class Reference}
+\label{classostk_1_1core_1_1filesystem_1_1_directory}\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+
+
+Cataloging structure which contains references to other computer files, and possibly other directories.  
+
+
+
+
+{\ttfamily \#include $<$Directory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a56b60dabb38a5cd40d81a7e9396b8a1a}{Directory}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a735e8c716574a9f0720deca6fe53551d}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a2052299ec678425c614a9d94b6719408}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3104154a1142af0ea03f257edf493bc0}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}{is\+Defined}} () const
+\begin{DoxyCompactList}\small\item\em Check if directory is defined. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_affd6e4da6f153b1c961ff61178898c20}{exists}} () const
+\begin{DoxyCompactList}\small\item\em Check if directory exists. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if directory is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3aae4c5746c1db8563c39b1930688edc}{contains\+File\+With\+Name}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+File\+Name) const
+\begin{DoxyCompactList}\small\item\em Check if directory contains file with name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a5a06e7333bba2f33cda76e5e24b00e37}{contains\+Directory\+With\+Name}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+Directory\+Name) const
+\begin{DoxyCompactList}\small\item\em Check if directory contains directory with name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_ad9ffa02a5f60cc351bc16dcedb64ce7d}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get directory name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}{get\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Get directory path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a5b41f71a42dc5bfc00b495c46ffe77f7}{get\+Permissions}} () const
+\begin{DoxyCompactList}\small\item\em Get directory permissions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_aa48e08223e5a4b1ae28b08f9e5ac0a5e}{get\+Parent\+Directory}} () const
+\begin{DoxyCompactList}\small\item\em Get directory\textquotesingle{}s parent directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a53e645ae52a61b17efc977d815c1c7bd}{get\+Files}} () const
+\begin{DoxyCompactList}\small\item\em Get files in directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a9c205a58390c1c776f63a01056fceb3b}{get\+Directories}} () const
+\begin{DoxyCompactList}\small\item\em Get directories in directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_ae55d292dd71ab8f311b3c4ae79c317e4}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get serialized directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_ad0d45f2de353448c92807fd7d0d3fab1}{rename\+To}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+Name)
+\begin{DoxyCompactList}\small\item\em Rename directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a9b4e55d3fa01d0a9cc1d5abc934f559c}{copy\+To\+Directory}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Destination, const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+New\+Directory\+Name=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Copy directory to directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a60a53b7d1fb751e8cf98dc61a6e2815f}{move\+To\+Directory}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Destination)
+\begin{DoxyCompactList}\small\item\em Move directory to directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a078d17063b9915092af76d347a9665cc}{create}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&an\+Owner\+Permission\+Set=\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_a42e2ac3b11b9136ea369dca97f3ef9d8}{filesystem\+::\+Permission\+Set\+::\+R\+WX}}(), const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&a\+Group\+Permission\+Set=\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_aa1822fb076086e71d5b6bc6a53532200}{filesystem\+::\+Permission\+Set\+::\+RX}}(), const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&an\+Other\+Permission\+Set=\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_aa1822fb076086e71d5b6bc6a53532200}{filesystem\+::\+Permission\+Set\+::\+RX}}())
+\begin{DoxyCompactList}\small\item\em Create empty directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a58be001fc39b8319a664bde35ff59d86}{remove}} ()
+\begin{DoxyCompactList}\small\item\em Delete directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Undefined}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined directory. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a654e1ae79c5e73460b722db30340270c}{Root}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a root directory. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Path}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Constructs a directory from a given path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3cbfede39f82ab145f110ca14e21deef}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cataloging structure which contains references to other computer files, and possibly other directories. 
+
+\href{https://en.wikipedia.org/wiki/Directory_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Directory\+\_\+}}(computing) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}\label{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Directory@{Directory}}
+\index{Directory@{Directory}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{Directory()}{Directory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::filesystem\+::\+Directory\+::\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a56b60dabb38a5cd40d81a7e9396b8a1a}\label{classostk_1_1core_1_1filesystem_1_1_directory_a56b60dabb38a5cd40d81a7e9396b8a1a}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Directory@{Directory}}
+\index{Directory@{Directory}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{Directory()}{Directory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::filesystem\+::\+Directory\+::\+Directory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a5a06e7333bba2f33cda76e5e24b00e37}\label{classostk_1_1core_1_1filesystem_1_1_directory_a5a06e7333bba2f33cda76e5e24b00e37}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!containsDirectoryWithName@{containsDirectoryWithName}}
+\index{containsDirectoryWithName@{containsDirectoryWithName}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{containsDirectoryWithName()}{containsDirectoryWithName()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::contains\+Directory\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+Directory\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Check if directory contains directory with name. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.containsDirectoryWithName(\textcolor{stringliteral}{"subdirectory"}) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if directory contains directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a3aae4c5746c1db8563c39b1930688edc}\label{classostk_1_1core_1_1filesystem_1_1_directory_a3aae4c5746c1db8563c39b1930688edc}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!containsFileWithName@{containsFileWithName}}
+\index{containsFileWithName@{containsFileWithName}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{containsFileWithName()}{containsFileWithName()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::contains\+File\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+File\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Check if directory contains file with name. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.containsFileWithName(\textcolor{stringliteral}{"file.txt"}) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if directory contains file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a9b4e55d3fa01d0a9cc1d5abc934f559c}\label{classostk_1_1core_1_1filesystem_1_1_directory_a9b4e55d3fa01d0a9cc1d5abc934f559c}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!copyToDirectory@{copyToDirectory}}
+\index{copyToDirectory@{copyToDirectory}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{copyToDirectory()}{copyToDirectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::copy\+To\+Directory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Destination,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+New\+Directory\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Copy directory to directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} original = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} destination = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/destination"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} copy = original.copyToDirectory(destination) ; \textcolor{comment}{// /path/to/destination/directory}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Destination} & A destination directory \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+New\+Directory\+Name A copied directory name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copied directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a078d17063b9915092af76d347a9665cc}\label{classostk_1_1core_1_1filesystem_1_1_directory_a078d17063b9915092af76d347a9665cc}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!create@{create}}
+\index{create@{create}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void ostk\+::core\+::filesystem\+::\+Directory\+::create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&}]{an\+Owner\+Permission\+Set = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_a42e2ac3b11b9136ea369dca97f3ef9d8}{filesystem\+::\+Permission\+Set\+::\+R\+WX}}()},  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&}]{a\+Group\+Permission\+Set = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_aa1822fb076086e71d5b6bc6a53532200}{filesystem\+::\+Permission\+Set\+::\+RX}}()},  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \&}]{an\+Other\+Permission\+Set = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_aa1822fb076086e71d5b6bc6a53532200}{filesystem\+::\+Permission\+Set\+::\+RX}}()} }\end{DoxyParamCaption})}
+
+
+
+Create empty directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.exists() ; \textcolor{comment}{// False}}
+\DoxyCodeLine{directory.create() ;}
+\DoxyCodeLine{directory.exists() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em (optional)} & an\+Owner\+Permission\+Set An owner permission set \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Group\+Permission\+Set A group permission set \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & an\+Other\+Permission\+Set An other permission set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_affd6e4da6f153b1c961ff61178898c20}\label{classostk_1_1core_1_1filesystem_1_1_directory_affd6e4da6f153b1c961ff61178898c20}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!exists@{exists}}
+\index{exists@{exists}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if directory exists. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/nonexistent/directory"})) ;}
+\DoxyCodeLine{directory.exists() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if directory exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a9c205a58390c1c776f63a01056fceb3b}\label{classostk_1_1core_1_1filesystem_1_1_directory_a9c205a58390c1c776f63a01056fceb3b}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getDirectories@{getDirectories}}
+\index{getDirectories@{getDirectories}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getDirectories()}{getDirectories()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} $>$ ostk\+::core\+::filesystem\+::\+Directory\+::get\+Directories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get directories in directory. 
+
+\begin{DoxyVerb}                Directories are listed in alphabetical order.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{Array<Directory> directories = directory.getDirectories() ;}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Array of directories in directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a53e645ae52a61b17efc977d815c1c7bd}\label{classostk_1_1core_1_1filesystem_1_1_directory_a53e645ae52a61b17efc977d815c1c7bd}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getFiles@{getFiles}}
+\index{getFiles@{getFiles}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getFiles()}{getFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1ctnr_1_1_array}{ctnr\+::\+Array}}$<$\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}}$>$ ostk\+::core\+::filesystem\+::\+Directory\+::get\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get files in directory. 
+
+\begin{DoxyVerb}                Files are listed in alphabetical order.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{Array<File> files = directory.getFiles() ;}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Array of files in directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_ad9ffa02a5f60cc351bc16dcedb64ce7d}\label{classostk_1_1core_1_1filesystem_1_1_directory_ad9ffa02a5f60cc351bc16dcedb64ce7d}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getName@{getName}}
+\index{getName@{getName}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Directory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get directory name. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.getName() ; \textcolor{comment}{// directory}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_aa48e08223e5a4b1ae28b08f9e5ac0a5e}\label{classostk_1_1core_1_1filesystem_1_1_directory_aa48e08223e5a4b1ae28b08f9e5ac0a5e}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getParentDirectory@{getParentDirectory}}
+\index{getParentDirectory@{getParentDirectory}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getParentDirectory()}{getParentDirectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::get\+Parent\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get directory\textquotesingle{}s parent directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} parentDirectory = directory.getParentDirectory() ; \textcolor{comment}{// /path/to}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}}\textquotesingle{}s parent directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}\label{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getPath@{getPath}}
+\index{getPath@{getPath}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} ostk\+::core\+::filesystem\+::\+Directory\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get directory path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Path}} path = directory.\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}{getPath}}() ; \textcolor{comment}{// /path/to/directory}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a5b41f71a42dc5bfc00b495c46ffe77f7}\label{classostk_1_1core_1_1filesystem_1_1_directory_a5b41f71a42dc5bfc00b495c46ffe77f7}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getPermissions@{getPermissions}}
+\index{getPermissions@{getPermissions}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{getPermissions()}{getPermissions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} ostk\+::core\+::filesystem\+::\+Directory\+::get\+Permissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get directory permissions. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{Permissions permissions = directory.getPermissions() ; \textcolor{comment}{// rwx}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} permissions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}\label{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if directory is defined. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Directory::Undefined}}() ;}
+\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if directory is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}\label{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if directory is empty. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/empty/directory"})) ;}
+\DoxyCodeLine{directory.isEmpty() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if directory is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a60a53b7d1fb751e8cf98dc61a6e2815f}\label{classostk_1_1core_1_1filesystem_1_1_directory_a60a53b7d1fb751e8cf98dc61a6e2815f}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!moveToDirectory@{moveToDirectory}}
+\index{moveToDirectory@{moveToDirectory}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{moveToDirectory()}{moveToDirectory()}}
+{\footnotesize\ttfamily void ostk\+::core\+::filesystem\+::\+Directory\+::move\+To\+Directory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Destination }\end{DoxyParamCaption})}
+
+
+
+Move directory to directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} destination = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/destination"})) ;}
+\DoxyCodeLine{directory.moveToDirectory(destination) ; \textcolor{comment}{// /path/to/destination/directory}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Destination} & A destination directory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a3104154a1142af0ea03f257edf493bc0}\label{classostk_1_1core_1_1filesystem_1_1_directory_a3104154a1142af0ea03f257edf493bc0}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} firstDirectory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/first/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} secondDirectory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/second/directory"})) ;}
+\DoxyCodeLine{firstDirectory != secondDirectory ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if directories are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a735e8c716574a9f0720deca6fe53551d}\label{classostk_1_1core_1_1filesystem_1_1_directory_a735e8c716574a9f0720deca6fe53551d}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}}\& ostk\+::core\+::filesystem\+::\+Directory\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a2052299ec678425c614a9d94b6719408}\label{classostk_1_1core_1_1filesystem_1_1_directory_a2052299ec678425c614a9d94b6719408}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} firstDirectory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} secondDirectory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{firstDirectory == secondDirectory ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if directories are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}\label{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Path@{Path}}
+\index{Path@{Path}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \&}]{a\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a directory from a given path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Path} & \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} to directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a58be001fc39b8319a664bde35ff59d86}\label{classostk_1_1core_1_1filesystem_1_1_directory_a58be001fc39b8319a664bde35ff59d86}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!remove@{remove}}
+\index{remove@{remove}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void ostk\+::core\+::filesystem\+::\+Directory\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.exists() ; \textcolor{comment}{// True}}
+\DoxyCodeLine{directory.delete() ;}
+\DoxyCodeLine{directory.exists() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_ad0d45f2de353448c92807fd7d0d3fab1}\label{classostk_1_1core_1_1filesystem_1_1_directory_ad0d45f2de353448c92807fd7d0d3fab1}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!renameTo@{renameTo}}
+\index{renameTo@{renameTo}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{renameTo()}{renameTo()}}
+{\footnotesize\ttfamily void ostk\+::core\+::filesystem\+::\+Directory\+::rename\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+Name }\end{DoxyParamCaption})}
+
+
+
+Rename directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{directory.renameTo(\textcolor{stringliteral}{"folder"}) ; \textcolor{comment}{// /path/to/folder}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Name} & A directory name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a654e1ae79c5e73460b722db30340270c}\label{classostk_1_1core_1_1filesystem_1_1_directory_a654e1ae79c5e73460b722db30340270c}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Root@{Root}}
+\index{Root@{Root}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a root directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a654e1ae79c5e73460b722db30340270c}{Directory::Root}}() ; \textcolor{stringliteral}{"/"}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Root directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_ae55d292dd71ab8f311b3c4ae79c317e4}\label{classostk_1_1core_1_1filesystem_1_1_directory_ae55d292dd71ab8f311b3c4ae79c317e4}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!toString@{toString}}
+\index{toString@{toString}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Directory\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})).\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_ae55d292dd71ab8f311b3c4ae79c317e4}{toString}}() ; \textcolor{comment}{// "/path/to/directory"}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Serialized directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}\label{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined directory. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Directory::Undefined}}() ;}
+\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Undefined directory 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a3cbfede39f82ab145f110ca14e21deef}\label{classostk_1_1core_1_1filesystem_1_1_directory_a3cbfede39f82ab145f110ca14e21deef}} 
+\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{std::cout << directory ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+File\+System/\mbox{\hyperlink{_directory_8hpp}{Directory.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+File\+System/\mbox{\hyperlink{_directory_8cpp}{Directory.\+cpp}}\end{DoxyCompactItemize}

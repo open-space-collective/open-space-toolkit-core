@@ -8,7 +8,7 @@ var hierarchy =
     [ "ostk::core::types::ByteArray", "classostk_1_1core_1_1types_1_1_byte_array.html", null ],
     [ "ostk::core::ctnr::Dictionary::ConstIterator", "classostk_1_1core_1_1ctnr_1_1_dictionary_1_1_const_iterator.html", null ],
     [ "ostk::core::ctnr::Dictionary", "classostk_1_1core_1_1ctnr_1_1_dictionary.html", null ],
-    [ "ostk::core::fs::Directory", "classostk_1_1core_1_1fs_1_1_directory.html", null ],
+    [ "ostk::core::filesystem::Directory", "classostk_1_1core_1_1filesystem_1_1_directory.html", null ],
     [ "std::exception", null, [
       [ "ostk::core::error::Exception", "classostk_1_1core_1_1error_1_1_exception.html", [
         [ "ostk::core::error::RuntimeError", "classostk_1_1core_1_1error_1_1_runtime_error.html", [
@@ -18,7 +18,7 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
-    [ "ostk::core::fs::File", "classostk_1_1core_1_1fs_1_1_file.html", null ],
+    [ "ostk::core::filesystem::File", "classostk_1_1core_1_1filesystem_1_1_file.html", null ],
     [ "ostk::core::ctnr::Graph", "classostk_1_1core_1_1ctnr_1_1_graph.html", null ],
     [ "ostk::core::system::Group", "classostk_1_1core_1_1system_1_1_group.html", null ],
     [ "ostk::core::types::HasToString< T >", "classostk_1_1core_1_1types_1_1_has_to_string.html", null ],
@@ -30,8 +30,8 @@ var hierarchy =
     [ "ostk::core::utils::Print::LineBuffer", "classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer.html", null ],
     [ "ostk::core::Logger", "classostk_1_1core_1_1_logger.html", null ],
     [ "ostk::core::ctnr::Object", "classostk_1_1core_1_1ctnr_1_1_object.html", null ],
-    [ "ostk::core::fs::Path", "classostk_1_1core_1_1fs_1_1_path.html", null ],
-    [ "ostk::core::fs::PermissionSet", "classostk_1_1core_1_1fs_1_1_permission_set.html", null ],
+    [ "ostk::core::filesystem::Path", "classostk_1_1core_1_1filesystem_1_1_path.html", null ],
+    [ "ostk::core::filesystem::PermissionSet", "classostk_1_1core_1_1filesystem_1_1_permission_set.html", null ],
     [ "ostk::core::utils::Print", "classostk_1_1core_1_1utils_1_1_print.html", null ],
     [ "ostk::core::logger::Pump", "classostk_1_1core_1_1logger_1_1_pump.html", null ],
     [ "ostk::core::ctnr::Queue", "classostk_1_1core_1_1ctnr_1_1_queue.html", null ],

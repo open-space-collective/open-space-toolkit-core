@@ -1,0 +1,38 @@
+var classostk_1_1core_1_1filesystem_1_1_file =
+[
+    [ "OpenMode", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4", [
+      [ "Undefined", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4aec0fc0100c4fc1ce4eea230c3dc10360", null ],
+      [ "Read", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4a7a1a5f3e79fdc91edf2f5ead9d66abb4", null ],
+      [ "Write", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4a1129c0e4d43f2d121652a7302712cff6", null ],
+      [ "Binary", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4a6ce976e8f061b2b5cfe4d0c50c3405dd", null ],
+      [ "Append", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4a3ac4692f3935a49a0b243eecf529faa9", null ],
+      [ "AtEnd", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4a8d04b2d09dcc744cf134542097642db5", null ],
+      [ "Truncate", "classostk_1_1core_1_1filesystem_1_1_file.html#a43ab99c1b1ad12b612bad7d50f27c8f4aa8156810bfee2bd2b44765b9e91db3bd", null ]
+    ] ],
+    [ "File", "classostk_1_1core_1_1filesystem_1_1_file.html#a433d3d7747d23181a0e2ca0bdfb57439", null ],
+    [ "~File", "classostk_1_1core_1_1filesystem_1_1_file.html#ac9c48c3dcf4060c07fb44e68200048ad", null ],
+    [ "accessStream", "classostk_1_1core_1_1filesystem_1_1_file.html#aaeee4b254e87b8fa4c53abe7d7580ace", null ],
+    [ "clear", "classostk_1_1core_1_1filesystem_1_1_file.html#af43fdd255e5a9c87745bac7d7d0ac3f1", null ],
+    [ "close", "classostk_1_1core_1_1filesystem_1_1_file.html#a8929d8fe19ace2368d7f1375924fea38", null ],
+    [ "copyToDirectory", "classostk_1_1core_1_1filesystem_1_1_file.html#a2f6b28469cd3291dfbd25865a6bbc059", null ],
+    [ "create", "classostk_1_1core_1_1filesystem_1_1_file.html#a94881942705f6308cfcb7ec94ef07dba", null ],
+    [ "exists", "classostk_1_1core_1_1filesystem_1_1_file.html#a34b7fed969550f1eab7fdc045bbddba9", null ],
+    [ "getContents", "classostk_1_1core_1_1filesystem_1_1_file.html#a45fd549b56c7180175f8f3d912001c57", null ],
+    [ "getExtension", "classostk_1_1core_1_1filesystem_1_1_file.html#a772276701aa831d0dc8073ea97bdf8b0", null ],
+    [ "getName", "classostk_1_1core_1_1filesystem_1_1_file.html#a683410b6b7ac9d51ad470d8064a1be3a", null ],
+    [ "getParentDirectory", "classostk_1_1core_1_1filesystem_1_1_file.html#a527f2b23fd20550f7e96c599091346a3", null ],
+    [ "getPath", "classostk_1_1core_1_1filesystem_1_1_file.html#a1455992a788ca7cc3db6f68f30c7823e", null ],
+    [ "getPermissions", "classostk_1_1core_1_1filesystem_1_1_file.html#a3bdaaae230d9f5045a943a0a23366391", null ],
+    [ "isDefined", "classostk_1_1core_1_1filesystem_1_1_file.html#aa4a85018536f7e3fa948848215e5d461", null ],
+    [ "isOpen", "classostk_1_1core_1_1filesystem_1_1_file.html#a686db52120394678d72e4747e50ad1b8", null ],
+    [ "moveToDirectory", "classostk_1_1core_1_1filesystem_1_1_file.html#a773b37bb669c077accf2ec6be2e7460b", null ],
+    [ "open", "classostk_1_1core_1_1filesystem_1_1_file.html#a220d5eb2cf4ddebb420bc8a7c6e49c78", null ],
+    [ "operator!=", "classostk_1_1core_1_1filesystem_1_1_file.html#ad1dcf8c31ddb76d948ff3b64a3fe46d2", null ],
+    [ "operator<<", "classostk_1_1core_1_1filesystem_1_1_file.html#a4936000a9b87ec0611c1ae036a555ed7", null ],
+    [ "operator=", "classostk_1_1core_1_1filesystem_1_1_file.html#ab52cf333b06f9c89565eada0fe5beb91", null ],
+    [ "operator==", "classostk_1_1core_1_1filesystem_1_1_file.html#abc152f2c8eb92dcdba974bd506071cb1", null ],
+    [ "remove", "classostk_1_1core_1_1filesystem_1_1_file.html#a3819bab5e64c88ed2f5e054092339a47", null ],
+    [ "renameTo", "classostk_1_1core_1_1filesystem_1_1_file.html#ae9337a583c49322805c79123c1b8d516", null ],
+    [ "toString", "classostk_1_1core_1_1filesystem_1_1_file.html#a8890110d866265dd78283fef424dc66d", null ],
+    [ "operator<<", "classostk_1_1core_1_1filesystem_1_1_file.html#a82ce9f27653427d53ecb90de978f4f68", null ]
+];

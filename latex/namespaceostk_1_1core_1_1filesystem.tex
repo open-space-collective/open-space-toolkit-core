@@ -1,0 +1,119 @@
+\hypertarget{namespaceostk_1_1core_1_1filesystem}{}\doxysection{ostk\+::core\+::filesystem Namespace Reference}
+\label{namespaceostk_1_1core_1_1filesystem}\index{ostk::core::filesystem@{ostk::core::filesystem}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}}
+\begin{DoxyCompactList}\small\item\em Cataloging structure which contains references to other computer files, and possibly other directories. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}}
+\begin{DoxyCompactList}\small\item\em Computer resource for recording data discretely in a computer storage device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}}
+\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{Permission\+Set}}
+\begin{DoxyCompactList}\small\item\em Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1filesystem_aadefa578918b722526b31142dd527fcb}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1filesystem_a167a3aa9878e2eaa43418d82d1096310}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&a\+File)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1filesystem_ad638a7d2b5d8f605c8e10d59d18ae911}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1filesystem_ab1533d20274fe05cc29c4d432fe96e41}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{Permission\+Set}} \&a\+Permission\+Set)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1filesystem_aadefa578918b722526b31142dd527fcb}\label{namespaceostk_1_1core_1_1filesystem_aadefa578918b722526b31142dd527fcb}} 
+\index{ostk::core::filesystem@{ostk::core::filesystem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem@{ostk::core::filesystem}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::filesystem\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&}]{a\+Directory }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Directory directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
+\DoxyCodeLine{std::cout << directory ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Directory} & A directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1filesystem_a167a3aa9878e2eaa43418d82d1096310}\label{namespaceostk_1_1core_1_1filesystem_a167a3aa9878e2eaa43418d82d1096310}} 
+\index{ostk::core::filesystem@{ostk::core::filesystem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem@{ostk::core::filesystem}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::filesystem\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&}]{a\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{File file = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"})) ;}
+\DoxyCodeLine{std::cout << file ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+File} & A file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1filesystem_ad638a7d2b5d8f605c8e10d59d18ae911}\label{namespaceostk_1_1core_1_1filesystem_ad638a7d2b5d8f605c8e10d59d18ae911}} 
+\index{ostk::core::filesystem@{ostk::core::filesystem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem@{ostk::core::filesystem}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::filesystem\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Path path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file"}) ;}
+\DoxyCodeLine{std::cout << path ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1filesystem_ab1533d20274fe05cc29c4d432fe96e41}\label{namespaceostk_1_1core_1_1filesystem_ab1533d20274fe05cc29c4d432fe96e41}} 
+\index{ostk::core::filesystem@{ostk::core::filesystem}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::filesystem@{ostk::core::filesystem}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::filesystem\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{Permission\+Set}} \&}]{a\+Permission\+Set }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PermissionSet permissions = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set_a42e2ac3b11b9136ea369dca97f3ef9d8}{PermissionSet::RWX}}()}
+\DoxyCodeLine{std::cout << permissions ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Permission\+Set} & A permission set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}

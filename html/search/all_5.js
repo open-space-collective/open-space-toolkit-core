@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fatal_91',['Fatal',['../namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a882384ec38ce8d9582b57e70861730e4',1,'ostk::core::logger']]],
-  ['file_92',['File',['../classostk_1_1core_1_1fs_1_1_file.html',1,'ostk::core::fs::File'],['../classostk_1_1core_1_1fs_1_1_file.html#ad1695224996950be9962b8457da369b3',1,'ostk::core::fs::File::File()']]],
+  ['file_92',['File',['../classostk_1_1core_1_1filesystem_1_1_file.html',1,'ostk::core::filesystem::File'],['../classostk_1_1core_1_1filesystem_1_1_file.html#a433d3d7747d23181a0e2ca0bdfb57439',1,'ostk::core::filesystem::File::File()']]],
   ['file_2ecpp_93',['File.cpp',['../_file_8cpp.html',1,'']]],
   ['file_2ehpp_94',['File.hpp',['../_file_8hpp.html',1,'']]],
   ['fileenabled_5f_95',['fileEnabled_',['../classostk_1_1core_1_1logger_1_1sinks_1_1_sink.html#aba0425e9f715065b3e70da2a77b0819f',1,'ostk::core::logger::sinks::Sink']]],

@@ -3,7 +3,7 @@ var searchData=
   ['core_506',['core',['../namespaceostk_1_1core.html',1,'ostk']]],
   ['ctnr_507',['ctnr',['../namespaceostk_1_1core_1_1ctnr.html',1,'ostk::core']]],
   ['error_508',['error',['../namespaceostk_1_1core_1_1error.html',1,'ostk::core']]],
-  ['fs_509',['fs',['../namespaceostk_1_1core_1_1fs.html',1,'ostk::core']]],
+  ['filesystem_509',['filesystem',['../namespaceostk_1_1core_1_1filesystem.html',1,'ostk::core']]],
   ['iterators_510',['iterators',['../namespaceostk_1_1core_1_1ctnr_1_1iterators.html',1,'ostk::core::ctnr']]],
   ['logger_511',['logger',['../namespaceostk_1_1core_1_1logger.html',1,'ostk::core']]],
   ['ostk_512',['ostk',['../namespaceostk.html',1,'']]],

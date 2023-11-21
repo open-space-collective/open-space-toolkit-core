@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_439',['X',['../classostk_1_1core_1_1fs_1_1_permission_set.html#ac84670d9520228b38bb8555b7f1e399f',1,'ostk::core::fs::PermissionSet']]]
+  ['x_439',['X',['../classostk_1_1core_1_1filesystem_1_1_permission_set.html#af458426b36031ca507f3887ef3bf50fe',1,'ostk::core::filesystem::PermissionSet']]]
 ];

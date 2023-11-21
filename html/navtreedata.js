@@ -93,7 +93,7 @@ var NAVTREEINDEX =
 [
 "_array_8hpp.html",
 "classostk_1_1core_1_1ctnr_1_1_array.html#ad26e8cf9b109bc6c821c7408cac2935b",
-"classostk_1_1core_1_1fs_1_1_file.html",
+"classostk_1_1core_1_1filesystem_1_1_file.html",
 "classostk_1_1core_1_1types_1_1_real.html#a1f069cdb3b8da868e9bdd997b5b2fbb0"
 ];
 

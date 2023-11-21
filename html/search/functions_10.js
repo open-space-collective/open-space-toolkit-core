@@ -10,5 +10,5 @@ var searchData=
   ['stack_823',['Stack',['../classostk_1_1core_1_1ctnr_1_1_stack.html#a0e02851144c2afaf2202846f90f950dc',1,'ostk::core::ctnr::Stack::Stack()=delete'],['../classostk_1_1core_1_1ctnr_1_1_stack.html#add08ce0c3b6aaff44811abbe708bde78',1,'ostk::core::ctnr::Stack::Stack(const Stack &amp;aStack)']]],
   ['string_824',['String',['../classostk_1_1core_1_1ctnr_1_1_object.html#aab792cff0163e7cd57c49afe36eea380',1,'ostk::core::ctnr::Object::String()'],['../classostk_1_1core_1_1types_1_1_string.html#a0f8e66f16108a449b1256c252c48ed3b',1,'ostk::core::types::String::String()'],['../classostk_1_1core_1_1types_1_1_string.html#aaaee3324b9d426284056794371932be5',1,'ostk::core::types::String::String(const std::string &amp;aString)']]],
   ['stringfromtype_825',['StringFromType',['../classostk_1_1core_1_1ctnr_1_1_object.html#a44338a6275cdfa67d6d1dcd193427d91',1,'ostk::core::ctnr::Object']]],
-  ['strings_826',['Strings',['../classostk_1_1core_1_1fs_1_1_path.html#a344d49d5962f0cdd908d898ed329224f',1,'ostk::core::fs::Path']]]
+  ['strings_826',['Strings',['../classostk_1_1core_1_1filesystem_1_1_path.html#a4203822b86cdaf2542b292d214e5e113',1,'ostk::core::filesystem::Path']]]
 ];
