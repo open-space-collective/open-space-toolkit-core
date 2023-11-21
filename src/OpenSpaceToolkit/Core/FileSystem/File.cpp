@@ -15,7 +15,7 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 File::File(const File& aFile)
@@ -160,7 +160,7 @@ String File::getExtension() const
     return String::Empty();
 }
 
-filesystem::Path File::getPath() const
+fs::Path File::getPath() const
 {
     if (!this->isDefined())
     {
@@ -170,11 +170,11 @@ filesystem::Path File::getPath() const
     return path_;
 }
 
-filesystem::PermissionSet File::getPermissions() const
+fs::PermissionSet File::getPermissions() const
 {
     // https://linux.die.net/man/2/access
 
-    const auto handleErrorForPath = [](const filesystem::Path& aPath) -> void
+    const auto handleErrorForPath = [](const fs::Path& aPath) -> void
     {
         switch (errno)
         {
@@ -238,7 +238,7 @@ filesystem::PermissionSet File::getPermissions() const
         }
     };
 
-    const auto canRead = [&handleErrorForPath](const filesystem::Path& aPath) -> bool
+    const auto canRead = [&handleErrorForPath](const fs::Path& aPath) -> bool
     {
         const int result = access(aPath.toString().data(), R_OK);
 
@@ -250,7 +250,7 @@ filesystem::PermissionSet File::getPermissions() const
         return result == 0;
     };
 
-    const auto canWrite = [&handleErrorForPath](const filesystem::Path& aPath) -> bool
+    const auto canWrite = [&handleErrorForPath](const fs::Path& aPath) -> bool
     {
         const int result = access(aPath.toString().data(), W_OK);
 
@@ -262,7 +262,7 @@ filesystem::PermissionSet File::getPermissions() const
         return result == 0;
     };
 
-    const auto canExecute = [&handleErrorForPath](const filesystem::Path& aPath) -> bool
+    const auto canExecute = [&handleErrorForPath](const fs::Path& aPath) -> bool
     {
         const int result = access(aPath.toString().data(), X_OK);
 
@@ -282,7 +282,7 @@ filesystem::PermissionSet File::getPermissions() const
     return {canRead(path_), canWrite(path_), canExecute(path_)};
 }
 
-filesystem::Directory File::getParentDirectory() const
+fs::Directory File::getParentDirectory() const
 {
     if (!this->isDefined())
     {
@@ -305,10 +305,10 @@ filesystem::Directory File::getParentDirectory() const
 
     if (filePathString == "/")
     {
-        return filesystem::Directory::Root();
+        return fs::Directory::Root();
     }
 
-    return filesystem::Directory::Path(Path::Parse(filePathString).getParentPath());
+    return fs::Directory::Path(Path::Parse(filePathString).getParentPath());
 }
 
 String File::getContents() const
@@ -448,13 +448,13 @@ std::fstream& File::accessStream()
 
 // }
 
-// File                            File::copyToDirectory                       (   const   filesystem::Directory& aDestination,
+// File                            File::copyToDirectory                       (   const   fs::Directory& aDestination,
 //                                                                                 const   String& aNewFileName ) const
 // {
 
 // }
 
-void File::moveToDirectory(const filesystem::Directory& aDestination)
+void File::moveToDirectory(const fs::Directory& aDestination)
 {
     if (!this->exists())
     {
@@ -466,7 +466,7 @@ void File::moveToDirectory(const filesystem::Directory& aDestination)
         throw ostk::core::error::RuntimeError("Destination [{}] does not exist.", aDestination.toString());
     }
 
-    const filesystem::Path destinationPath = aDestination.getPath() + Path::Parse(this->getName());
+    const fs::Path destinationPath = aDestination.getPath() + Path::Parse(this->getName());
 
     try
     {
@@ -481,9 +481,9 @@ void File::moveToDirectory(const filesystem::Directory& aDestination)
 }
 
 void File::create(
-    const filesystem::PermissionSet& anOwnerPermissionSet,
-    const filesystem::PermissionSet& aGroupPermissionSet,
-    const filesystem::PermissionSet& anOtherPermissionSet
+    const fs::PermissionSet& anOwnerPermissionSet,
+    const fs::PermissionSet& aGroupPermissionSet,
+    const fs::PermissionSet& anOtherPermissionSet
 )
 {
     if (this->exists())
@@ -491,14 +491,14 @@ void File::create(
         throw ostk::core::error::RuntimeError("File [{}] already exists.", this->toString());
     }
 
-    filesystem::Directory parentDirectory = this->getParentDirectory();
+    fs::Directory parentDirectory = this->getParentDirectory();
 
     if (!parentDirectory.exists())
     {
         parentDirectory.create();
     }
 
-    const filesystem::Path filePath = path_;
+    const fs::Path filePath = path_;
 
     std::fstream fileStream;
 
@@ -552,7 +552,7 @@ File File::Undefined()
     return {Path::Undefined()};
 }
 
-File File::Path(const filesystem::Path& aPath)
+File File::Path(const fs::Path& aPath)
 {
     if (!aPath.isDefined())
     {
@@ -562,12 +562,12 @@ File File::Path(const filesystem::Path& aPath)
     return {aPath};
 }
 
-File::File(const filesystem::Path& aPath)
+File::File(const fs::Path& aPath)
     : path_(aPath),
       fileStreamUPtr_(nullptr)
 {
 }
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk

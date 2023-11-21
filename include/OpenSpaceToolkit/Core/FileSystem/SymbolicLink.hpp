@@ -7,14 +7,14 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 /// @brief
 
 // [TBI]
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk
 

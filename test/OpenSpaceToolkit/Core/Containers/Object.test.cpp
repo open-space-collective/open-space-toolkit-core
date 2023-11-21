@@ -211,8 +211,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, StreamOperator)
 TEST(OpenSpaceToolkit_Core_Containers_Object, OutputFileStreamOperator)
 {
     using ostk::core::ctnr::Object;
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         Object object = Object::Undefined();
@@ -253,8 +253,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, OutputFileStreamOperator)
 TEST(OpenSpaceToolkit_Core_Containers_Object, InputFileStreamOperator)
 {
     using ostk::core::ctnr::Object;
-    using ostk::core::filesystem::Path;
-    using ostk::core::filesystem::File;
+    using ostk::core::fs::Path;
+    using ostk::core::fs::File;
 
     {
         Object object = Object::Undefined();

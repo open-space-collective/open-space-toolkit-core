@@ -12,7 +12,7 @@ namespace ostk
 {
 namespace core
 {
-namespace filesystem
+namespace fs
 {
 
 using ostk::core::types::Unique;
@@ -268,7 +268,7 @@ class Path
     Path();
 };
 
-}  // namespace filesystem
+}  // namespace fs
 }  // namespace core
 }  // namespace ostk
 
