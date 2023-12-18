@@ -2,10 +2,9 @@
 
 ARG BASE_IMAGE_VERSION="latest"
 
-ENV TEST="test"
-
 FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION}
 
+ENV TEST="test"
 LABEL maintainer="lucas@loftorbital.com"
 
 # Dependencies
