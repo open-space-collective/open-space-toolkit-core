@@ -827,6 +827,30 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Parse)
         }
 
         {
+            const String jsonString = "-2147483649";
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON));
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON);
+
+            EXPECT_EQ(Object::Type::Integer, object.getType());
+
+            EXPECT_EQ(-2147483649, object.getInteger());
+        }
+
+        {
+            const String jsonString = "2147483648";
+
+            EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON));
+
+            const Object object = Object::Parse(jsonString, Object::Format::JSON);
+
+            EXPECT_EQ(Object::Type::Integer, object.getType());
+
+            EXPECT_EQ(2147483648, object.getInteger());
+        }
+
+        {
             const String jsonString = "0.0";
 
             EXPECT_NO_THROW(Object::Parse(jsonString, Object::Format::JSON));
