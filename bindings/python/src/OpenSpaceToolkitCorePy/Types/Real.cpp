@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <pybind11/operators.h>
+
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 
 inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
@@ -104,5 +106,6 @@ inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
 
         ;
 
-    implicitly_convertible<Real::ValueType, Real>();
+    implicitly_convertible<object, Real>();
+    implicitly_convertible<Real, Real::ValueType>();
 }
