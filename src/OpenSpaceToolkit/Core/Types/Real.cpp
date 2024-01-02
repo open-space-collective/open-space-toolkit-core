@@ -494,6 +494,16 @@ Real::operator Real::ValueType() const
     return value_;
 }
 
+// Real::operator Real::double() const
+// {
+//     if (type_ != Real::Type::Defined)
+//     {
+//         throw ostk::core::error::runtime::Undefined("Real");
+//     }
+
+//     return static_case<double>(value_);
+// }
+
 std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal)
 {
     (void)aReal;

@@ -4,8 +4,8 @@
 #include <pybind11/operators.h>
 #include <pybind11/pybind11.h>
 
-#include <OpenSpaceToolkitCorePy/Containers.cpp>
-#include <OpenSpaceToolkitCorePy/FileSystem.cpp>
+// #include <OpenSpaceToolkitCorePy/Containers.cpp>
+// #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
 #include <OpenSpaceToolkitCorePy/Types.cpp>
 
 PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
@@ -28,6 +28,6 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 
     // Add python submodules to OpenSpaceToolkitCorePy
     OpenSpaceToolkitCorePy_Types(m);
-    OpenSpaceToolkitCorePy_Containers(m);
-    OpenSpaceToolkitCorePy_FileSystem(m);
+    // OpenSpaceToolkitCorePy_Containers(m);
+    // OpenSpaceToolkitCorePy_FileSystem(m);
 }

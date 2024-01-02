@@ -75,6 +75,7 @@ class Real
     Real operator-() const;
 
     operator Real::ValueType() const;
+    // operator double() const;
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal);
 
