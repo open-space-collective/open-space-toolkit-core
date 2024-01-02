@@ -885,7 +885,7 @@ Object Object::ParseJson(const types::String& aString)
         {
             if (aJsonValue.IsInt() || aJsonValue.IsUint() || aJsonValue.IsInt64() || aJsonValue.IsUint64())
             {
-                return Object::Integer(aJsonValue.GetInt());
+                return Object::Integer(aJsonValue.GetInt()); // Fix me
             }
             else if (aJsonValue.IsDouble())
             {
