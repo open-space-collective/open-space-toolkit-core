@@ -27,3 +27,4 @@ install_requires = file: requirements.txt
 
 [options.package_data]
 ostk.core=${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}, ${LIBRARY_TARGET}.*${EXTENSION}*.so
+*=*/data/*
