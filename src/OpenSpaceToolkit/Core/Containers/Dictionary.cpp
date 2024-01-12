@@ -10,7 +10,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 Dictionary::Iterator::Iterator() {}
@@ -283,7 +283,7 @@ Dictionary::Value& Dictionary::operator[](const Dictionary::Key& aKey)
 std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictionary)
 {
     std::function<void(const Dictionary&, uint)> printDictionary;
-    std::function<void(const ctnr::Array<Object>&, uint)> printArray;
+    std::function<void(const containers::Array<Object>&, uint)> printArray;
 
     printDictionary = [&printDictionary, &printArray, &anOutputStream](const Dictionary& dictionary, uint anIndentation)
     {
@@ -312,7 +312,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
         }
     };
 
-    printArray = [&printArray, &printDictionary, &anOutputStream](const ctnr::Array<Object>& array, uint anIndentation)
+    printArray = [&printArray, &printDictionary, &anOutputStream](const containers::Array<Object>& array, uint anIndentation)
     {
         types::Integer index = 0;
 
@@ -426,6 +426,6 @@ Dictionary Dictionary::Parse(const String& aString, const Object::Format& aForma
 
 Dictionary::Dictionary() {}
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk

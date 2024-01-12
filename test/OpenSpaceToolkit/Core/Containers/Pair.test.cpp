@@ -10,7 +10,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Constructor)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::containers::Pair;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};
@@ -21,7 +21,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Getters)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::containers::Pair;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};
@@ -35,7 +35,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Setters)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::containers::Pair;
 
     {
         Pair<Integer, String> pair = {123, "abc"};
@@ -55,8 +55,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Unpack)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
-    using ostk::core::ctnr::Unpack;
+    using ostk::core::containers::Pair;
+    using ostk::core::containers::Unpack;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};

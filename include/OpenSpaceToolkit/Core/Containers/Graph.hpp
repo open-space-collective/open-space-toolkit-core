@@ -7,7 +7,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      Structure consisting of a finite set of vertices, together with a set of pairs of these
@@ -38,7 +38,7 @@ class Graph
     // [TBI]
 };
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

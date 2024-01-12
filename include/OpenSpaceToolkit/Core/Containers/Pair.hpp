@@ -15,7 +15,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 using ostk::core::types::Index;
@@ -27,7 +27,7 @@ using ostk::core::types::String;
 template <class T, class U>
 using Pair = std::pair<T, U>;
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

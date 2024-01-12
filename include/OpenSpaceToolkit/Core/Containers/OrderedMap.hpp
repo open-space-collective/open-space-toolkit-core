@@ -18,7 +18,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      Ordered map container
@@ -57,7 +57,7 @@ using OrderedMap = tsl::ordered_map<Key, T, Hash, KeyEqual, Allocator, ValueType
 
 // } ;
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

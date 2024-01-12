@@ -9,7 +9,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 namespace table
 {
@@ -123,6 +123,6 @@ void Row::associateTable(const Table* aTablePtr)
 }
 
 }  // namespace table
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk

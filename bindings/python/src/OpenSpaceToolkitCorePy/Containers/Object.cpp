@@ -13,7 +13,7 @@ inline void OpenSpaceToolkitCorePy_Containers_Object(pybind11::module& aModule)
     using ostk::core::types::Integer;
     using ostk::core::types::Real;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::containers::Object;
 
     class_<Object> object_class(aModule, "Object");
 

@@ -910,7 +910,7 @@ Real Real::Parse(const types::String& aString)
     return Real::Undefined();
 }
 
-// Real                             Real::Object                             (   const   ctnr::Object& anObject )
+// Real                             Real::Object                             (   const   containers::Object& anObject )
 // {
 
 // }

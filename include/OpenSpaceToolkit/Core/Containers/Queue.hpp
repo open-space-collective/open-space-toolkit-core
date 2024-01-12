@@ -7,7 +7,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      First-in, first-out (FIFO) container
@@ -35,7 +35,7 @@ class Queue
     // [TBI]
 };
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

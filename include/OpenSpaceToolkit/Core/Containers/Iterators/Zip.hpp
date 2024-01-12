@@ -11,7 +11,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 namespace iterators
 {
@@ -106,7 +106,7 @@ auto Zip(T&&... seqs)
 }
 
 }  // namespace iterators
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

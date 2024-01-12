@@ -21,7 +21,7 @@ namespace core
 using ostk::core::types::Unique;
 using ostk::core::types::Integer;
 using ostk::core::types::String;
-using ostk::core::ctnr::Array;
+using ostk::core::containers::Array;
 using ostk::core::logger::Severity;
 using ostk::core::logger::Source;
 using ostk::core::logger::Sink;

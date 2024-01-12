@@ -12,8 +12,8 @@
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, InitializerListConstructor)
 {
     using ostk::core::types::Size;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary dictionary = {
@@ -93,8 +93,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, InitializerListConstructor)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, CopyConstructor)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary firstDictionary = {
@@ -120,8 +120,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, CopyConstructor)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, AssignmentOperator)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary firstDictionary = {
@@ -147,8 +147,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, AssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary firstDictionary = {
@@ -205,8 +205,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, EqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary firstDictionary = {
@@ -263,8 +263,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, NotEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, KeySubscriptOperator)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary dictionary = {
@@ -298,8 +298,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, KeySubscriptOperator)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Iterators)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         const Dictionary dictionary = {
@@ -453,8 +453,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Iterators)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, IsEmpty)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         EXPECT_FALSE(Dictionary({{"Key", Object::String("Value")}}).isEmpty());
@@ -467,8 +467,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, IsEmpty)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, HasValueForKey)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         Dictionary dictionary = Dictionary::Empty();
@@ -484,8 +484,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, HasValueForKey)
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, GetSize)
 {
     using ostk::core::types::Size;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         EXPECT_EQ(Size(0), Dictionary::Empty().getSize());
@@ -524,8 +524,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, GetSize)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, AddValueForKey)
 {
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         Dictionary dictionary = Dictionary::Empty();
@@ -544,7 +544,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, AddValueForKey)
 
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Empty)
 {
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Dictionary;
 
     {
         EXPECT_TRUE(Dictionary::Empty().isEmpty());
@@ -554,8 +554,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Empty)
 TEST(OpenSpaceToolkit_Core_Containers_Dictionary, Parse)
 {
     using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     {
         String jsonString = "{}";

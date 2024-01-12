@@ -171,7 +171,7 @@ TEST(OpenSpaceToolkit_Core_Types_String, GetSubstring)
 TEST(OpenSpaceToolkit_Core_Types_String, Split)
 {
     using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::containers::Array;
 
     {
         EXPECT_EQ(Array<String>({"a", "b", "c", ""}), String("a,b,c,").split(","));

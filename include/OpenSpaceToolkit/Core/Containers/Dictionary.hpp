@@ -14,15 +14,15 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 namespace filesystem = ostk::core::filesystem;
 
 using ostk::core::types::Size;
 using ostk::core::types::String;
-using ostk::core::ctnr::OrderedMap;
-using ostk::core::ctnr::Object;
+using ostk::core::containers::OrderedMap;
+using ostk::core::containers::Object;
 
 /// @brief                      Key-value pairs container
 ///
@@ -34,7 +34,7 @@ class Dictionary
 {
    public:
     typedef types::String Key;
-    typedef ctnr::List<Dictionary::Key> Path;
+    typedef containers::List<Dictionary::Key> Path;
     typedef Object Value;
 
     class Iterator
@@ -307,7 +307,7 @@ class Dictionary
     Dictionary();
 };
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

@@ -7,7 +7,7 @@
 #include <OpenSpaceToolkit/Core/Types/Real.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 
-using ostk::core::ctnr::Array;
+using ostk::core::containers::Array;
 using ostk::core::types::Integer;
 using ostk::core::types::Real;
 using ostk::core::types::String;
@@ -81,7 +81,7 @@ inline void OpenSpaceToolkitCorePy_Containers_Array(pybind11::module& aModule)
     using ostk::core::types::Real;
     using ostk::core::types::String;
 
-    using ostk::core::ctnr::Array;
+    using ostk::core::containers::Array;
 
     aModule.def("set_int_array", overload_cast<const Array<int>&>(&setIntArray));
     aModule.def("set_double_array", overload_cast<const Array<double>&>(&setDoubleArray));

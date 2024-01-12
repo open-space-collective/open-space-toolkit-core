@@ -14,7 +14,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 using ostk::core::types::Index;
@@ -32,7 +32,7 @@ auto Unpack(Args&... args)
     return std::tuple<Args&...>(args...);
 }
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

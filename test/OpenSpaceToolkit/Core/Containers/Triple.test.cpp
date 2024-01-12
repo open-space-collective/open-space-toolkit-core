@@ -10,7 +10,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Constructor)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::containers::Triple;
 
     {
         const Triple<bool, Integer, String> triple = {true, 123, "abc"};
@@ -21,7 +21,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Getters)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::containers::Triple;
 
     {
         const Triple<bool, Integer, String> triple = {true, 123, "abc"};
@@ -36,7 +36,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Setters)
 {
     using ostk::core::types::Integer;
     using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::containers::Triple;
 
     {
         Triple<bool, Integer, String> triple = {true, 123, "abc"};
@@ -60,8 +60,8 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Setters)
 
 //     using ostk::core::types::Integer ;
 //     using ostk::core::types::String ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Unpack ;
+//     using ostk::core::containers::Triple ;
+//     using ostk::core::containers::Unpack ;
 
 //     {
 

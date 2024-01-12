@@ -6,14 +6,14 @@
 #include <OpenSpaceToolkit/Core/Containers/Object.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 
-using ostk::core::ctnr::Object;
-using ostk::core::ctnr::Dictionary;
+using ostk::core::containers::Object;
+using ostk::core::containers::Dictionary;
 
 Object objectFromPythonHandle(const pybind11::handle& anObject)
 {
     using namespace pybind11;
 
-    using ostk::core::ctnr::Array;
+    using ostk::core::containers::Array;
 
     if (isinstance<bool_>(anObject))
     {
@@ -67,8 +67,8 @@ inline void OpenSpaceToolkitCorePy_Containers_Dictionary(pybind11::module& aModu
     using namespace pybind11;
 
     using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Dictionary;
+    using ostk::core::containers::Object;
+    using ostk::core::containers::Dictionary;
 
     class_<Dictionary> dictionary_class(aModule, "Dictionary");
 

@@ -9,7 +9,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      Map container
@@ -17,7 +17,7 @@ namespace ctnr
 template <class Key, class T, class Compare = std::less<Key>, class Allocator = std::allocator<std::pair<const Key, T>>>
 using Map = std::map<Key, T, Compare, Allocator>;
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

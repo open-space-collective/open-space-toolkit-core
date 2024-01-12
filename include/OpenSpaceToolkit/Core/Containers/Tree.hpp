@@ -7,7 +7,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      Undirected graph in which any two vertices are connected by exactly one path
@@ -43,7 +43,7 @@ class Tree
     // [TBI]
 };
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

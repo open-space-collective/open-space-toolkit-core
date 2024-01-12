@@ -20,7 +20,7 @@ namespace core
 {
 
 // Forward declare Array to avoid circular dependency
-namespace ctnr
+namespace containers
 {
 template <typename T>
 class Array;
@@ -31,7 +31,7 @@ namespace types
 
 using ostk::core::types::Index;
 using ostk::core::types::Size;
-using ostk::core::ctnr::Array;
+using ostk::core::containers::Array;
 
 /// @brief                      A sequence of characters
 /// @note                       The current implementation (derived for std::string) is temporary, as this type of

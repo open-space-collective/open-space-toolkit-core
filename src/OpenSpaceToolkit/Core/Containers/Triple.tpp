@@ -4,7 +4,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 template <typename T, typename U, typename V>
@@ -19,6 +19,6 @@ Triple<T, U, V> make_triple(const T& aFirstElement, const U& aSecondElement, con
     return triple;
 }
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk

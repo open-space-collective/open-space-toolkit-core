@@ -9,7 +9,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 /// @brief                      List container
@@ -17,7 +17,7 @@ namespace ctnr
 template <class T>
 using List = std::list<T>;
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
 

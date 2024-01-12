@@ -9,7 +9,7 @@ namespace ostk
 {
 namespace core
 {
-namespace ctnr
+namespace containers
 {
 
 template <class T>
@@ -119,7 +119,7 @@ bool Array<T>::isNear(const Array<T>& anArray, const T& aTolerance) const
         return false;
     }
 
-    for (const auto elementTuple : ostk::core::ctnr::iterators::Zip(*this, anArray))
+    for (const auto elementTuple : ostk::core::containers::iterators::Zip(*this, anArray))
     {
         if (!std::get<0>(elementTuple).isNear(std::get<1>(elementTuple), aTolerance))
         {
@@ -138,7 +138,7 @@ bool Array<T>::isNear(const Array<T>& anArray, const std::function<bool(const T&
         return false;
     }
 
-    for (const auto elementTuple : ostk::core::ctnr::iterators::Zip(*this, anArray))
+    for (const auto elementTuple : ostk::core::containers::iterators::Zip(*this, anArray))
     {
         if (!aComparator(std::get<0>(elementTuple), std::get<1>(elementTuple)))
         {
@@ -373,6 +373,6 @@ Array<T> Array<T>::Empty()
     return std::move(std::vector<T>());
 }
 
-}  // namespace ctnr
+}  // namespace containers
 }  // namespace core
 }  // namespace ostk
