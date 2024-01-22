@@ -7,7 +7,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 /// @brief                      First-in, last-out (FILO) container
@@ -35,7 +35,7 @@ class Stack
     // [TBI]
 };
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

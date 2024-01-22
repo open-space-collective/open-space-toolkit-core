@@ -265,8 +265,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, GreaterThanOrEqualToOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, AdditionOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -421,8 +421,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, AdditionOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, SubtractionOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -573,8 +573,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, SubtractionOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, MultiplicationOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -755,8 +755,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, MultiplicationOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, DivisionOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -903,8 +903,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, DivisionOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, ModuloOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1073,8 +1073,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, ModuloOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, AdditionAssignmentOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1231,8 +1231,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, AdditionAssignmentOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, SubtractionAssignmentOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1385,8 +1385,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, SubtractionAssignmentOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, MultiplicationAssignmentOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1569,8 +1569,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, MultiplicationAssignmentOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, DivisionAssignmentOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1719,8 +1719,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, DivisionAssignmentOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, ModuloAssignmentOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1891,8 +1891,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, ModuloAssignmentOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, UnaryPlusOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -1941,8 +1941,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, UnaryPlusOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, UnaryMinusOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -1991,8 +1991,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, UnaryMinusOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, PrefixIncrementOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2058,8 +2058,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, PrefixIncrementOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, PrefixDecrementOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2125,8 +2125,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, PrefixDecrementOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, PostfixIncrementOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2212,8 +2212,8 @@ TEST(OpenSpaceToolkit_Core_Types_Integer, PostfixIncrementOperator)
 TEST(OpenSpaceToolkit_Core_Types_Integer, PostfixDecrementOperator)
 {
     using ostk::core::types::Integer;
-    using ostk::core::containers::Pair;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Pair;
+    using ostk::core::ctnr::Array;
 
     Array<Pair<Integer, Integer>> testCases = {
 

@@ -18,7 +18,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 class Object::Impl
@@ -44,8 +44,8 @@ class Object::Impl
     const types::Integer& accessInteger() const;
     const types::Real& accessReal() const;
     const types::String& accessString() const;
-    const containers::Dictionary& accessDictionary() const;
-    const containers::Array<Object>& accessArray() const;
+    const ctnr::Dictionary& accessDictionary() const;
+    const ctnr::Array<Object>& accessArray() const;
 
     Object::Type getType() const;
 
@@ -53,8 +53,8 @@ class Object::Impl
     types::Integer& accessInteger();
     types::Real& accessReal();
     types::String& accessString();
-    containers::Dictionary& accessDictionary();
-    containers::Array<Object>& accessArray();
+    ctnr::Dictionary& accessDictionary();
+    ctnr::Array<Object>& accessArray();
 
    private:
     boost::any value_;
@@ -97,15 +97,15 @@ bool Object::Impl::operator==(const Object::Impl& anObject) const
         return boost::any_cast<types::String>(value_) == boost::any_cast<types::String>(anObject.value_);
     }
 
-    if (value_.type() == typeid(containers::Array<containers::Object>))
+    if (value_.type() == typeid(ctnr::Array<ctnr::Object>))
     {
-        return boost::any_cast<containers::Array<containers::Object>>(value_) ==
-               boost::any_cast<containers::Array<containers::Object>>(anObject.value_);
+        return boost::any_cast<ctnr::Array<ctnr::Object>>(value_) ==
+               boost::any_cast<ctnr::Array<ctnr::Object>>(anObject.value_);
     }
 
-    if (value_.type() == typeid(containers::Dictionary))
+    if (value_.type() == typeid(ctnr::Dictionary))
     {
-        return boost::any_cast<containers::Dictionary>(value_) == boost::any_cast<containers::Dictionary>(anObject.value_);
+        return boost::any_cast<ctnr::Dictionary>(value_) == boost::any_cast<ctnr::Dictionary>(anObject.value_);
     }
 
     throw ostk::core::error::runtime::Wrong("Type");
@@ -140,12 +140,12 @@ bool Object::Impl::isString() const
 
 bool Object::Impl::isDictionary() const
 {
-    return value_.type() == typeid(containers::Dictionary);
+    return value_.type() == typeid(ctnr::Dictionary);
 }
 
 bool Object::Impl::isArray() const
 {
-    return value_.type() == typeid(containers::Array<containers::Object>);
+    return value_.type() == typeid(ctnr::Array<ctnr::Object>);
 }
 
 const bool& Object::Impl::accessBoolean() const
@@ -188,21 +188,21 @@ const types::String& Object::Impl::accessString() const
     throw ostk::core::error::RuntimeError("Object is not of type [String].");
 }
 
-const containers::Dictionary& Object::Impl::accessDictionary() const
+const ctnr::Dictionary& Object::Impl::accessDictionary() const
 {
     if (this->isDictionary())
     {
-        return boost::any_cast<const containers::Dictionary&>(value_);
+        return boost::any_cast<const ctnr::Dictionary&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].");
 }
 
-const containers::Array<Object>& Object::Impl::accessArray() const
+const ctnr::Array<Object>& Object::Impl::accessArray() const
 {
     if (this->isArray())
     {
-        return boost::any_cast<const containers::Array<Object>&>(value_);
+        return boost::any_cast<const ctnr::Array<Object>&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Array].");
@@ -283,28 +283,28 @@ types::String& Object::Impl::accessString()
     throw ostk::core::error::RuntimeError("Object is not of type [String].");
 }
 
-containers::Dictionary& Object::Impl::accessDictionary()
+ctnr::Dictionary& Object::Impl::accessDictionary()
 {
     if (this->isDictionary())
     {
-        return boost::any_cast<containers::Dictionary&>(value_);
+        return boost::any_cast<ctnr::Dictionary&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].");
 }
 
-containers::Array<Object>& Object::Impl::accessArray()
+ctnr::Array<Object>& Object::Impl::accessArray()
 {
     if (this->isArray())
     {
-        return boost::any_cast<containers::Array<Object>&>(value_);
+        return boost::any_cast<ctnr::Array<Object>&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Array].");
 }
 
-Object::Object(std::initializer_list<containers::Pair<types::String, Object>> aList)
-    : objectImplUPtr_(std::make_unique<Object::Impl>(boost::any(containers::Dictionary(aList))))
+Object::Object(std::initializer_list<ctnr::Pair<types::String, Object>> aList)
+    : objectImplUPtr_(std::make_unique<Object::Impl>(boost::any(ctnr::Dictionary(aList))))
 {
 }
 
@@ -379,15 +379,15 @@ Object& Object::operator[](const types::Index& anIndex)
 
     if (!this->isArray())
     {
-        objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(containers::Array<Object>::Empty()));
+        objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(ctnr::Array<Object>::Empty()));
     }
 
-    containers::Array<Object>& array = this->accessArray();
+    ctnr::Array<Object>& array = this->accessArray();
 
     if (anIndex >= array.getSize())
     {
-        containers::Array<Object> undefinedObjectArray =
-            containers::Array<Object>((anIndex - array.getSize() + 1), Object::Undefined());
+        ctnr::Array<Object> undefinedObjectArray =
+            ctnr::Array<Object>((anIndex - array.getSize() + 1), Object::Undefined());
 
         array.insert(array.end(), undefinedObjectArray.begin(), undefinedObjectArray.end());
     }
@@ -549,7 +549,7 @@ const types::String& Object::accessString() const
     return objectImplUPtr_->accessString();
 }
 
-const containers::Dictionary& Object::accessDictionary() const
+const ctnr::Dictionary& Object::accessDictionary() const
 {
     if (!this->isDefined())
     {
@@ -559,7 +559,7 @@ const containers::Dictionary& Object::accessDictionary() const
     return objectImplUPtr_->accessDictionary();
 }
 
-const containers::Array<Object>& Object::accessArray() const
+const ctnr::Array<Object>& Object::accessArray() const
 {
     if (!this->isDefined())
     {
@@ -594,12 +594,12 @@ types::String Object::getString() const
     return this->accessString();
 }
 
-containers::Dictionary Object::getDictionary() const
+ctnr::Dictionary Object::getDictionary() const
 {
     return this->accessDictionary();
 }
 
-containers::Array<Object> Object::getArray() const
+ctnr::Array<Object> Object::getArray() const
 {
     return this->accessArray();
 }
@@ -771,7 +771,7 @@ types::String& Object::accessString()
     return objectImplUPtr_->accessString();
 }
 
-containers::Dictionary& Object::accessDictionary()
+ctnr::Dictionary& Object::accessDictionary()
 {
     if (!this->isDefined())
     {
@@ -781,7 +781,7 @@ containers::Dictionary& Object::accessDictionary()
     return objectImplUPtr_->accessDictionary();
 }
 
-containers::Array<Object>& Object::accessArray()
+ctnr::Array<Object>& Object::accessArray()
 {
     if (!this->isDefined())
     {
@@ -816,12 +816,12 @@ Object Object::String(const types::String& aString)
     return Object(std::make_unique<Object::Impl>(boost::any(aString)));
 }
 
-Object Object::Dictionary(const containers::Dictionary& aDictionary)
+Object Object::Dictionary(const ctnr::Dictionary& aDictionary)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(aDictionary)));
 }
 
-Object Object::Array(const containers::Array<Object>& anArray)
+Object Object::Array(const ctnr::Array<Object>& anArray)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(anArray)));
 }
@@ -904,7 +904,7 @@ Object Object::ParseJson(const types::String& aString)
         }
         else if (aJsonValue.IsObject())  // Object is Object
         {
-            containers::Dictionary dictionary = containers::Dictionary::Empty();
+            ctnr::Dictionary dictionary = ctnr::Dictionary::Empty();
 
             for (const auto& objectIt : aJsonValue.GetObject())
             {
@@ -920,7 +920,7 @@ Object Object::ParseJson(const types::String& aString)
                 return Object::Array();
             }
 
-            containers::Array<Object> array = containers::Array<Object>::Empty();
+            ctnr::Array<Object> array = ctnr::Array<Object>::Empty();
 
             for (const auto& arrayElement : aJsonValue.GetArray())
             {
@@ -1005,7 +1005,7 @@ Object Object::ParseYaml(const types::String& aString)
 
             case YAML::NodeType::Sequence:
             {
-                containers::Array<Object> array = containers::Array<Object>::Empty();
+                ctnr::Array<Object> array = ctnr::Array<Object>::Empty();
 
                 for (const auto& node : aNode)
                 {
@@ -1017,7 +1017,7 @@ Object Object::ParseYaml(const types::String& aString)
 
             case YAML::NodeType::Map:
             {
-                containers::Dictionary dictionary = containers::Dictionary::Empty();
+                ctnr::Dictionary dictionary = ctnr::Dictionary::Empty();
 
                 for (const auto& node : aNode)
                 {
@@ -1149,6 +1149,6 @@ Object::Object(const Unique<Object::Impl>& anObjectImpl)
 {
 }
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk

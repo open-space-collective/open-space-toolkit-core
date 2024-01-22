@@ -16,7 +16,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 using ostk::core::types::Index;
@@ -424,7 +424,7 @@ class Array : public std::vector<T>
     static Array<T> Empty();
 };
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

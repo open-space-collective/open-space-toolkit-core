@@ -177,19 +177,19 @@ Directory Directory::getParentDirectory() const
     return File::Path(path_).getParentDirectory();
 }
 
-// containers::Array<filesystem::File>           Directory::getFiles                         ( ) const
+// ctnr::Array<filesystem::File>           Directory::getFiles                         ( ) const
 // {
 
 // }
 
-containers::Array<Directory> Directory::getDirectories() const
+ctnr::Array<Directory> Directory::getDirectories() const
 {
     if (!this->exists())
     {
         throw ostk::core::error::RuntimeError("Directory [{}] does not exist.", this->toString());
     }
 
-    containers::Array<Directory> subDirectories = containers::Array<Directory>::Empty();
+    ctnr::Array<Directory> subDirectories = ctnr::Array<Directory>::Empty();
 
     try
     {

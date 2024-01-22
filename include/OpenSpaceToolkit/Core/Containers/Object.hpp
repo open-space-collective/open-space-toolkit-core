@@ -19,7 +19,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 namespace filesystem = ostk::core::filesystem;
@@ -73,7 +73,7 @@ class Object
     ///
     /// @param              [in] aList An initializer list
 
-    Object(std::initializer_list<containers::Pair<types::String, Object>> aList);
+    Object(std::initializer_list<ctnr::Pair<types::String, Object>> aList);
 
     /// @brief              Copy constructor
     ///
@@ -142,8 +142,8 @@ class Object
     const types::Integer& accessInteger() const;
     const types::Real& accessReal() const;
     const types::String& accessString() const;
-    const containers::Dictionary& accessDictionary() const;
-    const containers::Array<Object>& accessArray() const;
+    const ctnr::Dictionary& accessDictionary() const;
+    const ctnr::Array<Object>& accessArray() const;
 
     Object::Type getType() const;
 
@@ -151,8 +151,8 @@ class Object
     types::Integer getInteger() const;
     types::Real getReal() const;
     types::String getString() const;
-    containers::Dictionary getDictionary() const;
-    containers::Array<Object> getArray() const;
+    ctnr::Dictionary getDictionary() const;
+    ctnr::Array<Object> getArray() const;
 
     types::String toString(const Object::Format& aFormat = Object::Format::Undefined) const;
     types::String getJsonString() const;
@@ -161,8 +161,8 @@ class Object
     types::Integer& accessInteger();
     types::Real& accessReal();
     types::String& accessString();
-    containers::Dictionary& accessDictionary();
-    containers::Array<Object>& accessArray();
+    ctnr::Dictionary& accessDictionary();
+    ctnr::Array<Object>& accessArray();
 
     static Object Undefined();
 
@@ -174,9 +174,9 @@ class Object
 
     static Object String(const types::String& aString = types::String::Empty());
 
-    static Object Dictionary(const containers::Dictionary& aDictionary);
+    static Object Dictionary(const ctnr::Dictionary& aDictionary);
 
-    static Object Array(const containers::Array<Object>& anArray = containers::Array<Object>::Empty());
+    static Object Array(const ctnr::Array<Object>& anArray = ctnr::Array<Object>::Empty());
 
     static Object Parse(const types::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
 
@@ -198,7 +198,7 @@ class Object
     static Object ParseYaml(const types::String& aString);
 };
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

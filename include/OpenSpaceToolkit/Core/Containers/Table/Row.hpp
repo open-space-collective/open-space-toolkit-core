@@ -12,7 +12,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 class Table;
@@ -23,8 +23,8 @@ namespace table
 using ostk::core::types::Index;
 using ostk::core::types::Size;
 using ostk::core::types::String;
-using ostk::core::containers::Array;
-using ostk::core::containers::table::Cell;
+using ostk::core::ctnr::Array;
+using ostk::core::ctnr::table::Cell;
 
 /// @brief                      Row of table container
 
@@ -69,7 +69,7 @@ class Row
 };
 
 }  // namespace table
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

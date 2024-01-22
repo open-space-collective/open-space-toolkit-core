@@ -17,7 +17,7 @@ namespace sinks
 {
 
 using ostk::core::types::String;
-using ostk::core::containers::Array;
+using ostk::core::ctnr::Array;
 using ostk::core::logger::Severity;
 
 /// @brief                      Log sink base

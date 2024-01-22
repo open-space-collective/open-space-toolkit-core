@@ -15,15 +15,15 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 using ostk::core::types::Index;
 using ostk::core::types::Size;
 using ostk::core::types::String;
-using ostk::core::containers::Array;
-using ostk::core::containers::table::Row;
-using ostk::core::containers::table::Cell;
+using ostk::core::ctnr::Array;
+using ostk::core::ctnr::table::Row;
+using ostk::core::ctnr::table::Cell;
 using ostk::core::filesystem::File;
 
 /// @brief                      Table container
@@ -263,7 +263,7 @@ class Table
     static Table LoadCsv(const File& aFile, bool hasHeader = true);
 };
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

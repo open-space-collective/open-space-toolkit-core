@@ -10,7 +10,7 @@ namespace pybind11
 namespace detail
 {
 
-using ostk::core::containers::Array;
+using ostk::core::ctnr::Array;
 
 template <typename T>
 struct type_caster<Array<T>> : list_caster<Array<T>, T>

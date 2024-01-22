@@ -15,7 +15,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 using ostk::core::types::Index;
@@ -35,7 +35,7 @@ struct Triple
 template <typename T, typename U, typename V>
 Triple<T, U, V> make_triple(const T& aFirstElement, const U& aSecondElement, const V& aThirdElement);
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 

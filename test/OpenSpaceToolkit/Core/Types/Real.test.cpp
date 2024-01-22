@@ -195,8 +195,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, GreaterThanOrEqualToOperator)
 TEST(OpenSpaceToolkit_Core_Types_Real, AdditionOperator)
 {
     using ostk::core::types::Real;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -351,8 +351,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, AdditionOperator)
 TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 {
     using ostk::core::types::Real;
-    using ostk::core::containers::Triple;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Triple;
+    using ostk::core::ctnr::Array;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -504,8 +504,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -687,8 +687,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -842,8 +842,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1002,8 +1002,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1160,8 +1160,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1345,8 +1345,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Triple ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Triple ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1502,8 +1502,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Pair ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Pair ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {
@@ -1559,8 +1559,8 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 // {
 
 //     using ostk::core::types::Real ;
-//     using ostk::core::containers::Pair ;
-//     using ostk::core::containers::Array ;
+//     using ostk::core::ctnr::Pair ;
+//     using ostk::core::ctnr::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {

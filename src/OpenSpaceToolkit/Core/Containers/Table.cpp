@@ -11,7 +11,7 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 
 Table::Table(const Array<String>& aHeader, const Array<Row>& aRowArray)
@@ -380,6 +380,6 @@ Table Table::LoadCsv(const File& aFile, bool hasHeader)
     return Table::Empty();
 }
 
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk

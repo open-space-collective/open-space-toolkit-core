@@ -342,7 +342,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 {
     using ostk::core::types::String;
-    using ostk::core::containers::Array;
+    using ostk::core::ctnr::Array;
     using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
 

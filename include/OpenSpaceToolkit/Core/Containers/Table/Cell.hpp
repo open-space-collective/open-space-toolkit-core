@@ -9,17 +9,17 @@ namespace ostk
 {
 namespace core
 {
-namespace containers
+namespace ctnr
 {
 namespace table
 {
 
 /// @brief                      Cell of table
 
-using Cell = containers::Object;
+using Cell = ctnr::Object;
 
 }  // namespace table
-}  // namespace containers
+}  // namespace ctnr
 }  // namespace core
 }  // namespace ostk
 
