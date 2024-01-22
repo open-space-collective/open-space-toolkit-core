@@ -5,8 +5,8 @@
 
 #include <ostream>
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
 namespace ostk
 {
@@ -15,8 +15,8 @@ namespace core
 namespace filesystem
 {
 
-using ostk::core::types::Unique;
-using ostk::core::types::String;
+using ostk::core::type::Unique;
+using ostk::core::type::String;
 
 /// @brief
 

@@ -1,6 +1,6 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Utilities/Print.hpp>
+#include <OpenSpaceToolkit/Core/Utility/Print.hpp>
 
 #define LENGTH 100
 

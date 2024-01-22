@@ -8,7 +8,7 @@
 #include <boost/stacktrace.hpp>
 
 #include <OpenSpaceToolkit/Core/Error/Exception.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -17,7 +17,7 @@ namespace core
 namespace error
 {
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 /// @brief                      Runtime error class
 

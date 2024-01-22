@@ -1,27 +1,27 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Pair.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Pair.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Pair, Constructor)
+TEST(OpenSpaceToolkit_Core_Container_Pair, Constructor)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Pair;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Pair, Getters)
+TEST(OpenSpaceToolkit_Core_Container_Pair, Getters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Pair;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};
@@ -31,11 +31,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Getters)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Pair, Setters)
+TEST(OpenSpaceToolkit_Core_Container_Pair, Setters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Pair;
 
     {
         Pair<Integer, String> pair = {123, "abc"};
@@ -51,12 +51,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Pair, Setters)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Pair, Unpack)
+TEST(OpenSpaceToolkit_Core_Container_Pair, Unpack)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Pair;
-    using ostk::core::ctnr::Unpack;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Pair;
+    using ostk::core::container::Unpack;
 
     {
         const Pair<Integer, String> pair = {123, "abc"};

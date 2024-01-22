@@ -1,27 +1,27 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Triple.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Triple.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Triple, Constructor)
+TEST(OpenSpaceToolkit_Core_Container_Triple, Constructor)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Triple;
 
     {
         const Triple<bool, Integer, String> triple = {true, 123, "abc"};
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Triple, Getters)
+TEST(OpenSpaceToolkit_Core_Container_Triple, Getters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Triple;
 
     {
         const Triple<bool, Integer, String> triple = {true, 123, "abc"};
@@ -32,11 +32,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Getters)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Triple, Setters)
+TEST(OpenSpaceToolkit_Core_Container_Triple, Setters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Triple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Triple;
 
     {
         Triple<bool, Integer, String> triple = {true, 123, "abc"};
@@ -55,13 +55,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Triple, Setters)
     }
 }
 
-// TEST (OpenSpaceToolkit_Core_Containers_Triple, Unpack)
+// TEST (OpenSpaceToolkit_Core_Container_Triple, Unpack)
 // {
 
-//     using ostk::core::types::Integer ;
-//     using ostk::core::types::String ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Unpack ;
+//     using ostk::core::type::Integer ;
+//     using ostk::core::type::String ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Unpack ;
 
 //     {
 

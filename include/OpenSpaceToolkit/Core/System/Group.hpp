@@ -3,7 +3,7 @@
 #ifndef __OpenSpaceToolkit_Core_System_Group__
 #define __OpenSpaceToolkit_Core_System_Group__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -12,7 +12,7 @@ namespace core
 namespace system
 {
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 /// @brief                      Group
 ///

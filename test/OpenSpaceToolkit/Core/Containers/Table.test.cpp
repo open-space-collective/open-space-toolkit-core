@@ -1,16 +1,16 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Table.hpp>
+#include <OpenSpaceToolkit/Core/Container/Table.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, Constructor)
+TEST(OpenSpaceToolkit_Core_Container_Table, Constructor)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -41,13 +41,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Constructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, CopyConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Table, CopyConstructor)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -66,13 +66,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, CopyConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, CopyAssignmentOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, CopyAssignmentOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -91,13 +91,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, CopyAssignmentOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, EqualToOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -169,13 +169,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, EqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, NotEqualToOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -247,13 +247,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, NotEqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, SubscriptOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, SubscriptOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -301,13 +301,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, SubscriptOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, FunctionCallOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, FunctionCallOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -358,13 +358,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, FunctionCallOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, StreamOperator)
+TEST(OpenSpaceToolkit_Core_Container_Table, StreamOperator)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -384,14 +384,14 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, Iterator)
+TEST(OpenSpaceToolkit_Core_Container_Table, Iterator)
 {
-    using ostk::core::types::Index;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::Index;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -433,13 +433,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Iterator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, IsEmpty)
+TEST(OpenSpaceToolkit_Core_Container_Table, IsEmpty)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -467,13 +467,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, IsEmpty)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, HasColumnWithName)
+TEST(OpenSpaceToolkit_Core_Container_Table, HasColumnWithName)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -511,13 +511,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, HasColumnWithName)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, GetRowCount)
+TEST(OpenSpaceToolkit_Core_Container_Table, GetRowCount)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -537,13 +537,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetRowCount)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, GetColumnCount)
+TEST(OpenSpaceToolkit_Core_Container_Table, GetColumnCount)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -563,13 +563,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetColumnCount)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, GetIndexOfColumnWithName)
+TEST(OpenSpaceToolkit_Core_Container_Table, GetIndexOfColumnWithName)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -593,13 +593,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, GetIndexOfColumnWithName)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, AddRow)
+TEST(OpenSpaceToolkit_Core_Container_Table, AddRow)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -631,13 +631,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, AddRow)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, Clear)
+TEST(OpenSpaceToolkit_Core_Container_Table, Clear)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
 
     {
         const Array<String> header = {"Column A", "Column B"};
@@ -657,9 +657,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Clear)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, Empty)
+TEST(OpenSpaceToolkit_Core_Container_Table, Empty)
 {
-    using ostk::core::ctnr::Table;
+    using ostk::core::container::Table;
 
     {
         EXPECT_NO_THROW(Table::Empty());
@@ -667,13 +667,13 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Empty)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
+TEST(OpenSpaceToolkit_Core_Container_Table, Load)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
-    using ostk::core::ctnr::Table;
-    using ostk::core::ctnr::table::Row;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
+    using ostk::core::container::Table;
+    using ostk::core::container::table::Row;
     using ostk::core::filesystem::Path;
     using ostk::core::filesystem::File;
 
@@ -696,7 +696,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
 
         const Table referenceTable = {header, rows};
 
-        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Containers/Table/A.csv"));
+        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Container/Table/A.csv"));
 
         const Table table = Table::Load(file);
 
@@ -725,7 +725,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Table, Load)
 
         const Table referenceTable = {header, rows};
 
-        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Containers/Table/B.csv"));
+        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Container/Table/B.csv"));
 
         const Table table = Table::Load(file);
 

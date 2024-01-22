@@ -1,12 +1,12 @@
 /// Apache License 2.0
 
-#ifndef __OpenSpaceToolkit_Core_Utilities_Print__
-#define __OpenSpaceToolkit_Core_Utilities_Print__
+#ifndef __OpenSpaceToolkit_Core_Utility_Print__
+#define __OpenSpaceToolkit_Core_Utility_Print__
 
 #include <iomanip>
 #include <ostream>
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {

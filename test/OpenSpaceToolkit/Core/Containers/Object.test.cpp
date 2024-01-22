@@ -1,19 +1,19 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Dictionary.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Object.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
+#include <OpenSpaceToolkit/Core/Container/Object.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/Logger.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/Real.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/Real.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, InitializerListConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Object, InitializerListConstructor)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = {
@@ -40,12 +40,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, InitializerListConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, CopyConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Object, CopyConstructor)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         Object firstObject = Object::Integer(123);
@@ -58,12 +58,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, CopyConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AssignmentOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, AssignmentOperator)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         Object firstObject = Object::Integer(123);
@@ -85,12 +85,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AssignmentOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, EqualToOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, EqualToOperator)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         EXPECT_TRUE(Object::Integer(123) == Object::Integer(123));
@@ -109,12 +109,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, EqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, NotEqualToOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, NotEqualToOperator)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         EXPECT_FALSE(Object::Integer(123) != Object::Integer(123));
@@ -133,10 +133,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, NotEqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, KeySubscriptOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, KeySubscriptOperator)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Object;
 
     {
         Dictionary dictionary = {{"Key", Object::String("Value")}};
@@ -147,10 +147,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, KeySubscriptOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IndexSubscriptOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, IndexSubscriptOperator)
 {
-    using ostk::core::types::Size;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Size;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Array();
@@ -189,9 +189,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IndexSubscriptOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, StreamOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, StreamOperator)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Undefined();
@@ -208,9 +208,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, OutputFileStreamOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, OutputFileStreamOperator)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
     using ostk::core::filesystem::Path;
     using ostk::core::filesystem::File;
 
@@ -250,9 +250,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, OutputFileStreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, InputFileStreamOperator)
+TEST(OpenSpaceToolkit_Core_Container_Object, InputFileStreamOperator)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
     using ostk::core::filesystem::Path;
     using ostk::core::filesystem::File;
 
@@ -287,14 +287,14 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, InputFileStreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsDefined)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsDefined)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     {
         EXPECT_TRUE(Object::Integer(123).isDefined());
@@ -309,11 +309,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsDefined)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsBoolean)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsBoolean)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     EXPECT_TRUE(Object::Boolean(true).isBoolean());
     EXPECT_TRUE(Object::Boolean(false).isBoolean());
@@ -326,12 +326,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsBoolean)
     EXPECT_FALSE(Object::Array().isBoolean());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsInteger)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsInteger)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     EXPECT_TRUE(Object::Integer(123).isInteger());
 
@@ -343,12 +343,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsInteger)
     EXPECT_FALSE(Object::Array().isInteger());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsReal)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsReal)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Real;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     EXPECT_TRUE(Object::Real(123.456).isReal());
 
@@ -360,12 +360,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsReal)
     EXPECT_FALSE(Object::Array().isReal());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsString)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsString)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::String;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     EXPECT_TRUE(Object::String("abc").isString());
     EXPECT_TRUE(Object::String("123").isString());
@@ -378,12 +378,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsString)
     EXPECT_FALSE(Object::Array().isString());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsDictionary)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsDictionary)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::String;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     {
         EXPECT_TRUE(Object::Dictionary(Dictionary::Empty()).isDictionary());
@@ -407,11 +407,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsDictionary)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, IsArray)
+TEST(OpenSpaceToolkit_Core_Container_Object, IsArray)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     {
         EXPECT_TRUE(Object::Array().isArray());
@@ -426,9 +426,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, IsArray)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessBoolean)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessBoolean)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Boolean(true);
@@ -441,9 +441,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessBoolean)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessInteger)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessInteger)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Integer(123);
@@ -456,9 +456,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessInteger)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessReal)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessReal)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Real(123.456);
@@ -471,9 +471,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessReal)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessString)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessString)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::String("abc");
@@ -486,10 +486,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessString)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessDictionary)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessDictionary)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Dictionary({{"Key", Object::String("Value")}});
@@ -502,10 +502,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessDictionary)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, AccessArray)
+TEST(OpenSpaceToolkit_Core_Container_Object, AccessArray)
 {
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Array({Object::Integer(123), Object::Real(123.456), Object::String("Value")});
@@ -534,12 +534,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, AccessArray)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetType)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetType)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         EXPECT_EQ(Object::Type::Undefined, Object::Undefined().getType());
@@ -549,9 +549,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetType)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetBoolean)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetBoolean)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Boolean(true);
@@ -572,10 +572,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetBoolean)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetInteger)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetInteger)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Integer(123);
@@ -596,10 +596,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetInteger)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetReal)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetReal)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Real;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::Real(123.456);
@@ -620,10 +620,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetReal)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetString)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetString)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         Object object = Object::String("abc");
@@ -644,11 +644,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetString)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, GetDictionary)
+TEST(OpenSpaceToolkit_Core_Container_Object, GetDictionary)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     {
         Dictionary dictionary = Dictionary::Empty();
@@ -668,17 +668,17 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, GetDictionary)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Undefined)
+TEST(OpenSpaceToolkit_Core_Container_Object, Undefined)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     EXPECT_FALSE(Object::Undefined().isDefined());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Integer)
+TEST(OpenSpaceToolkit_Core_Container_Object, Integer)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Object;
 
     EXPECT_NO_THROW(Object::Integer(123));
 
@@ -688,10 +688,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Integer)
     EXPECT_EQ(123, object.getInteger());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Real)
+TEST(OpenSpaceToolkit_Core_Container_Object, Real)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::Real;
+    using ostk::core::container::Object;
 
     EXPECT_NO_THROW(Object::Real(123.456));
 
@@ -701,10 +701,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Real)
     EXPECT_EQ(123.456, object.getReal());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, String)
+TEST(OpenSpaceToolkit_Core_Container_Object, String)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::String;
+    using ostk::core::container::Object;
 
     EXPECT_NO_THROW(Object::String("abc"));
 
@@ -714,10 +714,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, String)
     EXPECT_EQ("abc", object.getString());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Dictionary)
+TEST(OpenSpaceToolkit_Core_Container_Object, Dictionary)
 {
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Object;
 
     {
         EXPECT_NO_THROW(Object::Dictionary({{"Key", Object::String("Value")}}));
@@ -729,10 +729,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Dictionary)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Array)
+TEST(OpenSpaceToolkit_Core_Container_Object, Array)
 {
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     {
         EXPECT_NO_THROW(Object::Array({Object::Integer(123), Object::Real(123.456), Object::String("Value")}));
@@ -746,12 +746,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Array)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, Parse)
+TEST(OpenSpaceToolkit_Core_Container_Object, Parse)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Dictionary;
-    using ostk::core::ctnr::Array;
-    using ostk::core::ctnr::Object;
+    using ostk::core::type::String;
+    using ostk::core::container::Dictionary;
+    using ostk::core::container::Array;
+    using ostk::core::container::Object;
 
     // JSON
 
@@ -1158,10 +1158,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Parse)
     }
 }
 
-// TEST (OpenSpaceToolkit_Core_Containers_Object, Load)
+// TEST (OpenSpaceToolkit_Core_Container_Object, Load)
 // {
 
-//     using ostk::core::ctnr::Object ;
+//     using ostk::core::container::Object ;
 
 //     {
 
@@ -1171,9 +1171,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, Parse)
 
 // }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, StringFromType)
+TEST(OpenSpaceToolkit_Core_Container_Object, StringFromType)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     EXPECT_EQ("Undefined", Object::StringFromType(Object::Type::Undefined));
     EXPECT_EQ("Boolean", Object::StringFromType(Object::Type::Boolean));
@@ -1184,9 +1184,9 @@ TEST(OpenSpaceToolkit_Core_Containers_Object, StringFromType)
     EXPECT_EQ("Array", Object::StringFromType(Object::Type::Array));
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Object, TypeFromString)
+TEST(OpenSpaceToolkit_Core_Container_Object, TypeFromString)
 {
-    using ostk::core::ctnr::Object;
+    using ostk::core::container::Object;
 
     EXPECT_EQ(Object::Type::Undefined, Object::TypeFromString("Undefined"));
     EXPECT_EQ(Object::Type::Boolean, Object::TypeFromString("Boolean"));

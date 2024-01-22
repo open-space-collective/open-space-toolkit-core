@@ -1,31 +1,31 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/Real.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/Real.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Types_String, DefaultConstructor)
+TEST(OpenSpaceToolkit_Core_Type_String, DefaultConstructor)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_NO_THROW(String());
     EXPECT_NO_THROW(String("abc"));
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, StringConstructor)
+TEST(OpenSpaceToolkit_Core_Type_String, StringConstructor)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_NO_THROW(String(std::string("")));
     EXPECT_NO_THROW(String(std::string("abc")));
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, StringOperator)
+TEST(OpenSpaceToolkit_Core_Type_String, StringOperator)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         String A = "abc";
@@ -36,9 +36,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, StringOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, IsEmpty)
+TEST(OpenSpaceToolkit_Core_Type_String, IsEmpty)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_TRUE(String().isEmpty());
     EXPECT_TRUE(String("").isEmpty());
@@ -47,9 +47,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, IsEmpty)
     EXPECT_FALSE(String("\n").isEmpty());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, IsUppercase)
+TEST(OpenSpaceToolkit_Core_Type_String, IsUppercase)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_TRUE(String("ABC").isUppercase());
     EXPECT_TRUE(String("A_B_C").isUppercase());
@@ -63,9 +63,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, IsUppercase)
     EXPECT_FALSE(String("abcABC").isUppercase());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, IsLowercase)
+TEST(OpenSpaceToolkit_Core_Type_String, IsLowercase)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_TRUE(String("abc").isLowercase());
     EXPECT_TRUE(String("a_b_c").isLowercase());
@@ -79,9 +79,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, IsLowercase)
     EXPECT_FALSE(String("abcABC").isLowercase());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Match)
+TEST(OpenSpaceToolkit_Core_Type_String, Match)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_TRUE(String("abc").match(std::regex("^[a-z]{3}$")));
@@ -92,9 +92,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Match)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetLength)
+TEST(OpenSpaceToolkit_Core_Type_String, GetLength)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_EQ(size_t(0), String().getLength());
     EXPECT_EQ(size_t(0), String("").getLength());
@@ -103,9 +103,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, GetLength)
     EXPECT_EQ(size_t(1), String("\n").getLength());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetHead)
+TEST(OpenSpaceToolkit_Core_Type_String, GetHead)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("abc", String("abcdef").getHead(3));
@@ -119,9 +119,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, GetHead)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetTail)
+TEST(OpenSpaceToolkit_Core_Type_String, GetTail)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("def", String("abcdef").getTail(3));
@@ -135,25 +135,25 @@ TEST(OpenSpaceToolkit_Core_Types_String, GetTail)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetFirst)
+TEST(OpenSpaceToolkit_Core_Type_String, GetFirst)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_EQ('H', String("Hello World!").getFirst());
     EXPECT_ANY_THROW(String("").getFirst());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetLast)
+TEST(OpenSpaceToolkit_Core_Type_String, GetLast)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_EQ('!', String("Hello World!").getLast());
     EXPECT_ANY_THROW(String("").getLast());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, GetSubstring)
+TEST(OpenSpaceToolkit_Core_Type_String, GetSubstring)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("abc", String("abcdef").getSubstring(0, 3));
@@ -168,10 +168,10 @@ TEST(OpenSpaceToolkit_Core_Types_String, GetSubstring)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Split)
+TEST(OpenSpaceToolkit_Core_Type_String, Split)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         EXPECT_EQ(Array<String>({"a", "b", "c", ""}), String("a,b,c,").split(","));
@@ -186,9 +186,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Split)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Trim)
+TEST(OpenSpaceToolkit_Core_Type_String, Trim)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("", String("").trim());
@@ -208,9 +208,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Trim)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Replace)
+TEST(OpenSpaceToolkit_Core_Type_String, Replace)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     // Char
 
@@ -247,16 +247,16 @@ TEST(OpenSpaceToolkit_Core_Types_String, Replace)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Empty)
+TEST(OpenSpaceToolkit_Core_Type_String, Empty)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     EXPECT_TRUE(String::Empty().isEmpty());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Boolean)
+TEST(OpenSpaceToolkit_Core_Type_String, Boolean)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("True", String::Boolean(true));
@@ -264,9 +264,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Boolean)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Char)
+TEST(OpenSpaceToolkit_Core_Type_String, Char)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("a", String::Char('a'));
@@ -274,9 +274,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Char)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Replicate)
+TEST(OpenSpaceToolkit_Core_Type_String, Replicate)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("aaa", String::Replicate('a', 3));
@@ -290,11 +290,11 @@ TEST(OpenSpaceToolkit_Core_Types_String, Replicate)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, Format)
+TEST(OpenSpaceToolkit_Core_Type_String, Format)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
-    using ostk::core::types::String;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
+    using ostk::core::type::String;
 
     {
         EXPECT_EQ("", String::Format(""));
@@ -311,9 +311,9 @@ TEST(OpenSpaceToolkit_Core_Types_String, Format)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_String, SanitizeUTF8)
+TEST(OpenSpaceToolkit_Core_Type_String, SanitizeUTF8)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     {
         const String invalid = "okdata\xa0\xa1morevalid";

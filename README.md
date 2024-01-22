@@ -90,7 +90,7 @@ Documentation is available here:
 The library exhibits the following structure:
 
 ```txt
-├── Types
+├── Type
 │   ├── Integer
 │   ├── Real
 │   ├── String
@@ -102,7 +102,7 @@ The library exhibits the following structure:
 │   ├── Unique
 │   ├── Shared
 │   └── Weak
-├── Containers
+├── Container
 │   ├── Array
 │   ├── List
 │   ├── Map
@@ -138,10 +138,11 @@ The library exhibits the following structure:
 │       ├── Undefined
 │       ├── Wrong
 │       └── To Be Implemented
-└── Utilities
-    ├── Iterators
+└── Utility
+    ├── Iterator
     └── Version
 ```
+
 </p>
 </details>
 
@@ -202,8 +203,8 @@ Or to run them manually:
 
 ## Dependencies
 
-| Name        | Version  | License      | Link                                                                   |
-| ----------- | -------- | ------------ | ---------------------------------------------------------------------- |
+| Name        | Version    | License      | Link                                                                |
+| ----------- | ---------- | ------------ | ------------------------------------------------------------------- |
 | Pybind11    | `2.10.1` | BSD-3-Clause | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
 | RapidJSON   | `master` | MIT          | [rapidjson.org](http://rapidjson.org)                                  |
 | yaml-cpp    | `0.7.0`  | MIT          | [github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)       |

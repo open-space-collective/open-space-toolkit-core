@@ -2,7 +2,7 @@
 
 import pytest
 
-from ostk.core.containers import *
+from ostk.core.container import *
 
 
 def test_array_set():

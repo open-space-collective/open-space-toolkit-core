@@ -3,11 +3,11 @@
 #ifndef __OpenSpaceToolkit_Core_FileSystem_Directory__
 #define __OpenSpaceToolkit_Core_FileSystem_Directory__
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -16,9 +16,9 @@ namespace core
 namespace filesystem
 {
 
-namespace ctnr = ostk::core::ctnr;
+namespace container = ostk::core::ctnr;
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 /// @brief                      Cataloging structure which contains references to other computer files, and possibly
 /// other directories

@@ -2,16 +2,16 @@
 
 #include <cmath>
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Pair.hpp>
-#include <OpenSpaceToolkit/Core/Containers/Triple.hpp>
-#include <OpenSpaceToolkit/Core/Types/Real.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Pair.hpp>
+#include <OpenSpaceToolkit/Core/Container/Triple.hpp>
+#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Types_Real, DefaultConstructor)
+TEST(OpenSpaceToolkit_Core_Type_Real, DefaultConstructor)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real(0.0));
     EXPECT_NO_THROW(Real(1.0));
@@ -20,9 +20,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, DefaultConstructor)
     EXPECT_NO_THROW(Real(-123.0));
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, AssignmentOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, AssignmentOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real a = 0.0; (void)a;);
     EXPECT_NO_THROW(Real a = 0.0; (void)a;);
@@ -32,9 +32,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, AssignmentOperator)
     EXPECT_NO_THROW(Real a = -123.0; (void)a;);
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, EqualToOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, EqualToOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0) == Real(0.0));
@@ -56,9 +56,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, EqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, NotEqualToOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, NotEqualToOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0) != Real(1.0));
@@ -80,9 +80,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, NotEqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, LessThanOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, LessThanOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0) < Real(1.0));
@@ -108,9 +108,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, LessThanOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, LessThanOrEqualToOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, LessThanOrEqualToOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0) <= Real(1.0));
@@ -136,9 +136,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, LessThanOrEqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, GreaterThanOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, GreaterThanOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(1.0) > Real(0.0));
@@ -164,9 +164,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, GreaterThanOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, GreaterThanOrEqualToOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, GreaterThanOrEqualToOperator)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(1.0) >= Real(0.0));
@@ -192,11 +192,11 @@ TEST(OpenSpaceToolkit_Core_Types_Real, GreaterThanOrEqualToOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, AdditionOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Triple;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Real;
+    using ostk::core::container::Triple;
+    using ostk::core::container::Array;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -348,11 +348,11 @@ TEST(OpenSpaceToolkit_Core_Types_Real, AdditionOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
+TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Triple;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Real;
+    using ostk::core::container::Triple;
+    using ostk::core::container::Array;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -500,12 +500,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
     }
 }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, MultiplicationOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, MultiplicationOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -683,12 +683,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, DivisionOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, DivisionOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -838,12 +838,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, AdditionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, AdditionAssignmentOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -998,12 +998,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, SubtractionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, SubtractionAssignmentOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1156,12 +1156,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, MultiplicationAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, MultiplicationAssignmentOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1341,12 +1341,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, DivisionAssignmentOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, DivisionAssignmentOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Triple ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Triple ;
+//     using ostk::core::container::Array ;
 
 //     Array<Triple<Real, Real, Real>> testCases =
 //     {
@@ -1498,12 +1498,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, UnaryPlusOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, UnaryPlusOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Pair ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Pair ;
+//     using ostk::core::container::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {
@@ -1555,12 +1555,12 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, UnaryMinusOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, UnaryMinusOperator)
 // {
 
-//     using ostk::core::types::Real ;
-//     using ostk::core::ctnr::Pair ;
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::type::Real ;
+//     using ostk::core::container::Pair ;
+//     using ostk::core::container::Array ;
 
 //     Array<Pair<Real, Real>> testCases =
 //     {
@@ -1612,10 +1612,10 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// TEST (OpenSpaceToolkit_Core_Types_Real, ValueTypeOperator)
+// TEST (OpenSpaceToolkit_Core_Type_Real, ValueTypeOperator)
 // {
 
-//     using ostk::core::types::Real ;
+//     using ostk::core::type::Real ;
 
 //     {
 
@@ -1669,18 +1669,18 @@ TEST(OpenSpaceToolkit_Core_Types_Real, SubtractionOperator)
 
 // }
 
-// // TEST (OpenSpaceToolkit_Core_Types_Real, StreamOperator)
+// // TEST (OpenSpaceToolkit_Core_Type_Real, StreamOperator)
 // // {
 
-// //     using ostk::core::types::Real ;
+// //     using ostk::core::type::Real ;
 
 // //     FAIL() ;
 
 // // }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsDefined)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsDefined)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(0.0).isDefined());
     EXPECT_TRUE(Real(-1.0).isDefined());
@@ -1694,9 +1694,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsDefined)
     EXPECT_FALSE(Real::Undefined().isDefined());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsZero)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsZero)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(0.0).isZero());
     EXPECT_TRUE(Real(+0.0).isZero());
@@ -1710,9 +1710,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsZero)
     EXPECT_FALSE(Real::Undefined().isZero());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsPositive)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsPositive)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(0.0).isPositive());
     EXPECT_TRUE(Real(+0.0).isPositive());
@@ -1726,9 +1726,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsPositive)
     EXPECT_FALSE(Real::NegativeInfinity().isPositive());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsNegative)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsNegative)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(0.0).isNegative());
     EXPECT_TRUE(Real(-1.0).isNegative());
@@ -1742,9 +1742,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsNegative)
     EXPECT_FALSE(Real::PositiveInfinity().isNegative());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsStrictlyPositive)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsStrictlyPositive)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(+1.0).isStrictlyPositive());
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::max()).isStrictlyPositive());
@@ -1758,9 +1758,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsStrictlyPositive)
     EXPECT_FALSE(Real::NegativeInfinity().isStrictlyPositive());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsStrictlyNegative)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsStrictlyNegative)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real(-1.0).isStrictlyNegative());
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::lowest()).isStrictlyNegative());
@@ -1774,9 +1774,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsStrictlyNegative)
     EXPECT_FALSE(Real::PositiveInfinity().isStrictlyNegative());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsInfinity)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsInfinity)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity());
     EXPECT_TRUE(Real::PositiveInfinity().isInfinity());
@@ -1790,9 +1790,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsInfinity)
     EXPECT_FALSE(Real(std::numeric_limits<Real::ValueType>::max()).isInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsPositiveInfinity)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsPositiveInfinity)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real::PositiveInfinity().isPositiveInfinity());
 
@@ -1806,9 +1806,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsPositiveInfinity)
     EXPECT_FALSE(Real::NegativeInfinity().isPositiveInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsNegativeInfinity)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsNegativeInfinity)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity());
 
@@ -1822,9 +1822,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsNegativeInfinity)
     EXPECT_FALSE(Real::PositiveInfinity().isNegativeInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsInteger)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsInteger)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0).isInteger());
@@ -1859,9 +1859,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsInteger)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsFinite)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsFinite)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0).isFinite());
@@ -1883,9 +1883,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsFinite)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, IsNear)
+TEST(OpenSpaceToolkit_Core_Type_Real, IsNear)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_TRUE(Real(0.0).isNear(Real(0.0), 0.0));
@@ -1912,10 +1912,10 @@ TEST(OpenSpaceToolkit_Core_Types_Real, IsNear)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, GetSign)
+TEST(OpenSpaceToolkit_Core_Type_Real, GetSign)
 {
-    using ostk::core::types::Sign;
-    using ostk::core::types::Real;
+    using ostk::core::type::Sign;
+    using ostk::core::type::Real;
 
     EXPECT_EQ(Sign::Undefined, Real::Undefined().getSign());
     EXPECT_EQ(Sign::None, Real(0.0).getSign());
@@ -1928,9 +1928,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, GetSign)
     EXPECT_EQ(Sign::Positive, Real::PositiveInfinity().getSign());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, ToString)
+TEST(OpenSpaceToolkit_Core_Type_Real, ToString)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_EQ("0.0", Real(0.0).toString());
@@ -2157,10 +2157,10 @@ TEST(OpenSpaceToolkit_Core_Types_Real, ToString)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, ToInteger)
+TEST(OpenSpaceToolkit_Core_Type_Real, ToInteger)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
 
     {
         EXPECT_EQ(0, Real(0.0).toInteger());
@@ -2179,9 +2179,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, ToInteger)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Abs)
+TEST(OpenSpaceToolkit_Core_Type_Real, Abs)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_EQ(0.0, Real(0.0).abs());
@@ -2209,9 +2209,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Abs)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Floor)
+TEST(OpenSpaceToolkit_Core_Type_Real, Floor)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_EQ(+0, Real(0.0).floor());
@@ -2234,9 +2234,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Floor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Sqrt)
+TEST(OpenSpaceToolkit_Core_Type_Real, Sqrt)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     {
         EXPECT_EQ(0.0, Real(0.0).sqrt());
@@ -2269,9 +2269,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Sqrt)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Undefined)
+TEST(OpenSpaceToolkit_Core_Type_Real, Undefined)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Undefined());
 
@@ -2279,9 +2279,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Undefined)
     EXPECT_FALSE(Real::Undefined().isInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Zero)
+TEST(OpenSpaceToolkit_Core_Type_Real, Zero)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Zero());
     EXPECT_TRUE(Real::Zero().isDefined());
@@ -2289,9 +2289,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Zero)
     EXPECT_EQ(0.0, Real::Zero());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Pi)
+TEST(OpenSpaceToolkit_Core_Type_Real, Pi)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Pi());
     EXPECT_TRUE(Real::Pi().isDefined());
@@ -2299,9 +2299,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Pi)
     EXPECT_EQ(M_PI, Real::Pi());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, HalfPi)
+TEST(OpenSpaceToolkit_Core_Type_Real, HalfPi)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::HalfPi());
     EXPECT_TRUE(Real::HalfPi().isDefined());
@@ -2309,9 +2309,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, HalfPi)
     EXPECT_EQ(M_PI / 2.0, Real::HalfPi());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, TwoPi)
+TEST(OpenSpaceToolkit_Core_Type_Real, TwoPi)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::TwoPi());
     EXPECT_TRUE(Real::TwoPi().isDefined());
@@ -2319,9 +2319,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, TwoPi)
     EXPECT_EQ(2.0 * M_PI, Real::TwoPi());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Epsilon)
+TEST(OpenSpaceToolkit_Core_Type_Real, Epsilon)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Epsilon());
     EXPECT_TRUE(Real::Epsilon().isDefined());
@@ -2330,9 +2330,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Epsilon)
     EXPECT_EQ(1e-15, Real::Epsilon());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, PositiveInfinity)
+TEST(OpenSpaceToolkit_Core_Type_Real, PositiveInfinity)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::PositiveInfinity());
 
@@ -2341,9 +2341,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, PositiveInfinity)
     EXPECT_TRUE(Real::PositiveInfinity().isPositiveInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, NegativeInfinity)
+TEST(OpenSpaceToolkit_Core_Type_Real, NegativeInfinity)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::NegativeInfinity());
 
@@ -2352,10 +2352,10 @@ TEST(OpenSpaceToolkit_Core_Types_Real, NegativeInfinity)
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity());
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Integer)
+TEST(OpenSpaceToolkit_Core_Type_Real, Integer)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::Real;
+    using ostk::core::type::Integer;
+    using ostk::core::type::Real;
 
     {
         EXPECT_NO_THROW(Real::Integer(Integer(123)));
@@ -2374,9 +2374,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, Integer)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, CanParse)
+TEST(OpenSpaceToolkit_Core_Type_Real, CanParse)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_TRUE(Real::CanParse("Undefined"));
 
@@ -2417,9 +2417,9 @@ TEST(OpenSpaceToolkit_Core_Types_Real, CanParse)
     EXPECT_FALSE(Real::CanParse("+1e600"));
 }
 
-TEST(OpenSpaceToolkit_Core_Types_Real, Parse)
+TEST(OpenSpaceToolkit_Core_Type_Real, Parse)
 {
-    using ostk::core::types::Real;
+    using ostk::core::type::Real;
 
     EXPECT_FALSE(Real::Parse("Undefined").isDefined());
     EXPECT_FALSE(Real::Parse("NaN").isDefined());

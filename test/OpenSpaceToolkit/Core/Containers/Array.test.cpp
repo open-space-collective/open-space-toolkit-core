@@ -1,20 +1,20 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Types/Index.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/Real.hpp>
-#include <OpenSpaceToolkit/Core/Types/Size.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Type/Index.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/Real.hpp>
+#include <OpenSpaceToolkit/Core/Type/Size.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, VectorConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Array, VectorConstructor)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const std::vector<Integer> aVector = {1, 2, 3};
@@ -45,12 +45,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, VectorConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, SizeValueConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Array, SizeValueConstructor)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Size size = 3;
@@ -83,12 +83,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, SizeValueConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, InitializerListConstructor)
+TEST(OpenSpaceToolkit_Core_Container_Array, InitializerListConstructor)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         EXPECT_NO_THROW(Array<Integer> array({1, 2, 3}); (void)array;);
@@ -115,10 +115,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, InitializerListConstructor)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, AdditionOperator)
+TEST(OpenSpaceToolkit_Core_Container_Array, AdditionOperator)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> firstArray({-4, -3, -2, -1});
@@ -130,11 +130,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, AdditionOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, IsEmpty)
+TEST(OpenSpaceToolkit_Core_Container_Array, IsEmpty)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         EXPECT_FALSE(Array<Integer>({1, 2, 3}).isEmpty());
@@ -146,11 +146,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, IsEmpty)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Contains)
+TEST(OpenSpaceToolkit_Core_Container_Array, Contains)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({1, 2, 3});
@@ -174,10 +174,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Contains)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, IsNear)
+TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
 {
-    using ostk::core::types::Real;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Real;
+    using ostk::core::container::Array;
 
     // Tolerance
 
@@ -224,11 +224,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, IsNear)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, AccessFirst)
+TEST(OpenSpaceToolkit_Core_Container_Array, AccessFirst)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({1, 2, 3});
@@ -253,11 +253,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, AccessFirst)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, AccessLast)
+TEST(OpenSpaceToolkit_Core_Container_Array, AccessLast)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({1, 2, 3});
@@ -282,12 +282,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, AccessLast)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, GetSize)
+TEST(OpenSpaceToolkit_Core_Container_Array, GetSize)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     EXPECT_EQ(Size(0), Array<Integer>({}).getSize());
     EXPECT_EQ(Size(0), Array<Integer>::Empty().getSize());
@@ -296,12 +296,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, GetSize)
     EXPECT_EQ(Size(2), Array<String>({"abc", "def"}).getSize());
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, GetIndexOf)
+TEST(OpenSpaceToolkit_Core_Container_Array, GetIndexOf)
 {
-    using ostk::core::types::Index;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Index;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({1, 2, 3});
@@ -325,11 +325,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, GetIndexOf)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, ToString)
+TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({1, 2, 3});
@@ -349,21 +349,21 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, ToString)
     }
 }
 
-// TEST (OpenSpaceToolkit_Core_Containers_Array, GetObject)
+// TEST (OpenSpaceToolkit_Core_Container_Array, GetObject)
 // {
 
-//     using ostk::core::ctnr::Array ;
+//     using ostk::core::container::Array ;
 
 //     FAIL() ;
 
 // }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, AccessWhere)
+TEST(OpenSpaceToolkit_Core_Container_Array, AccessWhere)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
@@ -387,12 +387,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, AccessWhere)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, GetWhere)
+TEST(OpenSpaceToolkit_Core_Container_Array, GetWhere)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
@@ -418,11 +418,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, GetWhere)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Find)
+TEST(OpenSpaceToolkit_Core_Container_Array, Find)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
@@ -467,11 +467,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Find)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Map)
+TEST(OpenSpaceToolkit_Core_Container_Array, Map)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         const Array<String> strings = {"1", "2", "3"};
@@ -502,10 +502,10 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Map)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Reduce)
+TEST(OpenSpaceToolkit_Core_Container_Array, Reduce)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> integers = {1, 2, 3};
@@ -533,12 +533,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Reduce)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Add)
+TEST(OpenSpaceToolkit_Core_Container_Array, Add)
 {
-    using ostk::core::types::Index;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Index;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         Array<Integer> array({1, 2, 3});
@@ -569,12 +569,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Add)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Remove)
+TEST(OpenSpaceToolkit_Core_Container_Array, Remove)
 {
-    using ostk::core::types::Index;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Index;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         Array<Integer> array({1, 2, 3});
@@ -615,12 +615,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Remove)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, MergeWith)
+TEST(OpenSpaceToolkit_Core_Container_Array, MergeWith)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         Array<Integer> firstArray({-4, -3, -2, -1});
@@ -659,12 +659,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, MergeWith)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, RemoveWhere)
+TEST(OpenSpaceToolkit_Core_Container_Array, RemoveWhere)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
 
     {
         Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
@@ -680,11 +680,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, RemoveWhere)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Empty)
+TEST(OpenSpaceToolkit_Core_Container_Array, Empty)
 {
-    using ostk::core::types::Size;
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Size;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         EXPECT_NO_THROW(Array<Integer> array = Array<Integer>::Empty(); (void)array;);
@@ -693,11 +693,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Empty)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Array, Zip)
+TEST(OpenSpaceToolkit_Core_Container_Array, Zip)
 {
-    using ostk::core::types::Index;
-    using ostk::core::types::Integer;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::Index;
+    using ostk::core::type::Integer;
+    using ostk::core::container::Array;
 
     {
         const Array<Integer> firstArray = {{-4, -3, -2, -1, +0, +1, +2, +3, +4}};
@@ -705,7 +705,7 @@ TEST(OpenSpaceToolkit_Core_Containers_Array, Zip)
 
         Index index = 0;
 
-        for (const auto tuple : ostk::core::ctnr::iterators::Zip(firstArray, secondArray))
+        for (const auto tuple : ostk::core::container::iterator::Zip(firstArray, secondArray))
         {
             EXPECT_EQ(std::get<0>(tuple) * 2, std::get<1>(tuple));
 

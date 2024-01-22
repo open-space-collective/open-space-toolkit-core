@@ -1,27 +1,27 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Tuple.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Tuple.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
 
-TEST(OpenSpaceToolkit_Core_Containers_Tuple, Constructor)
+TEST(OpenSpaceToolkit_Core_Container_Tuple, Constructor)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Tuple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Tuple;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Tuple, Getters)
+TEST(OpenSpaceToolkit_Core_Container_Tuple, Getters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Tuple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Tuple;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
@@ -33,11 +33,11 @@ TEST(OpenSpaceToolkit_Core_Containers_Tuple, Getters)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Tuple, Setters)
+TEST(OpenSpaceToolkit_Core_Container_Tuple, Setters)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Tuple;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Tuple;
 
     {
         Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
@@ -57,12 +57,12 @@ TEST(OpenSpaceToolkit_Core_Containers_Tuple, Setters)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Containers_Tuple, Unpack)
+TEST(OpenSpaceToolkit_Core_Container_Tuple, Unpack)
 {
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Tuple;
-    using ostk::core::ctnr::Unpack;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
+    using ostk::core::container::Tuple;
+    using ostk::core::container::Unpack;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
