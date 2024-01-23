@@ -4,7 +4,7 @@
 #define __OpenSpaceToolkit_Core_Error_Runtime_Undefined__
 
 #include <OpenSpaceToolkit/Core/Error/RuntimeError.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -15,7 +15,7 @@ namespace error
 namespace runtime
 {
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 /// @brief                      Undefined variable error class
 

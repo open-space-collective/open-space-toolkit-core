@@ -2,7 +2,7 @@
 
 SET (OpenSpaceToolkitCore_ROOT_DIR ${OpenSpaceToolkitCore_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
-FIND_PATH (OpenSpaceToolkitCore_INCLUDE_DIR "OpenSpaceToolkit/Core/Utilities.hpp" PATHS ${OpenSpaceToolkitCore_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_PATH (OpenSpaceToolkitCore_INCLUDE_DIR "OpenSpaceToolkit/Core/Utility.hpp" PATHS ${OpenSpaceToolkitCore_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
 FIND_LIBRARY (OpenSpaceToolkitCore_LIBRARY NAMES "libopen-space-toolkit-core.so" PATHS ${OpenSpaceToolkitCore_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
 
 # MESSAGE (STATUS "OpenSpaceToolkitCore_ROOT_DIR = ${OpenSpaceToolkitCore_ROOT_DIR}")

@@ -2,7 +2,7 @@
 
 import pytest
 
-from ostk.core.types import Sign
+from ostk.core.type import Sign
 
 
 def test_sign_enum():

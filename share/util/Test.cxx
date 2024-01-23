@@ -31,7 +31,7 @@ int main()
 {
     LOG_SCOPE("Test");
 
-    using ostk::core::types::Integer;
+    using ostk::core::type::Integer;
     using ostk::core::Logger;
     using ostk::core::logger::Severity;
 

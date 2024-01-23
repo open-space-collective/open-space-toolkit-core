@@ -5,23 +5,23 @@
 
 #include <boost/log/attributes.hpp>
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Pump.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Sink.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Source.hpp>
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
 namespace core
 {
 
-using ostk::core::types::Unique;
-using ostk::core::types::Integer;
-using ostk::core::types::String;
-using ostk::core::ctnr::Array;
+using ostk::core::type::Unique;
+using ostk::core::type::Integer;
+using ostk::core::type::String;
+using ostk::core::container::Array;
 using ostk::core::logger::Severity;
 using ostk::core::logger::Source;
 using ostk::core::logger::Sink;

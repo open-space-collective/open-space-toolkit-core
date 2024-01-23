@@ -2,8 +2,8 @@
 
 import pytest
 
-from ostk.core.containers import Dictionary
-from ostk.core.containers import Object
+from ostk.core.container import Dictionary
+from ostk.core.container import Object
 
 
 @pytest.fixture

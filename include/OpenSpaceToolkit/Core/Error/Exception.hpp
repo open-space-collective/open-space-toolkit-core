@@ -5,7 +5,7 @@
 
 #include <exception>
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -14,7 +14,7 @@ namespace core
 namespace error
 {
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 /// @brief                      Exception class
 

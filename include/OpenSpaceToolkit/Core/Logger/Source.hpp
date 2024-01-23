@@ -3,9 +3,9 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Source__
 #define __OpenSpaceToolkit_Core_Logger_Source__
 
-#include <OpenSpaceToolkit/Core/Logger/Sources/Source.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Source/Source.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
 namespace ostk
 {
@@ -14,8 +14,8 @@ namespace core
 namespace logger
 {
 
-using ostk::core::types::Unique;
-using ostk::core::types::String;
+using ostk::core::type::Unique;
+using ostk::core::type::String;
 
 /// @brief                      Log source
 
@@ -34,7 +34,7 @@ class Source
 
     // private:
 
-    Unique<sources::Source> sourceUPtr_;
+    Unique<source::Source> sourceUPtr_;
 };
 
 }  // namespace logger

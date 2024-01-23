@@ -8,8 +8,8 @@
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
-#include <OpenSpaceToolkit/Core/Types/Unique.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
 namespace ostk
 {
@@ -20,7 +20,7 @@ namespace filesystem
 
 class Directory;
 
-using ostk::core::types::Unique;
+using ostk::core::type::Unique;
 
 /// @brief                      Computer resource for recording data discretely in a computer storage device
 ///

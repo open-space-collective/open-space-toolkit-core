@@ -1,17 +1,17 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkitCorePy/Utilities/ShiftToString.hpp>
+#include <OpenSpaceToolkitCorePy/Utility/ShiftToString.hpp>
 #include <pybind11/operators.h>
 #include <pybind11/pybind11.h>
 
-#include <OpenSpaceToolkitCorePy/Containers.cpp>
+#include <OpenSpaceToolkitCorePy/Container.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
-#include <OpenSpaceToolkitCorePy/Types.cpp>
+#include <OpenSpaceToolkitCorePy/Type.cpp>
 
 PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 {
     // Add optional docstring for package OpenSpaceToolkitCorePy
-    m.doc() = "Fundamental types, containers and utilities for OpenSpaceToolkit.";
+    m.doc() = "Fundamental types, container and utility for OpenSpaceToolkit.";
 
     // Add __path__ attribute to python package
     m.attr("__path__") = "ostk.core";
@@ -27,7 +27,7 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 #endif
 
     // Add python submodules to OpenSpaceToolkitCorePy
-    OpenSpaceToolkitCorePy_Types(m);
-    OpenSpaceToolkitCorePy_Containers(m);
+    OpenSpaceToolkitCorePy_Type(m);
+    OpenSpaceToolkitCorePy_Container(m);
     OpenSpaceToolkitCorePy_FileSystem(m);
 }

@@ -150,10 +150,10 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ContainsFileWithName)
         const Directory directory = Directory::Path(Path::Parse("/app/include/OpenSpaceToolkit/Core"));
 
         EXPECT_TRUE(directory.containsFileWithName("Error.hpp"));
-        EXPECT_TRUE(directory.containsFileWithName("Utilities.hpp"));
+        EXPECT_TRUE(directory.containsFileWithName("Utility.hpp"));
 
         EXPECT_FALSE(directory.containsFileWithName("Error"));
-        EXPECT_FALSE(directory.containsFileWithName("Utilities"));
+        EXPECT_FALSE(directory.containsFileWithName("Utility"));
         EXPECT_FALSE(directory.containsFileWithName("abc"));
     }
 
@@ -341,8 +341,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 {
-    using ostk::core::types::String;
-    using ostk::core::ctnr::Array;
+    using ostk::core::type::String;
+    using ostk::core::container::Array;
     using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
 

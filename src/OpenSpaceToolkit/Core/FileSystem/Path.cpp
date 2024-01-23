@@ -5,7 +5,7 @@
 
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
-#include <OpenSpaceToolkit/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Utility.hpp>
 
 namespace ostk
 {
@@ -285,7 +285,7 @@ Path Path::Parse(const String& aString)
 }
 
 // Path                            Path::Strings                               (   const
-// std::initializer_list<types::String> aStringList                        )
+// std::initializer_list<type::String> aStringList                        )
 // {
 
 // }
