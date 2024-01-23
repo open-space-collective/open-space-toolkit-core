@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['core_506',['core',['../namespaceostk_1_1core.html',1,'ostk']]],
-  ['ctnr_507',['ctnr',['../namespaceostk_1_1core_1_1ctnr.html',1,'ostk::core']]],
+  ['container_506',['container',['../namespaceostk_1_1core_1_1container.html',1,'ostk::core']]],
+  ['core_507',['core',['../namespaceostk_1_1core.html',1,'ostk']]],
   ['error_508',['error',['../namespaceostk_1_1core_1_1error.html',1,'ostk::core']]],
   ['filesystem_509',['filesystem',['../namespaceostk_1_1core_1_1filesystem.html',1,'ostk::core']]],
-  ['iterators_510',['iterators',['../namespaceostk_1_1core_1_1ctnr_1_1iterators.html',1,'ostk::core::ctnr']]],
+  ['iterator_510',['iterator',['../namespaceostk_1_1core_1_1container_1_1iterator.html',1,'ostk::core::container']]],
   ['logger_511',['logger',['../namespaceostk_1_1core_1_1logger.html',1,'ostk::core']]],
   ['ostk_512',['ostk',['../namespaceostk.html',1,'']]],
   ['runtime_513',['runtime',['../namespaceostk_1_1core_1_1error_1_1runtime.html',1,'ostk::core::error']]],
-  ['sinks_514',['sinks',['../namespaceostk_1_1core_1_1logger_1_1sinks.html',1,'ostk::core::logger']]],
-  ['sources_515',['sources',['../namespaceostk_1_1core_1_1logger_1_1sources.html',1,'ostk::core::logger']]],
+  ['sink_514',['sink',['../namespaceostk_1_1core_1_1logger_1_1sink.html',1,'ostk::core::logger']]],
+  ['source_515',['source',['../namespaceostk_1_1core_1_1logger_1_1source.html',1,'ostk::core::logger']]],
   ['system_516',['system',['../namespaceostk_1_1core_1_1system.html',1,'ostk::core']]],
-  ['table_517',['table',['../namespaceostk_1_1core_1_1ctnr_1_1table.html',1,'ostk::core::ctnr']]],
-  ['types_518',['types',['../namespaceostk_1_1core_1_1types.html',1,'ostk::core']]],
+  ['table_517',['table',['../namespaceostk_1_1core_1_1container_1_1table.html',1,'ostk::core::container']]],
+  ['type_518',['type',['../namespaceostk_1_1core_1_1type.html',1,'ostk::core']]],
   ['utils_519',['utils',['../namespaceostk_1_1core_1_1utils.html',1,'ostk::core']]]
 ];

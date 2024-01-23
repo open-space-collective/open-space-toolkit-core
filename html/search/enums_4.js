@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_921',['Type',['../classostk_1_1core_1_1ctnr_1_1_object.html#a49b70d4dce2d24126cd1df9aaf04d1ea',1,'ostk::core::ctnr::Object']]]
+  ['type_921',['Type',['../classostk_1_1core_1_1container_1_1_object.html#a7aae445503d92c87f3bc4434c50c6e42',1,'ostk::core::container::Object']]]
 ];

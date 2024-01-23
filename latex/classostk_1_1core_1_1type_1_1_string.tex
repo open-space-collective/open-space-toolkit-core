@@ -1,0 +1,350 @@
+\hypertarget{classostk_1_1core_1_1type_1_1_string}{}\doxysection{ostk\+::core\+::type\+::String Class Reference}
+\label{classostk_1_1core_1_1type_1_1_string}\index{ostk::core::type::String@{ostk::core::type::String}}
+
+
+A sequence of characters.  
+
+
+
+
+{\ttfamily \#include $<$String.\+hpp$>$}
+
+Inheritance diagram for ostk\+::core\+::type\+::String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classostk_1_1core_1_1type_1_1_string}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a207952f09a96c355722a56cde16fed1f}{String}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac189ff8f059b1444cdb6d216376a3919}{String}} (const std\+::string \&a\+String)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a6eaf1894a8ee8d15ed3d06d73abe0119}{$\sim$\+String}} ()
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a7c29ece5a4c0db35b4c30d61788fe729}{is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_aabf70678b4fb31beae28af913ffee684}{is\+Uppercase}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a197b0c1b6825a60cf375f49cafd6d550}{is\+Lowercase}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}{match}} (const std\+::regex \&a\+Regular\+Expression) const
+\begin{DoxyCompactList}\small\item\em Returns whether the string matches a regular expression. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac08a31fa6b0582d4a9b223a3927d354b}{get\+Length}} () const
+\item 
+char \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a5ef9410f9ffe233c83cb88b0ce3c1441}{get\+First}} () const
+\item 
+char \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a1d611ad2b7ab90bf971eba5e805bdd0c}{get\+Last}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_aceab98c3ab4a61de80b05da7152975a6}{get\+Head}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&a\+Length) const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a4b5ceca3c74ddf5075f35709e77e6c00}{get\+Tail}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&a\+Length) const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ae90137d2ec2634da5fbe0c32e66a3672}{get\+Substring}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} \&a\+Start\+Position, const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&a\+Length) const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ae6af9be350ec2401f961a6b042f84c8a}{split}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Delimiter) const
+\begin{DoxyCompactList}\small\item\em Split the \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} into tokens separated by the given delimeter. E.\+X. \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}}(\char`\"{}1sat2satredsatbluesat\char`\"{}).split(\char`\"{}sat\char`\"{}) -\/$>$ \mbox{[}\char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}red\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}\char`\"{}\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a44cc2827faafa67f59e3168f8dcbbbfb}{trim}} ()
+\begin{DoxyCompactList}\small\item\em Removes whitespace from both ends. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac4d69227a1cb3c0b4d9e3501e01b3aed}{replace}} (const char a\+Character, const char a\+New\+Character)
+\begin{DoxyCompactList}\small\item\em Replace all occurences of character by other character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a368cc0fbfe2f92586a2eeb3616b47da7}{replace}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+New\+String)
+\begin{DoxyCompactList}\small\item\em Replace all occurences of string by other string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd999bef0746e38e05bb6432fd51dbb}{Empty}} ()
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abb50863baac9f80e727e4533ffba92e4}{Boolean}} (bool a\+Boolean)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ae8c906ec919f36655e3c4f54786adb95}{Char}} (char a\+Character)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_af11502e59dc726425d58e94f2b08ace6}{Replicate}} (char a\+Character, \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} a\+Count)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a015a3f0091b792bfae001904d7b31aea}{Replicate}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String, \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} a\+Count)
+\item 
+static bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a073128d2588b7f95bbba37c84b6f700f}{Is\+Valid\+U\+T\+F8}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Checks if the string contains any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a858b680569fe684d75d7f2fe25959faa}{Sanitize\+U\+T\+F8}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Sanitizes the string by removing any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{Format}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
+\begin{DoxyCompactList}\small\item\em Create formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A sequence of characters. 
+
+\begin{DoxyNote}{Note}
+The current implementation (derived for std\+::string) is temporary, as this type of inheritance this is not recommended. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a207952f09a96c355722a56cde16fed1f}\label{classostk_1_1core_1_1type_1_1_string_a207952f09a96c355722a56cde16fed1f}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!String@{String}}
+\index{String@{String}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::type\+::\+String\+::\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ac189ff8f059b1444cdb6d216376a3919}\label{classostk_1_1core_1_1type_1_1_string_ac189ff8f059b1444cdb6d216376a3919}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!String@{String}}
+\index{String@{String}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::type\+::\+String\+::\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+String }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a6eaf1894a8ee8d15ed3d06d73abe0119}\label{classostk_1_1core_1_1type_1_1_string_a6eaf1894a8ee8d15ed3d06d73abe0119}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!````~String@{$\sim$String}}
+\index{````~String@{$\sim$String}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{$\sim$String()}{~String()}}
+{\footnotesize\ttfamily ostk\+::core\+::type\+::\+String\+::$\sim$\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_abb50863baac9f80e727e4533ffba92e4}\label{classostk_1_1core_1_1type_1_1_string_abb50863baac9f80e727e4533ffba92e4}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Boolean@{Boolean}}
+\index{Boolean@{Boolean}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Boolean()}{Boolean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Boolean (\begin{DoxyParamCaption}\item[{bool}]{a\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ae8c906ec919f36655e3c4f54786adb95}\label{classostk_1_1core_1_1type_1_1_string_ae8c906ec919f36655e3c4f54786adb95}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Char@{Char}}
+\index{Char@{Char}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Char()}{Char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Char (\begin{DoxyParamCaption}\item[{char}]{a\+Character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_abcd999bef0746e38e05bb6432fd51dbb}\label{classostk_1_1core_1_1type_1_1_string_abcd999bef0746e38e05bb6432fd51dbb}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}\label{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Format@{Format}}
+\index{Format@{Format}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Format()}{Format()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create formatted string. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{String::Format}}(\textcolor{stringliteral}{"\{0\}, \{1\}!"}, \textcolor{stringliteral}{"Hello"}, \textcolor{stringliteral}{"World"}) ; \textcolor{comment}{// "Hello, World!"}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{String::Format}}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123}}
+\DoxyCodeLine{satellites!\textcolor{stringliteral}{"}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Format} & A format \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Argument\+List} & A list of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a5ef9410f9ffe233c83cb88b0ce3c1441}\label{classostk_1_1core_1_1type_1_1_string_a5ef9410f9ffe233c83cb88b0ce3c1441}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getFirst@{getFirst}}
+\index{getFirst@{getFirst}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getFirst()}{getFirst()}}
+{\footnotesize\ttfamily char ostk\+::core\+::type\+::\+String\+::get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_aceab98c3ab4a61de80b05da7152975a6}\label{classostk_1_1core_1_1type_1_1_string_aceab98c3ab4a61de80b05da7152975a6}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getHead@{getHead}}
+\index{getHead@{getHead}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::get\+Head (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&}]{a\+Length }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a1d611ad2b7ab90bf971eba5e805bdd0c}\label{classostk_1_1core_1_1type_1_1_string_a1d611ad2b7ab90bf971eba5e805bdd0c}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getLast@{getLast}}
+\index{getLast@{getLast}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getLast()}{getLast()}}
+{\footnotesize\ttfamily char ostk\+::core\+::type\+::\+String\+::get\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ac08a31fa6b0582d4a9b223a3927d354b}\label{classostk_1_1core_1_1type_1_1_string_ac08a31fa6b0582d4a9b223a3927d354b}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getLength@{getLength}}
+\index{getLength@{getLength}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} ostk\+::core\+::type\+::\+String\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ae90137d2ec2634da5fbe0c32e66a3672}\label{classostk_1_1core_1_1type_1_1_string_ae90137d2ec2634da5fbe0c32e66a3672}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getSubstring@{getSubstring}}
+\index{getSubstring@{getSubstring}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getSubstring()}{getSubstring()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::get\+Substring (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} \&}]{a\+Start\+Position,  }\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&}]{a\+Length }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a4b5ceca3c74ddf5075f35709e77e6c00}\label{classostk_1_1core_1_1type_1_1_string_a4b5ceca3c74ddf5075f35709e77e6c00}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!getTail@{getTail}}
+\index{getTail@{getTail}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{getTail()}{getTail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::get\+Tail (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \&}]{a\+Length }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a7c29ece5a4c0db35b4c30d61788fe729}\label{classostk_1_1core_1_1type_1_1_string_a7c29ece5a4c0db35b4c30d61788fe729}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a197b0c1b6825a60cf375f49cafd6d550}\label{classostk_1_1core_1_1type_1_1_string_a197b0c1b6825a60cf375f49cafd6d550}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!isLowercase@{isLowercase}}
+\index{isLowercase@{isLowercase}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{isLowercase()}{isLowercase()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::is\+Lowercase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_aabf70678b4fb31beae28af913ffee684}\label{classostk_1_1core_1_1type_1_1_string_aabf70678b4fb31beae28af913ffee684}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!isUppercase@{isUppercase}}
+\index{isUppercase@{isUppercase}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{isUppercase()}{isUppercase()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::is\+Uppercase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a073128d2588b7f95bbba37c84b6f700f}\label{classostk_1_1core_1_1type_1_1_string_a073128d2588b7f95bbba37c84b6f700f}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!IsValidUTF8@{IsValidUTF8}}
+\index{IsValidUTF8@{IsValidUTF8}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{IsValidUTF8()}{IsValidUTF8()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::\+Is\+Valid\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if the string contains any invalid U\+T\+F-\/8 characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if valid U\+T\+F-\/8 string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}\label{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!match@{match}}
+\index{match@{match}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::match (\begin{DoxyParamCaption}\item[{const std\+::regex \&}]{a\+Regular\+Expression }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the string matches a regular expression. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a207952f09a96c355722a56cde16fed1f}{String}}(\textcolor{stringliteral}{"abc"}).match(std::regex(\textcolor{stringliteral}{"\string^[a-\/z]\{3\}\$"})) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Regular\+Expression} & A regular expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if matches regular expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ac4d69227a1cb3c0b4d9e3501e01b3aed}\label{classostk_1_1core_1_1type_1_1_string_ac4d69227a1cb3c0b4d9e3501e01b3aed}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!replace@{replace}}
+\index{replace@{replace}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& ostk\+::core\+::type\+::\+String\+::replace (\begin{DoxyParamCaption}\item[{const char}]{a\+Character,  }\item[{const char}]{a\+New\+Character }\end{DoxyParamCaption})}
+
+
+
+Replace all occurences of character by other character. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Character} & A character \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+New\+Character} & A replacement character \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a368cc0fbfe2f92586a2eeb3616b47da7}\label{classostk_1_1core_1_1type_1_1_string_a368cc0fbfe2f92586a2eeb3616b47da7}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!replace@{replace}}
+\index{replace@{replace}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& ostk\+::core\+::type\+::\+String\+::replace (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+String,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+New\+String }\end{DoxyParamCaption})}
+
+
+
+Replace all occurences of string by other string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Character} & A string \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+New\+Character} & A replacement string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_af11502e59dc726425d58e94f2b08ace6}\label{classostk_1_1core_1_1type_1_1_string_af11502e59dc726425d58e94f2b08ace6}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Replicate@{Replicate}}
+\index{Replicate@{Replicate}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Replicate (\begin{DoxyParamCaption}\item[{char}]{a\+Character,  }\item[{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}}}]{a\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a015a3f0091b792bfae001904d7b31aea}\label{classostk_1_1core_1_1type_1_1_string_a015a3f0091b792bfae001904d7b31aea}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!Replicate@{Replicate}}
+\index{Replicate@{Replicate}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Replicate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+String,  }\item[{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}}}]{a\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a858b680569fe684d75d7f2fe25959faa}\label{classostk_1_1core_1_1type_1_1_string_a858b680569fe684d75d7f2fe25959faa}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!SanitizeUTF8@{SanitizeUTF8}}
+\index{SanitizeUTF8@{SanitizeUTF8}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{SanitizeUTF8()}{SanitizeUTF8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Sanitize\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sanitizes the string by removing any invalid U\+T\+F-\/8 characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valid U\+T\+F-\/8 string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ae6af9be350ec2401f961a6b042f84c8a}\label{classostk_1_1core_1_1type_1_1_string_ae6af9be350ec2401f961a6b042f84c8a}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!split@{split}}
+\index{split@{split}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ ostk\+::core\+::type\+::\+String\+::split (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Delimiter }\end{DoxyParamCaption}) const}
+
+
+
+Split the \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} into tokens separated by the given delimeter. E.\+X. \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}}(\char`\"{}1sat2satredsatbluesat\char`\"{}).split(\char`\"{}sat\char`\"{}) -\/$>$ \mbox{[}\char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}red\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}\char`\"{}\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+Array of \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} tokens 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a44cc2827faafa67f59e3168f8dcbbbfb}\label{classostk_1_1core_1_1type_1_1_string_a44cc2827faafa67f59e3168f8dcbbbfb}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!trim@{trim}}
+\index{trim@{trim}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \& ostk\+::core\+::type\+::\+String\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes whitespace from both ends. 
+
+\begin{DoxyReturn}{Returns}
+Reference to string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Type/\mbox{\hyperlink{_string_8hpp}{String.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+Type/\mbox{\hyperlink{_string_8cpp}{String.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,562 @@
+\hypertarget{classostk_1_1core_1_1container_1_1_table}{}\doxysection{ostk\+::core\+::container\+::Table Class Reference}
+\label{classostk_1_1core_1_1container_1_1_table}\index{ostk::core::container::Table@{ostk::core::container::Table}}
+
+
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} container.  
+
+
+
+
+{\ttfamily \#include $<$Table.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Format}} \{ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Format\+::\+Undefined}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Format\+::\+C\+SV}}
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} format. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} constant iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \&a\+Header, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} $>$ \&a\+Row\+Array)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a912af250085ce84d721b7b0fd2d26bd6}{Table}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \&a\+Header)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a491c07452228578b7428fe63d4586b55}{Table}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&a\+Table)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_abfc41b294015775238d994fd6682665d}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&a\+Table)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a646d26dfecca1687a4b2cc913fcf2518}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&a\+Table) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a1a5bd2dc79dafbc66ce722edc803bd6d}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&a\+Table) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a2dd9db4ca561ee06b50ff60b4610d680}{operator\mbox{[}$\,$\mbox{]}}} (const Index \&a\+Row\+Index) const
+\begin{DoxyCompactList}\small\item\em Subscript operator (row accessor) \end{DoxyCompactList}\item 
+const Cell \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae3278582767e28931cc16e33480307e7}{operator()}} (const Index \&a\+Row\+Index, const Index \&a\+Column\+Index) const
+\begin{DoxyCompactList}\small\item\em Function call operator (cell accessor) \end{DoxyCompactList}\item 
+const Cell \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ad09697d6111b4d7edd854c3c78d2f6b5}{operator()}} (const Index \&a\+Row\+Index, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Function call operator (cell accessor) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae02565642851c77787e76c96289c9e96}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if table is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a8440df1ba39186a9e9987fd90ad2f38b}{has\+Column\+With\+Name}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns true is table has column with a given name. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5240e84312f8c89c4ee659889df03ff1}{get\+Row\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a58af5f24339a5db75ac51f50b5044140}{get\+Column\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+Index \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a561463d618504ac0f354ad9b4da54897}{get\+Index\+Of\+Column\+With\+Name}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns the index of column with a given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a676a0136e949f158ca4c4bbf732e980a}{add\+Row}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} \&a\+Row)
+\begin{DoxyCompactList}\small\item\em Add row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_abc89b9c03ad344cf899b03c30a733ac6}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Table\+::\+Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a03e9e24ad1bc2aaafc57e02a6f10bb06}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Get begin constant interator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Table\+::\+Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a0598162989de28b03becb213eefc519d}{end}} () const
+\begin{DoxyCompactList}\small\item\em Get end constant interator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}{Empty}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty table. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}{Load}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&a\+File, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Table\+::\+Format\+::\+Undefined}}, bool has\+Header=true)
+\begin{DoxyCompactList}\small\item\em Constructs a table from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_afaece709b2f143e4011941ae67b7adba}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&a\+Table)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} container. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}\label{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$\mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}}$>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{ostk\+::core\+::container\+::\+Table\+::\+Const\+Iterator}}}
+
+
+
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} constant iterator. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}\label{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Format@{Format}}
+\index{Format@{Format}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Format}{Format}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{ostk\+::core\+::container\+::\+Table\+::\+Format}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} format. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::container::Table@{ostk::core::container::Table}}\index{ostk::core::container::Table@{ostk::core::container::Table}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&Undefined format. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CSV@{CSV}!ostk::core::container::Table@{ostk::core::container::Table}}\index{ostk::core::container::Table@{ostk::core::container::Table}!CSV@{CSV}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}\label{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}} 
+C\+SV&Comma-\/\+Separated Values format. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}\label{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Table@{Table}}
+\index{Table@{Table}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Table\+::\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \&}]{a\+Header,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} $>$ \&}]{a\+Row\+Array }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Header} & A column name array \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Row\+Array} & A table row array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a912af250085ce84d721b7b0fd2d26bd6}\label{classostk_1_1core_1_1container_1_1_table_a912af250085ce84d721b7b0fd2d26bd6}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Table@{Table}}
+\index{Table@{Table}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Table\+::\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \&}]{a\+Header }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \} \} ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Header} & A column name array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a491c07452228578b7428fe63d4586b55}\label{classostk_1_1core_1_1container_1_1_table_a491c07452228578b7428fe63d4586b55}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Table@{Table}}
+\index{Table@{Table}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Table\+::\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&}]{a\+Table }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Table} & A table \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a676a0136e949f158ca4c4bbf732e980a}\label{classostk_1_1core_1_1container_1_1_table_a676a0136e949f158ca4c4bbf732e980a}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!addRow@{addRow}}
+\index{addRow@{addRow}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{addRow()}{addRow()}}
+{\footnotesize\ttfamily void ostk\+::core\+::container\+::\+Table\+::add\+Row (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} \&}]{a\+Row }\end{DoxyParamCaption})}
+
+
+
+Add row. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.addRow(\{ Cell::Integer(456), Cell::Real(456.789) \}) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Row} & A row to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a03e9e24ad1bc2aaafc57e02a6f10bb06}\label{classostk_1_1core_1_1container_1_1_table_a03e9e24ad1bc2aaafc57e02a6f10bb06}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!begin@{begin}}
+\index{begin@{begin}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Table\+::\+Const\+Iterator}} ostk\+::core\+::container\+::\+Table\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get begin constant interator. 
+
+\begin{DoxyReturn}{Returns}
+Begin constant interator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_abc89b9c03ad344cf899b03c30a733ac6}\label{classostk_1_1core_1_1container_1_1_table_abc89b9c03ad344cf899b03c30a733ac6}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!clear@{clear}}
+\index{clear@{clear}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void ostk\+::core\+::container\+::\+Table\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear table. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.clear() ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}\label{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} ostk\+::core\+::container\+::\+Table\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an empty table. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}{Table::Empty}}() ;}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Empty table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a0598162989de28b03becb213eefc519d}\label{classostk_1_1core_1_1container_1_1_table_a0598162989de28b03becb213eefc519d}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!end@{end}}
+\index{end@{end}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Table\+::\+Const\+Iterator}} ostk\+::core\+::container\+::\+Table\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get end constant interator. 
+
+\begin{DoxyReturn}{Returns}
+End constant interator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a58af5f24339a5db75ac51f50b5044140}\label{classostk_1_1core_1_1container_1_1_table_a58af5f24339a5db75ac51f50b5044140}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!getColumnCount@{getColumnCount}}
+\index{getColumnCount@{getColumnCount}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{getColumnCount()}{getColumnCount()}}
+{\footnotesize\ttfamily Size ostk\+::core\+::container\+::\+Table\+::get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get number of columns. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.getColumnCount() ; \textcolor{comment}{// 2}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Number of columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a561463d618504ac0f354ad9b4da54897}\label{classostk_1_1core_1_1container_1_1_table_a561463d618504ac0f354ad9b4da54897}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!getIndexOfColumnWithName@{getIndexOfColumnWithName}}
+\index{getIndexOfColumnWithName@{getIndexOfColumnWithName}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{getIndexOfColumnWithName()}{getIndexOfColumnWithName()}}
+{\footnotesize\ttfamily Index ostk\+::core\+::container\+::\+Table\+::get\+Index\+Of\+Column\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of column with a given name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Column\+Name} & A column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of column with a given name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a5240e84312f8c89c4ee659889df03ff1}\label{classostk_1_1core_1_1container_1_1_table_a5240e84312f8c89c4ee659889df03ff1}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!getRowCount@{getRowCount}}
+\index{getRowCount@{getRowCount}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{getRowCount()}{getRowCount()}}
+{\footnotesize\ttfamily Size ostk\+::core\+::container\+::\+Table\+::get\+Row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get number of rows. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; table.getRowCount() ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Number of rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a8440df1ba39186a9e9987fd90ad2f38b}\label{classostk_1_1core_1_1container_1_1_table_a8440df1ba39186a9e9987fd90ad2f38b}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!hasColumnWithName@{hasColumnWithName}}
+\index{hasColumnWithName@{hasColumnWithName}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{hasColumnWithName()}{hasColumnWithName()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Table\+::has\+Column\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true is table has column with a given name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Column\+Name} & A column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True is table has column with a given name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ae02565642851c77787e76c96289c9e96}\label{classostk_1_1core_1_1container_1_1_table_ae02565642851c77787e76c96289c9e96}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Table\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if table is empty. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}{Table::Empty}}().\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae02565642851c77787e76c96289c9e96}{isEmpty}}() ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if table is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}\label{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!Load@{Load}}
+\index{Load@{Load}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} ostk\+::core\+::container\+::\+Table\+::\+Load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Table\+::\+Format\+::\+Undefined}}},  }\item[{bool}]{has\+Header = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a table from a file. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}{Table::Load}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(Path::Parse(\textcolor{stringliteral}{"/path/to/file.csv"})), \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Table::Format::CSV}},}
+\DoxyCodeLine{\textcolor{keyword}{true}) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+File} & A table file \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format A table format \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & has\+Header True if file has a header \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a1a5bd2dc79dafbc66ce722edc803bd6d}\label{classostk_1_1core_1_1container_1_1_table_a1a5bd2dc79dafbc66ce722edc803bd6d}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Table\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&}]{a\+Table }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}}(...) != \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}}(1.0, 0.0, 0.0, 0.0) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Table} & A table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if tables are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ae3278582767e28931cc16e33480307e7}\label{classostk_1_1core_1_1container_1_1_table_ae3278582767e28931cc16e33480307e7}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator()@{operator()}}
+\index{operator()@{operator()}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Cell \& ostk\+::core\+::container\+::\+Table\+::operator() (\begin{DoxyParamCaption}\item[{const Index \&}]{a\+Row\+Index,  }\item[{const Index \&}]{a\+Column\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Function call operator (cell accessor) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1container_1_1table_a51083d72525ab97335e7a0a60e421a8b}{Cell}}\& cell = table(0, 0) ; \textcolor{comment}{// Cell::Integer(123)}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Row\+Index} & A row index \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Column\+Index} & A column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ad09697d6111b4d7edd854c3c78d2f6b5}\label{classostk_1_1core_1_1container_1_1_table_ad09697d6111b4d7edd854c3c78d2f6b5}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator()@{operator()}}
+\index{operator()@{operator()}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Cell \& ostk\+::core\+::container\+::\+Table\+::operator() (\begin{DoxyParamCaption}\item[{const Index \&}]{a\+Row\+Index,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Column\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Function call operator (cell accessor) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} \mbox{\hyperlink{namespaceostk_1_1core_1_1container_1_1table_a51083d72525ab97335e7a0a60e421a8b}{Cell}}\& cell = table(0, \textcolor{stringliteral}{"Column A"}) ; \textcolor{comment}{// Cell::Integer(123)}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Row\+Index} & A row index \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Column\+Name} & A column name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_abfc41b294015775238d994fd6682665d}\label{classostk_1_1core_1_1container_1_1_table_abfc41b294015775238d994fd6682665d}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \& ostk\+::core\+::container\+::\+Table\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&}]{a\+Table }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Table} & A table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a646d26dfecca1687a4b2cc913fcf2518}\label{classostk_1_1core_1_1container_1_1_table_a646d26dfecca1687a4b2cc913fcf2518}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Table\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&}]{a\+Table }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}}(...) == \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}}(...) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Table} & A table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if tables are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a2dd9db4ca561ee06b50ff60b4610d680}\label{classostk_1_1core_1_1container_1_1_table_a2dd9db4ca561ee06b50ff60b4610d680}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} \& ostk\+::core\+::container\+::\+Table\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const Index \&}]{a\+Row\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Subscript operator (row accessor) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \{ \{ \textcolor{stringliteral}{"Column A"}, \textcolor{stringliteral}{"Column B"} \}, \{ \{ Cell::Integer(123), Cell::Real(123.456) \} \}}
+\DoxyCodeLine{\} ; \textcolor{keyword}{const} Row\& row = table[0] ; \textcolor{comment}{// \{ Cell::Integer(123), Cell::Real(123.456) \}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Row\+Index} & A row index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to row 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_afaece709b2f143e4011941ae67b7adba}\label{classostk_1_1core_1_1container_1_1_table_afaece709b2f143e4011941ae67b7adba}} 
+\index{ostk::core::container::Table@{ostk::core::container::Table}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Table@{ostk::core::container::Table}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \&}]{a\+Table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::cout << \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}}(...) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Table} & A table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_table_8hpp}{Table.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_table_8cpp}{Table.\+cpp}}\end{DoxyCompactItemize}

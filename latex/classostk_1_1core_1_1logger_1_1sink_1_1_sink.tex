@@ -1,0 +1,284 @@
+\hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink}{}\doxysection{ostk\+::core\+::logger\+::sink\+::Sink Class Reference}
+\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink}\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+
+
+Log sink base.  
+
+
+
+
+{\ttfamily \#include $<$Sink.\+hpp$>$}
+
+Inheritance diagram for ostk\+::core\+::logger\+::sink\+::Sink\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classostk_1_1core_1_1logger_1_1sink_1_1_sink}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa84740d4bccf16891d8a1c6424996ef1}{Sink}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} \&a\+Severity)
+\item 
+virtual \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a6b0a69475450990eae12b1477ca67b4b}{$\sim$\+Sink}} ()=0
+\item 
+virtual \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink}{Sink}} $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8d92af54df251e60137c1e822a8bc357}{clone}} () const =0
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a2958c67122d565873006d8ad217fea4c}{is\+Enabled}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fdf2e69e130077bfb7bd91e64deb771}{is\+Line\+Id\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a89716870858fcf6e07b8e9fa516b958e}{is\+Severity\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a83df4f0155fb78ceb7bad58c17357155}{is\+Timestamp\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7188cf1e556985d783c8c978a629ab59}{is\+Thread\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7f8e189e59b326701b105279acae13ff}{is\+Scope\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aac9c744b2ad17d77caeb81b3356479ba}{is\+File\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_afbfb0049d2cc16a35e6f6b05b5b6ddd1}{is\+Line\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a08bee7e961fea5d5ad6cec3ceaa8b869}{is\+Function\+Logged}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a22b8e7e3d555273391b519228015881a}{is\+Channel\+Logged}} () const
+\item 
+virtual void \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac44c5cfde95ebd171490024c380904ed}{enable}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8c14e50eb383c13c6b27b7601f6b1caf}{disable}} ()=0
+\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a809a19c1204b3b3681dec39b916786c5}{add\+Channel}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Channel)
+\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a58afc61f0de71dc20c7576b1b363198e}{remove\+Channel}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Channel)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a3ea719fca071d9b19f7c1f331b07a643}{enabled\+\_\+}}
+\item 
+\mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa1103d89b02f3bf86f4b41545c4176af}{severity\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a9deb3fc8b5fb43973127c198ff52d6d8}{line\+Id\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac0c91581f095ccbcc1a3ee61a7f345f4}{severity\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ae338626c883454b367754d42785c7486}{timestamp\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a17e9a207ece68b07d6ead8768da13076}{thread\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa7d1634409ddc0c0e2491334512ffdf6}{scope\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_af38d57d471f55e2fe5b0c4c680b073ba}{file\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_add4a19cf2a1b1a9625720f67c009894b}{line\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a4527bde345c4aa988dcebe66df8c0378}{function\+Enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a826ad5fe548935b4cd2b059cf1f3c64e}{channel\+Enabled\+\_\+}}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fef4477590584ed9c154f08e6a0de8f}{channels\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Log sink base. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa84740d4bccf16891d8a1c6424996ef1}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa84740d4bccf16891d8a1c6424996ef1}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!Sink@{Sink}}
+\index{Sink@{Sink}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{Sink()}{Sink()}}
+{\footnotesize\ttfamily ostk\+::core\+::logger\+::sink\+::\+Sink\+::\+Sink (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} \&}]{a\+Severity }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a6b0a69475450990eae12b1477ca67b4b}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a6b0a69475450990eae12b1477ca67b4b}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!````~Sink@{$\sim$Sink}}
+\index{````~Sink@{$\sim$Sink}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sink()}{~Sink()}}
+{\footnotesize\ttfamily virtual ostk\+::core\+::logger\+::sink\+::\+Sink\+::$\sim$\+Sink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a809a19c1204b3b3681dec39b916786c5}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a809a19c1204b3b3681dec39b916786c5}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!addChannel@{addChannel}}
+\index{addChannel@{addChannel}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{addChannel()}{addChannel()}}
+{\footnotesize\ttfamily void ostk\+::core\+::logger\+::sink\+::\+Sink\+::add\+Channel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8d92af54df251e60137c1e822a8bc357}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8d92af54df251e60137c1e822a8bc357}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!clone@{clone}}
+\index{clone@{clone}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_sink}{Sink}}$\ast$ ostk\+::core\+::logger\+::sink\+::\+Sink\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_console_ae55ec68ac574b3bcd3ac1bdabbf1848d}{ostk\+::core\+::logger\+::sink\+::\+Console}}.
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8c14e50eb383c13c6b27b7601f6b1caf}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a8c14e50eb383c13c6b27b7601f6b1caf}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!disable@{disable}}
+\index{disable@{disable}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily virtual void ostk\+::core\+::logger\+::sink\+::\+Sink\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_console_ae707d83c0b5052bc100b4570e89ed346}{ostk\+::core\+::logger\+::sink\+::\+Console}}.
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac44c5cfde95ebd171490024c380904ed}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac44c5cfde95ebd171490024c380904ed}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!enable@{enable}}
+\index{enable@{enable}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily virtual void ostk\+::core\+::logger\+::sink\+::\+Sink\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1sink_1_1_console_a9d9222231635b663c863430457209050}{ostk\+::core\+::logger\+::sink\+::\+Console}}.
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a22b8e7e3d555273391b519228015881a}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a22b8e7e3d555273391b519228015881a}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isChannelLogged@{isChannelLogged}}
+\index{isChannelLogged@{isChannelLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isChannelLogged()}{isChannelLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Channel\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a2958c67122d565873006d8ad217fea4c}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a2958c67122d565873006d8ad217fea4c}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aac9c744b2ad17d77caeb81b3356479ba}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aac9c744b2ad17d77caeb81b3356479ba}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isFileLogged@{isFileLogged}}
+\index{isFileLogged@{isFileLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isFileLogged()}{isFileLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+File\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a08bee7e961fea5d5ad6cec3ceaa8b869}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a08bee7e961fea5d5ad6cec3ceaa8b869}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isFunctionLogged@{isFunctionLogged}}
+\index{isFunctionLogged@{isFunctionLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isFunctionLogged()}{isFunctionLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Function\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fdf2e69e130077bfb7bd91e64deb771}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fdf2e69e130077bfb7bd91e64deb771}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isLineIdLogged@{isLineIdLogged}}
+\index{isLineIdLogged@{isLineIdLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isLineIdLogged()}{isLineIdLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Line\+Id\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_afbfb0049d2cc16a35e6f6b05b5b6ddd1}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_afbfb0049d2cc16a35e6f6b05b5b6ddd1}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isLineLogged@{isLineLogged}}
+\index{isLineLogged@{isLineLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isLineLogged()}{isLineLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Line\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7f8e189e59b326701b105279acae13ff}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7f8e189e59b326701b105279acae13ff}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isScopeLogged@{isScopeLogged}}
+\index{isScopeLogged@{isScopeLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isScopeLogged()}{isScopeLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Scope\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a89716870858fcf6e07b8e9fa516b958e}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a89716870858fcf6e07b8e9fa516b958e}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isSeverityLogged@{isSeverityLogged}}
+\index{isSeverityLogged@{isSeverityLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isSeverityLogged()}{isSeverityLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Severity\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7188cf1e556985d783c8c978a629ab59}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a7188cf1e556985d783c8c978a629ab59}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isThreadLogged@{isThreadLogged}}
+\index{isThreadLogged@{isThreadLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isThreadLogged()}{isThreadLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Thread\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a83df4f0155fb78ceb7bad58c17357155}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a83df4f0155fb78ceb7bad58c17357155}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!isTimestampLogged@{isTimestampLogged}}
+\index{isTimestampLogged@{isTimestampLogged}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{isTimestampLogged()}{isTimestampLogged()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::is\+Timestamp\+Logged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a58afc61f0de71dc20c7576b1b363198e}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a58afc61f0de71dc20c7576b1b363198e}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!removeChannel@{removeChannel}}
+\index{removeChannel@{removeChannel}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{removeChannel()}{removeChannel()}}
+{\footnotesize\ttfamily void ostk\+::core\+::logger\+::sink\+::\+Sink\+::remove\+Channel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Channel }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a826ad5fe548935b4cd2b059cf1f3c64e}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a826ad5fe548935b4cd2b059cf1f3c64e}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!channelEnabled\_@{channelEnabled\_}}
+\index{channelEnabled\_@{channelEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{channelEnabled\_}{channelEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::channel\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fef4477590584ed9c154f08e6a0de8f}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a5fef4477590584ed9c154f08e6a0de8f}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!channels\_@{channels\_}}
+\index{channels\_@{channels\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{channels\_}{channels\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}}$>$ ostk\+::core\+::logger\+::sink\+::\+Sink\+::channels\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a3ea719fca071d9b19f7c1f331b07a643}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a3ea719fca071d9b19f7c1f331b07a643}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!enabled\_@{enabled\_}}
+\index{enabled\_@{enabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{enabled\_}{enabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_af38d57d471f55e2fe5b0c4c680b073ba}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_af38d57d471f55e2fe5b0c4c680b073ba}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!fileEnabled\_@{fileEnabled\_}}
+\index{fileEnabled\_@{fileEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{fileEnabled\_}{fileEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::file\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a4527bde345c4aa988dcebe66df8c0378}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a4527bde345c4aa988dcebe66df8c0378}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!functionEnabled\_@{functionEnabled\_}}
+\index{functionEnabled\_@{functionEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{functionEnabled\_}{functionEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::function\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_add4a19cf2a1b1a9625720f67c009894b}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_add4a19cf2a1b1a9625720f67c009894b}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!lineEnabled\_@{lineEnabled\_}}
+\index{lineEnabled\_@{lineEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{lineEnabled\_}{lineEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::line\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a9deb3fc8b5fb43973127c198ff52d6d8}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a9deb3fc8b5fb43973127c198ff52d6d8}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!lineIdEnabled\_@{lineIdEnabled\_}}
+\index{lineIdEnabled\_@{lineIdEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{lineIdEnabled\_}{lineIdEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::line\+Id\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa7d1634409ddc0c0e2491334512ffdf6}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa7d1634409ddc0c0e2491334512ffdf6}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!scopeEnabled\_@{scopeEnabled\_}}
+\index{scopeEnabled\_@{scopeEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{scopeEnabled\_}{scopeEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::scope\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa1103d89b02f3bf86f4b41545c4176af}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_aa1103d89b02f3bf86f4b41545c4176af}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!severity\_@{severity\_}}
+\index{severity\_@{severity\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{severity\_}{severity\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} ostk\+::core\+::logger\+::sink\+::\+Sink\+::severity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac0c91581f095ccbcc1a3ee61a7f345f4}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ac0c91581f095ccbcc1a3ee61a7f345f4}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!severityEnabled\_@{severityEnabled\_}}
+\index{severityEnabled\_@{severityEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{severityEnabled\_}{severityEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::severity\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a17e9a207ece68b07d6ead8768da13076}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_a17e9a207ece68b07d6ead8768da13076}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!threadEnabled\_@{threadEnabled\_}}
+\index{threadEnabled\_@{threadEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{threadEnabled\_}{threadEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::thread\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ae338626c883454b367754d42785c7486}\label{classostk_1_1core_1_1logger_1_1sink_1_1_sink_ae338626c883454b367754d42785c7486}} 
+\index{ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}!timestampEnabled\_@{timestampEnabled\_}}
+\index{timestampEnabled\_@{timestampEnabled\_}!ostk::core::logger::sink::Sink@{ostk::core::logger::sink::Sink}}
+\doxysubsubsection{\texorpdfstring{timestampEnabled\_}{timestampEnabled\_}}
+{\footnotesize\ttfamily bool ostk\+::core\+::logger\+::sink\+::\+Sink\+::timestamp\+Enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Logger/\+Sink/\mbox{\hyperlink{_sink_2_sink_8hpp}{Sink.\+hpp}}\end{DoxyCompactItemize}

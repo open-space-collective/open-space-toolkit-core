@@ -1,0 +1,500 @@
+\hypertarget{classostk_1_1core_1_1container_1_1_dictionary}{}\doxysection{ostk\+::core\+::container\+::Dictionary Class Reference}
+\label{classostk_1_1core_1_1container_1_1_dictionary}\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+
+
+Key-\/value pairs container.  
+
+
+
+
+{\ttfamily \#include $<$Dictionary.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator}{Const\+Iterator}}
+\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Key}}
+\item 
+typedef \mbox{\hyperlink{namespaceostk_1_1core_1_1container_afdfb0dc39c01f199950550531140a918}{container\+::\+List}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aa9c6af6323d32f60943ea38c38fb9990}{Path}}
+\item 
+typedef \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} (std\+::initializer\+\_\+list$<$ std\+::pair$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}}, \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} $>$$>$ a\+List)
+\begin{DoxyCompactList}\small\item\em Constructs a dictionary using an initializer list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aa25358d40df5870c217cf7c07ed888df}{Dictionary}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a110109b31c5c88b76fb23eb8b5bfcc05}{$\sim$\+Dictionary}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a8383582763c87f3c728aa6cf8d63bd3c}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad2c4154b8d04f7697029a64f36275c33}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a5ff8e1177944e1fbccf9476488722d56}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a8b8f95561bc8c78239237da95ca6ea0b}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&a\+Key) const
+\begin{DoxyCompactList}\small\item\em Key subscript operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a1e05e1beeb06f86c7899d2b57ad307a9}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&a\+Key)
+\begin{DoxyCompactList}\small\item\em Key subscript operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_abf2a335e5277f52a1ccb9693fedebaaa}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if dictionary is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a0e8b5745244e2f09f25b6a64cccca8d7}{has\+Value\+For\+Key}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&a\+Key) const
+\begin{DoxyCompactList}\small\item\em Check if dictionary has value for a given key. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a034cd5acd635a879258454b77004246f}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get size of dictionary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6c351bf4316c24c38165614c1c94833c}{add\+Value\+For\+Key}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \&a\+Value, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&a\+Key)
+\begin{DoxyCompactList}\small\item\em Add entry to dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator}{Dictionary\+::\+Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aeaee82bbb224074f026ae2189a29817d}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the first element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator}{Dictionary\+::\+Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a218a2d4c8aa88ce58ce50b64515d5efb}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the last element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a9f051a70c1f9a401d34595a5693144c1}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the first element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a38527b37c1f6667391ef9ec68a01bc9e}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the last element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a9508ccd2a76a6179215824bfe9210594}{Empty}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty dictionary. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}})
+\begin{DoxyCompactList}\small\item\em Constructs a dictionary from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a95fa6b67a0c39d2d7069ad71a53910ec}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Key-\/value pairs container. 
+
+\begin{DoxyVerb}                        Each entry consists of one string that represents the key and an object that is that
+                        key’s value. Within a dictionary, keys are unique. Dictionaries preserve the order of
+                        insertion. 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}\label{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Key@{Key}}
+\index{Key@{Key}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{ostk\+::core\+::container\+::\+Dictionary\+::\+Key}}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_aa9c6af6323d32f60943ea38c38fb9990}\label{classostk_1_1core_1_1container_1_1_dictionary_aa9c6af6323d32f60943ea38c38fb9990}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Path@{Path}}
+\index{Path@{Path}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Path}{Path}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{namespaceostk_1_1core_1_1container_afdfb0dc39c01f199950550531140a918}{container\+::\+List}}$<$\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}}$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aa9c6af6323d32f60943ea38c38fb9990}{ostk\+::core\+::container\+::\+Dictionary\+::\+Path}}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}\label{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Value@{Value}}
+\index{Value@{Value}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{ostk\+::core\+::container\+::\+Dictionary\+::\+Value}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}\label{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Dictionary()}{Dictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Dictionary\+::\+Dictionary (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ std\+::pair$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}}, \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} $>$$>$}]{a\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs a dictionary using an initializer list. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123), \textcolor{stringliteral}{"Key B"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}{Object::String}}(\textcolor{stringliteral}{"Hello}}
+\DoxyCodeLine{\textcolor{stringliteral}{World!"}) \}\} ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+List} & An initializer list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_aa25358d40df5870c217cf7c07ed888df}\label{classostk_1_1core_1_1container_1_1_dictionary_aa25358d40df5870c217cf7c07ed888df}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Dictionary()}{Dictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Dictionary\+::\+Dictionary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Dictionary} & A dictionary \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a110109b31c5c88b76fb23eb8b5bfcc05}\label{classostk_1_1core_1_1container_1_1_dictionary_a110109b31c5c88b76fb23eb8b5bfcc05}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!````~Dictionary@{$\sim$Dictionary}}
+\index{````~Dictionary@{$\sim$Dictionary}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{$\sim$Dictionary()}{~Dictionary()}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Dictionary\+::$\sim$\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a6c351bf4316c24c38165614c1c94833c}\label{classostk_1_1core_1_1container_1_1_dictionary_a6c351bf4316c24c38165614c1c94833c}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!addValueForKey@{addValueForKey}}
+\index{addValueForKey@{addValueForKey}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{addValueForKey()}{addValueForKey()}}
+{\footnotesize\ttfamily void ostk\+::core\+::container\+::\+Dictionary\+::add\+Value\+For\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \&}]{a\+Value,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&}]{a\+Key }\end{DoxyParamCaption})}
+
+
+
+Add entry to dictionary. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{dictionary.addValueForKey(\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(456), \textcolor{stringliteral}{"Key B"}) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Value} & A value \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Key} & A key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a9f051a70c1f9a401d34595a5693144c1}\label{classostk_1_1core_1_1container_1_1_dictionary_a9f051a70c1f9a401d34595a5693144c1}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!begin@{begin}}
+\index{begin@{begin}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} ostk\+::core\+::container\+::\+Dictionary\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator pointing to the first element. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}} pointing to the first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_aeaee82bbb224074f026ae2189a29817d}\label{classostk_1_1core_1_1container_1_1_dictionary_aeaee82bbb224074f026ae2189a29817d}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!begin@{begin}}
+\index{begin@{begin}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} ostk\+::core\+::container\+::\+Dictionary\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator pointing to the first element. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}} pointing to the first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a9508ccd2a76a6179215824bfe9210594}\label{classostk_1_1core_1_1container_1_1_dictionary_a9508ccd2a76a6179215824bfe9210594}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} ostk\+::core\+::container\+::\+Dictionary\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an empty dictionary. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a9508ccd2a76a6179215824bfe9210594}{Dictionary::Empty}}() ; \textcolor{comment}{// \{\}}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Empty dictionary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a38527b37c1f6667391ef9ec68a01bc9e}\label{classostk_1_1core_1_1container_1_1_dictionary_a38527b37c1f6667391ef9ec68a01bc9e}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!end@{end}}
+\index{end@{end}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} ostk\+::core\+::container\+::\+Dictionary\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator pointing to the last element. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}} pointing to the last element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a218a2d4c8aa88ce58ce50b64515d5efb}\label{classostk_1_1core_1_1container_1_1_dictionary_a218a2d4c8aa88ce58ce50b64515d5efb}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!end@{end}}
+\index{end@{end}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Dictionary\+::\+Iterator}} ostk\+::core\+::container\+::\+Dictionary\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator pointing to the last element. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}} pointing to the last element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a034cd5acd635a879258454b77004246f}\label{classostk_1_1core_1_1container_1_1_dictionary_a034cd5acd635a879258454b77004246f}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!getSize@{getSize}}
+\index{getSize@{getSize}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily Size ostk\+::core\+::container\+::\+Dictionary\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get size of dictionary. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{dictionary.getSize() ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a0e8b5745244e2f09f25b6a64cccca8d7}\label{classostk_1_1core_1_1container_1_1_dictionary_a0e8b5745244e2f09f25b6a64cccca8d7}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!hasValueForKey@{hasValueForKey}}
+\index{hasValueForKey@{hasValueForKey}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{hasValueForKey()}{hasValueForKey()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Dictionary\+::has\+Value\+For\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&}]{a\+Key }\end{DoxyParamCaption}) const}
+
+
+
+Check if dictionary has value for a given key. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{dictionary.hasValueForKey(\textcolor{stringliteral}{"Key A"}) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Key} & A key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dictionary has value for a given key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_abf2a335e5277f52a1ccb9693fedebaaa}\label{classostk_1_1core_1_1container_1_1_dictionary_abf2a335e5277f52a1ccb9693fedebaaa}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Dictionary\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if dictionary is empty. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{dictionary.isEmpty() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if dictionary is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a5ff8e1177944e1fbccf9476488722d56}\label{classostk_1_1core_1_1container_1_1_dictionary_a5ff8e1177944e1fbccf9476488722d56}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Dictionary\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(456) \}\} ;}
+\DoxyCodeLine{firstDictionary != secondDictionary ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Dictionary} & A dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dictionaries are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a8383582763c87f3c728aa6cf8d63bd3c}\label{classostk_1_1core_1_1container_1_1_dictionary_a8383582763c87f3c728aa6cf8d63bd3c}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \& ostk\+::core\+::container\+::\+Dictionary\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Dictionary} & A dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to dictionary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_ad2c4154b8d04f7697029a64f36275c33}\label{classostk_1_1core_1_1container_1_1_dictionary_ad2c4154b8d04f7697029a64f36275c33}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Dictionary\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{firstDictionary == secondDictionary ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Dictionary} & A dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dictionaries are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a1e05e1beeb06f86c7899d2b57ad307a9}\label{classostk_1_1core_1_1container_1_1_dictionary_a1e05e1beeb06f86c7899d2b57ad307a9}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& ostk\+::core\+::container\+::\+Dictionary\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&}]{a\+Key }\end{DoxyParamCaption})}
+
+
+
+Key subscript operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{Object\& \textcolor{keywordtype}{object} = dictionary[\textcolor{stringliteral}{"Key A"}] ; \textcolor{comment}{// \&123}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Key} & A key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a8b8f95561bc8c78239237da95ca6ea0b}\label{classostk_1_1core_1_1container_1_1_dictionary_a8b8f95561bc8c78239237da95ca6ea0b}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& ostk\+::core\+::container\+::\+Dictionary\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \&}]{a\+Key }\end{DoxyParamCaption}) const}
+
+
+
+Key subscript operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\textcolor{keyword}{const} Object\& \textcolor{keywordtype}{object} = dictionary[\textcolor{stringliteral}{"Key A"}] ; \textcolor{comment}{// \&123}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Key} & A key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const reference to value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}\label{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Parse@{Parse}}
+\index{Parse@{Parse}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} ostk\+::core\+::container\+::\+Dictionary\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a dictionary from a string. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{String jsonString = \textcolor{stringliteral}{"\{\(\backslash\)"Key\(\backslash\)": 123\}"} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}{Dictionary::Parse}}(jsonString) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+String} & A string \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format Serialization format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a95fa6b67a0c39d2d7069ad71a53910ec}\label{classostk_1_1core_1_1container_1_1_dictionary_a95fa6b67a0c39d2d7069ad71a53910ec}} 
+\index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{std::cout << dictionary ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Dictionary} & An dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_dictionary_8hpp}{Dictionary.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_dictionary_8cpp}{Dictionary.\+cpp}}\end{DoxyCompactItemize}

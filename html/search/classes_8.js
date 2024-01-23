@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['integer_481',['Integer',['../classostk_1_1core_1_1types_1_1_integer.html',1,'ostk::core::types']]],
-  ['iterator_482',['Iterator',['../classostk_1_1core_1_1ctnr_1_1_dictionary_1_1_iterator.html',1,'ostk::core::ctnr::Dictionary::Iterator'],['../classostk_1_1core_1_1ctnr_1_1iterators_1_1_zip_iterator_1_1_iterator.html',1,'ostk::core::ctnr::iterators::ZipIterator&lt; T &gt;::Iterator']]]
+  ['integer_481',['Integer',['../classostk_1_1core_1_1type_1_1_integer.html',1,'ostk::core::type']]],
+  ['iterator_482',['Iterator',['../classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator.html',1,'ostk::core::container::Dictionary::Iterator'],['../classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator.html',1,'ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_895',['Key',['../classostk_1_1core_1_1ctnr_1_1_dictionary.html#aa3b171525039535f342d271d27f90407',1,'ostk::core::ctnr::Dictionary']]]
+  ['key_895',['Key',['../classostk_1_1core_1_1container_1_1_dictionary.html#ad65f1fca6dd24efcbfc9a8ba99340603',1,'ostk::core::container::Dictionary']]]
 ];

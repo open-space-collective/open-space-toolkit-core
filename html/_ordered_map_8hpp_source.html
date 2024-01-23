@@ -85,8 +85,8 @@ $(document).ready(function(){initNavTree('_ordered_map_8hpp_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="_ordered_map_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef __OpenSpaceToolkit_Core_Containers_OrderedMap__</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define __OpenSpaceToolkit_Core_Containers_OrderedMap__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef __OpenSpaceToolkit_Core_Container_OrderedMap__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define __OpenSpaceToolkit_Core_Container_OrderedMap__</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('_ordered_map_8hpp_source.html',''); in
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1ctnr.html">ctnr</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1container.html">container</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('_ordered_map_8hpp_source.html',''); in
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">class </span>KeyEqual = std::equal_to&lt;Key&gt;,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">class </span>Allocator = std::allocator&lt;std::pair&lt;Key, T&gt;&gt;,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>ValueTypeContainer = std::deque&lt;std::pair&lt;Key, T&gt;, Allocator&gt;&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1ctnr.html#a13ac23065e75eb425f38bfca4d0c6b38">   40</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1ctnr.html#a13ac23065e75eb425f38bfca4d0c6b38">OrderedMap</a> = tsl::ordered_map&lt;Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer&gt;;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1container.html#a997e0cc9fef8279d296c0d4aa1d9b493">   40</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1container.html#a997e0cc9fef8279d296c0d4aa1d9b493">OrderedMap</a> = tsl::ordered_map&lt;Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer&gt;;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// template</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// &lt;</span></div>
@@ -134,21 +134,21 @@ $(document).ready(function(){initNavTree('_ordered_map_8hpp_source.html',''); in
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// } ;</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}  <span class="comment">// namespace ctnr</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}  <span class="comment">// namespace container</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}  <span class="comment">// namespace core</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}  <span class="comment">// namespace ostk</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html_a13ac23065e75eb425f38bfca4d0c6b38"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html#a13ac23065e75eb425f38bfca4d0c6b38">ostk::core::ctnr::OrderedMap</a></div><div class="ttdeci">tsl::ordered_map&lt; Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer &gt; OrderedMap</div><div class="ttdoc">Ordered map container.</div><div class="ttdef"><b>Definition:</b> OrderedMap.hpp:40</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1container_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html">ostk::core::container</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:19</div></div>
 <div class="ttc" id="anamespaceostk_html"><div class="ttname"><a href="namespaceostk.html">ostk</a></div><div class="ttdoc">Apache License 2.0.</div><div class="ttdef"><b>Definition:</b> Array.hpp:15</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1ctnr_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1ctnr.html">ostk::core::ctnr</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:19</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_a997e0cc9fef8279d296c0d4aa1d9b493"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#a997e0cc9fef8279d296c0d4aa1d9b493">ostk::core::container::OrderedMap</a></div><div class="ttdeci">tsl::ordered_map&lt; Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer &gt; OrderedMap</div><div class="ttdoc">Ordered map container.</div><div class="ttdef"><b>Definition:</b> OrderedMap.hpp:40</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0135578efc1637a0e0841daccc698f8a.html">OpenSpaceToolkit</a></li><li class="navelem"><a class="el" href="dir_9a912a02bd031c9b8091d772cb803549.html">Core</a></li><li class="navelem"><a class="el" href="dir_be93cc9a6909b33a5adc5690dd4bf58e.html">Containers</a></li><li class="navelem"><a class="el" href="_ordered_map_8hpp.html">OrderedMap.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0135578efc1637a0e0841daccc698f8a.html">OpenSpaceToolkit</a></li><li class="navelem"><a class="el" href="dir_9a912a02bd031c9b8091d772cb803549.html">Core</a></li><li class="navelem"><a class="el" href="dir_3856f55020c74ffa05b6eb1fa616b6c6.html">Container</a></li><li class="navelem"><a class="el" href="_ordered_map_8hpp.html">OrderedMap.hpp</a></li>
   </ul>
 </div>
 </body>

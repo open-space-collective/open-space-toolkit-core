@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterators_5f_875',['iterators_',['../classostk_1_1core_1_1ctnr_1_1iterators_1_1_zip_iterator_1_1_iterator.html#a37f6521fb9d0c8ec3ab94c56c06dd475',1,'ostk::core::ctnr::iterators::ZipIterator::Iterator']]]
+  ['iterators_5f_875',['iterators_',['../classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator.html#a462d7998def0934afa08f158c7711aba',1,'ostk::core::container::iterator::ZipIterator::Iterator']]]
 ];

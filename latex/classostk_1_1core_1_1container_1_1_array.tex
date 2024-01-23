@@ -1,0 +1,965 @@
+\hypertarget{classostk_1_1core_1_1container_1_1_array}{}\doxysection{ostk\+::core\+::container\+::Array$<$ T $>$ Class Template Reference}
+\label{classostk_1_1core_1_1container_1_1_array}\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+
+
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} container.  
+
+
+
+
+{\ttfamily \#include $<$Array.\+hpp$>$}
+
+Inheritance diagram for ostk\+::core\+::container\+::Array$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classostk_1_1core_1_1container_1_1_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ T $>$\+::const\+\_\+iterator \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}{Const\+Iterator}}
+\item 
+typedef std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}{Iterator}}
+\item 
+typedef std\+::function$<$ bool(const T \&)$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_abf16abdc9051e0694ea59471ed34f032}{Array}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a4852ac57202e8781d95529d156dcd3d5}{Array}} (const std\+::vector$<$ T $>$ \&a\+Vector)
+\begin{DoxyCompactList}\small\item\em Constructs an array from a C++ Standard Library vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ae2b91188c5b673de253b494287ebcc78}{Array}} (const Size \&a\+Size, const T \&a\+Value)
+\begin{DoxyCompactList}\small\item\em Constructs an array of given size populated with a given value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ad8ebc43a185418e004017aae36bc83b3}{Array}} (Input\+Iterator a\+First\+Iterator, Input\+Iterator a\+Last\+Iterator, const typename std\+::vector$<$ T $>$\+::allocator\+\_\+type \&an\+Allocator=typename std\+::vector$<$ T $>$\+::allocator\+\_\+type())
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a6f6cf6e7e042b1ab3e3ec6bd3b9a5850}{Array}} (std\+::initializer\+\_\+list$<$ T $>$ a\+List)
+\begin{DoxyCompactList}\small\item\em Constructs an array using an initializer list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a4b93e437ebc4108b12b021091f44620d}{Array}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} \&an\+Array)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a620c83d378ed652d54caf1613d567249}{Array}} (\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} \&\&an\+Array)=default
+\begin{DoxyCompactList}\small\item\em Move constructor (array) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aec8aa7415c0d09d7a4a8ec1e3b63568a}{Array}} (std\+::vector$<$ T $>$ \&\&a\+Vector)
+\begin{DoxyCompactList}\small\item\em Move constructor (vector) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aa0f1dd01d56624d0478ff4de87230d99}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a2bc9fd90ce72d0cba9616ff16b4441d0}{operator=}} (\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&\&an\+Array)=default
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a17058cdfb4c04ed41b1b5cead35cf973}{operator+}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array) const
+\begin{DoxyCompactList}\small\item\em Concatenate array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac30877a0e3663ad5158e2639cc32455f}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if array is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ae035b7590373b178035f33733158877e}{contains}} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Check if array contains element (by value) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a74839e693f5524e2c5c0017648486f13}{is\+Near}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array, const T \&a\+Tolerance) const
+\begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_af8f48574ba41c8cbea39de23ecdba7aa}{is\+Near}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array, const std\+::function$<$ bool(const T \&, const T \&)$>$ \&a\+Comparator) const
+\begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}{access\+First}} () const
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}{access\+Last}} () const
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get array size. \end{DoxyCompactList}\item 
+Index \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}{get\+Index\+Of}} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Get index of element (by value) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ae0b2aff1ac2bda149f0f7fef323ca65b}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get string representation of array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ const T $\ast$ $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}{access\+Where}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&a\+Predicate) const
+\begin{DoxyCompactList}\small\item\em Get array of pointers to element based on condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a8e2da8fcc3fd5d37eb54384e18f59462}{get\+Where}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&a\+Predicate) const
+\begin{DoxyCompactList}\small\item\em Get array of elements based on condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a526b45980e342bff95aa068ec0d57cef}{find}} (const T \&an\+Element) const
+\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by by value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ U $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a8cf999c431361c3cff33d7cee58a091e}{map}} (const std\+::function$<$ U(T)$>$ a\+Mapping\+Function) const
+\begin{DoxyCompactList}\small\item\em Get mapped array. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_af242918858601d5af9d10fda5b527440}{reduce}} (const std\+::function$<$ T(T, T)$>$ \&a\+Reduce\+Function) const
+\begin{DoxyCompactList}\small\item\em Get reduced value. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a38a269238bff8dd080daeece1a919b97}{access\+First}} ()
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aaccce84e7159516210d15cedd0f0c005}{access\+Last}} ()
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_abbe60e90a6650e5aba8a3924a388e25d}{add}} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Add element to array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac4246bef128b2a237f411b6de86ecedc}{remove}} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Remove element from array (by value) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_af2c427638ce6fe5b8172b726b26d041f}{add}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Add elements to array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a28c5536135c3a1434b470163e83d0890}{remove}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Remove elements from array (by value) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a09ace899b075e2c71989015d89547712}{merge\+With}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Merge array with another array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a05c7a33085e45003d6839d7d68a8f9c5}{remove\+Where}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&a\+Predicate)
+\begin{DoxyCompactList}\small\item\em Remove elements based on condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}{Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a1e7b5f5c9410592b8d6c15629932b1c0}{find}} (const T \&an\+Element)
+\begin{DoxyCompactList}\small\item\em Get iterator to element, finding by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}{Empty}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class U $>$ }\\std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a9daa2d638e5bd693776f8bf6caae0802}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ U $>$ \&an\+Array)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class ostk\+::core\+::container\+::\+Array$<$ T $>$}
+
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} container. 
+
+\begin{DoxyVerb}                        Sequence container representing arrays that can change in size.
+                        Arrays use contiguous storage locations for their elements. 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}\label{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::vector$<$T$>$\+::const\+\_\+iterator \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}{Const\+Iterator}}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}\label{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}{Iterator}}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}\label{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Predicate}{Predicate}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::function$<$bool(const T\&)$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_abf16abdc9051e0694ea59471ed34f032}\label{classostk_1_1core_1_1container_1_1_array_abf16abdc9051e0694ea59471ed34f032}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a4852ac57202e8781d95529d156dcd3d5}\label{classostk_1_1core_1_1container_1_1_array_a4852ac57202e8781d95529d156dcd3d5}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a\+Vector }\end{DoxyParamCaption})}
+
+
+
+Constructs an array from a C++ Standard Library vector. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<Integer> vector = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<Integer> array(vector) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Vector} & A vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ae2b91188c5b673de253b494287ebcc78}\label{classostk_1_1core_1_1container_1_1_array_ae2b91188c5b673de253b494287ebcc78}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{const Size \&}]{a\+Size,  }\item[{const T \&}]{a\+Value }\end{DoxyParamCaption})}
+
+
+
+Constructs an array of given size populated with a given value. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<String> array(3, \textcolor{stringliteral}{"abc"}) ; \textcolor{comment}{// ["abc", "abc", "abc"]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Size} & An array size \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Value} & A value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ad8ebc43a185418e004017aae36bc83b3}\label{classostk_1_1core_1_1container_1_1_array_ad8ebc43a185418e004017aae36bc83b3}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class Input\+Iterator $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{a\+First\+Iterator,  }\item[{Input\+Iterator}]{a\+Last\+Iterator,  }\item[{const typename std\+::vector$<$ T $>$\+::allocator\+\_\+type \&}]{an\+Allocator = {\ttfamily typename~std\+:\+:vector$<$~T~$>$\+:\+:allocator\+\_\+type()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a6f6cf6e7e042b1ab3e3ec6bd3b9a5850}\label{classostk_1_1core_1_1container_1_1_array_a6f6cf6e7e042b1ab3e3ec6bd3b9a5850}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{a\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs an array using an initializer list. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+List} & An initializer list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a4b93e437ebc4108b12b021091f44620d}\label{classostk_1_1core_1_1container_1_1_array_a4b93e437ebc4108b12b021091f44620d}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a620c83d378ed652d54caf1613d567249}\label{classostk_1_1core_1_1container_1_1_array_a620c83d378ed652d54caf1613d567249}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&\&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructor (array) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aec8aa7415c0d09d7a4a8ec1e3b63568a}\label{classostk_1_1core_1_1container_1_1_array_aec8aa7415c0d09d7a4a8ec1e3b63568a}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&\&}]{a\+Vector }\end{DoxyParamCaption})}
+
+
+
+Move constructor (vector) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Vector} & A vector \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a38a269238bff8dd080daeece1a919b97}\label{classostk_1_1core_1_1container_1_1_array_a38a269238bff8dd080daeece1a919b97}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessFirst@{accessFirst}}
+\index{accessFirst@{accessFirst}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{accessFirst()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access first element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Integer\& element = array.accessFirst() ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}\label{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessFirst@{accessFirst}}
+\index{accessFirst@{accessFirst}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{accessFirst()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access first element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keyword}{const} Integer\& element = array.accessFirst() ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the first element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aaccce84e7159516210d15cedd0f0c005}\label{classostk_1_1core_1_1container_1_1_array_aaccce84e7159516210d15cedd0f0c005}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessLast@{accessLast}}
+\index{accessLast@{accessLast}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{accessLast()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access last element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Integer\& element = array.accessLast() ; \textcolor{comment}{// 3}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}\label{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessLast@{accessLast}}
+\index{accessLast@{accessLast}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{accessLast()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access last element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keyword}{const} Integer\& element = array.accessLast() ; \textcolor{comment}{// 3}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to the last element of array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}\label{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessWhere@{accessWhere}}
+\index{accessWhere@{accessWhere}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{accessWhere()}{accessWhere()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$const T$\ast$$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Where (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&}]{a\+Predicate }\end{DoxyParamCaption}) const}
+
+
+
+Get array of pointers to element based on condition. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [\&0, \&2, \&4]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} of pointers to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_af2c427638ce6fe5b8172b726b26d041f}\label{classostk_1_1core_1_1container_1_1_array_af2c427638ce6fe5b8172b726b26d041f}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!add@{add}}
+\index{add@{add}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Add elements to array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{array.add(\{4, 5\}) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array of elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_abbe60e90a6650e5aba8a3924a388e25d}\label{classostk_1_1core_1_1container_1_1_array_abbe60e90a6650e5aba8a3924a388e25d}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!add@{add}}
+\index{add@{add}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Add element to array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{array.add(4) ; \textcolor{comment}{// [1, 2, 3, 4]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ae035b7590373b178035f33733158877e}\label{classostk_1_1core_1_1container_1_1_array_ae035b7590373b178035f33733158877e}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Check if array contains element (by value) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{array.contains(2) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array contains element (by value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}\label{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an empty array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}{Array<Integer>::Empty}}() ;}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Empty array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a1e7b5f5c9410592b8d6c15629932b1c0}\label{classostk_1_1core_1_1container_1_1_array_a1e7b5f5c9410592b8d6c15629932b1c0}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!find@{find}}
+\index{find@{find}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a31fa4862aac12149c8c77200acc37545}{Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Get iterator to element, finding by value. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{\textcolor{keyword}{auto} elementIt = array.find(2) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a526b45980e342bff95aa068ec0d57cef}\label{classostk_1_1core_1_1container_1_1_array_a526b45980e342bff95aa068ec0d57cef}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!find@{find}}
+\index{find@{find}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Get iterator to element, finding by by value. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{\textcolor{keyword}{auto} elementIt = array.find(2) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}\label{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getIndexOf@{getIndexOf}}
+\index{getIndexOf@{getIndexOf}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getIndexOf()}{getIndexOf()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Index \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::get\+Index\+Of (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Get index of element (by value) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} index = array.getIndexOf(2) ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of element (by value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}\label{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get array size. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} size = array.getSize() ; \textcolor{comment}{// 3}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a8e2da8fcc3fd5d37eb54384e18f59462}\label{classostk_1_1core_1_1container_1_1_array_a8e2da8fcc3fd5d37eb54384e18f59462}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getWhere@{getWhere}}
+\index{getWhere@{getWhere}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getWhere()}{getWhere()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::get\+Where (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&}]{a\+Predicate }\end{DoxyParamCaption}) const}
+
+
+
+Get array of elements based on condition. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{Array<Integer> elements = array.getWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [0, 2, 4]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} of elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ac30877a0e3663ad5158e2639cc32455f}\label{classostk_1_1core_1_1container_1_1_array_ac30877a0e3663ad5158e2639cc32455f}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is empty. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{array.isEmpty() ; \textcolor{comment}{// False}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if array is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_af8f48574ba41c8cbea39de23ecdba7aa}\label{classostk_1_1core_1_1container_1_1_array_af8f48574ba41c8cbea39de23ecdba7aa}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!isNear@{isNear}}
+\index{isNear@{isNear}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isNear()}{isNear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::is\+Near (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array,  }\item[{const std\+::function$<$ bool(const T \&, const T \&)$>$ \&}]{a\+Comparator }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is near another array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;}
+\DoxyCodeLine{Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
+\DoxyCodeLine{firstArray.isNear(secondArray,}
+\DoxyCodeLine{[] (\textcolor{keyword}{const} Real\& aFirstValue, \textcolor{keyword}{const} Real\& aSecondValue) -\/> \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\{ \textcolor{keywordflow}{return} aFirstValue.isNear(aSecondValue, 1e-\/15) ; \}) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Comparator} & A comparator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array is near another array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a74839e693f5524e2c5c0017648486f13}\label{classostk_1_1core_1_1container_1_1_array_a74839e693f5524e2c5c0017648486f13}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!isNear@{isNear}}
+\index{isNear@{isNear}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isNear()}{isNear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::is\+Near (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array,  }\item[{const T \&}]{a\+Tolerance }\end{DoxyParamCaption}) const}
+
+
+
+Check if array is near another array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;}
+\DoxyCodeLine{Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
+\DoxyCodeLine{firstArray.isNear(secondArray, 1e-\/15) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Tolerance} & A tolerance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if array is near another array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a8cf999c431361c3cff33d7cee58a091e}\label{classostk_1_1core_1_1container_1_1_array_a8cf999c431361c3cff33d7cee58a091e}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!map@{map}}
+\index{map@{map}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$U$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::map (\begin{DoxyParamCaption}\item[{const std\+::function$<$ U(T)$>$}]{a\+Mapping\+Function }\end{DoxyParamCaption}) const}
+
+
+
+Get mapped array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<String> strings = \{ \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"} \} ;}
+\DoxyCodeLine{Array<Integer> integers = strings.map<Integer>([] (\textcolor{keyword}{const} String\& aString) -\/> Integer \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_ab5b9dbfb16e857b8ecd0579863287d76}{Integer::Parse}}(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Mapping\+Function} & A mapping function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapped array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a09ace899b075e2c71989015d89547712}\label{classostk_1_1core_1_1container_1_1_array_a09ace899b075e2c71989015d89547712}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!mergeWith@{mergeWith}}
+\index{mergeWith@{mergeWith}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mergeWith()}{mergeWith()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::merge\+With (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Merge array with another array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> firstArray = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<Integer> secondArray = \{4, 5\} ;}
+\DoxyCodeLine{firstArray.merge(secondArray) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a17058cdfb4c04ed41b1b5cead35cf973}\label{classostk_1_1core_1_1container_1_1_array_a17058cdfb4c04ed41b1b5cead35cf973}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption}) const}
+
+
+
+Concatenate array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> a = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<Integer> b = \{4, 5, 6\} ;}
+\DoxyCodeLine{Array<Integer> c = a + b ; \textcolor{comment}{// \{1, 2, 3, 4, 5, 6\}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array to append \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An concatenated array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a2bc9fd90ce72d0cba9616ff16b4441d0}\label{classostk_1_1core_1_1container_1_1_array_a2bc9fd90ce72d0cba9616ff16b4441d0}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&\&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aa0f1dd01d56624d0478ff4de87230d99}\label{classostk_1_1core_1_1container_1_1_array_aa0f1dd01d56624d0478ff4de87230d99}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$T$>$\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_af242918858601d5af9d10fda5b527440}\label{classostk_1_1core_1_1container_1_1_array_af242918858601d5af9d10fda5b527440}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!reduce@{reduce}}
+\index{reduce@{reduce}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::reduce (\begin{DoxyParamCaption}\item[{const std\+::function$<$ T(T, T)$>$ \&}]{a\+Reduce\+Function }\end{DoxyParamCaption}) const}
+
+
+
+Get reduced value. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> integers = \{ 1, 2, 3 \} ;}
+\DoxyCodeLine{Integer reducedInteger = integers.reduce(std::plus<Integer>()) ; \textcolor{comment}{// 6}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Reduce\+Function} & A reduce function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reduced value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a28c5536135c3a1434b470163e83d0890}\label{classostk_1_1core_1_1container_1_1_array_a28c5536135c3a1434b470163e83d0890}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&}]{an\+Array }\end{DoxyParamCaption})}
+
+
+
+Remove elements from array (by value) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3, 4, 5\} ;}
+\DoxyCodeLine{array.remove(\{2, 4\}) ; \textcolor{comment}{// [1, 3, 5]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array of elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ac4246bef128b2a237f411b6de86ecedc}\label{classostk_1_1core_1_1container_1_1_array_ac4246bef128b2a237f411b6de86ecedc}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Element }\end{DoxyParamCaption})}
+
+
+
+Remove element from array (by value) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{array.remove(2) ; \textcolor{comment}{// [1, 3]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Element} & An element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a05c7a33085e45003d6839d7d68a8f9c5}\label{classostk_1_1core_1_1container_1_1_array_a05c7a33085e45003d6839d7d68a8f9c5}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!removeWhere@{removeWhere}}
+\index{removeWhere@{removeWhere}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeWhere()}{removeWhere()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::remove\+Where (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&}]{a\+Predicate }\end{DoxyParamCaption})}
+
+
+
+Remove elements based on condition. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3, 4, 5\} ;}
+\DoxyCodeLine{array.removeWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ;}
+\DoxyCodeLine{\textcolor{comment}{// [1, 3, 5]}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Predicate} & A predicate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ae0b2aff1ac2bda149f0f7fef323ca65b}\label{classostk_1_1core_1_1container_1_1_array_ae0b2aff1ac2bda149f0f7fef323ca65b}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!toString@{toString}}
+\index{toString@{toString}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get string representation of array. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{String \textcolor{keywordtype}{string} = array.toString() ; \textcolor{comment}{// "[1, 2, 3]"}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+String representation of array 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a9daa2d638e5bd693776f8bf6caae0802}\label{classostk_1_1core_1_1container_1_1_array_a9daa2d638e5bd693776f8bf6caae0802}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class U $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ U $>$ \&}]{an\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{std::cout << array ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Array} & An array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_array_8hpp}{Array.\+hpp}}\end{DoxyCompactItemize}

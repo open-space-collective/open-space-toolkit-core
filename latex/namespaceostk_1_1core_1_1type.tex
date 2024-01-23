@@ -1,0 +1,303 @@
+\hypertarget{namespaceostk_1_1core_1_1type}{}\doxysection{ostk\+::core\+::type Namespace Reference}
+\label{namespaceostk_1_1core_1_1type}\index{ostk::core::type@{ostk::core::type}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_byte_array}{Byte\+Array}}
+\begin{DoxyCompactList}\small\item\em An array of bytes \mbox{[}T\+BI\mbox{]}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_string}{Has\+To\+String}}
+\begin{DoxyCompactList}\small\item\em \href{https://gist.github.com/fenbf/d2cd670704b82e2ce7fd}{\texttt{ https\+://gist.\+github.\+com/fenbf/d2cd670704b82e2ce7fd}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}}
+\begin{DoxyCompactList}\small\item\em A sequence of characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}{Byte}} = uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em A unit of digital information that consists of eight bits. \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}}
+\begin{DoxyCompactList}\small\item\em Index can store the maximum size of a theoretically possible object of any type. \end{DoxyCompactList}\item 
+typedef int8\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a41ef4a3c69ac49fd2f62758bdf69e5a8}{Int8}}
+\item 
+typedef int16\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}{Int16}}
+\item 
+typedef int32\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a93d6cf7182fe640f849592926c4dd721}{Int32}}
+\item 
+typedef int64\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a904436f796d6205c1b7539d2593370a0}{Int64}}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a5b1205f7e4b99219442b781b9e360c5f}{Uint8}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}{Uint16}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_aa337e1a2f3f607bf36bf17e68ed22439}{Uint32}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a0bc9d9789d8cb41a60111abe445f04e0}{Uint64}}
+\item 
+{\footnotesize template$<$class T $>$ }\\using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a14fe3367e611fd4d9fca9e9fcfe92848}{Shared}} = std\+::shared\+\_\+ptr$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Retains shared ownership of an object through a pointer. \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}}
+\begin{DoxyCompactList}\small\item\em Size can store the maximum size of a theoretically possible object of any type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a3b7b378b1980599bd52c095729a2d5bb}{Unique}} = std\+::unique\+\_\+ptr$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Owns and manages another object through a pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}{Weak}} = std\+::weak\+\_\+ptr$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Holds a non-\/owning reference to an object that is managed by Shared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}{Sign}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360}{Sign\+::\+Undefined}}, 
+\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147}{Sign\+::\+Positive}}, 
+\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b}{Sign\+::\+Negative}}, 
+\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754}{Sign\+::\+None}}
+ \}
+\begin{DoxyCompactList}\small\item\em Sign enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_string}{Has\+To\+String}}$<$ T $>$\+::value, std\+::string $>$\+::type \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ad18c81a5ed56f58ff9df98288c8c343a}{Call\+To\+String}} (T $\ast$t)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a085785ee30e403dcaa3ac784e1e502e4}{operator+}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a5eb83e816ac6b6ef4fd98bd58c3ceccf}{operator-\/}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_acfb6294d441f631b53c4d4b3ed6d2007}{operator$\ast$}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a2ebb3c6dfb7f07ce15431d2b6a7ec8ea}{operator/}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a5594a3ee3f2e3092f2b1bd2261331377}{operator\%}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a718a72f9497d1b7364f0b99fd2b7dcbd}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&an\+Integer)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a17ebe4b205c768e424ab75e16f4141b4}{operator+}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a2eef915074832cb8477d1064053a259d}{operator-\/}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a625570e035a6e1d98891ed3c09433133}{operator$\ast$}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a52cb50068e71b0a0e6dd76375a6f7830}{operator/}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&an\+Int, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}\label{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}} 
+\index{ostk::core::type@{ostk::core::type}!Byte@{Byte}}
+\index{Byte@{Byte}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Byte}{Byte}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}{ostk\+::core\+::type\+::\+Byte}} = typedef uint8\+\_\+t}
+
+
+
+A unit of digital information that consists of eight bits. 
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}\label{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}} 
+\index{ostk::core::type@{ostk::core::type}!Index@{Index}}
+\index{Index@{Index}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{ostk\+::core\+::type\+::\+Index}}}
+
+
+
+Index can store the maximum size of a theoretically possible object of any type. 
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}\label{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}} 
+\index{ostk::core::type@{ostk::core::type}!Int16@{Int16}}
+\index{Int16@{Int16}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Int16}{Int16}}
+{\footnotesize\ttfamily typedef int16\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}{ostk\+::core\+::type\+::\+Int16}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a93d6cf7182fe640f849592926c4dd721}\label{namespaceostk_1_1core_1_1type_a93d6cf7182fe640f849592926c4dd721}} 
+\index{ostk::core::type@{ostk::core::type}!Int32@{Int32}}
+\index{Int32@{Int32}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Int32}{Int32}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a93d6cf7182fe640f849592926c4dd721}{ostk\+::core\+::type\+::\+Int32}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a904436f796d6205c1b7539d2593370a0}\label{namespaceostk_1_1core_1_1type_a904436f796d6205c1b7539d2593370a0}} 
+\index{ostk::core::type@{ostk::core::type}!Int64@{Int64}}
+\index{Int64@{Int64}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Int64}{Int64}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a904436f796d6205c1b7539d2593370a0}{ostk\+::core\+::type\+::\+Int64}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a41ef4a3c69ac49fd2f62758bdf69e5a8}\label{namespaceostk_1_1core_1_1type_a41ef4a3c69ac49fd2f62758bdf69e5a8}} 
+\index{ostk::core::type@{ostk::core::type}!Int8@{Int8}}
+\index{Int8@{Int8}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Int8}{Int8}}
+{\footnotesize\ttfamily typedef int8\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a41ef4a3c69ac49fd2f62758bdf69e5a8}{ostk\+::core\+::type\+::\+Int8}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a14fe3367e611fd4d9fca9e9fcfe92848}\label{namespaceostk_1_1core_1_1type_a14fe3367e611fd4d9fca9e9fcfe92848}} 
+\index{ostk::core::type@{ostk::core::type}!Shared@{Shared}}
+\index{Shared@{Shared}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Shared}{Shared}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a14fe3367e611fd4d9fca9e9fcfe92848}{ostk\+::core\+::type\+::\+Shared}} = typedef std\+::shared\+\_\+ptr$<$T$>$}
+
+
+
+Retains shared ownership of an object through a pointer. 
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}\label{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}} 
+\index{ostk::core::type@{ostk::core::type}!Size@{Size}}
+\index{Size@{Size}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{ostk\+::core\+::type\+::\+Size}}}
+
+
+
+Size can store the maximum size of a theoretically possible object of any type. 
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}\label{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}} 
+\index{ostk::core::type@{ostk::core::type}!Uint16@{Uint16}}
+\index{Uint16@{Uint16}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Uint16}{Uint16}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}{ostk\+::core\+::type\+::\+Uint16}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_aa337e1a2f3f607bf36bf17e68ed22439}\label{namespaceostk_1_1core_1_1type_aa337e1a2f3f607bf36bf17e68ed22439}} 
+\index{ostk::core::type@{ostk::core::type}!Uint32@{Uint32}}
+\index{Uint32@{Uint32}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Uint32}{Uint32}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_aa337e1a2f3f607bf36bf17e68ed22439}{ostk\+::core\+::type\+::\+Uint32}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a0bc9d9789d8cb41a60111abe445f04e0}\label{namespaceostk_1_1core_1_1type_a0bc9d9789d8cb41a60111abe445f04e0}} 
+\index{ostk::core::type@{ostk::core::type}!Uint64@{Uint64}}
+\index{Uint64@{Uint64}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Uint64}{Uint64}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a0bc9d9789d8cb41a60111abe445f04e0}{ostk\+::core\+::type\+::\+Uint64}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a5b1205f7e4b99219442b781b9e360c5f}\label{namespaceostk_1_1core_1_1type_a5b1205f7e4b99219442b781b9e360c5f}} 
+\index{ostk::core::type@{ostk::core::type}!Uint8@{Uint8}}
+\index{Uint8@{Uint8}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Uint8}{Uint8}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a5b1205f7e4b99219442b781b9e360c5f}{ostk\+::core\+::type\+::\+Uint8}}}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a3b7b378b1980599bd52c095729a2d5bb}\label{namespaceostk_1_1core_1_1type_a3b7b378b1980599bd52c095729a2d5bb}} 
+\index{ostk::core::type@{ostk::core::type}!Unique@{Unique}}
+\index{Unique@{Unique}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Unique}{Unique}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a3b7b378b1980599bd52c095729a2d5bb}{ostk\+::core\+::type\+::\+Unique}} = typedef std\+::unique\+\_\+ptr$<$T$>$}
+
+
+
+Owns and manages another object through a pointer. 
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}\label{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}} 
+\index{ostk::core::type@{ostk::core::type}!Weak@{Weak}}
+\index{Weak@{Weak}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Weak}{Weak}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}{ostk\+::core\+::type\+::\+Weak}} = typedef std\+::weak\+\_\+ptr$<$T$>$}
+
+
+
+Holds a non-\/owning reference to an object that is managed by Shared. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}} 
+\index{ostk::core::type@{ostk::core::type}!Sign@{Sign}}
+\index{Sign@{Sign}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{Sign}{Sign}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}{ostk\+::core\+::type\+::\+Sign}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Sign enum. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Undefined@{Undefined}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Positive@{Positive}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Positive@{Positive}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147}} 
+Positive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Negative@{Negative}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Negative@{Negative}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b}} 
+Negative&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!None@{None}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_ad18c81a5ed56f58ff9df98288c8c343a}\label{namespaceostk_1_1core_1_1type_ad18c81a5ed56f58ff9df98288c8c343a}} 
+\index{ostk::core::type@{ostk::core::type}!CallToString@{CallToString}}
+\index{CallToString@{CallToString}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{CallToString()}{CallToString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_string}{Has\+To\+String}}$<$T$>$\+::value, std\+::string$>$\+::type ostk\+::core\+::type\+::\+Call\+To\+String (\begin{DoxyParamCaption}\item[{T $\ast$}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a5594a3ee3f2e3092f2b1bd2261331377}\label{namespaceostk_1_1core_1_1type_a5594a3ee3f2e3092f2b1bd2261331377}} 
+\index{ostk::core::type@{ostk::core::type}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_acfb6294d441f631b53c4d4b3ed6d2007}\label{namespaceostk_1_1core_1_1type_acfb6294d441f631b53c4d4b3ed6d2007}} 
+\index{ostk::core::type@{ostk::core::type}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a625570e035a6e1d98891ed3c09433133}\label{namespaceostk_1_1core_1_1type_a625570e035a6e1d98891ed3c09433133}} 
+\index{ostk::core::type@{ostk::core::type}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a085785ee30e403dcaa3ac784e1e502e4}\label{namespaceostk_1_1core_1_1type_a085785ee30e403dcaa3ac784e1e502e4}} 
+\index{ostk::core::type@{ostk::core::type}!operator+@{operator+}}
+\index{operator+@{operator+}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a17ebe4b205c768e424ab75e16f4141b4}\label{namespaceostk_1_1core_1_1type_a17ebe4b205c768e424ab75e16f4141b4}} 
+\index{ostk::core::type@{ostk::core::type}!operator+@{operator+}}
+\index{operator+@{operator+}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a5eb83e816ac6b6ef4fd98bd58c3ceccf}\label{namespaceostk_1_1core_1_1type_a5eb83e816ac6b6ef4fd98bd58c3ceccf}} 
+\index{ostk::core::type@{ostk::core::type}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a2eef915074832cb8477d1064053a259d}\label{namespaceostk_1_1core_1_1type_a2eef915074832cb8477d1064053a259d}} 
+\index{ostk::core::type@{ostk::core::type}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a2ebb3c6dfb7f07ce15431d2b6a7ec8ea}\label{namespaceostk_1_1core_1_1type_a2ebb3c6dfb7f07ce15431d2b6a7ec8ea}} 
+\index{ostk::core::type@{ostk::core::type}!operator/@{operator/}}
+\index{operator/@{operator/}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a52cb50068e71b0a0e6dd76375a6f7830}\label{namespaceostk_1_1core_1_1type_a52cb50068e71b0a0e6dd76375a6f7830}} 
+\index{ostk::core::type@{ostk::core::type}!operator/@{operator/}}
+\index{operator/@{operator/}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a718a72f9497d1b7364f0b99fd2b7dcbd}\label{namespaceostk_1_1core_1_1type_a718a72f9497d1b7364f0b99fd2b7dcbd}} 
+\index{ostk::core::type@{ostk::core::type}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::type\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}\label{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}} 
+\index{ostk::core::type@{ostk::core::type}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::type\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
+

@@ -9,5 +9,5 @@ var searchData=
   ['triple_2etpp_585',['Triple.tpp',['../_triple_8tpp.html',1,'']]],
   ['tuple_2ehpp_586',['Tuple.hpp',['../_tuple_8hpp.html',1,'']]],
   ['tutorial_2emd_587',['Tutorial.md',['../_tutorial_8md.html',1,'']]],
-  ['types_2ehpp_588',['Types.hpp',['../_types_8hpp.html',1,'']]]
+  ['type_2ehpp_588',['Type.hpp',['../_type_8hpp.html',1,'']]]
 ];

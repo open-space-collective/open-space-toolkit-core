@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['positive_950',['Positive',['../namespaceostk_1_1core_1_1types.html#ae10e15cf66b50aaec17f4f78c984d7bfa3289297424e01eda5b788c083bbf3147',1,'ostk::core::types']]]
+  ['positive_950',['Positive',['../namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147',1,'ostk::core::type']]]
 ];

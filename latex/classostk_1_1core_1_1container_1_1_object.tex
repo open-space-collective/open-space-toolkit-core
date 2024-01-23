@@ -1,0 +1,632 @@
+\hypertarget{classostk_1_1core_1_1container_1_1_object}{}\doxysection{ostk\+::core\+::container\+::Object Class Reference}
+\label{classostk_1_1core_1_1container_1_1_object}\index{ostk::core::container::Object@{ostk::core::container::Object}}
+
+
+Universal type container.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Type}} \{ \newline
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aec0fc0100c4fc1ce4eea230c3dc10360}{Type\+::\+Undefined}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27226c864bac7454a8504f8edb15d95b}{Type\+::\+Boolean}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aa0faef0851b4294c06f2b94bb1cb2044}{Type\+::\+Integer}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a7f80fcc452c2f1ed2bb51b39d0864df1}{Type\+::\+Real}}, 
+\newline
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27118326006d3829667a400ad23d5d98}{Type\+::\+String}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a3beb75d1563ebc22253341be4ce57f44}{Type\+::\+Dictionary}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a4410ec34d9e6c1a68100ca0ce033fb17}{Type\+::\+Array}}
+ \}
+\item 
+enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Format}} \{ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Format\+::\+Undefined}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa0ecd11c1d7a287401d148a23bbd7a2f8}{Format\+::\+J\+S\+ON}}, 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa9463f87bbed1fcdacfb8d40e185ca2bc}{Format\+::\+Y\+A\+ML}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ac1a0a1bd987a194a6b02cb7f4678dc29}{Object}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a781aa933b420f5cf5bcb1a1d26c5815a}{container\+::\+Pair}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}}, \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$$>$ a\+List)
+\begin{DoxyCompactList}\small\item\em Constructs an object using an initializer list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a035cea8318d8bc4b610e5be3dd8bed3f}{Object}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a45483695fbe8ef80ed269ebae67a50a0}{$\sim$\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a77ddefe226dd484407a75b7bf95b02f1}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a1e7febc3dfd2f1cffb29f83f7f26abdf}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a3f938d88c590d427a6377420ca36f4b9}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a912cabf182ce224154908ef098ade01e}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+Key) const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a5a296f6b68a14d253adcebe03ca1f088}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{type\+::\+Index}} \&an\+Index) const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7dd504933265806bf8242bfc367ef541}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+Key)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a843583545c2324282017c2d0a73020a1}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{type\+::\+Index}} \&an\+Index)
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab02cd7bdcb207e9631fcb3969cb1f441}{is\+Defined}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a79460d3d1083a8d092d2b2c5ea71754f}{is\+Boolean}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a044fbc5fb17b4954aec8e27e9b4f8160}{is\+Integer}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a8fab3ef6cc0b43ceb415771e2699d39d}{is\+Real}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a6dff4baabbbe460465e1885d57eeaeda}{is\+String}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a8ee541f9c9abe488578913feca0bbebc}{is\+Dictionary}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a3452786ccbd7ee43f05a988350823895}{is\+Array}} () const
+\item 
+const bool \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a12cb490e5a3c479ec7ce34f9b651b81a}{access\+Boolean}} () const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a5f832a5ed3cbbb10363b33cf72e9abd4}{access\+Integer}} () const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a6d84fb0f954529d575090ba2ea24f6de}{access\+Real}} () const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_aea21becf7458e40c6f824231a46de2c0}{access\+String}} () const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_abb7bcdc0f8d994aae545a61a6431a042}{access\+Dictionary}} () const
+\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_aefd777689c4721873eac7b86fa9c72e5}{access\+Array}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab87749cbec45e52033265d4926f1ae24}{get\+Type}} () const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab3467946cf23cb729487d78318e4792d}{get\+Boolean}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ac86969cb1cce71de9f4cf5f91aaa5933}{get\+Integer}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a9ef0a0796226433350017c30b1e82087}{get\+Real}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab2777e6aeaacf1ae6c9834760d5713ad}{get\+String}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a47677139e34bbb9608069274a49e289e}{get\+Dictionary}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a6c1ab134025c1cc2a537936344c93937}{get\+Array}} () const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a53699eb49375ff49d52dbb1f4d8d6ead}{to\+String}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}) const
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adf025bfe1cc911a95fe312e355876d8d}{get\+Json\+String}} () const
+\item 
+bool \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a9be2980763e271fbf4422d354130f81f}{access\+Boolean}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab2825f94e0004cca19d456541f69a39f}{access\+Integer}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ac1c1fedaf20b858bd333d7e6af22edfb}{access\+Real}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab5a49ea0c90f5392447ad73bfe849b5c}{access\+String}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_aa83058ddaae4af9ba660acd5dc67341e}{access\+Dictionary}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab266a51bc7d1882b94f927a0ebcc78ec}{access\+Array}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_aed5c2a52ad209ff9bb8432f3eaa358b3}{Undefined}} ()
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a386554ec7db802d6d60695d238be64dc}{Boolean}} (const bool \&a\+Boolean)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Integer}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \&an\+Integer=\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a7cfec90ab92235c3f156a29358da51dd}{type\+::\+Integer\+::\+Undefined}}())
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ac2526f8edf587e27382d27523ea221da}{Real}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \&a\+Real=\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a78b23b6a028a96a095efdcd890d2f793}{type\+::\+Real\+::\+Undefined}}())
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}{String}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String=\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd999bef0746e38e05bb6432fd51dbb}{type\+::\+String\+::\+Empty}}())
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ad23ce0a1ae3703bfdf5f632b32df8212}{Dictionary}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \&a\+Dictionary)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aac0eddd5ea3f7ab8bcc19cfe7a9775}{Array}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \&an\+Array=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$\+::Empty())
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_af2dc12d2f08c50abdbffce0ad71384f2}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}})
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a0682782008eca0c7bd2b2e75908af97e}{Load}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&a\+File, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}})
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a90bba1ccc341ad4089b0c99689270743}{String\+From\+Type}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} \&a\+Type)
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99e36f4ca465dbedff1671b1791392a4}{Type\+From\+String}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a418df9bf4a73078f3d494edef1743f8d}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ab83784f942752bd466d49ac1bd7a13ae}{operator$<$$<$}} (\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&a\+File, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a5fc82aa46648db0280fc6f6f9adc715f}{operator$>$$>$}} (\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&a\+File, \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Universal type container. 
+
+\begin{DoxyNote}{Note}
+The current implementation uses boost\+::any internally. This may be replaced soon for portability. 
+
+The current implementation is not efficient, as two new operators are called. This is just temporary, for testing. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}\label{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Format@{Format}}
+\index{Format@{Format}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Format}{Format}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{ostk\+::core\+::container\+::\+Object\+::\+Format}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JSON@{JSON}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!JSON@{JSON}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa0ecd11c1d7a287401d148a23bbd7a2f8}\label{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa0ecd11c1d7a287401d148a23bbd7a2f8}} 
+J\+S\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YAML@{YAML}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!YAML@{YAML}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa9463f87bbed1fcdacfb8d40e185ca2bc}\label{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aa9463f87bbed1fcdacfb8d40e185ca2bc}} 
+Y\+A\+ML&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Type@{Type}}
+\index{Type@{Type}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{ostk\+::core\+::container\+::\+Object\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Boolean@{Boolean}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Boolean@{Boolean}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27226c864bac7454a8504f8edb15d95b}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27226c864bac7454a8504f8edb15d95b}} 
+Boolean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Integer@{Integer}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Integer@{Integer}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aa0faef0851b4294c06f2b94bb1cb2044}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42aa0faef0851b4294c06f2b94bb1cb2044}} 
+Integer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Real@{Real}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Real@{Real}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a7f80fcc452c2f1ed2bb51b39d0864df1}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a7f80fcc452c2f1ed2bb51b39d0864df1}} 
+Real&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{String@{String}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!String@{String}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27118326006d3829667a400ad23d5d98}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a27118326006d3829667a400ad23d5d98}} 
+String&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dictionary@{Dictionary}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Dictionary@{Dictionary}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a3beb75d1563ebc22253341be4ce57f44}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a3beb75d1563ebc22253341be4ce57f44}} 
+Dictionary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Array@{Array}!ostk::core::container::Object@{ostk::core::container::Object}}\index{ostk::core::container::Object@{ostk::core::container::Object}!Array@{Array}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a4410ec34d9e6c1a68100ca0ce033fb17}\label{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42a4410ec34d9e6c1a68100ca0ce033fb17}} 
+Array&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}\label{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Object@{Object}}
+\index{Object@{Object}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Object\+::\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ac1a0a1bd987a194a6b02cb7f4678dc29}\label{classostk_1_1core_1_1container_1_1_object_ac1a0a1bd987a194a6b02cb7f4678dc29}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Object@{Object}}
+\index{Object@{Object}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a781aa933b420f5cf5bcb1a1d26c5815a}{container\+::\+Pair}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}}, \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$$>$}]{a\+List }\end{DoxyParamCaption})}
+
+
+
+Constructs an object using an initializer list. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} \textcolor{keywordtype}{object} = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}, \{ \textcolor{stringliteral}{"Key B"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}{Object::String}}(\textcolor{stringliteral}{"Hello}}
+\DoxyCodeLine{\textcolor{stringliteral}{World!"}) \}\} ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+List} & An initializer list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a035cea8318d8bc4b610e5be3dd8bed3f}\label{classostk_1_1core_1_1container_1_1_object_a035cea8318d8bc4b610e5be3dd8bed3f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Object@{Object}}
+\index{Object@{Object}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a45483695fbe8ef80ed269ebae67a50a0}\label{classostk_1_1core_1_1container_1_1_object_a45483695fbe8ef80ed269ebae67a50a0}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab266a51bc7d1882b94f927a0ebcc78ec}\label{classostk_1_1core_1_1container_1_1_object_ab266a51bc7d1882b94f927a0ebcc78ec}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessArray@{accessArray}}
+\index{accessArray@{accessArray}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessArray()}{accessArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}}$>$\& ostk\+::core\+::container\+::\+Object\+::access\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_aefd777689c4721873eac7b86fa9c72e5}\label{classostk_1_1core_1_1container_1_1_object_aefd777689c4721873eac7b86fa9c72e5}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessArray@{accessArray}}
+\index{accessArray@{accessArray}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessArray()}{accessArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \& ostk\+::core\+::container\+::\+Object\+::access\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a9be2980763e271fbf4422d354130f81f}\label{classostk_1_1core_1_1container_1_1_object_a9be2980763e271fbf4422d354130f81f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessBoolean@{accessBoolean}}
+\index{accessBoolean@{accessBoolean}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessBoolean()}{accessBoolean()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool\& ostk\+::core\+::container\+::\+Object\+::access\+Boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a12cb490e5a3c479ec7ce34f9b651b81a}\label{classostk_1_1core_1_1container_1_1_object_a12cb490e5a3c479ec7ce34f9b651b81a}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessBoolean@{accessBoolean}}
+\index{accessBoolean@{accessBoolean}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessBoolean()}{accessBoolean()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool \& ostk\+::core\+::container\+::\+Object\+::access\+Boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_aa83058ddaae4af9ba660acd5dc67341e}\label{classostk_1_1core_1_1container_1_1_object_aa83058ddaae4af9ba660acd5dc67341e}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessDictionary@{accessDictionary}}
+\index{accessDictionary@{accessDictionary}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessDictionary()}{accessDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}}\& ostk\+::core\+::container\+::\+Object\+::access\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_abb7bcdc0f8d994aae545a61a6431a042}\label{classostk_1_1core_1_1container_1_1_object_abb7bcdc0f8d994aae545a61a6431a042}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessDictionary@{accessDictionary}}
+\index{accessDictionary@{accessDictionary}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessDictionary()}{accessDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \& ostk\+::core\+::container\+::\+Object\+::access\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab2825f94e0004cca19d456541f69a39f}\label{classostk_1_1core_1_1container_1_1_object_ab2825f94e0004cca19d456541f69a39f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessInteger@{accessInteger}}
+\index{accessInteger@{accessInteger}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessInteger()}{accessInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}}\& ostk\+::core\+::container\+::\+Object\+::access\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a5f832a5ed3cbbb10363b33cf72e9abd4}\label{classostk_1_1core_1_1container_1_1_object_a5f832a5ed3cbbb10363b33cf72e9abd4}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessInteger@{accessInteger}}
+\index{accessInteger@{accessInteger}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessInteger()}{accessInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \& ostk\+::core\+::container\+::\+Object\+::access\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ac1c1fedaf20b858bd333d7e6af22edfb}\label{classostk_1_1core_1_1container_1_1_object_ac1c1fedaf20b858bd333d7e6af22edfb}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessReal@{accessReal}}
+\index{accessReal@{accessReal}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessReal()}{accessReal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}}\& ostk\+::core\+::container\+::\+Object\+::access\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a6d84fb0f954529d575090ba2ea24f6de}\label{classostk_1_1core_1_1container_1_1_object_a6d84fb0f954529d575090ba2ea24f6de}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessReal@{accessReal}}
+\index{accessReal@{accessReal}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessReal()}{accessReal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \& ostk\+::core\+::container\+::\+Object\+::access\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab5a49ea0c90f5392447ad73bfe849b5c}\label{classostk_1_1core_1_1container_1_1_object_ab5a49ea0c90f5392447ad73bfe849b5c}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessString@{accessString}}
+\index{accessString@{accessString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessString()}{accessString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}}\& ostk\+::core\+::container\+::\+Object\+::access\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_aea21becf7458e40c6f824231a46de2c0}\label{classostk_1_1core_1_1container_1_1_object_aea21becf7458e40c6f824231a46de2c0}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!accessString@{accessString}}
+\index{accessString@{accessString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{accessString()}{accessString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \& ostk\+::core\+::container\+::\+Object\+::access\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7aac0eddd5ea3f7ab8bcc19cfe7a9775}\label{classostk_1_1core_1_1container_1_1_object_a7aac0eddd5ea3f7ab8bcc19cfe7a9775}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Array@{Array}}
+\index{Array@{Array}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ \&}]{an\+Array = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}}$>$\+:\+:Empty()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a386554ec7db802d6d60695d238be64dc}\label{classostk_1_1core_1_1container_1_1_object_a386554ec7db802d6d60695d238be64dc}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Boolean@{Boolean}}
+\index{Boolean@{Boolean}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Boolean()}{Boolean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Boolean (\begin{DoxyParamCaption}\item[{const bool \&}]{a\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ad23ce0a1ae3703bfdf5f632b32df8212}\label{classostk_1_1core_1_1container_1_1_object_ad23ce0a1ae3703bfdf5f632b32df8212}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Dictionary()}{Dictionary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Dictionary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} \&}]{a\+Dictionary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a6c1ab134025c1cc2a537936344c93937}\label{classostk_1_1core_1_1container_1_1_object_a6c1ab134025c1cc2a537936344c93937}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getArray@{getArray}}
+\index{getArray@{getArray}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getArray()}{getArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{container\+::\+Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} $>$ ostk\+::core\+::container\+::\+Object\+::get\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab3467946cf23cb729487d78318e4792d}\label{classostk_1_1core_1_1container_1_1_object_ab3467946cf23cb729487d78318e4792d}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getBoolean@{getBoolean}}
+\index{getBoolean@{getBoolean}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getBoolean()}{getBoolean()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::get\+Boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a47677139e34bbb9608069274a49e289e}\label{classostk_1_1core_1_1container_1_1_object_a47677139e34bbb9608069274a49e289e}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getDictionary@{getDictionary}}
+\index{getDictionary@{getDictionary}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getDictionary()}{getDictionary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{container\+::\+Dictionary}} ostk\+::core\+::container\+::\+Object\+::get\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ac86969cb1cce71de9f4cf5f91aaa5933}\label{classostk_1_1core_1_1container_1_1_object_ac86969cb1cce71de9f4cf5f91aaa5933}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getInteger@{getInteger}}
+\index{getInteger@{getInteger}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getInteger()}{getInteger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} ostk\+::core\+::container\+::\+Object\+::get\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_adf025bfe1cc911a95fe312e355876d8d}\label{classostk_1_1core_1_1container_1_1_object_adf025bfe1cc911a95fe312e355876d8d}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getJsonString@{getJsonString}}
+\index{getJsonString@{getJsonString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getJsonString()}{getJsonString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} ostk\+::core\+::container\+::\+Object\+::get\+Json\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a9ef0a0796226433350017c30b1e82087}\label{classostk_1_1core_1_1container_1_1_object_a9ef0a0796226433350017c30b1e82087}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getReal@{getReal}}
+\index{getReal@{getReal}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getReal()}{getReal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} ostk\+::core\+::container\+::\+Object\+::get\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab2777e6aeaacf1ae6c9834760d5713ad}\label{classostk_1_1core_1_1container_1_1_object_ab2777e6aeaacf1ae6c9834760d5713ad}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getString@{getString}}
+\index{getString@{getString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} ostk\+::core\+::container\+::\+Object\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab87749cbec45e52033265d4926f1ae24}\label{classostk_1_1core_1_1container_1_1_object_ab87749cbec45e52033265d4926f1ae24}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!getType@{getType}}
+\index{getType@{getType}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} ostk\+::core\+::container\+::\+Object\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}\label{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Integer@{Integer}}
+\index{Integer@{Integer}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Integer()}{Integer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Integer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{type\+::\+Integer}} \&}]{an\+Integer = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a7cfec90ab92235c3f156a29358da51dd}{type\+::\+Integer\+::\+Undefined}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a3452786ccbd7ee43f05a988350823895}\label{classostk_1_1core_1_1container_1_1_object_a3452786ccbd7ee43f05a988350823895}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isArray@{isArray}}
+\index{isArray@{isArray}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isArray()}{isArray()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a79460d3d1083a8d092d2b2c5ea71754f}\label{classostk_1_1core_1_1container_1_1_object_a79460d3d1083a8d092d2b2c5ea71754f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isBoolean@{isBoolean}}
+\index{isBoolean@{isBoolean}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isBoolean()}{isBoolean()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab02cd7bdcb207e9631fcb3969cb1f441}\label{classostk_1_1core_1_1container_1_1_object_ab02cd7bdcb207e9631fcb3969cb1f441}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a8ee541f9c9abe488578913feca0bbebc}\label{classostk_1_1core_1_1container_1_1_object_a8ee541f9c9abe488578913feca0bbebc}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isDictionary@{isDictionary}}
+\index{isDictionary@{isDictionary}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isDictionary()}{isDictionary()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a044fbc5fb17b4954aec8e27e9b4f8160}\label{classostk_1_1core_1_1container_1_1_object_a044fbc5fb17b4954aec8e27e9b4f8160}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isInteger@{isInteger}}
+\index{isInteger@{isInteger}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isInteger()}{isInteger()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a8fab3ef6cc0b43ceb415771e2699d39d}\label{classostk_1_1core_1_1container_1_1_object_a8fab3ef6cc0b43ceb415771e2699d39d}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isReal@{isReal}}
+\index{isReal@{isReal}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isReal()}{isReal()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a6dff4baabbbe460465e1885d57eeaeda}\label{classostk_1_1core_1_1container_1_1_object_a6dff4baabbbe460465e1885d57eeaeda}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!isString@{isString}}
+\index{isString@{isString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{isString()}{isString()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::is\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a0682782008eca0c7bd2b2e75908af97e}\label{classostk_1_1core_1_1container_1_1_object_a0682782008eca0c7bd2b2e75908af97e}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Load@{Load}}
+\index{Load@{Load}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a3f938d88c590d427a6377420ca36f4b9}\label{classostk_1_1core_1_1container_1_1_object_a3f938d88c590d427a6377420ca36f4b9}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} firstObject = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} secondObject = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(456) ;}
+\DoxyCodeLine{firstObject != secondObject ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if objects are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a77ddefe226dd484407a75b7bf95b02f1}\label{classostk_1_1core_1_1container_1_1_object_a77ddefe226dd484407a75b7bf95b02f1}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& ostk\+::core\+::container\+::\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a1e7febc3dfd2f1cffb29f83f7f26abdf}\label{classostk_1_1core_1_1container_1_1_object_a1e7febc3dfd2f1cffb29f83f7f26abdf}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Object\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} firstObject = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_adaf14a3506ea9a05e1001bc7b56917ad}{Object}} secondObject = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) ;}
+\DoxyCodeLine{firstObject == secondObject ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if objects are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a843583545c2324282017c2d0a73020a1}\label{classostk_1_1core_1_1container_1_1_object_a843583545c2324282017c2d0a73020a1}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& ostk\+::core\+::container\+::\+Object\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{type\+::\+Index}} \&}]{an\+Index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a5a296f6b68a14d253adcebe03ca1f088}\label{classostk_1_1core_1_1container_1_1_object_a5a296f6b68a14d253adcebe03ca1f088}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& ostk\+::core\+::container\+::\+Object\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{type\+::\+Index}} \&}]{an\+Index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a7dd504933265806bf8242bfc367ef541}\label{classostk_1_1core_1_1container_1_1_object_a7dd504933265806bf8242bfc367ef541}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& ostk\+::core\+::container\+::\+Object\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+Key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a912cabf182ce224154908ef098ade01e}\label{classostk_1_1core_1_1container_1_1_object_a912cabf182ce224154908ef098ade01e}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \& ostk\+::core\+::container\+::\+Object\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+Key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_af2dc12d2f08c50abdbffce0ad71384f2}\label{classostk_1_1core_1_1container_1_1_object_af2dc12d2f08c50abdbffce0ad71384f2}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Parse@{Parse}}
+\index{Parse@{Parse}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ac2526f8edf587e27382d27523ea221da}\label{classostk_1_1core_1_1container_1_1_object_ac2526f8edf587e27382d27523ea221da}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Real@{Real}}
+\index{Real@{Real}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Real()}{Real()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Real (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{type\+::\+Real}} \&}]{a\+Real = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a78b23b6a028a96a095efdcd890d2f793}{type\+::\+Real\+::\+Undefined}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}\label{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!String@{String}}
+\index{String@{String}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd999bef0746e38e05bb6432fd51dbb}{type\+::\+String\+::\+Empty}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a90bba1ccc341ad4089b0c99689270743}\label{classostk_1_1core_1_1container_1_1_object_a90bba1ccc341ad4089b0c99689270743}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!StringFromType@{StringFromType}}
+\index{StringFromType@{StringFromType}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{StringFromType()}{StringFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} ostk\+::core\+::container\+::\+Object\+::\+String\+From\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} \&}]{a\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a53699eb49375ff49d52dbb1f4d8d6ead}\label{classostk_1_1core_1_1container_1_1_object_a53699eb49375ff49d52dbb1f4d8d6ead}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!toString@{toString}}
+\index{toString@{toString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} ostk\+::core\+::container\+::\+Object\+::to\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a99e36f4ca465dbedff1671b1791392a4}\label{classostk_1_1core_1_1container_1_1_object_a99e36f4ca465dbedff1671b1791392a4}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!TypeFromString@{TypeFromString}}
+\index{TypeFromString@{TypeFromString}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{TypeFromString()}{TypeFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a7aae445503d92c87f3bc4434c50c6e42}{Object\+::\+Type}} ostk\+::core\+::container\+::\+Object\+::\+Type\+From\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_aed5c2a52ad209ff9bb8432f3eaa358b3}\label{classostk_1_1core_1_1container_1_1_object_aed5c2a52ad209ff9bb8432f3eaa358b3}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} ostk\+::core\+::container\+::\+Object\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_ab83784f942752bd466d49ac1bd7a13ae}\label{classostk_1_1core_1_1container_1_1_object_ab83784f942752bd466d49ac1bd7a13ae}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a418df9bf4a73078f3d494edef1743f8d}\label{classostk_1_1core_1_1container_1_1_object_a418df9bf4a73078f3d494edef1743f8d}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_object_a5fc82aa46648db0280fc6f6f9adc715f}\label{classostk_1_1core_1_1container_1_1_object_a5fc82aa46648db0280fc6f6f9adc715f}} 
+\index{ostk::core::container::Object@{ostk::core::container::Object}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ostk::core::container::Object@{ostk::core::container::Object}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}}\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&}]{a\+File,  }\item[{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_object_8hpp}{Object.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_object_8cpp}{Object.\+cpp}}\end{DoxyCompactItemize}

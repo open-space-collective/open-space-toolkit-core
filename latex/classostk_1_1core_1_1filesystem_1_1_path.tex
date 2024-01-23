@@ -29,7 +29,7 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e
 \begin{DoxyCompactList}\small\item\em Check if path is relative. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5a9418eda9883fa2a72b067fc7145a6}{get\+Parent\+Path}} () const
 \begin{DoxyCompactList}\small\item\em Get parent path of path. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aa92eb9cc5209fd5c41cb1ecc8777cd06}{get\+Last\+Element}} () const
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aa92eb9cc5209fd5c41cb1ecc8777cd06}{get\+Last\+Element}} () const
 \begin{DoxyCompactList}\small\item\em Get last element of path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a6eb6808eeb1d03810e485f91825aae98}{get\+Normalized\+Path}} () const
 \begin{DoxyCompactList}\small\item\em Get normalized path. \end{DoxyCompactList}\item 
@@ -37,7 +37,7 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e
 \begin{DoxyCompactList}\small\item\em Get absolute path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab4309ce6b68c58c5befe2f479de6842f}{get\+Relative\+Path\+To}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Reference\+Path) const
 \begin{DoxyCompactList}\small\item\em Get path relative to path. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}{to\+String}} () const
+\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ab5ea209f4b4984efbec83f1def2011ce}{to\+String}} () const
 \begin{DoxyCompactList}\small\item\em Get serialized path. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -48,9 +48,9 @@ static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\
 \begin{DoxyCompactList}\small\item\em Constructs a root path. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Current}} ()
 \begin{DoxyCompactList}\small\item\em Constructs a current path. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&a\+String)
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String)
 \begin{DoxyCompactList}\small\item\em Constructs a path from a given string. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}{Strings}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$ a\+String\+List)
+static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4203822b86cdaf2542b292d214e5e113}{Strings}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$ a\+String\+List)
 \begin{DoxyCompactList}\small\item\em Constructs a path from a list of string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -136,7 +136,7 @@ Absolute path
 \index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!getLastElement@{getLastElement}}
 \index{getLastElement@{getLastElement}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
 \doxysubsubsection{\texorpdfstring{getLastElement()}{getLastElement()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Last\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::get\+Last\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -409,7 +409,7 @@ True if paths are equal
 \index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Parse@{Parse}}
 \index{Parse@{Parse}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
 \doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -452,7 +452,7 @@ Root path
 \index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Strings@{Strings}}
 \index{Strings@{Strings}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
 \doxysubsubsection{\texorpdfstring{Strings()}{Strings()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Strings (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} $>$}]{a\+String\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Strings (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} $>$}]{a\+String\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -476,7 +476,7 @@ Constructs a path from a list of string.
 \index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!toString@{toString}}
 \index{toString@{toString}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
 \doxysubsubsection{\texorpdfstring{toString()}{toString()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1types_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::filesystem\+::\+Path\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

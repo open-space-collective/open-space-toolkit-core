@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['list_896',['List',['../namespaceostk_1_1core_1_1ctnr.html#a5802e21d045076175dcb310a7045c858',1,'ostk::core::ctnr']]]
+  ['list_896',['List',['../namespaceostk_1_1core_1_1container.html#afdfb0dc39c01f199950550531140a918',1,'ostk::core::container']]]
 ];

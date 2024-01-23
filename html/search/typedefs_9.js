@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tuple_907',['Tuple',['../namespaceostk_1_1core_1_1ctnr.html#a7f01ca040222e5b0c02a90aa68cc8e88',1,'ostk::core::ctnr']]]
+  ['tuple_907',['Tuple',['../namespaceostk_1_1core_1_1container.html#af6dbaf299d8b2ced8a150b09c3cade2a',1,'ostk::core::container']]]
 ];

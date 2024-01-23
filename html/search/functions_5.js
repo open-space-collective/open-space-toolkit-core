@@ -1,8 +1,8 @@
 var searchData=
 [
   ['file_650',['File',['../classostk_1_1core_1_1filesystem_1_1_file.html#a433d3d7747d23181a0e2ca0bdfb57439',1,'ostk::core::filesystem::File']]],
-  ['find_651',['find',['../classostk_1_1core_1_1ctnr_1_1_array.html#abf965f4f2eaa744eeeafd315837ec9fb',1,'ostk::core::ctnr::Array::find(const T &amp;anElement) const'],['../classostk_1_1core_1_1ctnr_1_1_array.html#abff2b3ec6c0a3345568ddd7c19ff5b86',1,'ostk::core::ctnr::Array::find(const T &amp;anElement)']]],
-  ['floor_652',['floor',['../classostk_1_1core_1_1types_1_1_real.html#a47afebe4b0a09850496b626cdb3fee10',1,'ostk::core::types::Real']]],
+  ['find_651',['find',['../classostk_1_1core_1_1container_1_1_array.html#a526b45980e342bff95aa068ec0d57cef',1,'ostk::core::container::Array::find(const T &amp;anElement) const'],['../classostk_1_1core_1_1container_1_1_array.html#a1e7b5f5c9410592b8d6c15629932b1c0',1,'ostk::core::container::Array::find(const T &amp;anElement)']]],
+  ['floor_652',['floor',['../classostk_1_1core_1_1type_1_1_real.html#af1e33560d17a2e32926ba96650b6c34c',1,'ostk::core::type::Real']]],
   ['footer_653',['Footer',['../classostk_1_1core_1_1utils_1_1_print.html#af2493f2770f18699410630710a8105a4',1,'ostk::core::utils::Print']]],
-  ['format_654',['Format',['../classostk_1_1core_1_1types_1_1_string.html#afb00429ca478a722cd38904f52aa6f26',1,'ostk::core::types::String']]]
+  ['format_654',['Format',['../classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675',1,'ostk::core::type::String']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orderedmap_900',['OrderedMap',['../namespaceostk_1_1core_1_1ctnr.html#a13ac23065e75eb425f38bfca4d0c6b38',1,'ostk::core::ctnr']]]
+  ['orderedmap_900',['OrderedMap',['../namespaceostk_1_1core_1_1container.html#a997e0cc9fef8279d296c0d4aa1d9b493',1,'ostk::core::container']]]
 ];

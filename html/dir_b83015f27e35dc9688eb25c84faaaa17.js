@@ -1,7 +1,7 @@
 var dir_b83015f27e35dc9688eb25c84faaaa17 =
 [
-    [ "Sinks", "dir_2e257792cfef5f8bdf19f04de913a7b9.html", "dir_2e257792cfef5f8bdf19f04de913a7b9" ],
-    [ "Sources", "dir_85ec526a5ce725d27f49ee496092bdbb.html", "dir_85ec526a5ce725d27f49ee496092bdbb" ],
+    [ "Sink", "dir_c4ad9d89a01308498d8dab7c40446fe1.html", "dir_c4ad9d89a01308498d8dab7c40446fe1" ],
+    [ "Source", "dir_1c8c43f19f70157863a0c203afd5ab03.html", "dir_1c8c43f19f70157863a0c203afd5ab03" ],
     [ "Pump.hpp", "_pump_8hpp.html", [
       [ "Pump", "classostk_1_1core_1_1logger_1_1_pump.html", "classostk_1_1core_1_1logger_1_1_pump" ]
     ] ],

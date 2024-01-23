@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['value_913',['Value',['../classostk_1_1core_1_1ctnr_1_1_dictionary.html#ace6ab82268031e972455affca8730c9c',1,'ostk::core::ctnr::Dictionary']]],
-  ['valuetype_914',['ValueType',['../classostk_1_1core_1_1types_1_1_integer.html#a76a5f41f78659f116eafaf26cecc3244',1,'ostk::core::types::Integer::ValueType()'],['../classostk_1_1core_1_1types_1_1_real.html#aa26f796c30b514c98d573f82e3b02296',1,'ostk::core::types::Real::ValueType()']]]
+  ['value_913',['Value',['../classostk_1_1core_1_1container_1_1_dictionary.html#a6e8585a0041d78b9849506eef8cf958d',1,'ostk::core::container::Dictionary']]],
+  ['valuetype_914',['ValueType',['../classostk_1_1core_1_1type_1_1_integer.html#a690a18bd9f78b063554d7a3e1dc3d0ed',1,'ostk::core::type::Integer::ValueType()'],['../classostk_1_1core_1_1type_1_1_real.html#a496506f9fe76e8c135c731a7bf5fee19',1,'ostk::core::type::Real::ValueType()']]]
 ];

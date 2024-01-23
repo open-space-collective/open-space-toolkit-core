@@ -1,0 +1,110 @@
+\hypertarget{classostk_1_1core_1_1container_1_1_tree}{}\doxysection{ostk\+::core\+::container\+::Tree Class Reference}
+\label{classostk_1_1core_1_1container_1_1_tree}\index{ostk::core::container::Tree@{ostk::core::container::Tree}}
+
+
+Undirected graph in which any two vertices are connected by exactly one path.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a6957b96965368f6dd283c5986b82f00c}{Tree}} ()=delete
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}{Tree}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree)
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}{$\sim$\+Tree}} ()
+\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree) const
+\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}{is\+Defined}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a747219067a849456b83b66061fc3a1f5}{Empty}} ()
+\item 
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}{Object}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Undirected graph in which any two vertices are connected by exactly one path. 
+
+\begin{DoxyVerb}                        A tree data structure can be defined recursively (locally) as a collection of nodes
+                        (starting at a root node), where each node is a data structure consisting of a value,
+                        together with a list of references to nodes (the "children"), with the constraints that
+                        no reference is duplicated, and none points to the root.
+\end{DoxyVerb}
+
+
+\href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(graph\+\_\+theory) \href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(data\+\_\+structure) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a6957b96965368f6dd283c5986b82f00c}\label{classostk_1_1core_1_1container_1_1_tree_a6957b96965368f6dd283c5986b82f00c}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}\label{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}\label{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!````~Tree@{$\sim$Tree}}
+\index{````~Tree@{$\sim$Tree}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
+{\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a747219067a849456b83b66061fc3a1f5}\label{classostk_1_1core_1_1container_1_1_tree_a747219067a849456b83b66061fc3a1f5}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!Empty@{Empty}}
+\index{Empty@{Empty}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} ostk\+::core\+::container\+::\+Tree\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}\label{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Tree\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}\label{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!Object@{Object}}
+\index{Object@{Object}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} ostk\+::core\+::container\+::\+Tree\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}\label{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}}\& ostk\+::core\+::container\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}\label{classostk_1_1core_1_1container_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}} 
+\index{ostk::core::container::Tree@{ostk::core::container::Tree}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::core::container::Tree@{ostk::core::container::Tree}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+Core/\+Container/\mbox{\hyperlink{_tree_8hpp}{Tree.\+hpp}}\end{DoxyCompactItemize}
