@@ -614,41 +614,41 @@ bool Real::isNear(const Real& aValue, const Real& aTolerance) const
     return ((*this) - aValue).abs() <= aTolerance;
 }
 
-types::Sign Real::getSign() const
+type::Sign Real::getSign() const
 {
     switch (type_)
     {
         case Real::Type::Undefined:
-            return types::Sign::Undefined;
+            return type::Sign::Undefined;
 
         case Real::Type::Defined:
         {
             if (value_ > 0.0)
             {
-                return types::Sign::Positive;
+                return type::Sign::Positive;
             }
             else if (value_ < 0.0)
             {
-                return types::Sign::Negative;
+                return type::Sign::Negative;
             }
 
-            return types::Sign::None;
+            return type::Sign::None;
         }
 
         case Real::Type::PositiveInfinity:
-            return types::Sign::Positive;
+            return type::Sign::Positive;
 
         case Real::Type::NegativeInfinity:
-            return types::Sign::Negative;
+            return type::Sign::Negative;
 
         default:
-            return types::Sign::Undefined;
+            return type::Sign::Undefined;
     }
 
-    return types::Sign::Undefined;
+    return type::Sign::Undefined;
 }
 
-types::String Real::toString(const types::Integer& aPrecision) const
+type::String Real::toString(const type::Integer& aPrecision) const
 {
     switch (type_)
     {
@@ -661,7 +661,7 @@ types::String Real::toString(const types::Integer& aPrecision) const
             {
                 if (this->isInteger())
                 {
-                    types::String realString = boost::lexical_cast<std::string>(value_);
+                    type::String realString = boost::lexical_cast<std::string>(value_);
 
                     if (realString.find('e') == std::string::npos)
                     {
@@ -671,8 +671,8 @@ types::String Real::toString(const types::Integer& aPrecision) const
                     return realString;
                 }
 
-                // types::String realString = std::to_string(value_) ;
-                types::String realString = boost::lexical_cast<std::string>(value_);
+                // type::String realString = std::to_string(value_) ;
+                type::String realString = boost::lexical_cast<std::string>(value_);
 
                 // std::ostringstream stringStream ;
 
@@ -680,7 +680,7 @@ types::String Real::toString(const types::Integer& aPrecision) const
 
                 // stringStream << std::fixed << value_ ;
 
-                // types::String realString = stringStream.str() ;
+                // type::String realString = stringStream.str() ;
 
                 if (realString.find('e') == std::string::npos)
                 {
@@ -711,19 +711,19 @@ types::String Real::toString(const types::Integer& aPrecision) const
             return "-Inf";
     }
 
-    return types::String::Empty();
+    return type::String::Empty();
 }
 
-types::Integer Real::toInteger() const
+type::Integer Real::toInteger() const
 {
     if (this->isInteger())
     {
-        return types::Integer(static_cast<types::Integer::ValueType>(value_));
+        return type::Integer(static_cast<type::Integer::ValueType>(value_));
     }
 
     throw ostk::core::error::RuntimeError("Real is not integer.");
 
-    return types::Integer::Undefined();
+    return type::Integer::Undefined();
 }
 
 Real Real::abs() const
@@ -748,26 +748,26 @@ Real Real::abs() const
     return Real::Undefined();
 }
 
-types::Integer Real::floor() const
+type::Integer Real::floor() const
 {
     switch (type_)
     {
         case Real::Type::Undefined:
-            return types::Integer::Undefined();
+            return type::Integer::Undefined();
 
         case Real::Type::Defined:
-            return types::Integer(static_cast<types::Integer::ValueType>(std::floor(value_)));
+            return type::Integer(static_cast<type::Integer::ValueType>(std::floor(value_)));
 
         case Real::Type::PositiveInfinity:
         case Real::Type::NegativeInfinity:
-            return types::Integer::Undefined();
+            return type::Integer::Undefined();
 
         default:
             throw ostk::core::error::runtime::Undefined("Type");
             break;
     }
 
-    return types::Integer::Undefined();
+    return type::Integer::Undefined();
 }
 
 Real Real::sqrt() const
@@ -841,7 +841,7 @@ Real Real::NegativeInfinity()
     return Real(Real::Type::NegativeInfinity, std::numeric_limits<Real::ValueType>::lowest());
 }
 
-Real Real::Integer(const types::Integer& anInteger)
+Real Real::Integer(const type::Integer& anInteger)
 {
     if (anInteger.isDefined())
     {
@@ -851,7 +851,7 @@ Real Real::Integer(const types::Integer& anInteger)
     return Real::Undefined();
 }
 
-Real Real::CanParse(const types::String& aString)
+Real Real::CanParse(const type::String& aString)
 {
     if (aString.isEmpty())
     {
@@ -869,7 +869,7 @@ Real Real::CanParse(const types::String& aString)
     return boost::conversion::try_lexical_convert<Real::ValueType>(aString, real);
 }
 
-Real Real::Parse(const types::String& aString)
+Real Real::Parse(const type::String& aString)
 {
     if (aString.isEmpty())
     {
@@ -910,7 +910,7 @@ Real Real::Parse(const types::String& aString)
     return Real::Undefined();
 }
 
-// Real                             Real::Object                             (   const   ctnr::Object& anObject )
+// Real                             Real::Object                             (   const   container::Object& anObject )
 // {
 
 // }

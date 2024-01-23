@@ -41,20 +41,20 @@ class Object::Impl
     bool isArray() const;
 
     const bool& accessBoolean() const;
-    const types::Integer& accessInteger() const;
-    const types::Real& accessReal() const;
-    const types::String& accessString() const;
-    const ctnr::Dictionary& accessDictionary() const;
-    const ctnr::Array<Object>& accessArray() const;
+    const type::Integer& accessInteger() const;
+    const type::Real& accessReal() const;
+    const type::String& accessString() const;
+    const container::Dictionary& accessDictionary() const;
+    const container::Array<Object>& accessArray() const;
 
     Object::Type getType() const;
 
     bool& accessBoolean();
-    types::Integer& accessInteger();
-    types::Real& accessReal();
-    types::String& accessString();
-    ctnr::Dictionary& accessDictionary();
-    ctnr::Array<Object>& accessArray();
+    type::Integer& accessInteger();
+    type::Real& accessReal();
+    type::String& accessString();
+    container::Dictionary& accessDictionary();
+    container::Array<Object>& accessArray();
 
    private:
     boost::any value_;
@@ -82,30 +82,30 @@ bool Object::Impl::operator==(const Object::Impl& anObject) const
         return boost::any_cast<bool>(value_) == boost::any_cast<bool>(anObject.value_);
     }
 
-    if (value_.type() == typeid(types::Integer))
+    if (value_.type() == typeid(type::Integer))
     {
-        return boost::any_cast<types::Integer>(value_) == boost::any_cast<types::Integer>(anObject.value_);
+        return boost::any_cast<type::Integer>(value_) == boost::any_cast<type::Integer>(anObject.value_);
     }
 
-    if (value_.type() == typeid(types::Real))
+    if (value_.type() == typeid(type::Real))
     {
-        return boost::any_cast<types::Real>(value_) == boost::any_cast<types::Real>(anObject.value_);
+        return boost::any_cast<type::Real>(value_) == boost::any_cast<type::Real>(anObject.value_);
     }
 
-    if (value_.type() == typeid(types::String))
+    if (value_.type() == typeid(type::String))
     {
-        return boost::any_cast<types::String>(value_) == boost::any_cast<types::String>(anObject.value_);
+        return boost::any_cast<type::String>(value_) == boost::any_cast<type::String>(anObject.value_);
     }
 
-    if (value_.type() == typeid(ctnr::Array<ctnr::Object>))
+    if (value_.type() == typeid(container::Array<container::Object>))
     {
-        return boost::any_cast<ctnr::Array<ctnr::Object>>(value_) ==
-               boost::any_cast<ctnr::Array<ctnr::Object>>(anObject.value_);
+        return boost::any_cast<container::Array<container::Object>>(value_) ==
+               boost::any_cast<container::Array<container::Object>>(anObject.value_);
     }
 
-    if (value_.type() == typeid(ctnr::Dictionary))
+    if (value_.type() == typeid(container::Dictionary))
     {
-        return boost::any_cast<ctnr::Dictionary>(value_) == boost::any_cast<ctnr::Dictionary>(anObject.value_);
+        return boost::any_cast<container::Dictionary>(value_) == boost::any_cast<container::Dictionary>(anObject.value_);
     }
 
     throw ostk::core::error::runtime::Wrong("Type");
@@ -125,27 +125,27 @@ bool Object::Impl::isBoolean() const
 
 bool Object::Impl::isInteger() const
 {
-    return value_.type() == typeid(types::Integer);
+    return value_.type() == typeid(type::Integer);
 }
 
 bool Object::Impl::isReal() const
 {
-    return value_.type() == typeid(types::Real);
+    return value_.type() == typeid(type::Real);
 }
 
 bool Object::Impl::isString() const
 {
-    return value_.type() == typeid(types::String);
+    return value_.type() == typeid(type::String);
 }
 
 bool Object::Impl::isDictionary() const
 {
-    return value_.type() == typeid(ctnr::Dictionary);
+    return value_.type() == typeid(container::Dictionary);
 }
 
 bool Object::Impl::isArray() const
 {
-    return value_.type() == typeid(ctnr::Array<ctnr::Object>);
+    return value_.type() == typeid(container::Array<container::Object>);
 }
 
 const bool& Object::Impl::accessBoolean() const
@@ -158,51 +158,51 @@ const bool& Object::Impl::accessBoolean() const
     throw ostk::core::error::RuntimeError("Object is not of type [Boolean].");
 }
 
-const types::Integer& Object::Impl::accessInteger() const
+const type::Integer& Object::Impl::accessInteger() const
 {
     if (this->isInteger())
     {
-        return boost::any_cast<const types::Integer&>(value_);
+        return boost::any_cast<const type::Integer&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Integer].");
 }
 
-const types::Real& Object::Impl::accessReal() const
+const type::Real& Object::Impl::accessReal() const
 {
     if (this->isReal())
     {
-        return boost::any_cast<const types::Real&>(value_);
+        return boost::any_cast<const type::Real&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Real].");
 }
 
-const types::String& Object::Impl::accessString() const
+const type::String& Object::Impl::accessString() const
 {
     if (this->isString())
     {
-        return boost::any_cast<const types::String&>(value_);
+        return boost::any_cast<const type::String&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [String].");
 }
 
-const ctnr::Dictionary& Object::Impl::accessDictionary() const
+const container::Dictionary& Object::Impl::accessDictionary() const
 {
     if (this->isDictionary())
     {
-        return boost::any_cast<const ctnr::Dictionary&>(value_);
+        return boost::any_cast<const container::Dictionary&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].");
 }
 
-const ctnr::Array<Object>& Object::Impl::accessArray() const
+const container::Array<Object>& Object::Impl::accessArray() const
 {
     if (this->isArray())
     {
-        return boost::any_cast<const ctnr::Array<Object>&>(value_);
+        return boost::any_cast<const container::Array<Object>&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Array].");
@@ -253,58 +253,58 @@ bool& Object::Impl::accessBoolean()
     throw ostk::core::error::RuntimeError("Object is not of type [Boolean].");
 }
 
-types::Integer& Object::Impl::accessInteger()
+type::Integer& Object::Impl::accessInteger()
 {
     if (this->isInteger())
     {
-        return boost::any_cast<types::Integer&>(value_);
+        return boost::any_cast<type::Integer&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Integer].");
 }
 
-types::Real& Object::Impl::accessReal()
+type::Real& Object::Impl::accessReal()
 {
     if (this->isReal())
     {
-        return boost::any_cast<types::Real&>(value_);
+        return boost::any_cast<type::Real&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Real].");
 }
 
-types::String& Object::Impl::accessString()
+type::String& Object::Impl::accessString()
 {
     if (this->isString())
     {
-        return boost::any_cast<types::String&>(value_);
+        return boost::any_cast<type::String&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [String].");
 }
 
-ctnr::Dictionary& Object::Impl::accessDictionary()
+container::Dictionary& Object::Impl::accessDictionary()
 {
     if (this->isDictionary())
     {
-        return boost::any_cast<ctnr::Dictionary&>(value_);
+        return boost::any_cast<container::Dictionary&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Dictionary].");
 }
 
-ctnr::Array<Object>& Object::Impl::accessArray()
+container::Array<Object>& Object::Impl::accessArray()
 {
     if (this->isArray())
     {
-        return boost::any_cast<ctnr::Array<Object>&>(value_);
+        return boost::any_cast<container::Array<Object>&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Array].");
 }
 
-Object::Object(std::initializer_list<ctnr::Pair<types::String, Object>> aList)
-    : objectImplUPtr_(std::make_unique<Object::Impl>(boost::any(ctnr::Dictionary(aList))))
+Object::Object(std::initializer_list<container::Pair<type::String, Object>> aList)
+    : objectImplUPtr_(std::make_unique<Object::Impl>(boost::any(container::Dictionary(aList))))
 {
 }
 
@@ -337,7 +337,7 @@ bool Object::operator!=(const Object& anObject) const
     return !((*this) == anObject);
 }
 
-const Object& Object::operator[](const types::String& aKey) const
+const Object& Object::operator[](const type::String& aKey) const
 {
     LOG_SCOPE("Object", "operator [String]");
 
@@ -349,7 +349,7 @@ const Object& Object::operator[](const types::String& aKey) const
     return this->accessDictionary()[aKey];
 }
 
-const Object& Object::operator[](const types::Index& anIndex) const
+const Object& Object::operator[](const type::Index& anIndex) const
 {
     LOG_SCOPE("Object", "operator [Index]");
 
@@ -361,7 +361,7 @@ const Object& Object::operator[](const types::Index& anIndex) const
     return this->accessArray()[anIndex];
 }
 
-Object& Object::operator[](const types::String& aKey)
+Object& Object::operator[](const type::String& aKey)
 {
     LOG_SCOPE("Object", "operator [String]");
 
@@ -373,21 +373,21 @@ Object& Object::operator[](const types::String& aKey)
     return this->accessDictionary()[aKey];
 }
 
-Object& Object::operator[](const types::Index& anIndex)
+Object& Object::operator[](const type::Index& anIndex)
 {
     LOG_SCOPE("Object", "operator [Index]");
 
     if (!this->isArray())
     {
-        objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(ctnr::Array<Object>::Empty()));
+        objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(container::Array<Object>::Empty()));
     }
 
-    ctnr::Array<Object>& array = this->accessArray();
+    container::Array<Object>& array = this->accessArray();
 
     if (anIndex >= array.getSize())
     {
-        ctnr::Array<Object> undefinedObjectArray =
-            ctnr::Array<Object>((anIndex - array.getSize() + 1), Object::Undefined());
+        container::Array<Object> undefinedObjectArray =
+            container::Array<Object>((anIndex - array.getSize() + 1), Object::Undefined());
 
         array.insert(array.end(), undefinedObjectArray.begin(), undefinedObjectArray.end());
     }
@@ -519,7 +519,7 @@ const bool& Object::accessBoolean() const
     return objectImplUPtr_->accessBoolean();
 }
 
-const types::Integer& Object::accessInteger() const
+const type::Integer& Object::accessInteger() const
 {
     if (!this->isDefined())
     {
@@ -529,7 +529,7 @@ const types::Integer& Object::accessInteger() const
     return objectImplUPtr_->accessInteger();
 }
 
-const types::Real& Object::accessReal() const
+const type::Real& Object::accessReal() const
 {
     if (!this->isDefined())
     {
@@ -539,7 +539,7 @@ const types::Real& Object::accessReal() const
     return objectImplUPtr_->accessReal();
 }
 
-const types::String& Object::accessString() const
+const type::String& Object::accessString() const
 {
     if (!this->isDefined())
     {
@@ -549,7 +549,7 @@ const types::String& Object::accessString() const
     return objectImplUPtr_->accessString();
 }
 
-const ctnr::Dictionary& Object::accessDictionary() const
+const container::Dictionary& Object::accessDictionary() const
 {
     if (!this->isDefined())
     {
@@ -559,7 +559,7 @@ const ctnr::Dictionary& Object::accessDictionary() const
     return objectImplUPtr_->accessDictionary();
 }
 
-const ctnr::Array<Object>& Object::accessArray() const
+const container::Array<Object>& Object::accessArray() const
 {
     if (!this->isDefined())
     {
@@ -579,32 +579,32 @@ bool Object::getBoolean() const
     return this->accessBoolean();
 }
 
-types::Integer Object::getInteger() const
+type::Integer Object::getInteger() const
 {
     return this->accessInteger();
 }
 
-types::Real Object::getReal() const
+type::Real Object::getReal() const
 {
     return this->accessReal();
 }
 
-types::String Object::getString() const
+type::String Object::getString() const
 {
     return this->accessString();
 }
 
-ctnr::Dictionary Object::getDictionary() const
+container::Dictionary Object::getDictionary() const
 {
     return this->accessDictionary();
 }
 
-ctnr::Array<Object> Object::getArray() const
+container::Array<Object> Object::getArray() const
 {
     return this->accessArray();
 }
 
-types::String Object::toString(const Object::Format& aFormat) const
+type::String Object::toString(const Object::Format& aFormat) const
 {
     LOG_SCOPE("Object", "toString");
 
@@ -626,10 +626,10 @@ types::String Object::toString(const Object::Format& aFormat) const
 
     throw ostk::core::error::runtime::Wrong("Format");
 
-    return types::String::Empty();
+    return type::String::Empty();
 }
 
-types::String Object::getJsonString() const
+type::String Object::getJsonString() const
 {
     LOG_SCOPE("Object", "getJsonString");
 
@@ -652,7 +652,7 @@ types::String Object::getJsonString() const
 
             case Object::Type::Integer:
             {
-                const types::Integer& integer = anObject.accessInteger();
+                const type::Integer& integer = anObject.accessInteger();
 
                 if (integer.isDefined() && integer.isFinite())
                 {
@@ -660,7 +660,7 @@ types::String Object::getJsonString() const
                 }
                 else
                 {
-                    const types::String string = integer.toString();
+                    const type::String string = integer.toString();
 
                     value.SetString(string.data(), string.length());
                 }
@@ -741,7 +741,7 @@ bool& Object::accessBoolean()
     return objectImplUPtr_->accessBoolean();
 }
 
-types::Integer& Object::accessInteger()
+type::Integer& Object::accessInteger()
 {
     if (!this->isDefined())
     {
@@ -751,7 +751,7 @@ types::Integer& Object::accessInteger()
     return objectImplUPtr_->accessInteger();
 }
 
-types::Real& Object::accessReal()
+type::Real& Object::accessReal()
 {
     if (!this->isDefined())
     {
@@ -761,7 +761,7 @@ types::Real& Object::accessReal()
     return objectImplUPtr_->accessReal();
 }
 
-types::String& Object::accessString()
+type::String& Object::accessString()
 {
     if (!this->isDefined())
     {
@@ -771,7 +771,7 @@ types::String& Object::accessString()
     return objectImplUPtr_->accessString();
 }
 
-ctnr::Dictionary& Object::accessDictionary()
+container::Dictionary& Object::accessDictionary()
 {
     if (!this->isDefined())
     {
@@ -781,7 +781,7 @@ ctnr::Dictionary& Object::accessDictionary()
     return objectImplUPtr_->accessDictionary();
 }
 
-ctnr::Array<Object>& Object::accessArray()
+container::Array<Object>& Object::accessArray()
 {
     if (!this->isDefined())
     {
@@ -801,32 +801,32 @@ Object Object::Boolean(const bool& aBoolean)
     return Object(std::make_unique<Object::Impl>(boost::any(aBoolean)));
 }
 
-Object Object::Integer(const types::Integer& anInteger)
+Object Object::Integer(const type::Integer& anInteger)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(anInteger)));
 }
 
-Object Object::Real(const types::Real& aReal)
+Object Object::Real(const type::Real& aReal)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(aReal)));
 }
 
-Object Object::String(const types::String& aString)
+Object Object::String(const type::String& aString)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(aString)));
 }
 
-Object Object::Dictionary(const ctnr::Dictionary& aDictionary)
+Object Object::Dictionary(const container::Dictionary& aDictionary)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(aDictionary)));
 }
 
-Object Object::Array(const ctnr::Array<Object>& anArray)
+Object Object::Array(const container::Array<Object>& anArray)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(anArray)));
 }
 
-Object Object::Parse(const types::String& aString, const Object::Format& aFormat)
+Object Object::Parse(const type::String& aString, const Object::Format& aFormat)
 {
     switch (aFormat)
     {
@@ -861,7 +861,7 @@ Object Object::Parse(const types::String& aString, const Object::Format& aFormat
     return Object::Undefined();
 }
 
-Object Object::ParseJson(const types::String& aString)
+Object Object::ParseJson(const type::String& aString)
 {
     LOG_SCOPE("Object", "ParseJson");
 
@@ -898,13 +898,13 @@ Object Object::ParseJson(const types::String& aString)
         }
         else if (aJsonValue.IsString())  // Object is String
         {
-            const types::String jsonValueString = aJsonValue.GetString();
+            const type::String jsonValueString = aJsonValue.GetString();
 
             return Object::String(jsonValueString);
         }
         else if (aJsonValue.IsObject())  // Object is Object
         {
-            ctnr::Dictionary dictionary = ctnr::Dictionary::Empty();
+            container::Dictionary dictionary = container::Dictionary::Empty();
 
             for (const auto& objectIt : aJsonValue.GetObject())
             {
@@ -920,7 +920,7 @@ Object Object::ParseJson(const types::String& aString)
                 return Object::Array();
             }
 
-            ctnr::Array<Object> array = ctnr::Array<Object>::Empty();
+            container::Array<Object> array = container::Array<Object>::Empty();
 
             for (const auto& arrayElement : aJsonValue.GetArray())
             {
@@ -952,7 +952,7 @@ Object Object::ParseJson(const types::String& aString)
     return object;
 }
 
-Object Object::ParseYaml(const types::String& aString)
+Object Object::ParseYaml(const type::String& aString)
 {
     LOG_SCOPE("Object", "ParseYaml");
 
@@ -1005,7 +1005,7 @@ Object Object::ParseYaml(const types::String& aString)
 
             case YAML::NodeType::Sequence:
             {
-                ctnr::Array<Object> array = ctnr::Array<Object>::Empty();
+                container::Array<Object> array = container::Array<Object>::Empty();
 
                 for (const auto& node : aNode)
                 {
@@ -1017,7 +1017,7 @@ Object Object::ParseYaml(const types::String& aString)
 
             case YAML::NodeType::Map:
             {
-                ctnr::Dictionary dictionary = ctnr::Dictionary::Empty();
+                container::Dictionary dictionary = container::Dictionary::Empty();
 
                 for (const auto& node : aNode)
                 {
@@ -1065,7 +1065,7 @@ Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat
     return Object::Parse(aFile.getContents(), aFormat);
 }
 
-types::String Object::StringFromType(const Object::Type& aType)
+type::String Object::StringFromType(const Object::Type& aType)
 {
     LOG_SCOPE("Object", "StringFromType");
 
@@ -1097,10 +1097,10 @@ types::String Object::StringFromType(const Object::Type& aType)
             break;
     }
 
-    return types::String::Empty();
+    return type::String::Empty();
 }
 
-Object::Type Object::TypeFromString(const types::String& aString)
+Object::Type Object::TypeFromString(const type::String& aString)
 {
     LOG_SCOPE("Object", "TypeFromString");
 

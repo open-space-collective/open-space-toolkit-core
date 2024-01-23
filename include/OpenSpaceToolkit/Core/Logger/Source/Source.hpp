@@ -1,7 +1,7 @@
 /// Apache License 2.0
 
-#ifndef __OpenSpaceToolkit_Core_Logger_Sources_Source__
-#define __OpenSpaceToolkit_Core_Logger_Sources_Source__
+#ifndef __OpenSpaceToolkit_Core_Logger_Source_Source__
+#define __OpenSpaceToolkit_Core_Logger_Source_Source__
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
@@ -14,7 +14,7 @@ namespace core
 {
 namespace logger
 {
-namespace sources
+namespace source
 {
 
 using ostk::core::type::Unique;
@@ -47,7 +47,7 @@ class Source
     Unique<Source::Impl> implPtr_;
 };
 
-}  // namespace sources
+}  // namespace source
 }  // namespace logger
 }  // namespace core
 }  // namespace ostk

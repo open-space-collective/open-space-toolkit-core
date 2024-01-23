@@ -245,7 +245,7 @@ class Array : public std::vector<T>
     ///
     /// @return             String representation of array
 
-    types::String toString() const;
+    type::String toString() const;
 
     /// @brief              Get array of pointers to element based on condition
     ///

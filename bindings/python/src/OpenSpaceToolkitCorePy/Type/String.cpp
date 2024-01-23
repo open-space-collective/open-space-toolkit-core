@@ -3,7 +3,7 @@
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
-inline void OpenSpaceToolkitCorePy_Types_String(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Type_String(pybind11::module& aModule)
 {
     using namespace pybind11;
 

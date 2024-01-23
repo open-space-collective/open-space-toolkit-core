@@ -16,7 +16,7 @@ namespace core
 namespace filesystem
 {
 
-namespace container = ostk::core::ctnr;
+namespace container = ostk::core::container;
 
 using ostk::core::type::String;
 
@@ -194,7 +194,7 @@ class Directory
     ///
     /// @return             Array of files in directory
 
-    ctnr::Array<filesystem::File> getFiles() const;
+    container::Array<filesystem::File> getFiles() const;
 
     /// @brief              Get directories in directory
     ///
@@ -207,7 +207,7 @@ class Directory
     ///
     /// @return             Array of directories in directory
 
-    ctnr::Array<Directory> getDirectories() const;
+    container::Array<Directory> getDirectories() const;
 
     /// @brief              Get serialized directory
     ///

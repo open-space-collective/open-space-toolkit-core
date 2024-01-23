@@ -2,7 +2,7 @@
 
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
 
-inline void OpenSpaceToolkitCorePy_Types_Real(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::module& aModule)
 {
     using namespace pybind11;
 

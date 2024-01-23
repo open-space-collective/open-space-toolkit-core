@@ -16,7 +16,7 @@ namespace table
 
 /// @brief                      Cell of table
 
-using Cell = ctnr::Object;
+using Cell = container::Object;
 
 }  // namespace table
 }  // namespace container

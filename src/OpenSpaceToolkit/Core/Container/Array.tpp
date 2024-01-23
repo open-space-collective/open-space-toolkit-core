@@ -169,28 +169,28 @@ Index Array<T>::getIndexOf(const T& anElement) const
 }
 
 template <typename T>
-typename std::enable_if<ostk::core::type::HasToString<T>::value, types::String>::type extractString(const T& aType)
+typename std::enable_if<ostk::core::type::HasToString<T>::value, type::String>::type extractString(const T& aType)
 {
     return aType.toString();
 }
 
 template <typename T>
-typename std::enable_if<std::is_same<T, types::String>::value, types::String>::type extractString(const T& aType)
+typename std::enable_if<std::is_same<T, type::String>::value, type::String>::type extractString(const T& aType)
 {
     return "\"" + aType + "\"";
 }
 
 // template <typename T>
-// typename std::enable_if<!ostk::core::type::HasToString<T>::value, types::String>::type extractString (const T&
+// typename std::enable_if<!ostk::core::type::HasToString<T>::value, type::String>::type extractString (const T&
 // aType)
 // {
 //     return aType ;
 // }
 
 template <class T>
-types::String Array<T>::toString() const
+type::String Array<T>::toString() const
 {
-    types::String string = "[";
+    type::String string = "[";
 
     for (const auto& item : (*this))
     {

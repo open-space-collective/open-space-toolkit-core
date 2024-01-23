@@ -44,11 +44,11 @@ class Print
 
     Print() = delete;
 
-    static void Header(std::ostream& anOutputStream, const types::String& aName);
+    static void Header(std::ostream& anOutputStream, const type::String& aName);
 
     static Print::LineBuffer Line(std::ostream& anOutputStream, uint anIndentation = 1);
 
-    static void Separator(std::ostream& anOutputStream, const types::String& aName = "");
+    static void Separator(std::ostream& anOutputStream, const type::String& aName = "");
 
     static void Footer(std::ostream& anOutputStream);
 };

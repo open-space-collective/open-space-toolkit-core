@@ -2,7 +2,7 @@
 
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 
-inline void OpenSpaceToolkitCorePy_Types_Integer(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::module& aModule)
 {
     using namespace pybind11;
 

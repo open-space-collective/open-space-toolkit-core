@@ -93,15 +93,15 @@ class Real
 
     bool isNear(const Real& aValue, const Real& aTolerance = Real::Epsilon()) const;
 
-    types::Sign getSign() const;
+    type::Sign getSign() const;
 
-    types::String toString(const types::Integer& aPrecision = types::Integer::Undefined()) const;
+    type::String toString(const type::Integer& aPrecision = type::Integer::Undefined()) const;
 
-    types::Integer toInteger() const;
+    type::Integer toInteger() const;
 
     Real abs() const;
 
-    types::Integer floor() const;
+    type::Integer floor() const;
 
     Real sqrt() const;
 
@@ -121,11 +121,11 @@ class Real
 
     static Real NegativeInfinity();
 
-    static Real Integer(const types::Integer& anInteger);
+    static Real Integer(const type::Integer& anInteger);
 
-    static Real CanParse(const types::String& aString);
+    static Real CanParse(const type::String& aString);
 
-    static Real Parse(const types::String& aString);
+    static Real Parse(const type::String& aString);
 
    private:
     enum class Type

@@ -1,7 +1,7 @@
 /// Apache License 2.0
 
-#ifndef __OpenSpaceToolkit_Core_Logger_Sinks_Sink__
-#define __OpenSpaceToolkit_Core_Logger_Sinks_Sink__
+#ifndef __OpenSpaceToolkit_Core_Logger_Sink_Sink__
+#define __OpenSpaceToolkit_Core_Logger_Sink_Sink__
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
@@ -13,7 +13,7 @@ namespace core
 {
 namespace logger
 {
-namespace sinks
+namespace sink
 {
 
 using ostk::core::type::String;
@@ -69,7 +69,7 @@ class Sink
     Array<String> channels_;
 };
 
-}  // namespace sinks
+}  // namespace sink
 }  // namespace logger
 }  // namespace core
 }  // namespace ostk

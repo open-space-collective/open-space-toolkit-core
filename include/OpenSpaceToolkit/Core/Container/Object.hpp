@@ -73,7 +73,7 @@ class Object
     ///
     /// @param              [in] aList An initializer list
 
-    Object(std::initializer_list<ctnr::Pair<types::String, Object>> aList);
+    Object(std::initializer_list<container::Pair<type::String, Object>> aList);
 
     /// @brief              Copy constructor
     ///
@@ -118,11 +118,11 @@ class Object
 
     bool operator!=(const Object& anObject) const;
 
-    const Object& operator[](const types::String& aKey) const;
-    const Object& operator[](const types::Index& anIndex) const;
+    const Object& operator[](const type::String& aKey) const;
+    const Object& operator[](const type::Index& anIndex) const;
 
-    Object& operator[](const types::String& aKey);
-    Object& operator[](const types::Index& anIndex);
+    Object& operator[](const type::String& aKey);
+    Object& operator[](const type::Index& anIndex);
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject);
 
@@ -139,52 +139,52 @@ class Object
     bool isArray() const;
 
     const bool& accessBoolean() const;
-    const types::Integer& accessInteger() const;
-    const types::Real& accessReal() const;
-    const types::String& accessString() const;
-    const ctnr::Dictionary& accessDictionary() const;
-    const ctnr::Array<Object>& accessArray() const;
+    const type::Integer& accessInteger() const;
+    const type::Real& accessReal() const;
+    const type::String& accessString() const;
+    const container::Dictionary& accessDictionary() const;
+    const container::Array<Object>& accessArray() const;
 
     Object::Type getType() const;
 
     bool getBoolean() const;
-    types::Integer getInteger() const;
-    types::Real getReal() const;
-    types::String getString() const;
-    ctnr::Dictionary getDictionary() const;
-    ctnr::Array<Object> getArray() const;
+    type::Integer getInteger() const;
+    type::Real getReal() const;
+    type::String getString() const;
+    container::Dictionary getDictionary() const;
+    container::Array<Object> getArray() const;
 
-    types::String toString(const Object::Format& aFormat = Object::Format::Undefined) const;
-    types::String getJsonString() const;
+    type::String toString(const Object::Format& aFormat = Object::Format::Undefined) const;
+    type::String getJsonString() const;
 
     bool& accessBoolean();
-    types::Integer& accessInteger();
-    types::Real& accessReal();
-    types::String& accessString();
-    ctnr::Dictionary& accessDictionary();
-    ctnr::Array<Object>& accessArray();
+    type::Integer& accessInteger();
+    type::Real& accessReal();
+    type::String& accessString();
+    container::Dictionary& accessDictionary();
+    container::Array<Object>& accessArray();
 
     static Object Undefined();
 
     static Object Boolean(const bool& aBoolean);
 
-    static Object Integer(const types::Integer& anInteger = types::Integer::Undefined());
+    static Object Integer(const type::Integer& anInteger = type::Integer::Undefined());
 
-    static Object Real(const types::Real& aReal = types::Real::Undefined());
+    static Object Real(const type::Real& aReal = type::Real::Undefined());
 
-    static Object String(const types::String& aString = types::String::Empty());
+    static Object String(const type::String& aString = type::String::Empty());
 
-    static Object Dictionary(const ctnr::Dictionary& aDictionary);
+    static Object Dictionary(const container::Dictionary& aDictionary);
 
-    static Object Array(const ctnr::Array<Object>& anArray = ctnr::Array<Object>::Empty());
+    static Object Array(const container::Array<Object>& anArray = container::Array<Object>::Empty());
 
-    static Object Parse(const types::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Parse(const type::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
 
     static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
 
-    static types::String StringFromType(const Object::Type& aType);
+    static type::String StringFromType(const Object::Type& aType);
 
-    static Object::Type TypeFromString(const types::String& aString);
+    static Object::Type TypeFromString(const type::String& aString);
 
    private:
     class Impl;
@@ -193,9 +193,9 @@ class Object
 
     Object(const Unique<Object::Impl>& anObjectImpl);
 
-    static Object ParseJson(const types::String& aString);
+    static Object ParseJson(const type::String& aString);
 
-    static Object ParseYaml(const types::String& aString);
+    static Object ParseYaml(const type::String& aString);
 };
 
 }  // namespace container

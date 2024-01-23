@@ -5,7 +5,7 @@ import os
 import pytest
 
 from ostk.core.filesystem import Path, Directory
-from ostk.core.types import String
+from ostk.core.type import String
 
 
 def test_directory_constructors():

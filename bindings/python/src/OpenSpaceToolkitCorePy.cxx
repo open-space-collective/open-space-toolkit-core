@@ -6,7 +6,7 @@
 
 #include <OpenSpaceToolkitCorePy/Container.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
-#include <OpenSpaceToolkitCorePy/Types.cpp>
+#include <OpenSpaceToolkitCorePy/Type.cpp>
 
 PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 {
@@ -27,7 +27,7 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 #endif
 
     // Add python submodules to OpenSpaceToolkitCorePy
-    OpenSpaceToolkitCorePy_Types(m);
+    OpenSpaceToolkitCorePy_Type(m);
     OpenSpaceToolkitCorePy_Container(m);
     OpenSpaceToolkitCorePy_FileSystem(m);
 }

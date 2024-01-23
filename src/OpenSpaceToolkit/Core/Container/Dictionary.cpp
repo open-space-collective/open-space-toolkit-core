@@ -283,7 +283,7 @@ Dictionary::Value& Dictionary::operator[](const Dictionary::Key& aKey)
 std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictionary)
 {
     std::function<void(const Dictionary&, uint)> printDictionary;
-    std::function<void(const ctnr::Array<Object>&, uint)> printArray;
+    std::function<void(const container::Array<Object>&, uint)> printArray;
 
     printDictionary = [&printDictionary, &printArray, &anOutputStream](const Dictionary& dictionary, uint anIndentation)
     {
@@ -312,9 +312,9 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
         }
     };
 
-    printArray = [&printArray, &printDictionary, &anOutputStream](const ctnr::Array<Object>& array, uint anIndentation)
+    printArray = [&printArray, &printDictionary, &anOutputStream](const container::Array<Object>& array, uint anIndentation)
     {
-        types::Integer index = 0;
+        type::Integer index = 0;
 
         for (const auto& arrayElement : array)
         {

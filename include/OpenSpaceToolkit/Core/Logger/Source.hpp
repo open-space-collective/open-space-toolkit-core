@@ -3,7 +3,7 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Source__
 #define __OpenSpaceToolkit_Core_Logger_Source__
 
-#include <OpenSpaceToolkit/Core/Logger/Sources/Source.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Source/Source.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 #include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
@@ -34,7 +34,7 @@ class Source
 
     // private:
 
-    Unique<sources::Source> sourceUPtr_;
+    Unique<source::Source> sourceUPtr_;
 };
 
 }  // namespace logger

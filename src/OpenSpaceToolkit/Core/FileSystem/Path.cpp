@@ -285,7 +285,7 @@ Path Path::Parse(const String& aString)
 }
 
 // Path                            Path::Strings                               (   const
-// std::initializer_list<types::String> aStringList                        )
+// std::initializer_list<type::String> aStringList                        )
 // {
 
 // }

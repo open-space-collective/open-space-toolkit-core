@@ -4,7 +4,7 @@ import pytest
 
 import math
 
-from ostk.core.types import Real, Sign
+from ostk.core.type import Real, Sign
 
 
 def test_real_constructors():

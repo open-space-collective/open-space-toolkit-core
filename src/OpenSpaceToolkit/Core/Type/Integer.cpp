@@ -774,41 +774,41 @@ bool Integer::isOdd() const
     return this->isFinite() && (value_ % 2 != 0);
 }
 
-types::Sign Integer::getSign() const
+type::Sign Integer::getSign() const
 {
     switch (type_)
     {
         case Integer::Type::Undefined:
-            return types::Sign::Undefined;
+            return type::Sign::Undefined;
 
         case Integer::Type::Defined:
         {
             if (value_ > 0)
             {
-                return types::Sign::Positive;
+                return type::Sign::Positive;
             }
             else if (value_ < 0)
             {
-                return types::Sign::Negative;
+                return type::Sign::Negative;
             }
 
-            return types::Sign::None;
+            return type::Sign::None;
         }
 
         case Integer::Type::PositiveInfinity:
-            return types::Sign::Positive;
+            return type::Sign::Positive;
 
         case Integer::Type::NegativeInfinity:
-            return types::Sign::Negative;
+            return type::Sign::Negative;
 
         default:
-            return types::Sign::Undefined;
+            return type::Sign::Undefined;
     }
 
-    return types::Sign::Undefined;
+    return type::Sign::Undefined;
 }
 
-types::String Integer::toString() const
+type::String Integer::toString() const
 {
     switch (type_)
     {
@@ -825,7 +825,7 @@ types::String Integer::toString() const
             return "-Inf";
     }
 
-    return types::String::Empty();
+    return type::String::Empty();
 }
 
 Integer Integer::Undefined()
@@ -848,25 +848,25 @@ Integer Integer::NegativeInfinity()
     return Integer(Integer::Type::NegativeInfinity, std::numeric_limits<Integer::ValueType>::min());
 }
 
-Integer Integer::Int8(types::Int8 anInteger)
+Integer Integer::Int8(type::Int8 anInteger)
 {
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Int16(types::Int16 anInteger)
+Integer Integer::Int16(type::Int16 anInteger)
 {
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Int32(types::Int32 anInteger)
+Integer Integer::Int32(type::Int32 anInteger)
 {
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Int64(types::Int64 anInteger)
+Integer Integer::Int64(type::Int64 anInteger)
 {
-    if ((anInteger < static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::min())) ||
-        (anInteger > static_cast<types::Int64>(std::numeric_limits<Integer::ValueType>::max())))
+    if ((anInteger < static_cast<type::Int64>(std::numeric_limits<Integer::ValueType>::min())) ||
+        (anInteger > static_cast<type::Int64>(std::numeric_limits<Integer::ValueType>::max())))
     {
         throw ostk::core::error::RuntimeError(
             "Int64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" +
@@ -878,19 +878,19 @@ Integer Integer::Int64(types::Int64 anInteger)
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Uint8(types::Uint8 anInteger)
+Integer Integer::Uint8(type::Uint8 anInteger)
 {
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Uint16(types::Uint16 anInteger)
+Integer Integer::Uint16(type::Uint16 anInteger)
 {
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Uint32(types::Uint32 anInteger)
+Integer Integer::Uint32(type::Uint32 anInteger)
 {
-    if (anInteger > static_cast<types::Uint32>(std::numeric_limits<Integer::ValueType>::max()))
+    if (anInteger > static_cast<type::Uint32>(std::numeric_limits<Integer::ValueType>::max()))
     {
         throw ostk::core::error::RuntimeError(
             "Uint32 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" +
@@ -902,9 +902,9 @@ Integer Integer::Uint32(types::Uint32 anInteger)
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Uint64(types::Uint64 anInteger)
+Integer Integer::Uint64(type::Uint64 anInteger)
 {
-    if (anInteger > static_cast<types::Uint64>(std::numeric_limits<Integer::ValueType>::max()))
+    if (anInteger > static_cast<type::Uint64>(std::numeric_limits<Integer::ValueType>::max()))
     {
         throw ostk::core::error::RuntimeError(
             "Uint64 value [" + boost::lexical_cast<std::string>(anInteger) + "] is out of Integer supported range [" +
@@ -916,7 +916,7 @@ Integer Integer::Uint64(types::Uint64 anInteger)
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anInteger));
 }
 
-Integer Integer::Index(const types::Index& anIndex)
+Integer Integer::Index(const type::Index& anIndex)
 {
     if (!(anIndex < std::numeric_limits<Integer::ValueType>::max()))
     {
@@ -926,7 +926,7 @@ Integer Integer::Index(const types::Index& anIndex)
     return Integer(Integer::Type::Defined, static_cast<Integer::ValueType>(anIndex));
 }
 
-Integer Integer::Size(const types::Size& aSize)
+Integer Integer::Size(const type::Size& aSize)
 {
     if (!(aSize < std::numeric_limits<Integer::ValueType>::max()))
     {
@@ -941,7 +941,7 @@ bool Integer::CanParse(char aCharacter)
     return std::isdigit(aCharacter);
 }
 
-bool Integer::CanParse(const types::String& aString)
+bool Integer::CanParse(const type::String& aString)
 {
     if (aString.isEmpty())
     {
@@ -972,7 +972,7 @@ Integer Integer::Parse(char aCharacter)
     return Integer::Undefined();
 }
 
-Integer Integer::Parse(const types::String& aString)
+Integer Integer::Parse(const type::String& aString)
 {
     if (aString.isEmpty())
     {

@@ -2,7 +2,7 @@
 
 import pytest
 
-from ostk.core.types import Integer, Sign
+from ostk.core.type import Integer, Sign
 
 
 def test_integer_constructors():

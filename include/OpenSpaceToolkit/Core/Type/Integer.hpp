@@ -209,9 +209,9 @@ class Integer
     bool isEven() const;
     bool isOdd() const;
 
-    types::Sign getSign() const;
+    type::Sign getSign() const;
 
-    types::String toString() const;
+    type::String toString() const;
 
     static Integer Undefined();
 
@@ -221,33 +221,33 @@ class Integer
 
     static Integer NegativeInfinity();
 
-    static Integer Int8(types::Int8 anInteger);
+    static Integer Int8(type::Int8 anInteger);
 
-    static Integer Int16(types::Int16 anInteger);
+    static Integer Int16(type::Int16 anInteger);
 
-    static Integer Int32(types::Int32 anInteger);
+    static Integer Int32(type::Int32 anInteger);
 
-    static Integer Int64(types::Int64 anInteger);
+    static Integer Int64(type::Int64 anInteger);
 
-    static Integer Uint8(types::Uint8 anInteger);
+    static Integer Uint8(type::Uint8 anInteger);
 
-    static Integer Uint16(types::Uint16 anInteger);
+    static Integer Uint16(type::Uint16 anInteger);
 
-    static Integer Uint32(types::Uint32 anInteger);
+    static Integer Uint32(type::Uint32 anInteger);
 
-    static Integer Uint64(types::Uint64 anInteger);
+    static Integer Uint64(type::Uint64 anInteger);
 
-    static Integer Index(const types::Index& anIndex);
+    static Integer Index(const type::Index& anIndex);
 
-    static Integer Size(const types::Size& aSize);
+    static Integer Size(const type::Size& aSize);
 
     static bool CanParse(char aCharacter);
 
-    static bool CanParse(const types::String& aString);
+    static bool CanParse(const type::String& aString);
 
     static Integer Parse(char aCharacter);
 
-    static Integer Parse(const types::String& aString);
+    static Integer Parse(const type::String& aString);
 
    private:
     enum class Type

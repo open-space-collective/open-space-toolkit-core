@@ -1,9 +1,9 @@
 /// Apache License 2.0
 
-#ifndef __OpenSpaceToolkit_Core_Logger_Sinks_Console__
-#define __OpenSpaceToolkit_Core_Logger_Sinks_Console__
+#ifndef __OpenSpaceToolkit_Core_Logger_Sink_Console__
+#define __OpenSpaceToolkit_Core_Logger_Sink_Console__
 
-#include <OpenSpaceToolkit/Core/Logger/Sinks/Sink.hpp>
+#include <OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp>
 #include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
 namespace ostk
@@ -12,7 +12,7 @@ namespace core
 {
 namespace logger
 {
-namespace sinks
+namespace sink
 {
 
 using ostk::core::type::Unique;
@@ -66,7 +66,7 @@ class Console : public Sink
     Unique<Console::Impl> implUPtr_;
 };
 
-}  // namespace sinks
+}  // namespace sink
 }  // namespace logger
 }  // namespace core
 }  // namespace ostk

@@ -85,7 +85,6 @@ LABEL VERSION="${VERSION}"
 FROM root-user as non-root-user
 
 # Install dev utilities
-
 RUN apt-get update \
  && apt-get install -y zsh sudo \
  && rm -rf /var/lib/apt/lists/*

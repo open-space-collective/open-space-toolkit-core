@@ -33,8 +33,8 @@ using ostk::core::container::Object;
 class Dictionary
 {
    public:
-    typedef types::String Key;
-    typedef ctnr::List<Dictionary::Key> Path;
+    typedef type::String Key;
+    typedef container::List<Dictionary::Key> Path;
     typedef Object Value;
 
     class Iterator
@@ -299,7 +299,7 @@ class Dictionary
     /// @param              [in] (optional) aFormat Serialization format
     /// @return             Dictionary
 
-    static Dictionary Parse(const types::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
+    static Dictionary Parse(const type::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
 
    private:
     OrderedMap<Dictionary::Key, Dictionary::Value> map_;
