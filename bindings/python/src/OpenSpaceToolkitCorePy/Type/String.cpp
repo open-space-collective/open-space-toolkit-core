@@ -41,6 +41,13 @@ inline void OpenSpaceToolkitCorePy_Type_String(pybind11::module& aModule)
                 return aString;
             }
         )
+        .def(
+            "__hash__",
+            +[](const ostk::core::type::String& aString) -> std::size_t
+            {
+                return std::hash<std::string>()(aString);
+            }
+        )
 
         .def("is_empty", &String::isEmpty)
         .def("is_uppercase", &String::isUppercase)

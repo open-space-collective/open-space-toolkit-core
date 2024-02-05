@@ -24,6 +24,10 @@ def test_string_comparators():
     assert a != (a + " !")
 
 
+def test_hash():
+    assert hash(String("Hello")) is not None
+
+
 def test_string_operators():
     a = String("Hello")
     b = String("World")

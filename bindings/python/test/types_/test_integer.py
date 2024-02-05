@@ -36,6 +36,10 @@ def test_integer_comparators():
     assert a >= a
 
 
+def test_hash():
+    assert hash(Integer(5)) is not None
+
+
 def test_integer_operators():
     a = Integer(15)
     b = Integer(30)
