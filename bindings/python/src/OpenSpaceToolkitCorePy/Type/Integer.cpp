@@ -69,6 +69,13 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::module& aModule)
                 return anInteger.toString();
             }
         )
+        .def(
+            "__hash__",
+            +[](const ostk::core::type::Integer& anInteger) -> std::size_t
+            {
+                return std::hash<Integer::ValueType>()(anInteger);
+            }
+        )
 
         .def("is_defined", &Integer::isDefined)
         .def("is_zero", &Integer::isZero)
