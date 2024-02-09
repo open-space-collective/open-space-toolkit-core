@@ -396,7 +396,7 @@ void File::open(const File::OpenMode& anOpenMode)
             break;
 
         default:
-            throw ostk::core::error::runtime::Wrong("Open mode");
+            throw ostk::core::error::runtime::Wrong("Open mode", anOpenMode);
             break;
     }
 

@@ -108,7 +108,7 @@ bool Object::Impl::operator==(const Object::Impl& anObject) const
         return boost::any_cast<container::Dictionary>(value_) == boost::any_cast<container::Dictionary>(anObject.value_);
     }
 
-    throw ostk::core::error::runtime::Wrong("Type");
+    throw ostk::core::error::runtime::Wrong("Type", value_.type());
 
     return false;
 }
@@ -447,7 +447,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject)
         }
 
         default:
-            throw ostk::core::error::runtime::Wrong("Type");
+            throw ostk::core::error::runtime::Wrong("Type", anObject.getType());
             break;
     }
 
@@ -624,7 +624,7 @@ type::String Object::toString(const Object::Format& aFormat) const
             break;
     }
 
-    throw ostk::core::error::runtime::Wrong("Format");
+    throw ostk::core::error::runtime::Wrong("Format", aFormat);
 
     return type::String::Empty();
 }
@@ -707,7 +707,7 @@ type::String Object::getJsonString() const
             }
 
             default:
-                throw ostk::core::error::runtime::Wrong("Type");
+                throw ostk::core::error::runtime::Wrong("Type", anObject.getType());
                 break;
         }
 
@@ -856,7 +856,7 @@ Object Object::Parse(const type::String& aString, const Object::Format& aFormat)
             break;
     }
 
-    throw ostk::core::error::runtime::Wrong("Format");
+    throw ostk::core::error::runtime::Wrong("Format", aFormat);
 
     return Object::Undefined();
 }
@@ -893,7 +893,7 @@ Object Object::ParseJson(const type::String& aString)
             }
             else
             {
-                throw ostk::core::error::runtime::Wrong("Number");
+                throw ostk::core::error::runtime::Wrong("Number JSON", aJsonValue);
             }
         }
         else if (aJsonValue.IsString())  // Object is String
@@ -931,7 +931,7 @@ Object Object::ParseJson(const type::String& aString)
         }
         else
         {
-            throw ostk::core::error::runtime::Wrong("Value");
+            throw ostk::core::error::runtime::Wrong("JSON Value", aJsonValue);
         }
 
         return Object::Undefined();
@@ -1029,7 +1029,7 @@ Object Object::ParseYaml(const type::String& aString)
 
             default:
             {
-                throw ostk::core::error::runtime::Wrong("Node");
+                throw ostk::core::error::runtime::Wrong("Node Type", aNode.Type());
             }
         }
 
@@ -1093,7 +1093,7 @@ type::String Object::StringFromType(const Object::Type& aType)
             return "Array";
 
         default:
-            throw ostk::core::error::runtime::Wrong("Type");
+            throw ostk::core::error::runtime::Wrong("Type", aType);
             break;
     }
 

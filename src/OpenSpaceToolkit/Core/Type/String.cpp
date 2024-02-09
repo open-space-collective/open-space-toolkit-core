@@ -117,7 +117,7 @@ String String::getSubstring(const Index& aStartPosition, const Size& aLength) co
 {
     if (aLength == 0)
     {
-        throw ostk::core::error::runtime::Wrong("Length");
+        throw ostk::core::error::runtime::Wrong("Length", aLength);
     }
 
     if (this->empty())

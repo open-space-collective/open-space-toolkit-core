@@ -418,7 +418,7 @@ Dictionary Dictionary::Parse(const String& aString, const Object::Format& aForma
 
     if (!object.isDictionary())
     {
-        throw ostk::core::error::runtime::Wrong("String");
+        throw ostk::core::error::runtime::Wrong("String", aString);
     }
 
     return object.accessDictionary();

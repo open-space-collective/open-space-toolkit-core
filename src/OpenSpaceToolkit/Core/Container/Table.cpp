@@ -280,7 +280,7 @@ Table Table::Load(const File& aFile, const Table::Format& aFormat, bool hasHeade
             return Table::LoadCsv(aFile, hasHeader);
 
         default:
-            throw ostk::core::error::runtime::Wrong("Format");
+            throw ostk::core::error::runtime::Wrong("Format", aFormat);
             break;
     }
 
