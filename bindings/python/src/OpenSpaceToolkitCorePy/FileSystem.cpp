@@ -11,8 +11,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
     // Create "filesystem" python submodule
     auto filesystem = aModule.def_submodule("filesystem");
 
-    // Add __path__ attribute for "filesystem" submodule
-    filesystem.attr("__path__") = "ostk.core.filesystem";
 
     // Add custom objects to python "filesystem" submodule
     OpenSpaceToolkitCorePy_FileSystem_PermissionSet(filesystem);
