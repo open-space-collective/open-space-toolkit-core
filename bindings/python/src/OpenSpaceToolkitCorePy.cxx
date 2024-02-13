@@ -13,9 +13,6 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
     // Add optional docstring for package OpenSpaceToolkitCorePy
     m.doc() = "Fundamental types, container and utility for OpenSpaceToolkit.";
 
-    // Add __path__ attribute to python package
-    m.attr("__path__") = "ostk.core";
-
     // Change attribute __name__ to make OpenSpaceToolkitCorePy invisible in import path
     m.attr("__name__") = "ostk.core";
 
