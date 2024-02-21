@@ -1,6 +1,7 @@
 # Open Space Toolkit ▸ Core
 
 [![Build and Test](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml)
+[![Release](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml/badge.svg)](https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/main/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-core)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-core)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core)
