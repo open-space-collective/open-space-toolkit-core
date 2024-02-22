@@ -224,8 +224,20 @@ SET (Boost_USE_MULTITHREADED ON)
 FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "system" "filesystem" "regex" "log" "stacktrace_backtrace")
 
 ## Stacktrace definitions
+# Detect system architecture
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+    # Architecture-specific include for x86_64
+    set(BACKTRACE_INCLUDE "/usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h")
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
+    # Example path adjustment for aarch64, adjust the path as needed
+    set(BACKTRACE_INCLUDE "/usr/lib/gcc/aarch64-linux-gnu/9/include/backtrace.h")
+else()
+    message(FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+endif()
 
-ADD_DEFINITIONS(-DBOOST_STACKTRACE_USE_BACKTRACE -DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=</usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h>)
+# Add definitions with architecture-specific path
+add_definitions(-DBOOST_STACKTRACE_USE_BACKTRACE)
+add_definitions(-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
 
 IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")

@@ -21,6 +21,23 @@ extract_python_package_version := $(shell echo $(project_version) | sed 's/-/./'
 
 dev_username := developer
 
+
+ifeq ($(PLATFORM),amd64)
+platform := x86_64
+endif
+
+ifeq ($(PLATFORM),arm64)
+platform := aarch64
+endif
+
+platform ?= x86_64
+
+$(info Platform value is $(platform))
+
+test-gui: ## Run tests
+
+	@ echo "Running test for $(platform) platform..."
+
 pull: ## Pull all images
 
 	@ echo "Pulling images..."
@@ -213,6 +230,7 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 	@ echo "Building C++ packages..."
 
 	docker run \
+	    --platform ${platform} \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
@@ -236,6 +254,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 	@ echo "Building Python packages..."
 
 	docker run \
+		--platform ${platform} \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \

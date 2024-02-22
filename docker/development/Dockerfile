@@ -1,10 +1,9 @@
 # Apache License 2.0
 
-ARG BASE_IMAGE_VERSION="latest"
+ARG BASE_IMAGE_VERSION="0.5.8-12-g1840e81"
 
 # General purpose development image (root user)
-
-FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION} as root-user
+FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} as root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
