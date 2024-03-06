@@ -31,12 +31,8 @@ platform := aarch64
 endif
 
 platform ?= x86_64
-
 $(info Platform value is $(platform))
 
-test-gui: ## Run tests
-
-	@ echo "Running test for $(platform) platform..."
 
 pull: ## Pull all images
 
