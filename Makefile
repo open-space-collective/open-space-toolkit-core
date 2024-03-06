@@ -226,7 +226,7 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 	@ echo "Building C++ packages..."
 
 	docker run \
-	    --platform ${platform} \
+		--platform ${platform} \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
