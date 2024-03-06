@@ -112,14 +112,14 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
     # Package directory name
     SET (PACKAGE_DIRECTORY_NAME ${NAME})
 
-    # Set platforme name for wheel
-    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+    # Set platform name for wheel
+    IF (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
         SET (PLATFORM "linux_x86_64")
-    ELSEIF(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
+    ELSEIF (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
         SET (PLATFORM "linux_aarch64")
-    ELSE()
+    ELSE ()
         MESSAGE (FATAL_ERROR "Unsupported platform")
-    ENDIF()
+    ENDIF ()
 
     # Get python extension for relevant shared library spotting
     STRING (REPLACE "." "" EXTENSION "${PYTHON_VERSION}")
