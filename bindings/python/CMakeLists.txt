@@ -114,9 +114,9 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
 
     # Set platform name for wheel
     IF (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
-        SET (PLATFORM "linux_x86_64")
+        SET (PLATFORM "x86_64")
     ELSEIF (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
-        SET (PLATFORM "linux_aarch64")
+        SET (PLATFORM "aarch64")
     ELSE ()
         MESSAGE (FATAL_ERROR "Unsupported platform")
     ENDIF ()
