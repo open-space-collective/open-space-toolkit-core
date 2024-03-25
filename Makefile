@@ -22,8 +22,9 @@ extract_python_package_version := $(shell echo $(project_version) | sed 's/-/./'
 dev_username := developer
 
 
-TARGETPLATFORM ?= x86_64
-$(info Platform value is $(TARGETPLATFORM))
+# Handle multi-platform builds locally (CI sets these env vars, but need defaults here)
+TARGETPLATFORM ?= linux/amd64
+$(info Target platform is $(TARGETPLATFORM))
 
 
 pull: ## Pull all images
