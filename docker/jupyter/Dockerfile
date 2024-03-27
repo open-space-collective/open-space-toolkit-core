@@ -20,6 +20,8 @@ RUN apt-get update \
 
 RUN pip install --quiet "numpy" "pandas" "plotly" "ipywidgets>=7.6" "ipympl>=0.9.0"
 
+# Install JupyterLab extensions
+
 RUN jupyter labextension install --no-build \
         @jupyterlab/shortcuts-extension
 
