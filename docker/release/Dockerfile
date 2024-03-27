@@ -2,6 +2,9 @@
 
 ARG VERSION
 
+ARG PYTHON_TEST_VERSION="3.11"
+ARG PYTHON_TEST_VERSION_WITHOUT_DOT="311"
+
 FROM openspacecollective/open-space-toolkit-core-development:${VERSION} as cpp-builder
 
 RUN mkdir -p /app/bin /app/build /app/lib
@@ -36,18 +39,20 @@ COPY --from=cpp-builder /usr/local/test/OpenSpaceToolkit /usr/local/test/OpenSpa
 
 ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/Core/open-space-toolkit-core.test"]
 
-FROM python:3.11-slim as python-builder
+FROM python:${PYTHON_TEST_VERSION}-slim as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
-RUN python3.11 -m pip install /dist/*311*.whl
+ARG PYTHON_TEST_VERSION_WITHOUT_DOT
+RUN pip install /dist/*${PYTHON_TEST_VERSION_WITHOUT_DOT}*.whl
 
-FROM python:3.11-slim as python-release
+FROM python:${PYTHON_TEST_VERSION}-slim as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
 RUN pip install ipython
 
-COPY --from=python-builder /usr/local/lib/python3.11/site-packages/ostk /usr/local/lib/python3.11/site-packages/ostk
+ARG PYTHON_TEST_VERSION
+COPY --from=python-builder /usr/local/lib/python${PYTHON_TEST_VERSION}/site-packages/ostk /usr/local/lib/python${PYTHON_TEST_VERSION}/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
