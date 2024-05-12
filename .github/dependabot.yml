@@ -1,8 +1,10 @@
-# # Apache License 2.0
-
-# version: 2
-# updates:
-#   - package-ecosystem: "pip"
-#     directory: "/bindings/python/" # Location of package manifests
-#     schedule:
-#       interval: "monthly"
+# Apache License 2.0
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/bindings/python/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
