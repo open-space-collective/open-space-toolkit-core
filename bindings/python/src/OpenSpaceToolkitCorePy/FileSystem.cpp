@@ -21,10 +21,10 @@ inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
     // Create "filesystem" python submodule
     auto filesystem = aModule.def_submodule("filesystem");
 
-    pybind11::class_<PermissionSet> permissionSetClass(aModule, "PermissionSet");
-    pybind11::class_<Path> pathClass(aModule, "Path");
-    pybind11::class_<File> fileClass(aModule, "File");
-    pybind11::class_<Directory> directoryClass(aModule, "Directory");
+    pybind11::class_<PermissionSet> permissionSetClass(filesystem, "PermissionSet");
+    pybind11::class_<Path> pathClass(filesystem, "Path");
+    pybind11::class_<File> fileClass(filesystem, "File");
+    pybind11::class_<Directory> directoryClass(filesystem, "Directory");
 
     // Add custom objects to python "filesystem" submodule
     OpenSpaceToolkitCorePy_FileSystem_PermissionSet(permissionSetClass);

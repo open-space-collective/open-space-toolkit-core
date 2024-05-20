@@ -15,8 +15,8 @@ inline void OpenSpaceToolkitCorePy_Container(pybind11::module& aModule)
     // Create "container" python submodule
     auto container = aModule.def_submodule("container");
 
-    pybind11::class_<Dictionary> dictionaryClass(aModule, "Dictionary");
-    pybind11::class_<Object> objectClass(aModule, "Object");
+    pybind11::class_<Dictionary> dictionaryClass(container, "Dictionary");
+    pybind11::class_<Object> objectClass(container, "Object");
 
     // Add objects to python "container" submodules
     OpenSpaceToolkitCorePy_Container_Array(container);

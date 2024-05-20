@@ -20,9 +20,9 @@ inline void OpenSpaceToolkitCorePy_Type(pybind11::module& aModule)
     // Create "type" python submodule
     auto type = aModule.def_submodule("type");
 
-    pybind11::class_<Integer> integerClass(aModule, "Integer");
-    pybind11::class_<Real> realClass(aModule, "Real");
-    pybind11::class_<String> stringClass(aModule, "String");
+    pybind11::class_<Integer> integerClass(type, "Integer");
+    pybind11::class_<Real> realClass(type, "Real");
+    pybind11::class_<String> stringClass(type, "String");
 
     // Add custom type to python "type" submodule
     OpenSpaceToolkitCorePy_Type_Sign(aModule);
