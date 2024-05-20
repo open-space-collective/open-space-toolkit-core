@@ -1,20 +1,34 @@
 /// Apache License 2.0
 
 // #include <OpenSpaceToolkitCorePy/FileSystem/SymbolicLink.cpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
+
 #include <OpenSpaceToolkitCorePy/FileSystem/Directory.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem/File.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem/Path.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem/PermissionSet.cpp>
+
+using ostk::core::filesystem::PermissionSet;
+using ostk::core::filesystem::File;
+using ostk::core::filesystem::Path;
+using ostk::core::filesystem::Directory;
 
 inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
 {
     // Create "filesystem" python submodule
     auto filesystem = aModule.def_submodule("filesystem");
 
+    pybind11::class_<PermissionSet> permissionSetClass(aModule, "PermissionSet");
+    pybind11::class_<Path> pathClass(aModule, "Path");
+    pybind11::class_<File> fileClass(aModule, "File");
+    pybind11::class_<Directory> directoryClass(aModule, "Directory");
 
     // Add custom objects to python "filesystem" submodule
-    OpenSpaceToolkitCorePy_FileSystem_PermissionSet(filesystem);
-    OpenSpaceToolkitCorePy_FileSystem_Path(filesystem);
-    OpenSpaceToolkitCorePy_FileSystem_File(filesystem);
-    OpenSpaceToolkitCorePy_FileSystem_Directory(filesystem);
+    OpenSpaceToolkitCorePy_FileSystem_PermissionSet(permissionSetClass);
+    OpenSpaceToolkitCorePy_FileSystem_Path(pathClass);
+    OpenSpaceToolkitCorePy_FileSystem_File(fileClass);
+    OpenSpaceToolkitCorePy_FileSystem_Directory(directoryClass);
 }

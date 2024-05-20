@@ -62,17 +62,13 @@ Object objectFromPythonHandle(const pybind11::handle& anObject)
     throw ostk::core::error::RuntimeError("Object type is wrong.");
 }
 
-inline void OpenSpaceToolkitCorePy_Container_Dictionary(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Container_Dictionary(pybind11::class_<Dictionary>& dictionaryClass)
 {
     using namespace pybind11;
 
     using ostk::core::type::String;
-    using ostk::core::container::Object;
-    using ostk::core::container::Dictionary;
 
-    class_<Dictionary> dictionary_class(aModule, "Dictionary");
-
-    dictionary_class
+    dictionaryClass
 
         // https://github.com/pybind/pybind11/blob/e3aa215b020886d648add951186052c619c3cf9d/include/pybind11/stl_bind.h
 
@@ -142,7 +138,7 @@ inline void OpenSpaceToolkitCorePy_Container_Dictionary(pybind11::module& aModul
 
         ;
 
-    class_<Dictionary::ConstIterator>(dictionary_class, "ConstIterator")
+    class_<Dictionary::ConstIterator>(dictionaryClass, "ConstIterator")
 
         .def(self == self)
         .def(self != self)

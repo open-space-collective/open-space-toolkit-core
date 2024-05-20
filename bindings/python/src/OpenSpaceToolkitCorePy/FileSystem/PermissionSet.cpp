@@ -2,13 +2,13 @@
 
 #include <OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp>
 
-inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::module& aModule)
+using ostk::core::filesystem::PermissionSet;
+
+inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::class_<PermissionSet>& permissionSet)
 {
     using namespace pybind11;
 
-    using ostk::core::filesystem::PermissionSet;
-
-    class_<PermissionSet>(aModule, "PermissionSet")
+    permissionSet
 
         // Define init method using pybind11 "init" convenience method
         .def(init<const bool, const bool, const bool>())
@@ -21,8 +21,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::module& aM
         .def(self - self)
 
         // .def("__str__", +[] (const ostk::core::filesystem::PermissionSet& aPermissionSet) -> str { return
-        // aPermissionSet.toString() ; }) .def("__repr__", +[] (const ostk::core::filesystem::PermissionSet& aPermissionSet) ->
-        // str { return aPermissionSet.toString() ; })
+        // aPermissionSet.toString() ; }) .def("__repr__", +[] (const ostk::core::filesystem::PermissionSet&
+        // aPermissionSet) -> str { return aPermissionSet.toString() ; })
         .def("__str__", &(shiftToString<PermissionSet>))
         .def("__repr__", &(shiftToString<PermissionSet>))
 

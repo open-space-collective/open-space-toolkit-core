@@ -2,13 +2,13 @@
 
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
 
-inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::module& aModule)
+using ostk::core::filesystem::Path;
+
+inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathClass)
 {
     using namespace pybind11;
 
-    using ostk::core::filesystem::Path;
-
-    class_<Path>(aModule, "Path")
+    pathClass
 
         // Define init method using pybind11 "init" convenience method
         // No init here
@@ -31,7 +31,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::module& aModule)
         .def("get_parent_path", &Path::getParentPath)
         .def("get_last_element", &Path::getLastElement)
         .def("get_normalized_path", &Path::getNormalizedPath)
-        .def("get_absolute_path", &Path::getAbsolutePath, "aBasePath"_a = Path::Current())
+        .def("get_absolute_path", &Path::getAbsolutePath, arg_v("base_path", Path::Current(), "Path.current()"))
         // .def("get_relative_path_to", &Path::getRelativePathTo)
         .def("to_string", &Path::toString)
 

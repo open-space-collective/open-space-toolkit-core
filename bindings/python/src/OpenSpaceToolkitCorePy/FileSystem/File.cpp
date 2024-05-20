@@ -2,13 +2,13 @@
 
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
-inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::module& aModule)
+using ostk::core::filesystem::File;
+
+inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileClass)
 {
     using namespace pybind11;
 
-    using ostk::core::filesystem::File;
-
-    class_<File>(aModule, "File")
+    fileClass
 
         // Define init method using pybind11 "init" convenience method
         // No init here
@@ -24,7 +24,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::module& aModule)
 
         .def("is_defined", &File::isDefined)
         .def("exists", &File::exists)
-        .def("get_name", &File::getName, "withExtension"_a = true)
+        .def("get_name", &File::getName, arg("withExtension") = true)
         .def("get_extension", &File::getExtension)
         .def("get_path", &File::getPath)
         .def("get_permissions", &File::getPermissions)
