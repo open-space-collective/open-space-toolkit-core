@@ -25,7 +25,7 @@ inline void OpenSpaceToolkitCorePy_Type(pybind11::module& aModule)
     pybind11::class_<String> stringClass(type, "String");
 
     // Add custom type to python "type" submodule
-    OpenSpaceToolkitCorePy_Type_Sign(aModule);
+    OpenSpaceToolkitCorePy_Type_Sign(type);
     OpenSpaceToolkitCorePy_Type_Integer(integerClass);
     OpenSpaceToolkitCorePy_Type_Real(realClass);
     OpenSpaceToolkitCorePy_Type_String(stringClass);
