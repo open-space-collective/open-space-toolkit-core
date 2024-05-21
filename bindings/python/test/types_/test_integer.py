@@ -43,7 +43,6 @@ def test_hash():
 def test_integer_operators():
     a = Integer(15)
     b = Integer(30)
-    c = Integer(-45)
 
     # Addition
     assert a + b == Integer(45)

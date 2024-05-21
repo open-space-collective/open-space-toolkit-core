@@ -2,15 +2,15 @@
 
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
 
-inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::module& aModule)
+using ostk::core::type::Integer;
+using ostk::core::type::Real;
+using ostk::core::type::String;
+
+inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
 {
     using namespace pybind11;
 
-    using ostk::core::type::Integer;
-    using ostk::core::type::Real;
-    using ostk::core::type::String;
-
-    class_<Real>(aModule, "Real")
+    realClass
 
         // Define init method using pybind11 "init" convenience method
         .def(init<Real::ValueType>())

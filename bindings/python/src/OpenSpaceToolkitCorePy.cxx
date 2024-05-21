@@ -25,6 +25,6 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
 
     // Add python submodules to OpenSpaceToolkitCorePy
     OpenSpaceToolkitCorePy_Type(m);
-    OpenSpaceToolkitCorePy_Container(m);
     OpenSpaceToolkitCorePy_FileSystem(m);
+    OpenSpaceToolkitCorePy_Container(m);
 }

@@ -2,15 +2,16 @@
 
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 
-inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::module& aModule)
+using ostk::core::type::Integer;
+
+inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integerClass)
 {
     using namespace pybind11;
 
-    using ostk::core::type::Integer;
     using ostk::core::type::Real;
     using ostk::core::type::String;
 
-    class_<Integer>(aModule, "Integer")
+    integerClass
 
         // Define init method using pybind11 "init" convenience method
         .def(init<Integer::ValueType>())

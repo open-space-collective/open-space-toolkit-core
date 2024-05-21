@@ -41,7 +41,6 @@ def test_file_exists():
 def test_file_getter_functions():
     current_file = File.path(Path.parse("./__init__.py"))
     shared_lib_file = File.path(Path.parse("./shared_library.so.3.3"))
-    test_file = File.path(Path.current() + Path.parse("../assets/pythontestfile.txt"))
 
     # name
     file_name = current_file.get_name()

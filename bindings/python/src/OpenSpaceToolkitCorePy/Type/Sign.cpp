@@ -2,11 +2,11 @@
 
 #include <OpenSpaceToolkit/Core/Type/Sign.hpp>
 
+using ostk::core::type::Sign;
+
 inline void OpenSpaceToolkitCorePy_Type_Sign(pybind11::module& aModule)
 {
     using namespace pybind11;
-
-    using ostk::core::type::Sign;
 
     enum_<Sign>(aModule, "Sign")
         .value("Undefined", Sign::Undefined)

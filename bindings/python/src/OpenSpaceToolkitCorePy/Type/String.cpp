@@ -3,14 +3,15 @@
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
-inline void OpenSpaceToolkitCorePy_Type_String(pybind11::module& aModule)
+using ostk::core::type::String;
+
+inline void OpenSpaceToolkitCorePy_Type_String(pybind11::class_<String>& stringClass)
 {
     using namespace pybind11;
 
     using ostk::core::type::Size;
-    using ostk::core::type::String;
 
-    class_<String>(aModule, "String")
+    stringClass
 
         // Define init method using pybind11 "init" convenience method
         .def(init<std::string>())
