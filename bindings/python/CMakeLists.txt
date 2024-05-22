@@ -149,7 +149,7 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m build --no-isolation -w
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m pip install .
                             COMMAND python${PYTHON_VERSION} -m pip install pybind11-stubgen
-                            COMMAND pybind11-stubgen "${PROJECT_GROUP}.${PROJECT_SUBGROUP}"  -o "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/stubs"
+                            COMMAND pybind11-stubgen "${PROJECT_GROUP}.${PROJECT_SUBGROUP}" --ignore-invalid-identifiers=".*regex.*"  -o "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/stubs"
                             COMMAND mv "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/stubs/${PROJECT_GROUP}/${PROJECT_SUBGROUP}/*.pyi" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}"
                             COMMAND rm -r "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/stubs"
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && python${PYTHON_VERSION} -m build --no-isolation -w
