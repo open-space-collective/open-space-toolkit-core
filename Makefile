@@ -512,7 +512,8 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		--workdir=/app/build \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
-		&& $(MAKE) -j 4 && python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} bindings/python/OpenSpaceToolkit*Py-python-package-${test_python_version} \
+		&& $(MAKE) -j 4 \
+		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} bindings/python/OpenSpaceToolkit*Py-python-package-${test_python_version} \
 		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} plotly pandas \
 		&& cd ${test_python_directory}/ostk/$(project_name)/ \
 		&& python${test_python_version} -m pytest -sv ."
