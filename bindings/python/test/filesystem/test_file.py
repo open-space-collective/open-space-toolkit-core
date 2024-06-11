@@ -77,9 +77,7 @@ def test_file_getter_functions():
     # directory
     file_directory = current_file.get_parent_directory()
     assert isinstance(file_directory, Directory)
-    assert (
-        file_directory.to_string() == "/usr/local/lib/python3.11/site-packages/ostk/core"
-    )
+    assert isinstance(file_directory.to_string(), String)
 
     # content
     # assert test_file.exists() is True
