@@ -1,7 +1,5 @@
 # Apache License 2.0
 
-import pytest
-
 import math
 
 from ostk.core.type import Real, Sign
