@@ -29,7 +29,7 @@ Want to get started? This is the simplest and quickest way:
 The following command will start an [iPython](https://ipython.org/) shell within a container where the OSTk components are already installed:
 
 ```bash
-docker run -it openspacecollective/open-space-toolkit-core-python
+docker run -it openspacecollective/open-space-toolkit-core-development python3.11 -m IPython
 ```
 
 Once the shell is up and running, playing with it is easy:
@@ -206,7 +206,7 @@ Or to run them manually:
 
 | Name        | Version    | License      | Link                                                                |
 | ----------- | ---------- | ------------ | ------------------------------------------------------------------- |
-| Pybind11    | `2.10.1` | BSD-3-Clause | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
+| Pybind11    | `2.12.0` | BSD-3-Clause | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
 | RapidJSON   | `master` | MIT          | [rapidjson.org](http://rapidjson.org)                                  |
 | yaml-cpp    | `0.7.0`  | MIT          | [github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)       |
 | ordered-map | `0.6.0`  | MIT          | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
