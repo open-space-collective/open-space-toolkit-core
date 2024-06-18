@@ -30,7 +30,7 @@ class RuntimeError : public Exception
     RuntimeError(const char* aFormat, Args... anArgumentList)
         : Exception(String::Empty()),
           message_(String::Format(aFormat, anArgumentList...)),
-          stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace())),
+          stackTrace_(String::SanitizeUTF8(boost::stacktrace::to_string(boost::stacktrace::stacktrace()))),
           what_(stackTrace_ + message_)
     {
     }
