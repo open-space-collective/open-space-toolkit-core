@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_docs__tutorial" kind="page">
+    <compoundname>md_docs_Tutorial</compoundname>
+    <title>Tutorial</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Below are examples illustrating a few common use-cases.</para>
+<sect1 id="md_docs__tutorial_1Setup">
+<title>Setup</title>
+<para><emphasis>To be completed...</emphasis></para>
+</sect1>
+<sect1 id="md_docs__tutorial_1Examples">
+<title>Examples</title>
+<sect2 id="md_docs__tutorial_1JSON">
+<title>Load / Write JSON</title>
+<para><ulink url="https://en.wikipedia.org/wiki/JSON">JSON</ulink> is a great format for configuring applications and for exchanging data over the internet:</para>
+<para>Assuming an <computeroutput>input.json</computeroutput> file as follows:</para>
+<para><programlisting filename=".json"><codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>1&quot;:<sp/>&quot;Hello<sp/>World!&quot;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>the following code:</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Setup<sp/>JSON<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">File<sp/>jsonFile<sp/>=<sp/>File::Path(Path::String(</highlight><highlight class="stringliteral">&quot;/path/to/input.json&quot;</highlight><highlight class="normal">))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>object<sp/>by<sp/>loading<sp/>JSON<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Object<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>=<sp/>Object::Load(jsonFile)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Get<sp/>object<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">String<sp/>value<sp/>=<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">[</highlight><highlight class="stringliteral">&quot;Key<sp/>1&quot;</highlight><highlight class="normal">].toString()<sp/>;<sp/></highlight><highlight class="comment">//<sp/>&quot;Hello<sp/>World!&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>object<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">[</highlight><highlight class="stringliteral">&quot;Key<sp/>2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>Object::Integer(123)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Save<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">.writeToFile(File::Path(Path::String(</highlight><highlight class="stringliteral">&quot;/path/to/output.json&quot;</highlight><highlight class="normal">)))<sp/>;</highlight></codeline>
+</programlisting></para>
+<para>will return an <computeroutput>output.json</computeroutput> file as:</para>
+<para><programlisting filename=".json"><codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>1&quot;:<sp/>&quot;Hello<sp/>World!&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>2&quot;:<sp/>123</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

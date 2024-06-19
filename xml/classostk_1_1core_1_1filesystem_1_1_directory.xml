@@ -1,0 +1,781 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1filesystem_1_1_directory" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::filesystem::Directory</compoundname>
+    <includes refid="_directory_8hpp" local="no">Directory.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_directory_1afef7259bab60d94bf0acdd50a29009bc" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
+        <definition>filesystem::Path ostk::core::filesystem::Directory::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="323" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a355eb219c6588be19b6b625a06aa901b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Directory::Directory</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Directory</name>
+        <briefdescription>
+<para>Default constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a56b60dabb38a5cd40d81a7e9396b8a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Directory::Directory</definition>
+        <argsstring>(const Directory &amp;aDirectory)=default</argsstring>
+        <name>Directory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a735e8c716574a9f0720deca6fe53551d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+        <definition>Directory&amp; ostk::core::filesystem::Directory::operator=</definition>
+        <argsstring>(const Directory &amp;aDirectory)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="46" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a2052299ec678425c614a9d94b6719408" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::operator==</definition>
+        <argsstring>(const Directory &amp;aDirectory) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>firstDirectory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>secondDirectory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstDirectory<sp/>==<sp/>secondDirectory<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if directories are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="59" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3104154a1142af0ea03f257edf493bc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::operator!=</definition>
+        <argsstring>(const Directory &amp;aDirectory) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>firstDirectory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/first/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>secondDirectory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/second/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstDirectory<sp/>!=<sp/>secondDirectory<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if directories are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="72" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a7dc2c8a49eea8ee0cc6372b349756bf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+<para>Check if directory is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if directory is defined </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="96" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1affd6e4da6f153b1c961ff61178898c20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::exists</definition>
+        <argsstring>() const</argsstring>
+        <name>exists</name>
+        <briefdescription>
+<para>Check if directory exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/nonexistent/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if directory exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="107" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="52" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3f9fa68eb7bce123a435c20ae9ece692" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+<para>Check if directory is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/empty/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.isEmpty()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if directory is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="71" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3aae4c5746c1db8563c39b1930688edc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::containsFileWithName</definition>
+        <argsstring>(const String &amp;aFileName) const</argsstring>
+        <name>containsFileWithName</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aFileName</declname>
+        </param>
+        <briefdescription>
+<para>Check if directory contains file with name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.containsFileWithName(&quot;file.txt&quot;)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if directory contains file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="129" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="90" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a5a06e7333bba2f33cda76e5e24b00e37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Directory::containsDirectoryWithName</definition>
+        <argsstring>(const String &amp;aDirectoryName) const</argsstring>
+        <name>containsDirectoryWithName</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aDirectoryName</declname>
+        </param>
+        <briefdescription>
+<para>Check if directory contains directory with name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.containsDirectoryWithName(&quot;subdirectory&quot;)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if directory contains directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ad9ffa02a5f60cc351bc16dcedb64ce7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::Directory::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+<para>Get directory name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.getName()<sp/>;<sp/>//<sp/>directory</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="151" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="134" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af81a249fa293a8c8350d9ec9e296ce81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
+        <definition>filesystem::Path ostk::core::filesystem::Directory::getPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+<para>Get directory path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>directory.getPath()<sp/>;<sp/>//<sp/>/path/to/directory</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="162" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="160" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a5b41f71a42dc5bfc00b495c46ffe77f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref></type>
+        <definition>filesystem::PermissionSet ostk::core::filesystem::Directory::getPermissions</definition>
+        <argsstring>() const</argsstring>
+        <name>getPermissions</name>
+        <briefdescription>
+<para>Get directory permissions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Permissions<sp/>permissions<sp/>=<sp/>directory.getPermissions()<sp/>;<sp/>//<sp/>rwx</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="173" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1aa48e08223e5a4b1ae28b08f9e5ac0a5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
+        <definition>Directory ostk::core::filesystem::Directory::getParentDirectory</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentDirectory</name>
+        <briefdescription>
+<para>Get directory&apos;s parent directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>parentDirectory<sp/>=<sp/>directory.getParentDirectory()<sp/>;<sp/>//<sp/>/path/to</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref>&apos;s parent directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="184" column="15" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af6e1bd5eb2b4634b4232fcfcf7ebce64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &gt;</type>
+        <definition>container::Array&lt;filesystem::File&gt; ostk::core::filesystem::Directory::getFiles</definition>
+        <argsstring>() const</argsstring>
+        <name>getFiles</name>
+        <briefdescription>
+<para>Get files in directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Files are listed in alphabetical order.
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;File&gt;<sp/>files<sp/>=<sp/>directory.getFiles()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Array of files in directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="197" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a588b3190a53c99a8a348ac4c01b31edc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &gt;</type>
+        <definition>container::Array&lt; Directory &gt; ostk::core::filesystem::Directory::getDirectories</definition>
+        <argsstring>() const</argsstring>
+        <name>getDirectories</name>
+        <briefdescription>
+<para>Get directories in directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Directories are listed in alphabetical order.
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Directory&gt;<sp/>directories<sp/>=<sp/>directory.getDirectories()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Array of directories in directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="210" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="185" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ae55d292dd71ab8f311b3c4ae79c317e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::Directory::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+<para>Get serialized directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory::Path(Path::Parse(&quot;/path/to/directory&quot;)).toString()<sp/>;<sp/>//<sp/>&quot;/path/to/directory&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Serialized directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="220" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="227" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ad0d45f2de353448c92807fd7d0d3fab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::Directory::renameTo</definition>
+        <argsstring>(const String &amp;aName)</argsstring>
+        <name>renameTo</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+<para>Rename directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.renameTo(&quot;folder&quot;)<sp/>;<sp/>//<sp/>/path/to/folder</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="231" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a9b4e55d3fa01d0a9cc1d5abc934f559c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
+        <definition>Directory ostk::core::filesystem::Directory::copyToDirectory</definition>
+        <argsstring>(const Directory &amp;aDestination, const String &amp;aNewDirectoryName=&quot;&quot;) const</argsstring>
+        <name>copyToDirectory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDestination</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aNewDirectoryName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Copy directory to directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>original<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>destination<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/destination&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>copy<sp/>=<sp/>original.copyToDirectory(destination)<sp/>;<sp/>//<sp/>/path/to/destination/directory</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDestination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination directory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aNewDirectoryName A copied directory name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Copied directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="245" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a60a53b7d1fb751e8cf98dc61a6e2815f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::Directory::moveToDirectory</definition>
+        <argsstring>(const Directory &amp;aDestination)</argsstring>
+        <name>moveToDirectory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDestination</declname>
+        </param>
+        <briefdescription>
+<para>Move directory to directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>destination<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/destination&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.moveToDirectory(destination)<sp/>;<sp/>//<sp/>/path/to/destination/directory</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDestination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="257" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a078d17063b9915092af76d347a9665cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::Directory::create</definition>
+        <argsstring>(const filesystem::PermissionSet &amp;anOwnerPermissionSet=filesystem::PermissionSet::RWX(), const filesystem::PermissionSet &amp;aGroupPermissionSet=filesystem::PermissionSet::RX(), const filesystem::PermissionSet &amp;anOtherPermissionSet=filesystem::PermissionSet::RX())</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>anOwnerPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a42e2ac3b11b9136ea369dca97f3ef9d8" kindref="member">filesystem::PermissionSet::RWX</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>aGroupPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa1822fb076086e71d5b6bc6a53532200" kindref="member">filesystem::PermissionSet::RX</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>anOtherPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa1822fb076086e71d5b6bc6a53532200" kindref="member">filesystem::PermissionSet::RX</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Create empty directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">directory.create()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>anOwnerPermissionSet An owner permission set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aGroupPermissionSet A group permission set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>anOtherPermissionSet An other permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="272" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="251" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a58be001fc39b8319a664bde35ff59d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::Directory::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+<para>Delete directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">directory.delete()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="287" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="290" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3cbfede39f82ab145f110ca14e21deef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Directory &amp;aDirectory)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>directory<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="85" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="31" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a299b477a3f5c6bd989ed0f7e91dbfffd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
+        <definition>Directory ostk::core::filesystem::Directory::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+<para>Constructs an undefined directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Undefined directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="298" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a654e1ae79c5e73460b722db30340270c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
+        <definition>Directory ostk::core::filesystem::Directory::Root</definition>
+        <argsstring>()</argsstring>
+        <name>Root</name>
+        <briefdescription>
+<para>Constructs a root directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Root()<sp/>;<sp/>&quot;/&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Root directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="308" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af4d6ebf5c5b5c86fe25226bf5f887a8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
+        <definition>Directory ostk::core::filesystem::Directory::Path</definition>
+        <argsstring>(const filesystem::Path &amp;aPath)</argsstring>
+        <name>Path</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a directory from a given path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">directory.isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> to directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="320" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="317" bodyend="325"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1aec17fadd7a541ce9b8deae3c752ffa5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Directory::Directory</definition>
+        <argsstring>(const filesystem::Path &amp;aPath)</argsstring>
+        <name>Directory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="325" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="327" bodyend="330"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cataloging structure which contains references to other computer files, and possibly other directories. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://en.wikipedia.org/wiki/Directory_">https://en.wikipedia.org/wiki/Directory_</ulink>(computing) </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="28" bodyend="326"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a5a06e7333bba2f33cda76e5e24b00e37" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>containsDirectoryWithName</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3aae4c5746c1db8563c39b1930688edc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>containsFileWithName</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a9b4e55d3fa01d0a9cc1d5abc934f559c" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>copyToDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a078d17063b9915092af76d347a9665cc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>create</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a355eb219c6588be19b6b625a06aa901b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Directory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a56b60dabb38a5cd40d81a7e9396b8a1a" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Directory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1aec17fadd7a541ce9b8deae3c752ffa5a" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Directory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1affd6e4da6f153b1c961ff61178898c20" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>exists</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a588b3190a53c99a8a348ac4c01b31edc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getDirectories</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af6e1bd5eb2b4634b4232fcfcf7ebce64" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getFiles</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1ad9ffa02a5f60cc351bc16dcedb64ce7d" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getName</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1aa48e08223e5a4b1ae28b08f9e5ac0a5e" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getParentDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af81a249fa293a8c8350d9ec9e296ce81" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getPath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a5b41f71a42dc5bfc00b495c46ffe77f7" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>getPermissions</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a7dc2c8a49eea8ee0cc6372b349756bf7" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3f9fa68eb7bce123a435c20ae9ece692" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>isEmpty</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a60a53b7d1fb751e8cf98dc61a6e2815f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>moveToDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3104154a1142af0ea03f257edf493bc0" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3cbfede39f82ab145f110ca14e21deef" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a735e8c716574a9f0720deca6fe53551d" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a2052299ec678425c614a9d94b6719408" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af4d6ebf5c5b5c86fe25226bf5f887a8c" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Path</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1afef7259bab60d94bf0acdd50a29009bc" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>path_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a58be001fc39b8319a664bde35ff59d86" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>remove</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1ad0d45f2de353448c92807fd7d0d3fab1" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>renameTo</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a654e1ae79c5e73460b722db30340270c" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Root</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1ae55d292dd71ab8f311b3c4ae79c317e4" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>toString</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a299b477a3f5c6bd989ed0f7e91dbfffd" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>Undefined</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

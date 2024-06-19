@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1error_1_1runtime" kind="namespace" language="C++">
+    <compoundname>ostk::core::error::runtime</compoundname>
+    <innerclass refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" prot="public">ostk::core::error::runtime::ToBeImplemented</innerclass>
+    <innerclass refid="classostk_1_1core_1_1error_1_1runtime_1_1_undefined" prot="public">ostk::core::error::runtime::Undefined</innerclass>
+    <innerclass refid="classostk_1_1core_1_1error_1_1runtime_1_1_wrong" prot="public">ostk::core::error::runtime::Wrong</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

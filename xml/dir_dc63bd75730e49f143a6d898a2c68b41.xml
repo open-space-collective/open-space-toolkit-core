@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_dc63bd75730e49f143a6d898a2c68b41" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Container/Table</compoundname>
+    <innerfile refid="_cell_8hpp">Cell.hpp</innerfile>
+    <innerfile refid="_row_8hpp">Row.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Table/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_1c8c43f19f70157863a0c203afd5ab03" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Logger/Source</compoundname>
+    <innerfile refid="_source_2_source_8hpp">Source.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Source/"/>
+  </compounddef>
+</doxygen>

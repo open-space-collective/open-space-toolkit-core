@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1error_1_1_exception" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::error::Exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <derivedcompoundref refid="classostk_1_1core_1_1error_1_1_runtime_error" prot="public" virt="non-virtual">ostk::core::error::RuntimeError</derivedcompoundref>
+    <includes refid="_exception_8hpp" local="no">Exception.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1error_1_1_exception_1a6dab20200b1936b280c76dadf3085ed9" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::error::Exception::scope_</definition>
+        <argsstring></argsstring>
+        <name>scope_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="33" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::error::Exception::Exception</definition>
+        <argsstring>(const String &amp;aScope)</argsstring>
+        <name>Exception</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aScope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="24" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1ae44d71ced961433d0b3325ff176e4974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::error::Exception::~Exception</definition>
+        <argsstring>()</argsstring>
+        <name>~Exception</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="26" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::error::Exception::getScope</definition>
+        <argsstring>() const</argsstring>
+        <name>getScope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="28" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1ae34ebc20a97277da6e2472b6bb8e3812" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * ostk::core::error::Exception::what</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>what</name>
+        <reimplementedby refid="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1">what</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="30" column="24" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1error_1_1_exception" kindref="compound">Exception</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>ostk::core::error::runtime::Wrong</label>
+        <link refid="classostk_1_1core_1_1error_1_1runtime_1_1_wrong"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ostk::core::error::Exception</label>
+        <link refid="classostk_1_1core_1_1error_1_1_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ostk::core::error::runtime::Undefined</label>
+        <link refid="classostk_1_1core_1_1error_1_1runtime_1_1_undefined"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ostk::core::error::RuntimeError</label>
+        <link refid="classostk_1_1core_1_1error_1_1_runtime_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+      <node id="4">
+        <label>ostk::core::error::runtime::ToBeImplemented</label>
+        <link refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ostk::core::error::Exception</label>
+        <link refid="classostk_1_1core_1_1error_1_1_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="21" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>Exception</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>getScope</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1a6dab20200b1936b280c76dadf3085ed9" prot="private" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>scope_</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1ae34ebc20a97277da6e2472b6bb8e3812" prot="public" virt="virtual"><scope>ostk::core::error::Exception</scope><name>what</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1ae44d71ced961433d0b3325ff176e4974" prot="public" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>~Exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

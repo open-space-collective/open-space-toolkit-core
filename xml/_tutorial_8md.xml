@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_tutorial_8md" kind="file" language="Markdown">
+    <compoundname>Tutorial.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">Tutorial</highlight></codeline>
+<codeline><highlight class="normal">========</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Below<sp/>are<sp/>examples<sp/>illustrating<sp/>a<sp/>few<sp/>common<sp/>use-cases.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[TOC]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Setup<sp/>{#Setup}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*To<sp/>be<sp/>completed...*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Examples<sp/>{#Examples}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Load<sp/>/<sp/>Write<sp/>JSON<sp/>{#JSON}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[JSON](https://en.wikipedia.org/wiki/JSON)<sp/>is<sp/>a<sp/>great<sp/>format<sp/>for<sp/>configuring<sp/>applications<sp/>and<sp/>for<sp/>exchanging<sp/>data<sp/>over<sp/>the<sp/>internet:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Assuming<sp/>an<sp/>`input.json`<sp/>file<sp/>as<sp/>follows:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```json</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>1&quot;:<sp/>&quot;Hello<sp/>World!&quot;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">the<sp/>following<sp/>code:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Setup<sp/>JSON<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">File<sp/>jsonFile<sp/>=<sp/>File::Path(Path::String(&quot;/path/to/input.json&quot;))<sp/>;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Create<sp/>object<sp/>by<sp/>loading<sp/>JSON<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Object<sp/>object<sp/>=<sp/>Object::Load(jsonFile)<sp/>;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>object<sp/>value</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">String<sp/>value<sp/>=<sp/>object[&quot;Key<sp/>1&quot;].toString()<sp/>;<sp/>//<sp/>&quot;Hello<sp/>World!&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Set<sp/>object<sp/>value</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">object[&quot;Key<sp/>2&quot;]<sp/>=<sp/>Object::Integer(123)<sp/>;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Save<sp/>object</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">object.writeToFile(File::Path(Path::String(&quot;/path/to/output.json&quot;)))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">will<sp/>return<sp/>an<sp/>`output.json`<sp/>file<sp/>as:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```json</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>1&quot;:<sp/>&quot;Hello<sp/>World!&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Key<sp/>2&quot;:<sp/>123</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="docs/Tutorial.md"/>
+  </compounddef>
+</doxygen>

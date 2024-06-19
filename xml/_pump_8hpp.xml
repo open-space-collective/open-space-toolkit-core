@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_pump_8hpp" kind="file" language="C++">
+    <compoundname>Pump.hpp</compoundname>
+    <includes refid="_severity_8hpp" local="no">OpenSpaceToolkit/Core/Logger/Severity.hpp</includes>
+    <includes refid="_source_8hpp" local="no">OpenSpaceToolkit/Core/Logger/Source.hpp</includes>
+    <includes refid="_integer_8hpp" local="no">OpenSpaceToolkit/Core/Type/Integer.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includes refid="_unique_8hpp" local="no">OpenSpaceToolkit/Core/Type/Unique.hpp</includes>
+    <includedby refid="_logger_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="20">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="24">
+        <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+        <link refid="_integer_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>iterator</label>
+      </node>
+      <node id="22">
+        <label>OpenSpaceToolkit/Core/Type/Unique.hpp</label>
+        <link refid="_unique_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stdint.h</label>
+      </node>
+      <node id="21">
+        <label>OpenSpaceToolkit/Core/Container/Array.tpp</label>
+        <link refid="_array_8tpp"/>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>OpenSpaceToolkit/Core/Logger/Source/Source.hpp</label>
+        <link refid="_source_2_source_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>regex</label>
+      </node>
+      <node id="9">
+        <label>OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</label>
+        <link refid="_zip_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ostream</label>
+      </node>
+      <node id="15">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Logger/Severity.hpp</label>
+        <link refid="_severity_8hpp"/>
+      </node>
+      <node id="5">
+        <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
+        <link refid="_array_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Logger/Pump.hpp</label>
+        <link refid="_pump_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="19">
+        <label>type_traits</label>
+      </node>
+      <node id="16">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OpenSpaceToolkit/Core/Logger/Source.hpp</label>
+        <link refid="_source_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>memory</label>
+      </node>
+      <node id="25">
+        <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
+        <link refid="_sign_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Logger/Pump.hpp</label>
+        <link refid="_pump_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Logger.hpp</label>
+        <link refid="_logger_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1core_1_1logger_1_1_pump" prot="public">ostk::core::logger::Pump</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1logger">ostk::core::logger</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Logger_Pump__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Logger_Pump__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_severity_8hpp" kindref="compound">OpenSpaceToolkit/Core/Logger/Severity.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_source_8hpp" kindref="compound">OpenSpaceToolkit/Core/Logger/Source.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_integer_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Integer.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_unique_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Unique.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="namespaceostk_1_1core_1_1logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">logger</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">ostk::core::type::Unique</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">ostk::core::type::Integer</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">ostk::core::logger::Severity</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classostk_1_1core_1_1logger_1_1_pump" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classostk_1_1core_1_1logger_1_1_pump_1a76c2ff8c48c3484e3ca179667a7a7b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a76c2ff8c48c3484e3ca179667a7a7b31" kindref="member">StreamManipulator</ref><sp/>=<sp/>std::ostream&amp;(std::ostream&amp;);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" kindref="member">Pump</ref>(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>aLine,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFunction,<sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>*<sp/>aSource</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" kindref="member">Pump</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;<sp/>aPump)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" kindref="member">Pump</ref>(<ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;&amp;<sp/>aPump);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a66b4321348906a8a2b379c9aefac01d6" kindref="member">~Pump</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1adaca719cdabd4a6f6e8937bacf093b77" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;<sp/>aPump)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="44" refid="classostk_1_1core_1_1logger_1_1_pump_1ac2bb85f5e310c5cccf792d85b317acda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1ac2bb85f5e310c5cccf792d85b317acda" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anObject)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;canAccessStream())</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;accessStream()<sp/>&lt;&lt;<sp/>anObject;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classostk_1_1core_1_1logger_1_1_pump_1a6ab7044123e2f99752a043a462632a6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump_1a6ab7044123e2f99752a043a462632a6b" kindref="member">operator&lt;&lt;</ref>(<ref refid="classostk_1_1core_1_1logger_1_1_pump_1a76c2ff8c48c3484e3ca179667a7a7b31" kindref="member">StreamManipulator</ref><sp/>aStreamManipulator)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;canAccessStream())</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;accessStream()<sp/>&lt;&lt;<sp/>aStreamManipulator;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Impl;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>Unique&lt;Pump::Impl&gt;<sp/>implPtr_;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>canAccessStream()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostream&amp;<sp/>accessStream();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1_object_1_1_impl" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::Object::Impl</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a05f0d3b7879279dcd66f9ad2a799ccad" prot="private" static="no" mutable="no">
+        <type>boost::any</type>
+        <definition>boost::any ostk::core::container::Object::Impl::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="60" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac67ff6a1934f1a64d3cba9c0d56886d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Object::Impl::Impl</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1abf122f494801d53f01012c9d0b1b25ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Object::Impl::Impl</definition>
+        <argsstring>(const boost::any &amp;anyValue)</argsstring>
+        <name>Impl</name>
+        <param>
+          <type>const boost::any &amp;</type>
+          <declname>anyValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="29" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1af1fb41500880ff97cede9f6513941d05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Object::Impl *</type>
+        <definition>Object::Impl * ostk::core::container::Object::Impl::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="31" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a26e262feea79638460ca65e4079b43b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::operator==</definition>
+        <argsstring>(const Object::Impl &amp;anObject) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const Object::Impl &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="33" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="73" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2a21bc430644bbca4fafebdd775f636b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::operator!=</definition>
+        <argsstring>(const Object::Impl &amp;anObject) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const Object::Impl &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="34" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a59a8b2e2ef9ac6dd3240717b946caba5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isBoolean</definition>
+        <argsstring>() const</argsstring>
+        <name>isBoolean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="36" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a4ec3f97643ab41097accb481771b60a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isInteger</definition>
+        <argsstring>() const</argsstring>
+        <name>isInteger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="37" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ada337871f895576a10d2e405d8c70709" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isReal</definition>
+        <argsstring>() const</argsstring>
+        <name>isReal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="38" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ae411b8664123d3a29dcd6771321e8f80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isString</definition>
+        <argsstring>() const</argsstring>
+        <name>isString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="39" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2cb77cf30ff8f2c432f31772f25d4bff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isDictionary</definition>
+        <argsstring>() const</argsstring>
+        <name>isDictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="40" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a8b48412c97559db2ec20ee7f8e044def" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Object::Impl::isArray</definition>
+        <argsstring>() const</argsstring>
+        <name>isArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="41" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aa04e46d95aa918177e30af252c3c454d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>bool &amp; ostk::core::container::Object::Impl::accessBoolean</definition>
+        <argsstring>() const</argsstring>
+        <name>accessBoolean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="43" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="151" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a9794fc18919657934ffbf971984d8587" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref> &amp;</type>
+        <definition>type::Integer &amp; ostk::core::container::Object::Impl::accessInteger</definition>
+        <argsstring>() const</argsstring>
+        <name>accessInteger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="44" column="25" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="161" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a479035dc3712eb32f9c7e9d68f34059b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">type::Real</ref> &amp;</type>
+        <definition>type::Real &amp; ostk::core::container::Object::Impl::accessReal</definition>
+        <argsstring>() const</argsstring>
+        <name>accessReal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="45" column="22" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="171" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7961a9ba5df8f17605e7902248798f92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+        <definition>type::String &amp; ostk::core::container::Object::Impl::accessString</definition>
+        <argsstring>() const</argsstring>
+        <name>accessString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="46" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="181" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a66a8b205c9c8fa55b0c4770d2e538b99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">container::Dictionary</ref> &amp;</type>
+        <definition>container::Dictionary &amp; ostk::core::container::Object::Impl::accessDictionary</definition>
+        <argsstring>() const</argsstring>
+        <name>accessDictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="47" column="33" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="191" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7e85393c5319d5f7060d83cfbef10335" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &gt; &amp;</type>
+        <definition>container::Array&lt; Object &gt; &amp; ostk::core::container::Object::Impl::accessArray</definition>
+        <argsstring>() const</argsstring>
+        <name>accessArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="48" column="28" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="201" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aefe0e46f972bcd48001aa36f23e721ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_object_1a7aae445503d92c87f3bc4434c50c6e42" kindref="member">Object::Type</ref></type>
+        <definition>Object::Type ostk::core::container::Object::Impl::getType</definition>
+        <argsstring>() const</argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="50" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="211" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a57e1cd16f4bb3ef8f5504d3c9b7b9c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool &amp;</type>
+        <definition>bool&amp; ostk::core::container::Object::Impl::accessBoolean</definition>
+        <argsstring>()</argsstring>
+        <name>accessBoolean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac262c242e61d2ed42498438db3b76f65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref> &amp;</type>
+        <definition>type::Integer&amp; ostk::core::container::Object::Impl::accessInteger</definition>
+        <argsstring>()</argsstring>
+        <name>accessInteger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="53" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a1600d599621b9b05b2a3a89d3e654857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">type::Real</ref> &amp;</type>
+        <definition>type::Real&amp; ostk::core::container::Object::Impl::accessReal</definition>
+        <argsstring>()</argsstring>
+        <name>accessReal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="54" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ad7e2f71a59bafc9df08b2bbb7422976d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+        <definition>type::String&amp; ostk::core::container::Object::Impl::accessString</definition>
+        <argsstring>()</argsstring>
+        <name>accessString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="55" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a035dc1cdd7ba0867790d2a3ab1e50901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">container::Dictionary</ref> &amp;</type>
+        <definition>container::Dictionary&amp; ostk::core::container::Object::Impl::accessDictionary</definition>
+        <argsstring>()</argsstring>
+        <name>accessDictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="56" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2e7a5de5656df427348ee2658a39a1b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &gt; &amp;</type>
+        <definition>container::Array&lt;Object&gt;&amp; ostk::core::container::Object::Impl::accessArray</definition>
+        <argsstring>()</argsstring>
+        <name>accessArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="57" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="25" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="24" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7e85393c5319d5f7060d83cfbef10335" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessArray</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2e7a5de5656df427348ee2658a39a1b2" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessArray</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aa04e46d95aa918177e30af252c3c454d" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessBoolean</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a57e1cd16f4bb3ef8f5504d3c9b7b9c5a" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessBoolean</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a66a8b205c9c8fa55b0c4770d2e538b99" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessDictionary</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a035dc1cdd7ba0867790d2a3ab1e50901" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessDictionary</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a9794fc18919657934ffbf971984d8587" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessInteger</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac262c242e61d2ed42498438db3b76f65" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessInteger</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a479035dc3712eb32f9c7e9d68f34059b" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessReal</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a1600d599621b9b05b2a3a89d3e654857" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessReal</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7961a9ba5df8f17605e7902248798f92" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessString</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ad7e2f71a59bafc9df08b2bbb7422976d" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>accessString</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1af1fb41500880ff97cede9f6513941d05" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>clone</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aefe0e46f972bcd48001aa36f23e721ec" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>getType</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac67ff6a1934f1a64d3cba9c0d56886d7" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>Impl</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1abf122f494801d53f01012c9d0b1b25ca" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>Impl</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a8b48412c97559db2ec20ee7f8e044def" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isArray</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a59a8b2e2ef9ac6dd3240717b946caba5" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isBoolean</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2cb77cf30ff8f2c432f31772f25d4bff" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isDictionary</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a4ec3f97643ab41097accb481771b60a7" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isInteger</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ada337871f895576a10d2e405d8c70709" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isReal</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ae411b8664123d3a29dcd6771321e8f80" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>isString</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2a21bc430644bbca4fafebdd775f636b" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a26e262feea79638460ca65e4079b43b8" prot="public" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a05f0d3b7879279dcd66f9ad2a799ccad" prot="private" virt="non-virtual"><scope>ostk::core::container::Object::Impl</scope><name>value_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

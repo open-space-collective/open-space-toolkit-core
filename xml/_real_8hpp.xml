@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_real_8hpp" kind="file" language="C++">
+    <compoundname>Real.hpp</compoundname>
+    <includes refid="_integer_8hpp" local="no">OpenSpaceToolkit/Core/Type/Integer.hpp</includes>
+    <includes refid="_sign_8hpp" local="no">OpenSpaceToolkit/Core/Type/Sign.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_object_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Object.hpp</includedby>
+    <includedby refid="_type_8hpp" local="no">include/OpenSpaceToolkit/Core/Type.hpp</includedby>
+    <includedby refid="_real_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/Real.cpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+        <link refid="_integer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>regex</label>
+      </node>
+      <node id="3">
+        <label>ostream</label>
+      </node>
+      <node id="8">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/Real.hpp</label>
+        <link refid="_real_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>type_traits</label>
+      </node>
+      <node id="9">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
+        <link refid="_sign_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
+        <link refid="_row_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
+        <link refid="_cell_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
+        <link refid="_row_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="3">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Container/Object.hpp</label>
+        <link refid="_object_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="11">
+        <label>include/OpenSpaceToolkit/Core/Type.hpp</label>
+        <link refid="_type_8hpp"/>
+      </node>
+      <node id="5">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/OpenSpaceToolkit/Core/Type/Real.cpp</label>
+        <link refid="_real_8cpp"/>
+      </node>
+      <node id="8">
+        <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
+        <link refid="_table_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/Real.hpp</label>
+        <link refid="_real_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_real" prot="public">ostk::core::type::Real</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1type">ostk::core::type</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Type_Real__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Type_Real__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_integer_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Integer.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_sign_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Sign.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">type</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classostk_1_1core_1_1type_1_1_real" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">ValueType</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ad489fa11e8e97f1812bb1c8ac790a854" kindref="member">Real</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ad489fa11e8e97f1812bb1c8ac790a854" kindref="member">Real</ref>(<ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref><sp/>aReal);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a8efecc8045c158117b3575f180f6de57" kindref="member">operator=</ref>(<ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref><sp/>aReal);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a3b6d8e105ca0f91c585ec99506f481a1" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a121ef2f449e5667545807cd4a6b32878" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a650441060aedbd24c098eb6514f87979" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a82c713912744f9d793c356a8d0d65574" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a6b01ec8d41fe1dcdfe1772e897c9ef85" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a5e3e4d411b2f6dbad973f09eb2da0f03" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a3b6d8e105ca0f91c585ec99506f481a1" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a121ef2f449e5667545807cd4a6b32878" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a650441060aedbd24c098eb6514f87979" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a82c713912744f9d793c356a8d0d65574" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a6b01ec8d41fe1dcdfe1772e897c9ef85" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a5e3e4d411b2f6dbad973f09eb2da0f03" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a639d0ee4675b03b14812c407f33266db" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9c77be5095578ef6d0759c23f0f89c68" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a639d0ee4675b03b14812c407f33266db" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9c77be5095578ef6d0759c23f0f89c68" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a639d0ee4675b03b14812c407f33266db" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9c77be5095578ef6d0759c23f0f89c68" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ac938f14a777b6c25feab8132a7386b57" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1aa2310e446ecc65c14fa9fa66db1c224e" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a0119b864af2b242431d5d63b2ad76dc8" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ab40ef2de5abbc4a4ead1d70a1b18a9b2" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ac938f14a777b6c25feab8132a7386b57" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1aa2310e446ecc65c14fa9fa66db1c224e" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a0119b864af2b242431d5d63b2ad76dc8" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ab40ef2de5abbc4a4ead1d70a1b18a9b2" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aDouble,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aDouble,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a639d0ee4675b03b14812c407f33266db" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aDouble,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9c77be5095578ef6d0759c23f0f89c68" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aDouble,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" kindref="member">operator+</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" kindref="member">operator-</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a36816b0e006fd2ec3b0c53406439c7c3" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a3fa4d51e40ddd8dc8587fd36e9b0c644" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a1fa04573fd84b62b560af7f6d1074f7a" kindref="member">isZero</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9717316f2e4c725fcd227f950e3f6003" kindref="member">isPositive</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ade0494cae26926149bc98c682d51cb7d" kindref="member">isNegative</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ad4de1101e8a36d4243b62e95b23aecee" kindref="member">isStrictlyPositive</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a7931a385428f39aab71b498d41c98292" kindref="member">isStrictlyNegative</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1af62d608e76428130ff024a8f72466183" kindref="member">isInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a5b7c754e78fa935392df40de9558bf40" kindref="member">isPositiveInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ac60a01ee4703b3a19adda02e5dddc0f1" kindref="member">isNegativeInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a5346a750dcd1c18cc859b31fd655a783" kindref="member">isInteger</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a17fa26c2a3aee65e69ec8aa38202c03d" kindref="member">isFinite</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a835cbd63e968f888d8227a38df4e9650" kindref="member">isNear</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aTolerance<sp/>=<sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1af0abff31499bc57e5c63f467353e8827" kindref="member">Real::Epsilon</ref>())<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">type::Sign</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a8e647c03dea16ec9a8c8d80d784e54e9" kindref="member">getSign</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a477542fdd8fbb4dbf072ca92b98b5f55" kindref="member">toString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref>&amp;<sp/>aPrecision<sp/>=<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" kindref="member">type::Integer::Undefined</ref>())<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a90d54f55f2aba1c0d2654ea5b27a6f83" kindref="member">toInteger</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a89d71bd220a38de4b93161082e7196b4" kindref="member">abs</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1af1e33560d17a2e32926ba96650b6c34c" kindref="member">floor</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a4866aeba89654d2f008f78291cf0acb3" kindref="member">sqrt</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a78b23b6a028a96a095efdcd890d2f793" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a281ed032221603b185f4dca09c2c8a0a" kindref="member">Zero</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a0719f82a8995f19bc5d3c1a3e6e3bf48" kindref="member">Pi</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1acc440cc20d66905e8e0d1136a6db4a6a" kindref="member">HalfPi</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a9327579d7f35f191b545118d8af0b3ef" kindref="member">TwoPi</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1af0abff31499bc57e5c63f467353e8827" kindref="member">Epsilon</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a2b1fa45bc9dcea1bc3fc10789760b8dc" kindref="member">PositiveInfinity</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a0326e98bd04fc7c9840105dc606ad473" kindref="member">NegativeInfinity</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ae747a32ed7675ca44f476e210199daa5" kindref="member">Integer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a601885dbb81333e14f53edca3c3a6f23" kindref="member">CanParse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref>&amp;<sp/>aString);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1abae293d5042c82f56ad0a80ee3cf10cb" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref>&amp;<sp/>aString);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Type</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Defined,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PositiveInfinity,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NegativeInfinity</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>Real::Type<sp/>type_;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref><sp/>value_;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1ad489fa11e8e97f1812bb1c8ac790a854" kindref="member">Real</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real::Type&amp;<sp/>aType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref>&amp;<sp/>aReal);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp"/>
+  </compounddef>
+</doxygen>

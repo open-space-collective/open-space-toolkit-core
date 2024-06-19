@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_array_8hpp" kind="file" language="C++">
+    <compoundname>Array.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">ostream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_zip_8hpp" local="no">OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</includes>
+    <includes refid="_index_8hpp" local="no">OpenSpaceToolkit/Core/Type/Index.hpp</includes>
+    <includes refid="_size_8hpp" local="no">OpenSpaceToolkit/Core/Type/Size.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includes refid="_array_8tpp" local="no">OpenSpaceToolkit/Core/Container/Array.tpp</includes>
+    <includedby refid="_object_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Object.hpp</includedby>
+    <includedby refid="_row_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</includedby>
+    <includedby refid="_table_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Table.hpp</includedby>
+    <includedby refid="_directory_8hpp" local="no">include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp</includedby>
+    <includedby refid="_sink_2_sink_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp</includedby>
+    <includedby refid="_source_2_source_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp</includedby>
+    <includedby refid="_logger_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger.hpp</includedby>
+    <includedby refid="_object_8cpp" local="no">src/OpenSpaceToolkit/Core/Container/Object.cpp</includedby>
+    <includedby refid="_string_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/String.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="16">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="6">
+        <label>iterator</label>
+      </node>
+      <node id="17">
+        <label>OpenSpaceToolkit/Core/Container/Array.tpp</label>
+        <link refid="_array_8tpp"/>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>regex</label>
+      </node>
+      <node id="5">
+        <label>OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</label>
+        <link refid="_zip_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ostream</label>
+      </node>
+      <node id="11">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Container/Array.hpp</label>
+        <link refid="_array_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>cstddef</label>
+      </node>
+      <node id="15">
+        <label>type_traits</label>
+      </node>
+      <node id="12">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
+        <link refid="_row_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
+        <link refid="_cell_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp</label>
+        <link refid="_sink_2_sink_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp</label>
+        <link refid="_source_2_source_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
+        <link refid="_row_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="17">
+        <label>include/OpenSpaceToolkit/Core/Logger/Sink.hpp</label>
+        <link refid="_sink_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>src/OpenSpaceToolkit/Core/Type/String.cpp</label>
+        <link refid="_string_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Container/Object.hpp</label>
+        <link refid="_object_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Container/Array.hpp</label>
+        <link refid="_array_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="21">
+        <label>include/OpenSpaceToolkit/Core/Logger/Pump.hpp</label>
+        <link refid="_pump_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/OpenSpaceToolkit/Core/FileSystem/File.cpp</label>
+        <link refid="_file_8cpp"/>
+      </node>
+      <node id="8">
+        <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
+        <link refid="_table_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp</label>
+        <link refid="_directory_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/OpenSpaceToolkit/Core/FileSystem.hpp</label>
+        <link refid="_file_system_8hpp"/>
+      </node>
+      <node id="20">
+        <label>include/OpenSpaceToolkit/Core/Logger/Source.hpp</label>
+        <link refid="_source_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp</label>
+        <link refid="_console_8hpp"/>
+      </node>
+      <node id="18">
+        <label>include/OpenSpaceToolkit/Core/Logger.hpp</label>
+        <link refid="_logger_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp</label>
+        <link refid="_directory_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_array" prot="public">ostk::core::container::Array</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1container">ostk::core::container</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Container_Array__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Container_Array__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_zip_8hpp" kindref="compound">OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_index_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Index.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_size_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Size.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespaceostk" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="namespaceostk_1_1core" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19" refid="namespaceostk_1_1core_1_1container" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk_1_1core_1_1container" kindref="compound">container</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">ostk::core::type::Index</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">ostk::core::type::Size</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="32" refid="classostk_1_1core_1_1container_1_1_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;::const_iterator<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" kindref="member">ConstIterator</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;::iterator<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" kindref="member">Iterator</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::function&lt;bool(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;)&gt;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Predicate</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;&amp;<sp/>aVector);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref>&amp;<sp/>aSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>aValue);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>InputIterator&gt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InputIterator<sp/>aFirstIterator,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InputIterator<sp/>aLastIterator,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;::allocator_type&amp;<sp/>anAllocator<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;::allocator_type()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(std::initializer_list&lt;T&gt;<sp/>aList);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&amp;<sp/>anArray)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(<ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&amp;&amp;<sp/>anArray)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" kindref="member">Array</ref>(std::vector&lt;T&gt;&amp;&amp;<sp/>aVector);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1aa0f1dd01d56624d0478ff4de87230d99" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1aa0f1dd01d56624d0478ff4de87230d99" kindref="member">operator=</ref>(<ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;&amp;<sp/>anArray)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a17058cdfb4c04ed41b1b5cead35cf973" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>U&gt;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a9daa2d638e5bd693776f8bf6caae0802" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;U&gt;</ref>&amp;<sp/>anArray);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac30877a0e3663ad5158e2639cc32455f" kindref="member">isEmpty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ae035b7590373b178035f33733158877e" kindref="member">contains</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" kindref="member">isNear</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>aTolerance)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" kindref="member">isNear</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;)&gt;&amp;<sp/>aComparator)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" kindref="member">accessFirst</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" kindref="member">accessLast</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" kindref="member">getSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">Index</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" kindref="member">getIndexOf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ae0b2aff1ac2bda149f0f7fef323ca65b" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;const T*&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" kindref="member">accessWhere</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Array&lt;T&gt;::Predicate</ref>&amp;<sp/>aPredicate)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" kindref="member">getWhere</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Array&lt;T&gt;::Predicate</ref>&amp;<sp/>aPredicate)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" kindref="member">Array&lt;T&gt;::ConstIterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" kindref="member">find</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U&gt;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;U&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" kindref="member">map</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;U(T)&gt;<sp/>aMappingFunction)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1af242918858601d5af9d10fda5b527440" kindref="member">reduce</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;T(T,<sp/>T)&gt;&amp;<sp/>aReduceFunction)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>T&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" kindref="member">accessFirst</ref>();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>T&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" kindref="member">accessLast</ref>();</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" kindref="member">remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" kindref="member">remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a09ace899b075e2c71989015d89547712" kindref="member">mergeWith</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref>&amp;<sp/>anArray);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a05c7a33085e45003d6839d7d68a8f9c5" kindref="member">removeWhere</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Array&lt;T&gt;::Predicate</ref>&amp;<sp/>aPredicate);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" kindref="member">Array&lt;T&gt;::Iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" kindref="member">find</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anElement);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;T&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_array_1a5fea43d631c4e02fdbebb7854d4936cf" kindref="member">Empty</ref>();</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_array_8tpp" kindref="compound">OpenSpaceToolkit/Core/Container/Array.tpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp"/>
+  </compounddef>
+</doxygen>

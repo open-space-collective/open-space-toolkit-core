@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7f086f484fe00f44fd7e214faba6144c" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Error</compoundname>
+    <innerdir refid="dir_28074f9c2e1e90afa5ad650c40976e1d">include/OpenSpaceToolkit/Core/Error/Runtime</innerdir>
+    <innerfile refid="_exception_8hpp">Exception.hpp</innerfile>
+    <innerfile refid="_runtime_error_8hpp">RuntimeError.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Error/"/>
+  </compounddef>
+</doxygen>

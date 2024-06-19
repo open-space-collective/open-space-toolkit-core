@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1logger_1_1_sink" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::logger::Sink</compoundname>
+    <includes refid="_sink_8hpp" local="no">Sink.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1logger_1_1_sink_1a43b2165643b68330a8f77ed13e931940" prot="private" static="no" mutable="no">
+        <type>Unique&lt; <ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" kindref="compound">sink::Sink</ref> &gt;</type>
+        <definition>Unique&lt;sink::Sink&gt; ostk::core::logger::Sink::sinkUPtr_</definition>
+        <argsstring></argsstring>
+        <name>sinkUPtr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="40" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1ac22e9f0fb51b08f02bff8b59e32fc85e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::Sink::Sink</definition>
+        <argsstring>(const sink::Sink &amp;aSink)</argsstring>
+        <name>Sink</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" kindref="compound">sink::Sink</ref> &amp;</type>
+          <declname>aSink</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1aadf37265845ad9648afcb7d07f0756ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::Sink::Sink</definition>
+        <argsstring>(const Sink &amp;aSink)</argsstring>
+        <name>Sink</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1_sink" kindref="compound">Sink</ref> &amp;</type>
+          <declname>aSink</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1aba09f6fd4b47c6dbcf755834ea531c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::logger::Sink::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="31" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1a0ab42f184deb76938ae3ab97f690fbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::logger::Sink::disable</definition>
+        <argsstring>()</argsstring>
+        <name>disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::logger::Sink::addChannel</definition>
+        <argsstring>(const String &amp;aChannel)</argsstring>
+        <name>addChannel</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1ac11d2e63d7643cdbf8a24718ce2dd216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::logger::Sink::removeChannel</definition>
+        <argsstring>(const String &amp;aChannel)</argsstring>
+        <name>removeChannel</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="35" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1a363d47c4b76945b5aa75f0b21b7740c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1logger_1_1_sink" kindref="compound">Sink</ref></type>
+        <definition>static Sink ostk::core::logger::Sink::Console</definition>
+        <argsstring>(const Severity &amp;aSeverity)</argsstring>
+        <name>Console</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref> &amp;</type>
+          <declname>aSeverity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="37" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Log sink. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="24" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>addChannel</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1a363d47c4b76945b5aa75f0b21b7740c2" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>Console</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1a0ab42f184deb76938ae3ab97f690fbaf" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>disable</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1aba09f6fd4b47c6dbcf755834ea531c17" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>enable</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac11d2e63d7643cdbf8a24718ce2dd216" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>removeChannel</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac22e9f0fb51b08f02bff8b59e32fc85e" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>Sink</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1aadf37265845ad9648afcb7d07f0756ca" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>Sink</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_sink_1a43b2165643b68330a8f77ed13e931940" prot="private" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>sinkUPtr_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

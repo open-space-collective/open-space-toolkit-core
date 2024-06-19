@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1system_1_1_group" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::system::Group</compoundname>
+    <includes refid="_group_8hpp" local="no">Group.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_group_1a1aaf10de10d9b73f173fcabb39d5d725" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ostk::core::system::Group::gid_</definition>
+        <argsstring></argsstring>
+        <name>gid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="55" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_group_1ae648e24c652287b514030b68c1f2f6b5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ostk::core::system::Group::egid_</definition>
+        <argsstring></argsstring>
+        <name>egid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="56" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_group_1a9da2cf5b280d30804bec17a5732559a0" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::system::Group::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="57" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a558bd46e1fdea8ee67ecd6643fd16ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::system::Group::Group</definition>
+        <argsstring>(const uint &amp;aGID, const String &amp;aName)</argsstring>
+        <name>Group</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aGID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a0fea739e63a33287a75d34304c4e1aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::system::Group::Group</definition>
+        <argsstring>(const uint &amp;aGID, const uint &amp;aEGID, const String &amp;aName)</argsstring>
+        <name>Group</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aGID</declname>
+        </param>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aEGID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1aace16b5205f388ab389cd7ab14d2937b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::Group::operator==</definition>
+        <argsstring>(const Group &amp;aGroup) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> &amp;</type>
+          <declname>aGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a053e176cea38e57bce0f69f72baed19b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::Group::operator!=</definition>
+        <argsstring>(const Group &amp;aGroup) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> &amp;</type>
+          <declname>aGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a97f411cf741aca95c24120cea524f247" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::Group::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="36" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a07b7056475b78fb83f34c7787cc52b8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::core::system::Group::getGID</definition>
+        <argsstring>() const</argsstring>
+        <name>getGID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="38" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a4a3d6eaf4892cd330be48522e38b41f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::core::system::Group::getEGID</definition>
+        <argsstring>() const</argsstring>
+        <name>getEGID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1aa4d1f37a36f78a14f67559e04de6f78c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::core::system::Group::getSGID</definition>
+        <argsstring>() const</argsstring>
+        <name>getSGID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="42" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a53f316d03ebb745b3aecb3c535799829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::system::Group::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="44" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1system_1_1_group_1adae6b8468d9a0cf648a52c296c6db73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Group &amp;aGroup)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> &amp;</type>
+          <declname>aGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="34" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1aa12c2323a11d4352246757b4d0b97ab3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
+        <definition>static Group ostk::core::system::Group::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="46" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a9d38b7db49fb6b2e779bbba884c15b2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
+        <definition>static Group ostk::core::system::Group::Process</definition>
+        <argsstring>()</argsstring>
+        <name>Process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="48" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1ae94d4f0fd06b120b007e880ec60c944b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
+        <definition>static Group ostk::core::system::Group::GID</definition>
+        <argsstring>(const uint &amp;aGID)</argsstring>
+        <name>GID</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aGID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a694c3ccaf1a870ab3c7e81aac8b776c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
+        <definition>static Group ostk::core::system::Group::Name</definition>
+        <argsstring>(const String &amp;aName)</argsstring>
+        <name>Name</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="52" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>                        POSIX compliant
+</verbatim></para>
+<para><ulink url="https://en.wikipedia.org/wiki/Group_identifier">https://en.wikipedia.org/wiki/Group_identifier</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="23" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1ae648e24c652287b514030b68c1f2f6b5" prot="private" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>egid_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a4a3d6eaf4892cd330be48522e38b41f1" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>getEGID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a07b7056475b78fb83f34c7787cc52b8c" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>getGID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a53f316d03ebb745b3aecb3c535799829" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>getName</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1aa4d1f37a36f78a14f67559e04de6f78c" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>getSGID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1ae94d4f0fd06b120b007e880ec60c944b" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>GID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a1aaf10de10d9b73f173fcabb39d5d725" prot="private" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>gid_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a558bd46e1fdea8ee67ecd6643fd16ec4" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>Group</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a0fea739e63a33287a75d34304c4e1aa4" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>Group</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a97f411cf741aca95c24120cea524f247" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a694c3ccaf1a870ab3c7e81aac8b776c6" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>Name</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a9da2cf5b280d30804bec17a5732559a0" prot="private" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>name_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a053e176cea38e57bce0f69f72baed19b" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1adae6b8468d9a0cf648a52c296c6db73a" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1aace16b5205f388ab389cd7ab14d2937b" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1a9d38b7db49fb6b2e779bbba884c15b2c" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>Process</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_group_1aa12c2323a11d4352246757b4d0b97ab3" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>Undefined</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

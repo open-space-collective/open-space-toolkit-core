@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1container" kind="namespace" language="C++">
+    <compoundname>ostk::core::container</compoundname>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_array" prot="public">ostk::core::container::Array</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_dictionary" prot="public">ostk::core::container::Dictionary</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_graph" prot="public">ostk::core::container::Graph</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_object" prot="public">ostk::core::container::Object</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_queue" prot="public">ostk::core::container::Queue</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_stack" prot="public">ostk::core::container::Stack</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_table" prot="public">ostk::core::container::Table</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_tree" prot="public">ostk::core::container::Tree</innerclass>
+    <innerclass refid="structostk_1_1core_1_1container_1_1_triple" prot="public">ostk::core::container::Triple</innerclass>
+    <innernamespace refid="namespaceostk_1_1core_1_1container_1_1iterator">ostk::core::container::iterator</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1container_1_1table">ostk::core::container::table</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1afdfb0dc39c01f199950550531140a918" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::list&lt; T &gt;</type>
+        <definition>using ostk::core::container::List = typedef std::list&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>List</name>
+        <briefdescription>
+<para>List container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/List.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/List.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Key</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Compare</type>
+            <defval>std::less&lt;Key&gt;</defval>
+          </param>
+          <param>
+            <type>class Allocator</type>
+            <defval>std::allocator&lt;std::pair&lt;const Key, T&gt;&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::map&lt; Key, T, Compare, Allocator &gt;</type>
+        <definition>using ostk::core::container::Map = typedef std::map&lt;Key, T, Compare, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>Map</name>
+        <briefdescription>
+<para>Map container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Map.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Map.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Key</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Hash</type>
+            <defval>std::hash&lt;Key&gt;</defval>
+          </param>
+          <param>
+            <type>class KeyEqual</type>
+            <defval>std::equal_to&lt;Key&gt;</defval>
+          </param>
+          <param>
+            <type>class Allocator</type>
+            <defval>std::allocator&lt;std::pair&lt;Key, T&gt;&gt;</defval>
+          </param>
+          <param>
+            <type>class ValueTypeContainer</type>
+            <defval>std::deque&lt;std::pair&lt;Key, T&gt;, Allocator&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>tsl::ordered_map&lt; Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer &gt;</type>
+        <definition>using ostk::core::container::OrderedMap = typedef tsl::ordered_map&lt;Key, T, Hash, KeyEqual, Allocator, ValueTypeContainer&gt;</definition>
+        <argsstring></argsstring>
+        <name>OrderedMap</name>
+        <briefdescription>
+<para>Ordered map container. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                        The ordered-map library provides a hash map and a hash set which preserve the order of
+                        insertion in a way similar to Python&apos;s OrderedDict. When iterating over the map, the
+                        values will be returned in the same order as they were inserted.
+</verbatim></para>
+<para><ulink url="https://github.com/Tessil/ordered-map">https://github.com/Tessil/ordered-map</ulink> <simplesect kind="note"><para>This has to be eventually fully wrapped (to remove user dependency on tsl/ordered_map) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" line="40" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a781aa933b420f5cf5bcb1a1d26c5815a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class U</type>
+          </param>
+        </templateparamlist>
+        <type>std::pair&lt; T, U &gt;</type>
+        <definition>using ostk::core::container::Pair = typedef std::pair&lt;T, U&gt;</definition>
+        <argsstring></argsstring>
+        <name>Pair</name>
+        <briefdescription>
+<para>Pair container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Pair.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Pair.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1af6dbaf299d8b2ced8a150b09c3cade2a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::tuple&lt; Args... &gt;</type>
+        <definition>using ostk::core::container::Tuple = typedef std::tuple&lt;Args...&gt;</definition>
+        <argsstring></argsstring>
+        <name>Tuple</name>
+        <briefdescription>
+<para>Tuple container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a544aebdb3d5392abe3d9984db9560d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structostk_1_1core_1_1container_1_1_triple" kindref="compound">Triple</ref>&lt; T, U, V &gt;</type>
+        <definition>Triple&lt;T, U, V&gt; ostk::core::container::make_triple</definition>
+        <argsstring>(const T &amp;aFirstElement, const U &amp;aSecondElement, const V &amp;aThirdElement)</argsstring>
+        <name>make_triple</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>aFirstElement</declname>
+        </param>
+        <param>
+          <type>const U &amp;</type>
+          <declname>aSecondElement</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>aThirdElement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="36" column="8" declfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" declline="36" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1adc15b58ecbd48d11cc0febf28fb28dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ostk::core::container::Unpack</definition>
+        <argsstring>(Args &amp;... args)</argsstring>
+        <name>Unpack</name>
+        <param>
+          <type>Args &amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="30" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a827f89ac319a6f99ccbb2f8d94472bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::container::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Dictionary &amp;aDictionary)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref> &amp;</type>
+          <declname>aDictionary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Dictionary<sp/>dictionary<sp/>=<sp/>{{<sp/>&quot;Key<sp/>A&quot;:<sp/>Object::Integer(123)<sp/>}}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>dictionary<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aDictionary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An dictionary </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" line="283" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="283" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1ac506c478a21717562396abb41d83172e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::container::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Object &amp;anObject)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="398" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="398" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a658f7ade754eaa9ab0e310c2e62a5914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
+        <definition>filesystem::File&amp; ostk::core::container::operator&lt;&lt;</definition>
+        <argsstring>(filesystem::File &amp;aFile, const Object &amp;anObject)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="459" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="459" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a04582f99eb258ed9c53234d941586a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
+        <definition>filesystem::File&amp; ostk::core::container::operator&gt;&gt;</definition>
+        <argsstring>(filesystem::File &amp;aFile, Object &amp;anObject)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="468" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="468" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a8238aac5bd4baedb41a4fc81ce1c74a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::container::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Table &amp;aTable)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>Table(...)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Container/Table.cpp" line="106" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="106" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

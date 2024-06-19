@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('_runtime_error_8hpp_source.html',''); 
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1error_1_1_runtime_error.html#a9affbbaa722f639547f9c4d1c9f0a421">   30</a></span>&#160;    <a class="code" href="classostk_1_1core_1_1error_1_1_runtime_error.html#a9affbbaa722f639547f9c4d1c9f0a421">RuntimeError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* aFormat, Args... anArgumentList)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        : <a class="code" href="classostk_1_1core_1_1error_1_1_exception.html">Exception</a>(<a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>::Empty()),</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          message_(<a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>::Format(aFormat, anArgumentList...)),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          stackTrace_(boost::stacktrace::to_string(boost::stacktrace::stacktrace())),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          stackTrace_(<a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>::SanitizeUTF8(boost::stacktrace::to_string(boost::stacktrace::stacktrace()))),</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          what_(stackTrace_ + message_)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>

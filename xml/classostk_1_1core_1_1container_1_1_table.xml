@@ -1,0 +1,784 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1_table" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::Table</compoundname>
+    <includes refid="_table_8hpp" local="no">Table.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Format</name>
+        <enumvalue id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
+          <name>Undefined</name>
+          <briefdescription>
+<para>Undefined format. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd" prot="public">
+          <name>CSV</name>
+          <briefdescription>
+<para>Comma-Separated Values format. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="37" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" prot="public" static="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &gt;::<ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">ConstIterator</ref></type>
+        <definition>typedef Array&lt;Row&gt;::ConstIterator ostk::core::container::Table::ConstIterator</definition>
+        <argsstring></argsstring>
+        <name>ConstIterator</name>
+        <briefdescription>
+<para><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> constant iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="46" column="35" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1_table_1a10673e365cf3c6caa5de855a22f2721f" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt;</type>
+        <definition>Array&lt;String&gt; ostk::core::container::Table::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="260" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1_table_1aeb60c47591a4adfbd5f67383e317d7e4" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &gt;</type>
+        <definition>Array&lt;Row&gt; ostk::core::container::Table::rows_</definition>
+        <argsstring></argsstring>
+        <name>rows_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="261" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a5f490be7e6a3ff4577b71a45e97fbb15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Table::Table</definition>
+        <argsstring>(const Array&lt; String &gt; &amp;aHeader, const Array&lt; Row &gt; &amp;aRowArray)</argsstring>
+        <name>Table</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt; &amp;</type>
+          <declname>aHeader</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &gt; &amp;</type>
+          <declname>aRowArray</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aHeader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aRowArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table row array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="58" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="17" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a912af250085ce84d721b7b0fd2d26bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Table::Table</definition>
+        <argsstring>(const Array&lt; String &gt; &amp;aHeader)</argsstring>
+        <name>Table</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt; &amp;</type>
+          <declname>aHeader</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>}<sp/>}<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aHeader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="68" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a491c07452228578b7428fe63d4586b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Table::Table</definition>
+        <argsstring>(const Table &amp;aTable)</argsstring>
+        <name>Table</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="74" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1abfc41b294015775238d994fd6682665d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+        <definition>Table &amp; ostk::core::container::Table::operator=</definition>
+        <argsstring>(const Table &amp;aTable)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to table </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="81" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="50" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a646d26dfecca1687a4b2cc913fcf2518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Table::operator==</definition>
+        <argsstring>(const Table &amp;aTable) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table(...)<sp/>==<sp/>Table(...)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if tables are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="92" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a1a5bd2dc79dafbc66ce722edc803bd6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Table::operator!=</definition>
+        <argsstring>(const Table &amp;aTable) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table(...)<sp/>!=<sp/>Table(1.0,<sp/>0.0,<sp/>0.0,<sp/>0.0)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if tables are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="103" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a2dd9db4ca561ee06b50ff60b4610d680" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &amp;</type>
+        <definition>const Row &amp; ostk::core::container::Table::operator[]</definition>
+        <argsstring>(const Index &amp;aRowIndex) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const Index &amp;</type>
+          <declname>aRowIndex</declname>
+        </param>
+        <briefdescription>
+<para>Subscript operator (row accessor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>const<sp/>Row&amp;<sp/>row<sp/>=<sp/>table[0]<sp/>;<sp/>//<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRowIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to row </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="115" column="15" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="76" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ae3278582767e28931cc16e33480307e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Cell &amp;</type>
+        <definition>const Cell &amp; ostk::core::container::Table::operator()</definition>
+        <argsstring>(const Index &amp;aRowIndex, const Index &amp;aColumnIndex) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const Index &amp;</type>
+          <declname>aRowIndex</declname>
+        </param>
+        <param>
+          <type>const Index &amp;</type>
+          <declname>aColumnIndex</declname>
+        </param>
+        <briefdescription>
+<para>Function call operator (cell accessor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>const<sp/>Cell&amp;<sp/>cell<sp/>=<sp/>table(0,<sp/>0)<sp/>;<sp/>//<sp/>Cell::Integer(123)</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRowIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to cell </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="128" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ad09697d6111b4d7edd854c3c78d2f6b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Cell &amp;</type>
+        <definition>const Cell &amp; ostk::core::container::Table::operator()</definition>
+        <argsstring>(const Index &amp;aRowIndex, const String &amp;aColumnName) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const Index &amp;</type>
+          <declname>aRowIndex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aColumnName</declname>
+        </param>
+        <briefdescription>
+<para>Function call operator (cell accessor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>const<sp/>Cell&amp;<sp/>cell<sp/>=<sp/>table(0,<sp/>&quot;Column<sp/>A&quot;)<sp/>;<sp/>//<sp/>Cell::Integer(123)</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRowIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to cell </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="141" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ae02565642851c77787e76c96289c9e96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Table::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+<para>Check if table is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table::Empty().isEmpty()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if table is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="163" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a8440df1ba39186a9e9987fd90ad2f38b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Table::hasColumnWithName</definition>
+        <argsstring>(const String &amp;aColumnName) const</argsstring>
+        <name>hasColumnWithName</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aColumnName</declname>
+        </param>
+        <briefdescription>
+<para>Returns true is table has column with a given name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True is table has column with a given name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="170" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="182" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a5240e84312f8c89c4ee659889df03ff1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size ostk::core::container::Table::getRowCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getRowCount</name>
+        <briefdescription>
+<para>Get number of rows. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>table.getRowCount()<sp/>;<sp/>//<sp/>1</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Number of rows </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="181" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a58af5f24339a5db75ac51f50b5044140" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size ostk::core::container::Table::getColumnCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getColumnCount</name>
+        <briefdescription>
+<para>Get number of columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>table.getColumnCount()<sp/>;<sp/>//<sp/>2</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Number of columns </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="192" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a561463d618504ac0f354ad9b4da54897" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Index</type>
+        <definition>Index ostk::core::container::Table::getIndexOfColumnWithName</definition>
+        <argsstring>(const String &amp;aColumnName) const</argsstring>
+        <name>getIndexOfColumnWithName</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aColumnName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the index of column with a given name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of column with a given name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="199" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="202" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a676a0136e949f158ca4c4bbf732e980a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Table::addRow</definition>
+        <argsstring>(const Row &amp;aRow)</argsstring>
+        <name>addRow</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &amp;</type>
+          <declname>aRow</declname>
+        </param>
+        <briefdescription>
+<para>Add row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>table.addRow({<sp/>Cell::Integer(456),<sp/>Cell::Real(456.789)<sp/>})<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="210" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="217" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1abc89b9c03ad344cf899b03c30a733ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Table::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>{<sp/>{<sp/>&quot;Column<sp/>A&quot;,<sp/>&quot;Column<sp/>B&quot;<sp/>},<sp/>{<sp/>{<sp/>Cell::Integer(123),<sp/>Cell::Real(123.456)<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>;<sp/>table.clear()<sp/>;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="219" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a03e9e24ad1bc2aaafc57e02a6f10bb06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">Table::ConstIterator</ref></type>
+        <definition>Table::ConstIterator ostk::core::container::Table::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Get begin constant interator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Begin constant interator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="225" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a0598162989de28b03becb213eefc519d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">Table::ConstIterator</ref></type>
+        <definition>Table::ConstIterator ostk::core::container::Table::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Get end constant interator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>End constant interator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="231" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1container_1_1_table_1afaece709b2f143e4011941ae67b7adba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Table &amp;aTable)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
+          <declname>aTable</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>Table(...)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="153" column="12" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="106" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1aa02b6a3a484fe5b866b707d927b7d178" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref></type>
+        <definition>Table ostk::core::container::Table::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+<para>Constructs an empty table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>Table::Empty()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Empty table </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="241" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a1c2863bb986092a6f23509a5f84f908a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref></type>
+        <definition>Table ostk::core::container::Table::Load</definition>
+        <argsstring>(const File &amp;aFile, const Table::Format &amp;aFormat=Table::Format::Undefined, bool hasHeader=true)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" kindref="member">Table::Format</ref> &amp;</type>
+          <declname>aFormat</declname>
+          <defval><ref refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Table::Format::Undefined</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasHeader</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a table from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Table<sp/>table<sp/>=<sp/>Table::Load(File::Path(Path::Parse(&quot;/path/to/file.csv&quot;)),<sp/>Table::Format::CSV,</highlight></codeline>
+<codeline><highlight class="normal">true)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aFormat A table format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hasHeader True if file has a header </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="255" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="249" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a82c7209ade55914befdb5efe71ecc1e3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref></type>
+        <definition>Table ostk::core::container::Table::LoadCsv</definition>
+        <argsstring>(const File &amp;aFile, bool hasHeader=true)</argsstring>
+        <name>LoadCsv</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasHeader</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="263" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="290" bodyend="381"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> container. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="32" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="31" bodyend="264"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a676a0136e949f158ca4c4bbf732e980a" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>addRow</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a03e9e24ad1bc2aaafc57e02a6f10bb06" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>begin</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1abc89b9c03ad344cf899b03c30a733ac6" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>clear</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>ConstIterator</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1aa02b6a3a484fe5b866b707d927b7d178" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Empty</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a0598162989de28b03becb213eefc519d" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>end</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Format</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a58af5f24339a5db75ac51f50b5044140" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>getColumnCount</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a561463d618504ac0f354ad9b4da54897" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>getIndexOfColumnWithName</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a5240e84312f8c89c4ee659889df03ff1" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>getRowCount</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a8440df1ba39186a9e9987fd90ad2f38b" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>hasColumnWithName</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a10673e365cf3c6caa5de855a22f2721f" prot="private" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>header_</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1ae02565642851c77787e76c96289c9e96" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>isEmpty</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a1c2863bb986092a6f23509a5f84f908a" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Load</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a82c7209ade55914befdb5efe71ecc1e3" prot="private" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>LoadCsv</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a1a5bd2dc79dafbc66ce722edc803bd6d" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1ae3278582767e28931cc16e33480307e7" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator()</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1ad09697d6111b4d7edd854c3c78d2f6b5" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator()</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1afaece709b2f143e4011941ae67b7adba" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1abfc41b294015775238d994fd6682665d" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a646d26dfecca1687a4b2cc913fcf2518" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a2dd9db4ca561ee06b50ff60b4610d680" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator[]</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1aeb60c47591a4adfbd5f67383e317d7e4" prot="private" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>rows_</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a5f490be7e6a3ff4577b71a45e97fbb15" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Table</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a912af250085ce84d721b7b0fd2d26bd6" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Table</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a491c07452228578b7428fe63d4586b55" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

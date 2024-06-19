@@ -1,0 +1,924 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1filesystem_1_1_file" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::filesystem::File</compoundname>
+    <includes refid="_file_8hpp" local="no">File.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OpenMode</name>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
+          <name>Undefined</name>
+          <briefdescription>
+<para>Undefined mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4a7a1a5f3e79fdc91edf2f5ead9d66abb4" prot="public">
+          <name>Read</name>
+          <briefdescription>
+<para>Open for reading. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4a1129c0e4d43f2d121652a7302712cff6" prot="public">
+          <name>Write</name>
+          <briefdescription>
+<para>Open for writing. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4a6ce976e8f061b2b5cfe4d0c50c3405dd" prot="public">
+          <name>Binary</name>
+          <briefdescription>
+<para>Open in binary mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4a3ac4692f3935a49a0b243eecf529faa9" prot="public">
+          <name>Append</name>
+          <briefdescription>
+<para>Seek to the end of stream before each write. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4a8d04b2d09dcc744cf134542097642db5" prot="public">
+          <name>AtEnd</name>
+          <briefdescription>
+<para>Seek to the end of stream immediately after open. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4aa8156810bfee2bd2b44765b9e91db3bd" prot="public">
+          <name>Truncate</name>
+          <briefdescription>
+<para>Discard the contents of the stream when opening. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> open mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="35" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="34" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_file_1a462b6d232e45bc44a78f119de606b56b" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
+        <definition>filesystem::Path ostk::core::filesystem::File::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="350" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_file_1a4ad0e5d1290a1455c6eac8ec3dda551d" prot="private" static="no" mutable="no">
+        <type>Unique&lt; std::fstream &gt;</type>
+        <definition>Unique&lt;std::fstream&gt; ostk::core::filesystem::File::fileStreamUPtr_</definition>
+        <argsstring></argsstring>
+        <name>fileStreamUPtr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="352" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a433d3d7747d23181a0e2ca0bdfb57439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::File::File</definition>
+        <argsstring>(const File &amp;aFile)</argsstring>
+        <name>File</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="51" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ab52cf333b06f9c89565eada0fe5beb91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+        <definition>File &amp; ostk::core::filesystem::File::operator=</definition>
+        <argsstring>(const File &amp;aFile)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="58" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ac9c48c3dcf4060c07fb44e68200048ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::File::~File</definition>
+        <argsstring>()</argsstring>
+        <name>~File</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="62" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1abc152f2c8eb92dcdba974bd506071cb1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::File::operator==</definition>
+        <argsstring>(const File &amp;aFile) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>firstFile<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">File<sp/>secondFile<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstFile<sp/>==<sp/>secondFile<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if files are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="75" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="47" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ad1dcf8c31ddb76d948ff3b64a3fe46d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::File::operator!=</definition>
+        <argsstring>(const File &amp;aFile) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>firstFile<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/first/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">File<sp/>secondFile<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/second/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstFile<sp/>!=<sp/>secondFile<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if files are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="88" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a4936000a9b87ec0611c1ae036a555ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+        <definition>File&amp; ostk::core::filesystem::File::operator&lt;&lt;</definition>
+        <argsstring>(const T &amp;anObject)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+<para>Stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Write object to file.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An input object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="97" column="5" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="97" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1aa4a85018536f7e3fa948848215e5d461" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::File::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+<para>Check if file is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if file is defined </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="133" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a34b7fed969550f1eab7fdc045bbddba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::File::exists</definition>
+        <argsstring>() const</argsstring>
+        <name>exists</name>
+        <briefdescription>
+<para>Check if file exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/nonexistent/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if file exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="144" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="84" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a686db52120394678d72e4747e50ad1b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::File::isOpen</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpen</name>
+        <briefdescription>
+<para>Check if file is open. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.isOpen()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">file.open()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.isOpen()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if file is open </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="157" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="103" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a683410b6b7ac9d51ad470d8064a1be3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::File::getName</definition>
+        <argsstring>(const bool withExtension=true) const</argsstring>
+        <name>getName</name>
+        <param>
+          <type>const bool</type>
+          <declname>withExtension</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Get file name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.getName()<sp/>;<sp/>//<sp/>file.txt</highlight></codeline>
+<codeline><highlight class="normal">file.getName(false)<sp/>;<sp/>//<sp/>file</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>withExtension If true, add extension to filename </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="170" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="113" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a772276701aa831d0dc8073ea97bdf8b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::File::getExtension</definition>
+        <argsstring>() const</argsstring>
+        <name>getExtension</name>
+        <briefdescription>
+<para>Get file extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.getExtension()<sp/>;<sp/>//<sp/>txt</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> extension </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="181" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="137" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a1455992a788ca7cc3db6f68f30c7823e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
+        <definition>filesystem::Path ostk::core::filesystem::File::getPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+<para>Get file path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>file.getPath()<sp/>;<sp/>//<sp/>/path/to/file.txt</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="192" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="163" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a3bdaaae230d9f5045a943a0a23366391" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref></type>
+        <definition>filesystem::PermissionSet ostk::core::filesystem::File::getPermissions</definition>
+        <argsstring>() const</argsstring>
+        <name>getPermissions</name>
+        <briefdescription>
+<para>Get file permissions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Permissions<sp/>permissions<sp/>=<sp/>file.getPermissions()<sp/>;<sp/>//<sp/>rw-</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="203" column="31" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="173" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a527f2b23fd20550f7e96c599091346a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">filesystem::Directory</ref></type>
+        <definition>filesystem::Directory ostk::core::filesystem::File::getParentDirectory</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentDirectory</name>
+        <briefdescription>
+<para>Get file&apos;s parent directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>file.getParentDirectory()<sp/>;<sp/>//<sp/>/path/to</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref>&apos;s parent directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="214" column="27" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="285" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a45fd549b56c7180175f8f3d912001c57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::File::getContents</definition>
+        <argsstring>() const</argsstring>
+        <name>getContents</name>
+        <briefdescription>
+<para>Get file contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> contents </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="220" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="314" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a8890110d866265dd78283fef424dc66d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::File::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+<para>Get serialized file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File::Path(Path::Parse(&quot;/path/to/file&quot;)).toString()<sp/>;<sp/>//<sp/>&quot;/path/to/file&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Serialized file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="230" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="346" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a220d5eb2cf4ddebb420bc8a7c6e49c78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::open</definition>
+        <argsstring>(const File::OpenMode &amp;anOpenMode)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4" kindref="member">File::OpenMode</ref> &amp;</type>
+          <declname>anOpenMode</declname>
+        </param>
+        <briefdescription>
+<para>Open file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOpenMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file open mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="236" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="356" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a8929d8fe19ace2368d7f1375924fea38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Close file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="240" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="411" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1aaeee4b254e87b8fa4c53abe7d7580ace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::fstream &amp;</type>
+        <definition>std::fstream &amp; ostk::core::filesystem::File::accessStream</definition>
+        <argsstring>()</argsstring>
+        <name>accessStream</name>
+        <briefdescription>
+<para>Access file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reference to file stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="246" column="18" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="431" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ae9337a583c49322805c79123c1b8d516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::renameTo</definition>
+        <argsstring>(const String &amp;aName)</argsstring>
+        <name>renameTo</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+<para>Rename file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.renameTo(&quot;cat.jpg&quot;)<sp/>;<sp/>//<sp/>/path/to/cat.jpg</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="257" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a2f6b28469cd3291dfbd25865a6bbc059" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
+        <definition>File ostk::core::filesystem::File::copyToDirectory</definition>
+        <argsstring>(const filesystem::Directory &amp;aDestination, const String &amp;aNewFileName=&quot;&quot;) const</argsstring>
+        <name>copyToDirectory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">filesystem::Directory</ref> &amp;</type>
+          <declname>aDestination</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aNewFileName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Copy file to directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>original<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>destination<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/new/path/to&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">File<sp/>copy<sp/>=<sp/>original.copyToDirectory(destination)<sp/>;<sp/>//<sp/>/new/path/to/file.txt</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDestination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination directory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aNewFileName A copied file name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Copied file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="271" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a773b37bb669c077accf2ec6be2e7460b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::moveToDirectory</definition>
+        <argsstring>(const filesystem::Directory &amp;aDestination)</argsstring>
+        <name>moveToDirectory</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">filesystem::Directory</ref> &amp;</type>
+          <declname>aDestination</declname>
+        </param>
+        <briefdescription>
+<para>Move file to directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Directory<sp/>destination<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/new/path/to&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.moveToDirectory(destination)<sp/>;<sp/>//<sp/>/new/path/to/file.txt</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDestination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="283" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="457" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a94881942705f6308cfcb7ec94ef07dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::create</definition>
+        <argsstring>(const filesystem::PermissionSet &amp;anOwnerPermissionSet=filesystem::PermissionSet::RW(), const filesystem::PermissionSet &amp;aGroupPermissionSet=filesystem::PermissionSet::R(), const filesystem::PermissionSet &amp;anOtherPermissionSet=filesystem::PermissionSet::R())</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>anOwnerPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a48329618a88c8a8ce590f2d04a6c2e43" kindref="member">filesystem::PermissionSet::RW</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>aGroupPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1afdfc39a4f6da92aeb35bdc8f0dc45714" kindref="member">filesystem::PermissionSet::R</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref> &amp;</type>
+          <declname>anOtherPermissionSet</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1afdfc39a4f6da92aeb35bdc8f0dc45714" kindref="member">filesystem::PermissionSet::R</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Create empty file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">file.create()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>anOwnerPermissionSet An owner permission set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aGroupPermissionSet A group permission set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>anOtherPermissionSet An other permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="298" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="483" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear file contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">file.clear()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="313" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a3819bab5e64c88ed2f5e054092339a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::filesystem::File::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+<para>Delete file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">file.remove()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.exists()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="324" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="533" bodyend="548"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1filesystem_1_1_file_1a82ce9f27653427d53ecb90de978f4f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const File &amp;aFile)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>file<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="122" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="62" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a05d4dda9aed0fb1e7a018f70f76fe18c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
+        <definition>File ostk::core::filesystem::File::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+<para>Constructs an undefined file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Undefined file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="335" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="550" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ac3621e474fdffccac31fb4bb6ed91ef6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
+        <definition>File ostk::core::filesystem::File::Path</definition>
+        <argsstring>(const filesystem::Path &amp;aPath)</argsstring>
+        <name>Path</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a file from a given path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> to file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="347" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="555" bodyend="563"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a51fbd641ab4d43b2098c939732c4af50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::File::File</definition>
+        <argsstring>(const filesystem::Path &amp;aPath)</argsstring>
+        <name>File</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="354" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="565" bodyend="569"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Computer resource for recording data discretely in a computer storage device. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://en.wikipedia.org/wiki/Computer_file">https://en.wikipedia.org/wiki/Computer_file</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="30" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="29" bodyend="355"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1aaeee4b254e87b8fa4c53abe7d7580ace" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>accessStream</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>clear</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a8929d8fe19ace2368d7f1375924fea38" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>close</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a2f6b28469cd3291dfbd25865a6bbc059" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>copyToDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a94881942705f6308cfcb7ec94ef07dba" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>create</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a34b7fed969550f1eab7fdc045bbddba9" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>exists</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a433d3d7747d23181a0e2ca0bdfb57439" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>File</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a51fbd641ab4d43b2098c939732c4af50" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>File</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a4ad0e5d1290a1455c6eac8ec3dda551d" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>fileStreamUPtr_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a45fd549b56c7180175f8f3d912001c57" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getContents</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a772276701aa831d0dc8073ea97bdf8b0" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getExtension</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a683410b6b7ac9d51ad470d8064a1be3a" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getName</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a527f2b23fd20550f7e96c599091346a3" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getParentDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a1455992a788ca7cc3db6f68f30c7823e" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getPath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3bdaaae230d9f5045a943a0a23366391" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getPermissions</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1aa4a85018536f7e3fa948848215e5d461" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a686db52120394678d72e4747e50ad1b8" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>isOpen</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a773b37bb669c077accf2ec6be2e7460b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>moveToDirectory</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a220d5eb2cf4ddebb420bc8a7c6e49c78" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>open</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a43ab99c1b1ad12b612bad7d50f27c8f4" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>OpenMode</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ad1dcf8c31ddb76d948ff3b64a3fe46d2" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a4936000a9b87ec0611c1ae036a555ed7" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a82ce9f27653427d53ecb90de978f4f68" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ab52cf333b06f9c89565eada0fe5beb91" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1abc152f2c8eb92dcdba974bd506071cb1" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ac3621e474fdffccac31fb4bb6ed91ef6" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>Path</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a462b6d232e45bc44a78f119de606b56b" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>path_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3819bab5e64c88ed2f5e054092339a47" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>remove</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ae9337a583c49322805c79123c1b8d516" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>renameTo</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a8890110d866265dd78283fef424dc66d" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>toString</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a05d4dda9aed0fb1e7a018f70f76fe18c" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ac9c48c3dcf4060c07fb44e68200048ad" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>~File</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

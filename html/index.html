@@ -99,7 +99,7 @@ Docker Images</h3>
 <h4><a class="anchor" id="autotoc_md4"></a>
 iPython</h4>
 <p>The following command will start an <a href="https://ipython.org/">iPython</a> shell within a container where the OSTk components are already installed:</p>
-<div class="fragment"><div class="line">docker run -it openspacecollective/open-space-toolkit-core-python</div>
+<div class="fragment"><div class="line">docker run -it openspacecollective/open-space-toolkit-core-development python3.11 -m IPython</div>
 </div><!-- fragment --><p>Once the shell is up and running, playing with it is easy:</p>
 <div class="fragment"><div class="line">from <a class="code" href="namespaceostk_1_1core_1_1filesystem.html">ostk.core.filesystem</a> <span class="keyword">import</span> Directory <span class="comment"># Directory class</span></div>
 <div class="line"> </div>
@@ -229,7 +229,7 @@ Dependencies</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Version </th><th class="markdownTableHeadNone">License </th><th class="markdownTableHeadNone">Link  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Pybind11 </td><td class="markdownTableBodyNone"><code>2.10.1</code> </td><td class="markdownTableBodyNone">BSD-3-Clause </td><td class="markdownTableBodyNone"><a href="https://github.com/pybind/pybind11">github.com/pybind/pybind11</a>  </td></tr>
+<td class="markdownTableBodyNone">Pybind11 </td><td class="markdownTableBodyNone"><code>2.12.0</code> </td><td class="markdownTableBodyNone">BSD-3-Clause </td><td class="markdownTableBodyNone"><a href="https://github.com/pybind/pybind11">github.com/pybind/pybind11</a>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">RapidJSON </td><td class="markdownTableBodyNone"><code>master</code> </td><td class="markdownTableBodyNone">MIT </td><td class="markdownTableBodyNone"><a href="http://rapidjson.org">rapidjson.org</a>  </td></tr>
 <tr class="markdownTableRowOdd">

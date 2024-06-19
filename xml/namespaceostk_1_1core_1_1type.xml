@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1type" kind="namespace" language="C++">
+    <compoundname>ostk::core::type</compoundname>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_byte_array" prot="public">ostk::core::type::ByteArray</innerclass>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_has_to_string" prot="public">ostk::core::type::HasToString</innerclass>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_integer" prot="public">ostk::core::type::Integer</innerclass>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_real" prot="public">ostk::core::type::Real</innerclass>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_string" prot="public">ostk::core::type::String</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>Sign</name>
+        <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
+          <name>Undefined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147" prot="public">
+          <name>Positive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b" prot="public">
+          <name>Negative</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Sign enum. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Sign.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Sign.hpp" bodystart="17" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>using ostk::core::type::Byte = typedef uint8_t</definition>
+        <argsstring></argsstring>
+        <name>Byte</name>
+        <briefdescription>
+<para>A unit of digital information that consists of eight bits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Byte.hpp" line="17" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Byte.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t ostk::core::type::Index</definition>
+        <argsstring></argsstring>
+        <name>Index</name>
+        <briefdescription>
+<para>Index can store the maximum size of a theoretically possible object of any type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Index.hpp" line="17" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Index.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" prot="public" static="no">
+        <type>int8_t</type>
+        <definition>typedef int8_t ostk::core::type::Int8</definition>
+        <argsstring></argsstring>
+        <name>Int8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="20" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" prot="public" static="no">
+        <type>int16_t</type>
+        <definition>typedef int16_t ostk::core::type::Int16</definition>
+        <argsstring></argsstring>
+        <name>Int16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="21" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t ostk::core::type::Int32</definition>
+        <argsstring></argsstring>
+        <name>Int32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="22" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int64_t ostk::core::type::Int64</definition>
+        <argsstring></argsstring>
+        <name>Int64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="23" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t ostk::core::type::Uint8</definition>
+        <argsstring></argsstring>
+        <name>Uint8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="25" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t ostk::core::type::Uint16</definition>
+        <argsstring></argsstring>
+        <name>Uint16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="26" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t ostk::core::type::Uint32</definition>
+        <argsstring></argsstring>
+        <name>Uint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="27" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" prot="public" static="no">
+        <type>uint64_t</type>
+        <definition>typedef uint64_t ostk::core::type::Uint64</definition>
+        <argsstring></argsstring>
+        <name>Uint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="28" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a14fe3367e611fd4d9fca9e9fcfe92848" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>using ostk::core::type::Shared = typedef std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Shared</name>
+        <briefdescription>
+<para>Retains shared ownership of an object through a pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Shared.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Shared.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t ostk::core::type::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+<para>Size can store the maximum size of a theoretically possible object of any type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Size.hpp" line="17" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Size.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::unique_ptr&lt; T &gt;</type>
+        <definition>using ostk::core::type::Unique = typedef std::unique_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Unique</name>
+        <briefdescription>
+<para>Owns and manages another object through a pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Unique.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Unique.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1af3e53775781cfb35ee4bd22d6bf784a1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>std::weak_ptr&lt; T &gt;</type>
+        <definition>using ostk::core::type::Weak = typedef std::weak_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Weak</name>
+        <briefdescription>
+<para>Holds a non-owning reference to an object that is managed by Shared. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Weak.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Weak.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1ad18c81a5ed56f58ff9df98288c8c343a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="classostk_1_1core_1_1type_1_1_has_to_string" kindref="compound">HasToString</ref>&lt; T &gt;::value, std::string &gt;::type</type>
+        <definition>std::enable_if&lt;HasToString&lt;T&gt;::value, std::string&gt;::type ostk::core::type::CallToString</definition>
+        <argsstring>(T *t)</argsstring>
+        <name>CallToString</name>
+        <param>
+          <type>T *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="174" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::operator+</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="494" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="494" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a5eb83e816ac6b6ef4fd98bd58c3ceccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::operator-</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="499" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="499" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1acfb6294d441f631b53c4d4b3ed6d2007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::operator*</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="504" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="504" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a2ebb3c6dfb7f07ce15431d2b6a7ec8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::operator/</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="509" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="509" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a5594a3ee3f2e3092f2b1bd2261331377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::operator%</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator%</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="514" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="514" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a718a72f9497d1b7364f0b99fd2b7dcbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::type::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Integer &amp;anInteger)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="684" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="684" bodyend="715"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a17ebe4b205c768e424ab75e16f4141b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::operator+</definition>
+        <argsstring>(const Real::ValueType &amp;anInt, const Real &amp;aReal)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="432" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="432" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a2eef915074832cb8477d1064053a259d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::operator-</definition>
+        <argsstring>(const Real::ValueType &amp;anInt, const Real &amp;aReal)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="437" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="437" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a625570e035a6e1d98891ed3c09433133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::operator*</definition>
+        <argsstring>(const Real::ValueType &amp;anInt, const Real &amp;aReal)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="442" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="442" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a52cb50068e71b0a0e6dd76375a6f7830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::operator/</definition>
+        <argsstring>(const Real::ValueType &amp;anInt, const Real &amp;aReal)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="447" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="447" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1ab923b1f63a7df2f26ea3cecfb1f6c8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::type::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Real &amp;aReal)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="497" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="497" bodyend="528"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Type/Byte.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structostk_1_1core_1_1container_1_1_triple" kind="struct" language="C++" prot="public">
+    <compoundname>ostk::core::container::Triple</compoundname>
+    <includes refid="_triple_8hpp" local="no">Triple.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename U</type>
+      </param>
+      <param>
+        <type>typename V</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structostk_1_1core_1_1container_1_1_triple_1aaaf7b3bbad2d3c013e2b9d74f0f97503" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T ostk::core::container::Triple&lt; T, U, V &gt;::first</definition>
+        <argsstring></argsstring>
+        <name>first</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="30" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structostk_1_1core_1_1container_1_1_triple_1a172fe1b954b041775b86ea10c8d4d2eb" prot="public" static="no" mutable="no">
+        <type>U</type>
+        <definition>U ostk::core::container::Triple&lt; T, U, V &gt;::second</definition>
+        <argsstring></argsstring>
+        <name>second</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="31" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structostk_1_1core_1_1container_1_1_triple_1a4f8f5c43182f8bc5b1145f8cd680bbe5" prot="public" static="no" mutable="no">
+        <type>V</type>
+        <definition>V ostk::core::container::Triple&lt; T, U, V &gt;::third</definition>
+        <argsstring></argsstring>
+        <name>third</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="32" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="structostk_1_1core_1_1container_1_1_triple" kindref="compound">Triple</ref> container. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="28" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structostk_1_1core_1_1container_1_1_triple_1aaaf7b3bbad2d3c013e2b9d74f0f97503" prot="public" virt="non-virtual"><scope>ostk::core::container::Triple</scope><name>first</name></member>
+      <member refid="structostk_1_1core_1_1container_1_1_triple_1a172fe1b954b041775b86ea10c8d4d2eb" prot="public" virt="non-virtual"><scope>ostk::core::container::Triple</scope><name>second</name></member>
+      <member refid="structostk_1_1core_1_1container_1_1_triple_1a4f8f5c43182f8bc5b1145f8cd680bbe5" prot="public" virt="non-virtual"><scope>ostk::core::container::Triple</scope><name>third</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

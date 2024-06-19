@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::iterator::ZipIterator</compoundname>
+    <includes refid="_zip_8hpp" local="no">Zip.hpp</includes>
+    <innerclass refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" prot="public">ostk::core::container::iterator::ZipIterator::Iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1a143a3e57569c8bd7caca581f322ad9fa" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
+        <definition>ZipIterator::Iterator ostk::core::container::iterator::ZipIterator&lt; T &gt;::begin_</definition>
+        <argsstring></argsstring>
+        <name>begin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="96" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1aae747fe50fdea2da283cb593293ac014" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
+        <definition>ZipIterator::Iterator ostk::core::container::iterator::ZipIterator&lt; T &gt;::end_</definition>
+        <argsstring></argsstring>
+        <name>end_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="97" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1a7adfbf838edf1bbf80d9862373e74524" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::iterator::ZipIterator&lt; T &gt;::ZipIterator</definition>
+        <argsstring>(T &amp;... aSequence)</argsstring>
+        <name>ZipIterator</name>
+        <param>
+          <type>T &amp;...</type>
+          <declname>aSequence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="79" column="5" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1ae4c8c2625fedbb5ce799ef15fef96c1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
+        <definition>ZipIterator::Iterator ostk::core::container::iterator::ZipIterator&lt; T &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="85" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1af5067549c260224ccb8e652979d1455f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
+        <definition>ZipIterator::Iterator ostk::core::container::iterator::ZipIterator&lt; T &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="90" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Zip iterator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://gist.github.com/mortehu/373069390c75b02f98b655e3f7dbef9a">https://gist.github.com/mortehu/373069390c75b02f98b655e3f7dbef9a</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="24" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1ae4c8c2625fedbb5ce799ef15fef96c1a" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>begin</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1a143a3e57569c8bd7caca581f322ad9fa" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>begin_</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1af5067549c260224ccb8e652979d1455f" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>end</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1aae747fe50fdea2da283cb593293ac014" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>end_</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1a7adfbf838edf1bbf80d9862373e74524" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>ZipIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

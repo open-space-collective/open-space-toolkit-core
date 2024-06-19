@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Open Space Toolkit ▸ Core</title>
+    <briefdescription>
+<para>Structure </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure<ulink url="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml"><image type="html" name="badge.svg?branch=main" inline="yes"></image>
+</ulink> <ulink url="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml"><image type="html" name="badge.svg" inline="yes"></image>
+</ulink> <ulink url="https://codecov.io/gh/open-space-collective/open-space-toolkit-core"><image type="html" name="badge.svg" inline="yes"></image>
+</ulink> <ulink url="https://open-space-collective.github.io/open-space-toolkit-core"><image type="html" name="stable.svg" inline="yes"></image>
+</ulink> <ulink url="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core"><image type="html" name="open-space-collective%2Fopen-space-toolkit-core.svg" inline="yes"></image>
+</ulink> <ulink url="https://badge.fury.io/py/open-space-toolkit-core"><image type="html" name="open-space-toolkit-core.svg" inline="yes"></image>
+</ulink> <ulink url="https://opensource.org/licenses/Apache-2.0"><image type="html" name="License-Apache%202.0-blue.svg" inline="yes"></image>
+</ulink></para>
+<para>Common types, containers and utilities.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Getting Started</title>
+<para>Want to get started? This is the simplest and quickest way:</para>
+<para><ulink url="https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks"><image type="html" name="badge_logo.svg" inline="yes"></image>
+</ulink></para>
+<para><emphasis>Nothing to download or install! This will automatically start a <ulink url="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</ulink> environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.</emphasis></para>
+<sect2 id="index_1autotoc_md2">
+<title>Alternatives</title>
+<sect3 id="index_1autotoc_md3">
+<title>Docker Images</title>
+<para><ulink url="https://www.docker.com/">Docker</ulink> must be installed on your system.</para>
+<sect4 id="index_1autotoc_md4">
+<title>iPython</title>
+<para>The following command will start an <ulink url="https://ipython.org/">iPython</ulink> shell within a container where the OSTk components are already installed:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>openspacecollective/open-space-toolkit-core-development<sp/>python3.11<sp/>-m<sp/>IPython</highlight></codeline>
+</programlisting></para>
+<para>Once the shell is up and running, playing with it is easy:</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1filesystem" kindref="compound">ostk.core.filesystem</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Directory<sp/></highlight><highlight class="comment">#<sp/>Directory<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Directory.root().is_empty()<sp/></highlight><highlight class="comment">#<sp/>True<sp/>if<sp/>the<sp/>root<sp/>directory<sp/>is<sp/>empty</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: Use tab for auto-completion!</emphasis></para>
+</sect4>
+<sect4 id="index_1autotoc_md5">
+<title>JupyterLab</title>
+<para>The following command will start a <ulink url="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</ulink> server within a container where the OSTk components are already installed:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">docker<sp/>run<sp/>--publish=8888:8888<sp/>openspacecollective/open-space-toolkit-core-jupyter</highlight></codeline>
+</programlisting></para>
+<para>Once the container is running, access <ulink url="http://localhost:8888/lab">http://localhost:8888/lab</ulink> and create a Python 3 Notebook.</para>
+</sect4>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Installation</title>
+<sect2 id="index_1autotoc_md7">
+<title>C++</title>
+<para>The binary packages are hosted using <ulink url="https://github.com/open-space-collective/open-space-toolkit-core/releases">GitHub Releases</ulink>:</para>
+<para><itemizedlist>
+<listitem><para>Runtime libraries: <computeroutput>open-space-toolkit-core-X.Y.Z-1.x86_64-runtime</computeroutput></para>
+</listitem><listitem><para>C++ headers: <computeroutput>open-space-toolkit-core-X.Y.Z-1.x86_64-devel</computeroutput></para>
+</listitem><listitem><para>Python bindings: <computeroutput>open-space-toolkit-core-X.Y.Z-1.x86_64-python</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="index_1autotoc_md8">
+<title>Debian / Ubuntu</title>
+<para>After downloading the relevant <computeroutput>.deb</computeroutput> binary packages, install:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">apt<sp/>install<sp/>open-space-toolkit-core-*.deb</highlight></codeline>
+</programlisting></para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>Python</title>
+<para>Install from <ulink url="https://pypi.org/project/open-space-toolkit-core/">PyPI</ulink>:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">pip<sp/>install<sp/>open-space-toolkit-core</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md10">
+<title>Documentation</title>
+<para>Documentation is available here:</para>
+<para><itemizedlist>
+<listitem><para><ulink url="https://open-space-collective.github.io/open-space-toolkit-core">C++</ulink></para>
+</listitem><listitem><para><ulink url="./bindings/python/docs">Python</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>&lt;details&gt;</para>
+<para>The library exhibits the following structure:</para>
+<para><programlisting filename=".txt"><codeline><highlight class="normal">├──<sp/>Type</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Integer</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Real</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>String</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" kindref="member">Byte</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" kindref="member">Byte</ref><sp/>Array</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">Index</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">Sign</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">Unique</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a14fe3367e611fd4d9fca9e9fcfe92848" kindref="member">Shared</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/><ref refid="namespaceostk_1_1core_1_1type_1af3e53775781cfb35ee4bd22d6bf784a1" kindref="member">Weak</ref></highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Container</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Array</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1afdfb0dc39c01f199950550531140a918" kindref="member">List</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" kindref="member">Map</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Ordered<sp/><ref refid="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" kindref="member">Map</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Object</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Dictionary</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1a781aa933b420f5cf5bcb1a1d26c5815a" kindref="member">Pair</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Triple</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1af6dbaf299d8b2ced8a150b09c3cade2a" kindref="member">Tuple</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Table</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Queue</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Stack</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Graph</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Tree</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>File<sp/>System</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Path</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>File</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Directory</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Symbolic<sp/>Link</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Permission</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>System</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>User</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Group</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>CPU</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Memory</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Disk</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Process</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Logger</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Exception</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Runtime<sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Runtime</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref></highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Wrong</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>To<sp/>Be<sp/>Implemented</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>Utility</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>Iterator</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>Version</highlight></codeline>
+</programlisting></para>
+<para>&lt;/details&gt;</para>
+</sect1>
+<sect1 id="index_1autotoc_md11">
+<title>Tutorials</title>
+<para>Tutorials are available here:</para>
+<para><itemizedlist>
+<listitem><para><ulink url="./tutorials/cpp">C++</ulink></para>
+</listitem><listitem><para><ulink url="./tutorials/python">Python</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md12">
+<title>Setup</title>
+<sect2 id="index_1autotoc_md13">
+<title>Development Environment</title>
+<para>Using <ulink url="https://www.docker.com">Docker</ulink> for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available <ulink url="https://docs.docker.com/install/">here</ulink>.</para>
+<para>To start the development environment:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">make<sp/>start-development</highlight></codeline>
+</programlisting></para>
+<para>This will:</para>
+<para><orderedlist>
+<listitem><para>Build the <computeroutput>openspacecollective/open-space-toolkit-core-development</computeroutput> Docker image.</para>
+</listitem><listitem><para>Create a development environment container with local source files and helper scripts mounted.</para>
+</listitem><listitem><para>Start a <computeroutput>bash</computeroutput> shell from the <computeroutput>./build</computeroutput> working directory.</para>
+</listitem></orderedlist>
+</para>
+<para>If installing Docker is not an option, you can manually install the development tools (GCC, CMake) and all required dependencies, by following a procedure similar to the one described in the <ulink url="./docker/development/Dockerfile">Development Dockerfile</ulink>.</para>
+</sect2>
+<sect2 id="index_1autotoc_md14">
+<title>Build</title>
+<para>From the <computeroutput>./build</computeroutput> directory:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: The <computeroutput>ostk-build</computeroutput> command simplifies building from within the development environment.</emphasis></para>
+</sect2>
+<sect2 id="index_1autotoc_md15">
+<title>Test</title>
+<para>To start a container to build and run the tests:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">make<sp/>test</highlight></codeline>
+</programlisting></para>
+<para>Or to run them manually:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./bin/open-space-toolkit-core.test</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: The <computeroutput>ostk-test</computeroutput> command simplifies running tests from within the development environment.</emphasis></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md16">
+<title>Dependencies</title>
+<para><table rows="7" cols="4"><row>
+<entry thead="yes"><para>Name </para>
+</entry><entry thead="yes"><para>Version </para>
+</entry><entry thead="yes"><para>License </para>
+</entry><entry thead="yes"><para>Link  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Pybind11 </para>
+</entry><entry thead="no"><para><computeroutput>2.12.0</computeroutput> </para>
+</entry><entry thead="no"><para>BSD-3-Clause </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/pybind/pybind11">github.com/pybind/pybind11</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>RapidJSON </para>
+</entry><entry thead="no"><para><computeroutput>master</computeroutput> </para>
+</entry><entry thead="no"><para>MIT </para>
+</entry><entry thead="no"><para><ulink url="http://rapidjson.org">rapidjson.org</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>yaml-cpp </para>
+</entry><entry thead="no"><para><computeroutput>0.7.0</computeroutput> </para>
+</entry><entry thead="no"><para>MIT </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/jbeder/yaml-cpp">github.com/jbeder/yaml-cpp</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>ordered-map </para>
+</entry><entry thead="no"><para><computeroutput>0.6.0</computeroutput> </para>
+</entry><entry thead="no"><para>MIT </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/Tessil/ordered-map">github.com/Tessil/ordered-map</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>{fmt} </para>
+</entry><entry thead="no"><para><computeroutput>5.2.0</computeroutput> </para>
+</entry><entry thead="no"><para>BSD-2-Clause </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/fmtlib/fmt">github.com/fmtlib/fmt</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Rapidcsv </para>
+</entry><entry thead="no"><para><computeroutput>6.11</computeroutput> </para>
+</entry><entry thead="no"><para>BSD-3-Clause </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/d99kris/rapidcsv">github.com/d99kris/rapidcsv</ulink>  </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md17">
+<title>Contribution</title>
+<para>Contributions are more than welcome!</para>
+<para>Please read our <ref refid="_c_o_n_t_r_i_b_u_t_i_n_g_8md" kindref="compound">contributing guide</ref> to learn about our development process, how to propose fixes and improvements, and how to build and test the code.</para>
+</sect1>
+<sect1 id="index_1autotoc_md18">
+<title>Special Thanks</title>
+<para><ulink url="https://www.loftorbital.com/"><image type="html" name="loft_orbital.png" inline="yes"></image>
+</ulink></para>
+</sect1>
+<sect1 id="index_1autotoc_md19">
+<title>License</title>
+<para>Apache License 2.0 </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

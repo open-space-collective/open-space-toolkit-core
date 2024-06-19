@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_ca321a5ee8bffce87575221e26272416" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/Core/FileSystem</compoundname>
+    <innerfile refid="_directory_8cpp">Directory.cpp</innerfile>
+    <innerfile refid="_file_8cpp">File.cpp</innerfile>
+    <innerfile refid="_path_8cpp">Path.cpp</innerfile>
+    <innerfile refid="_permission_set_8cpp">PermissionSet.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/FileSystem/"/>
+  </compounddef>
+</doxygen>

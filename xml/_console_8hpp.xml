@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_console_8hpp" kind="file" language="C++">
+    <compoundname>Console.hpp</compoundname>
+    <includes refid="_sink_2_sink_8hpp" local="no">OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp</includes>
+    <includes refid="_unique_8hpp" local="no">OpenSpaceToolkit/Core/Type/Unique.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="18">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="8">
+        <label>iterator</label>
+      </node>
+      <node id="21">
+        <label>OpenSpaceToolkit/Core/Type/Unique.hpp</label>
+        <link refid="_unique_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>OpenSpaceToolkit/Core/Container/Array.tpp</label>
+        <link refid="_array_8tpp"/>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp</label>
+        <link refid="_sink_2_sink_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>regex</label>
+      </node>
+      <node id="7">
+        <label>OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</label>
+        <link refid="_zip_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ostream</label>
+      </node>
+      <node id="13">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>OpenSpaceToolkit/Core/Logger/Severity.hpp</label>
+        <link refid="_severity_8hpp"/>
+      </node>
+      <node id="3">
+        <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
+        <link refid="_array_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>tuple</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>utility</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="17">
+        <label>type_traits</label>
+      </node>
+      <node id="14">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp</label>
+        <link refid="_console_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" prot="public">ostk::core::logger::sink::Console</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1logger">ostk::core::logger</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1logger_1_1sink">ostk::core::logger::sink</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Logger_Sink_Console__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Logger_Sink_Console__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_sink_2_sink_8hpp" kindref="compound">OpenSpaceToolkit/Core/Logger/Sink/Sink.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_unique_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Unique.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">logger</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="namespaceostk_1_1core_1_1logger_1_1sink" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">sink</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">ostk::core::type::Unique</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">ostk::core::logger::Severity</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" kindref="compound">Sink</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" kindref="member">Color</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fae90dfb84e30edf611e326eeb04d680de" kindref="member">Black</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faee38e4d5dd68c4e440825018d549cb47" kindref="member">Red</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fad382816a3cbeed082c9e216e7392eed1" kindref="member">Green</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Yellow</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa9594eec95be70e7b1710f730fdda33d9" kindref="member">Blue</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fab91cc2c1416fcca942b61c7ac5b1a9ac" kindref="member">Magenta</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa023c239d2f2538f140a20e72c7b73f20" kindref="member">Cyan</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fafb55202637692de4a494e9ade4cff2dd" kindref="member">LightGray</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa91e93fc984985226ad4d319a4e4134ab" kindref="member">DarkGray</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faf9a96fb667261a141d10021a66d6ad0f" kindref="member">LightRed</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa7a6a38bec67cbc2a39ce22f34e4ed8e2" kindref="member">LightGreen</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fafaf948b65bda38f44b17d156177d1728" kindref="member">LightYellow</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa4d7ff7393a484a7b9ed2e381f5cdeaf7" kindref="member">LightBlue</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faf1ec64ef9f82e9fb86b094f8b548f9f1" kindref="member">LightMagenta</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fac37b5ce4ba80a097d82726ae74d34b13" kindref="member">LightCyan</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa25a81701fbfa4a1efdf660a950c1d006" kindref="member">White</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a630edf715d896735b7e2b7cf612fa0e7" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a630edf715d896735b7e2b7cf612fa0e7" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref>&amp;<sp/>aConsole);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a60d6555ac02a53aa20efa0f131cdccca" kindref="member">~Console</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref>*<sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae55ec68ac574b3bcd3ac1bdabbf1848d" kindref="member">clone</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9d9222231635b663c863430457209050" kindref="member">enable</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae707d83c0b5052bc100b4570e89ed346" kindref="member">disable</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a49e591e5733c5c7bc7094f4f68e23443" kindref="member">ColorizeMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aMessage,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" kindref="member">Console::Color</ref>&amp;<sp/>aColor);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1aeda242f6bb74cf8f4003eb67666e9118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Impl;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1aeda242f6bb74cf8f4003eb67666e9118" kindref="member">Console::Impl</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>Unique&lt;Console::Impl&gt;<sp/>implUPtr_;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sink</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp"/>
+  </compounddef>
+</doxygen>

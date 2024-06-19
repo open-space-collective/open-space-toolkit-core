@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1logger_1_1_source" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::logger::Source</compoundname>
+    <includes refid="_source_8hpp" local="no">Source.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" prot="public" static="no" mutable="no">
+        <type>Unique&lt; <ref refid="classostk_1_1core_1_1logger_1_1source_1_1_source" kindref="compound">source::Source</ref> &gt;</type>
+        <definition>Unique&lt;source::Source&gt; ostk::core::logger::Source::sourceUPtr_</definition>
+        <argsstring></argsstring>
+        <name>sourceUPtr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="37" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::Source::Source</definition>
+        <argsstring>(const String &amp;aChannel)</argsstring>
+        <name>Source</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1a8e1107712c9b1ab9e5506230d32c7a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::Source::Source</definition>
+        <argsstring>(const Source &amp;aSource)</argsstring>
+        <name>Source</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>aSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref> &amp;</type>
+        <definition>Source&amp; ostk::core::logger::Source::operator=</definition>
+        <argsstring>(const Source &amp;aSource)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>aSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="29" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::logger::Source::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="31" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></type>
+        <definition>static Source ostk::core::logger::Source::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="33" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Log source. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Unique&lt; ostk::core::logger::source::Source &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::logger::Source</label>
+        <link refid="classostk_1_1core_1_1logger_1_1_source"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sourceUPtr_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="22" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Source</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1a8e1107712c9b1ab9e5506230d32c7a06" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Source</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>sourceUPtr_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Undefined</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

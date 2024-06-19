@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_dictionary_8hpp" kind="file" language="C++">
+    <compoundname>Dictionary.hpp</compoundname>
+    <includes refid="_list_8hpp" local="no">OpenSpaceToolkit/Core/Container/List.hpp</includes>
+    <includes refid="_object_8hpp" local="no">OpenSpaceToolkit/Core/Container/Object.hpp</includes>
+    <includes refid="_ordered_map_8hpp" local="no">OpenSpaceToolkit/Core/Container/OrderedMap.hpp</includes>
+    <includes refid="_file_8hpp" local="no">OpenSpaceToolkit/Core/FileSystem/File.hpp</includes>
+    <includes refid="_size_8hpp" local="no">OpenSpaceToolkit/Core/Type/Size.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_dictionary_8cpp" local="no">src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</includedby>
+    <includedby refid="_object_8cpp" local="no">src/OpenSpaceToolkit/Core/Container/Object.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="21">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="39">
+        <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+        <link refid="_integer_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>iterator</label>
+      </node>
+      <node id="23">
+        <label>OpenSpaceToolkit/Core/Container/Pair.hpp</label>
+        <link refid="_pair_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>boost/stacktrace.hpp</label>
+      </node>
+      <node id="36">
+        <label>OpenSpaceToolkit/Core/Type/Unique.hpp</label>
+        <link refid="_unique_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp</label>
+        <link refid="_permission_set_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>stdint.h</label>
+      </node>
+      <node id="24">
+        <label>OpenSpaceToolkit/Core/Container/Tuple.hpp</label>
+        <link refid="_tuple_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>OpenSpaceToolkit/Core/Container/Array.tpp</label>
+        <link refid="_array_8tpp"/>
+      </node>
+      <node id="31">
+        <label>stdexcept</label>
+      </node>
+      <node id="19">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>regex</label>
+      </node>
+      <node id="10">
+        <label>OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp</label>
+        <link refid="_zip_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>exception</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>ostream</label>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>OpenSpaceToolkit/Core/FileSystem/File.hpp</label>
+        <link refid="_file_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>OpenSpaceToolkit/Core/FileSystem/Path.hpp</label>
+        <link refid="_path_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>OpenSpaceToolkit/Core/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>OpenSpaceToolkit/Core/Container/Object.hpp</label>
+        <link refid="_object_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
+        <link refid="_array_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="33">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</label>
+        <link refid="_undefined_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Container/List.hpp</label>
+        <link refid="_list_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>OpenSpaceToolkit/Core/Error/RuntimeError.hpp</label>
+        <link refid="_runtime_error_8hpp"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="44">
+        <label>deque</label>
+      </node>
+      <node id="42">
+        <label>OpenSpaceToolkit/Core/Type/Real.hpp</label>
+        <link refid="_real_8hpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>tsl/ordered_map.h</label>
+      </node>
+      <node id="43">
+        <label>OpenSpaceToolkit/Core/Container/OrderedMap.hpp</label>
+        <link refid="_ordered_map_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp</label>
+        <link refid="_to_be_implemented_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp</label>
+        <link refid="_wrong_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>type_traits</label>
+      </node>
+      <node id="17">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>OpenSpaceToolkit/Core/Error/Exception.hpp</label>
+        <link refid="_exception_8hpp"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>memory</label>
+      </node>
+      <node id="45">
+        <label>initializer_list</label>
+      </node>
+      <node id="40">
+        <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
+        <link refid="_sign_8hpp"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_dictionary" prot="public">ostk::core::container::Dictionary</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" prot="public">ostk::core::container::Dictionary::Iterator</innerclass>
+    <innerclass refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" prot="public">ostk::core::container::Dictionary::ConstIterator</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1container">ostk::core::container</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Container_Dictionary__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Container_Dictionary__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_list_8hpp" kindref="compound">OpenSpaceToolkit/Core/Container/List.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_object_8hpp" kindref="compound">OpenSpaceToolkit/Core/Container/Object.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_ordered_map_8hpp" kindref="compound">OpenSpaceToolkit/Core/Container/OrderedMap.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_file_8hpp" kindref="compound">OpenSpaceToolkit/Core/FileSystem/File.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_size_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Size.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk_1_1core_1_1container" kindref="compound">container</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk_1_1core_1_1filesystem" kindref="compound">filesystem</ref><sp/>=<sp/><ref refid="namespaceostk_1_1core_1_1filesystem" kindref="compound">ostk::core::filesystem</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">ostk::core::type::Size</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" kindref="member">ostk::core::container::OrderedMap</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">ostk::core::container::Object</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classostk_1_1core_1_1container_1_1_dictionary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="classostk_1_1core_1_1container_1_1_dictionary_1ad65f1fca6dd24efcbfc9a8ba99340603" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1ad65f1fca6dd24efcbfc9a8ba99340603" kindref="member">Key</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classostk_1_1core_1_1container_1_1_dictionary_1aa9c6af6323d32f60943ea38c38fb9990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1container_1afdfb0dc39c01f199950550531140a918" kindref="member">container::List&lt;Dictionary::Key&gt;</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1aa9c6af6323d32f60943ea38c38fb9990" kindref="member">Path</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classostk_1_1core_1_1container_1_1_dictionary_1a6e8585a0041d78b9849506eef8cf958d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a6e8585a0041d78b9849506eef8cf958d" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43" refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" kindref="member">OrderedMap&lt;Dictionary::Key, Dictionary::Value&gt;::iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">MapIterator</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a1de4da5c456a584e3a869685055efcab" kindref="member">Iterator</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a1de4da5c456a584e3a869685055efcab" kindref="member">Iterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref>&amp;<sp/>anOrderedMapIt);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a1de4da5c456a584e3a869685055efcab" kindref="member">Iterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/>aIterator);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a5017456fd22066a962495741d3540acc" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/>aIterator);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aba3be06d5b252cbaf1a653e0e8bc3cca" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/>aIterator)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a193b72c125c2f14bc0cc79dc2a20ac17" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/>aIterator)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a0291930d68b453d82c4042e46f141fce" kindref="member">operator*</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>*<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a63b9bf1ff06245caeaa6a6ebd870a716" kindref="member">operator-&gt;</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a0291930d68b453d82c4042e46f141fce" kindref="member">operator*</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>*<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a63b9bf1ff06245caeaa6a6ebd870a716" kindref="member">operator-&gt;</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1acfeb07ca8c5e248d0f0cd36fe03989fd" kindref="member">operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a5b227e68c5a467289b517ed2748d159b" kindref="member">operator++</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a5b227e68c5a467289b517ed2748d159b" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a789700a7cbecc95ac97122bff792b52d" kindref="member">operator--</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a789700a7cbecc95ac97122bff792b52d" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ab8a4f2dc4dc79d9b1a6ed04c350dd2ec" kindref="member">accessKey</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1abf31257aba69a8ba374ee66a1ff3ce8c" kindref="member">accessValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1abf31257aba69a8ba374ee66a1ff3ce8c" kindref="member">accessValue</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" kindref="member">accessMapIterator</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" kindref="member">accessMapIterator</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref><sp/>mapIt_;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="86" refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1adbfe1d9465b661e0328356b480eebc5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" kindref="member">OrderedMap&lt;Dictionary::Key, Dictionary::Value&gt;::const_iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1adbfe1d9465b661e0328356b480eebc5d" kindref="member">MapConstIterator</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a07b9385443ab2702787e48b35ff6f5c2" kindref="member">ConstIterator</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a07b9385443ab2702787e48b35ff6f5c2" kindref="member">ConstIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1adbfe1d9465b661e0328356b480eebc5d" kindref="member">ConstIterator::MapConstIterator</ref>&amp;<sp/>anOrderedMapIt);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a07b9385443ab2702787e48b35ff6f5c2" kindref="member">ConstIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/>aConstIterator);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a07b9385443ab2702787e48b35ff6f5c2" kindref="member">ConstIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref>&amp;<sp/>anIterator);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a73e0f280e9f72768d35e02a7edf1829e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/>aConstIterator);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a99905b73c60b12d29673d88138f17848" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/>aConstIterator)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1af1ba59b50448a88c2173f3cf58c66df6" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/>aConstIterator)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a9b0d6d60b39969118f8edf9dc39ee38f" kindref="member">operator*</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>*<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a0cfa6bab1cf850f570be6e79489548ec" kindref="member">operator-&gt;</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a2f4a98b35590dd8fb8219167c43d5053" kindref="member">operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a7cd2666ce3c12cca1e34c0d8ce1c1242" kindref="member">operator++</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a7cd2666ce3c12cca1e34c0d8ce1c1242" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a7b8965043a43ac298333199e5ebd8423" kindref="member">operator--</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">ConstIterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a7b8965043a43ac298333199e5ebd8423" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a01005dc887cc99ff46ab3b7c039e8eb6" kindref="member">accessKey</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a90d062ad0d7d55d8e06d255a25a40727" kindref="member">accessValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1adbfe1d9465b661e0328356b480eebc5d" kindref="member">ConstIterator::MapConstIterator</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1ab1833819a1014d669ec03abf55c2a40d" kindref="member">accessMapConstIterator</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1adbfe1d9465b661e0328356b480eebc5d" kindref="member">ConstIterator::MapConstIterator</ref><sp/>mapIt_;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>(std::initializer_list&lt;std::pair&lt;Dictionary::Key,<sp/>Dictionary::Value&gt;&gt;<sp/>aList);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/>aDictionary);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a110109b31c5c88b76fb23eb8b5bfcc05" kindref="member">~Dictionary</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a8383582763c87f3c728aa6cf8d63bd3c" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/>aDictionary);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1ad2c4154b8d04f7697029a64f36275c33" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/>aDictionary)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a5ff8e1177944e1fbccf9476488722d56" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/>aDictionary)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a8b8f95561bc8c78239237da95ca6ea0b" kindref="member">operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a8b8f95561bc8c78239237da95ca6ea0b" kindref="member">operator[]</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a95fa6b67a0c39d2d7069ad71a53910ec" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>&amp;<sp/>aDictionary);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1abf2a335e5277f52a1ccb9693fedebaaa" kindref="member">isEmpty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a0e8b5745244e2f09f25b6a64cccca8d7" kindref="member">hasValueForKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a034cd5acd635a879258454b77004246f" kindref="member">getSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a6c351bf4316c24c38165614c1c94833c" kindref="member">addValueForKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Dictionary::Value</ref>&amp;<sp/>aValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">Dictionary::Key</ref>&amp;<sp/>aKey);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">Dictionary::ConstIterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1aeaee82bbb224074f026ae2189a29817d" kindref="member">begin</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">Dictionary::ConstIterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a218a2d4c8aa88ce58ce50b64515d5efb" kindref="member">end</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Dictionary::Iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1aeaee82bbb224074f026ae2189a29817d" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Dictionary::Iterator</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a218a2d4c8aa88ce58ce50b64515d5efb" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a9508ccd2a76a6179215824bfe9210594" kindref="member">Empty</ref>();</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a91160ea9db250af38f925786b16c42e7" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref>&amp;<sp/>aString,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946a" kindref="member">Object::Format</ref>&amp;<sp/>aFormat<sp/>=<sp/><ref refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Object::Format::Undefined</ref>);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" kindref="member">OrderedMap&lt;Dictionary::Key, Dictionary::Value&gt;</ref><sp/>map_;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref>();</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp"/>
+  </compounddef>
+</doxygen>

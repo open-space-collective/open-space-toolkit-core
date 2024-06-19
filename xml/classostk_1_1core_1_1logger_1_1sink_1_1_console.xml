@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1logger_1_1sink_1_1_console" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::logger::sink::Console</compoundname>
+    <basecompoundref refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" prot="public" virt="non-virtual">ostk::core::logger::sink::Sink</basecompoundref>
+    <includes refid="_console_8hpp" local="no">Console.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Color</name>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fae90dfb84e30edf611e326eeb04d680de" prot="public">
+          <name>Black</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faee38e4d5dd68c4e440825018d549cb47" prot="public">
+          <name>Red</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fad382816a3cbeed082c9e216e7392eed1" prot="public">
+          <name>Green</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa51e6cd92b6c45f9affdc158ecca2b8b8" prot="public">
+          <name>Yellow</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa9594eec95be70e7b1710f730fdda33d9" prot="public">
+          <name>Blue</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fab91cc2c1416fcca942b61c7ac5b1a9ac" prot="public">
+          <name>Magenta</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa023c239d2f2538f140a20e72c7b73f20" prot="public">
+          <name>Cyan</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fafb55202637692de4a494e9ade4cff2dd" prot="public">
+          <name>LightGray</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa91e93fc984985226ad4d319a4e4134ab" prot="public">
+          <name>DarkGray</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faf9a96fb667261a141d10021a66d6ad0f" prot="public">
+          <name>LightRed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa7a6a38bec67cbc2a39ce22f34e4ed8e2" prot="public">
+          <name>LightGreen</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fafaf948b65bda38f44b17d156177d1728" prot="public">
+          <name>LightYellow</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa4d7ff7393a484a7b9ed2e381f5cdeaf7" prot="public">
+          <name>LightBlue</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883faf1ec64ef9f82e9fb86b094f8b548f9f1" prot="public">
+          <name>LightMagenta</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fac37b5ce4ba80a097d82726ae74d34b13" prot="public">
+          <name>LightCyan</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883fa25a81701fbfa4a1efdf660a950c1d006" prot="public">
+          <name>White</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="26" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1aeda242f6bb74cf8f4003eb67666e9118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Console::Impl</definition>
+        <argsstring></argsstring>
+        <name>Console::Impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="64" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9ca569a0f4390a9808d7344cd4686b32" prot="private" static="no" mutable="no">
+        <type>Unique&lt; Console::Impl &gt;</type>
+        <definition>Unique&lt;Console::Impl&gt; ostk::core::logger::sink::Console::implUPtr_</definition>
+        <argsstring></argsstring>
+        <name>implUPtr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="66" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a630edf715d896735b7e2b7cf612fa0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::sink::Console::Console</definition>
+        <argsstring>(const Severity &amp;aSeverity)</argsstring>
+        <name>Console</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref> &amp;</type>
+          <declname>aSeverity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a143d865d1cf750b1d0d98ded32cc69da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::logger::sink::Console::Console</definition>
+        <argsstring>(const Console &amp;aConsole)</argsstring>
+        <name>Console</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref> &amp;</type>
+          <declname>aConsole</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a60d6555ac02a53aa20efa0f131cdccca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ostk::core::logger::sink::Console::~Console</definition>
+        <argsstring>() override</argsstring>
+        <name>~Console</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="52" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae55ec68ac574b3bcd3ac1bdabbf1848d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref> *</type>
+        <definition>virtual Console* ostk::core::logger::sink::Console::clone</definition>
+        <argsstring>() const override</argsstring>
+        <name>clone</name>
+        <reimplements refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a8d92af54df251e60137c1e822a8bc357">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="54" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9d9222231635b663c863430457209050" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ostk::core::logger::sink::Console::enable</definition>
+        <argsstring>() override</argsstring>
+        <name>enable</name>
+        <reimplements refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1ac44c5cfde95ebd171490024c380904ed">enable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="56" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae707d83c0b5052bc100b4570e89ed346" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ostk::core::logger::sink::Console::disable</definition>
+        <argsstring>() override</argsstring>
+        <name>disable</name>
+        <reimplements refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a8c14e50eb383c13c6b27b7601f6b1caf">disable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="57" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a49e591e5733c5c7bc7094f4f68e23443" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>static String ostk::core::logger::sink::Console::ColorizeMessage</definition>
+        <argsstring>(const String &amp;aMessage, const Console::Color &amp;aColor)</argsstring>
+        <name>ColorizeMessage</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aMessage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" kindref="member">Console::Color</ref> &amp;</type>
+          <declname>aColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="59" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Log console sink. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ostk::core::logger::sink::Sink</label>
+        <link refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink"/>
+      </node>
+      <node id="1">
+        <label>ostk::core::logger::sink::Console</label>
+        <link refid="classostk_1_1core_1_1logger_1_1sink_1_1_console"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ostk::core::logger::sink::Sink</label>
+        <link refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>channels_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>severity_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; ostk::core::type::String &gt;</label>
+      </node>
+      <node id="3">
+        <label>ostk::core::container::Array&lt; ostk::core::type::String &gt;</label>
+        <link refid="classostk_1_1core_1_1container_1_1_array"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ostk::core::logger::sink::Console</label>
+        <link refid="classostk_1_1core_1_1logger_1_1sink_1_1_console"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Severity</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="23" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a809a19c1204b3b3681dec39b916786c5" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>addChannel</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a826ad5fe548935b4cd2b059cf1f3c64e" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>channelEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a5fef4477590584ed9c154f08e6a0de8f" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>channels_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae55ec68ac574b3bcd3ac1bdabbf1848d" prot="public" virt="virtual"><scope>ostk::core::logger::sink::Console</scope><name>clone</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a381e33701f44ffcfce3cec40032c883f" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>Color</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a49e591e5733c5c7bc7094f4f68e23443" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>ColorizeMessage</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a630edf715d896735b7e2b7cf612fa0e7" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>Console</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a143d865d1cf750b1d0d98ded32cc69da" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>Console</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1aeda242f6bb74cf8f4003eb67666e9118" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>Console::Impl</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae707d83c0b5052bc100b4570e89ed346" prot="public" virt="virtual"><scope>ostk::core::logger::sink::Console</scope><name>disable</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9d9222231635b663c863430457209050" prot="public" virt="virtual"><scope>ostk::core::logger::sink::Console</scope><name>enable</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a3ea719fca071d9b19f7c1f331b07a643" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>enabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1af38d57d471f55e2fe5b0c4c680b073ba" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>fileEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a4527bde345c4aa988dcebe66df8c0378" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>functionEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9ca569a0f4390a9808d7344cd4686b32" prot="private" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>implUPtr_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a22b8e7e3d555273391b519228015881a" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isChannelLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a2958c67122d565873006d8ad217fea4c" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isEnabled</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1aac9c744b2ad17d77caeb81b3356479ba" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isFileLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a08bee7e961fea5d5ad6cec3ceaa8b869" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isFunctionLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a5fdf2e69e130077bfb7bd91e64deb771" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isLineIdLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1afbfb0049d2cc16a35e6f6b05b5b6ddd1" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isLineLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a7f8e189e59b326701b105279acae13ff" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isScopeLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a89716870858fcf6e07b8e9fa516b958e" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isSeverityLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a7188cf1e556985d783c8c978a629ab59" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isThreadLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a83df4f0155fb78ceb7bad58c17357155" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>isTimestampLogged</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1add4a19cf2a1b1a9625720f67c009894b" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>lineEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a9deb3fc8b5fb43973127c198ff52d6d8" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>lineIdEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a58afc61f0de71dc20c7576b1b363198e" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>removeChannel</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1aa7d1634409ddc0c0e2491334512ffdf6" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>scopeEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1aa1103d89b02f3bf86f4b41545c4176af" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>severity_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1ac0c91581f095ccbcc1a3ee61a7f345f4" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>severityEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1aa84740d4bccf16891d8a1c6424996ef1" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>Sink</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a17e9a207ece68b07d6ead8768da13076" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>threadEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1ae338626c883454b367754d42785c7486" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>timestampEnabled_</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a60d6555ac02a53aa20efa0f131cdccca" prot="public" virt="virtual"><scope>ostk::core::logger::sink::Console</scope><name>~Console</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a6b0a69475450990eae12b1477ca67b4b" prot="public" virt="pure-virtual"><scope>ostk::core::logger::sink::Console</scope><name>~Sink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

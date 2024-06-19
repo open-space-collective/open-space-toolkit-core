@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_integer_8hpp" kind="file" language="C++">
+    <compoundname>Integer.hpp</compoundname>
+    <includes local="no">ostream</includes>
+    <includes refid="_index_8hpp" local="no">OpenSpaceToolkit/Core/Type/Index.hpp</includes>
+    <includes refid="_sign_8hpp" local="no">OpenSpaceToolkit/Core/Type/Sign.hpp</includes>
+    <includes refid="_size_8hpp" local="no">OpenSpaceToolkit/Core/Type/Size.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_object_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Object.hpp</includedby>
+    <includedby refid="_pump_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger/Pump.hpp</includedby>
+    <includedby refid="_logger_8hpp" local="no">include/OpenSpaceToolkit/Core/Logger.hpp</includedby>
+    <includedby refid="_real_8hpp" local="no">include/OpenSpaceToolkit/Core/Type/Real.hpp</includedby>
+    <includedby refid="_type_8hpp" local="no">include/OpenSpaceToolkit/Core/Type.hpp</includedby>
+    <includedby refid="_integer_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/Integer.cpp</includedby>
+    <includedby refid="_string_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/String.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+        <link refid="_integer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>regex</label>
+      </node>
+      <node id="2">
+        <label>ostream</label>
+      </node>
+      <node id="7">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="8">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
+        <link refid="_sign_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
+        <link refid="_row_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+        <link refid="_integer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
+        <link refid="_cell_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/OpenSpaceToolkit/Core/Type/Integer.cpp</label>
+        <link refid="_integer_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
+        <link refid="_row_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="3">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/OpenSpaceToolkit/Core/Type/String.cpp</label>
+        <link refid="_string_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Container/Object.hpp</label>
+        <link refid="_object_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="14">
+        <label>include/OpenSpaceToolkit/Core/Type.hpp</label>
+        <link refid="_type_8hpp"/>
+      </node>
+      <node id="11">
+        <label>include/OpenSpaceToolkit/Core/Logger/Pump.hpp</label>
+        <link refid="_pump_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/OpenSpaceToolkit/Core/Type/Real.cpp</label>
+        <link refid="_real_8cpp"/>
+      </node>
+      <node id="8">
+        <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
+        <link refid="_table_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/OpenSpaceToolkit/Core/Type/Real.hpp</label>
+        <link refid="_real_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/OpenSpaceToolkit/Core/Logger.hpp</label>
+        <link refid="_logger_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1core_1_1type_1_1_integer" prot="public">ostk::core::type::Integer</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core">ostk::core</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1type">ostk::core::type</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Type_Integer__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Type_Integer__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_index_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Index.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_sign_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Sign.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_size_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/Size.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">core</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">type</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int8_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" kindref="member">Int8</ref>;</highlight></codeline>
+<codeline lineno="21" refid="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int16_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" kindref="member">Int16</ref>;</highlight></codeline>
+<codeline lineno="22" refid="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" kindref="member">Int32</ref>;</highlight></codeline>
+<codeline lineno="23" refid="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int64_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" kindref="member">Int64</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" kindref="member">Uint8</ref>;</highlight></codeline>
+<codeline lineno="26" refid="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" kindref="member">Uint16</ref>;</highlight></codeline>
+<codeline lineno="27" refid="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" kindref="member">Uint32</ref>;</highlight></codeline>
+<codeline lineno="28" refid="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" kindref="member">Uint64</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classostk_1_1core_1_1type_1_1_integer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">ValueType</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" kindref="member">Integer</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" kindref="member">Integer</ref>(<ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" kindref="member">Integer</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" kindref="member">Integer</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ac851e140c41b975c2b034d7096e1139d" kindref="member">operator=</ref>(<ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1acc92f0b9a9493b16c5f7304a03fef3d4" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a32347cb4d37babaed8adf7e769920cd5" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a55f12c3287baaa8aa94707982463c8d9" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a36353aac163154d1232a2b3e22af7096" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a1190b59417b9bbf0e6fee31849c49ea6" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a821091274878e29f976f75941eeab07b" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1acc92f0b9a9493b16c5f7304a03fef3d4" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a32347cb4d37babaed8adf7e769920cd5" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a55f12c3287baaa8aa94707982463c8d9" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a36353aac163154d1232a2b3e22af7096" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a1190b59417b9bbf0e6fee31849c49ea6" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a821091274878e29f976f75941eeab07b" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a9c8b8e0ccea0e6ce6ba041e4803f82a4" kindref="member">operator%</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a9c8b8e0ccea0e6ce6ba041e4803f82a4" kindref="member">operator%</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>&amp;<sp/>aReal)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aacd41966b1956dd167f54308dc458755" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7aec2b588ec58be50cbfa0ced0b6c663" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a9fece39941c8d1a58b2ef87aa7d7292f" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ab924f49d110079b61d88b1d3fd15c3df" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa2d6e813500339d0d6029a77c72ad1f7" kindref="member">operator%=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aacd41966b1956dd167f54308dc458755" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7aec2b588ec58be50cbfa0ced0b6c663" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a9fece39941c8d1a58b2ef87aa7d7292f" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ab924f49d110079b61d88b1d3fd15c3df" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa2d6e813500339d0d6029a77c72ad1f7" kindref="member">operator%=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a9c8b8e0ccea0e6ce6ba041e4803f82a4" kindref="member">operator%</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" kindref="member">operator+</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" kindref="member">operator-</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a53941213559dbfaa6ae92aa675a80773" kindref="member">operator++</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa0de7f1bcafa490a1a83dfc906509b9c" kindref="member">operator--</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a53941213559dbfaa6ae92aa675a80773" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anInteger);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa0de7f1bcafa490a1a83dfc906509b9c" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anInteger);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aec29fc1731201932ab34cfe2ec83fbc9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a8a84f20e5c8b736b5254f6ae0d177b48" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a522f77fc886b22e29734a9e584b26849" kindref="member">isZero</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a81e7b9d1e789381c308e34bc151468b0" kindref="member">isPositive</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a51bf2c2d5c432f9abba213b4d7e92ee2" kindref="member">isNegative</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a983a158630178c50d1c8cdf4e81a8519" kindref="member">isStrictlyPositive</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a722cef11d9c72b8bea1b2166c493e91f" kindref="member">isStrictlyNegative</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a75beeba4a26144ef9b93f16fc25537f3" kindref="member">isInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aaf8faf722b62ab745e9781c021c314ef" kindref="member">isPositiveInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a21bdcbc09ccb8e6ede08c4eecc2020ba" kindref="member">isNegativeInfinity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a5556975e54c358123249847d68e93836" kindref="member">isFinite</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1af5fa190a8559774d777560dce4255cee" kindref="member">isEven</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a1d916597be7715421739b97aaa8f87f6" kindref="member">isOdd</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">type::Sign</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a30a13889dc0649d1c3f4150fefef68c9" kindref="member">getSign</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a1c32bc50caf409318a6351014663b45f" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a73990a13680722c23e9254f19e388fd0" kindref="member">Zero</ref>();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae6d20770cc23c5cd9dd5b2ca5c7f52f4" kindref="member">PositiveInfinity</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae0592880b743a962708bbe2824efed64" kindref="member">NegativeInfinity</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a4198a16333ff2504d3508bae2df41da6" kindref="member">Int8</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" kindref="member">type::Int8</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa37cda00e331e71027219490b6eb9c5f" kindref="member">Int16</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" kindref="member">type::Int16</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1afa6db52f1933da53fef54abec94bd591" kindref="member">Int32</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" kindref="member">type::Int32</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1af006a469f1232693e219c6ff6933b93e" kindref="member">Int64</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" kindref="member">type::Int64</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a5063b84487016221f45d4c9e87f7dd0b" kindref="member">Uint8</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" kindref="member">type::Uint8</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a6d3bca0a2bd84819448a4d9120f476f8" kindref="member">Uint16</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" kindref="member">type::Uint16</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ac1f98a0bdd2bd2fb5e8d52c143f33a41" kindref="member">Uint32</ref>(<ref refid="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" kindref="member">type::Uint32</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1acdb2a042fc5898eae5766fd7230eea2d" kindref="member">Uint64</ref>(<ref refid="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" kindref="member">type::Uint64</ref><sp/>anInteger);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a0a280c81bc89e98dbc44376bd3a51acc" kindref="member">Index</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">type::Index</ref>&amp;<sp/>anIndex);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aeba7badddda284a99924422e384524f6" kindref="member">Size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">type::Size</ref>&amp;<sp/>aSize);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa4d7b5bc7fb1c387e65008f38f72511d" kindref="member">CanParse</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCharacter);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1aa4d7b5bc7fb1c387e65008f38f72511d" kindref="member">CanParse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref>&amp;<sp/>aString);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ab5b9dbfb16e857b8ecd0579863287d76" kindref="member">Parse</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCharacter);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ab5b9dbfb16e857b8ecd0579863287d76" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref>&amp;<sp/>aString);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Type</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref>,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Defined,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PositiveInfinity,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NegativeInfinity</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>Integer::Type<sp/>type_;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref><sp/>value_;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" kindref="member">Integer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Integer::Type&amp;<sp/>aType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref>&amp;<sp/>anInteger);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp"/>
+  </compounddef>
+</doxygen>

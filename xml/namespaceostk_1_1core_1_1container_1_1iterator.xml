@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1container_1_1iterator" kind="namespace" language="C++">
+    <compoundname>ostk::core::container::iterator</compoundname>
+    <innerclass refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator" prot="public">ostk::core::container::iterator::ZipIterator</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1_1iterator_1a25872b7f46de31f17770db725eb1ae15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ostk::core::container::iterator::Zip</definition>
+        <argsstring>(T &amp;&amp;... seqs)</argsstring>
+        <name>Zip</name>
+        <param>
+          <type>T &amp;&amp;...</type>
+          <declname>seqs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Sequences must be the same length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="103" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="17" column="1"/>
+  </compounddef>
+</doxygen>

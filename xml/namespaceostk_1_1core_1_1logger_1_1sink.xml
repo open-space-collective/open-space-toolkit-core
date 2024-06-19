@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1logger_1_1sink" kind="namespace" language="C++">
+    <compoundname>ostk::core::logger::sink</compoundname>
+    <innerclass refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" prot="public">ostk::core::logger::sink::Console</innerclass>
+    <innerclass refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" prot="public">ostk::core::logger::sink::Sink</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

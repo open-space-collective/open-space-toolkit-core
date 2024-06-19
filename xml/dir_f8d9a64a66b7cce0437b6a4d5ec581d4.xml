@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f8d9a64a66b7cce0437b6a4d5ec581d4" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Type</compoundname>
+    <innerfile refid="_byte_8hpp">Byte.hpp</innerfile>
+    <innerfile refid="_byte_array_8hpp">ByteArray.hpp</innerfile>
+    <innerfile refid="_index_8hpp">Index.hpp</innerfile>
+    <innerfile refid="_integer_8hpp">Integer.hpp</innerfile>
+    <innerfile refid="_real_8hpp">Real.hpp</innerfile>
+    <innerfile refid="_shared_8hpp">Shared.hpp</innerfile>
+    <innerfile refid="_sign_8hpp">Sign.hpp</innerfile>
+    <innerfile refid="_size_8hpp">Size.hpp</innerfile>
+    <innerfile refid="_string_8hpp">String.hpp</innerfile>
+    <innerfile refid="_unique_8hpp">Unique.hpp</innerfile>
+    <innerfile refid="_weak_8hpp">Weak.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Type/"/>
+  </compounddef>
+</doxygen>

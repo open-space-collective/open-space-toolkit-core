@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::utils::Print::LineBuffer</compoundname>
+    <includes refid="_print_8hpp" local="no">Print.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a09bb2971dab8435a8fdab5df1ca4fb09" prot="private" static="no" mutable="no">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::utils::Print::LineBuffer::stream_</definition>
+        <argsstring></argsstring>
+        <name>stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="41" column="22" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a7adeeea72276f9e563aca9e6bd579aed" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint ostk::core::utils::Print::LineBuffer::indentation_</definition>
+        <argsstring></argsstring>
+        <name>indentation_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="42" column="14" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a068be8d7623e32d2d1cbe11c42ecd1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::utils::Print::LineBuffer::LineBuffer</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, uint anIndentation)</argsstring>
+        <name>LineBuffer</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>anIndentation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="24" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a2e4d7000658fc88f76dfee037ef12adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::utils::Print::LineBuffer::LineBuffer</definition>
+        <argsstring>(const LineBuffer &amp;aLineBuffer)=delete</argsstring>
+        <name>LineBuffer</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kindref="compound">LineBuffer</ref> &amp;</type>
+          <declname>aLineBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="26" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ae41cb4c25cf9091302402efb6e221f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::utils::Print::LineBuffer::LineBuffer</definition>
+        <argsstring>(LineBuffer &amp;&amp;aLineBuffer)=default</argsstring>
+        <name>LineBuffer</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kindref="compound">LineBuffer</ref> &amp;&amp;</type>
+          <declname>aLineBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="28" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a4e41e82cf1085cdb1db3289b58305526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::utils::Print::LineBuffer::~LineBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~LineBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="30" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ac7609b62d8623d0f8717acc4c5102faf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kindref="compound">LineBuffer</ref> &amp;</type>
+        <definition>LineBuffer&amp; ostk::core::utils::Print::LineBuffer::operator&lt;&lt;</definition>
+        <argsstring>(const T &amp;anObject)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="33" column="9" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="21" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a7adeeea72276f9e563aca9e6bd579aed" prot="private" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>indentation_</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a068be8d7623e32d2d1cbe11c42ecd1bb" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>LineBuffer</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a2e4d7000658fc88f76dfee037ef12adb" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>LineBuffer</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ae41cb4c25cf9091302402efb6e221f68" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>LineBuffer</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ac7609b62d8623d0f8717acc4c5102faf" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a09bb2971dab8435a8fdab5df1ca4fb09" prot="private" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>stream_</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a4e41e82cf1085cdb1db3289b58305526" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>~LineBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

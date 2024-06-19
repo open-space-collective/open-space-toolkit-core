@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1type_1_1_byte_array" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::type::ByteArray</compoundname>
+    <includes refid="_byte_array_8hpp" local="no">ByteArray.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1type_1_1_byte_array_1a3293fc922db8d1247ab998a699f868c3" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" kindref="member">Byte</ref> &gt;</type>
+        <definition>Array&lt;Byte&gt; ostk::core::type::ByteArray::bytes_</definition>
+        <argsstring></argsstring>
+        <name>bytes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/ByteArray.hpp" line="24" column="11" bodyfile="include/OpenSpaceToolkit/Core/Type/ByteArray.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_byte_array_1af98e2afb35d6c8b22fec82569d04e000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::ByteArray::ByteArray</definition>
+        <argsstring>()=default</argsstring>
+        <name>ByteArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/ByteArray.hpp" line="21" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An array of bytes [TBI]. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Type/ByteArray.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/ByteArray.hpp" bodystart="18" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1type_1_1_byte_array_1af98e2afb35d6c8b22fec82569d04e000" prot="public" virt="non-virtual"><scope>ostk::core::type::ByteArray</scope><name>ByteArray</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_byte_array_1a3293fc922db8d1247ab998a699f868c3" prot="private" virt="non-virtual"><scope>ostk::core::type::ByteArray</scope><name>bytes_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

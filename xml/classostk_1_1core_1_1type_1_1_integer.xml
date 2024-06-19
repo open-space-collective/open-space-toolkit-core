@@ -1,0 +1,1741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1type_1_1_integer" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::type::Integer</compoundname>
+    <includes refid="_integer_8hpp" local="no">Integer.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1d" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1daec0fc0100c4fc1ce4eea230c3dc10360" prot="private">
+          <name>Undefined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1dac4e9522d7b3c8c652f7f0333ff436eec" prot="private">
+          <name>Defined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1dad40fc076e9ae949248845b94f160ba6e" prot="private">
+          <name>PositiveInfinity</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1dac65958e0f9944d63bb0d7744146b8b21" prot="private">
+          <name>NegativeInfinity</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="254" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="253" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t ostk::core::type::Integer::ValueType</definition>
+        <argsstring></argsstring>
+        <name>ValueType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="37" column="21" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1type_1_1_integer_1a13f491e3ccfc167a8d105f7ae09e7049" prot="private" static="no" mutable="no">
+        <type>Integer::Type</type>
+        <definition>Integer::Type ostk::core::type::Integer::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="263" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1type_1_1_integer_1a9ea2cf49bd7afd1b94b13a7945906d43" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref></type>
+        <definition>Integer::ValueType ostk::core::type::Integer::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="264" column="24" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::Integer</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Integer</name>
+        <briefdescription>
+<para>Default constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a4fc72a25e7f61432b2098093725b8d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::Integer</definition>
+        <argsstring>(Integer::ValueType anInteger)</argsstring>
+        <name>Integer</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer<sp/>integer(123)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="51" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a9daf76ce5bc5b66e4488c62b73e8cdff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::Integer</definition>
+        <argsstring>(float)=delete</argsstring>
+        <name>Integer</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+<para>Float constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1af8431620d855e469e0e24c521efb5ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::Integer</definition>
+        <argsstring>(double)=delete</argsstring>
+        <name>Integer</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+<para>Double constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="59" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ac851e140c41b975c2b034d7096e1139d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator=</definition>
+        <argsstring>(Integer::ValueType anInteger)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="66" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1acc92f0b9a9493b16c5f7304a03fef3d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator==</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(123)<sp/>==<sp/>Integer(123)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if integers are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="77" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a32347cb4d37babaed8adf7e769920cd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator!=</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(123)<sp/>!=<sp/>Integer(456)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if integers are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="88" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a55f12c3287baaa8aa94707982463c8d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&lt;</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Less than operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(123)<sp/>&lt;<sp/>Integer(456)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs integer is less than rhs integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="99" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a36353aac163154d1232a2b3e22af7096" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&lt;=</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Less than or equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(123)<sp/>&lt;=<sp/>Integer(456)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs integer is less than or equal to rhs integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="110" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a1190b59417b9bbf0e6fee31849c49ea6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&gt;</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Greater than operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(456)<sp/>&gt;<sp/>Integer(123)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs integer is greater than rhs integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="121" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a821091274878e29f976f75941eeab07b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&gt;=</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Greater than or equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(456)<sp/>&gt;=<sp/>Integer(123)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs integer is greater than or equal to rhs integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="132" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a8f90d8374d0338cc2217630b0578a342" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator==</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+<para>Equal to ValueType operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Integer(123)<sp/>==<sp/>123<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if integer is equal to ValueType </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="143" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a57b989c6aef0888b582c6de3158e9c09" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator!=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="144" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ade1d0185f0cfb6937464a3059dc6de80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&lt;</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="145" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1af0f0554cd055b9bef0114180d7ed6d41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&lt;=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="146" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ac958e59cc68d0bd22066e26539484521" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&gt;</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="147" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a907759d514493871f211b9aeb531f13c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::operator&gt;=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="148" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a840da6eea60a6153702492fb10cd0e91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator+</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="150" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="98" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a3da60f65256d9ea53e428eef0aa86dbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator-</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="151" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="142" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator*</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="152" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="189" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator/</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="153" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="297" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a9c8b8e0ccea0e6ce6ba041e4803f82a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator%</definition>
+        <argsstring>(const Integer &amp;anInteger) const</argsstring>
+        <name>operator%</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="154" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="361" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a8279142a73a70c82f60d19a39387617d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator+</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="156" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="399" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a7443c49dd698217a20b761dd993a9125" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator-</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="157" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a2d6297f52848f563022752f95cd32b5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator*</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="158" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="409" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1abcce2762fe5432ec6b9addbfa17c6872" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator/</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="159" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="414" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aca2f5ddfc0a95cac050d9768b800a0cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator%</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger) const</argsstring>
+        <name>operator%</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="160" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="419" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a4e86309c72a75e633fd28e555a076564" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::Integer::operator+</definition>
+        <argsstring>(const Real &amp;aReal) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="162" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a31d3db6ebf919599c6e869b17c1d6d79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::Integer::operator-</definition>
+        <argsstring>(const Real &amp;aReal) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="163" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a91ad1f9b2120532d28861321aa455a02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::Integer::operator*</definition>
+        <argsstring>(const Real &amp;aReal) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="164" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aa67dff815afc5867a22d8d3e98cdb977" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
+        <definition>Real ostk::core::type::Integer::operator/</definition>
+        <argsstring>(const Real &amp;aReal) const</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
+          <declname>aReal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="165" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aacd41966b1956dd167f54308dc458755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator+=</definition>
+        <argsstring>(const Integer &amp;anInteger)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="167" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="424" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a7aec2b588ec58be50cbfa0ced0b6c663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator-=</definition>
+        <argsstring>(const Integer &amp;anInteger)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="168" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="431" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a9fece39941c8d1a58b2ef87aa7d7292f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator*=</definition>
+        <argsstring>(const Integer &amp;anInteger)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="169" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="438" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ab924f49d110079b61d88b1d3fd15c3df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator/=</definition>
+        <argsstring>(const Integer &amp;anInteger)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="170" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="445" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aa2d6e813500339d0d6029a77c72ad1f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator%=</definition>
+        <argsstring>(const Integer &amp;anInteger)</argsstring>
+        <name>operator%=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="171" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="452" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a1be8fe1c94c0abceaee86a6f8b159e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator+=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="173" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="459" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a8ce90c3abee758c14b5dca60a5a7d1a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator-=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="174" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="466" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a246ae2a48da69d80a492f21de17e5e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator*=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="175" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="473" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a992f9a2be373522b185cab218c66fb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator/=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="176" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="480" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a45bd2392147043c8397443366ff1704e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator%=</definition>
+        <argsstring>(const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>operator%=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="177" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="487" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator+</definition>
+        <argsstring>() const</argsstring>
+        <name>operator+</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="185" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="519" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="186" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="524" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a53941213559dbfaa6ae92aa675a80773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="188" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="554" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aa0de7f1bcafa490a1a83dfc906509b9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+        <definition>Integer &amp; ostk::core::type::Integer::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="189" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="582" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a4e4bfa39344aba0c9c4fa377270d1a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator++</definition>
+        <argsstring>(int anInteger)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="191" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="610" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a7f74683394f5e2cad366fe6049d62eb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::operator--</definition>
+        <argsstring>(int anInteger)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="192" column="13" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="642" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a1f0e440eb8b7bf74b0dd7b805b87ba69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::operator Integer::ValueType</definition>
+        <argsstring>() const</argsstring>
+        <name>operator Integer::ValueType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="194" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a8a84f20e5c8b736b5254f6ae0d177b48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="198" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="717" bodyend="720"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a522f77fc886b22e29734a9e584b26849" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isZero</definition>
+        <argsstring>() const</argsstring>
+        <name>isZero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="199" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="722" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a81e7b9d1e789381c308e34bc151468b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isPositive</definition>
+        <argsstring>() const</argsstring>
+        <name>isPositive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="200" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="727" bodyend="730"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a51bf2c2d5c432f9abba213b4d7e92ee2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isNegative</definition>
+        <argsstring>() const</argsstring>
+        <name>isNegative</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="201" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="732" bodyend="735"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a983a158630178c50d1c8cdf4e81a8519" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isStrictlyPositive</definition>
+        <argsstring>() const</argsstring>
+        <name>isStrictlyPositive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="202" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="737" bodyend="740"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a722cef11d9c72b8bea1b2166c493e91f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isStrictlyNegative</definition>
+        <argsstring>() const</argsstring>
+        <name>isStrictlyNegative</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="203" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="742" bodyend="745"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a75beeba4a26144ef9b93f16fc25537f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isInfinity</definition>
+        <argsstring>() const</argsstring>
+        <name>isInfinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="204" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="747" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aaf8faf722b62ab745e9781c021c314ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isPositiveInfinity</definition>
+        <argsstring>() const</argsstring>
+        <name>isPositiveInfinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="205" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="752" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a21bdcbc09ccb8e6ede08c4eecc2020ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isNegativeInfinity</definition>
+        <argsstring>() const</argsstring>
+        <name>isNegativeInfinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="206" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="757" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a5556975e54c358123249847d68e93836" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isFinite</definition>
+        <argsstring>() const</argsstring>
+        <name>isFinite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="208" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="762" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1af5fa190a8559774d777560dce4255cee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isEven</definition>
+        <argsstring>() const</argsstring>
+        <name>isEven</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="209" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="767" bodyend="770"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a1d916597be7715421739b97aaa8f87f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::isOdd</definition>
+        <argsstring>() const</argsstring>
+        <name>isOdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="210" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="772" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a30a13889dc0649d1c3f4150fefef68c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">type::Sign</ref></type>
+        <definition>type::Sign ostk::core::type::Integer::getSign</definition>
+        <argsstring>() const</argsstring>
+        <name>getSign</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="212" column="16" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="777" bodyend="809"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a1c32bc50caf409318a6351014663b45f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref></type>
+        <definition>type::String ostk::core::type::Integer::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="214" column="18" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="811" bodyend="829"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1a6fb6698f82f68c6218093d704745ddde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer operator+</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="179" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="494" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1aff6329dcbc1e00c07de3c9dc336cdfdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer operator-</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="180" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="499" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1a410452509c7e5e063f2e4614fe4be5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer operator*</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="181" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="504" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1a61328fcdbfeebf2840a138de4f638789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer operator/</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="182" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="509" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1af4d5e25c08e343c57ca51238b238f962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer operator%</definition>
+        <argsstring>(const Integer::ValueType &amp;anInt, const Integer &amp;anInteger)</argsstring>
+        <name>operator%</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="183" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="514" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_integer_1aec29fc1731201932ab34cfe2ec83fbc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Integer &amp;anInteger)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="196" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="684" bodyend="715"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="216" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="831" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a73990a13680722c23e9254f19e388fd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Zero</definition>
+        <argsstring>()</argsstring>
+        <name>Zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="218" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="836" bodyend="839"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ae6d20770cc23c5cd9dd5b2ca5c7f52f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::PositiveInfinity</definition>
+        <argsstring>()</argsstring>
+        <name>PositiveInfinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="220" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="841" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ae0592880b743a962708bbe2824efed64" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::NegativeInfinity</definition>
+        <argsstring>()</argsstring>
+        <name>NegativeInfinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="222" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="846" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a4198a16333ff2504d3508bae2df41da6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Int8</definition>
+        <argsstring>(type::Int8 anInteger)</argsstring>
+        <name>Int8</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" kindref="member">type::Int8</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="224" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="851" bodyend="854"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aa37cda00e331e71027219490b6eb9c5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Int16</definition>
+        <argsstring>(type::Int16 anInteger)</argsstring>
+        <name>Int16</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" kindref="member">type::Int16</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="226" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="856" bodyend="859"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1afa6db52f1933da53fef54abec94bd591" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Int32</definition>
+        <argsstring>(type::Int32 anInteger)</argsstring>
+        <name>Int32</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" kindref="member">type::Int32</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="228" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="861" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1af006a469f1232693e219c6ff6933b93e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Int64</definition>
+        <argsstring>(type::Int64 anInteger)</argsstring>
+        <name>Int64</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" kindref="member">type::Int64</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="230" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="866" bodyend="879"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a5063b84487016221f45d4c9e87f7dd0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Uint8</definition>
+        <argsstring>(type::Uint8 anInteger)</argsstring>
+        <name>Uint8</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" kindref="member">type::Uint8</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="232" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="881" bodyend="884"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a6d3bca0a2bd84819448a4d9120f476f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Uint16</definition>
+        <argsstring>(type::Uint16 anInteger)</argsstring>
+        <name>Uint16</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" kindref="member">type::Uint16</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="234" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="886" bodyend="889"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ac1f98a0bdd2bd2fb5e8d52c143f33a41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Uint32</definition>
+        <argsstring>(type::Uint32 anInteger)</argsstring>
+        <name>Uint32</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" kindref="member">type::Uint32</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="236" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="891" bodyend="903"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1acdb2a042fc5898eae5766fd7230eea2d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Uint64</definition>
+        <argsstring>(type::Uint64 anInteger)</argsstring>
+        <name>Uint64</name>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" kindref="member">type::Uint64</ref></type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="238" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="905" bodyend="917"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a0a280c81bc89e98dbc44376bd3a51acc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Index</definition>
+        <argsstring>(const type::Index &amp;anIndex)</argsstring>
+        <name>Index</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">type::Index</ref> &amp;</type>
+          <declname>anIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="240" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="919" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aeba7badddda284a99924422e384524f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Size</definition>
+        <argsstring>(const type::Size &amp;aSize)</argsstring>
+        <name>Size</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">type::Size</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="242" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="929" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1aa4d7b5bc7fb1c387e65008f38f72511d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::CanParse</definition>
+        <argsstring>(char aCharacter)</argsstring>
+        <name>CanParse</name>
+        <param>
+          <type>char</type>
+          <declname>aCharacter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="244" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="939" bodyend="942"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a372091333d283bc7000176d6f536b4cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::Integer::CanParse</definition>
+        <argsstring>(const type::String &amp;aString)</argsstring>
+        <name>CanParse</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="246" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="944" bodyend="959"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ab5b9dbfb16e857b8ecd0579863287d76" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Parse</definition>
+        <argsstring>(char aCharacter)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>char</type>
+          <declname>aCharacter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="248" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="961" bodyend="973"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1ab8fcde71f1d6ff75594452873d966554" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
+        <definition>Integer ostk::core::type::Integer::Parse</definition>
+        <argsstring>(const type::String &amp;aString)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="250" column="20" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="975" bodyend="1007"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_integer_1a84643ebf43398719dc6f463f2c197794" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::Integer::Integer</definition>
+        <argsstring>(const Integer::Type &amp;aType, const Integer::ValueType &amp;anInteger)</argsstring>
+        <name>Integer</name>
+        <param>
+          <type>const Integer::Type &amp;</type>
+          <declname>aType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" kindref="member">Integer::ValueType</ref> &amp;</type>
+          <declname>anInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="266" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="1009" bodyend="1013"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> type. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="35" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="34" bodyend="267"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aa4d7b5bc7fb1c387e65008f38f72511d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>CanParse</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a372091333d283bc7000176d6f536b4cb" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>CanParse</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a30a13889dc0649d1c3f4150fefef68c9" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>getSign</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a0a280c81bc89e98dbc44376bd3a51acc" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Index</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aa37cda00e331e71027219490b6eb9c5f" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Int16</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1afa6db52f1933da53fef54abec94bd591" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Int32</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1af006a469f1232693e219c6ff6933b93e" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Int64</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a4198a16333ff2504d3508bae2df41da6" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Int8</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ae4b4c6d8b7b83b3ee2f4deaabd678e56" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Integer</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a4fc72a25e7f61432b2098093725b8d70" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Integer</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a9daf76ce5bc5b66e4488c62b73e8cdff" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Integer</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1af8431620d855e469e0e24c521efb5ddd" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Integer</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a84643ebf43398719dc6f463f2c197794" prot="private" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Integer</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a8a84f20e5c8b736b5254f6ae0d177b48" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1af5fa190a8559774d777560dce4255cee" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isEven</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a5556975e54c358123249847d68e93836" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isFinite</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a75beeba4a26144ef9b93f16fc25537f3" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isInfinity</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a51bf2c2d5c432f9abba213b4d7e92ee2" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isNegative</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a21bdcbc09ccb8e6ede08c4eecc2020ba" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isNegativeInfinity</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a1d916597be7715421739b97aaa8f87f6" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isOdd</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a81e7b9d1e789381c308e34bc151468b0" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isPositive</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aaf8faf722b62ab745e9781c021c314ef" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isPositiveInfinity</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a722cef11d9c72b8bea1b2166c493e91f" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isStrictlyNegative</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a983a158630178c50d1c8cdf4e81a8519" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isStrictlyPositive</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a522f77fc886b22e29734a9e584b26849" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>isZero</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ae0592880b743a962708bbe2824efed64" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>NegativeInfinity</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a1f0e440eb8b7bf74b0dd7b805b87ba69" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator Integer::ValueType</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a32347cb4d37babaed8adf7e769920cd5" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a57b989c6aef0888b582c6de3158e9c09" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a9c8b8e0ccea0e6ce6ba041e4803f82a4" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator%</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aca2f5ddfc0a95cac050d9768b800a0cc" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator%</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1af4d5e25c08e343c57ca51238b238f962" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator%</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aa2d6e813500339d0d6029a77c72ad1f7" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator%=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a45bd2392147043c8397443366ff1704e" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator%=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a325236cbbcd18bbc54ff93bf13ecd311" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a2d6297f52848f563022752f95cd32b5b" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a91ad1f9b2120532d28861321aa455a02" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a410452509c7e5e063f2e4614fe4be5f1" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a9fece39941c8d1a58b2ef87aa7d7292f" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a246ae2a48da69d80a492f21de17e5e6d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator*=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a840da6eea60a6153702492fb10cd0e91" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a8279142a73a70c82f60d19a39387617d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a4e86309c72a75e633fd28e555a076564" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a6fb6698f82f68c6218093d704745ddde" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a484fbd67e4864447a04b6cb4c1260667" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a53941213559dbfaa6ae92aa675a80773" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator++</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a4e4bfa39344aba0c9c4fa377270d1a4b" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator++</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aacd41966b1956dd167f54308dc458755" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a1be8fe1c94c0abceaee86a6f8b159e55" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator+=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a3da60f65256d9ea53e428eef0aa86dbe" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a7443c49dd698217a20b761dd993a9125" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a31d3db6ebf919599c6e869b17c1d6d79" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aff6329dcbc1e00c07de3c9dc336cdfdd" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1afd52937e53bd4bf39b45afe1e3d74d46" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aa0de7f1bcafa490a1a83dfc906509b9c" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator--</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a7f74683394f5e2cad366fe6049d62eb2" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator--</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a7aec2b588ec58be50cbfa0ced0b6c663" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a8ce90c3abee758c14b5dca60a5a7d1a5" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator-=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a02d5a7b6d4abcfb945f7fd3266229177" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1abcce2762fe5432ec6b9addbfa17c6872" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aa67dff815afc5867a22d8d3e98cdb977" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a61328fcdbfeebf2840a138de4f638789" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ab924f49d110079b61d88b1d3fd15c3df" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a992f9a2be373522b185cab218c66fb8d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator/=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a55f12c3287baaa8aa94707982463c8d9" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&lt;</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ade1d0185f0cfb6937464a3059dc6de80" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&lt;</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aec29fc1731201932ab34cfe2ec83fbc9" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a36353aac163154d1232a2b3e22af7096" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&lt;=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1af0f0554cd055b9bef0114180d7ed6d41" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&lt;=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ac851e140c41b975c2b034d7096e1139d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1acc92f0b9a9493b16c5f7304a03fef3d4" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a8f90d8374d0338cc2217630b0578a342" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a1190b59417b9bbf0e6fee31849c49ea6" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&gt;</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ac958e59cc68d0bd22066e26539484521" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&gt;</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a821091274878e29f976f75941eeab07b" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&gt;=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a907759d514493871f211b9aeb531f13c" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>operator&gt;=</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ab5b9dbfb16e857b8ecd0579863287d76" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Parse</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ab8fcde71f1d6ff75594452873d966554" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Parse</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ae6d20770cc23c5cd9dd5b2ca5c7f52f4" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>PositiveInfinity</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1aeba7badddda284a99924422e384524f6" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Size</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a1c32bc50caf409318a6351014663b45f" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>toString</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1d" prot="private" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Type</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a13f491e3ccfc167a8d105f7ae09e7049" prot="private" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>type_</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a6d3bca0a2bd84819448a4d9120f476f8" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Uint16</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1ac1f98a0bdd2bd2fb5e8d52c143f33a41" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Uint32</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1acdb2a042fc5898eae5766fd7230eea2d" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Uint64</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a5063b84487016221f45d4c9e87f7dd0b" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Uint8</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a9ea2cf49bd7afd1b94b13a7945906d43" prot="private" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>value_</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a690a18bd9f78b063554d7a3e1dc3d0ed" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>ValueType</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_integer_1a73990a13680722c23e9254f19e388fd0" prot="public" virt="non-virtual"><scope>ostk::core::type::Integer</scope><name>Zero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

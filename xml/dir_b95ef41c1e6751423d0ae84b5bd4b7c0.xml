@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b95ef41c1e6751423d0ae84b5bd4b7c0" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/Core/Container/Table</compoundname>
+    <innerfile refid="_row_8cpp">Row.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/Container/Table/"/>
+  </compounddef>
+</doxygen>

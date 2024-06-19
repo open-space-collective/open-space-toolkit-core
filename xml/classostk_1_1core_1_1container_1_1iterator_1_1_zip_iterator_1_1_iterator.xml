@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::iterator::ZipIterator::Iterator</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">std::iterator&lt; std::forward_iterator_tag, std::tuple&lt; decltype(*std::declval&lt; T &gt;().begin())... &gt; &gt;</basecompoundref>
+    <includes refid="_zip_8hpp" local="no">Zip.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" prot="public" static="no" mutable="no">
+        <type>std::tuple&lt; decltype(std::declval&lt; T &gt;).<ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1ae4c8c2625fedbb5ce799ef15fef96c1a" kindref="member">begin</ref>())... &gt;</type>
+        <definition>std::tuple&lt;decltype(std::declval&lt;T&gt;).begin())...&gt; ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::iterators_</definition>
+        <argsstring></argsstring>
+        <name>iterators_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="30" column="22" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a62922888770b995d6ea7a3f54068c2ed" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::Iterator</definition>
+        <argsstring>(decltype(iterators_) anIteratorList)</argsstring>
+        <name>Iterator</name>
+        <param>
+          <type>decltype(<ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" kindref="member">iterators_</ref>)</type>
+          <declname>anIteratorList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="32" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a4c9c979ef43c93647970416b3a0a8b9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
+        <definition>Iterator&amp; ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="37" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a17f719da0f404bf820aff3dd790474b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="44" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a1f8d3567cd758e2e05378f0de74dc3b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::operator!=</definition>
+        <argsstring>(const Iterator &amp;anIterator) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>anIterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="53" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a059837024f85829b815a7f276e65b50e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="58" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1ac88c140fc1636994df3294113bbf26ee" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t...</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::deref</definition>
+        <argsstring>(std::index_sequence&lt; I... &gt;) const</argsstring>
+        <name>deref</name>
+        <param>
+          <type>std::index_sequence&lt; I... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="65" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t...</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator::increment</definition>
+        <argsstring>(std::index_sequence&lt; I... &gt;)</argsstring>
+        <name>increment</name>
+        <param>
+          <type>std::index_sequence&lt; I... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="71" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::iterator&lt; std::forward_iterator_tag, std::tuple&lt; decltype(*std::declval&lt; T &gt;().begin())... &gt; &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator</label>
+        <link refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::iterator&lt; std::forward_iterator_tag, std::tuple&lt; decltype(*std::declval&lt; T &gt;().begin())... &gt; &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::container::iterator::ZipIterator&lt; T &gt;::Iterator</label>
+        <link refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="27" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1ac88c140fc1636994df3294113bbf26ee" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>deref</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>increment</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a62922888770b995d6ea7a3f54068c2ed" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>Iterator</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>iterators_</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a1f8d3567cd758e2e05378f0de74dc3b9" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a059837024f85829b815a7f276e65b50e" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>operator*</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a4c9c979ef43c93647970416b3a0a8b9d" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>operator++</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a17f719da0f404bf820aff3dd790474b7" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>operator++</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

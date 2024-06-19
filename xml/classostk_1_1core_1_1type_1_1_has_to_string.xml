@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1type_1_1_has_to_string" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::type::HasToString</compoundname>
+    <includes refid="_string_8hpp" local="no">String.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classostk_1_1core_1_1type_1_1_has_to_string_1a7f6fad759eb8bb7d96b72f6fa76f6203" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <enumvalue id="classostk_1_1core_1_1type_1_1_has_to_string_1a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131" prot="public">
+          <name>value</name>
+          <initializer>= sizeof(test&lt;T&gt;(0)) == sizeof(YesType)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="168" column="5" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classostk_1_1core_1_1type_1_1_has_to_string_1a244bb20c403ac7a2da969e39bd4306d9" prot="private" static="no">
+        <type>char</type>
+        <definition>typedef char ostk::core::type::HasToString&lt; T &gt;::YesType[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>YesType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="158" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classostk_1_1core_1_1type_1_1_has_to_string_1ab92f53762655bae8eca8ef2e496e04c0" prot="private" static="no">
+        <type>char</type>
+        <definition>typedef char ostk::core::type::HasToString&lt; T &gt;::NoType[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>NoType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="159" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_has_to_string_1a36ad73db1f710c9380c1499eee0ba486" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+          </param>
+        </templateparamlist>
+        <type>YesType &amp;</type>
+        <definition>static YesType&amp; ostk::core::type::HasToString&lt; T &gt;::test</definition>
+        <argsstring>(decltype(&amp;C::toString))</argsstring>
+        <name>test</name>
+        <param>
+          <type>decltype &amp;::toString</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="162" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_has_to_string_1a31d34de008c75d0b00e3a996e03b8874" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+          </param>
+        </templateparamlist>
+        <type>NoType &amp;</type>
+        <definition>static NoType&amp; ostk::core::type::HasToString&lt; T &gt;::test</definition>
+        <argsstring>(...)</argsstring>
+        <name>test</name>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="164" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ulink url="https://gist.github.com/fenbf/d2cd670704b82e2ce7fd">https://gist.github.com/fenbf/d2cd670704b82e2ce7fd</ulink> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="156" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="155" bodyend="171"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1ab92f53762655bae8eca8ef2e496e04c0" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>NoType</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a36ad73db1f710c9380c1499eee0ba486" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>test</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a31d34de008c75d0b00e3a996e03b8874" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>test</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131" prot="public" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>value</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a244bb20c403ac7a2da969e39bd4306d9" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>YesType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

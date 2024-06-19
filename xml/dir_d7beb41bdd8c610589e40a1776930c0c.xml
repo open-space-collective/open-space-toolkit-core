@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d7beb41bdd8c610589e40a1776930c0c" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Utility</compoundname>
+    <innerfile refid="_print_8hpp">Print.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Utility/"/>
+  </compounddef>
+</doxygen>

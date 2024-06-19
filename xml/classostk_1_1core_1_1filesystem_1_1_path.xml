@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1filesystem_1_1_path" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::filesystem::Path</compoundname>
+    <includes refid="_path_8hpp" local="no">Path.hpp</includes>
+    <innerclass refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl" prot="public">ostk::core::filesystem::Path::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_path_1a993c1d4eba6c5eac5aca037d2a955a25" prot="private" static="no" mutable="no">
+        <type>Unique&lt; Path::Impl &gt;</type>
+        <definition>Unique&lt;Path::Impl&gt; ostk::core::filesystem::Path::implUPtr_</definition>
+        <argsstring></argsstring>
+        <name>implUPtr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="266" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a02d3f4ae51b899a880b716cd8f4ddd3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Path::Path</definition>
+        <argsstring>(const Path &amp;aPath)</argsstring>
+        <name>Path</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="30" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1adaf95b0c85488ad0e2adb367b0f6abdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Path::~Path</definition>
+        <argsstring>()</argsstring>
+        <name>~Path</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="34" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a1115a751ca2c6e9ba40adeb8de01b229" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+        <definition>Path &amp; ostk::core::filesystem::Path::operator=</definition>
+        <argsstring>(const Path &amp;aPath)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="41" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1acac1dddfbbe0ba250cacfc2e3673224f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Path::operator==</definition>
+        <argsstring>(const Path &amp;aPath) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>firstPath<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>secondPath<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstPath<sp/>==<sp/>secondPath<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if paths are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="54" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="47" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a8225e86412c9c09a8829624b9d8d1283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Path::operator!=</definition>
+        <argsstring>(const Path &amp;aPath) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>firstPath<sp/>=<sp/>Path::Parse(&quot;/path/to/first/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>secondPath<sp/>=<sp/>Path::Parse(&quot;/path/to/second/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstPath<sp/>!=<sp/>secondPath<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if paths are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="67" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a8296e690dcfdb364d3414421052104b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::operator+</definition>
+        <argsstring>(const Path &amp;aPath) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Addition operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Append path to path
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path&quot;)<sp/>+<sp/>Path::Parse(&quot;./to/file&quot;)<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="80" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a4b3ef62c4fb4d91d8ecd76f5e4afe4d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+        <definition>Path &amp; ostk::core::filesystem::Path::operator+=</definition>
+        <argsstring>(const Path &amp;aPath)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Addition assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Append path to path
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">path<sp/>+=<sp/>Path::Parse(&quot;./to/file&quot;)<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="94" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="71" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aecd66a5bf86b41374c9256831577f689" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Path::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+<para>Check if path is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">path.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if path is defined </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aa6d0534d0e162b76a623baa7ae421280" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Path::isAbsolute</definition>
+        <argsstring>() const</argsstring>
+        <name>isAbsolute</name>
+        <briefdescription>
+<para>Check if path is absolute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">path.isAbsolute()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if path is absolute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="129" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="111" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a9df1286241b0309e53766a284ea3c18b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::Path::isRelative</definition>
+        <argsstring>() const</argsstring>
+        <name>isRelative</name>
+        <briefdescription>
+<para>Check if path is relative. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;./path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">path.isRelative()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if path is relative </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="140" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="121" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab5a9418eda9883fa2a72b067fc7145a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::getParentPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentPath</name>
+        <briefdescription>
+<para>Get parent path of path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>parentPath<sp/>=<sp/>path.getParentPath()<sp/>;<sp/>//<sp/>/path/to</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Parent path of path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="151" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="131" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aa92eb9cc5209fd5c41cb1ecc8777cd06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::Path::getLastElement</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastElement</name>
+        <briefdescription>
+<para>Get last element of path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">String<sp/>element<sp/>=<sp/>path.getLastElement()<sp/>;<sp/>//<sp/>file</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Last element of path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="162" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="152" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a6eb6808eeb1d03810e485f91825aae98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::getNormalizedPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getNormalizedPath</name>
+        <briefdescription>
+<para>Get normalized path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/../to/./file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>normalizedPath<sp/>=<sp/>path.getNormalizedPath()<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Normalized path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="173" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="171" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a22653239f49248fd5c081a6560baec8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::getAbsolutePath</definition>
+        <argsstring>(const Path &amp;aBasePath=Path::Current()) const</argsstring>
+        <name>getAbsolutePath</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aBasePath</declname>
+          <defval><ref refid="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" kindref="member">Path::Current</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Get absolute path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;./to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>absolutePath<sp/>=<sp/>path.getAbsolutePath()<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aBasePath A base path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Absolute path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="185" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="192" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab4309ce6b68c58c5befe2f479de6842f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::getRelativePathTo</definition>
+        <argsstring>(const Path &amp;aReferencePath) const</argsstring>
+        <name>getRelativePathTo</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aReferencePath</declname>
+        </param>
+        <briefdescription>
+<para>Get path relative to path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>referencePath<sp/>=<sp/>Path::Parse(&quot;/path&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Path<sp/>relativePath<sp/>=<sp/>path.getRelativePathTo(referencePath)<sp/>;<sp/>//<sp/>./file</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReferencePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Absolute path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="198" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab5ea209f4b4984efbec83f1def2011ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::filesystem::Path::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+<para>Get serialized path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path::Parse(&quot;/path/to/file&quot;).toString()<sp/>;<sp/>//<sp/>&quot;/path/to/file&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Serialized path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="208" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="224" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1filesystem_1_1_path_1a87813ac3ede0b43b50ae6b9fdf0a2815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Path &amp;aPath)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>path<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="107" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="95" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ac2748cd44b01913bffb0f0beb58cee13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+<para>Constructs an undefined path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">path.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Undefined path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="219" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="243" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ac44f214afcd0a549eb46abbb58a91e45" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::Root</definition>
+        <argsstring>()</argsstring>
+        <name>Root</name>
+        <briefdescription>
+<para>Constructs a root path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Root()<sp/>;<sp/>//<sp/>/</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Root path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="229" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="248" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::Current</definition>
+        <argsstring>()</argsstring>
+        <name>Current</name>
+        <briefdescription>
+<para>Constructs a current path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Current()<sp/>;<sp/>//<sp/>/app/build</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Current path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="239" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="257" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a478763ba7e88a5cc99809eae958d95f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>Path ostk::core::filesystem::Path::Parse</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a path from a given string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file.txt&quot;)<sp/>;<sp/>//<sp/>/path/to/file.txt</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="250" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="273" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a4203822b86cdaf2542b292d214e5e113" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
+        <definition>static Path ostk::core::filesystem::Path::Strings</definition>
+        <argsstring>(const std::initializer_list&lt; String &gt; aStringList)</argsstring>
+        <name>Strings</name>
+        <param>
+          <type>const std::initializer_list&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt;</type>
+          <declname>aStringList</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a path from a list of string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Strings({&quot;/&quot;,<sp/>&quot;path&quot;,<sp/>&quot;to&quot;,<sp/>&quot;file.txt&quot;})<sp/>;<sp/>//<sp/>/path/to/file.txt</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aStringList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="261" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aeb871df89eee3d74a659da926756e7b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Path::Path</definition>
+        <argsstring>()</argsstring>
+        <name>Path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="268" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="293" bodyend="296"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="23" bodyend="269"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Current</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a22653239f49248fd5c081a6560baec8b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getAbsolutePath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aa92eb9cc5209fd5c41cb1ecc8777cd06" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getLastElement</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a6eb6808eeb1d03810e485f91825aae98" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getNormalizedPath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab5a9418eda9883fa2a72b067fc7145a6" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getParentPath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab4309ce6b68c58c5befe2f479de6842f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getRelativePathTo</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a993c1d4eba6c5eac5aca037d2a955a25" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>implUPtr_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aa6d0534d0e162b76a623baa7ae421280" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>isAbsolute</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aecd66a5bf86b41374c9256831577f689" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a9df1286241b0309e53766a284ea3c18b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>isRelative</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a8225e86412c9c09a8829624b9d8d1283" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a8296e690dcfdb364d3414421052104b7" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a4b3ef62c4fb4d91d8ecd76f5e4afe4d4" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator+=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a87813ac3ede0b43b50ae6b9fdf0a2815" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a1115a751ca2c6e9ba40adeb8de01b229" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1acac1dddfbbe0ba250cacfc2e3673224f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a478763ba7e88a5cc99809eae958d95f2" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Parse</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a02d3f4ae51b899a880b716cd8f4ddd3f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Path</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aeb871df89eee3d74a659da926756e7b5" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Path</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ac44f214afcd0a549eb46abbb58a91e45" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Root</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a4203822b86cdaf2542b292d214e5e113" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Strings</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab5ea209f4b4984efbec83f1def2011ce" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>toString</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ac2748cd44b01913bffb0f0beb58cee13" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1adaf95b0c85488ad0e2adb367b0f6abdc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>~Path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

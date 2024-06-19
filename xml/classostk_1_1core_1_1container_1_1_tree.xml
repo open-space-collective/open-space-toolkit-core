@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1_tree" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::Tree</compoundname>
+    <includes refid="_tree_8hpp" local="no">Tree.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a6957b96965368f6dd283c5986b82f00c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Tree::Tree</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a1e87f651a4bc19e42c89b0bae8dd965b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Tree::Tree</definition>
+        <argsstring>(const Tree &amp;aTree)</argsstring>
+        <name>Tree</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> &amp;</type>
+          <declname>aTree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a4024924e1a48e9cc1d32065a306cb840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Tree::~Tree</definition>
+        <argsstring>()</argsstring>
+        <name>~Tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="30" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1ac2cca9d5261c57d25d704ae49d517fbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> &amp;</type>
+        <definition>Tree&amp; ostk::core::container::Tree::operator=</definition>
+        <argsstring>(const Tree &amp;aTree) const</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> &amp;</type>
+          <declname>aTree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a43db1f621767f4dcee49611cee3d7d9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Tree::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="36" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1container_1_1_tree_1aca74cf66509d8f31b83b1c100cb00bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Tree &amp;aTree)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> &amp;</type>
+          <declname>aTree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="34" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a747219067a849456b83b66061fc3a1f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref></type>
+        <definition>static Tree ostk::core::container::Tree::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="38" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a6a8a27586220318a879ce5e68ef3fb27" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref></type>
+        <definition>static Tree ostk::core::container::Tree::Object</definition>
+        <argsstring>(const Object &amp;anObject)</argsstring>
+        <name>Object</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>anObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="40" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Undirected graph in which any two vertices are connected by exactly one path. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>                        A tree data structure can be defined recursively (locally) as a collection of nodes
+                        (starting at a root node), where each node is a data structure consisting of a value,
+                        together with a list of references to nodes (the &quot;children&quot;), with the constraints that
+                        no reference is duplicated, and none points to the root.
+</verbatim></para>
+<para><ulink url="https://en.wikipedia.org/wiki/Tree_">https://en.wikipedia.org/wiki/Tree_</ulink>(graph_theory) <ulink url="https://en.wikipedia.org/wiki/Tree_">https://en.wikipedia.org/wiki/Tree_</ulink>(data_structure) </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tree.hpp" bodystart="23" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a747219067a849456b83b66061fc3a1f5" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>Empty</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a43db1f621767f4dcee49611cee3d7d9e" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a6a8a27586220318a879ce5e68ef3fb27" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>Object</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1aca74cf66509d8f31b83b1c100cb00bea" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1ac2cca9d5261c57d25d704ae49d517fbd" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a6957b96965368f6dd283c5986b82f00c" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>Tree</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a1e87f651a4bc19e42c89b0bae8dd965b" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>Tree</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_tree_1a4024924e1a48e9cc1d32065a306cb840" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>~Tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

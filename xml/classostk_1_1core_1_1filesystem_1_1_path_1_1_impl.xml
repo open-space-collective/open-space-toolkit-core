@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::filesystem::Path::Impl</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a8e73b348b16f9c30a3d405c176701e4b" prot="public" static="no" mutable="no">
+        <type>boost::filesystem::path</type>
+        <definition>boost::filesystem::path ostk::core::filesystem::Path::Impl::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="20" column="29" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a2563230dfbb8fc9f46b4dfd67357021d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::Path::Impl::Impl</definition>
+        <argsstring>(const boost::filesystem::path &amp;aPath)</argsstring>
+        <name>Impl</name>
+        <param>
+          <type>const boost::filesystem::path &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="22" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="18" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="17" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a2563230dfbb8fc9f46b4dfd67357021d" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path::Impl</scope><name>Impl</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a8e73b348b16f9c30a3d405c176701e4b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path::Impl</scope><name>path_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

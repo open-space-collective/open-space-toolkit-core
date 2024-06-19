@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_triple_8tpp" kind="file" language="C++">
+    <compoundname>Triple.tpp</compoundname>
+    <includedby refid="_triple_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Triple.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Container/Triple.hpp</label>
+        <link refid="_triple_8hpp"/>
+      </node>
+      <node id="1">
+        <label>src/OpenSpaceToolkit/Core/Container/Triple.tpp</label>
+        <link refid="_triple_8tpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">///<sp/>Apache<sp/>License<sp/>2.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">namespace<sp/>ostk</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">namespace<sp/>core</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">namespace<sp/>container</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">template<sp/>&lt;typename<sp/>T,<sp/>typename<sp/>U,<sp/>typename<sp/>V&gt;</highlight></codeline>
+<codeline><highlight class="normal">Triple&lt;T,<sp/>U,<sp/>V&gt;<sp/>make_triple(const<sp/>T&amp;<sp/>aFirstElement,<sp/>const<sp/>U&amp;<sp/>aSecondElement,<sp/>const<sp/>V&amp;<sp/>aThirdElement)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Triple&lt;T,<sp/>U,<sp/>V&gt;<sp/>triple;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>triple.first<sp/>=<sp/>aFirstElement;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>triple.second<sp/>=<sp/>aSecondElement;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>triple.third<sp/>=<sp/>aThirdElement;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>triple;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}<sp/><sp/>//<sp/>namespace<sp/>container</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/>//<sp/>namespace<sp/>core</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/>//<sp/>namespace<sp/>ostk</highlight></codeline>
+    </programlisting>
+    <location file="src/OpenSpaceToolkit/Core/Container/Triple.tpp"/>
+  </compounddef>
+</doxygen>

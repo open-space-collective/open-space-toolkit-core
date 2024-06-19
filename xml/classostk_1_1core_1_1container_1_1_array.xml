@@ -1,0 +1,1221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1container_1_1_array" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::container::Array</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; T &gt;</basecompoundref>
+    <includes refid="_array_8hpp" local="no">Array.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" prot="public" static="no">
+        <type>std::vector&lt; T &gt;::const_iterator</type>
+        <definition>typedef std::vector&lt;T&gt;::const_iterator ostk::core::container::Array&lt; T &gt;::ConstIterator</definition>
+        <argsstring></argsstring>
+        <name>ConstIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="35" column="51" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" prot="public" static="no">
+        <type>std::vector&lt; T &gt;::iterator</type>
+        <definition>typedef std::vector&lt;T&gt;::iterator ostk::core::container::Array&lt; T &gt;::Iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="36" column="45" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" prot="public" static="no">
+        <type>std::function&lt; bool(const T &amp;)&gt;</type>
+        <definition>typedef std::function&lt;bool(const T&amp;)&gt; ostk::core::container::Array&lt; T &gt;::Predicate</definition>
+        <argsstring></argsstring>
+        <name>Predicate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="37" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>()</argsstring>
+        <name>Array</name>
+        <briefdescription>
+<para>Default constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a4852ac57202e8781d95529d156dcd3d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;aVector)</argsstring>
+        <name>Array</name>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>aVector</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an array from a C++ Standard Library vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">std::vector&lt;Integer&gt;<sp/>vector<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array(vector)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aVector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="52" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae2b91188c5b673de253b494287ebcc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(const Size &amp;aSize, const T &amp;aValue)</argsstring>
+        <name>Array</name>
+        <param>
+          <type>const Size &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an array of given size populated with a given value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;String&gt;<sp/>array(3,<sp/>&quot;abc&quot;)<sp/>;<sp/>//<sp/>[&quot;abc&quot;,<sp/>&quot;abc&quot;,<sp/>&quot;abc&quot;]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ad8ebc43a185418e004017aae36bc83b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(InputIterator aFirstIterator, InputIterator aLastIterator, const typename std::vector&lt; T &gt;::allocator_type &amp;anAllocator=typename std::vector&lt; T &gt;::allocator_type())</argsstring>
+        <name>Array</name>
+        <param>
+          <type>InputIterator</type>
+          <declname>aFirstIterator</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>aLastIterator</declname>
+        </param>
+        <param>
+          <type>const typename std::vector&lt; T &gt;::allocator_type &amp;</type>
+          <declname>anAllocator</declname>
+          <defval>typename std::vector&lt; T &gt;::allocator_type()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a6f6cf6e7e042b1ab3e3ec6bd3b9a5850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(std::initializer_list&lt; T &gt; aList)</argsstring>
+        <name>Array</name>
+        <param>
+          <type>std::initializer_list&lt; T &gt;</type>
+          <declname>aList</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an array using an initializer list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An initializer list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="80" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a4b93e437ebc4108b12b021091f44620d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(const Array &amp;anArray)=default</argsstring>
+        <name>Array</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="86" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a620c83d378ed652d54caf1613d567249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(Array &amp;&amp;anArray)=default</argsstring>
+        <name>Array</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> &amp;&amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor (array) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="92" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aec8aa7415c0d09d7a4a8ec1e3b63568a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::container::Array&lt; T &gt;::Array</definition>
+        <argsstring>(std::vector&lt; T &gt; &amp;&amp;aVector)</argsstring>
+        <name>Array</name>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;&amp;</type>
+          <declname>aVector</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor (vector) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aVector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="98" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aa0f1dd01d56624d0478ff4de87230d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+        <definition>Array&lt;T&gt;&amp; ostk::core::container::Array&lt; T &gt;::operator=</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="105" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a2bc9fd90ce72d0cba9616ff16b4441d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+        <definition>Array&lt;T&gt;&amp; ostk::core::container::Array&lt; T &gt;::operator=</definition>
+        <argsstring>(Array&lt; T &gt; &amp;&amp;anArray)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;&amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Move assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="112" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a17058cdfb4c04ed41b1b5cead35cf973" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
+        <definition>Array&lt;T&gt; ostk::core::container::Array&lt; T &gt;::operator+</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Concatenate array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>a<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>b<sp/>=<sp/>{4,<sp/>5,<sp/>6}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>c<sp/>=<sp/>a<sp/>+<sp/>b<sp/>;<sp/>//<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5,<sp/>6}</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array to append </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An concatenated array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="125" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ac30877a0e3663ad5158e2639cc32455f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Array&lt; T &gt;::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+<para>Check if array is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.isEmpty()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if array is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="150" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae035b7590373b178035f33733158877e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Array&lt; T &gt;::contains</definition>
+        <argsstring>(const T &amp;anElement) const</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Check if array contains element (by value) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.contains(2)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if array contains element (by value) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="162" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Array&lt; T &gt;::isNear</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray, const T &amp;aTolerance) const</argsstring>
+        <name>isNear</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>aTolerance</declname>
+        </param>
+        <briefdescription>
+<para>Check if array is near another array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Real&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Real&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstArray.isNear(secondArray,<sp/>1e-15)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aTolerance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tolerance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if array is near another array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="176" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af8f48574ba41c8cbea39de23ecdba7aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::container::Array&lt; T &gt;::isNear</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray, const std::function&lt; bool(const T &amp;, const T &amp;)&gt; &amp;aComparator) const</argsstring>
+        <name>isNear</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; bool(const T &amp;, const T &amp;)&gt; &amp;</type>
+          <declname>aComparator</declname>
+        </param>
+        <briefdescription>
+<para>Check if array is near another array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Real&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Real&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstArray.isNear(secondArray,</highlight></codeline>
+<codeline><highlight class="normal">[]<sp/>(const<sp/>Real&amp;<sp/>aFirstValue,<sp/>const<sp/>Real&amp;<sp/>aSecondValue)<sp/>-&gt;<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">{<sp/>return<sp/>aFirstValue.isNear(aSecondValue,<sp/>1e-15)<sp/>;<sp/>})<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aComparator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A comparator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if array is near another array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="192" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::accessFirst</definition>
+        <argsstring>() const</argsstring>
+        <name>accessFirst</name>
+        <briefdescription>
+<para>Access first element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>Integer&amp;<sp/>element<sp/>=<sp/>array.accessFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to the first element of array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="203" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::accessLast</definition>
+        <argsstring>() const</argsstring>
+        <name>accessLast</name>
+        <briefdescription>
+<para>Access last element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>Integer&amp;<sp/>element<sp/>=<sp/>array.accessLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to the last element of array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="214" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size ostk::core::container::Array&lt; T &gt;::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Get array size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Size<sp/>size<sp/>=<sp/>array.getSize()<sp/>;<sp/>//<sp/>3</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="225" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Index</type>
+        <definition>Index ostk::core::container::Array&lt; T &gt;::getIndexOf</definition>
+        <argsstring>(const T &amp;anElement) const</argsstring>
+        <name>getIndexOf</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Get index of element (by value) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Index<sp/>index<sp/>=<sp/>array.getIndexOf(2)<sp/>;<sp/>//<sp/>1</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of element (by value) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="237" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae0b2aff1ac2bda149f0f7fef323ca65b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref></type>
+        <definition>type::String ostk::core::container::Array&lt; T &gt;::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+<para>Get string representation of array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">String<sp/>string<sp/>=<sp/>array.toString()<sp/>;<sp/>//<sp/>&quot;[1,<sp/>2,<sp/>3]&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>String representation of array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="248" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; const T * &gt;</type>
+        <definition>Array&lt;const T*&gt; ostk::core::container::Array&lt; T &gt;::accessWhere</definition>
+        <argsstring>(const Array&lt; T &gt;::Predicate &amp;aPredicate) const</argsstring>
+        <name>accessWhere</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Predicate</ref> &amp;</type>
+          <declname>aPredicate</declname>
+        </param>
+        <briefdescription>
+<para>Get array of pointers to element based on condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;const<sp/>Integer*&gt;<sp/>elements<sp/>=<sp/>array.accessWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[&amp;0,<sp/>&amp;2,<sp/>&amp;4]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPredicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A predicate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> of pointers to element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="261" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
+        <definition>Array&lt;T&gt; ostk::core::container::Array&lt; T &gt;::getWhere</definition>
+        <argsstring>(const Array&lt; T &gt;::Predicate &amp;aPredicate) const</argsstring>
+        <name>getWhere</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Predicate</ref> &amp;</type>
+          <declname>aPredicate</declname>
+        </param>
+        <briefdescription>
+<para>Get array of elements based on condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>elements<sp/>=<sp/>array.getWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[0,<sp/>2,<sp/>4]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPredicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A predicate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> of elements </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="274" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" kindref="member">ConstIterator</ref></type>
+        <definition>Array&lt;T&gt;::ConstIterator ostk::core::container::Array&lt; T &gt;::find</definition>
+        <argsstring>(const T &amp;anElement) const</argsstring>
+        <name>find</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Get iterator to element, finding by by value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">auto<sp/>elementIt<sp/>=<sp/>array.find(2)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="286" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; U &gt;</type>
+        <definition>Array&lt;U&gt; ostk::core::container::Array&lt; T &gt;::map</definition>
+        <argsstring>(const std::function&lt; U(T)&gt; aMappingFunction) const</argsstring>
+        <name>map</name>
+        <param>
+          <type>const std::function&lt; U(T)&gt;</type>
+          <declname>aMappingFunction</declname>
+        </param>
+        <briefdescription>
+<para>Get mapped array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;String&gt;<sp/>strings<sp/>=<sp/>{<sp/>&quot;1&quot;,<sp/>&quot;2&quot;,<sp/>&quot;3&quot;<sp/>}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>integers<sp/>=<sp/>strings.map&lt;Integer&gt;([]<sp/>(const<sp/>String&amp;<sp/>aString)<sp/>-&gt;<sp/>Integer<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>Integer::Parse(aString)<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aMappingFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mapping function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mapped array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="300" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af242918858601d5af9d10fda5b527440" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T ostk::core::container::Array&lt; T &gt;::reduce</definition>
+        <argsstring>(const std::function&lt; T(T, T)&gt; &amp;aReduceFunction) const</argsstring>
+        <name>reduce</name>
+        <param>
+          <type>const std::function&lt; T(T, T)&gt; &amp;</type>
+          <declname>aReduceFunction</declname>
+        </param>
+        <briefdescription>
+<para>Get reduced value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>integers<sp/>=<sp/>{<sp/>1,<sp/>2,<sp/>3<sp/>}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Integer<sp/>reducedInteger<sp/>=<sp/>integers.reduce(std::plus&lt;Integer&gt;())<sp/>;<sp/>//<sp/>6</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReduceFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reduce function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reduced value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="312" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; ostk::core::container::Array&lt; T &gt;::accessFirst</definition>
+        <argsstring>()</argsstring>
+        <name>accessFirst</name>
+        <briefdescription>
+<para>Access first element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Integer&amp;<sp/>element<sp/>=<sp/>array.accessFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to the first element of array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="323" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aaccce84e7159516210d15cedd0f0c005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; ostk::core::container::Array&lt; T &gt;::accessLast</definition>
+        <argsstring>()</argsstring>
+        <name>accessLast</name>
+        <briefdescription>
+<para>Access last element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Integer&amp;<sp/>element<sp/>=<sp/>array.accessLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to the last element of array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="334" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::add</definition>
+        <argsstring>(const T &amp;anElement)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Add element to array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.add(4)<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="345" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::remove</definition>
+        <argsstring>(const T &amp;anElement)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Remove element from array (by value) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.remove(2)<sp/>;<sp/>//<sp/>[1,<sp/>3]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="356" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af2c427638ce6fe5b8172b726b26d041f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::add</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Add elements to array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.add({4,<sp/>5})<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4,<sp/>5]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of elements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="367" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a28c5536135c3a1434b470163e83d0890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::remove</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Remove elements from array (by value) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.remove({2,<sp/>4})<sp/>;<sp/>//<sp/>[1,<sp/>3,<sp/>5]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of elements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="378" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a09ace899b075e2c71989015d89547712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::mergeWith</definition>
+        <argsstring>(const Array&lt; T &gt; &amp;anArray)</argsstring>
+        <name>mergeWith</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Merge array with another array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>firstArray<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>secondArray<sp/>=<sp/>{4,<sp/>5}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">firstArray.merge(secondArray)<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4,<sp/>5]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="390" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a05c7a33085e45003d6839d7d68a8f9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::container::Array&lt; T &gt;::removeWhere</definition>
+        <argsstring>(const Array&lt; T &gt;::Predicate &amp;aPredicate)</argsstring>
+        <name>removeWhere</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Predicate</ref> &amp;</type>
+          <declname>aPredicate</declname>
+        </param>
+        <briefdescription>
+<para>Remove elements based on condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.removeWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{<sp/>return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>[1,<sp/>3,<sp/>5]</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPredicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A predicate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="402" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a1e7b5f5c9410592b8d6c15629932b1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" kindref="member">Iterator</ref></type>
+        <definition>Array&lt;T&gt;::Iterator ostk::core::container::Array&lt; T &gt;::find</definition>
+        <argsstring>(const T &amp;anElement)</argsstring>
+        <name>find</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>anElement</declname>
+        </param>
+        <briefdescription>
+<para>Get iterator to element, finding by value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">auto<sp/>elementIt<sp/>=<sp/>array.find(2)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="414" column="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1container_1_1_array_1a9daa2d638e5bd693776f8bf6caae0802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+        </templateparamlist>
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Array&lt; U &gt; &amp;anArray)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; U &gt; &amp;</type>
+          <declname>anArray</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>array<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="139" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a5fea43d631c4e02fdbebb7854d4936cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
+        <definition>static Array&lt;T&gt; ostk::core::container::Array&lt; T &gt;::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+<para>Constructs an empty array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>Array&lt;Integer&gt;::Empty()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Empty array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="424" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> container. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>                        Sequence container representing arrays that can change in size.
+                        Arrays use contiguous storage locations for their elements. 
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::container::Array&lt; T &gt;</label>
+        <link refid="classostk_1_1core_1_1container_1_1_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::container::Array&lt; T &gt;</label>
+        <link refid="classostk_1_1core_1_1container_1_1_array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="33" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="32" bodyend="425"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessLast</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1aaccce84e7159516210d15cedd0f0c005" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessLast</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessWhere</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>add</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1af2c427638ce6fe5b8172b726b26d041f" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>add</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a4852ac57202e8781d95529d156dcd3d5" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ae2b91188c5b673de253b494287ebcc78" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ad8ebc43a185418e004017aae36bc83b3" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a6f6cf6e7e042b1ab3e3ec6bd3b9a5850" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a4b93e437ebc4108b12b021091f44620d" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a620c83d378ed652d54caf1613d567249" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1aec8aa7415c0d09d7a4a8ec1e3b63568a" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>ConstIterator</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ae035b7590373b178035f33733158877e" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>contains</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a5fea43d631c4e02fdbebb7854d4936cf" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Empty</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>find</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a1e7b5f5c9410592b8d6c15629932b1c0" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>find</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getIndexOf</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getSize</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getWhere</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ac30877a0e3663ad5158e2639cc32455f" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>isEmpty</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>isNear</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1af8f48574ba41c8cbea39de23ecdba7aa" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>isNear</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Iterator</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>map</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a09ace899b075e2c71989015d89547712" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>mergeWith</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a17058cdfb4c04ed41b1b5cead35cf973" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a9daa2d638e5bd693776f8bf6caae0802" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1aa0f1dd01d56624d0478ff4de87230d99" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a2bc9fd90ce72d0cba9616ff16b4441d0" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Predicate</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1af242918858601d5af9d10fda5b527440" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>reduce</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>remove</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a28c5536135c3a1434b470163e83d0890" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>remove</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a05c7a33085e45003d6839d7d68a8f9c5" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>removeWhere</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1ae0b2aff1ac2bda149f0f7fef323ca65b" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

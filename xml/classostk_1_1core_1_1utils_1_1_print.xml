@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1utils_1_1_print" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::utils::Print</compoundname>
+    <includes refid="_print_8hpp" local="no">Print.hpp</includes>
+    <innerclass refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" prot="public">ostk::core::utils::Print::LineBuffer</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1add7ff48ddf9697f051509f88428ac207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::utils::Print::Print</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="45" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1a31241a78c064230fdf2f0089e642e20e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::utils::Print::Header</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const type::String &amp;aName)</argsstring>
+        <name>Header</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="47" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1a1aeb071e217dabc5df02b5692d3d3e10" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kindref="compound">Print::LineBuffer</ref></type>
+        <definition>Print::LineBuffer ostk::core::utils::Print::Line</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, uint anIndentation=1)</argsstring>
+        <name>Line</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>anIndentation</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="49" column="30" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1a4803c717a7418a18060f2bcc7e391410" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::utils::Print::Separator</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const type::String &amp;aName=&quot;&quot;)</argsstring>
+        <name>Separator</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref> &amp;</type>
+          <declname>aName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="51" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="40" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1af2493f2770f18699410630710a8105a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::core::utils::Print::Footer</definition>
+        <argsstring>(std::ostream &amp;anOutputStream)</argsstring>
+        <name>Footer</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="53" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="18" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1af2493f2770f18699410630710a8105a4" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Footer</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1a31241a78c064230fdf2f0089e642e20e" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Header</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1a1aeb071e217dabc5df02b5692d3d3e10" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Line</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1add7ff48ddf9697f051509f88428ac207" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Print</name></member>
+      <member refid="classostk_1_1core_1_1utils_1_1_print_1a4803c717a7418a18060f2bcc7e391410" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Separator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_32edad3807811c48c06b0cb18befd957" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/Core/Type</compoundname>
+    <innerfile refid="_integer_8cpp">Integer.cpp</innerfile>
+    <innerfile refid="_real_8cpp">Real.cpp</innerfile>
+    <innerfile refid="_string_8cpp">String.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/Type/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core_1_1filesystem" kind="namespace" language="C++">
+    <compoundname>ostk::core::filesystem</compoundname>
+    <innerclass refid="classostk_1_1core_1_1filesystem_1_1_directory" prot="public">ostk::core::filesystem::Directory</innerclass>
+    <innerclass refid="classostk_1_1core_1_1filesystem_1_1_file" prot="public">ostk::core::filesystem::File</innerclass>
+    <innerclass refid="classostk_1_1core_1_1filesystem_1_1_path" prot="public">ostk::core::filesystem::Path</innerclass>
+    <innerclass refid="classostk_1_1core_1_1filesystem_1_1_permission_set" prot="public">ostk::core::filesystem::PermissionSet</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1aadefa578918b722526b31142dd527fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::filesystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Directory &amp;aDirectory)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>directory<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" line="31" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="31" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1a167a3aa9878e2eaa43418d82d1096310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::filesystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const File &amp;aFile)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>file<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" line="62" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="62" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1ad638a7d2b5d8f605c8e10d59d18ae911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::filesystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Path &amp;aPath)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path/to/file&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>path<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="95" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="95" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1ab1533d20274fe05cc29c4d432fe96e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::core::filesystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const PermissionSet &amp;aPermissionSet)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::RWX()</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>permissions<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" line="70" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="70" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="17" column="1"/>
+  </compounddef>
+</doxygen>

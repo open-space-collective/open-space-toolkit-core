@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_3856f55020c74ffa05b6eb1fa616b6c6" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Container</compoundname>
+    <innerdir refid="dir_4c6b3aadff73e02844ff657531585e3c">include/OpenSpaceToolkit/Core/Container/Iterator</innerdir>
+    <innerdir refid="dir_dc63bd75730e49f143a6d898a2c68b41">include/OpenSpaceToolkit/Core/Container/Table</innerdir>
+    <innerfile refid="_array_8hpp">Array.hpp</innerfile>
+    <innerfile refid="_dictionary_8hpp">Dictionary.hpp</innerfile>
+    <innerfile refid="_graph_8hpp">Graph.hpp</innerfile>
+    <innerfile refid="_list_8hpp">List.hpp</innerfile>
+    <innerfile refid="_map_8hpp">Map.hpp</innerfile>
+    <innerfile refid="_object_8hpp">Object.hpp</innerfile>
+    <innerfile refid="_ordered_map_8hpp">OrderedMap.hpp</innerfile>
+    <innerfile refid="_pair_8hpp">Pair.hpp</innerfile>
+    <innerfile refid="_queue_8hpp">Queue.hpp</innerfile>
+    <innerfile refid="_stack_8hpp">Stack.hpp</innerfile>
+    <innerfile refid="_table_8hpp">Table.hpp</innerfile>
+    <innerfile refid="_tree_8hpp">Tree.hpp</innerfile>
+    <innerfile refid="_triple_8hpp">Triple.hpp</innerfile>
+    <innerfile refid="_tuple_8hpp">Tuple.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1type_1_1_string" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::type::String</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::string</basecompoundref>
+    <includes refid="_string_8hpp" local="no">String.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a207952f09a96c355722a56cde16fed1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::String::String</definition>
+        <argsstring>()</argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="45" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac189ff8f059b1444cdb6d216376a3919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::String::String</definition>
+        <argsstring>(const std::string &amp;aString)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="47" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a6eaf1894a8ee8d15ed3d06d73abe0119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::type::String::~String</definition>
+        <argsstring>()</argsstring>
+        <name>~String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="49" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a7c29ece5a4c0db35b4c30d61788fe729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::String::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="51" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aabf70678b4fb31beae28af913ffee684" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::String::isUppercase</definition>
+        <argsstring>() const</argsstring>
+        <name>isUppercase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="53" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="36" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a197b0c1b6825a60cf375f49cafd6d550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::String::isLowercase</definition>
+        <argsstring>() const</argsstring>
+        <name>isLowercase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="55" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac78674da13d8b5a3a35a6787cb515a38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::String::match</definition>
+        <argsstring>(const std::regex &amp;aRegularExpression) const</argsstring>
+        <name>match</name>
+        <param>
+          <type>const std::regex &amp;</type>
+          <declname>aRegularExpression</declname>
+        </param>
+        <briefdescription>
+<para>Returns whether the string matches a regular expression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;abc&quot;).match(std::regex(&quot;^[a-z]{3}$&quot;))<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRegularExpression</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A regular expression </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if matches regular expression </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="66" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac08a31fa6b0582d4a9b223a3927d354b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></type>
+        <definition>Size ostk::core::type::String::getLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="68" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ostk::core::type::String::getFirst</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="70" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ostk::core::type::String::getLast</definition>
+        <argsstring>() const</argsstring>
+        <name>getLast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="72" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="106" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aceab98c3ab4a61de80b05da7152975a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::getHead</definition>
+        <argsstring>(const Size &amp;aLength) const</argsstring>
+        <name>getHead</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref> &amp;</type>
+          <declname>aLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="74" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a4b5ceca3c74ddf5075f35709e77e6c00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::getTail</definition>
+        <argsstring>(const Size &amp;aLength) const</argsstring>
+        <name>getTail</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref> &amp;</type>
+          <declname>aLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="76" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="84" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae90137d2ec2634da5fbe0c32e66a3672" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::getSubstring</definition>
+        <argsstring>(const Index &amp;aStartPosition, const Size &amp;aLength) const</argsstring>
+        <name>getSubstring</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">Index</ref> &amp;</type>
+          <declname>aStartPosition</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref> &amp;</type>
+          <declname>aLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="78" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="116" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae6af9be350ec2401f961a6b042f84c8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt;</type>
+        <definition>Array&lt; String &gt; ostk::core::type::String::split</definition>
+        <argsstring>(const String &amp;aDelimiter) const</argsstring>
+        <name>split</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aDelimiter</declname>
+        </param>
+        <briefdescription>
+<para>Split the <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> into tokens separated by the given delimeter. E.X. <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>(&quot;1sat2satredsatbluesat&quot;).split(&quot;sat&quot;) -&gt; [&quot;1&quot;, &quot;2&quot;, &quot;red&quot;, &quot;blue&quot;, &quot;&quot;]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Array of <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> tokens </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="85" column="11" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a44cc2827faafa67f59e3168f8dcbbbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; ostk::core::type::String::trim</definition>
+        <argsstring>()</argsstring>
+        <name>trim</name>
+        <briefdescription>
+<para>Removes whitespace from both ends. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reference to string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="91" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="154" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac4d69227a1cb3c0b4d9e3501e01b3aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; ostk::core::type::String::replace</definition>
+        <argsstring>(const char aCharacter, const char aNewCharacter)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>const char</type>
+          <declname>aCharacter</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>aNewCharacter</declname>
+        </param>
+        <briefdescription>
+<para>Replace all occurences of character by other character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A character </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aNewCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A replacement character </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="99" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="164" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a368cc0fbfe2f92586a2eeb3616b47da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; ostk::core::type::String::replace</definition>
+        <argsstring>(const String &amp;aString, const String &amp;aNewString)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aNewString</declname>
+        </param>
+        <briefdescription>
+<para>Replace all occurences of string by other string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aNewCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A replacement string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="107" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="171" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="109" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="178" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::Boolean</definition>
+        <argsstring>(bool aBoolean)</argsstring>
+        <name>Boolean</name>
+        <param>
+          <type>bool</type>
+          <declname>aBoolean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="111" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::Char</definition>
+        <argsstring>(char aCharacter)</argsstring>
+        <name>Char</name>
+        <param>
+          <type>char</type>
+          <declname>aCharacter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="113" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1af11502e59dc726425d58e94f2b08ace6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::Replicate</definition>
+        <argsstring>(char aCharacter, Size aCount)</argsstring>
+        <name>Replicate</name>
+        <param>
+          <type>char</type>
+          <declname>aCharacter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="115" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a015a3f0091b792bfae001904d7b31aea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::Replicate</definition>
+        <argsstring>(const String &amp;aString, Size aCount)</argsstring>
+        <name>Replicate</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="117" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="199" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a073128d2588b7f95bbba37c84b6f700f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::type::String::IsValidUTF8</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>IsValidUTF8</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the string contains any invalid UTF-8 characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if valid UTF-8 string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="124" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="211" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a858b680569fe684d75d7f2fe25959faa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::type::String::SanitizeUTF8</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>SanitizeUTF8</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Sanitizes the string by removing any invalid UTF-8 characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>valid UTF-8 string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="131" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="257" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>static String ostk::core::type::String::Format</definition>
+        <argsstring>(const char *aFormat, Args... anArgumentList)</argsstring>
+        <name>Format</name>
+        <param>
+          <type>const char *</type>
+          <declname>aFormat</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>anArgumentList</declname>
+        </param>
+        <briefdescription>
+<para>Create formatted string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String::Format(&quot;{0},<sp/>{1}!&quot;,<sp/>&quot;Hello&quot;,<sp/>&quot;World&quot;)<sp/>;<sp/>//<sp/>&quot;Hello,<sp/>World!&quot;</highlight></codeline>
+<codeline><highlight class="normal">String::Format(&quot;Let&apos;s<sp/>operate<sp/>{0}<sp/>{1}!&quot;,<sp/>123,<sp/>&quot;satellites&quot;)<sp/>;<sp/>//<sp/>&quot;Let&apos;s<sp/>operate<sp/>123</highlight></codeline>
+<codeline><highlight class="normal">satellites!&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFormat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anArgumentList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Formatted string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="146" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A sequence of characters. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The current implementation (derived for std::string) is temporary, as this type of inheritance this is not recommended. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::type::String</label>
+        <link refid="classostk_1_1core_1_1type_1_1_string"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1">
+        <label>ostk::core::type::String</label>
+        <link refid="classostk_1_1core_1_1type_1_1_string"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="41" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="40" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Boolean</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Char</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Empty</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Format</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getFirst</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1aceab98c3ab4a61de80b05da7152975a6" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getHead</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getLast</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ac08a31fa6b0582d4a9b223a3927d354b" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getLength</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ae90137d2ec2634da5fbe0c32e66a3672" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getSubstring</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a4b5ceca3c74ddf5075f35709e77e6c00" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getTail</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a7c29ece5a4c0db35b4c30d61788fe729" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>isEmpty</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a197b0c1b6825a60cf375f49cafd6d550" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>isLowercase</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1aabf70678b4fb31beae28af913ffee684" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>isUppercase</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a073128d2588b7f95bbba37c84b6f700f" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>IsValidUTF8</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ac78674da13d8b5a3a35a6787cb515a38" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>match</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ac4d69227a1cb3c0b4d9e3501e01b3aed" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>replace</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a368cc0fbfe2f92586a2eeb3616b47da7" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>replace</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1af11502e59dc726425d58e94f2b08ace6" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Replicate</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a015a3f0091b792bfae001904d7b31aea" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Replicate</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a858b680569fe684d75d7f2fe25959faa" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>SanitizeUTF8</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ae6af9be350ec2401f961a6b042f84c8a" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>split</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a207952f09a96c355722a56cde16fed1f" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>String</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1ac189ff8f059b1444cdb6d216376a3919" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>String</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a44cc2827faafa67f59e3168f8dcbbbfb" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>trim</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1a6eaf1894a8ee8d15ed3d06d73abe0119" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>~String</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

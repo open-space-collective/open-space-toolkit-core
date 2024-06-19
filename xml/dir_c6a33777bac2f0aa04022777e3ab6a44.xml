@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c6a33777bac2f0aa04022777e3ab6a44" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/Core</compoundname>
+    <innerdir refid="dir_28df5705bc0eb7b25666c610adf52aac">src/OpenSpaceToolkit/Core/Container</innerdir>
+    <innerdir refid="dir_4bbc5115e8a67fbf5d5a49071f85d43f">src/OpenSpaceToolkit/Core/Error</innerdir>
+    <innerdir refid="dir_ca321a5ee8bffce87575221e26272416">src/OpenSpaceToolkit/Core/FileSystem</innerdir>
+    <innerdir refid="dir_32edad3807811c48c06b0cb18befd957">src/OpenSpaceToolkit/Core/Type</innerdir>
+    <innerdir refid="dir_556ccf2dfc8b18af6d7bf15553a07861">src/OpenSpaceToolkit/Core/Utility</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/Core/"/>
+  </compounddef>
+</doxygen>

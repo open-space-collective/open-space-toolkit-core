@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_50105ab2e73e612dbf43ee90d162d57f" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/System</compoundname>
+    <innerfile refid="_c_p_u_8hpp">CPU.hpp</innerfile>
+    <innerfile refid="_disk_8hpp">Disk.hpp</innerfile>
+    <innerfile refid="_group_8hpp">Group.hpp</innerfile>
+    <innerfile refid="_memory_8hpp">Memory.hpp</innerfile>
+    <innerfile refid="_process_8hpp">Process.hpp</innerfile>
+    <innerfile refid="_user_8hpp">User.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/System/"/>
+  </compounddef>
+</doxygen>

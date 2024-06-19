@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_9a912a02bd031c9b8091d772cb803549" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core</compoundname>
+    <innerdir refid="dir_3856f55020c74ffa05b6eb1fa616b6c6">include/OpenSpaceToolkit/Core/Container</innerdir>
+    <innerdir refid="dir_7f086f484fe00f44fd7e214faba6144c">include/OpenSpaceToolkit/Core/Error</innerdir>
+    <innerdir refid="dir_7ee596c9c7a273917a09c5cb0ef993bf">include/OpenSpaceToolkit/Core/FileSystem</innerdir>
+    <innerdir refid="dir_b83015f27e35dc9688eb25c84faaaa17">include/OpenSpaceToolkit/Core/Logger</innerdir>
+    <innerdir refid="dir_50105ab2e73e612dbf43ee90d162d57f">include/OpenSpaceToolkit/Core/System</innerdir>
+    <innerdir refid="dir_f8d9a64a66b7cce0437b6a4d5ec581d4">include/OpenSpaceToolkit/Core/Type</innerdir>
+    <innerdir refid="dir_d7beb41bdd8c610589e40a1776930c0c">include/OpenSpaceToolkit/Core/Utility</innerdir>
+    <innerfile refid="_error_8hpp">Error.hpp</innerfile>
+    <innerfile refid="_file_system_8hpp">FileSystem.hpp</innerfile>
+    <innerfile refid="_logger_8hpp">Logger.hpp</innerfile>
+    <innerfile refid="_program_8hpp">Program.hpp</innerfile>
+    <innerfile refid="_type_8hpp">Type.hpp</innerfile>
+    <innerfile refid="_utility_8hpp">Utility.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/"/>
+  </compounddef>
+</doxygen>

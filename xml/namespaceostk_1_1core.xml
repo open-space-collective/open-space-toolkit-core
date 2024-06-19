@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1core" kind="namespace" language="C++">
+    <compoundname>ostk::core</compoundname>
+    <innerclass refid="classostk_1_1core_1_1_logger" prot="public">ostk::core::Logger</innerclass>
+    <innernamespace refid="namespaceostk_1_1core_1_1container">ostk::core::container</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1error">ostk::core::error</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1filesystem">ostk::core::filesystem</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1logger">ostk::core::logger</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1system">ostk::core::system</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1type">ostk::core::type</innernamespace>
+    <innernamespace refid="namespaceostk_1_1core_1_1utils">ostk::core::utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="18" column="1"/>
+  </compounddef>
+</doxygen>

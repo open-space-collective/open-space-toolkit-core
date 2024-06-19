@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b83015f27e35dc9688eb25c84faaaa17" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Logger</compoundname>
+    <innerdir refid="dir_c4ad9d89a01308498d8dab7c40446fe1">include/OpenSpaceToolkit/Core/Logger/Sink</innerdir>
+    <innerdir refid="dir_1c8c43f19f70157863a0c203afd5ab03">include/OpenSpaceToolkit/Core/Logger/Source</innerdir>
+    <innerfile refid="_pump_8hpp">Pump.hpp</innerfile>
+    <innerfile refid="_severity_8hpp">Severity.hpp</innerfile>
+    <innerfile refid="_sink_8hpp">Sink.hpp</innerfile>
+    <innerfile refid="_source_8hpp">Source.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Logger/"/>
+  </compounddef>
+</doxygen>

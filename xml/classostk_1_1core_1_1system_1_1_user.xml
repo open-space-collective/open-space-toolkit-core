@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1system_1_1_user" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::system::User</compoundname>
+    <includes refid="_user_8hpp" local="no">User.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a2e966a6193ecb3d0117bb2236695f0e6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ostk::core::system::User::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="53" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ostk::core::system::User::euid_</definition>
+        <argsstring></argsstring>
+        <name>euid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="54" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a908d23165d17a834625f096b588d52b7" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::system::User::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="55" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a0de9691c8ea414402a61ca2ba571125b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::system::User::User</definition>
+        <argsstring>(const uint &amp;aUID, const String &amp;aName)</argsstring>
+        <name>User</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aUID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a136687a5b8b44617158bb3d14d4697c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::system::User::User</definition>
+        <argsstring>(const uint &amp;aUID, const uint &amp;aEUID, const String &amp;aName)</argsstring>
+        <name>User</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aUID</declname>
+        </param>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aEUID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a58e11432b4f5e0c37edf841d3360f58b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::User::operator==</definition>
+        <argsstring>(const User &amp;aUser) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> &amp;</type>
+          <declname>aUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ac11fea5211b9e8faa2ae07c1ba5fa154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::User::operator!=</definition>
+        <argsstring>(const User &amp;aUser) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> &amp;</type>
+          <declname>aUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::system::User::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="36" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::core::system::User::getUID</definition>
+        <argsstring>() const</argsstring>
+        <name>getUID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="38" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::core::system::User::getEUID</definition>
+        <argsstring>() const</argsstring>
+        <name>getEUID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
+        <definition>String ostk::core::system::User::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="42" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1system_1_1_user_1ac434498b36c6e29a86acbb50589e91a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const User &amp;aUser)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> &amp;</type>
+          <declname>aUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="34" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ad5a31224086dca11b4795adbddd82759" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
+        <definition>static User ostk::core::system::User::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="44" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
+        <definition>static User ostk::core::system::User::Process</definition>
+        <argsstring>()</argsstring>
+        <name>Process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="46" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
+        <definition>static User ostk::core::system::User::UID</definition>
+        <argsstring>(const uint &amp;aUID)</argsstring>
+        <name>UID</name>
+        <param>
+          <type>const uint &amp;</type>
+          <declname>aUID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="48" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
+        <definition>static User ostk::core::system::User::Name</definition>
+        <argsstring>(const String &amp;aName)</argsstring>
+        <name>Name</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="50" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>                        POSIX compliant
+</verbatim></para>
+<para><ulink url="https://en.wikipedia.org/wiki/User_identifier">https://en.wikipedia.org/wiki/User_identifier</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="23" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>euid_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getEUID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getName</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getUID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Name</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a908d23165d17a834625f096b588d52b7" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>name_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1ac11fea5211b9e8faa2ae07c1ba5fa154" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1ac434498b36c6e29a86acbb50589e91a3" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a58e11432b4f5e0c37edf841d3360f58b" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Process</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>UID</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a2e966a6193ecb3d0117bb2236695f0e6" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>uid_</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1ad5a31224086dca11b4795adbddd82759" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a0de9691c8ea414402a61ca2ba571125b" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>User</name></member>
+      <member refid="classostk_1_1core_1_1system_1_1_user_1a136687a5b8b44617158bb3d14d4697c8" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

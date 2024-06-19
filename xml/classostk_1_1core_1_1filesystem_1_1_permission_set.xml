@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1core_1_1filesystem_1_1_permission_set" kind="class" language="C++" prot="public">
+    <compoundname>ostk::core::filesystem::PermissionSet</compoundname>
+    <includes refid="_permission_set_8hpp" local="no">PermissionSet.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a80b55aad7df4c31149ad19077b23a77a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::read_</definition>
+        <argsstring></argsstring>
+        <name>read_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="259" column="10" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a6515886bed40627cfee964e92680793f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::write_</definition>
+        <argsstring></argsstring>
+        <name>write_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="260" column="10" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a0324b3dab77c403f953f633004a9ff5d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::execute_</definition>
+        <argsstring></argsstring>
+        <name>execute_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="261" column="10" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa5a65651a709d82b86302edd4d06ab31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::PermissionSet::PermissionSet</definition>
+        <argsstring>()=delete</argsstring>
+        <name>PermissionSet</name>
+        <briefdescription>
+<para>Default constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a45bfe60644a2140626c3e3bdd7d0d87f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::core::filesystem::PermissionSet::PermissionSet</definition>
+        <argsstring>(const bool canRead, const bool canWrite, const bool canExecute)</argsstring>
+        <name>PermissionSet</name>
+        <param>
+          <type>const bool</type>
+          <declname>canRead</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>canWrite</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>canExecute</declname>
+        </param>
+        <briefdescription>
+<para>Full constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">canRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can read if set to true </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">canWrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can write if set to true </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">canExecute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can execute if set to true </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="35" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a631f1c006d5d194d2d601c7f0cf6f417" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::operator==</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::RWX()<sp/>==<sp/>PermissionSet::RWX()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if permissions are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="46" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1afaf1da0266b09c9b8fc7470425bb21fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::operator!=</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::RW()<sp/>!=<sp/>PermissionSet::RWX()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if permissions are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="57" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a36f02c6a539a8d1fbe2a4ad230ec05d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::operator+</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Addition operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Add permissions
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>rw<sp/>=<sp/>PermissionSet::RW()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>x<sp/>=<sp/>PermissionSet::X()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>rwx<sp/>=<sp/>rw<sp/>+<sp/>x<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Permission set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="72" column="19" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a40778bc8c0fce3215728eaf4a2eb182f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::operator-</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Subtraction operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Remove permissions
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>rwx<sp/>=<sp/>PermissionSet::RWX()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>x<sp/>=<sp/>PermissionSet::X()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>rw<sp/>=<sp/>rwx<sp/>-<sp/>x<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Permission set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="87" column="19" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="38" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a6e74aa0ba2f6953b024c3a53c0238d42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::operator&amp;&amp;</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator&amp;&amp;</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Logical AND operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                AND permissions
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>rw<sp/>=<sp/>PermissionSet::RW()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>rx<sp/>=<sp/>PermissionSet::RX()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>r<sp/>=<sp/>rw<sp/>&amp;&amp;<sp/>rx<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Permission set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="102" column="19" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a7af2100ce85498bc40de4c3147f3422a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::operator||</definition>
+        <argsstring>(const PermissionSet &amp;aPermissionSet) const</argsstring>
+        <name>operator||</name>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Logical OR operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                OR permissions
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>rw<sp/>=<sp/>PermissionSet::RW()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>rx<sp/>=<sp/>PermissionSet::RX()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet<sp/>rwx<sp/>=<sp/>rw<sp/>||<sp/>rx<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Permission set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="117" column="19" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a1881a8f5a30cd31814326eea55fc66c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::isNone</definition>
+        <argsstring>() const</argsstring>
+        <name>isNone</name>
+        <briefdescription>
+<para>Check if permission set is none. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::None().isNone()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if permission set is none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="140" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a9a80ef7936a1a6b95580cd270248f51a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::isAll</definition>
+        <argsstring>() const</argsstring>
+        <name>isAll</name>
+        <briefdescription>
+<para>Check if permission set is all. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::RWX().isAll()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if permission set is all </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="150" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a93177aba00e350e5a11beb1e00f1c59e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::canRead</definition>
+        <argsstring>() const</argsstring>
+        <name>canRead</name>
+        <briefdescription>
+<para>Check if permission set can read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::R().canRead()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RW().canRead()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RWX().canRead()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if permission set can read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="162" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a5b2ae9e17490085b3205e5d75f011e2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::canWrite</definition>
+        <argsstring>() const</argsstring>
+        <name>canWrite</name>
+        <briefdescription>
+<para>Check if permission set can write. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::R().canWrite()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RW().canWrite()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RWX().canWrite()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if permission set can write </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="174" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa5fe42eb9ec5533d6899a36ca8575676" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::core::filesystem::PermissionSet::canExecute</definition>
+        <argsstring>() const</argsstring>
+        <name>canExecute</name>
+        <briefdescription>
+<para>Check if permission set can execute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet::R().canExecute()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RW().canExecute()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">PermissionSet::RWX().canExecute()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if permission set can execute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="186" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a8f2d68bb94d86dea76869abe148ea9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const PermissionSet &amp;aPermissionSet)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref> &amp;</type>
+          <declname>aPermissionSet</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::RWX()</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>permissions<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPermissionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A permission set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="130" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="70" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1adcfeb2291a41a0cd99173fac3e113c02" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::None</definition>
+        <argsstring>()</argsstring>
+        <name>None</name>
+        <briefdescription>
+<para>Constructs a none permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::None()<sp/>;<sp/>//<sp/>---</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>None permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="196" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1afdfc39a4f6da92aeb35bdc8f0dc45714" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::R</definition>
+        <argsstring>()</argsstring>
+        <name>R</name>
+        <briefdescription>
+<para>Constructs a read permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::R()<sp/>;<sp/>//<sp/>r--</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Read permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="206" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a204e141e10baabdcaee8374337f69adc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::W</definition>
+        <argsstring>()</argsstring>
+        <name>W</name>
+        <briefdescription>
+<para>Constructs a write permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::W()<sp/>;<sp/>//<sp/>-w-</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Write permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="216" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1af458426b36031ca507f3887ef3bf50fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::X</definition>
+        <argsstring>()</argsstring>
+        <name>X</name>
+        <briefdescription>
+<para>Constructs an execute permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::X()<sp/>;<sp/>//<sp/>--x</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Execute permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="226" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a48329618a88c8a8ce590f2d04a6c2e43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::RW</definition>
+        <argsstring>()</argsstring>
+        <name>RW</name>
+        <briefdescription>
+<para>Constructs a read-write permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::RW()<sp/>;<sp/>//<sp/>rw-</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Read-Write permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="236" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa1822fb076086e71d5b6bc6a53532200" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::RX</definition>
+        <argsstring>()</argsstring>
+        <name>RX</name>
+        <briefdescription>
+<para>Constructs a read-execute permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::RX()<sp/>;<sp/>//<sp/>r-x</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Read-Execute permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="246" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_permission_set_1a42e2ac3b11b9136ea369dca97f3ef9d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">PermissionSet</ref></type>
+        <definition>PermissionSet ostk::core::filesystem::PermissionSet::RWX</definition>
+        <argsstring>()</argsstring>
+        <name>RWX</name>
+        <briefdescription>
+<para>Constructs a read-write-execute permission set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">PermissionSet<sp/>permissions<sp/>=<sp/>PermissionSet::RWX()<sp/>;<sp/>//<sp/>rwx</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Read-Write-Execute permissions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="256" column="26" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>                        This class is modeled after the Traditional Unix permissions.
+</verbatim></para>
+<para><ulink url="https://en.wikipedia.org/wiki/File_system_permissions">https://en.wikipedia.org/wiki/File_system_permissions</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/PermissionSet.hpp" bodystart="22" bodyend="262"/>
+    <listofallmembers>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa5fe42eb9ec5533d6899a36ca8575676" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>canExecute</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a93177aba00e350e5a11beb1e00f1c59e" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>canRead</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a5b2ae9e17490085b3205e5d75f011e2f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>canWrite</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a0324b3dab77c403f953f633004a9ff5d" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>execute_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a9a80ef7936a1a6b95580cd270248f51a" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>isAll</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a1881a8f5a30cd31814326eea55fc66c5" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>isNone</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1adcfeb2291a41a0cd99173fac3e113c02" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>None</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1afaf1da0266b09c9b8fc7470425bb21fe" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a6e74aa0ba2f6953b024c3a53c0238d42" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator&amp;&amp;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a36f02c6a539a8d1fbe2a4ad230ec05d2" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator+</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a40778bc8c0fce3215728eaf4a2eb182f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator-</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a8f2d68bb94d86dea76869abe148ea9f3" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a631f1c006d5d194d2d601c7f0cf6f417" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator==</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a7af2100ce85498bc40de4c3147f3422a" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>operator||</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa5a65651a709d82b86302edd4d06ab31" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>PermissionSet</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a45bfe60644a2140626c3e3bdd7d0d87f" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>PermissionSet</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1afdfc39a4f6da92aeb35bdc8f0dc45714" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>R</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a80b55aad7df4c31149ad19077b23a77a" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>read_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a48329618a88c8a8ce590f2d04a6c2e43" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>RW</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a42e2ac3b11b9136ea369dca97f3ef9d8" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>RWX</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1aa1822fb076086e71d5b6bc6a53532200" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>RX</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a204e141e10baabdcaee8374337f69adc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>W</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1a6515886bed40627cfee964e92680793f" prot="private" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>write_</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_permission_set_1af458426b36031ca507f3887ef3bf50fe" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::PermissionSet</scope><name>X</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

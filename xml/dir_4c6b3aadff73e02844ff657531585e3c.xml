@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_4c6b3aadff73e02844ff657531585e3c" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/Core/Container/Iterator</compoundname>
+    <innerfile refid="_zip_8hpp">Zip.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/"/>
+  </compounddef>
+</doxygen>
