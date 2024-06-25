@@ -80,79 +80,7 @@ pip install open-space-toolkit-core
 
 ## Documentation
 
-Documentation is available here:
-
-- [C++](https://open-space-collective.github.io/open-space-toolkit-core)
-- [Python](./bindings/python/docs)
-
-<details>
-<summary>Structure</summary>
-<p>
-The library exhibits the following structure:
-
-```txt
-├── Type
-│   ├── Integer
-│   ├── Real
-│   ├── String
-│   ├── Byte
-│   ├── Byte Array
-│   ├── Index
-│   ├── Size
-│   ├── Sign
-│   ├── Unique
-│   ├── Shared
-│   └── Weak
-├── Container
-│   ├── Array
-│   ├── List
-│   ├── Map
-│   ├── Ordered Map
-│   ├── Object
-│   ├── Dictionary
-│   ├── Pair
-│   ├── Triple
-│   ├── Tuple
-│   ├── Table
-│   ├── Queue
-│   ├── Stack
-│   ├── Graph
-│   └── Tree
-├── File System
-│   ├── Path
-│   ├── File
-│   ├── Directory
-│   ├── Symbolic Link
-│   └── Permission
-├── System
-│   ├── User
-│   ├── Group
-│   ├── CPU
-│   ├── Memory
-│   ├── Disk
-│   └── Process
-├── Logger
-├── Error
-│   ├── Exception
-│   ├── Runtime Error
-│   └── Runtime
-│       ├── Undefined
-│       ├── Wrong
-│       └── To Be Implemented
-└── Utility
-    ├── Iterator
-    └── Version
-```
-
-</p>
-</details>
-
-## Tutorials
-
-Tutorials are available here:
-
-- [C++](./tutorials/cpp)
-- [Python](./tutorials/python)
+Documentation is available [here](https://open-space-collective.github.io/open-space-toolkit-core):
 
 ## Setup
 
@@ -201,17 +129,6 @@ Or to run them manually:
 ```
 
 *Tip: The `ostk-test` command simplifies running tests from within the development environment.*
-
-## Dependencies
-
-| Name        | Version    | License      | Link                                                                |
-| ----------- | ---------- | ------------ | ------------------------------------------------------------------- |
-| Pybind11    | `2.12.0` | BSD-3-Clause | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)       |
-| RapidJSON   | `master` | MIT          | [rapidjson.org](http://rapidjson.org)                                  |
-| yaml-cpp    | `0.7.0`  | MIT          | [github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)       |
-| ordered-map | `0.6.0`  | MIT          | [github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map) |
-| {fmt}       | `5.2.0`  | BSD-2-Clause | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                 |
-| Rapidcsv    | `6.11`   | BSD-3-Clause | [github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)     |
 
 ## Contribution
 
