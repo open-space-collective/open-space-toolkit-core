@@ -143,7 +143,6 @@ class String : public std::string
     template <typename... Args>
     static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
-        // return fmt::format(aFormat, anArgumentList...);
         return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
     }
 };
