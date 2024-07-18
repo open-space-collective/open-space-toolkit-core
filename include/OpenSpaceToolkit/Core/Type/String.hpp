@@ -3,16 +3,14 @@
 #ifndef __OpenSpaceToolkit_Core_Type_String__
 #define __OpenSpaceToolkit_Core_Type_String__
 
-#include <OpenSpaceToolkit/Core/Type/Index.hpp>
-#include <OpenSpaceToolkit/Core/Type/Size.hpp>
-
-#define FMT_HEADER_ONLY
+#include <format>
 #include <ostream>
 #include <regex>
 #include <string>
 #include <type_traits>
 
-#include <fmt/format.h>
+#include <OpenSpaceToolkit/Core/Type/Index.hpp>
+#include <OpenSpaceToolkit/Core/Type/Size.hpp>
 
 namespace ostk
 {
@@ -29,9 +27,9 @@ class Array;
 namespace type
 {
 
+using ostk::core::container::Array;
 using ostk::core::type::Index;
 using ostk::core::type::Size;
-using ostk::core::container::Array;
 
 /// @brief                      A sequence of characters
 /// @note                       The current implementation (derived for std::string) is temporary, as this type of
@@ -143,9 +141,10 @@ class String : public std::string
     /// @return             Formatted string
 
     template <typename... Args>
-    static String Format(const char* aFormat, Args... anArgumentList)
+    static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
-        return fmt::format(aFormat, anArgumentList...);
+        // return fmt::format(aFormat, anArgumentList...);
+        return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
     }
 };
 
@@ -192,6 +191,16 @@ struct hash<ostk::core::type::String>
     result_type operator()(const argument_type& aString) const
     {
         return std::hash<std::string> {}(aString);
+    }
+};
+
+template <>
+struct formatter<ostk::core::type::String> : formatter<std::string>
+{
+    template <typename FormatContext>
+    auto format(const ostk::core::type::String& str, FormatContext& ctx) const
+    {
+        return formatter<std::string>::format(static_cast<const std::string&>(str), ctx);
     }
 };
 

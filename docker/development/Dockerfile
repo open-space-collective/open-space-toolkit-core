@@ -48,20 +48,6 @@ RUN cd /tmp \
  && cp -r ./include/tsl /usr/local/include \
  && rm -rf /tmp/ordered-map
 
-## {fmt}
-
-ARG FMT_VERSION="5.2.0"
-
-RUN cd /tmp \
- && git clone --branch ${FMT_VERSION} --depth 1 https://github.com/fmtlib/fmt.git \
- && cd fmt \
- && mkdir build \
- && cd build \
- && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
- && make --silent -j $(nproc) \
- && make install \
- && rm -rf /tmp/fmt
-
 ## Rapidcsv
 
 ARG RAPIDCSV_VERSION="6.11"
