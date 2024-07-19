@@ -148,4 +148,14 @@ class Real
 }  // namespace core
 }  // namespace ostk
 
+template <>
+struct std::formatter<ostk::core::type::Real> : std::formatter<double>
+{
+    template <typename FormatContext>
+    auto format(const ostk::core::type::Real& aReal, FormatContext& ctx) const
+    {
+        return std::formatter<double>::format(static_cast<double>(aReal), ctx);
+    }
+};
+
 #endif
