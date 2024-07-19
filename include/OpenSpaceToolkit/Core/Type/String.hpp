@@ -31,6 +31,9 @@ using ostk::core::container::Array;
 using ostk::core::type::Index;
 using ostk::core::type::Size;
 
+class Real;
+class Integer;
+
 /// @brief                      A sequence of characters
 /// @note                       The current implementation (derived for std::string) is temporary, as this type of
 /// inheritance this is not recommended.
@@ -174,6 +177,12 @@ typename std::enable_if<HasToString<T>::value, std::string>::type CallToString(T
     return t->toString();
 }
 
+// Concept to check if a type is convertible to std::string
+template <typename T>
+concept StringConvertible = requires(T t) {
+    { std::string(t) } -> std::convertible_to<std::string>;
+} && !std::is_array_v<T>;  // Exclude array types to avoid ambiguity with const char*
+
 }  // namespace type
 }  // namespace core
 }  // namespace ostk
@@ -194,12 +203,40 @@ struct hash<ostk::core::type::String>
 };
 
 template <>
-struct formatter<ostk::core::type::String> : formatter<std::string>
+struct formatter<ostk::core::type::String> : formatter<string>
 {
     template <typename FormatContext>
     auto format(const ostk::core::type::String& str, FormatContext& ctx) const
     {
-        return formatter<std::string>::format(static_cast<const std::string&>(str), ctx);
+        return formatter<string>::format(static_cast<const string&>(str), ctx);
+    }
+};
+
+// Generic formatter for StringConvertible types
+template <typename T>
+    requires ostk::core::type::StringConvertible<T> && (!std::is_same_v<T, ostk::core::type::String>) &&
+             (!std::is_same_v<T, std::string>) && (!std::is_same_v<T, const char*>)
+struct formatter<T> : formatter<string>
+{
+    template <typename FormatContext>
+    auto format(const T& value, FormatContext& ctx) const
+    {
+        return formatter<string>::format(string(value), ctx);
+    }
+};
+
+// Concept to check if a type is an enum
+template <typename T>
+concept EnumType = is_enum_v<T>;
+
+// Generic formatter for all enum types
+template <EnumType T>
+struct formatter<T> : formatter<underlying_type_t<T>>
+{
+    template <typename FormatContext>
+    auto format(T value, FormatContext& ctx) const
+    {
+        return formatter<underlying_type_t<T>>::format(static_cast<underlying_type_t<T>>(value), ctx);
     }
 };
 
