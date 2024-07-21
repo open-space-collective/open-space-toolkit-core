@@ -3,16 +3,14 @@
 #ifndef __OpenSpaceToolkit_Core_Type_String__
 #define __OpenSpaceToolkit_Core_Type_String__
 
-#include <OpenSpaceToolkit/Core/Type/Index.hpp>
-#include <OpenSpaceToolkit/Core/Type/Size.hpp>
-
-#define FMT_HEADER_ONLY
+#include <format>
 #include <ostream>
 #include <regex>
 #include <string>
 #include <type_traits>
 
-#include <fmt/format.h>
+#include <OpenSpaceToolkit/Core/Type/Index.hpp>
+#include <OpenSpaceToolkit/Core/Type/Size.hpp>
 
 namespace ostk
 {
@@ -29,9 +27,12 @@ class Array;
 namespace type
 {
 
+using ostk::core::container::Array;
 using ostk::core::type::Index;
 using ostk::core::type::Size;
-using ostk::core::container::Array;
+
+class Real;
+class Integer;
 
 /// @brief                      A sequence of characters
 /// @note                       The current implementation (derived for std::string) is temporary, as this type of
@@ -143,9 +144,9 @@ class String : public std::string
     /// @return             Formatted string
 
     template <typename... Args>
-    static String Format(const char* aFormat, Args... anArgumentList)
+    static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
-        return fmt::format(aFormat, anArgumentList...);
+        return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
     }
 };
 
@@ -176,6 +177,12 @@ typename std::enable_if<HasToString<T>::value, std::string>::type CallToString(T
     return t->toString();
 }
 
+// Concept to check if a type is convertible to std::string
+template <typename T>
+concept StringConvertible = requires(T t) {
+    { std::string(t) } -> std::convertible_to<std::string>;
+} && !std::is_array_v<T>;  // Exclude array types to avoid ambiguity with const char*
+
 }  // namespace type
 }  // namespace core
 }  // namespace ostk
@@ -192,6 +199,44 @@ struct hash<ostk::core::type::String>
     result_type operator()(const argument_type& aString) const
     {
         return std::hash<std::string> {}(aString);
+    }
+};
+
+template <>
+struct formatter<ostk::core::type::String> : formatter<string>
+{
+    template <typename FormatContext>
+    auto format(const ostk::core::type::String& str, FormatContext& ctx) const
+    {
+        return formatter<string>::format(static_cast<const string&>(str), ctx);
+    }
+};
+
+// Generic formatter for StringConvertible types
+template <typename T>
+    requires ostk::core::type::StringConvertible<T> && (!std::is_same_v<T, ostk::core::type::String>) &&
+             (!std::is_same_v<T, std::string>) && (!std::is_same_v<T, const char*>)
+struct formatter<T> : formatter<string>
+{
+    template <typename FormatContext>
+    auto format(const T& value, FormatContext& ctx) const
+    {
+        return formatter<string>::format(string(value), ctx);
+    }
+};
+
+// Concept to check if a type is an enum
+template <typename T>
+concept EnumType = is_enum_v<T>;
+
+// Generic formatter for all enum types
+template <EnumType T>
+struct formatter<T> : formatter<underlying_type_t<T>>
+{
+    template <typename FormatContext>
+    auto format(T value, FormatContext& ctx) const
+    {
+        return formatter<underlying_type_t<T>>::format(static_cast<underlying_type_t<T>>(value), ctx);
     }
 };
 

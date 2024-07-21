@@ -270,4 +270,14 @@ class Integer
 }  // namespace core
 }  // namespace ostk
 
+template <>
+struct std::formatter<ostk::core::type::Integer> : std::formatter<int>
+{
+    template <typename FormatContext>
+    auto format(const ostk::core::type::Integer& anInteger, FormatContext& ctx) const
+    {
+        return std::formatter<int>::format(static_cast<int>(anInteger), ctx);
+    }
+};
+
 #endif

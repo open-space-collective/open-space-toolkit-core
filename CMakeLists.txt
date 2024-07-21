@@ -117,9 +117,9 @@ ENDIF ()
 
 IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
-    IF (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
+    IF (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 13.0)
 
-        MESSAGE (FATAL_ERROR "GCC version must be at least 4.8")
+        MESSAGE (FATAL_ERROR "GCC version must be at least 13.0")
 
     ENDIF ()
 
@@ -133,7 +133,7 @@ ENDIF ()
 
 ### C++ 17 support
 
-SET (CMAKE_CXX_STANDARD 17)
+SET (CMAKE_CXX_STANDARD 20)
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 SET (CMAKE_CXX_EXTENSIONS OFF)
 
@@ -265,16 +265,6 @@ ENDIF ()
 ### yaml-cpp [0.7.0]
 
 FIND_PACKAGE ("yaml-cpp" REQUIRED)
-
-### {fmt} [master]
-
-FIND_PACKAGE ("fmt" REQUIRED)
-
-IF (fmt_FOUND)
-
-ELSE ()
-    MESSAGE (SEND_ERROR "[{fmt}] not found.")
-ENDIF ()
 
 ## Versioning
 
