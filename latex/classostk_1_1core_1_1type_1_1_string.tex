@@ -69,7 +69,7 @@ static bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a073128d2588b7
 \begin{DoxyCompactList}\small\item\em Checks if the string contains any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a858b680569fe684d75d7f2fe25959faa}{Sanitize\+U\+T\+F8}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+String)
 \begin{DoxyCompactList}\small\item\em Sanitizes the string by removing any invalid U\+T\+F-\/8 characters. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{Format}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
+{\footnotesize template$<$typename... Args$>$ }\\static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_acabf5cc0757947c342c1209d3e32a840}{Format}} (const std\+::string\+\_\+view a\+Format, Args \&\&... an\+Argument\+List)
 \begin{DoxyCompactList}\small\item\em Create formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -121,12 +121,12 @@ The current implementation (derived for std\+::string) is temporary, as this typ
 \doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}\label{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_acabf5cc0757947c342c1209d3e32a840}\label{classostk_1_1core_1_1type_1_1_string_acabf5cc0757947c342c1209d3e32a840}} 
 \index{ostk::core::type::String@{ostk::core::type::String}!Format@{Format}}
 \index{Format@{Format}!ostk::core::type::String@{ostk::core::type::String}}
 \doxysubsubsection{\texorpdfstring{Format()}{Format()}}
 {\footnotesize\ttfamily template$<$typename... Args$>$ \\
-static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+static \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::type\+::\+String\+::\+Format (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{a\+Format,  }\item[{Args \&\&...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -134,8 +134,8 @@ Create formatted string.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{String::Format}}(\textcolor{stringliteral}{"\{0\}, \{1\}!"}, \textcolor{stringliteral}{"Hello"}, \textcolor{stringliteral}{"World"}) ; \textcolor{comment}{// "Hello, World!"}}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_abcd48b5675fa8109c0aaf8e339f00675}{String::Format}}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_acabf5cc0757947c342c1209d3e32a840}{String::Format}}(\textcolor{stringliteral}{"\{0\}, \{1\}!"}, \textcolor{stringliteral}{"Hello"}, \textcolor{stringliteral}{"World"}) ; \textcolor{comment}{// "Hello, World!"}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_acabf5cc0757947c342c1209d3e32a840}{String::Format}}(\textcolor{stringliteral}{"Let's operate \{0\} \{1\}!"}, 123, \textcolor{stringliteral}{"satellites"}) ; \textcolor{comment}{// "Let's operate 123}}
 \DoxyCodeLine{satellites!\textcolor{stringliteral}{"}}
 \end{DoxyCode}
 

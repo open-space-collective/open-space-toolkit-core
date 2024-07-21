@@ -83,19 +83,19 @@ $(document).ready(function(){initNavTree('_string_8hpp.html',''); initResizable(
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">String.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_index_8hpp_source.html">OpenSpaceToolkit/Core/Type/Index.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_size_8hpp_source.html">OpenSpaceToolkit/Core/Type/Size.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;format&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;regex&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;fmt/format.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_index_8hpp_source.html">OpenSpaceToolkit/Core/Type/Index.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_size_8hpp_source.html">OpenSpaceToolkit/Core/Type/Size.hpp</a>&gt;</code><br />
 </div>
 <p><a href="_string_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -123,32 +123,35 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceostk_1_1core_1_1type"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1type.html">ostk::core::type</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a27b3249db8d77bd236109bda307bc263"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_string_8hpp.html#a27b3249db8d77bd236109bda307bc263">FMT_HEADER_ONLY</a></td></tr>
-<tr class="memdesc:a27b3249db8d77bd236109bda307bc263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apache License 2.0.  <a href="_string_8hpp.html#a27b3249db8d77bd236109bda307bc263">More...</a><br /></td></tr>
-<tr class="separator:a27b3249db8d77bd236109bda307bc263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad18c81a5ed56f58ff9df98288c8c343a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad18c81a5ed56f58ff9df98288c8c343a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; HasToString&lt; T &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">ostk::core::type::CallToString</a> (T *t)</td></tr>
 <tr class="separator:ad18c81a5ed56f58ff9df98288c8c343a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4248ff440160a04f36cad2b0936ceed9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4248ff440160a04f36cad2b0936ceed9"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1type.html#a4248ff440160a04f36cad2b0936ceed9">ostk::core::type::StringConvertible</a></td></tr>
+<tr class="separator:a4248ff440160a04f36cad2b0936ceed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50be16c4f009726226fd7b4e91d44477"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a50be16c4f009726226fd7b4e91d44477"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_string_8hpp.html#a50be16c4f009726226fd7b4e91d44477">std::EnumType</a> = is_enum_v&lt;T&gt;</td></tr>
+<tr class="separator:a50be16c4f009726226fd7b4e91d44477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a27b3249db8d77bd236109bda307bc263"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27b3249db8d77bd236109bda307bc263">&#9670;&nbsp;</a></span>FMT_HEADER_ONLY</h2>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a50be16c4f009726226fd7b4e91d44477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50be16c4f009726226fd7b4e91d44477">&#9670;&nbsp;</a></span>EnumType</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">#define FMT_HEADER_ONLY</td>
+          <td class="memname">concept std::EnumType = is_enum_v&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Apache License 2.0. </p>
 
 </div>
 </div>

@@ -254,6 +254,29 @@
         <location file="include/OpenSpaceToolkit/Core/Type/Weak.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Weak.hpp" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceostk_1_1core_1_1type_1a4248ff440160a04f36cad2b0936ceed9" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept ostk::core::type::StringConvertible</definition>
+        <argsstring></argsstring>
+        <name>StringConvertible</name>
+        <initializer>= requires(T t) {
+    { std::string(t) } -&gt; std::convertible_to&lt;std::string&gt;;
+} &amp;&amp; !std::is_array_v&lt;T&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="182" column="9" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1ad18c81a5ed56f58ff9df98288c8c343a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -275,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="174" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="174" bodyend="177"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="175" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="175" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>

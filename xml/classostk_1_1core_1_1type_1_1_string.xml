@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="45" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="19" bodyend="22"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="46" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac189ff8f059b1444cdb6d216376a3919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="47" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="24" bodyend="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="48" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a6eaf1894a8ee8d15ed3d06d73abe0119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="49" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="29" bodyend="29"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="50" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="29" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a7c29ece5a4c0db35b4c30d61788fe729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="51" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="31" bodyend="34"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="52" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aabf70678b4fb31beae28af913ffee684" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="53" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="36" bodyend="47"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="54" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="36" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a197b0c1b6825a60cf375f49cafd6d550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="55" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="49" bodyend="60"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="56" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="49" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac78674da13d8b5a3a35a6787cb515a38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="66" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="62" bodyend="65"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="67" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="62" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac08a31fa6b0582d4a9b223a3927d354b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="68" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="67" bodyend="70"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="69" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="70" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="96" bodyend="104"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="71" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="96" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="72" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="106" bodyend="114"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="73" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="106" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aceab98c3ab4a61de80b05da7152975a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="74" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="72" bodyend="82"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="75" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="72" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a4b5ceca3c74ddf5075f35709e77e6c00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="76" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="84" bodyend="94"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="77" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="84" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae90137d2ec2634da5fbe0c32e66a3672" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="78" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="116" bodyend="145"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="79" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="116" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae6af9be350ec2401f961a6b042f84c8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt;</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="85" column="11" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="147" bodyend="152"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="86" column="11" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="147" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a44cc2827faafa67f59e3168f8dcbbbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="91" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="154" bodyend="162"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="92" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="154" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac4d69227a1cb3c0b4d9e3501e01b3aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="99" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="164" bodyend="169"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="100" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="164" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a368cc0fbfe2f92586a2eeb3616b47da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="107" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="171" bodyend="176"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="108" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="171" bodyend="176"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="109" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="178" bodyend="182"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="110" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="178" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="111" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="184" bodyend="187"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="112" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="184" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="113" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="189" bodyend="192"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="114" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="189" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1af11502e59dc726425d58e94f2b08ace6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -403,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="115" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="194" bodyend="197"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="116" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="194" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a015a3f0091b792bfae001904d7b31aea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -424,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="117" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="199" bodyend="209"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="118" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="199" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a073128d2588b7f95bbba37c84b6f700f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -454,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="124" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="211" bodyend="255"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="125" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="211" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a858b680569fe684d75d7f2fe25959faa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -484,9 +484,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="131" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="257" bodyend="287"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="132" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="257" bodyend="287"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1acabf5cc0757947c342c1209d3e32a840" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -496,14 +496,14 @@
         </templateparamlist>
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
         <definition>static String ostk::core::type::String::Format</definition>
-        <argsstring>(const char *aFormat, Args... anArgumentList)</argsstring>
+        <argsstring>(const std::string_view aFormat, Args &amp;&amp;... anArgumentList)</argsstring>
         <name>Format</name>
         <param>
-          <type>const char *</type>
+          <type>const std::string_view</type>
           <declname>aFormat</declname>
         </param>
         <param>
-          <type>Args...</type>
+          <type>Args &amp;&amp;...</type>
           <declname>anArgumentList</declname>
         </param>
         <briefdescription>
@@ -537,7 +537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="146" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="146" bodyend="149"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="147" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="147" bodyend="150"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -580,12 +580,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="41" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="40" bodyend="150"/>
+    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="42" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="41" bodyend="151"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Boolean</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Char</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Empty</name></member>
-      <member refid="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Format</name></member>
+      <member refid="classostk_1_1core_1_1type_1_1_string_1acabf5cc0757947c342c1209d3e32a840" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Format</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getFirst</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1aceab98c3ab4a61de80b05da7152975a6" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getHead</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>getLast</name></member>

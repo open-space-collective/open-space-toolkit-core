@@ -80,6 +80,11 @@ std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a718a72f9497d1b
 \item 
 std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&a\+Real)
 \end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a4248ff440160a04f36cad2b0936ceed9}{String\+Convertible}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -301,3 +306,20 @@ std\+::enable\+\_\+if$<$\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_st
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::type\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a4248ff440160a04f36cad2b0936ceed9}\label{namespaceostk_1_1core_1_1type_a4248ff440160a04f36cad2b0936ceed9}} 
+\index{ostk::core::type@{ostk::core::type}!StringConvertible@{StringConvertible}}
+\index{StringConvertible@{StringConvertible}!ostk::core::type@{ostk::core::type}}
+\doxysubsubsection{\texorpdfstring{StringConvertible}{StringConvertible}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept ostk\+::core\+::type\+::\+String\+Convertible}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= requires(T t) \{}
+\DoxyCodeLine{    \{ std::string(t) \} -\/> std::convertible\_to<std::string>;}
+\DoxyCodeLine{\} \&\& !std::is\_array\_v<T>}
+
+\end{DoxyCode}

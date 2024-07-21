@@ -284,7 +284,17 @@ $(document).ready(function(){initNavTree('_integer_8hpp_source.html',''); initRe
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}  <span class="comment">// namespace core</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}  <span class="comment">// namespace ostk</span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">struct </span>std::formatter&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::Integer&gt; : std::formatter&lt;int&gt;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_integer.html">ostk::core::type::Integer</a>&amp; anInteger, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> std::formatter&lt;int&gt;::format(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(anInteger), ctx);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;};</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_index_8hpp_html"><div class="ttname"><a href="_index_8hpp.html">Index.hpp</a></div></div>
@@ -319,7 +329,7 @@ $(document).ready(function(){initNavTree('_integer_8hpp_source.html',''); initRe
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_a690a18bd9f78b063554d7a3e1dc3d0ed"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#a690a18bd9f78b063554d7a3e1dc3d0ed">ostk::core::type::Integer::ValueType</a></div><div class="ttdeci">int32_t ValueType</div><div class="ttdef"><b>Definition:</b> Integer.hpp:37</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a294c0f2c89e8801458b09885d53c4b02"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02">ostk::core::type::Sign</a></div><div class="ttdeci">Sign</div><div class="ttdoc">Sign enum.</div><div class="ttdef"><b>Definition:</b> Sign.hpp:17</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_acc92f0b9a9493b16c5f7304a03fef3d4"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#acc92f0b9a9493b16c5f7304a03fef3d4">ostk::core::type::Integer::operator==</a></div><div class="ttdeci">bool operator==(const Integer &amp;anInteger) const</div><div class="ttdoc">Equal to operator.</div><div class="ttdef"><b>Definition:</b> Integer.cpp:32</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:40</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:41</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_a484fbd67e4864447a04b6cb4c1260667"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#a484fbd67e4864447a04b6cb4c1260667">ostk::core::type::Integer::operator+</a></div><div class="ttdeci">Integer operator+() const</div><div class="ttdef"><b>Definition:</b> Integer.cpp:519</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_a7cfec90ab92235c3f156a29358da51dd"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#a7cfec90ab92235c3f156a29358da51dd">ostk::core::type::Integer::Undefined</a></div><div class="ttdeci">static Integer Undefined()</div><div class="ttdef"><b>Definition:</b> Integer.cpp:831</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_afd52937e53bd4bf39b45afe1e3d74d46"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#afd52937e53bd4bf39b45afe1e3d74d46">ostk::core::type::Integer::operator-</a></div><div class="ttdeci">Integer operator-() const</div><div class="ttdef"><b>Definition:</b> Integer.cpp:524</div></div>

@@ -232,7 +232,17 @@ $(document).ready(function(){initNavTree('_real_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}  <span class="comment">// namespace core</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}  <span class="comment">// namespace ostk</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">struct </span>std::formatter&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::Real&gt; : std::formatter&lt;double&gt;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_real.html">ostk::core::type::Real</a>&amp; aReal, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> std::formatter&lt;double&gt;::format(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(aReal), ctx);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_real_html_a1fa04573fd84b62b560af7f6d1074f7a"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_real.html#a1fa04573fd84b62b560af7f6d1074f7a">ostk::core::type::Real::isZero</a></div><div class="ttdeci">bool isZero() const</div><div class="ttdef"><b>Definition:</b> Real.cpp:535</div></div>
@@ -261,7 +271,7 @@ $(document).ready(function(){initNavTree('_real_8hpp_source.html',''); initResiz
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_real_html_a89d71bd220a38de4b93161082e7196b4"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_real.html#a89d71bd220a38de4b93161082e7196b4">ostk::core::type::Real::abs</a></div><div class="ttdeci">Real abs() const</div><div class="ttdef"><b>Definition:</b> Real.cpp:729</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a294c0f2c89e8801458b09885d53c4b02"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02">ostk::core::type::Sign</a></div><div class="ttdeci">Sign</div><div class="ttdoc">Sign enum.</div><div class="ttdef"><b>Definition:</b> Sign.hpp:17</div></div>
 <div class="ttc" id="a_integer_8hpp_html"><div class="ttname"><a href="_integer_8hpp.html">Integer.hpp</a></div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:40</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:41</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_integer_html_a7cfec90ab92235c3f156a29358da51dd"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_integer.html#a7cfec90ab92235c3f156a29358da51dd">ostk::core::type::Integer::Undefined</a></div><div class="ttdeci">static Integer Undefined()</div><div class="ttdef"><b>Definition:</b> Integer.cpp:831</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_real_html_ac938f14a777b6c25feab8132a7386b57"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_real.html#ac938f14a777b6c25feab8132a7386b57">ostk::core::type::Real::operator+=</a></div><div class="ttdeci">Real &amp; operator+=(const Real &amp;aReal)</div><div class="ttdef"><b>Definition:</b> Real.cpp:376</div></div>
 <div class="ttc" id="anamespaceostk_html"><div class="ttname"><a href="namespaceostk.html">ostk</a></div><div class="ttdoc">Apache License 2.0.</div><div class="ttdef"><b>Definition:</b> Array.hpp:15</div></div>

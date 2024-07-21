@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('namespaceostk_1_1core_1_1type.html',''
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ostk::core::type Namespace Reference</div>  </div>
 </div><!--header-->
@@ -185,6 +186,12 @@ Functions</h2></td></tr>
 <tr class="separator:a52cb50068e71b0a0e6dd76375a6f7830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab923b1f63a7df2f26ea3cecfb1f6c8da"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1type.html#ab923b1f63a7df2f26ea3cecfb1f6c8da">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classostk_1_1core_1_1type_1_1_real.html">Real</a> &amp;aReal)</td></tr>
 <tr class="separator:ab923b1f63a7df2f26ea3cecfb1f6c8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4248ff440160a04f36cad2b0936ceed9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4248ff440160a04f36cad2b0936ceed9"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1type.html#a4248ff440160a04f36cad2b0936ceed9">StringConvertible</a></td></tr>
+<tr class="separator:a4248ff440160a04f36cad2b0936ceed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae6778085a3f5866921d2c9c9b69d8ee1"></a>
@@ -759,6 +766,26 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4248ff440160a04f36cad2b0936ceed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4248ff440160a04f36cad2b0936ceed9">&#9670;&nbsp;</a></span>StringConvertible</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">concept ostk::core::type::StringConvertible</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= requires(T t) {</div>
+<div class="line">    { std::string(t) } -&gt; std::convertible_to&lt;std::string&gt;;</div>
+<div class="line">} &amp;&amp; !std::is_array_v&lt;T&gt;</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

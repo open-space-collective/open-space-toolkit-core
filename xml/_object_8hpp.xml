@@ -19,9 +19,6 @@
       <node id="5">
         <label>functional</label>
       </node>
-      <node id="18">
-        <label>fmt/format.h</label>
-      </node>
       <node id="36">
         <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
@@ -96,7 +93,7 @@
       <node id="28">
         <label>stdexcept</label>
       </node>
-      <node id="16">
+      <node id="17">
         <label>string</label>
       </node>
       <node id="11">
@@ -105,7 +102,7 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>regex</label>
       </node>
       <node id="7">
@@ -158,6 +155,9 @@
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
+      </node>
+      <node id="15">
+        <label>format</label>
       </node>
       <node id="23">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>
@@ -275,25 +275,25 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>type_traits</label>
       </node>
       <node id="14">
         <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
         <link refid="_string_8hpp"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="24">

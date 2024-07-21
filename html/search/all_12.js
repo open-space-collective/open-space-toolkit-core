@@ -12,7 +12,7 @@ var searchData=
   ['shared_2ehpp_367',['Shared.hpp',['../_shared_8hpp.html',1,'']]],
   ['sign_368',['Sign',['../namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02',1,'ostk::core::type']]],
   ['sign_2ehpp_369',['Sign.hpp',['../_sign_8hpp.html',1,'']]],
-  ['sink_370',['Sink',['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html',1,'ostk::core::logger::sink::Sink'],['../classostk_1_1core_1_1logger_1_1_sink.html',1,'ostk::core::logger::Sink'],['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html#aa84740d4bccf16891d8a1c6424996ef1',1,'ostk::core::logger::sink::Sink::Sink()'],['../classostk_1_1core_1_1logger_1_1_sink.html#ac22e9f0fb51b08f02bff8b59e32fc85e',1,'ostk::core::logger::Sink::Sink(const sink::Sink &amp;aSink)'],['../classostk_1_1core_1_1logger_1_1_sink.html#aadf37265845ad9648afcb7d07f0756ca',1,'ostk::core::logger::Sink::Sink(const Sink &amp;aSink)']]],
+  ['sink_370',['Sink',['../classostk_1_1core_1_1logger_1_1_sink.html',1,'ostk::core::logger::Sink'],['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html',1,'ostk::core::logger::sink::Sink'],['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html#aa84740d4bccf16891d8a1c6424996ef1',1,'ostk::core::logger::sink::Sink::Sink()'],['../classostk_1_1core_1_1logger_1_1_sink.html#ac22e9f0fb51b08f02bff8b59e32fc85e',1,'ostk::core::logger::Sink::Sink(const sink::Sink &amp;aSink)'],['../classostk_1_1core_1_1logger_1_1_sink.html#aadf37265845ad9648afcb7d07f0756ca',1,'ostk::core::logger::Sink::Sink(const Sink &amp;aSink)']]],
   ['sink_2ehpp_371',['Sink.hpp',['../_sink_2_sink_8hpp.html',1,'(Global Namespace)'],['../_sink_8hpp.html',1,'(Global Namespace)']]],
   ['size_372',['Size',['../classostk_1_1core_1_1type_1_1_integer.html#aeba7badddda284a99924422e384524f6',1,'ostk::core::type::Integer::Size()'],['../namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403',1,'ostk::core::type::Size()']]],
   ['size_2ehpp_373',['Size.hpp',['../_size_8hpp.html',1,'']]],
@@ -27,7 +27,8 @@ var searchData=
   ['string_382',['String',['../classostk_1_1core_1_1type_1_1_string.html',1,'ostk::core::type::String'],['../classostk_1_1core_1_1container_1_1_object.html#a26e9f016e65e3ee291cd58655c541d6a',1,'ostk::core::container::Object::String()'],['../classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f',1,'ostk::core::type::String::String()'],['../classostk_1_1core_1_1type_1_1_string.html#ac189ff8f059b1444cdb6d216376a3919',1,'ostk::core::type::String::String(const std::string &amp;aString)'],['../classostk_1_1core_1_1container_1_1_object.html#a7aae445503d92c87f3bc4434c50c6e42a27118326006d3829667a400ad23d5d98',1,'ostk::core::container::Object::String()']]],
   ['string_2ecpp_383',['String.cpp',['../_string_8cpp.html',1,'']]],
   ['string_2ehpp_384',['String.hpp',['../_string_8hpp.html',1,'']]],
-  ['stringfromtype_385',['StringFromType',['../classostk_1_1core_1_1container_1_1_object.html#a90bba1ccc341ad4089b0c99689270743',1,'ostk::core::container::Object']]],
-  ['strings_386',['Strings',['../classostk_1_1core_1_1filesystem_1_1_path.html#a4203822b86cdaf2542b292d214e5e113',1,'ostk::core::filesystem::Path']]],
-  ['symboliclink_2ehpp_387',['SymbolicLink.hpp',['../_symbolic_link_8hpp.html',1,'']]]
+  ['stringconvertible_385',['StringConvertible',['../namespaceostk_1_1core_1_1type.html#a4248ff440160a04f36cad2b0936ceed9',1,'ostk::core::type']]],
+  ['stringfromtype_386',['StringFromType',['../classostk_1_1core_1_1container_1_1_object.html#a90bba1ccc341ad4089b0c99689270743',1,'ostk::core::container::Object']]],
+  ['strings_387',['Strings',['../classostk_1_1core_1_1filesystem_1_1_path.html#a4203822b86cdaf2542b292d214e5e113',1,'ostk::core::filesystem::Path']]],
+  ['symboliclink_2ehpp_388',['SymbolicLink.hpp',['../_symbolic_link_8hpp.html',1,'']]]
 ];

@@ -4,11 +4,12 @@ var searchData=
   ['enable_81',['enable',['../classostk_1_1core_1_1logger_1_1sink_1_1_console.html#a9d9222231635b663c863430457209050',1,'ostk::core::logger::sink::Console::enable()'],['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html#ac44c5cfde95ebd171490024c380904ed',1,'ostk::core::logger::sink::Sink::enable()'],['../classostk_1_1core_1_1logger_1_1_sink.html#aba09f6fd4b47c6dbcf755834ea531c17',1,'ostk::core::logger::Sink::enable()']]],
   ['enabled_5f_82',['enabled_',['../classostk_1_1core_1_1logger_1_1sink_1_1_sink.html#a3ea719fca071d9b19f7c1f331b07a643',1,'ostk::core::logger::sink::Sink']]],
   ['end_83',['end',['../classostk_1_1core_1_1container_1_1_dictionary.html#a218a2d4c8aa88ce58ce50b64515d5efb',1,'ostk::core::container::Dictionary::end() const'],['../classostk_1_1core_1_1container_1_1_dictionary.html#a38527b37c1f6667391ef9ec68a01bc9e',1,'ostk::core::container::Dictionary::end()'],['../classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator.html#af5067549c260224ccb8e652979d1455f',1,'ostk::core::container::iterator::ZipIterator::end()'],['../classostk_1_1core_1_1container_1_1table_1_1_row.html#a7592c966848014a635d5ce3625a0471c',1,'ostk::core::container::table::Row::end()'],['../classostk_1_1core_1_1container_1_1_table.html#a0598162989de28b03becb213eefc519d',1,'ostk::core::container::Table::end()']]],
-  ['epsilon_84',['Epsilon',['../classostk_1_1core_1_1type_1_1_real.html#af0abff31499bc57e5c63f467353e8827',1,'ostk::core::type::Real']]],
-  ['error_85',['Error',['../namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd',1,'ostk::core::logger']]],
-  ['error_2ehpp_86',['Error.hpp',['../_error_8hpp.html',1,'']]],
-  ['exception_87',['Exception',['../classostk_1_1core_1_1error_1_1_exception.html',1,'ostk::core::error::Exception'],['../classostk_1_1core_1_1error_1_1_exception.html#a27647e55b84a7a32cf8b24e575651d71',1,'ostk::core::error::Exception::Exception()']]],
-  ['exception_2ecpp_88',['Exception.cpp',['../_exception_8cpp.html',1,'']]],
-  ['exception_2ehpp_89',['Exception.hpp',['../_exception_8hpp.html',1,'']]],
-  ['exists_90',['exists',['../classostk_1_1core_1_1filesystem_1_1_directory.html#affd6e4da6f153b1c961ff61178898c20',1,'ostk::core::filesystem::Directory::exists()'],['../classostk_1_1core_1_1filesystem_1_1_file.html#a34b7fed969550f1eab7fdc045bbddba9',1,'ostk::core::filesystem::File::exists()']]]
+  ['enumtype_84',['EnumType',['../_string_8hpp.html#a50be16c4f009726226fd7b4e91d44477',1,'std']]],
+  ['epsilon_85',['Epsilon',['../classostk_1_1core_1_1type_1_1_real.html#af0abff31499bc57e5c63f467353e8827',1,'ostk::core::type::Real']]],
+  ['error_86',['Error',['../namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd',1,'ostk::core::logger']]],
+  ['error_2ehpp_87',['Error.hpp',['../_error_8hpp.html',1,'']]],
+  ['exception_88',['Exception',['../classostk_1_1core_1_1error_1_1_exception.html',1,'ostk::core::error::Exception'],['../classostk_1_1core_1_1error_1_1_exception.html#a27647e55b84a7a32cf8b24e575651d71',1,'ostk::core::error::Exception::Exception()']]],
+  ['exception_2ecpp_89',['Exception.cpp',['../_exception_8cpp.html',1,'']]],
+  ['exception_2ehpp_90',['Exception.hpp',['../_exception_8hpp.html',1,'']]],
+  ['exists_91',['exists',['../classostk_1_1core_1_1filesystem_1_1_directory.html#affd6e4da6f153b1c961ff61178898c20',1,'ostk::core::filesystem::Directory::exists()'],['../classostk_1_1core_1_1filesystem_1_1_file.html#a34b7fed969550f1eab7fdc045bbddba9',1,'ostk::core::filesystem::File::exists()']]]
 ];
