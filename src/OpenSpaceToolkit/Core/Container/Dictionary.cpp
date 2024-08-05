@@ -312,7 +312,8 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
         }
     };
 
-    printArray = [&printArray, &printDictionary, &anOutputStream](const container::Array<Object>& array, uint anIndentation)
+    printArray =
+        [&printArray, &printDictionary, &anOutputStream](const container::Array<Object>& array, uint anIndentation)
     {
         type::Integer index = 0;
 

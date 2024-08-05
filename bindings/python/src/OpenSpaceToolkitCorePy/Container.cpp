@@ -9,8 +9,8 @@
 
 inline void OpenSpaceToolkitCorePy_Container(pybind11::module& aModule)
 {
-    using ostk::core::container::Object;
     using ostk::core::container::Dictionary;
+    using ostk::core::container::Object;
 
     // Create "container" python submodule
     auto container = aModule.def_submodule("container");

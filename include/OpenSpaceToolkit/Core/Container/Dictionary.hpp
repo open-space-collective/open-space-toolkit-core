@@ -19,10 +19,10 @@ namespace container
 
 namespace filesystem = ostk::core::filesystem;
 
+using ostk::core::container::Object;
+using ostk::core::container::OrderedMap;
 using ostk::core::type::Size;
 using ostk::core::type::String;
-using ostk::core::container::OrderedMap;
-using ostk::core::container::Object;
 
 /// @brief                      Key-value pairs container
 ///

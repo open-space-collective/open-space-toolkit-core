@@ -6,8 +6,8 @@
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, EqualToOperator)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Directory::Path(Path::Parse("/")) == Directory::Path(Path::Parse("/")));
@@ -37,8 +37,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, EqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, NotEqualToOperator)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(
@@ -68,8 +68,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, NotEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, StreamOperator)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         const Directory directory = Directory::Path(Path::Parse("/path/to/directory"));
@@ -84,8 +84,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, StreamOperator)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsDefined)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Directory::Path(Path::Parse("/")).isDefined());
@@ -100,8 +100,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsDefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Exists)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Directory::Path(Path::Parse("/")).exists());
@@ -121,8 +121,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Exists)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsEmpty)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_TRUE(Directory::Path(Path::Parse("/usr/games")).isEmpty());
@@ -143,8 +143,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsEmpty)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ContainsFileWithName)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         const Directory directory = Directory::Path(Path::Parse("/app/include/OpenSpaceToolkit/Core"));
@@ -182,8 +182,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ContainsFileWithName)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetName)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ("/", Directory::Path(Path::Parse("/")).getName());
@@ -200,8 +200,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetName)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetPath)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ(Path::Parse("/"), Directory::Path(Path::Parse("/")).getPath());
@@ -274,8 +274,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetPath)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ(
@@ -341,10 +341,10 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 {
-    using ostk::core::type::String;
     using ostk::core::container::Array;
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
+    using ostk::core::type::String;
 
     {
         const Directory directory = Directory::Path(Path::Parse("/app/tools"));
@@ -372,8 +372,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_EQ("/app/build", Directory::Path(Path::Parse("/app/build")).toString());
@@ -450,8 +450,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Create)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         Directory directory = Directory::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-directory-create"));
@@ -474,8 +474,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Create)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Remove)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         Directory directory = Directory::Path(Path::Parse("/tmp/open-space-toolkit-core-filesystem-directory-remove"));
@@ -498,8 +498,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Remove)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Undefined)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Directory::Undefined());
@@ -509,8 +509,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Undefined)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Root)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         EXPECT_NO_THROW(Directory::Root());
@@ -521,8 +521,8 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Root)
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Path)
 {
-    using ostk::core::filesystem::Path;
     using ostk::core::filesystem::Directory;
+    using ostk::core::filesystem::Path;
 
     {
         const Path path = Path::Parse("/path/to/directory");

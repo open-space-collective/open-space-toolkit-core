@@ -8,9 +8,9 @@
 
 TEST(OpenSpaceToolkit_Core_Container_Tuple, Constructor)
 {
+    using ostk::core::container::Tuple;
     using ostk::core::type::Integer;
     using ostk::core::type::String;
-    using ostk::core::container::Tuple;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
@@ -19,9 +19,9 @@ TEST(OpenSpaceToolkit_Core_Container_Tuple, Constructor)
 
 TEST(OpenSpaceToolkit_Core_Container_Tuple, Getters)
 {
+    using ostk::core::container::Tuple;
     using ostk::core::type::Integer;
     using ostk::core::type::String;
-    using ostk::core::container::Tuple;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
@@ -35,9 +35,9 @@ TEST(OpenSpaceToolkit_Core_Container_Tuple, Getters)
 
 TEST(OpenSpaceToolkit_Core_Container_Tuple, Setters)
 {
+    using ostk::core::container::Tuple;
     using ostk::core::type::Integer;
     using ostk::core::type::String;
-    using ostk::core::container::Tuple;
 
     {
         Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
@@ -59,10 +59,10 @@ TEST(OpenSpaceToolkit_Core_Container_Tuple, Setters)
 
 TEST(OpenSpaceToolkit_Core_Container_Tuple, Unpack)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
     using ostk::core::container::Tuple;
     using ostk::core::container::Unpack;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
 
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};

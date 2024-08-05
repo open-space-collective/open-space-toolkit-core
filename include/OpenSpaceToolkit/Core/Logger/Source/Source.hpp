@@ -17,10 +17,10 @@ namespace logger
 namespace source
 {
 
-using ostk::core::type::Unique;
-using ostk::core::type::String;
 using ostk::core::container::Array;
 using ostk::core::logger::Severity;
+using ostk::core::type::String;
+using ostk::core::type::Unique;
 
 /// @brief                      Log source base
 

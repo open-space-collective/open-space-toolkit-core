@@ -16,10 +16,10 @@ namespace core
 namespace logger
 {
 
-using ostk::core::type::Unique;
+using ostk::core::logger::Severity;
 using ostk::core::type::Integer;
 using ostk::core::type::String;
-using ostk::core::logger::Severity;
+using ostk::core::type::Unique;
 
 /// @brief                      Log pump
 
