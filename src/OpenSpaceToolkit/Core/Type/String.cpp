@@ -217,7 +217,7 @@ bool String::IsValidUTF8(const String& string)
         Integer c = (unsigned char)string[i];
 
         Size n;
-    
+
         if (0x00 <= c && c <= 0x7f)
         {
             n = 0;  // 0bbbbbbb

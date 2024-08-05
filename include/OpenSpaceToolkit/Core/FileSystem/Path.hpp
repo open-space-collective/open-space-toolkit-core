@@ -15,8 +15,8 @@ namespace core
 namespace filesystem
 {
 
-using ostk::core::type::Unique;
 using ostk::core::type::String;
+using ostk::core::type::Unique;
 
 /// @brief
 

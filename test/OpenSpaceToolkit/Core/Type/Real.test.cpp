@@ -194,9 +194,9 @@ TEST(OpenSpaceToolkit_Core_Type_Real, GreaterThanOrEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
 {
-    using ostk::core::type::Real;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Real;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -350,9 +350,9 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
 {
-    using ostk::core::type::Real;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Real;
 
     Array<Triple<Real, Real, Real>> testCases = {
 
@@ -1914,8 +1914,8 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsNear)
 
 TEST(OpenSpaceToolkit_Core_Type_Real, GetSign)
 {
-    using ostk::core::type::Sign;
     using ostk::core::type::Real;
+    using ostk::core::type::Sign;
 
     EXPECT_EQ(Sign::Undefined, Real::Undefined().getSign());
     EXPECT_EQ(Sign::None, Real(0.0).getSign());

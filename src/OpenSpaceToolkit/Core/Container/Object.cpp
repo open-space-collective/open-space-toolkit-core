@@ -105,7 +105,8 @@ bool Object::Impl::operator==(const Object::Impl& anObject) const
 
     if (value_.type() == typeid(container::Dictionary))
     {
-        return boost::any_cast<container::Dictionary>(value_) == boost::any_cast<container::Dictionary>(anObject.value_);
+        return boost::any_cast<container::Dictionary>(value_) ==
+               boost::any_cast<container::Dictionary>(anObject.value_);
     }
 
     throw ostk::core::error::runtime::Wrong("Type");

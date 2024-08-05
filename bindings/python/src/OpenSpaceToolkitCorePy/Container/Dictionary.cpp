@@ -6,8 +6,8 @@
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
-using ostk::core::container::Object;
 using ostk::core::container::Dictionary;
+using ostk::core::container::Object;
 
 Object objectFromPythonHandle(const pybind11::handle& anObject)
 {

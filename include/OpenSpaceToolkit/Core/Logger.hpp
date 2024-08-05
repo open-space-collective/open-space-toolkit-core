@@ -18,14 +18,14 @@ namespace ostk
 namespace core
 {
 
-using ostk::core::type::Unique;
+using ostk::core::container::Array;
+using ostk::core::logger::Pump;
+using ostk::core::logger::Severity;
+using ostk::core::logger::Sink;
+using ostk::core::logger::Source;
 using ostk::core::type::Integer;
 using ostk::core::type::String;
-using ostk::core::container::Array;
-using ostk::core::logger::Severity;
-using ostk::core::logger::Source;
-using ostk::core::logger::Sink;
-using ostk::core::logger::Pump;
+using ostk::core::type::Unique;
 
 /// @brief                      Log management
 

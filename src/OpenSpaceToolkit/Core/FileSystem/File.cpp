@@ -448,7 +448,8 @@ std::fstream& File::accessStream()
 
 // }
 
-// File                            File::copyToDirectory                       (   const   filesystem::Directory& aDestination,
+// File                            File::copyToDirectory                       (   const   filesystem::Directory&
+// aDestination,
 //                                                                                 const   String& aNewFileName ) const
 // {
 

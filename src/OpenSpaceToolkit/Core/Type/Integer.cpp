@@ -375,7 +375,8 @@ Integer Integer::operator%(const Integer& anInteger) const
         {
             return *this;
         }
-        else if ((!this->isInfinity()) && this->isStrictlyPositive() && (!anInteger.isInfinity()) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+        else if ((!this->isInfinity()) && this->isStrictlyPositive() && (!anInteger.isInfinity()) &&
+                 (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
         {
             return *this;
         }

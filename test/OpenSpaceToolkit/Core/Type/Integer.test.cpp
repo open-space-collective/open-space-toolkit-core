@@ -264,9 +264,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, GreaterThanOrEqualToOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -420,9 +420,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -572,9 +572,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -754,9 +754,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -902,9 +902,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1072,9 +1072,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1230,9 +1230,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1384,9 +1384,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1568,9 +1568,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionAssignmentOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1718,9 +1718,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Triple;
     using ostk::core::container::Array;
+    using ostk::core::container::Triple;
+    using ostk::core::type::Integer;
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
@@ -1890,9 +1890,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryPlusOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -1940,9 +1940,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryPlusOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryMinusOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -1990,9 +1990,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryMinusOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixIncrementOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2057,9 +2057,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixIncrementOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixDecrementOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2124,9 +2124,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixDecrementOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixIncrementOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2211,9 +2211,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixIncrementOperator)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixDecrementOperator)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::container::Pair;
     using ostk::core::container::Array;
+    using ostk::core::container::Pair;
+    using ostk::core::type::Integer;
 
     Array<Pair<Integer, Integer>> testCases = {
 
@@ -2548,8 +2548,8 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsOdd)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, GetSign)
 {
-    using ostk::core::type::Sign;
     using ostk::core::type::Integer;
+    using ostk::core::type::Sign;
 
     EXPECT_EQ(Sign::Undefined, Integer::Undefined().getSign());
     EXPECT_EQ(Sign::None, Integer(0).getSign());
@@ -2771,10 +2771,8 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Int64)
             Integer::Int64(ostk::core::type::Int64(std::numeric_limits<ostk::core::type::Int32>::max()) + 1)
         );
 
-        EXPECT_ANY_THROW(Integer::Int64(ostk::core::type::Int64(std::numeric_limits<ostk::core::type::Int64>::min()))
-        );
-        EXPECT_ANY_THROW(Integer::Int64(ostk::core::type::Int64(std::numeric_limits<ostk::core::type::Int64>::max()))
-        );
+        EXPECT_ANY_THROW(Integer::Int64(ostk::core::type::Int64(std::numeric_limits<ostk::core::type::Int64>::min())));
+        EXPECT_ANY_THROW(Integer::Int64(ostk::core::type::Int64(std::numeric_limits<ostk::core::type::Int64>::max())));
     }
 
     {
@@ -2850,15 +2848,13 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint16)
 
         EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(+1)));
 
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::min()))
-        );
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::max()))
-        );
+        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::min())));
+        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::max())));
 
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::min())
-        ));
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::max())
-        ));
+        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::min()))
+        );
+        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::max()))
+        );
     }
 
     {
@@ -2895,21 +2891,19 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint32)
 
         EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(+1)));
 
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min()))
+        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min())));
+        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min())));
+
+        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min()))
+        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
 
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min())
-        ));
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min())
-        ));
+        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::min()))
+        );
 
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::min())
-        ));
-
-        EXPECT_ANY_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::max()
-        )));
+        EXPECT_ANY_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::max()))
+        );
     }
 
     {
@@ -2951,26 +2945,24 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint64)
 
         EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(+1)));
 
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::min()))
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::min())));
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::max())));
+
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::max()))
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::max()))
         );
 
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::min())
-        ));
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::max())
-        ));
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::min()))
+        );
 
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::min())
-        ));
+        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::min()))
+        );
 
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::min())
-        ));
-
-        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::max()
-        )));
-        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::max()
-        )));
+        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::max()))
+        );
+        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::max()))
+        );
     }
 
     {
@@ -3025,8 +3017,8 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Index)
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, Size)
 {
-    using ostk::core::type::Size;
     using ostk::core::type::Integer;
+    using ostk::core::type::Size;
 
     {
         EXPECT_EQ(0, Integer::Size(Size(0)));

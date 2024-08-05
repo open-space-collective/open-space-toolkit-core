@@ -15,8 +15,8 @@ namespace logger
 namespace sink
 {
 
-using ostk::core::type::Unique;
 using ostk::core::logger::Severity;
+using ostk::core::type::Unique;
 
 /// @brief                      Log console sink
 

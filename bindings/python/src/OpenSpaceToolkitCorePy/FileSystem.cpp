@@ -11,10 +11,10 @@
 #include <OpenSpaceToolkitCorePy/FileSystem/Path.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem/PermissionSet.cpp>
 
-using ostk::core::filesystem::PermissionSet;
+using ostk::core::filesystem::Directory;
 using ostk::core::filesystem::File;
 using ostk::core::filesystem::Path;
-using ostk::core::filesystem::Directory;
+using ostk::core::filesystem::PermissionSet;
 
 inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
 {

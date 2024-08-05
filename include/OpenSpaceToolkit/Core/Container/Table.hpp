@@ -18,13 +18,13 @@ namespace core
 namespace container
 {
 
+using ostk::core::container::Array;
+using ostk::core::container::table::Cell;
+using ostk::core::container::table::Row;
+using ostk::core::filesystem::File;
 using ostk::core::type::Index;
 using ostk::core::type::Size;
 using ostk::core::type::String;
-using ostk::core::container::Array;
-using ostk::core::container::table::Row;
-using ostk::core::container::table::Cell;
-using ostk::core::filesystem::File;
 
 /// @brief                      Table container
 

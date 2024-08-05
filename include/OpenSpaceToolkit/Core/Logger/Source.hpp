@@ -14,8 +14,8 @@ namespace core
 namespace logger
 {
 
-using ostk::core::type::Unique;
 using ostk::core::type::String;
+using ostk::core::type::Unique;
 
 /// @brief                      Log source
 
