@@ -3,7 +3,16 @@
 #ifndef __OpenSpaceToolkit_Core_Type_String__
 #define __OpenSpaceToolkit_Core_Type_String__
 
+#if __cplusplus >= 202002L
+#define CPP20
+#endif
+
+#ifdef CPP20
 #include <format>
+#else
+#define FMT_HEADER_ONLY
+#include <fmt/format.h>
+#endif
 #include <ostream>
 #include <regex>
 #include <string>
@@ -143,11 +152,19 @@ class String : public std::string
     /// @param              [in] anArgumentList A list of arguments
     /// @return             Formatted string
 
+#ifdef CPP20
     template <typename... Args>
     static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
         return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
     }
+#else
+    template <typename... Args>
+    static String Format(const char* aFormat, Args... anArgumentList)
+    {
+        return fmt::format(aFormat, anArgumentList...);
+    }
+#endif
 };
 
 /// @ref                        https://gist.github.com/fenbf/d2cd670704b82e2ce7fd
@@ -177,11 +194,13 @@ typename std::enable_if<HasToString<T>::value, std::string>::type CallToString(T
     return t->toString();
 }
 
+#ifdef CPP20
 // Concept to check if a type is convertible to std::string
 template <typename T>
 concept StringConvertible = requires(T t) {
     { std::string(t) } -> std::convertible_to<std::string>;
 } && !std::is_array_v<T>;  // Exclude array types to avoid ambiguity with const char*
+#endif
 
 }  // namespace type
 }  // namespace core
@@ -202,6 +221,7 @@ struct hash<ostk::core::type::String>
     }
 };
 
+#ifdef CPP20
 template <>
 struct formatter<ostk::core::type::String> : formatter<string>
 {
@@ -239,6 +259,7 @@ struct formatter<T> : formatter<underlying_type_t<T>>
         return formatter<underlying_type_t<T>>::format(static_cast<underlying_type_t<T>>(value), ctx);
     }
 };
+#endif
 
 }  // namespace std
 
