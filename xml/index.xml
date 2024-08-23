@@ -235,10 +235,6 @@
     <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a36ad73db1f710c9380c1499eee0ba486" kind="function"><name>test</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a31d34de008c75d0b00e3a996e03b8874" kind="function"><name>test</name></member>
   </compound>
-  <compound refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl" kind="class"><name>ostk::core::filesystem::Path::Impl</name>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a8e73b348b16f9c30a3d405c176701e4b" kind="variable"><name>path_</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a2563230dfbb8fc9f46b4dfd67357021d" kind="function"><name>Impl</name></member>
-  </compound>
   <compound refid="classostk_1_1core_1_1container_1_1_object_1_1_impl" kind="class"><name>ostk::core::container::Object::Impl</name>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a05f0d3b7879279dcd66f9ad2a799ccad" kind="variable"><name>value_</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac67ff6a1934f1a64d3cba9c0d56886d7" kind="function"><name>Impl</name></member>
@@ -265,6 +261,10 @@
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ad7e2f71a59bafc9df08b2bbb7422976d" kind="function"><name>accessString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a035dc1cdd7ba0867790d2a3ab1e50901" kind="function"><name>accessDictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2e7a5de5656df427348ee2658a39a1b2" kind="function"><name>accessArray</name></member>
+  </compound>
+  <compound refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl" kind="class"><name>ostk::core::filesystem::Path::Impl</name>
+    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a8e73b348b16f9c30a3d405c176701e4b" kind="variable"><name>path_</name></member>
+    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1_1_impl_1a2563230dfbb8fc9f46b4dfd67357021d" kind="function"><name>Impl</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1type_1_1_integer" kind="class"><name>ostk::core::type::Integer</name>
     <member refid="classostk_1_1core_1_1type_1_1_integer_1a3afcf0afc5329502f121ba2ed4c3ea1d" kind="enum"><name>Type</name></member>
@@ -363,16 +363,6 @@
     <member refid="classostk_1_1core_1_1type_1_1_integer_1ab8fcde71f1d6ff75594452873d966554" kind="function"><name>Parse</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_integer_1a84643ebf43398719dc6f463f2c197794" kind="function"><name>Integer</name></member>
   </compound>
-  <compound refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kind="class"><name>ostk::core::container::iterator::ZipIterator::Iterator</name>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" kind="variable"><name>iterators_</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a62922888770b995d6ea7a3f54068c2ed" kind="function"><name>Iterator</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a4c9c979ef43c93647970416b3a0a8b9d" kind="function"><name>operator++</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a17f719da0f404bf820aff3dd790474b7" kind="function"><name>operator++</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a1f8d3567cd758e2e05378f0de74dc3b9" kind="function"><name>operator!=</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a059837024f85829b815a7f276e65b50e" kind="function"><name>operator*</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1ac88c140fc1636994df3294113bbf26ee" kind="function"><name>deref</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" kind="function"><name>increment</name></member>
-  </compound>
   <compound refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kind="class"><name>ostk::core::container::Dictionary::Iterator</name>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kind="typedef"><name>MapIterator</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1af6741d047f1d3e212dcc57fc2049e9d6" kind="variable"><name>mapIt_</name></member>
@@ -396,6 +386,16 @@
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a58d5f2505b51ea8e782cb069ddd16caa" kind="function"><name>accessValue</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" kind="function"><name>accessMapIterator</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aba6384619c15e1226b9aceadc5f8a8a9" kind="function"><name>accessMapIterator</name></member>
+  </compound>
+  <compound refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kind="class"><name>ostk::core::container::iterator::ZipIterator::Iterator</name>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" kind="variable"><name>iterators_</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a62922888770b995d6ea7a3f54068c2ed" kind="function"><name>Iterator</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a4c9c979ef43c93647970416b3a0a8b9d" kind="function"><name>operator++</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a17f719da0f404bf820aff3dd790474b7" kind="function"><name>operator++</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a1f8d3567cd758e2e05378f0de74dc3b9" kind="function"><name>operator!=</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a059837024f85829b815a7f276e65b50e" kind="function"><name>operator*</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1ac88c140fc1636994df3294113bbf26ee" kind="function"><name>deref</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" kind="function"><name>increment</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kind="class"><name>ostk::core::utils::Print::LineBuffer</name>
     <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a09bb2971dab8435a8fdab5df1ca4fb09" kind="variable"><name>stream_</name></member>
@@ -685,16 +685,6 @@
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" kind="function"><name>getStackTrace</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1" kind="function"><name>what</name></member>
   </compound>
-  <compound refid="classostk_1_1core_1_1logger_1_1_sink" kind="class"><name>ostk::core::logger::Sink</name>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a43b2165643b68330a8f77ed13e931940" kind="variable"><name>sinkUPtr_</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac22e9f0fb51b08f02bff8b59e32fc85e" kind="function"><name>Sink</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1aadf37265845ad9648afcb7d07f0756ca" kind="function"><name>Sink</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1aba09f6fd4b47c6dbcf755834ea531c17" kind="function"><name>enable</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a0ab42f184deb76938ae3ab97f690fbaf" kind="function"><name>disable</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" kind="function"><name>addChannel</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac11d2e63d7643cdbf8a24718ce2dd216" kind="function"><name>removeChannel</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a363d47c4b76945b5aa75f0b21b7740c2" kind="function"><name>Console</name></member>
-  </compound>
   <compound refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" kind="class"><name>ostk::core::logger::sink::Sink</name>
     <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a3ea719fca071d9b19f7c1f331b07a643" kind="variable"><name>enabled_</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1aa1103d89b02f3bf86f4b41545c4176af" kind="variable"><name>severity_</name></member>
@@ -725,6 +715,16 @@
     <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a8c14e50eb383c13c6b27b7601f6b1caf" kind="function"><name>disable</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a809a19c1204b3b3681dec39b916786c5" kind="function"><name>addChannel</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a58afc61f0de71dc20c7576b1b363198e" kind="function"><name>removeChannel</name></member>
+  </compound>
+  <compound refid="classostk_1_1core_1_1logger_1_1_sink" kind="class"><name>ostk::core::logger::Sink</name>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a43b2165643b68330a8f77ed13e931940" kind="variable"><name>sinkUPtr_</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac22e9f0fb51b08f02bff8b59e32fc85e" kind="function"><name>Sink</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1aadf37265845ad9648afcb7d07f0756ca" kind="function"><name>Sink</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1aba09f6fd4b47c6dbcf755834ea531c17" kind="function"><name>enable</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a0ab42f184deb76938ae3ab97f690fbaf" kind="function"><name>disable</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" kind="function"><name>addChannel</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1ac11d2e63d7643cdbf8a24718ce2dd216" kind="function"><name>removeChannel</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_sink_1a363d47c4b76945b5aa75f0b21b7740c2" kind="function"><name>Console</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1logger_1_1_source" kind="class"><name>ostk::core::logger::Source</name>
     <member refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" kind="variable"><name>sourceUPtr_</name></member>
@@ -779,7 +779,7 @@
     <member refid="classostk_1_1core_1_1type_1_1_string_1a015a3f0091b792bfae001904d7b31aea" kind="function"><name>Replicate</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1a073128d2588b7f95bbba37c84b6f700f" kind="function"><name>IsValidUTF8</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1a858b680569fe684d75d7f2fe25959faa" kind="function"><name>SanitizeUTF8</name></member>
-    <member refid="classostk_1_1core_1_1type_1_1_string_1acabf5cc0757947c342c1209d3e32a840" kind="function"><name>Format</name></member>
+    <member refid="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" kind="function"><name>Format</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1container_1_1_table" kind="class"><name>ostk::core::container::Table</name>
     <member refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" kind="enum"><name>Format</name></member>
@@ -934,7 +934,6 @@
     <member refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kind="typedef"><name>Size</name></member>
     <member refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kind="typedef"><name>Unique</name></member>
     <member refid="namespaceostk_1_1core_1_1type_1af3e53775781cfb35ee4bd22d6bf784a1" kind="typedef"><name>Weak</name></member>
-    <member refid="namespaceostk_1_1core_1_1type_1a4248ff440160a04f36cad2b0936ceed9" kind="variable"><name>StringConvertible</name></member>
     <member refid="namespaceostk_1_1core_1_1type_1ad18c81a5ed56f58ff9df98288c8c343a" kind="function"><name>CallToString</name></member>
     <member refid="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" kind="function"><name>operator+</name></member>
     <member refid="namespaceostk_1_1core_1_1type_1a5eb83e816ac6b6ef4fd98bd58c3ceccf" kind="function"><name>operator-</name></member>
@@ -951,7 +950,6 @@
   <compound refid="namespaceostk_1_1core_1_1utils" kind="namespace"><name>ostk::core::utils</name>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
-    <member refid="_string_8hpp_1a50be16c4f009726226fd7b4e91d44477" kind="variable"><name>EnumType</name></member>
   </compound>
   <compound refid="_c_o_n_t_r_i_b_u_t_i_n_g_8md" kind="file"><name>CONTRIBUTING.md</name>
   </compound>
@@ -1084,6 +1082,7 @@
   <compound refid="_size_8hpp" kind="file"><name>Size.hpp</name>
   </compound>
   <compound refid="_string_8hpp" kind="file"><name>String.hpp</name>
+    <member refid="_string_8hpp_1a27b3249db8d77bd236109bda307bc263" kind="define"><name>FMT_HEADER_ONLY</name></member>
   </compound>
   <compound refid="_unique_8hpp" kind="file"><name>Unique.hpp</name>
   </compound>

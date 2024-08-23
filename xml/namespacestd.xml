@@ -2,27 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespacestd" kind="namespace" language="C++">
     <compoundname>std</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="_string_8hpp_1a50be16c4f009726226fd7b4e91d44477" prot="public" static="no" mutable="no">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>concept</type>
-        <definition>concept std::EnumType</definition>
-        <argsstring></argsstring>
-        <name>EnumType</name>
-        <initializer>= is_enum_v&lt;T&gt;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="230" column="9" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="230" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
 <para>STL namespace. </para>
     </briefdescription>

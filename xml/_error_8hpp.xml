@@ -18,6 +18,9 @@
     <includedby refid="_real_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/Real.cpp</includedby>
     <includedby refid="_string_8cpp" local="no">src/OpenSpaceToolkit/Core/Type/String.cpp</includedby>
     <incdepgraph>
+      <node id="5">
+        <label>fmt/format.h</label>
+      </node>
       <node id="16">
         <label>boost/stacktrace.hpp</label>
       </node>
@@ -47,9 +50,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>format</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Error.hpp</label>

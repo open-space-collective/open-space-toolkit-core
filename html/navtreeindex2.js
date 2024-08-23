@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classostk_1_1core_1_1filesystem_1_1_directory.html#affd6e4da6f153b1c961ff61178898c20":[5,0,0,0,2,0,6],
 "classostk_1_1core_1_1filesystem_1_1_file.html":[5,0,0,0,2,1],
 "classostk_1_1core_1_1filesystem_1_1_file.html#a1455992a788ca7cc3db6f68f30c7823e":[5,0,0,0,2,1,13],
 "classostk_1_1core_1_1filesystem_1_1_file.html#a220d5eb2cf4ddebb420bc8a7c6e49c78":[5,0,0,0,2,1,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "classostk_1_1core_1_1type_1_1_integer.html#af8431620d855e469e0e24c521efb5ddd":[5,0,0,0,5,2,4],
 "classostk_1_1core_1_1type_1_1_integer.html#afd52937e53bd4bf39b45afe1e3d74d46":[5,0,0,0,5,2,38],
 "classostk_1_1core_1_1type_1_1_integer.html#aff6329dcbc1e00c07de3c9dc336cdfdd":[5,0,0,0,5,2,66],
-"classostk_1_1core_1_1type_1_1_real.html":[5,0,0,0,5,3]
+"classostk_1_1core_1_1type_1_1_real.html":[5,0,0,0,5,3],
+"classostk_1_1core_1_1type_1_1_real.html#a0119b864af2b242431d5d63b2ad76dc8":[5,0,0,0,5,3,24]
 };

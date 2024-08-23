@@ -9,6 +9,9 @@
       <node id="6">
         <label>functional</label>
       </node>
+      <node id="16">
+        <label>fmt/format.h</label>
+      </node>
       <node id="37">
         <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
@@ -151,9 +154,6 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-      </node>
-      <node id="16">
-        <label>format</label>
       </node>
       <node id="24">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>

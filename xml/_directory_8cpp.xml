@@ -13,6 +13,9 @@
       <node id="23">
         <label>functional</label>
       </node>
+      <node id="7">
+        <label>fmt/format.h</label>
+      </node>
       <node id="26">
         <label>iterator</label>
       </node>
@@ -112,9 +115,6 @@
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>format</label>
       </node>
       <node id="3">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>

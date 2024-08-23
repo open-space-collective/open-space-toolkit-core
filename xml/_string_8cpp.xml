@@ -14,6 +14,9 @@
       <node id="4">
         <label>functional</label>
       </node>
+      <node id="15">
+        <label>fmt/format.h</label>
+      </node>
       <node id="29">
         <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
@@ -91,9 +94,6 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-      </node>
-      <node id="15">
-        <label>format</label>
       </node>
       <node id="20">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>
@@ -439,7 +439,7 @@
 <codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>c<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[i];</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"></highlight></codeline>
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref><sp/>n;</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0x00<sp/>&lt;=<sp/>c<sp/>&amp;&amp;<sp/>c<sp/>&lt;=<sp/>0x7f)</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>0bbbbbbb</highlight><highlight class="normal"></highlight></codeline>

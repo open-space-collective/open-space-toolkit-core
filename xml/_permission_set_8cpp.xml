@@ -9,6 +9,9 @@
       <node id="24">
         <label>iomanip</label>
       </node>
+      <node id="6">
+        <label>fmt/format.h</label>
+      </node>
       <node id="17">
         <label>boost/stacktrace.hpp</label>
       </node>
@@ -64,9 +67,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="12" relation="include">
         </childnode>
-      </node>
-      <node id="6">
-        <label>format</label>
       </node>
       <node id="2">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>

@@ -4,6 +4,9 @@
     <compoundname>Exception.cpp</compoundname>
     <includes refid="_exception_8hpp" local="no">OpenSpaceToolkit/Core/Error/Exception.hpp</includes>
     <incdepgraph>
+      <node id="5">
+        <label>fmt/format.h</label>
+      </node>
       <node id="1">
         <label>src/OpenSpaceToolkit/Core/Error/Exception.cpp</label>
         <link refid="_exception_8cpp"/>
@@ -33,9 +36,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>format</label>
       </node>
       <node id="11">
         <label>cstddef</label>

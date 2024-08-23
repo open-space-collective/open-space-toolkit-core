@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="220" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="356" bodyend="359"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="220" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="357" bodyend="360"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a0e8b5745244e2f09f25b6a64cccca8d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="232" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="361" bodyend="364"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="232" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="362" bodyend="365"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a034cd5acd635a879258454b77004246f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Size</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="243" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="366" bodyend="369"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="243" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="367" bodyend="370"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a6c351bf4316c24c38165614c1c94833c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -413,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="255" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="371" bodyend="386"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="255" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="372" bodyend="387"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1aeaee82bbb224074f026ae2189a29817d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">Dictionary::ConstIterator</ref></type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="261" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="388" bodyend="391"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="261" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="389" bodyend="392"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a218a2d4c8aa88ce58ce50b64515d5efb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator" kindref="compound">Dictionary::ConstIterator</ref></type>
@@ -447,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="267" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="393" bodyend="396"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="267" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="394" bodyend="397"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a9f051a70c1f9a401d34595a5693144c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Dictionary::Iterator</ref></type>
@@ -528,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="209" column="12" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="283" bodyend="354"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="209" column="12" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="283" bodyend="355"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -549,7 +549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="289" column="23" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="408" bodyend="411"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="289" column="23" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="409" bodyend="412"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1a91160ea9db250af38f925786b16c42e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary" kindref="compound">Dictionary</ref></type>
@@ -595,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="302" column="23" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="413" bodyend="425"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="302" column="23" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="414" bodyend="426"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -610,7 +610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="307" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="427" bodyend="427"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="307" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="428" bodyend="428"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -16,6 +16,9 @@
       <node id="4">
         <label>iomanip</label>
       </node>
+      <node id="7">
+        <label>fmt/format.h</label>
+      </node>
       <node id="9">
         <label>string</label>
       </node>
@@ -46,9 +49,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="12" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>format</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Utility.hpp</label>

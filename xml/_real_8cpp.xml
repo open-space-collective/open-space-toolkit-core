@@ -12,6 +12,9 @@
       <node id="2">
         <label>iomanip</label>
       </node>
+      <node id="10">
+        <label>fmt/format.h</label>
+      </node>
       <node id="4">
         <label>limits</label>
       </node>
@@ -64,9 +67,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="16" relation="include">
         </childnode>
-      </node>
-      <node id="10">
-        <label>format</label>
       </node>
       <node id="6">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>

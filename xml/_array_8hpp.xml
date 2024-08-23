@@ -23,6 +23,9 @@
       <node id="2">
         <label>functional</label>
       </node>
+      <node id="13">
+        <label>fmt/format.h</label>
+      </node>
       <node id="6">
         <label>iterator</label>
       </node>
@@ -60,9 +63,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="13">
-        <label>format</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Container/Array.hpp</label>

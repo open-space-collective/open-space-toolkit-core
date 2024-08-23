@@ -657,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="283" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="457" bodyend="481"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="283" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="458" bodyend="482"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a94881942705f6308cfcb7ec94ef07dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -717,7 +717,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="298" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="483" bodyend="526"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="298" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="484" bodyend="527"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -755,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="324" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="533" bodyend="548"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="324" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="534" bodyend="549"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -824,7 +824,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="335" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="550" bodyend="553"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="335" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="551" bodyend="554"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ac3621e474fdffccac31fb4bb6ed91ef6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
@@ -857,7 +857,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="347" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="555" bodyend="563"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="347" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="556" bodyend="564"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -876,7 +876,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="354" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="565" bodyend="569"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="354" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="566" bodyend="570"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

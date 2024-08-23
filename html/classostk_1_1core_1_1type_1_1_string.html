@@ -160,10 +160,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a858b680569fe684d75d7f2fe25959faa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">SanitizeUTF8</a> (const <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a> &amp;aString)</td></tr>
 <tr class="memdesc:a858b680569fe684d75d7f2fe25959faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitizes the string by removing any invalid UTF-8 characters.  <a href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">More...</a><br /></td></tr>
 <tr class="separator:a858b680569fe684d75d7f2fe25959faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acabf5cc0757947c342c1209d3e32a840"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:acabf5cc0757947c342c1209d3e32a840"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#acabf5cc0757947c342c1209d3e32a840">Format</a> (const std::string_view aFormat, Args &amp;&amp;... anArgumentList)</td></tr>
-<tr class="memdesc:acabf5cc0757947c342c1209d3e32a840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create formatted string.  <a href="classostk_1_1core_1_1type_1_1_string.html#acabf5cc0757947c342c1209d3e32a840">More...</a><br /></td></tr>
-<tr class="separator:acabf5cc0757947c342c1209d3e32a840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd48b5675fa8109c0aaf8e339f00675"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:abcd48b5675fa8109c0aaf8e339f00675"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">Format</a> (const char *aFormat, Args... anArgumentList)</td></tr>
+<tr class="memdesc:abcd48b5675fa8109c0aaf8e339f00675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create formatted string.  <a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">More...</a><br /></td></tr>
+<tr class="separator:abcd48b5675fa8109c0aaf8e339f00675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A sequence of characters. </p>
@@ -299,8 +299,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acabf5cc0757947c342c1209d3e32a840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acabf5cc0757947c342c1209d3e32a840">&#9670;&nbsp;</a></span>Format()</h2>
+<a id="abcd48b5675fa8109c0aaf8e339f00675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd48b5675fa8109c0aaf8e339f00675">&#9670;&nbsp;</a></span>Format()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,13 +313,13 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a> ostk::core::type::String::Format </td>
           <td>(</td>
-          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>aFormat</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramtype">Args...&#160;</td>
           <td class="paramname"><em>anArgumentList</em>&#160;</td>
         </tr>
         <tr>
@@ -336,8 +336,8 @@ template&lt;typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Create formatted string. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1type_1_1_string.html#acabf5cc0757947c342c1209d3e32a840">String::Format</a>(<span class="stringliteral">&quot;{0}, {1}!&quot;</span>, <span class="stringliteral">&quot;Hello&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>) ; <span class="comment">// &quot;Hello, World!&quot;</span></div>
-<div class="line"><a class="code" href="classostk_1_1core_1_1type_1_1_string.html#acabf5cc0757947c342c1209d3e32a840">String::Format</a>(<span class="stringliteral">&quot;Let&#39;s operate {0} {1}!&quot;</span>, 123, <span class="stringliteral">&quot;satellites&quot;</span>) ; <span class="comment">// &quot;Let&#39;s operate 123</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">String::Format</a>(<span class="stringliteral">&quot;{0}, {1}!&quot;</span>, <span class="stringliteral">&quot;Hello&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>) ; <span class="comment">// &quot;Hello, World!&quot;</span></div>
+<div class="line"><a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">String::Format</a>(<span class="stringliteral">&quot;Let&#39;s operate {0} {1}!&quot;</span>, 123, <span class="stringliteral">&quot;satellites&quot;</span>) ; <span class="comment">// &quot;Let&#39;s operate 123</span></div>
 <div class="line">satellites!<span class="stringliteral">&quot;</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -809,8 +809,8 @@ template&lt;typename... Args&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd48b5675fa8109c0aaf8e339f00675"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:163</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a207952f09a96c355722a56cde16fed1f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">ostk::core::type::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:19</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_acabf5cc0757947c342c1209d3e32a840"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#acabf5cc0757947c342c1209d3e32a840">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const std::string_view aFormat, Args &amp;&amp;... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:147</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

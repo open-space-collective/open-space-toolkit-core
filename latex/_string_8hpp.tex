@@ -1,6 +1,6 @@
 \hypertarget{_string_8hpp}{}\doxysection{include/\+Open\+Space\+Toolkit/\+Core/\+Type/\+String.hpp File Reference}
 \label{_string_8hpp}\index{include/OpenSpaceToolkit/Core/Type/String.hpp@{include/OpenSpaceToolkit/Core/Type/String.hpp}}
-{\ttfamily \#include $<$format$>$}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
 {\ttfamily \#include $<$ostream$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
@@ -27,25 +27,26 @@ class \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_string}{ostk\+::core
 \item 
  \mbox{\hyperlink{namespaceostk_1_1core_1_1type}{ostk\+::core\+::type}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_string_8hpp_a27b3249db8d77bd236109bda307bc263}{F\+M\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+O\+N\+LY}}
+\begin{DoxyCompactList}\small\item\em Apache License 2.\+0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ Has\+To\+String$<$ T $>$\+::value, std\+::string $>$\+::type \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ad18c81a5ed56f58ff9df98288c8c343a}{ostk\+::core\+::type\+::\+Call\+To\+String}} (T $\ast$t)
 \end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a4248ff440160a04f36cad2b0936ceed9}{ostk\+::core\+::type\+::\+String\+Convertible}}
-\item 
-{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{_string_8hpp_a50be16c4f009726226fd7b4e91d44477}{std\+::\+Enum\+Type}} = is\+\_\+enum\+\_\+v$<$T$>$
-\end{DoxyCompactItemize}
 
 
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{_string_8hpp_a50be16c4f009726226fd7b4e91d44477}\label{_string_8hpp_a50be16c4f009726226fd7b4e91d44477}} 
-\index{String.hpp@{String.hpp}!EnumType@{EnumType}}
-\index{EnumType@{EnumType}!String.hpp@{String.hpp}}
-\doxysubsubsection{\texorpdfstring{EnumType}{EnumType}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-concept std\+::\+Enum\+Type = is\+\_\+enum\+\_\+v$<$T$>$}
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_string_8hpp_a27b3249db8d77bd236109bda307bc263}\label{_string_8hpp_a27b3249db8d77bd236109bda307bc263}} 
+\index{String.hpp@{String.hpp}!FMT\_HEADER\_ONLY@{FMT\_HEADER\_ONLY}}
+\index{FMT\_HEADER\_ONLY@{FMT\_HEADER\_ONLY}!String.hpp@{String.hpp}}
+\doxysubsubsection{\texorpdfstring{FMT\_HEADER\_ONLY}{FMT\_HEADER\_ONLY}}
+{\footnotesize\ttfamily \#define F\+M\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+O\+N\+LY}
+
+
+
+Apache License 2.\+0. 
 

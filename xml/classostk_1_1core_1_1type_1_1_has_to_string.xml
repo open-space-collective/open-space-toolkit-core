@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="169" column="5" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="168" bodyend="171"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="186" column="5" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="185" bodyend="188"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-type">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="159" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="159" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="176" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="176" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classostk_1_1core_1_1type_1_1_has_to_string_1ab92f53762655bae8eca8ef2e496e04c0" prot="private" static="no">
         <type>char</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="160" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="160" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="177" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="177" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="163" column="20"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="180" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_has_to_string_1a31d34de008c75d0b00e3a996e03b8874" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="165" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="182" column="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,7 +106,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="157" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="156" bodyend="172"/>
+    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="174" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="173" bodyend="189"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1ab92f53762655bae8eca8ef2e496e04c0" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>NoType</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_has_to_string_1a36ad73db1f710c9380c1499eee0ba486" prot="private" virt="non-virtual"><scope>ostk::core::type::HasToString</scope><name>test</name></member>

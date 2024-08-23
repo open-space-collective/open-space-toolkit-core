@@ -37,10 +37,10 @@ var hierarchy =
     [ "ostk::core::container::Queue", "classostk_1_1core_1_1container_1_1_queue.html", null ],
     [ "ostk::core::type::Real", "classostk_1_1core_1_1type_1_1_real.html", null ],
     [ "ostk::core::container::table::Row", "classostk_1_1core_1_1container_1_1table_1_1_row.html", null ],
-    [ "ostk::core::logger::Sink", "classostk_1_1core_1_1logger_1_1_sink.html", null ],
     [ "ostk::core::logger::sink::Sink", "classostk_1_1core_1_1logger_1_1sink_1_1_sink.html", [
       [ "ostk::core::logger::sink::Console", "classostk_1_1core_1_1logger_1_1sink_1_1_console.html", null ]
     ] ],
+    [ "ostk::core::logger::Sink", "classostk_1_1core_1_1logger_1_1_sink.html", null ],
     [ "ostk::core::logger::Source", "classostk_1_1core_1_1logger_1_1_source.html", null ],
     [ "ostk::core::logger::source::Source", "classostk_1_1core_1_1logger_1_1source_1_1_source.html", null ],
     [ "ostk::core::container::Stack", "classostk_1_1core_1_1container_1_1_stack.html", null ],

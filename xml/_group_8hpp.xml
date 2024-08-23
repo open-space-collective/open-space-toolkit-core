@@ -4,6 +4,9 @@
     <compoundname>Group.hpp</compoundname>
     <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
     <incdepgraph>
+      <node id="3">
+        <label>fmt/format.h</label>
+      </node>
       <node id="6">
         <label>string</label>
       </node>
@@ -24,9 +27,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="9" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>format</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/System/Group.hpp</label>

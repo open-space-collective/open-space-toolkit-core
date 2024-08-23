@@ -11,6 +11,9 @@
       <node id="4">
         <label>functional</label>
       </node>
+      <node id="15">
+        <label>fmt/format.h</label>
+      </node>
       <node id="35">
         <label>OpenSpaceToolkit/Core/FileSystem/SymbolicLink.hpp</label>
         <link refid="_symbolic_link_8hpp"/>
@@ -104,9 +107,6 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-      </node>
-      <node id="15">
-        <label>format</label>
       </node>
       <node id="22">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>

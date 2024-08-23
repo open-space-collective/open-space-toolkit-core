@@ -7,6 +7,9 @@
       <node id="3">
         <label>iomanip</label>
       </node>
+      <node id="6">
+        <label>fmt/format.h</label>
+      </node>
       <node id="1">
         <label>src/OpenSpaceToolkit/Core/Utility/Print.cpp</label>
         <link refid="_print_8cpp"/>
@@ -43,9 +46,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
-      </node>
-      <node id="6">
-        <label>format</label>
       </node>
       <node id="11">
         <label>cstddef</label>

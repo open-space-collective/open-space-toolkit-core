@@ -4,6 +4,9 @@
     <compoundname>Undefined.cpp</compoundname>
     <includes refid="_undefined_8hpp" local="no">OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</includes>
     <incdepgraph>
+      <node id="9">
+        <label>fmt/format.h</label>
+      </node>
       <node id="5">
         <label>boost/stacktrace.hpp</label>
       </node>
@@ -33,9 +36,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="15" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>format</label>
       </node>
       <node id="2">
         <label>OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</label>

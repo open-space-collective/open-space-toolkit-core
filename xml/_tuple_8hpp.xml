@@ -10,6 +10,9 @@
     <includedby refid="_pair_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Pair.hpp</includedby>
     <includedby refid="_triple_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Triple.hpp</includedby>
     <incdepgraph>
+      <node id="8">
+        <label>fmt/format.h</label>
+      </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Container/Tuple.hpp</label>
         <link refid="_tuple_8hpp"/>
@@ -44,9 +47,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="8">
-        <label>format</label>
       </node>
       <node id="3">
         <label>tuple</label>

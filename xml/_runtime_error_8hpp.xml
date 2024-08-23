@@ -12,6 +12,9 @@
     <includedby refid="_error_8hpp" local="no">include/OpenSpaceToolkit/Core/Error.hpp</includedby>
     <includedby refid="_runtime_error_8cpp" local="no">src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp</includedby>
     <incdepgraph>
+      <node id="7">
+        <label>fmt/format.h</label>
+      </node>
       <node id="3">
         <label>boost/stacktrace.hpp</label>
       </node>
@@ -41,9 +44,6 @@
         <link refid="_size_8hpp"/>
         <childnode refid="13" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>format</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp</label>
