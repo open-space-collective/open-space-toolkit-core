@@ -7,6 +7,10 @@
 #include <OpenSpaceToolkit/Core/Type/Sign.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
+#if __cplusplus >= 202002L
+#define CPP20
+#endif
+
 namespace ostk
 {
 namespace core
@@ -148,6 +152,7 @@ class Real
 }  // namespace core
 }  // namespace ostk
 
+#ifdef CPP20
 template <>
 struct std::formatter<ostk::core::type::Real> : std::formatter<double>
 {
@@ -157,5 +162,6 @@ struct std::formatter<ostk::core::type::Real> : std::formatter<double>
         return std::formatter<double>::format(static_cast<double>(aReal), ctx);
     }
 };
+#endif
 
 #endif

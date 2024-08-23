@@ -10,6 +10,10 @@
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
+#if __cplusplus >= 202002L
+#define CPP20
+#endif
+
 namespace ostk
 {
 namespace core
@@ -270,6 +274,7 @@ class Integer
 }  // namespace core
 }  // namespace ostk
 
+#ifdef CPP20
 template <>
 struct std::formatter<ostk::core::type::Integer> : std::formatter<int>
 {
@@ -279,5 +284,6 @@ struct std::formatter<ostk::core::type::Integer> : std::formatter<int>
         return std::formatter<int>::format(static_cast<int>(anInteger), ctx);
     }
 };
+#endif
 
 #endif
