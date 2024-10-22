@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">Open Space Toolkit ▸ Core </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Structure<a href="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml"><object type="image/svg+xml" data="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml/badge.svg?branch=main" style="pointer-events: none;">Build and Test</object></a> <a href="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml"><object type="image/svg+xml" data="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml/badge.svg" style="pointer-events: none;">Release</object></a> <a href="https://codecov.io/gh/open-space-collective/open-space-toolkit-core"><object type="image/svg+xml" data="https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/main/graph/badge.svg" style="pointer-events: none;">Code Coverage</object></a> <a href="https://open-space-collective.github.io/open-space-toolkit-core"><object type="image/svg+xml" data="https://img.shields.io/readthedocs/pip/stable.svg" style="pointer-events: none;">Documentation</object></a> <a href="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core"><object type="image/svg+xml" data="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg" style="pointer-events: none;">GitHub version</object></a> <a href="https://badge.fury.io/py/open-space-toolkit-core"><object type="image/svg+xml" data="https://badge.fury.io/py/open-space-toolkit-core.svg" style="pointer-events: none;">PyPI version</object></a> <a href="https://opensource.org/licenses/Apache-2.0"><object type="image/svg+xml" data="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="pointer-events: none;">License</object></a></p>
+<div class="textblock"><p><a href="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml"><object type="image/svg+xml" data="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml/badge.svg?branch=main" style="pointer-events: none;">Build and Test</object></a> <a href="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml"><object type="image/svg+xml" data="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml/badge.svg" style="pointer-events: none;">Release</object></a> <a href="https://codecov.io/gh/open-space-collective/open-space-toolkit-core"><object type="image/svg+xml" data="https://codecov.io/gh/open-space-collective/open-space-toolkit-core/branch/main/graph/badge.svg" style="pointer-events: none;">Code Coverage</object></a> <a href="https://open-space-collective.github.io/open-space-toolkit-core"><object type="image/svg+xml" data="https://img.shields.io/readthedocs/pip/stable.svg" style="pointer-events: none;">Documentation</object></a> <a href="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core"><object type="image/svg+xml" data="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-core.svg" style="pointer-events: none;">GitHub version</object></a> <a href="https://badge.fury.io/py/open-space-toolkit-core"><object type="image/svg+xml" data="https://badge.fury.io/py/open-space-toolkit-core.svg" style="pointer-events: none;">PyPI version</object></a> <a href="https://opensource.org/licenses/Apache-2.0"><object type="image/svg+xml" data="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="pointer-events: none;">License</object></a></p>
 <p>Common types, containers and utilities.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Getting Started</h1>
@@ -130,75 +130,10 @@ Python</h2>
 <div class="fragment"><div class="line">pip install open-space-toolkit-core</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 Documentation</h1>
-<p>Documentation is available here:</p>
-<ul>
-<li><a href="https://open-space-collective.github.io/open-space-toolkit-core">C++</a></li>
-<li><a href="./bindings/python/docs">Python</a></li>
-</ul>
-<p>&lt;details&gt;</p>
-<p>The library exhibits the following structure:</p>
-<div class="fragment"><div class="line">├── Type</div>
-<div class="line">│   ├── Integer</div>
-<div class="line">│   ├── Real</div>
-<div class="line">│   ├── String</div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">Byte</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">Byte</a> Array</div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">Index</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02">Sign</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a3b7b378b1980599bd52c095729a2d5bb">Unique</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a14fe3367e611fd4d9fca9e9fcfe92848">Shared</a></div>
-<div class="line">│   └── <a class="code" href="namespaceostk_1_1core_1_1type.html#af3e53775781cfb35ee4bd22d6bf784a1">Weak</a></div>
-<div class="line">├── Container</div>
-<div class="line">│   ├── Array</div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1container.html#afdfb0dc39c01f199950550531140a918">List</a></div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1container.html#a28c15c2301fc936ac22a4f50a3eac0ec">Map</a></div>
-<div class="line">│   ├── Ordered <a class="code" href="namespaceostk_1_1core_1_1container.html#a28c15c2301fc936ac22a4f50a3eac0ec">Map</a></div>
-<div class="line">│   ├── Object</div>
-<div class="line">│   ├── Dictionary</div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1container.html#a781aa933b420f5cf5bcb1a1d26c5815a">Pair</a></div>
-<div class="line">│   ├── Triple</div>
-<div class="line">│   ├── <a class="code" href="namespaceostk_1_1core_1_1container.html#af6dbaf299d8b2ced8a150b09c3cade2a">Tuple</a></div>
-<div class="line">│   ├── Table</div>
-<div class="line">│   ├── Queue</div>
-<div class="line">│   ├── Stack</div>
-<div class="line">│   ├── Graph</div>
-<div class="line">│   └── Tree</div>
-<div class="line">├── File System</div>
-<div class="line">│   ├── Path</div>
-<div class="line">│   ├── File</div>
-<div class="line">│   ├── Directory</div>
-<div class="line">│   ├── Symbolic Link</div>
-<div class="line">│   └── Permission</div>
-<div class="line">├── System</div>
-<div class="line">│   ├── User</div>
-<div class="line">│   ├── Group</div>
-<div class="line">│   ├── CPU</div>
-<div class="line">│   ├── Memory</div>
-<div class="line">│   ├── Disk</div>
-<div class="line">│   └── Process</div>
-<div class="line">├── Logger</div>
-<div class="line">├── <a class="code" href="namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd">Error</a></div>
-<div class="line">│   ├── Exception</div>
-<div class="line">│   ├── Runtime <a class="code" href="namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd">Error</a></div>
-<div class="line">│   └── Runtime</div>
-<div class="line">│       ├── <a class="code" href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a></div>
-<div class="line">│       ├── Wrong</div>
-<div class="line">│       └── To Be Implemented</div>
-<div class="line">└── Utility</div>
-<div class="line">    ├── Iterator</div>
-<div class="line">    └── Version</div>
-</div><!-- fragment --><p>&lt;/details&gt;</p>
+<p>Documentation is available <a href="https://open-space-collective.github.io/open-space-toolkit-core">here</a>:</p>
 <h1><a class="anchor" id="autotoc_md11"></a>
-Tutorials</h1>
-<p>Tutorials are available here:</p>
-<ul>
-<li><a href="./tutorials/cpp">C++</a></li>
-<li><a href="./tutorials/python">Python</a></li>
-</ul>
-<h1><a class="anchor" id="autotoc_md12"></a>
 Setup</h1>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Development Environment</h2>
 <p>Using <a href="https://www.docker.com">Docker</a> for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available <a href="https://docs.docker.com/install/">here</a>.</p>
 <p>To start the development environment:</p>
@@ -210,64 +145,33 @@ Development Environment</h2>
 <li>Start a <code>bash</code> shell from the <code>./build</code> working directory.</li>
 </ol>
 <p>If installing Docker is not an option, you can manually install the development tools (GCC, CMake) and all required dependencies, by following a procedure similar to the one described in the <a href="./docker/development/Dockerfile">Development Dockerfile</a>.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Build</h2>
 <p>From the <code>./build</code> directory:</p>
 <div class="fragment"><div class="line">cmake ..</div>
 <div class="line">make</div>
 </div><!-- fragment --><p><em>Tip: The <code>ostk-build</code> command simplifies building from within the development environment.</em></p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Test</h2>
 <p>To start a container to build and run the tests:</p>
 <div class="fragment"><div class="line">make test</div>
 </div><!-- fragment --><p>Or to run them manually:</p>
 <div class="fragment"><div class="line">./bin/open-space-toolkit-core.test</div>
 </div><!-- fragment --><p><em>Tip: The <code>ostk-test</code> command simplifies running tests from within the development environment.</em></p>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Dependencies</h1>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Version </th><th class="markdownTableHeadNone">License </th><th class="markdownTableHeadNone">Link  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Pybind11 </td><td class="markdownTableBodyNone"><code>2.12.0</code> </td><td class="markdownTableBodyNone">BSD-3-Clause </td><td class="markdownTableBodyNone"><a href="https://github.com/pybind/pybind11">github.com/pybind/pybind11</a>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">RapidJSON </td><td class="markdownTableBodyNone"><code>master</code> </td><td class="markdownTableBodyNone">MIT </td><td class="markdownTableBodyNone"><a href="http://rapidjson.org">rapidjson.org</a>  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">yaml-cpp </td><td class="markdownTableBodyNone"><code>0.7.0</code> </td><td class="markdownTableBodyNone">MIT </td><td class="markdownTableBodyNone"><a href="https://github.com/jbeder/yaml-cpp">github.com/jbeder/yaml-cpp</a>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">ordered-map </td><td class="markdownTableBodyNone"><code>0.6.0</code> </td><td class="markdownTableBodyNone">MIT </td><td class="markdownTableBodyNone"><a href="https://github.com/Tessil/ordered-map">github.com/Tessil/ordered-map</a>  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">{fmt} </td><td class="markdownTableBodyNone"><code>5.2.0</code> </td><td class="markdownTableBodyNone">BSD-2-Clause </td><td class="markdownTableBodyNone"><a href="https://github.com/fmtlib/fmt">github.com/fmtlib/fmt</a>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Rapidcsv </td><td class="markdownTableBodyNone"><code>6.11</code> </td><td class="markdownTableBodyNone">BSD-3-Clause </td><td class="markdownTableBodyNone"><a href="https://github.com/d99kris/rapidcsv">github.com/d99kris/rapidcsv</a>  </td></tr>
-</table>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Contribution</h1>
 <p>Contributions are more than welcome!</p>
 <p>Please read our <a class="el" href="_c_o_n_t_r_i_b_u_t_i_n_g_8md.html">contributing guide</a> to learn about our development process, how to propose fixes and improvements, and how to build and test the code.</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 Special Thanks</h1>
 <p><a href="https://www.loftorbital.com/"><img src="https://github.com/open-space-collective/open-space-toolkit/blob/main/assets/thanks/loft_orbital.png" alt="Loft Orbital" class="inline"/></a></p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 License</h1>
 <p>Apache License 2.0 </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a14fe3367e611fd4d9fca9e9fcfe92848"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a14fe3367e611fd4d9fca9e9fcfe92848">ostk::core::type::Shared</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Shared</div><div class="ttdoc">Retains shared ownership of an object through a pointer.</div><div class="ttdef"><b>Definition:</b> Shared.hpp:19</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_ae6778085a3f5866921d2c9c9b69d8ee1"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">ostk::core::type::Byte</a></div><div class="ttdeci">uint8_t Byte</div><div class="ttdoc">A unit of digital information that consists of eight bits.</div><div class="ttdef"><b>Definition:</b> Byte.hpp:17</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a3b7b378b1980599bd52c095729a2d5bb"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a3b7b378b1980599bd52c095729a2d5bb">ostk::core::type::Unique</a></div><div class="ttdeci">std::unique_ptr&lt; T &gt; Unique</div><div class="ttdoc">Owns and manages another object through a pointer.</div><div class="ttdef"><b>Definition:</b> Unique.hpp:19</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360">ostk::core::type::Sign::Undefined</a></div><div class="ttdeci">@ Undefined</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a294c0f2c89e8801458b09885d53c4b02"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a294c0f2c89e8801458b09885d53c4b02">ostk::core::type::Sign</a></div><div class="ttdeci">Sign</div><div class="ttdoc">Sign enum.</div><div class="ttdef"><b>Definition:</b> Sign.hpp:17</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1filesystem_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1filesystem.html">ostk::core::filesystem</a></div><div class="ttdef"><b>Definition:</b> Directory.hpp:16</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_af3e53775781cfb35ee4bd22d6bf784a1"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#af3e53775781cfb35ee4bd22d6bf784a1">ostk::core::type::Weak</a></div><div class="ttdeci">std::weak_ptr&lt; T &gt; Weak</div><div class="ttdoc">Holds a non-owning reference to an object that is managed by Shared.</div><div class="ttdef"><b>Definition:</b> Weak.hpp:19</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_a28c15c2301fc936ac22a4f50a3eac0ec"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#a28c15c2301fc936ac22a4f50a3eac0ec">ostk::core::container::Map</a></div><div class="ttdeci">std::map&lt; Key, T, Compare, Allocator &gt; Map</div><div class="ttdoc">Map container.</div><div class="ttdef"><b>Definition:</b> Map.hpp:18</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_a781aa933b420f5cf5bcb1a1d26c5815a"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#a781aa933b420f5cf5bcb1a1d26c5815a">ostk::core::container::Pair</a></div><div class="ttdeci">std::pair&lt; T, U &gt; Pair</div><div class="ttdoc">Pair container.</div><div class="ttdef"><b>Definition:</b> Pair.hpp:28</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a417fd235f7e100d47856d16751831c34"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">ostk::core::type::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:17</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_afdfb0dc39c01f199950550531140a918"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#afdfb0dc39c01f199950550531140a918">ostk::core::container::List</a></div><div class="ttdeci">std::list&lt; T &gt; List</div><div class="ttdoc">List container.</div><div class="ttdef"><b>Definition:</b> List.hpp:18</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a49cf705368ffaff1cc457f73d7ebc403"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">ostk::core::type::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:17</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_af6dbaf299d8b2ced8a150b09c3cade2a"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#af6dbaf299d8b2ced8a150b09c3cade2a">ostk::core::container::Tuple</a></div><div class="ttdeci">std::tuple&lt; Args... &gt; Tuple</div><div class="ttdoc">Tuple container.</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:27</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1logger_html_a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespaceostk_1_1core_1_1logger.html#a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd">ostk::core::logger::Severity::Error</a></div><div class="ttdeci">@ Error</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

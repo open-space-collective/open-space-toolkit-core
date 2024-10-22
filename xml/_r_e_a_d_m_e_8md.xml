@@ -89,79 +89,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Documentation<sp/>is<sp/>available<sp/>here:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>[C++](https://open-space-collective.github.io/open-space-toolkit-core)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>[Python](./bindings/python/docs)</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&lt;details&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;summary&gt;Structure&lt;/summary&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;p&gt;</highlight></codeline>
-<codeline><highlight class="normal">The<sp/>library<sp/>exhibits<sp/>the<sp/>following<sp/>structure:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```txt</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Type</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Integer</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Real</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>String</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Byte</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Byte<sp/>Array</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Index</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Size</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Sign</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Unique</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Shared</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Weak</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Container</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Array</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>List</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Map</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Ordered<sp/>Map</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Object</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Dictionary</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Pair</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Triple</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Tuple</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Table</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Queue</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Stack</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Graph</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Tree</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>File<sp/>System</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Path</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>File</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Directory</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Symbolic<sp/>Link</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Permission</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>System</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>User</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Group</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>CPU</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Memory</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Disk</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Process</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Logger</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Error</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Exception</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Runtime<sp/>Error</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Runtime</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Undefined</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Wrong</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>To<sp/>Be<sp/>Implemented</highlight></codeline>
-<codeline><highlight class="normal">└──<sp/>Utility</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>Iterator</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>Version</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;/details&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Tutorials</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">Tutorials<sp/>are<sp/>available<sp/>here:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>[C++](./tutorials/cpp)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>[Python](./tutorials/python)</highlight></codeline>
+<codeline><highlight class="normal">Documentation<sp/>is<sp/>available<sp/>[here](https://open-space-collective.github.io/open-space-toolkit-core):</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Setup</highlight></codeline>
 <codeline></codeline>
@@ -210,17 +138,6 @@
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">*Tip:<sp/>The<sp/>`ostk-test`<sp/>command<sp/>simplifies<sp/>running<sp/>tests<sp/>from<sp/>within<sp/>the<sp/>development<sp/>environment.*</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">|<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Version<sp/><sp/><sp/><sp/>|<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Link<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>-----------<sp/>|<sp/>----------<sp/>|<sp/>------------<sp/>|<sp/>-------------------------------------------------------------------<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>Pybind11<sp/><sp/><sp/><sp/>|<sp/>`2.12.0`<sp/>|<sp/>BSD-3-Clause<sp/>|<sp/>[github.com/pybind/pybind11](https://github.com/pybind/pybind11)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>RapidJSON<sp/><sp/><sp/>|<sp/>`master`<sp/>|<sp/>MIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>[rapidjson.org](http://rapidjson.org)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>yaml-cpp<sp/><sp/><sp/><sp/>|<sp/>`0.7.0`<sp/><sp/>|<sp/>MIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>[github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>ordered-map<sp/>|<sp/>`0.6.0`<sp/><sp/>|<sp/>MIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>[github.com/Tessil/ordered-map](https://github.com/Tessil/ordered-map)<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>{fmt}<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>`5.2.0`<sp/><sp/>|<sp/>BSD-2-Clause<sp/>|<sp/>[github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>Rapidcsv<sp/><sp/><sp/><sp/>|<sp/>`6.11`<sp/><sp/><sp/>|<sp/>BSD-3-Clause<sp/>|<sp/>[github.com/d99kris/rapidcsv](https://github.com/d99kris/rapidcsv)<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Contribution</highlight></codeline>
 <codeline></codeline>

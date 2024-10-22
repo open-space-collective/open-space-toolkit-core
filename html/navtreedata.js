@@ -39,16 +39,14 @@ var NAVTREE =
         [ "Python", "index.html#autotoc_md9", null ]
       ] ],
       [ "Documentation", "index.html#autotoc_md10", null ],
-      [ "Tutorials", "index.html#autotoc_md11", null ],
-      [ "Setup", "index.html#autotoc_md12", [
-        [ "Development Environment", "index.html#autotoc_md13", null ],
-        [ "Build", "index.html#autotoc_md14", null ],
-        [ "Test", "index.html#autotoc_md15", null ]
+      [ "Setup", "index.html#autotoc_md11", [
+        [ "Development Environment", "index.html#autotoc_md12", null ],
+        [ "Build", "index.html#autotoc_md13", null ],
+        [ "Test", "index.html#autotoc_md14", null ]
       ] ],
-      [ "Dependencies", "index.html#autotoc_md16", null ],
-      [ "Contribution", "index.html#autotoc_md17", null ],
-      [ "Special Thanks", "index.html#autotoc_md18", null ],
-      [ "License", "index.html#autotoc_md19", null ]
+      [ "Contribution", "index.html#autotoc_md15", null ],
+      [ "Special Thanks", "index.html#autotoc_md16", null ],
+      [ "License", "index.html#autotoc_md17", null ]
     ] ],
     [ "Contributing", "md__c_o_n_t_r_i_b_u_t_i_n_g.html", null ],
     [ "index", "md_docs_index.html", null ],

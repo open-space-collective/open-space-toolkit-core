@@ -4,10 +4,9 @@
     <compoundname>index</compoundname>
     <title>Open Space Toolkit ▸ Core</title>
     <briefdescription>
-<para>Structure </para>
     </briefdescription>
     <detaileddescription>
-<para>Structure<ulink url="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml"><image type="html" name="badge.svg?branch=main" inline="yes"></image>
+<para><ulink url="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/build-test.yml"><image type="html" name="badge.svg?branch=main" inline="yes"></image>
 </ulink> <ulink url="https://github.com/open-space-collective/open-space-toolkit-core/actions/workflows/release.yml"><image type="html" name="badge.svg" inline="yes"></image>
 </ulink> <ulink url="https://codecov.io/gh/open-space-collective/open-space-toolkit-core"><image type="html" name="badge.svg" inline="yes"></image>
 </ulink> <ulink url="https://open-space-collective.github.io/open-space-toolkit-core"><image type="html" name="stable.svg" inline="yes"></image>
@@ -76,80 +75,11 @@
 </sect1>
 <sect1 id="index_1autotoc_md10">
 <title>Documentation</title>
-<para>Documentation is available here:</para>
-<para><itemizedlist>
-<listitem><para><ulink url="https://open-space-collective.github.io/open-space-toolkit-core">C++</ulink></para>
-</listitem><listitem><para><ulink url="./bindings/python/docs">Python</ulink></para>
-</listitem></itemizedlist>
-</para>
-<para>&lt;details&gt;</para>
-<para>The library exhibits the following structure:</para>
-<para><programlisting filename=".txt"><codeline><highlight class="normal">├──<sp/>Type</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Integer</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Real</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>String</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" kindref="member">Byte</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1ae6778085a3f5866921d2c9c9b69d8ee1" kindref="member">Byte</ref><sp/>Array</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" kindref="member">Index</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">Sign</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">Unique</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a14fe3367e611fd4d9fca9e9fcfe92848" kindref="member">Shared</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/><ref refid="namespaceostk_1_1core_1_1type_1af3e53775781cfb35ee4bd22d6bf784a1" kindref="member">Weak</ref></highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Container</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Array</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1afdfb0dc39c01f199950550531140a918" kindref="member">List</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" kindref="member">Map</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Ordered<sp/><ref refid="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" kindref="member">Map</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Object</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Dictionary</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1a781aa933b420f5cf5bcb1a1d26c5815a" kindref="member">Pair</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Triple</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1container_1af6dbaf299d8b2ced8a150b09c3cade2a" kindref="member">Tuple</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Table</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Queue</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Stack</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Graph</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Tree</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>File<sp/>System</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Path</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>File</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Directory</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Symbolic<sp/>Link</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Permission</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>System</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>User</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Group</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>CPU</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Memory</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Disk</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Process</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Logger</highlight></codeline>
-<codeline><highlight class="normal">├──<sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Exception</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Runtime<sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>Runtime</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref></highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Wrong</highlight></codeline>
-<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>To<sp/>Be<sp/>Implemented</highlight></codeline>
-<codeline><highlight class="normal">└──<sp/>Utility</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>├──<sp/>Iterator</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>Version</highlight></codeline>
-</programlisting></para>
-<para>&lt;/details&gt;</para>
+<para>Documentation is available <ulink url="https://open-space-collective.github.io/open-space-toolkit-core">here</ulink>:</para>
 </sect1>
 <sect1 id="index_1autotoc_md11">
-<title>Tutorials</title>
-<para>Tutorials are available here:</para>
-<para><itemizedlist>
-<listitem><para><ulink url="./tutorials/cpp">C++</ulink></para>
-</listitem><listitem><para><ulink url="./tutorials/python">Python</ulink></para>
-</listitem></itemizedlist>
-</para>
-</sect1>
-<sect1 id="index_1autotoc_md12">
 <title>Setup</title>
-<sect2 id="index_1autotoc_md13">
+<sect2 id="index_1autotoc_md12">
 <title>Development Environment</title>
 <para>Using <ulink url="https://www.docker.com">Docker</ulink> for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available <ulink url="https://docs.docker.com/install/">here</ulink>.</para>
 <para>To start the development environment:</para>
@@ -164,7 +94,7 @@
 </para>
 <para>If installing Docker is not an option, you can manually install the development tools (GCC, CMake) and all required dependencies, by following a procedure similar to the one described in the <ulink url="./docker/development/Dockerfile">Development Dockerfile</ulink>.</para>
 </sect2>
-<sect2 id="index_1autotoc_md14">
+<sect2 id="index_1autotoc_md13">
 <title>Build</title>
 <para>From the <computeroutput>./build</computeroutput> directory:</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
@@ -172,7 +102,7 @@
 </programlisting></para>
 <para><emphasis>Tip: The <computeroutput>ostk-build</computeroutput> command simplifies building from within the development environment.</emphasis></para>
 </sect2>
-<sect2 id="index_1autotoc_md15">
+<sect2 id="index_1autotoc_md14">
 <title>Test</title>
 <para>To start a container to build and run the tests:</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">make<sp/>test</highlight></codeline>
@@ -183,64 +113,17 @@
 <para><emphasis>Tip: The <computeroutput>ostk-test</computeroutput> command simplifies running tests from within the development environment.</emphasis></para>
 </sect2>
 </sect1>
-<sect1 id="index_1autotoc_md16">
-<title>Dependencies</title>
-<para><table rows="7" cols="4"><row>
-<entry thead="yes"><para>Name </para>
-</entry><entry thead="yes"><para>Version </para>
-</entry><entry thead="yes"><para>License </para>
-</entry><entry thead="yes"><para>Link  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>Pybind11 </para>
-</entry><entry thead="no"><para><computeroutput>2.12.0</computeroutput> </para>
-</entry><entry thead="no"><para>BSD-3-Clause </para>
-</entry><entry thead="no"><para><ulink url="https://github.com/pybind/pybind11">github.com/pybind/pybind11</ulink>  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>RapidJSON </para>
-</entry><entry thead="no"><para><computeroutput>master</computeroutput> </para>
-</entry><entry thead="no"><para>MIT </para>
-</entry><entry thead="no"><para><ulink url="http://rapidjson.org">rapidjson.org</ulink>  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>yaml-cpp </para>
-</entry><entry thead="no"><para><computeroutput>0.7.0</computeroutput> </para>
-</entry><entry thead="no"><para>MIT </para>
-</entry><entry thead="no"><para><ulink url="https://github.com/jbeder/yaml-cpp">github.com/jbeder/yaml-cpp</ulink>  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>ordered-map </para>
-</entry><entry thead="no"><para><computeroutput>0.6.0</computeroutput> </para>
-</entry><entry thead="no"><para>MIT </para>
-</entry><entry thead="no"><para><ulink url="https://github.com/Tessil/ordered-map">github.com/Tessil/ordered-map</ulink>  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>{fmt} </para>
-</entry><entry thead="no"><para><computeroutput>5.2.0</computeroutput> </para>
-</entry><entry thead="no"><para>BSD-2-Clause </para>
-</entry><entry thead="no"><para><ulink url="https://github.com/fmtlib/fmt">github.com/fmtlib/fmt</ulink>  </para>
-</entry></row>
-<row>
-<entry thead="no"><para>Rapidcsv </para>
-</entry><entry thead="no"><para><computeroutput>6.11</computeroutput> </para>
-</entry><entry thead="no"><para>BSD-3-Clause </para>
-</entry><entry thead="no"><para><ulink url="https://github.com/d99kris/rapidcsv">github.com/d99kris/rapidcsv</ulink>  </para>
-</entry></row>
-</table>
-</para>
-</sect1>
-<sect1 id="index_1autotoc_md17">
+<sect1 id="index_1autotoc_md15">
 <title>Contribution</title>
 <para>Contributions are more than welcome!</para>
 <para>Please read our <ref refid="_c_o_n_t_r_i_b_u_t_i_n_g_8md" kindref="compound">contributing guide</ref> to learn about our development process, how to propose fixes and improvements, and how to build and test the code.</para>
 </sect1>
-<sect1 id="index_1autotoc_md18">
+<sect1 id="index_1autotoc_md16">
 <title>Special Thanks</title>
 <para><ulink url="https://www.loftorbital.com/"><image type="html" name="loft_orbital.png" inline="yes"></image>
 </ulink></para>
 </sect1>
-<sect1 id="index_1autotoc_md19">
+<sect1 id="index_1autotoc_md17">
 <title>License</title>
 <para>Apache License 2.0 </para>
 </sect1>
