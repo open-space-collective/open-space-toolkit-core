@@ -1,6 +1,6 @@
 # Apache License 2.0
 
-# # Project Properties
+# Project Properties
 
 SET (PROJECT_NAME "OpenSpaceToolkitCore")
 SET (PROJECT_DESCRIPTION "Core library.")
@@ -12,7 +12,7 @@ SET (PROJECT_VENDOR_NAME "Open Space Collective")
 SET (PROJECT_VENDOR_CONTACT "contact@open-space-collective.org")
 SET (PROJECT_VENDOR_URL "open-space-collective.org")
 
-# # Project Options
+# Project Options
 
 OPTION (BUILD_SHARED_LIBRARY "Build shared library." ON)
 OPTION (BUILD_STATIC_LIBRARY "Build static library." OFF)
@@ -26,21 +26,21 @@ OPTION (BUILD_WITH_CXX_17 "Build with C++ 17 support." OFF)
 OPTION (BUILD_WITH_BOOST_STACKTRACE "Build with Boost Stacktrace instead of stacktrace basic" ON)
 OPTION (BUILD_WITH_BOOST_STATIC "Build with Boost Static lib" ON)
 
-# # Setup
+# Setup
 
-# # # Compatibility Check
+# Compatibility Check
 
 CMAKE_MINIMUM_REQUIRED (VERSION "2.8.12" FATAL_ERROR)
 
-# # # Paths
+# Paths
 
 LIST (APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
 
-# # # Policies
+# Policies
 
 CMAKE_POLICY (SET "CMP0048" NEW)
 
-# # Version
+# Version
 
 INCLUDE ("GetGitRevisionDescription" OPTIONAL)
 
@@ -102,7 +102,7 @@ ENDIF ()
 
 MESSAGE (STATUS "Version: ${PROJECT_VERSION_STRING}")
 
-# # Project Configuration
+# Project Configuration
 
 PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 
@@ -114,9 +114,9 @@ ELSEIF (NOT CMAKE_BUILD_TYPE)
     SET (CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type [None|Debug|Release|RelWithDebInfo|MinSizeRel]." FORCE)
 ENDIF ()
 
-# # Flags
+# Flags
 
-# # # C++ 17/20 support
+# C++ 17/20 support
 IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
     IF (BUILD_WITH_CXX_17 OR CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
@@ -157,7 +157,7 @@ ENDIF ()
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 SET (CMAKE_CXX_EXTENSIONS OFF)
 
-# # # Debug symbols
+# Debug symbols
 
 IF (BUILD_WITH_DEBUG_SYMBOLS)
 
@@ -165,19 +165,19 @@ IF (BUILD_WITH_DEBUG_SYMBOLS)
 
 ENDIF ()
 
-# # # Debugging Options
+# Debugging Options
 
 SET (CMAKE_VERBOSE_MAKEFILE 0) # Use 1 for debugging, 0 for release
 
-# # Paths
+# Paths
 
-# # # Search Paths
+# Search Paths
 
 LIST (APPEND CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}")
 LIST (APPEND CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/tools")
 LIST (APPEND CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/thirdparty")
 
-# # # Output Paths
+# Output Paths
 
 SET (EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin")
 SET (LIBRARY_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/lib")
@@ -280,7 +280,7 @@ IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-# # # RapidJSON [1.1.0]
+# RapidJSON [1.1.0]
 
 FIND_PACKAGE ("RapidJSON" REQUIRED)
 
@@ -290,11 +290,11 @@ ELSE ()
     MESSAGE (SEND_ERROR "[RapidJSON] not found.")
 ENDIF ()
 
-# # # yaml-cpp [0.7.0]
+# yaml-cpp [0.7.0]
 
 FIND_PACKAGE ("yaml-cpp" REQUIRED)
 
-# # Versioning
+# Versioning
 
 IF (DEFINED PROJECT_VERSION_STRING AND EXISTS "${PROJECT_SOURCE_DIR}/src/${PROJECT_PATH}/Utilities/Version.cpp.in")
 
@@ -302,9 +302,9 @@ IF (DEFINED PROJECT_VERSION_STRING AND EXISTS "${PROJECT_SOURCE_DIR}/src/${PROJE
 
 ENDIF ()
 
-# # Targets
+# Targets
 
-# # # Shared Library
+# Shared Library
 
 IF (BUILD_SHARED_LIBRARY)
 
@@ -341,7 +341,7 @@ IF (BUILD_SHARED_LIBRARY)
 
 ENDIF ()
 
-# # # Static Library
+# Static Library
 
 IF (BUILD_STATIC_LIBRARY)
 
@@ -367,7 +367,7 @@ IF (BUILD_STATIC_LIBRARY)
 
 ENDIF ()
 
-# # # Utility
+# Utility
 
 IF (BUILD_UTILITY)
 
@@ -395,7 +395,7 @@ IF (BUILD_UTILITY)
 
 ENDIF ()
 
-# # # Unit Tests
+# Unit Tests
 
 IF (BUILD_UNIT_TESTS)
 
@@ -441,7 +441,7 @@ IF (BUILD_UNIT_TESTS)
 
     INSTALL (TARGETS ${UNIT_TESTS_TARGET} DESTINATION ${INSTALL_TEST} COMPONENT "tests")
 
-    # # # # Code Coverage
+    # Code Coverage
 
     IF (BUILD_CODE_COVERAGE)
 
@@ -463,7 +463,7 @@ IF (BUILD_UNIT_TESTS)
 
 ENDIF ()
 
-# # # Python Bindings
+# Python Bindings
 
 IF (BUILD_PYTHON_BINDINGS)
 
@@ -471,7 +471,7 @@ IF (BUILD_PYTHON_BINDINGS)
 
 ENDIF ()
 
-# # # Documentation
+# Documentation
 
 IF (BUILD_DOCUMENTATION)
 
@@ -479,7 +479,7 @@ IF (BUILD_DOCUMENTATION)
 
 ENDIF ()
 
-# # # Configuration
+# Configuration
 
 CONFIGURE_FILE (
     "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake/${PROJECT_NAME}Config.cmake.in"
@@ -494,7 +494,7 @@ CONFIGURE_FILE (
 INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake" DESTINATION "${INSTALL_LIB}/cmake/${PROJECT_NAME}" COMPONENT "libraries")
 INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake" DESTINATION "${INSTALL_LIB}/cmake/${PROJECT_NAME}" COMPONENT "libraries")
 
-# # # Uninstall
+# Uninstall
 
 CONFIGURE_FILE (
     "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake/UninstallTarget.cmake.in"
@@ -503,7 +503,7 @@ CONFIGURE_FILE (
 
 ADD_CUSTOM_TARGET ("uninstall" COMMAND ${CMAKE_COMMAND} -P "${CMAKE_CURRENT_BINARY_DIR}/UninstallTarget.cmake")
 
-# # # Misc
+# Misc
 
 INSTALL (FILES "LICENSE" DESTINATION ${INSTALL_ROOT} COMPONENT "documentation")
 
@@ -513,7 +513,7 @@ IF (EXISTS "${PROJECT_SOURCE_DIR}/share")
 
 ENDIF ()
 
-# # Packaging
+# Packaging
 
 SET (CPACK_PACKAGE_NAME ${PROJECT_PACKAGE_NAME})
 SET (CPACK_PACKAGE_DESCRIPTION_SUMMARY ${PROJECT_DESCRIPTION})
