@@ -23,6 +23,8 @@ OPTION (BUILD_CODE_COVERAGE "Build code coverage" OFF)
 OPTION (BUILD_DOCUMENTATION "Build documentation" OFF)
 OPTION (BUILD_WITH_DEBUG_SYMBOLS "Build with debug symbols." ON)
 OPTION (BUILD_WITH_CXX_17 "Build with C++ 17 support." OFF)
+OPTION (BUILD_WITH_BOOST_STACKTRACE "Build with Boost Stacktrace instead of stacktrace basic" ON)
+OPTION (BUILD_WITH_BOOST_STATIC "Build with Boost Static lib" ON)
 
 ## Setup
 
@@ -32,7 +34,7 @@ CMAKE_MINIMUM_REQUIRED (VERSION "2.8.12" FATAL_ERROR)
 
 ### Paths
 
-SET (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
+LIST (APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
 
 ### Policies
 
@@ -115,7 +117,6 @@ ENDIF ()
 ## Flags
 
 ### C++ 17/20 support
-
 IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
     IF (BUILD_WITH_CXX_17 OR CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
@@ -129,7 +130,7 @@ IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
             MESSAGE (FATAL_ERROR "GCC version must be at least 7.0 to build with C++17")
 
         ENDIF ()
-    
+
     ELSE ()
 
         MESSAGE (STATUS "C++20 support enabled")
@@ -141,7 +142,7 @@ IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
             MESSAGE (FATAL_ERROR "GCC version must be at least 13.0 to build with C++20")
 
         ENDIF ()
-    
+
     ENDIF ()
 
     SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wshadow -Wno-deprecated")
@@ -151,6 +152,7 @@ ELSE ()
     SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wshadow")
 
 ENDIF ()
+
 
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 SET (CMAKE_CXX_EXTENSIONS OFF)
@@ -235,36 +237,44 @@ ENDFOREACH ()
 ## Dependencies
 
 ### Boost [1.82.0]
-
-SET (Boost_USE_STATIC_LIBS ON)
-SET (Boost_USE_MULTITHREADED ON)
-
-FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "system" "filesystem" "regex" "log" "stacktrace_backtrace")
-
-## Stacktrace definitions
-
-# Detect system architecture
-
-IF (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
-
-    # Architecture-specific include for x86_64
-    SET (BACKTRACE_INCLUDE "/usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h")
-    
-ELSEIF (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
-
-    # Example path adjustment for aarch64, adjust the path as needed
-    SET (BACKTRACE_INCLUDE "/usr/lib/gcc/aarch64-linux-gnu/9/include/backtrace.h")
-  
+IF (BUILD_WITH_BOOST_STATIC)
+    SET (Boost_USE_STATIC_LIBS ON)
 ELSE ()
-
-    MESSAGE (FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
-    
+    SET (Boost_USE_STATIC_LIBS OFF)
 ENDIF ()
 
-# Add definitions with architecture-specific path
+SET (Boost_USE_MULTITHREADED ON)
 
-ADD_DEFINITIONS (-DBOOST_STACKTRACE_USE_BACKTRACE)
-ADD_DEFINITIONS (-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
+IF (BUILD_WITH_BOOST_STACKTRACE)
+
+    FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "system" "filesystem" "regex" "log" "stacktrace_backtrace")
+
+    # Stacktrace definitions
+
+    # Detect system architecture
+
+    IF (CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+
+        # Architecture-specific include for x86_64
+        SET (BACKTRACE_INCLUDE "/usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h")
+
+    ELSEIF (CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
+
+        # Example path adjustment for aarch64, adjust the path as needed
+        SET (BACKTRACE_INCLUDE "/usr/lib/gcc/aarch64-linux-gnu/9/include/backtrace.h")
+
+    ELSE ()
+        MESSAGE (FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+    ENDIF ()
+
+    # Add definitions with architecture-specific path
+    ADD_DEFINITIONS (-DBOOST_STACKTRACE_USE_BACKTRACE)
+    ADD_DEFINITIONS (-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
+
+ELSE ()
+    FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "system" "filesystem" "regex" "log" "stacktrace_basic")
+ENDIF()
+
 
 IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
@@ -316,6 +326,7 @@ IF (BUILD_SHARED_LIBRARY)
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "pthread")
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "Boost::filesystem" "Boost::log" ${Boost_STACKTRACE_BACKTRACE_LIBRARY})
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "yaml-cpp")
+
 
     SET_TARGET_PROPERTIES ( ${SHARED_LIBRARY_TARGET} PROPERTIES
                             VERSION ${PROJECT_VERSION_STRING}
@@ -471,22 +482,22 @@ ENDIF ()
 ### Configuration
 
 CONFIGURE_FILE (
-    "${CMAKE_MODULE_PATH}/${PROJECT_NAME}Config.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake/${PROJECT_NAME}Config.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
     @ONLY)
 
 CONFIGURE_FILE (
-    "${CMAKE_MODULE_PATH}/${PROJECT_NAME}ConfigVersion.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake/${PROJECT_NAME}ConfigVersion.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
     @ONLY)
 
-INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_NAME}" COMPONENT "libraries")
-INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake" DESTINATION "${INSTALL_LIB}/${PROJECT_NAME}" COMPONENT "libraries")
+INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake" DESTINATION "${INSTALL_LIB}/cmake/${PROJECT_NAME}" COMPONENT "libraries")
+INSTALL (FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake" DESTINATION "${INSTALL_LIB}/cmake/${PROJECT_NAME}" COMPONENT "libraries")
 
 ### Uninstall
 
 CONFIGURE_FILE (
-    "${CMAKE_MODULE_PATH}/UninstallTarget.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake/UninstallTarget.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/UninstallTarget.cmake"
     IMMEDIATE @ONLY)
 
