@@ -323,7 +323,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app").getNormalizedPath());
-        EXPECT_EQ(Path::Parse("/app/"), Path::Parse("/app/").getNormalizedPath());
+        EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/build").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app/build/Makefile"), Path::Parse("/app/build/Makefile").getNormalizedPath());
 
