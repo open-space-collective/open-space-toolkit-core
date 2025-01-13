@@ -3,7 +3,7 @@
 ARG BASE_IMAGE_VERSION="0.9.0-3-g93ce6ea"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} as root-user
+FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -81,7 +81,7 @@ LABEL VERSION="${VERSION}"
 
 # Development image for humans (non-root user)
 
-FROM root-user as non-root-user
+FROM root-user AS non-root-user
 
 # Install dev utilities
 RUN apt-get update \
