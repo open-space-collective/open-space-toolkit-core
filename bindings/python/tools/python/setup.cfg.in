@@ -2,8 +2,8 @@
 
 [bdist_wheel]
 python-tag=py${EXTENSION}
-bdist-dir=./dist${EXTENSION}
-plat-name=${PLATFORM}
+bdist_dir=./dist${EXTENSION}
+plat_name=${PLATFORM}
 
 [metadata]
 name = open-space-toolkit-core
