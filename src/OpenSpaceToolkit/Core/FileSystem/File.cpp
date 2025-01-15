@@ -284,8 +284,6 @@ filesystem::PermissionSet File::getPermissions() const
 
 filesystem::Directory File::getParentDirectory() const
 {
-    throw ostk::core::error::runtime::Undefined("File");
-
     if (!this->isDefined())
     {
         throw ostk::core::error::runtime::Undefined("File");
