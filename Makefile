@@ -6,7 +6,8 @@ project_version := $(shell git describe --tags --always)
 
 docker_registry_path := openspacecollective
 docker_image_repository := $(docker_registry_path)/open-space-toolkit-$(project_name)
-docker_image_version := $(project_version)
+# docker_image_version := $(project_version)
+docker_image_version := 0.9.0-3-g93ce6ea 
 
 docker_development_image_repository := $(docker_image_repository)-development
 docker_release_image_cpp_repository := $(docker_image_repository)-cpp
