@@ -436,7 +436,7 @@ format-check-cpp-standalone:
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		ostk-check-format-cpp
+		bash -c "ostk-check-format-cpp || exit 1"
 
 .PHONY: format-check-cpp-standalone
 
