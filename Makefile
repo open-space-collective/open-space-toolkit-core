@@ -453,7 +453,7 @@ format-check-python-standalone:
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		ostk-check-format-python
+		bash -c "ostk-check-format-python || exit 1"
 
 .PHONY: format-check-python-standalone
 

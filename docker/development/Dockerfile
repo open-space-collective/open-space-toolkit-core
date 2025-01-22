@@ -88,6 +88,16 @@ RUN apt-get update \
     && apt-get install -y zsh sudo \
     && rm -rf /var/lib/apt/lists/*
 
+RUN echo '#!/usr/bin/env bash\n\
+    # Apache License 2.0\n\
+    project_directory="$(git rev-parse --show-toplevel)"\n\
+    pushd "${project_directory}" > /dev/null\n\
+    clang-format -Werror --dry-run -style=file:thirdparty/clang/.clang-format $(find ~+ src/ include/ test/ bindings/python/src/ -name "*.cpp" -o -name "*.cxx" -o -name "*.hpp" -o -name "*.tpp")\n\
+    format_exit_code=$?\n\
+    popd > /dev/null\n\
+    exit $format_exit_code' > /usr/bin/ostk-check-format-cpp && \
+    chmod +x /usr/bin/ostk-check-format-cpp
+
 # Create non-root user and group
 
 ARG USERNAME="developer"
