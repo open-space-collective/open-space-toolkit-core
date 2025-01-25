@@ -277,8 +277,9 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, KeySubscriptOperator)
               {"Integer", Object::Integer(456)},
               {"Real", Object::Real(456.789)},
               {"Dictionary",
-               {{"Boolean", Object::Boolean(true)}, {"Integer", Object::Integer(789)}, {"Real", Object::Real(789.123)}}}
-             }}
+               {{"Boolean", Object::Boolean(true)},
+                {"Integer", Object::Integer(789)},
+                {"Real", Object::Real(789.123)}}}}}
         };
 
         EXPECT_EQ(true, dictionary["Boolean"].getBoolean());
