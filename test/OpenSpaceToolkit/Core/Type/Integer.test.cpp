@@ -2851,9 +2851,11 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint16)
         EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::min())));
         EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint8>::max())));
 
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
-        EXPECT_NO_THROW(Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::max()))
+        EXPECT_NO_THROW(
+            Integer::Uint16(ostk::core::type::Uint16(std::numeric_limits<ostk::core::type::Uint16>::max()))
         );
     }
 
@@ -2894,15 +2896,19 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint32)
         EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min())));
         EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint8>::min())));
 
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
 
-        EXPECT_NO_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::min()))
         );
 
-        EXPECT_ANY_THROW(Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::max()))
+        EXPECT_ANY_THROW(
+            Integer::Uint32(ostk::core::type::Uint32(std::numeric_limits<ostk::core::type::Uint32>::max()))
         );
     }
 
@@ -2948,20 +2954,26 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Uint64)
         EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::min())));
         EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint8>::max())));
 
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::min()))
         );
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::max()))
-        );
-
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::min()))
-        );
-
-        EXPECT_NO_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::min()))
+        EXPECT_NO_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint16>::max()))
         );
 
-        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::max()))
+        EXPECT_NO_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::min()))
         );
-        EXPECT_ANY_THROW(Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::max()))
+
+        EXPECT_NO_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::min()))
+        );
+
+        EXPECT_ANY_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint32>::max()))
+        );
+        EXPECT_ANY_THROW(
+            Integer::Uint64(ostk::core::type::Uint64(std::numeric_limits<ostk::core::type::Uint64>::max()))
         );
     }
 
