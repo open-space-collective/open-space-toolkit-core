@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <boost/version.hpp>
+
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
 
 #include <Global.test.hpp>
@@ -323,7 +325,18 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app").getNormalizedPath());
-        EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/").getNormalizedPath());
+
+        // Changed behaviour when using Boost >=1.87
+        // see https://github.com/open-space-collective/open-space-toolkit-core/pull/177
+        if ((BOOST_VERSION / 100) % 1000 >= 87)
+        {
+            EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/").getNormalizedPath());
+        }
+        else
+        {
+            EXPECT_EQ(Path::Parse("/app/"), Path::Parse("/app/").getNormalizedPath());
+        }
+
         EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/build").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app/build/Makefile"), Path::Parse("/app/build/Makefile").getNormalizedPath());
 
