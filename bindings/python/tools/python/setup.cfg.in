@@ -1,7 +1,7 @@
 # Apache License 2.0
 
 [bdist_wheel]
-python-tag=py${EXTENSION}
+python_tag=py${EXTENSION}
 bdist_dir=./dist${EXTENSION}
 plat_name=${PLATFORM}
 
