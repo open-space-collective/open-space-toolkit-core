@@ -3,14 +3,10 @@
 #ifndef __OpenSpaceToolkit_Core_Logger__
 #define __OpenSpaceToolkit_Core_Logger__
 
-#include <boost/log/attributes.hpp>
+#include <boost/log/core.hpp>
+#include <boost/log/expressions.hpp>
+#include <boost/log/trivial.hpp>
 
-#include <OpenSpaceToolkit/Core/Container/Array.hpp>
-#include <OpenSpaceToolkit/Core/Logger/Pump.hpp>
-#include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
-#include <OpenSpaceToolkit/Core/Logger/Sink.hpp>
-#include <OpenSpaceToolkit/Core/Logger/Source.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
@@ -18,73 +14,67 @@ namespace ostk
 namespace core
 {
 
-using ostk::core::container::Array;
-using ostk::core::logger::Pump;
-using ostk::core::logger::Severity;
-using ostk::core::logger::Sink;
-using ostk::core::logger::Source;
-using ostk::core::type::Integer;
 using ostk::core::type::String;
-using ostk::core::type::Unique;
 
 /// @brief                      Log management
 
 class Logger
 {
-   public:
-    Logger(const String& aChannel);
-
-    Pump operator()(const Severity& aSeverity, const Integer& aLine, const String& aFile, const String& aFunction);
-
-    template <class T>
-    Pump operator<<(const T& anObject)
+    public:
+    enum class Level
     {
-        Pump pump(Severity::Info, Integer::Undefined(), String::Empty(), String::Empty(), &source_);
 
-        pump << anObject;
+        Trace,
+        Debug,
+        Info,
+        Warning,
+        Error,
+        Fatal
 
-        return std::move(pump);
-    }
+    };
 
-    String getChannel() const;
 
-    static Logger Console(const Severity& aSeverity);
+    /// @brief                  Set the logger level
+    ///
+    /// @code
+    /// Logger::SetLoggerLevel(Logger::Level::Trace);
+    /// @endcode
+    ///
+    /// @param level            The logger level to set
+    static void SetLoggerLevel(const Logger::Level& level);
 
-    static Logger Console(const String& aChannel, const Severity& aSeverity);
+    /// @brief                  Set the logger level
+    ///
+    /// @code
+    /// Logger::SetLoggerLevel("trace");
+    /// @endcode
+    ///
+    /// @param level            The logger level to set
+    static void SetLoggerLevel(const String& level);
 
-    static Logger& Global();
+    /// @brief                  Convert a logger level enum to string
+    ///
+    /// @code
+    /// String levelString = Logger::StringFromLevel(Logger::Level::Trace);
+    /// @endcode
+    ///
+    /// @param aLevel           The logger level enum
+    static String StringFromLevel(const Logger::Level& aLevel);
 
-   private:
-    String channel_;
-    Source source_;
-    Array<Sink> sinks_;
+    /// @brief                  Convert a string to a logger level enum
+    ///
+    /// @code
+    /// Logger::Level level = Logger::LevelFromString("trace");
+    /// @endcode
+    ///
+    /// @param level            The logger level string
+    /// @return                 The logger level enum
+    static Logger::Level LevelFromString(const String& level);
+
+    
 };
 
 }  // namespace core
 }  // namespace ostk
-
-#define LOG(aLogger, aSeverity) aLogger(aSeverity, __LINE__, __FILE__, __PRETTY_FUNCTION__)
-
-#define LOG_TRACE(aLogger) LOG(aLogger, ostk::core::logger::Severity::Trace)
-#define LOG_DEBUG(aLogger) LOG(aLogger, ostk::core::logger::Severity::Debug)
-#define LOG_INFO(aLogger) LOG(aLogger, ostk::core::logger::Severity::Info)
-#define LOG_WARNING(aLogger) LOG(aLogger, ostk::core::logger::Severity::Warning)
-#define LOG_ERROR(aLogger) LOG(aLogger, ostk::core::logger::Severity::Error)
-#define LOG_FATAL(aLogger) LOG(aLogger, ostk::core::logger::Severity::Fatal)
-
-#define GLOBAL_LOG_TRACE LOG_TRACE(ostk::core::Logger::Global())
-#define GLOBAL_LOG_DEBUG LOG_DEBUG(ostk::core::Logger::Global())
-#define GLOBAL_LOG_INFO LOG_INFO(ostk::core::Logger::Global())
-#define GLOBAL_LOG_WARNING LOG_WARNING(ostk::core::Logger::Global())
-#define GLOBAL_LOG_ERROR LOG_ERROR(ostk::core::Logger::Global())
-#define GLOBAL_LOG_FATAL LOG_FATAL(ostk::core::Logger::Global())
-
-#define GET_MACRO(_0, _1, _2, NAME, ...) NAME
-
-#define LOG_SCOPE0() BOOST_LOG_NAMED_SCOPE("?")
-#define LOG_SCOPE1(aScope) BOOST_LOG_NAMED_SCOPE(aScope)
-#define LOG_SCOPE2(aClass, aMethod) BOOST_LOG_NAMED_SCOPE(aClass " ▸ " aMethod)
-
-#define LOG_SCOPE(...) GET_MACRO(_0, ##__VA_ARGS__, LOG_SCOPE2, LOG_SCOPE1, LOG_SCOPE0)(__VA_ARGS__)
 
 #endif

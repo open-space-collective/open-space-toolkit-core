@@ -244,8 +244,6 @@ bool Dictionary::operator!=(const Dictionary& aDictionary) const
 
 const Dictionary::Value& Dictionary::operator[](const Dictionary::Key& aKey) const
 {
-    LOG_SCOPE("Dictionary", "operator [Dictionary::Key]");
-
     if (aKey.isEmpty())
     {
         throw ostk::core::error::runtime::Undefined("Key");
@@ -263,8 +261,6 @@ const Dictionary::Value& Dictionary::operator[](const Dictionary::Key& aKey) con
 
 Dictionary::Value& Dictionary::operator[](const Dictionary::Key& aKey)
 {
-    LOG_SCOPE("Dictionary", "operator [Dictionary::Key]");
-
     if (aKey.isEmpty())
     {
         throw ostk::core::error::runtime::Undefined("Key");
@@ -371,8 +367,6 @@ Size Dictionary::getSize() const
 
 void Dictionary::addValueForKey(const Dictionary::Value& aValue, const Dictionary::Key& aKey)
 {
-    LOG_SCOPE("Dictionary", "addValueForKey");
-
     if (aKey.isEmpty())
     {
         throw ostk::core::error::runtime::Undefined("Key");
@@ -413,8 +407,6 @@ Dictionary Dictionary::Empty()
 
 Dictionary Dictionary::Parse(const String& aString, const Object::Format& aFormat)
 {
-    LOG_SCOPE("Dictionary", "Parse");
-
     Object object = Object::Parse(aString, aFormat);
 
     if (!object.isDictionary())

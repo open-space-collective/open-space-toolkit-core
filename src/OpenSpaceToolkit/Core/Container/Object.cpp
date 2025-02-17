@@ -9,10 +9,13 @@
 #include <yaml-cpp/yaml.h>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
 #include <OpenSpaceToolkit/Core/Logger.hpp>
 #include <OpenSpaceToolkit/Core/Utility.hpp>
+
+using ostk::core::type::Integer;
 
 namespace ostk
 {
@@ -340,8 +343,6 @@ bool Object::operator!=(const Object& anObject) const
 
 const Object& Object::operator[](const type::String& aKey) const
 {
-    LOG_SCOPE("Object", "operator [String]");
-
     if (!this->isDictionary())
     {
         throw ostk::core::error::RuntimeError("Object is not a dictionary.");
@@ -352,8 +353,6 @@ const Object& Object::operator[](const type::String& aKey) const
 
 const Object& Object::operator[](const type::Index& anIndex) const
 {
-    LOG_SCOPE("Object", "operator [Index]");
-
     if (!this->isArray())
     {
         throw ostk::core::error::RuntimeError("Object is not an array.");
@@ -364,8 +363,6 @@ const Object& Object::operator[](const type::Index& anIndex) const
 
 Object& Object::operator[](const type::String& aKey)
 {
-    LOG_SCOPE("Object", "operator [String]");
-
     if (!this->isDictionary())
     {
         objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(Dictionary::Empty()));
@@ -376,8 +373,6 @@ Object& Object::operator[](const type::String& aKey)
 
 Object& Object::operator[](const type::Index& anIndex)
 {
-    LOG_SCOPE("Object", "operator [Index]");
-
     if (!this->isArray())
     {
         objectImplUPtr_ = std::make_unique<Object::Impl>(boost::any(container::Array<Object>::Empty()));
@@ -607,8 +602,6 @@ container::Array<Object> Object::getArray() const
 
 type::String Object::toString(const Object::Format& aFormat) const
 {
-    LOG_SCOPE("Object", "toString");
-
     switch (aFormat)
     {
         case Object::Format::Undefined:
@@ -632,8 +625,6 @@ type::String Object::toString(const Object::Format& aFormat) const
 
 type::String Object::getJsonString() const
 {
-    LOG_SCOPE("Object", "getJsonString");
-
     rapidjson::Document jsonDocument;
 
     std::function<rapidjson::Value(const Object&)> ValueFromObject =
@@ -864,8 +855,6 @@ Object Object::Parse(const type::String& aString, const Object::Format& aFormat)
 
 Object Object::ParseJson(const type::String& aString)
 {
-    LOG_SCOPE("Object", "ParseJson");
-
     if (aString.isEmpty())
     {
         return Object::Undefined();
@@ -955,8 +944,6 @@ Object Object::ParseJson(const type::String& aString)
 
 Object Object::ParseYaml(const type::String& aString)
 {
-    LOG_SCOPE("Object", "ParseYaml");
-
     if (aString.isEmpty())
     {
         return Object::Undefined();
@@ -1051,8 +1038,6 @@ Object Object::ParseYaml(const type::String& aString)
 
 Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat)
 {
-    LOG_SCOPE("Object", "Load");
-
     if (!aFile.isDefined())
     {
         throw ostk::core::error::runtime::Undefined("File");
@@ -1068,8 +1053,6 @@ Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat
 
 type::String Object::StringFromType(const Object::Type& aType)
 {
-    LOG_SCOPE("Object", "StringFromType");
-
     switch (aType)
     {
         case Object::Type::Undefined:
@@ -1103,8 +1086,6 @@ type::String Object::StringFromType(const Object::Type& aType)
 
 Object::Type Object::TypeFromString(const type::String& aString)
 {
-    LOG_SCOPE("Object", "TypeFromString");
-
     if (aString == "Undefined")
     {
         return Object::Type::Undefined;
