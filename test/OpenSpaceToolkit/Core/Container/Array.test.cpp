@@ -491,16 +491,14 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Map)
     }
 
     {
-        EXPECT_TRUE(
-            Array<String>::Empty()
-                .map<String>(
-                    [](const String& aString) -> String
-                    {
-                        return aString;
-                    }
-                )
-                .isEmpty()
-        );
+        EXPECT_TRUE(Array<String>::Empty()
+                        .map<String>(
+                            [](const String& aString) -> String
+                            {
+                                return aString;
+                            }
+                        )
+                        .isEmpty());
     }
 }
 

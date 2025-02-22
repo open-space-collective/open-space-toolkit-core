@@ -871,8 +871,8 @@ Object Object::ParseJson(const type::String& aString)
         return Object::Undefined();
     }
 
-    std::function<Object(const rapidjson::Value&)> parseJson =
-        [&parseJson](const rapidjson::Value& aJsonValue) -> Object
+    std::function<Object(const rapidjson::Value&)> parseJson = [&parseJson](const rapidjson::Value& aJsonValue
+                                                               ) -> Object
     {
         if (aJsonValue.IsNull())  // Value is Null
         {
@@ -942,8 +942,8 @@ Object Object::ParseJson(const type::String& aString)
 
     rapidjson::Document jsonDocument;
 
-    if (jsonDocument.ParseStream < rapidjson::kParseNanAndInfFlag |
-        rapidjson::kParseCommentsFlag > (jsonStream).HasParseError())
+    if (jsonDocument.ParseStream<rapidjson::kParseNanAndInfFlag | rapidjson::kParseCommentsFlag>(jsonStream)
+            .HasParseError())
     {
         throw ostk::core::error::RuntimeError("Cannot parse JSON string [" + aString + "].");
     }
