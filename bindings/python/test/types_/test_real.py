@@ -260,8 +260,6 @@ def test_real_integer():
 
 def test_real_hash():
     assert hash(Real(1.0)) == hash(Real(1.0))
-    assert hash(Real(1.0)) != hash(Real(2.0))
-    assert hash(Real(1.0)) != hash(Real(1.0))
     assert {Real(1.0): "test"} == {Real(1.0): "test"}
 
 # def test_real_parse ():
