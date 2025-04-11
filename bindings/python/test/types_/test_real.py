@@ -259,6 +259,11 @@ def test_real_integer():
     assert Real.integer(76) == Real(76.0)
 
 
+def test_real_hash():
+    assert hash(Real(1.0)) == hash(Real(1.0))
+    assert {Real(1.0): "test"} == {Real(1.0): "test"}
+
+
 # def test_real_parse ():
 
 # def test_real_can_parse ():

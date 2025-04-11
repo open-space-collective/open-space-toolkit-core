@@ -69,6 +69,13 @@ inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
                 return aReal.toString();
             }
         )
+        .def(
+            "__hash__",
+            +[](const ostk::core::type::Real& aReal) -> std::size_t
+            {
+                return std::hash<Real::ValueType>()(aReal);
+            }
+        )
 
         .def("is_defined", &Real::isDefined)
         .def("is_zero", &Real::isZero)
