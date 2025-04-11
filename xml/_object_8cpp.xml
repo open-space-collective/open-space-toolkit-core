@@ -1408,8 +1408,8 @@
 <codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Object::Undefined();</highlight></codeline>
 <codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="873"><highlight class="normal"></highlight></codeline>
-<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;Object(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rapidjson::Value&amp;)&gt;<sp/>parseJson<sp/>=</highlight></codeline>
-<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;parseJson](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rapidjson::Value&amp;<sp/>aJsonValue)<sp/>-&gt;<sp/>Object</highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;Object(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rapidjson::Value&amp;)&gt;<sp/>parseJson<sp/>=<sp/>[&amp;parseJson](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rapidjson::Value&amp;<sp/>aJsonValue</highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>-&gt;<sp/>Object</highlight></codeline>
 <codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aJsonValue.IsNull())<sp/><sp/></highlight><highlight class="comment">//<sp/>Value<sp/>is<sp/>Null</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1479,8 +1479,8 @@
 <codeline lineno="942"><highlight class="normal"></highlight></codeline>
 <codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/><sp/>rapidjson::Document<sp/>jsonDocument;</highlight></codeline>
 <codeline lineno="944"><highlight class="normal"></highlight></codeline>
-<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jsonDocument.ParseStream<sp/>&lt;<sp/>rapidjson::kParseNanAndInfFlag<sp/>|</highlight></codeline>
-<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rapidjson::kParseCommentsFlag<sp/>&gt;<sp/>(jsonStream).HasParseError())</highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jsonDocument.ParseStream&lt;rapidjson::kParseNanAndInfFlag<sp/>|<sp/>rapidjson::kParseCommentsFlag&gt;(jsonStream)</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.HasParseError())</highlight></codeline>
 <codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1error_1_1_runtime_error" kindref="compound">ostk::core::error::RuntimeError</ref>(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>parse<sp/>JSON<sp/>string<sp/>[&quot;</highlight><highlight class="normal"><sp/>+<sp/>aString<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;].&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
