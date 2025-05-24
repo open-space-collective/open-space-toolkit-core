@@ -5,6 +5,9 @@
 
 #include <stdint.h>
 
+#include <OpenSpaceToolkit/Core/Type/String.hpp>  // Required by EnumHelper for String type
+#include <OpenSpaceToolkit/Core/Type/EnumHelper.hpp> // For OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION
+
 namespace ostk
 {
 namespace core
@@ -23,6 +26,8 @@ enum class Sign : uint8_t
     None
 
 };
+
+OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION(Sign)
 
 }  // namespace type
 }  // namespace core
