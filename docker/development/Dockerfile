@@ -16,11 +16,7 @@ ARG RAPIDJSON_VERSION="master"
 RUN cd /tmp \
     && git clone --branch ${RAPIDJSON_VERSION} --depth 1 https://github.com/Tencent/rapidjson.git \
     && cd rapidjson \
-    && mkdir build \
-    && cd build \
-    && cmake .. \
-    && make --silent -j $(nproc) \
-    && make install \
+    && cp -r ./include/rapidjson /usr/local/include \
     && rm -rf /tmp/rapidjson
 
 ## yaml-cpp
