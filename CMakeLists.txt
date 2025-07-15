@@ -289,15 +289,6 @@ IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-### RapidJSON [1.1.0]
-
-FIND_PACKAGE ("RapidJSON" REQUIRED)
-
-IF (RapidJSON_FOUND)
-    INCLUDE_DIRECTORIES (${RapidJSON_INCLUDE_DIRS})
-ELSE ()
-    MESSAGE (SEND_ERROR "[RapidJSON] not found.")
-ENDIF ()
 
 ### yaml-cpp [0.7.0]
 
