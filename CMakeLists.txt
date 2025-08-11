@@ -248,7 +248,7 @@ include(FetchContent)
 FetchContent_Declare(
     magic_enum
     GIT_REPOSITORY https://github.com/Neargye/magic_enum.git
-    GIT_TAG        v0.9.0 # Using v0.9.0 as a stable recent version
+    GIT_TAG        v0.9.7
 )
 
 FetchContent_MakeAvailable(magic_enum)
@@ -339,11 +339,6 @@ IF (BUILD_SHARED_LIBRARY)
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "pthread")
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "Boost::filesystem" "Boost::log" ${Boost_STACKTRACE_BACKTRACE_LIBRARY})
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "yaml-cpp")
-    # magic_enum is header-only, so no actual library to link.
-    # If it had one, it would be linked here, e.g.:
-    # IF (magic_enum_LIBRARIES)
-    #     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} PUBLIC ${magic_enum_LIBRARIES})
-    # ENDIF()
 
     SET_TARGET_PROPERTIES ( ${SHARED_LIBRARY_TARGET} PROPERTIES
                             VERSION ${PROJECT_VERSION_STRING}
@@ -378,11 +373,6 @@ IF (BUILD_STATIC_LIBRARY)
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} "pthread")
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} "Boost::filesystem" "Boost::log" ${Boost_STACKTRACE_BACKTRACE_LIBRARY})
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} "yaml-cpp")
-    # magic_enum is header-only, so no actual library to link.
-    # If it had one, it would be linked here, e.g.:
-    # IF (magic_enum_LIBRARIES)
-    #     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} PUBLIC ${magic_enum_LIBRARIES})
-    # ENDIF()
 
     SET_TARGET_PROPERTIES (${STATIC_LIBRARY_TARGET} PROPERTIES VERSION ${PROJECT_VERSION_STRING} OUTPUT_NAME ${STATIC_LIBRARY_NAME} CLEAN_DIRECT_OUTPUT 1 INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 

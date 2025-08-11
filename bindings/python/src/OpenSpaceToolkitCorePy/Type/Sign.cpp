@@ -20,7 +20,7 @@ inline void OpenSpaceToolkitCorePy_Type_Sign(pybind11::module& aModule)
         .value("Undefined", Sign::Undefined)
         .value("Positive", Sign::Positive)
         .value("Negative", Sign::Negative)
-        .value("None", Sign::None)
+        .value("NoSign", Sign::None)
         .export_values()
         .def("__str__", [](const Sign& aSign) { return std::string(magic_enum::enum_name(aSign)); })
         .def_static("from_string", [](const std::string& enumString) {
