@@ -7,6 +7,7 @@
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
 #include <yaml-cpp/yaml.h>
+#include <magic_enum/magic_enum.hpp>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
@@ -1066,84 +1067,86 @@ Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat
     return Object::Parse(aFile.getContents(), aFormat);
 }
 
-type::String Object::StringFromType(const Object::Type& aType)
-{
-    LOG_SCOPE("Object", "StringFromType");
+OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION_SIMPLE(Object::Type)
 
-    switch (aType)
-    {
-        case Object::Type::Undefined:
-            return "Undefined";
+// type::String Object::StringFromType(const Object::Type& aType)
+// {
+//     LOG_SCOPE("Object", "StringFromType");
 
-        case Object::Type::Boolean:
-            return "Boolean";
+//     switch (aType)
+//     {
+//         case Object::Type::Undefined:
+//             return "Undefined";
 
-        case Object::Type::Integer:
-            return "Integer";
+//         case Object::Type::Boolean:
+//             return "Boolean";
 
-        case Object::Type::Real:
-            return "Real";
+//         case Object::Type::Integer:
+//             return "Integer";
 
-        case Object::Type::String:
-            return "String";
+//         case Object::Type::Real:
+//             return "Real";
 
-        case Object::Type::Dictionary:
-            return "Dictionary";
+//         case Object::Type::String:
+//             return "String";
 
-        case Object::Type::Array:
-            return "Array";
+//         case Object::Type::Dictionary:
+//             return "Dictionary";
 
-        default:
-            throw ostk::core::error::runtime::Wrong("Type");
-            break;
-    }
+//         case Object::Type::Array:
+//             return "Array";
 
-    return type::String::Empty();
-}
+//         default:
+//             throw ostk::core::error::runtime::Wrong("Type");
+//             break;
+//     }
 
-Object::Type Object::TypeFromString(const type::String& aString)
-{
-    LOG_SCOPE("Object", "TypeFromString");
+//     return type::String::Empty();
+// }
 
-    if (aString == "Undefined")
-    {
-        return Object::Type::Undefined;
-    }
+// Object::Type Object::TypeFromString(const type::String& aString)
+// {
+//     LOG_SCOPE("Object", "TypeFromString");
 
-    if (aString == "Boolean")
-    {
-        return Object::Type::Boolean;
-    }
+//     if (aString == "Undefined")
+//     {
+//         return Object::Type::Undefined;
+//     }
 
-    if (aString == "Integer")
-    {
-        return Object::Type::Integer;
-    }
+//     if (aString == "Boolean")
+//     {
+//         return Object::Type::Boolean;
+//     }
 
-    if (aString == "Real")
-    {
-        return Object::Type::Real;
-    }
+//     if (aString == "Integer")
+//     {
+//         return Object::Type::Integer;
+//     }
 
-    if (aString == "String")
-    {
-        return Object::Type::String;
-    }
+//     if (aString == "Real")
+//     {
+//         return Object::Type::Real;
+//     }
 
-    if (aString == "Dictionary")
-    {
-        return Object::Type::Dictionary;
-    }
+//     if (aString == "String")
+//     {
+//         return Object::Type::String;
+//     }
 
-    if (aString == "Array")
-    {
-        return Object::Type::Array;
-    }
+//     if (aString == "Dictionary")
+//     {
+//         return Object::Type::Dictionary;
+//     }
 
-    throw ostk::core::error::runtime::Wrong("Type", aString);
+//     if (aString == "Array")
+//     {
+//         return Object::Type::Array;
+//     }
 
-    return Object::Type::Undefined;
-}
+//     throw ostk::core::error::runtime::Wrong("Type", aString);
+
+//     return Object::Type::Undefined;
+// }
 
 Object::Object(const Unique<Object::Impl>& anObjectImpl)
     : objectImplUPtr_((anObjectImpl != nullptr) ? anObjectImpl->clone() : nullptr)

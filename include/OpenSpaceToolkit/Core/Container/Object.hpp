@@ -9,6 +9,7 @@
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Container/Pair.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Type/EnumHelper.hpp>
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
@@ -182,9 +183,7 @@ class Object
 
     static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
 
-    static type::String StringFromType(const Object::Type& aType);
-
-    static Object::Type TypeFromString(const type::String& aString);
+    OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION_SIMPLE(Object::Type)
 
    private:
     class Impl;
