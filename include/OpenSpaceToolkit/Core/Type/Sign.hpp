@@ -5,8 +5,6 @@
 
 #include <stdint.h>
 
-#include <OpenSpaceToolkit/Core/Type/EnumHelper.hpp>  // For OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION
-
 namespace ostk
 {
 namespace core

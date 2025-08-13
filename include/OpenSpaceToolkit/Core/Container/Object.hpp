@@ -183,7 +183,7 @@ class Object
 
     static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
 
-    OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION_SIMPLE(Object::Type)
+    OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION(Object::Type, Type, Object)
 
    private:
     class Impl;
