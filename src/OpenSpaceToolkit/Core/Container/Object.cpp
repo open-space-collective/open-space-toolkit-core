@@ -1,6 +1,7 @@
 /// Apache License 2.0
 
 #include <boost/any.hpp>
+#include <magic_enum/magic_enum.hpp>
 #include <rapidjson/document.h>
 #include <rapidjson/filereadstream.h>
 #include <rapidjson/filewritestream.h>
@@ -1066,84 +1067,7 @@ Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat
     return Object::Parse(aFile.getContents(), aFormat);
 }
 
-type::String Object::StringFromType(const Object::Type& aType)
-{
-    LOG_SCOPE("Object", "StringFromType");
-
-    switch (aType)
-    {
-        case Object::Type::Undefined:
-            return "Undefined";
-
-        case Object::Type::Boolean:
-            return "Boolean";
-
-        case Object::Type::Integer:
-            return "Integer";
-
-        case Object::Type::Real:
-            return "Real";
-
-        case Object::Type::String:
-            return "String";
-
-        case Object::Type::Dictionary:
-            return "Dictionary";
-
-        case Object::Type::Array:
-            return "Array";
-
-        default:
-            throw ostk::core::error::runtime::Wrong("Type");
-            break;
-    }
-
-    return type::String::Empty();
-}
-
-Object::Type Object::TypeFromString(const type::String& aString)
-{
-    LOG_SCOPE("Object", "TypeFromString");
-
-    if (aString == "Undefined")
-    {
-        return Object::Type::Undefined;
-    }
-
-    if (aString == "Boolean")
-    {
-        return Object::Type::Boolean;
-    }
-
-    if (aString == "Integer")
-    {
-        return Object::Type::Integer;
-    }
-
-    if (aString == "Real")
-    {
-        return Object::Type::Real;
-    }
-
-    if (aString == "String")
-    {
-        return Object::Type::String;
-    }
-
-    if (aString == "Dictionary")
-    {
-        return Object::Type::Dictionary;
-    }
-
-    if (aString == "Array")
-    {
-        return Object::Type::Array;
-    }
-
-    throw ostk::core::error::runtime::Wrong("Type", aString);
-
-    return Object::Type::Undefined;
-}
+OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION(Object::Type, Type, Object)
 
 Object::Object(const Unique<Object::Impl>& anObjectImpl)
     : objectImplUPtr_((anObjectImpl != nullptr) ? anObjectImpl->clone() : nullptr)
