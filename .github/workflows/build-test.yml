@@ -44,7 +44,7 @@ jobs:
     name: Build Development Image
     needs:
       - prepare-environment
-    uses: open-space-collective/open-space-toolkit/.github/workflows/build-image.yml@main
+    uses: open-space-collective/open-space-toolkit/.github/workflows/build-image.yml@2765b61715b5e0d22de6d88ea5400774aaf96cb0
     with:
       project_name: ${{ needs.prepare-environment.outputs.project_name }}
       project_version: ${{ needs.prepare-environment.outputs.project_version }}
