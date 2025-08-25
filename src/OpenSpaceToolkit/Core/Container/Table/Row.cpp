@@ -72,6 +72,7 @@ bool Row::operator==(const Row& aRow) const
 
 bool Row::operator!=(const Row& aRow) const
 {
+    std::cout << "hello world\n";
     return cells_ != aRow.cells_;
 }
 
