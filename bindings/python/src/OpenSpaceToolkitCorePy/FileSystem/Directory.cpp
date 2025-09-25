@@ -18,7 +18,11 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
         .def(self != self, R"doc(Check if two Directories are not equal.)doc")
 
         .def("__str__", &(shiftToString<Directory>), R"doc(Return string representation of the Directory.)doc")
-        .def("__repr__", &(shiftToString<Directory>), R"doc(Return string representation of the Directory for debugging.)doc")
+        .def(
+            "__repr__",
+            &(shiftToString<Directory>),
+            R"doc(Return string representation of the Directory for debugging.)doc"
+        )
 
         .def(
             "is_defined",

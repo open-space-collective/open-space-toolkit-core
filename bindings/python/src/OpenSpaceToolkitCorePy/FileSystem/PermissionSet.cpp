@@ -39,7 +39,11 @@ inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::class_<Per
         .def(self - self, R"doc(Remove permissions (subtract permissions).)doc")
 
         .def("__str__", &(shiftToString<PermissionSet>), R"doc(Return string representation of the PermissionSet.)doc")
-        .def("__repr__", &(shiftToString<PermissionSet>), R"doc(Return string representation of the PermissionSet for debugging.)doc")
+        .def(
+            "__repr__",
+            &(shiftToString<PermissionSet>),
+            R"doc(Return string representation of the PermissionSet for debugging.)doc"
+        )
 
         .def(
             "is_none",
