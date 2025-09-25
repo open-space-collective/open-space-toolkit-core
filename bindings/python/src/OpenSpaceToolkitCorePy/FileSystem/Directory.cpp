@@ -173,14 +173,26 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
 
                 Creates the directory and any necessary parent directories.
 
+                Args:
+                    owner_permissions (PermissionSet, optional): Permissions for the owner.
+                        Defaults to PermissionSet.rwx().
+                    group_permissions (PermissionSet, optional): Permissions for the group.
+                        Defaults to PermissionSet.rx().
+                    other_permissions (PermissionSet, optional): Permissions for others.
+                        Defaults to PermissionSet.rx().
+
                 Raises:
                     RuntimeError: If the directory cannot be created.
 
                 Example:
-                    >>> from ostk.core.filesystem import Path
+                    >>> from ostk.core.filesystem import Path, PermissionSet
                     >>> directory = Directory.path(Path.parse("/tmp/new_directory"))
-                    >>> directory.create()
-            )doc"
+                    >>> directory.create()  # Uses default permissions
+                    >>> directory.create(PermissionSet.rwx(), PermissionSet.rx(), PermissionSet.none())
+            )doc",
+            arg_v("owner_permissions", filesystem::PermissionSet::RWX(), "PermissionSet.rwx()"),
+            arg_v("group_permissions", filesystem::PermissionSet::RX(), "PermissionSet.rx()"),
+            arg_v("other_permissions", filesystem::PermissionSet::RX(), "PermissionSet.rx()")
         )
         .def(
             "remove",
