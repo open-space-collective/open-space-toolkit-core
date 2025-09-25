@@ -34,7 +34,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     bool: True if the Directory is defined, False otherwise.
 
                 Example:
-                    >>> directory = Directory.path("/home/user")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user"))
                     >>> directory.is_defined()  # True
             )doc"
         )
@@ -48,7 +49,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     bool: True if the directory exists, False otherwise.
 
                 Example:
-                    >>> directory = Directory.path("/home")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home"))
                     >>> directory.exists()  # True (usually)
             )doc"
         )
@@ -62,7 +64,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     bool: True if the directory contains no files or subdirectories, False otherwise.
 
                 Example:
-                    >>> directory = Directory.path("/tmp")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/tmp"))
                     >>> directory.is_empty()  # Depends on contents
             )doc"
         )
@@ -79,7 +82,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     bool: True if a file with the given name exists in the directory.
 
                 Example:
-                    >>> directory = Directory.path("/home/user")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user"))
                     >>> directory.contains_file_with_name("document.txt")  # True/False
             )doc",
             arg("name")
@@ -94,7 +98,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     str: The directory name (last component of the path).
 
                 Example:
-                    >>> directory = Directory.path("/home/user/Documents")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user/Documents"))
                     >>> directory.get_name()  # "Documents"
             )doc"
         )
@@ -108,7 +113,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     Path: The complete path to the directory.
 
                 Example:
-                    >>> directory = Directory.path("/home/user")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user"))
                     >>> path = directory.get_path()
                     >>> str(path)  # "/home/user"
             )doc"
@@ -123,7 +129,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     Directory: The parent directory.
 
                 Example:
-                    >>> directory = Directory.path("/home/user/Documents")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user/Documents"))
                     >>> parent = directory.get_parent_directory()
                     >>> parent.get_name()  # "user"
             )doc"
@@ -138,7 +145,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     list[Directory]: A list of subdirectories.
 
                 Example:
-                    >>> directory = Directory.path("/home/user")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user"))
                     >>> subdirs = directory.get_directories()
             )doc"
         )
@@ -152,7 +160,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     str: String representation of the directory path.
 
                 Example:
-                    >>> directory = Directory.path("/home/user")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/home/user"))
                     >>> directory.to_string()  # "/home/user"
             )doc"
         )
@@ -168,7 +177,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     RuntimeError: If the directory cannot be created.
 
                 Example:
-                    >>> directory = Directory.path("/tmp/new_directory")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/tmp/new_directory"))
                     >>> directory.create()
             )doc"
         )
@@ -184,7 +194,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     RuntimeError: If the directory cannot be removed.
 
                 Example:
-                    >>> directory = Directory.path("/tmp/temp_directory")
+                    >>> from ostk.core.filesystem import Path
+                    >>> directory = Directory.path(Path.parse("/tmp/temp_directory"))
                     >>> directory.remove()
             )doc"
         )

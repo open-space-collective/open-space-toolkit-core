@@ -32,7 +32,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     bool: True if the File is defined, False otherwise.
 
                 Example:
-                    >>> file = File.path("/path/to/file.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/path/to/file.txt"))
                     >>> file.is_defined()  # True
                     >>> undefined_file = File.undefined()
                     >>> undefined_file.is_defined()  # False
@@ -48,9 +49,10 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     bool: True if the file exists, False otherwise.
 
                 Example:
-                    >>> file = File.path("/etc/passwd")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/etc/passwd"))
                     >>> file.exists()  # True (on Unix systems)
-                    >>> nonexistent = File.path("/nonexistent/file.txt")
+                    >>> nonexistent = File.path(Path.parse("/nonexistent/file.txt"))
                     >>> nonexistent.exists()  # False
             )doc"
         )
@@ -67,7 +69,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     str: The file name, with or without extension.
 
                 Example:
-                    >>> file = File.path("/path/to/document.pdf")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/path/to/document.pdf"))
                     >>> file.get_name()  # "document.pdf"
                     >>> file.get_name(False)  # "document"
             )doc",
@@ -83,9 +86,10 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     str: The file extension (without the dot).
 
                 Example:
-                    >>> file = File.path("/path/to/document.pdf")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/path/to/document.pdf"))
                     >>> file.get_extension()  # "pdf"
-                    >>> file_no_ext = File.path("/path/to/README")
+                    >>> file_no_ext = File.path(Path.parse("/path/to/README"))
                     >>> file_no_ext.get_extension()  # ""
             )doc"
         )
@@ -99,7 +103,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     Path: The complete path to the file.
 
                 Example:
-                    >>> file = File.path("/home/user/document.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/home/user/document.txt"))
                     >>> path = file.get_path()
                     >>> str(path)  # "/home/user/document.txt"
             )doc"
@@ -114,7 +119,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     PermissionSet: The permission set for the file.
 
                 Example:
-                    >>> file = File.path("/etc/passwd")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/etc/passwd"))
                     >>> permissions = file.get_permissions()
             )doc"
         )
@@ -128,7 +134,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     Directory: The parent directory containing this file.
 
                 Example:
-                    >>> file = File.path("/home/user/document.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/home/user/document.txt"))
                     >>> parent = file.get_parent_directory()
                     >>> str(parent.get_path())  # "/home/user"
             )doc"
@@ -146,7 +153,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     RuntimeError: If the file cannot be read or doesn't exist.
 
                 Example:
-                    >>> file = File.path("/path/to/text_file.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/path/to/text_file.txt"))
                     >>> content = file.get_contents()
                     >>> print(content)  # File contents as string
             )doc"
@@ -161,7 +169,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     str: String representation of the file path.
 
                 Example:
-                    >>> file = File.path("/home/user/document.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/home/user/document.txt"))
                     >>> file.to_string()  # "/home/user/document.txt"
             )doc"
         )
@@ -177,8 +186,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     directory (Directory): The target directory to move the file to.
 
                 Example:
-                    >>> file = File.path("/tmp/document.txt")
-                    >>> target_dir = Directory.path("/home/user/Documents")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/tmp/document.txt"))
+                    >>> target_dir = Directory.path(Path.parse("/home/user/Documents"))
                     >>> file.move_to_directory(target_dir)
             )doc",
             arg("directory")
@@ -195,7 +205,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     RuntimeError: If the file cannot be created.
 
                 Example:
-                    >>> file = File.path("/tmp/new_file.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/tmp/new_file.txt"))
                     >>> file.create()
             )doc"
         )
@@ -212,7 +223,8 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     RuntimeError: If the file cannot be removed.
 
                 Example:
-                    >>> file = File.path("/tmp/temp_file.txt")
+                    >>> from ostk.core.filesystem import Path
+                    >>> file = File.path(Path.parse("/tmp/temp_file.txt"))
                     >>> file.remove()
             )doc"
         )
