@@ -18,7 +18,12 @@ inline void OpenSpaceToolkitCorePy_Type(pybind11::module& aModule)
     using ostk::core::type::String;
 
     // Create "type" python submodule
-    auto type = aModule.def_submodule("type");
+    auto type = aModule.def_submodule("type", R"doc(
+        Core data types for Open Space Toolkit.
+
+        This submodule contains fundamental data types including Integer, Real, String,
+        and Sign enumerations that provide enhanced functionality over standard types.
+    )doc");
 
     pybind11::class_<Integer> integerClass(type, "Integer");
     pybind11::class_<Real> realClass(type, "Real");
