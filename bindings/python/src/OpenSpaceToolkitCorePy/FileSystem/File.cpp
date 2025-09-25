@@ -201,14 +201,26 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
 
                 Creates the file if it doesn't exist, including any necessary parent directories.
 
+                Args:
+                    owner_permissions (PermissionSet, optional): Permissions for the owner.
+                        Defaults to PermissionSet.rw().
+                    group_permissions (PermissionSet, optional): Permissions for the group.
+                        Defaults to PermissionSet.r().
+                    other_permissions (PermissionSet, optional): Permissions for others.
+                        Defaults to PermissionSet.r().
+
                 Raises:
                     RuntimeError: If the file cannot be created.
 
                 Example:
-                    >>> from ostk.core.filesystem import Path
+                    >>> from ostk.core.filesystem import Path, PermissionSet
                     >>> file = File.path(Path.parse("/tmp/new_file.txt"))
-                    >>> file.create()
-            )doc"
+                    >>> file.create()  # Uses default permissions
+                    >>> file.create(PermissionSet.rw(), PermissionSet.r(), PermissionSet.none())
+            )doc",
+            arg_v("owner_permissions", filesystem::PermissionSet::RW(), "PermissionSet.rw()"),
+            arg_v("group_permissions", filesystem::PermissionSet::R(), "PermissionSet.r()"),
+            arg_v("other_permissions", filesystem::PermissionSet::R(), "PermissionSet.r()")
         )
         // .def("clear", &File::clear)
         .def(
