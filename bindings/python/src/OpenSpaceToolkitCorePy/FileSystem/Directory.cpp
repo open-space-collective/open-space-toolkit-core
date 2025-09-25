@@ -3,6 +3,7 @@
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
 using ostk::core::filesystem::Directory;
+using ostk::core::filesystem::PermissionSet;
 
 inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directory>& directoryClass)
 {
@@ -190,9 +191,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     >>> directory.create()  # Uses default permissions
                     >>> directory.create(PermissionSet.rwx(), PermissionSet.rx(), PermissionSet.none())
             )doc",
-            arg_v("owner_permissions", filesystem::PermissionSet::RWX(), "PermissionSet.rwx()"),
-            arg_v("group_permissions", filesystem::PermissionSet::RX(), "PermissionSet.rx()"),
-            arg_v("other_permissions", filesystem::PermissionSet::RX(), "PermissionSet.rx()")
+            arg_v("owner_permissions", PermissionSet::RWX(), "PermissionSet.rwx()"),
+            arg_v("group_permissions", PermissionSet::RX(), "PermissionSet.rx()"),
+            arg_v("other_permissions", PermissionSet::RX(), "PermissionSet.rx()")
         )
         .def(
             "remove",

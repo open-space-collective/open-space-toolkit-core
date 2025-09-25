@@ -3,6 +3,7 @@
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
 using ostk::core::filesystem::File;
+using ostk::core::filesystem::PermissionSet;
 
 inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileClass)
 {
@@ -218,9 +219,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     >>> file.create()  # Uses default permissions
                     >>> file.create(PermissionSet.rw(), PermissionSet.r(), PermissionSet.none())
             )doc",
-            arg_v("owner_permissions", filesystem::PermissionSet::RW(), "PermissionSet.rw()"),
-            arg_v("group_permissions", filesystem::PermissionSet::R(), "PermissionSet.r()"),
-            arg_v("other_permissions", filesystem::PermissionSet::R(), "PermissionSet.r()")
+            arg_v("owner_permissions", PermissionSet::RW(), "PermissionSet.rw()"),
+            arg_v("group_permissions", PermissionSet::R(), "PermissionSet.r()"),
+            arg_v("other_permissions", PermissionSet::R(), "PermissionSet.r()")
         )
         // .def("clear", &File::clear)
         .def(
