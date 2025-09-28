@@ -19,7 +19,12 @@ using ostk::core::filesystem::PermissionSet;
 inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
 {
     // Create "filesystem" python submodule
-    auto filesystem = aModule.def_submodule("filesystem");
+    auto filesystem = aModule.def_submodule("filesystem", R"doc(
+        File system operations and utilities for Open Space Toolkit.
+
+        This submodule provides classes for working with files, directories, paths,
+        and permission sets, enabling cross-platform file system operations.
+    )doc");
 
     pybind11::class_<PermissionSet> permissionSetClass(filesystem, "PermissionSet");
     pybind11::class_<Path> pathClass(filesystem, "Path");

@@ -13,7 +13,12 @@ inline void OpenSpaceToolkitCorePy_Container(pybind11::module& aModule)
     using ostk::core::container::Object;
 
     // Create "container" python submodule
-    auto container = aModule.def_submodule("container");
+    auto container = aModule.def_submodule("container", R"doc(
+        Container classes and data structures for Open Space Toolkit.
+
+        This submodule provides generic container classes including Object, Dictionary,
+        and Array types for storing and manipulating structured data.
+    )doc");
 
     pybind11::class_<Dictionary> dictionaryClass(container, "Dictionary");
     pybind11::class_<Object> objectClass(container, "Object");
