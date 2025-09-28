@@ -12,14 +12,14 @@
       <node id="16">
         <label>fmt/format.h</label>
       </node>
-      <node id="37">
+      <node id="39">
         <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
@@ -68,7 +68,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="41">
         <label>stdint.h</label>
       </node>
       <node id="22">
@@ -155,6 +155,16 @@
         <childnode refid="34" relation="include">
         </childnode>
       </node>
+      <node id="37">
+        <label>OpenSpaceToolkit/Core/Type/EnumHelper.hpp</label>
+        <link refid="_enum_helper_8hpp"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
       <node id="24">
         <label>OpenSpaceToolkit/Core/Error.hpp</label>
         <link refid="_error_8hpp"/>
@@ -182,16 +192,21 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
         <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
+      </node>
+      <node id="38">
+        <label>string_view</label>
       </node>
       <node id="5">
         <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
@@ -245,12 +260,12 @@
       <node id="13">
         <label>cstddef</label>
       </node>
-      <node id="40">
+      <node id="42">
         <label>OpenSpaceToolkit/Core/Type/Real.hpp</label>
         <link refid="_real_8hpp"/>
-        <childnode refid="37" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -303,10 +318,10 @@
       <node id="35">
         <label>memory</label>
       </node>
-      <node id="38">
+      <node id="40">
         <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
         <link refid="_sign_8hpp"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
     </incdepgraph>

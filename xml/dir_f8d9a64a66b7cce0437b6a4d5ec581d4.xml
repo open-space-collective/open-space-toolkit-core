@@ -4,6 +4,7 @@
     <compoundname>include/OpenSpaceToolkit/Core/Type</compoundname>
     <innerfile refid="_byte_8hpp">Byte.hpp</innerfile>
     <innerfile refid="_byte_array_8hpp">ByteArray.hpp</innerfile>
+    <innerfile refid="_enum_helper_8hpp">EnumHelper.hpp</innerfile>
     <innerfile refid="_index_8hpp">Index.hpp</innerfile>
     <innerfile refid="_integer_8hpp">Integer.hpp</innerfile>
     <innerfile refid="_real_8hpp">Real.hpp</innerfile>

@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="399" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="399" bodyend="458"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="400" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="400" bodyend="459"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a658f7ade754eaa9ab0e310c2e62a5914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="460" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="460" bodyend="467"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="461" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="461" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a04582f99eb258ed9c53234d941586a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="469" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="469" bodyend="476"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="470" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="470" bodyend="477"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a8238aac5bd4baedb41a4fc81ce1c74a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>

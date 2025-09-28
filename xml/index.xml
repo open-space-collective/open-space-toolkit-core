@@ -483,8 +483,6 @@
     <member refid="classostk_1_1core_1_1container_1_1_object_1a7aac0eddd5ea3f7ab8bcc19cfe7a9775" kind="function"><name>Array</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1af2dc12d2f08c50abdbffce0ad71384f2" kind="function"><name>Parse</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a0682782008eca0c7bd2b2e75908af97e" kind="function"><name>Load</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a90bba1ccc341ad4089b0c99689270743" kind="function"><name>StringFromType</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a99e36f4ca465dbedff1671b1791392a4" kind="function"><name>TypeFromString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1acb7f47c046edf842c661918c8165975b" kind="function"><name>Object</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a24d589ab423ebc81fdee16033812f997" kind="function"><name>ParseJson</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ac884bb0196eb27a684f9551714462664" kind="function"><name>ParseYaml</name></member>
@@ -1068,6 +1066,10 @@
   <compound refid="_byte_8hpp" kind="file"><name>Byte.hpp</name>
   </compound>
   <compound refid="_byte_array_8hpp" kind="file"><name>ByteArray.hpp</name>
+  </compound>
+  <compound refid="_enum_helper_8hpp" kind="file"><name>EnumHelper.hpp</name>
+    <member refid="_enum_helper_8hpp_1a7ee40a373d808974ffc8363d60035bca" kind="define"><name>OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION</name></member>
+    <member refid="_enum_helper_8hpp_1a72e0abb65aaf8b5d9e61baf8bc066560" kind="define"><name>OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION</name></member>
   </compound>
   <compound refid="_index_8hpp" kind="file"><name>Index.hpp</name>
   </compound>

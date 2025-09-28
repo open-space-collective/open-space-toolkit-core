@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_enum_helper_8hpp" kind="file" language="C++">
+    <compoundname>EnumHelper.hpp</compoundname>
+    <includes local="no">string_view</includes>
+    <includes refid="_error_8hpp" local="no">OpenSpaceToolkit/Core/Error.hpp</includes>
+    <includes refid="_string_8hpp" local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_object_8hpp" local="no">include/OpenSpaceToolkit/Core/Container/Object.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="18">
+        <label>boost/stacktrace.hpp</label>
+      </node>
+      <node id="17">
+        <label>stdexcept</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
+        <link refid="_index_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>regex</label>
+      </node>
+      <node id="5">
+        <label>exception</label>
+      </node>
+      <node id="8">
+        <label>ostream</label>
+      </node>
+      <node id="14">
+        <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
+        <link refid="_size_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp</label>
+        <link refid="_enum_helper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OpenSpaceToolkit/Core/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string_view</label>
+      </node>
+      <node id="19">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</label>
+        <link refid="_undefined_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>OpenSpaceToolkit/Core/Error/RuntimeError.hpp</label>
+        <link refid="_runtime_error_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="15">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp</label>
+        <link refid="_to_be_implemented_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp</label>
+        <link refid="_wrong_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="6">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+        <link refid="_string_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>OpenSpaceToolkit/Core/Error/Exception.hpp</label>
+        <link refid="_exception_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
+        <link refid="_row_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
+        <link refid="_cell_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
+        <link refid="_row_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
+        <link refid="_table_8cpp"/>
+      </node>
+      <node id="3">
+        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
+        <link refid="_dictionary_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp</label>
+        <link refid="_enum_helper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/Core/Container/Object.hpp</label>
+        <link refid="_object_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
+        <link refid="_dictionary_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
+        <link refid="_object_8cpp"/>
+      </node>
+      <node id="8">
+        <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
+        <link refid="_table_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_enum_helper_8hpp_1a7ee40a373d808974ffc8363d60035bca" prot="public" static="no">
+        <name>OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION</name>
+        <param><defname>EnumType</defname></param>
+        <param><defname>EnumName</defname></param>
+        <param><defname>ClassName</defname></param>
+        <initializer>    static <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref> StringFrom##EnumName(EnumType enumValue);   \
+    static EnumType EnumName##FromString(const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>&amp; enumString);</initializer>
+        <briefdescription>
+<para>Declares the standard enum-to-string and string-to-enum conversion functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This macro should be used in a header file, within the namespace of the enum. It does NOT have a dependency on magic_enum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp" line="14" column="9" bodyfile="include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_enum_helper_8hpp_1a72e0abb65aaf8b5d9e61baf8bc066560" prot="public" static="no">
+        <name>OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION</name>
+        <param><defname>EnumType</defname></param>
+        <param><defname>EnumName</defname></param>
+        <param><defname>ClassName</defname></param>
+        <initializer>    <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref> ClassName::StringFrom##EnumName(EnumType enumValue)                        \
+    {                                                                                                   \
+        return <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>(magic_enum::enum_name(enumValue));                              \
+    }                                                                                                   \
+                                                                                                        \
+    EnumType ClassName::EnumName##FromString(const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>&amp; enumString)                \
+    {                                                                                                   \
+        const auto result = magic_enum::enum_cast&lt;EnumType&gt;(static_cast&lt;std::string_view&gt;(enumString)); \
+        if (!result.has_value())                                                                        \
+        {                                                                                               \
+            throw <ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_wrong" kindref="compound">ostk::core::error::runtime::Wrong</ref>(&quot;Enum&quot;, enumString);                                \
+        }                                                                                               \
+        return result.value();                                                                          \
+    }</initializer>
+        <briefdescription>
+<para>Defines the implementation for enum-to-string and string-to-enum conversion functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This macro should be used in a source file, within the namespace of the enum. The source file MUST #include &lt;magic_enum/magic_enum.hpp&gt; before using this. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp" line="21" column="9" bodyfile="include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Apache<sp/>License<sp/>2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_Core_Type_EnumHelper__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_Core_Type_EnumHelper__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_error_8hpp" kindref="compound">OpenSpaceToolkit/Core/Error.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_string_8hpp" kindref="compound">OpenSpaceToolkit/Core/Type/String.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_enum_helper_8hpp_1a7ee40a373d808974ffc8363d60035bca" refkind="member"><highlight class="preprocessor">#define<sp/>OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION(EnumType,<sp/>EnumName,<sp/>ClassName)<sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>ostk::core::type::String<sp/>StringFrom##EnumName(EnumType<sp/>enumValue);<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>EnumType<sp/>EnumName##FromString(const<sp/>ostk::core::type::String&amp;<sp/>enumString);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_enum_helper_8hpp_1a72e0abb65aaf8b5d9e61baf8bc066560" refkind="member"><highlight class="preprocessor">#define<sp/>OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION(EnumType,<sp/>EnumName,<sp/>ClassName)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>ostk::core::type::String<sp/>ClassName::StringFrom##EnumName(EnumType<sp/>enumValue)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>ostk::core::type::String(magic_enum::enum_name(enumValue));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>EnumType<sp/>ClassName::EnumName##FromString(const<sp/>ostk::core::type::String&amp;<sp/>enumString)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>result<sp/>=<sp/>magic_enum::enum_cast&lt;EnumType&gt;(static_cast&lt;std::string_view&gt;(enumString));<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!result.has_value())<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throw<sp/>ostk::core::error::runtime::Wrong(&quot;Enum&quot;,<sp/>enumString);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>result.value();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp"/>
+  </compounddef>
+</doxygen>

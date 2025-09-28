@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['halfpi_161',['HalfPi',['../classostk_1_1core_1_1type_1_1_real.html#acc440cc20d66905e8e0d1136a6db4a6a',1,'ostk::core::type::Real']]],
-  ['hascolumnwithname_162',['hasColumnWithName',['../classostk_1_1core_1_1container_1_1_table.html#a8440df1ba39186a9e9987fd90ad2f38b',1,'ostk::core::container::Table']]],
-  ['hastostring_163',['HasToString',['../classostk_1_1core_1_1type_1_1_has_to_string.html',1,'ostk::core::type']]],
-  ['hasvalueforkey_164',['hasValueForKey',['../classostk_1_1core_1_1container_1_1_dictionary.html#a0e8b5745244e2f09f25b6a64cccca8d7',1,'ostk::core::container::Dictionary']]],
-  ['header_165',['Header',['../classostk_1_1core_1_1utils_1_1_print.html#a31241a78c064230fdf2f0089e642e20e',1,'ostk::core::utils::Print']]]
+  ['halfpi_162',['HalfPi',['../classostk_1_1core_1_1type_1_1_real.html#acc440cc20d66905e8e0d1136a6db4a6a',1,'ostk::core::type::Real']]],
+  ['hascolumnwithname_163',['hasColumnWithName',['../classostk_1_1core_1_1container_1_1_table.html#a8440df1ba39186a9e9987fd90ad2f38b',1,'ostk::core::container::Table']]],
+  ['hastostring_164',['HasToString',['../classostk_1_1core_1_1type_1_1_has_to_string.html',1,'ostk::core::type']]],
+  ['hasvalueforkey_165',['hasValueForKey',['../classostk_1_1core_1_1container_1_1_dictionary.html#a0e8b5745244e2f09f25b6a64cccca8d7',1,'ostk::core::container::Dictionary']]],
+  ['header_166',['Header',['../classostk_1_1core_1_1utils_1_1_print.html#a31241a78c064230fdf2f0089e642e20e',1,'ostk::core::utils::Print']]]
 ];

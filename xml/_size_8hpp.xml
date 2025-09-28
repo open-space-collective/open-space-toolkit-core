@@ -33,7 +33,7 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="53">
         <label>src/OpenSpaceToolkit/Core/Utility/Print.cpp</label>
         <link refid="_print_8cpp"/>
       </node>
@@ -65,7 +65,7 @@
         <label>include/OpenSpaceToolkit/Core/Container/Triple.hpp</label>
         <link refid="_triple_8hpp"/>
       </node>
-      <node id="45">
+      <node id="46">
         <label>src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp</label>
         <link refid="_runtime_error_8cpp"/>
       </node>
@@ -85,15 +85,15 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="50">
         <label>include/OpenSpaceToolkit/Core/System/User.hpp</label>
         <link refid="_user_8hpp"/>
       </node>
-      <node id="46">
+      <node id="47">
         <label>src/OpenSpaceToolkit/Core/Error/Exception.cpp</label>
         <link refid="_exception_8cpp"/>
       </node>
-      <node id="39">
+      <node id="40">
         <label>src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp</label>
         <link refid="_permission_set_8cpp"/>
       </node>
@@ -123,12 +123,12 @@
         <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
         <link refid="_table_8cpp"/>
       </node>
-      <node id="50">
+      <node id="51">
         <label>include/OpenSpaceToolkit/Core/Utility/Print.hpp</label>
         <link refid="_print_8hpp"/>
-        <childnode refid="51" relation="include">
-        </childnode>
         <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
         </childnode>
       </node>
       <node id="18">
@@ -145,7 +145,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="44">
+      <node id="45">
         <label>src/OpenSpaceToolkit/Core/Error/Runtime/Wrong.cpp</label>
         <link refid="_wrong_8cpp"/>
       </node>
@@ -193,7 +193,7 @@
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="47">
+      <node id="48">
         <label>include/OpenSpaceToolkit/Core/FileSystem/Path.hpp</label>
         <link refid="_path_8hpp"/>
         <childnode refid="12" relation="include">
@@ -202,13 +202,21 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp</label>
+        <link refid="_enum_helper_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="36">
         <label>include/OpenSpaceToolkit/Core/Error.hpp</label>
         <link refid="_error_8hpp"/>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -218,9 +226,9 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
         <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
@@ -269,7 +277,7 @@
         <label>include/OpenSpaceToolkit/Core/Type.hpp</label>
         <link refid="_type_8hpp"/>
       </node>
-      <node id="48">
+      <node id="49">
         <label>include/OpenSpaceToolkit/Core/System/Group.hpp</label>
         <link refid="_group_8hpp"/>
       </node>
@@ -279,15 +287,15 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="42">
         <label>include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</label>
         <link refid="_undefined_8hpp"/>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="43">
         <label>src/OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp</label>
         <link refid="_undefined_8cpp"/>
       </node>
@@ -299,7 +307,7 @@
         <label>src/OpenSpaceToolkit/Core/Type/Real.cpp</label>
         <link refid="_real_8cpp"/>
       </node>
-      <node id="38">
+      <node id="39">
         <label>src/OpenSpaceToolkit/Core/FileSystem/Path.cpp</label>
         <link refid="_path_8cpp"/>
       </node>
@@ -312,16 +320,16 @@
         <link refid="_runtime_error_8hpp"/>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="43" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="52">
         <label>include/OpenSpaceToolkit/Core/Utility.hpp</label>
         <link refid="_utility_8hpp"/>
         <childnode refid="5" relation="include">
@@ -336,9 +344,9 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
         <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -349,7 +357,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="41">
         <label>src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp</label>
         <link refid="_to_be_implemented_8cpp"/>
       </node>
@@ -378,15 +386,15 @@
         <link refid="_to_be_implemented_8hpp"/>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="44">
         <label>include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp</label>
         <link refid="_wrong_8hpp"/>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
       <node id="32">
@@ -410,9 +418,9 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="43" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
@@ -420,7 +428,7 @@
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
@@ -434,9 +442,11 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
@@ -444,7 +454,7 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
@@ -456,7 +466,7 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="13">

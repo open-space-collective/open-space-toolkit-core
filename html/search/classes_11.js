@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrong_506',['Wrong',['../classostk_1_1core_1_1error_1_1runtime_1_1_wrong.html',1,'ostk::core::error::runtime']]]
+  ['wrong_507',['Wrong',['../classostk_1_1core_1_1error_1_1runtime_1_1_wrong.html',1,'ostk::core::error::runtime']]]
 ];

@@ -1,0 +1,65 @@
+\hypertarget{_enum_helper_8hpp}{}\doxysection{include/\+Open\+Space\+Toolkit/\+Core/\+Type/\+Enum\+Helper.hpp File Reference}
+\label{_enum_helper_8hpp}\index{include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp@{include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp}}
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$Open\+Space\+Toolkit/\+Core/\+Error.\+hpp$>$}\newline
+{\ttfamily \#include $<$Open\+Space\+Toolkit/\+Core/\+Type/\+String.\+hpp$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_enum_helper_8hpp_a7ee40a373d808974ffc8363d60035bca}{O\+S\+T\+K\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}(Enum\+Type,  Enum\+Name,  Class\+Name)
+\begin{DoxyCompactList}\small\item\em Declares the standard enum-\/to-\/string and string-\/to-\/enum conversion functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_enum_helper_8hpp_a72e0abb65aaf8b5d9e61baf8bc066560}{O\+S\+T\+K\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+E\+N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}(Enum\+Type,  Enum\+Name,  Class\+Name)
+\begin{DoxyCompactList}\small\item\em Defines the implementation for enum-\/to-\/string and string-\/to-\/enum conversion functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_enum_helper_8hpp_a7ee40a373d808974ffc8363d60035bca}\label{_enum_helper_8hpp_a7ee40a373d808974ffc8363d60035bca}} 
+\index{EnumHelper.hpp@{EnumHelper.hpp}!OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION@{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION}}
+\index{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION@{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION}!EnumHelper.hpp@{EnumHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION}{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION}}
+{\footnotesize\ttfamily \#define O\+S\+T\+K\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON(\begin{DoxyParamCaption}\item[{}]{Enum\+Type,  }\item[{}]{Enum\+Name,  }\item[{}]{Class\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{static} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{ostk::core::type::String}} StringFrom\#\#EnumName(EnumType enumValue);   \(\backslash\)}
+\DoxyCodeLine{    static EnumType EnumName\#\#FromString(\textcolor{keyword}{const} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{ostk::core::type::String}}\& enumString);}
+
+\end{DoxyCode}
+
+
+Declares the standard enum-\/to-\/string and string-\/to-\/enum conversion functions. 
+
+\begin{DoxyNote}{Note}
+This macro should be used in a header file, within the namespace of the enum. It does N\+OT have a dependency on magic\+\_\+enum. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_enum_helper_8hpp_a72e0abb65aaf8b5d9e61baf8bc066560}\label{_enum_helper_8hpp_a72e0abb65aaf8b5d9e61baf8bc066560}} 
+\index{EnumHelper.hpp@{EnumHelper.hpp}!OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION@{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION}}
+\index{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION@{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION}!EnumHelper.hpp@{EnumHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION}{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION}}
+{\footnotesize\ttfamily \#define O\+S\+T\+K\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+E\+N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON(\begin{DoxyParamCaption}\item[{}]{Enum\+Type,  }\item[{}]{Enum\+Name,  }\item[{}]{Class\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{ostk::core::type::String}} ClassName::StringFrom\#\#EnumName(EnumType enumValue)                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                                   \(\backslash\)}
+\DoxyCodeLine{        return \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{ostk::core::type::String}}(magic\_enum::enum\_name(enumValue));                              \(\backslash\)}
+\DoxyCodeLine{    \}                                                                                                   \(\backslash\)}
+\DoxyCodeLine{                                                                                                        \(\backslash\)}
+\DoxyCodeLine{    EnumType ClassName::EnumName\#\#FromString(\textcolor{keyword}{const} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{ostk::core::type::String}}\& enumString)                \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                                   \(\backslash\)}
+\DoxyCodeLine{        const \textcolor{keyword}{auto} result = magic\_enum::enum\_cast<EnumType>(\textcolor{keyword}{static\_cast<}std::string\_view\textcolor{keyword}{>}(enumString)); \(\backslash\)}
+\DoxyCodeLine{        if (!result.has\_value())                                                                        \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                               \(\backslash\)}
+\DoxyCodeLine{            throw \mbox{\hyperlink{classostk_1_1core_1_1error_1_1runtime_1_1_wrong}{ostk::core::error::runtime::Wrong}}(\textcolor{stringliteral}{"Enum"}, enumString);                                \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                               \(\backslash\)}
+\DoxyCodeLine{        return result.value();                                                                          \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Defines the implementation for enum-\/to-\/string and string-\/to-\/enum conversion functions. 
+
+\begin{DoxyNote}{Note}
+This macro should be used in a source file, within the namespace of the enum. The source file M\+U\+ST \#include $<$magic\+\_\+enum/magic\+\_\+enum.\+hpp$>$ before using this. 
+\end{DoxyNote}
