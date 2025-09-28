@@ -73,9 +73,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     >>> from ostk.core.filesystem import Path
                     >>> file = File.path(Path.parse("/path/to/document.pdf"))
                     >>> file.get_name()  # "document.pdf"
-                    >>> file.get_name(False)  # "document"
+                    >>> file.get_name(with_extension=False)  # "document"
             )doc",
-            arg("withExtension") = true
+            arg("with_extension") = true
         )
         .def(
             "get_extension",
