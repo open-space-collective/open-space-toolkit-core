@@ -84,11 +84,11 @@ TEST(OpenSpaceToolkit_Core_Type_String, Match)
     using ostk::core::type::String;
 
     {
-        EXPECT_TRUE(String("abc").match(std::regex("^[a-z]{3}$")));
+        EXPECT_TRUE(String("abc").match(boost::regex("^[a-z]{3}$")));
     }
 
     {
-        EXPECT_FALSE(String("abc").match(std::regex("^[a-z]{4}$")));
+        EXPECT_FALSE(String("abc").match(boost::regex("^[a-z]{4}$")));
     }
 }
 

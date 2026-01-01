@@ -14,7 +14,7 @@
 #include <fmt/format.h>
 #endif
 #include <ostream>
-#include <regex>
+#include <boost/regex.hpp>
 #include <string>
 #include <type_traits>
 
@@ -67,13 +67,13 @@ class String : public std::string
     /// @brief              Returns whether the string matches a regular expression
     ///
     /// @code
-    ///                     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
+    ///                     String("abc").match(boost::regex("^[a-z]{3}$")) ; // True
     /// @endcode
     ///
     /// @param              [in] aRegularExpression A regular expression
     /// @return             True if matches regular expression
 
-    bool match(const std::regex& aRegularExpression) const;
+    bool match(const boost::regex& aRegularExpression) const;
 
     Size getLength() const;
 

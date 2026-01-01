@@ -59,9 +59,9 @@ bool String::isLowercase() const
                                );
 }
 
-bool String::match(const std::regex& aRegularExpression) const
+bool String::match(const boost::regex& aRegularExpression) const
 {
-    return std::regex_match((*this), aRegularExpression);
+    return boost::regex_match((*this), aRegularExpression);
 }
 
 Size String::getLength() const
