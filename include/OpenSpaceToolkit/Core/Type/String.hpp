@@ -14,9 +14,10 @@
 #include <fmt/format.h>
 #endif
 #include <ostream>
-#include <boost/regex.hpp>
 #include <string>
 #include <type_traits>
+
+#include <boost/regex.hpp>
 
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
