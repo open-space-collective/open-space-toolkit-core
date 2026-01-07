@@ -1,5 +1,9 @@
 /// Apache License 2.0
 
+#include <regex>
+
+#include <boost/regex.hpp>
+
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
@@ -127,9 +131,12 @@ inline void OpenSpaceToolkitCorePy_Type_String(pybind11::class_<String>& stringC
         )
         .def(
             "match",
-            &String::match,
+            +[](const String& aString, const std::string& aPattern) -> bool
+            {
+                return aString.match(boost::regex(aPattern));
+            },
             R"doc(
-                Check if the String matches a regular expression pattern.
+                Check if the String matches a regular expression pattern using boost::regex.
 
                 Args:
                     pattern (str): The regular expression pattern to match against.
@@ -138,12 +145,11 @@ inline void OpenSpaceToolkitCorePy_Type_String(pybind11::class_<String>& stringC
                     bool: True if the String matches the pattern, False otherwise.
 
                 Example:
-                    >>> String("hello123").match(r"[a-z]+\d+")  # True
-                    >>> String("HELLO").match(r"[a-z]+")  # False
+                    >>> String("hello123").match(r"^[a-z]+\d+$")  # True
+                    >>> String("HELLO").match(r"^[a-z]+$")  # False
             )doc",
             arg("pattern")
         )
-
         .def(
             "get_length",
             &String::getLength,
