@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <regex>
+
 #include <boost/algorithm/string.hpp>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
@@ -57,6 +59,11 @@ bool String::isLowercase() const
                                        return ::isupper(ch);
                                    }
                                );
+}
+
+bool String::match(const std::regex& aRegularExpression) const
+{
+    return std::regex_match((*this), aRegularExpression);
 }
 
 bool String::match(const boost::regex& aRegularExpression) const
