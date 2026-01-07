@@ -75,14 +75,21 @@ def test_string_is_lowercase():
     assert c.is_lowercase() is True
 
 
-# def test_string_match ():
+def test_string_match():
+    a = String("Hello World")
+    b = String("abc123")
 
-#     a = String('Hello World')
+    # Full string match patterns (regex_match matches entire string)
+    assert a.match(r"^Hello World$") is True
+    assert a.match(r"^Hello.*$") is True
+    assert a.match(r".*World$") is True
+    assert a.match(r".*d$") is True
+    assert a.match(r"^World$") is False  # Does not match full string
+    assert a.match(r"Word") is False
 
-#     assert a.match(r'World') is True
-#     assert a.match(r'Word') is False
-#     assert a.match(r'.*d') is True
-#     assert a.match(r'+.d') is True
+    # Pattern matching
+    assert b.match(r"^[a-z]+\d+$") is True
+    assert b.match(r"^[A-Z]+\d+$") is False
 
 
 def test_string_getters():

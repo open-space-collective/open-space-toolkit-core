@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <regex>
+
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
@@ -83,12 +85,22 @@ TEST(OpenSpaceToolkit_Core_Type_String, Match)
 {
     using ostk::core::type::String;
 
+    // Test with std::regex
     {
         EXPECT_TRUE(String("abc").match(std::regex("^[a-z]{3}$")));
     }
 
     {
         EXPECT_FALSE(String("abc").match(std::regex("^[a-z]{4}$")));
+    }
+
+    // Test with boost::regex
+    {
+        EXPECT_TRUE(String("abc").match(boost::regex("^[a-z]{3}$")));
+    }
+
+    {
+        EXPECT_FALSE(String("abc").match(boost::regex("^[a-z]{4}$")));
     }
 }
 

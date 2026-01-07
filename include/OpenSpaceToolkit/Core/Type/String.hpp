@@ -18,6 +18,8 @@
 #include <string>
 #include <type_traits>
 
+#include <boost/regex.hpp>
+
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 
@@ -74,6 +76,17 @@ class String : public std::string
     /// @return             True if matches regular expression
 
     bool match(const std::regex& aRegularExpression) const;
+
+    /// @brief              Returns whether the string matches a regular expression (boost::regex overload)
+    ///
+    /// @code
+    ///                     String("abc").match(boost::regex("^[a-z]{3}$")) ; // True
+    /// @endcode
+    ///
+    /// @param              [in] aRegularExpression A boost regular expression
+    /// @return             True if matches regular expression
+
+    bool match(const boost::regex& aRegularExpression) const;
 
     Size getLength() const;
 
