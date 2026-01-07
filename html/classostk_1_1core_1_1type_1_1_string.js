@@ -12,6 +12,7 @@ var classostk_1_1core_1_1type_1_1_string =
     [ "isEmpty", "classostk_1_1core_1_1type_1_1_string.html#a7c29ece5a4c0db35b4c30d61788fe729", null ],
     [ "isLowercase", "classostk_1_1core_1_1type_1_1_string.html#a197b0c1b6825a60cf375f49cafd6d550", null ],
     [ "isUppercase", "classostk_1_1core_1_1type_1_1_string.html#aabf70678b4fb31beae28af913ffee684", null ],
+    [ "match", "classostk_1_1core_1_1type_1_1_string.html#a0a401dde78ac05caacde7869fe0e06b2", null ],
     [ "match", "classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38", null ],
     [ "replace", "classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed", null ],
     [ "replace", "classostk_1_1core_1_1type_1_1_string.html#a368cc0fbfe2f92586a2eeb3616b47da7", null ],

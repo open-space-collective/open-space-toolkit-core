@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="192" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="192" bodyend="195"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="205" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="205" bodyend="208"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>

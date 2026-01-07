@@ -17,15 +17,15 @@
       <node id="8">
         <label>iterator</label>
       </node>
-      <node id="21">
+      <node id="22">
         <label>OpenSpaceToolkit/Core/Type/Unique.hpp</label>
         <link refid="_unique_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>OpenSpaceToolkit/Core/Container/Array.tpp</label>
         <link refid="_array_8tpp"/>
       </node>
@@ -37,11 +37,11 @@
         <link refid="_source_2_source_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="11">
@@ -72,7 +72,7 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>OpenSpaceToolkit/Core/Logger/Severity.hpp</label>
         <link refid="_severity_8hpp"/>
       </node>
@@ -93,7 +93,7 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -107,6 +107,9 @@
       </node>
       <node id="12">
         <label>cstddef</label>
+      </node>
+      <node id="19">
+        <label>boost/regex.hpp</label>
       </node>
       <node id="18">
         <label>type_traits</label>
@@ -124,6 +127,8 @@
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
@@ -136,10 +141,10 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>memory</label>
       </node>
     </incdepgraph>

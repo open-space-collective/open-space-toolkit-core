@@ -760,6 +760,7 @@
     <member refid="classostk_1_1core_1_1type_1_1_string_1aabf70678b4fb31beae28af913ffee684" kind="function"><name>isUppercase</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1a197b0c1b6825a60cf375f49cafd6d550" kind="function"><name>isLowercase</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1ac78674da13d8b5a3a35a6787cb515a38" kind="function"><name>match</name></member>
+    <member refid="classostk_1_1core_1_1type_1_1_string_1a0a401dde78ac05caacde7869fe0e06b2" kind="function"><name>match</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1ac08a31fa6b0582d4a9b223a3927d354b" kind="function"><name>getLength</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" kind="function"><name>getFirst</name></member>
     <member refid="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" kind="function"><name>getLast</name></member>

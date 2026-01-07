@@ -117,6 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac78674da13d8b5a3a35a6787cb515a38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">match</a> (const std::regex &amp;aRegularExpression) const</td></tr>
 <tr class="memdesc:ac78674da13d8b5a3a35a6787cb515a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the string matches a regular expression.  <a href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">More...</a><br /></td></tr>
 <tr class="separator:ac78674da13d8b5a3a35a6787cb515a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a401dde78ac05caacde7869fe0e06b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#a0a401dde78ac05caacde7869fe0e06b2">match</a> (const boost::regex &amp;aRegularExpression) const</td></tr>
+<tr class="memdesc:a0a401dde78ac05caacde7869fe0e06b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the string matches a regular expression (boost::regex overload)  <a href="classostk_1_1core_1_1type_1_1_string.html#a0a401dde78ac05caacde7869fe0e06b2">More...</a><br /></td></tr>
+<tr class="separator:a0a401dde78ac05caacde7869fe0e06b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08a31fa6b0582d4a9b223a3927d354b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#ac08a31fa6b0582d4a9b223a3927d354b">getLength</a> () const</td></tr>
 <tr class="separator:ac08a31fa6b0582d4a9b223a3927d354b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef9410f9ffe233c83cb88b0ce3c1441"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html#a5ef9410f9ffe233c83cb88b0ce3c1441">getFirst</a> () const</td></tr>
@@ -551,8 +554,36 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="a0a401dde78ac05caacde7869fe0e06b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a401dde78ac05caacde7869fe0e06b2">&#9670;&nbsp;</a></span>match() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ostk::core::type::String::match </td>
+          <td>(</td>
+          <td class="paramtype">const boost::regex &amp;&#160;</td>
+          <td class="paramname"><em>aRegularExpression</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether the string matches a regular expression (boost::regex overload) </p>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">String</a>(<span class="stringliteral">&quot;abc&quot;</span>).match(boost::regex(<span class="stringliteral">&quot;^[a-z]{3}$&quot;</span>)) ; <span class="comment">// True</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aRegularExpression</td><td>A boost regular expression </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if matches regular expression </dd></dl>
+
+</div>
+</div>
 <a id="ac78674da13d8b5a3a35a6787cb515a38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac78674da13d8b5a3a35a6787cb515a38">&#9670;&nbsp;</a></span>match()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac78674da13d8b5a3a35a6787cb515a38">&#9670;&nbsp;</a></span>match() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,8 +840,8 @@ template&lt;typename... Args&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd48b5675fa8109c0aaf8e339f00675"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:163</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a207952f09a96c355722a56cde16fed1f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">ostk::core::type::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:19</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd48b5675fa8109c0aaf8e339f00675"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:176</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a207952f09a96c355722a56cde16fed1f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">ostk::core::type::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:21</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

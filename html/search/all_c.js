@@ -6,7 +6,7 @@ var searchData=
   ['map_2ehpp_252',['Map.hpp',['../_map_8hpp.html',1,'']]],
   ['mapconstiterator_253',['MapConstIterator',['../classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator.html#adbfe1d9465b661e0328356b480eebc5d',1,'ostk::core::container::Dictionary::ConstIterator']]],
   ['mapiterator_254',['MapIterator',['../classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator.html#a4c9b68858cbec66ca004c77ba8c9a172',1,'ostk::core::container::Dictionary::Iterator']]],
-  ['match_255',['match',['../classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38',1,'ostk::core::type::String']]],
+  ['match_255',['match',['../classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38',1,'ostk::core::type::String::match(const std::regex &amp;aRegularExpression) const'],['../classostk_1_1core_1_1type_1_1_string.html#a0a401dde78ac05caacde7869fe0e06b2',1,'ostk::core::type::String::match(const boost::regex &amp;aRegularExpression) const']]],
   ['memory_2ehpp_256',['Memory.hpp',['../_memory_8hpp.html',1,'']]],
   ['mergewith_257',['mergeWith',['../classostk_1_1core_1_1container_1_1_array.html#a09ace899b075e2c71989015d89547712',1,'ostk::core::container::Array']]],
   ['movetodirectory_258',['moveToDirectory',['../classostk_1_1core_1_1filesystem_1_1_directory.html#a60a53b7d1fb751e8cf98dc61a6e2815f',1,'ostk::core::filesystem::Directory::moveToDirectory()'],['../classostk_1_1core_1_1filesystem_1_1_file.html#a773b37bb669c077accf2ec6be2e7460b',1,'ostk::core::filesystem::File::moveToDirectory()']]]

@@ -32,6 +32,8 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a197b0c1b6825a60cf375
 \item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}{match}} (const std\+::regex \&a\+Regular\+Expression) const
 \begin{DoxyCompactList}\small\item\em Returns whether the string matches a regular expression. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a0a401dde78ac05caacde7869fe0e06b2}{match}} (const boost\+::regex \&a\+Regular\+Expression) const
+\begin{DoxyCompactList}\small\item\em Returns whether the string matches a regular expression (boost\+::regex overload) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_ac08a31fa6b0582d4a9b223a3927d354b}{get\+Length}} () const
 \item 
 char \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a5ef9410f9ffe233c83cb88b0ce3c1441}{get\+First}} () const
@@ -222,10 +224,34 @@ Checks if the string contains any invalid U\+T\+F-\/8 characters.
 \begin{DoxyReturn}{Returns}
 True if valid U\+T\+F-\/8 string 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_a0a401dde78ac05caacde7869fe0e06b2}\label{classostk_1_1core_1_1type_1_1_string_a0a401dde78ac05caacde7869fe0e06b2}} 
+\index{ostk::core::type::String@{ostk::core::type::String}!match@{match}}
+\index{match@{match}!ostk::core::type::String@{ostk::core::type::String}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::match (\begin{DoxyParamCaption}\item[{const boost\+::regex \&}]{a\+Regular\+Expression }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the string matches a regular expression (boost\+::regex overload) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string_a207952f09a96c355722a56cde16fed1f}{String}}(\textcolor{stringliteral}{"abc"}).match(boost::regex(\textcolor{stringliteral}{"\string^[a-\/z]\{3\}\$"})) ; \textcolor{comment}{// True}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Regular\+Expression} & A boost regular expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if matches regular expression 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}\label{classostk_1_1core_1_1type_1_1_string_ac78674da13d8b5a3a35a6787cb515a38}} 
 \index{ostk::core::type::String@{ostk::core::type::String}!match@{match}}
 \index{match@{match}!ostk::core::type::String@{ostk::core::type::String}}
-\doxysubsubsection{\texorpdfstring{match()}{match()}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool ostk\+::core\+::type\+::\+String\+::match (\begin{DoxyParamCaption}\item[{const std\+::regex \&}]{a\+Regular\+Expression }\end{DoxyParamCaption}) const}
 
 

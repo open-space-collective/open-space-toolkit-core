@@ -10,10 +10,10 @@
       <node id="6">
         <label>string</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
         <link refid="_index_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -22,10 +22,10 @@
       <node id="4">
         <label>ostream</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
         <link refid="_size_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -34,8 +34,11 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>cstddef</label>
+      </node>
+      <node id="8">
+        <label>boost/regex.hpp</label>
       </node>
       <node id="7">
         <label>type_traits</label>
@@ -55,7 +58,9 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
     </incdepgraph>

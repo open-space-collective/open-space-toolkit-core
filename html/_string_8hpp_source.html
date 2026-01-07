@@ -103,239 +103,244 @@ $(document).ready(function(){initNavTree('_string_8hpp_source.html',''); initRes
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_index_8hpp.html">OpenSpaceToolkit/Core/Type/Index.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_size_8hpp.html">OpenSpaceToolkit/Core/Type/Size.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk.html">ostk</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;boost/regex.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_index_8hpp.html">OpenSpaceToolkit/Core/Type/Index.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_size_8hpp.html">OpenSpaceToolkit/Core/Type/Size.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk.html">ostk</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Forward declare Array to avoid circular dependency</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1container.html">container</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span>Array;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>type</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> <a class="code" href="classostk_1_1core_1_1container_1_1_array.html">ostk::core::container::Array</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">ostk::core::type::Index</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">ostk::core::type::Size</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>Real;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span>Integer;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_string.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> : <span class="keyword">public</span> std::string</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">using</span> std::string::string;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">String</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Forward declare Array to avoid circular dependency</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceostk_1_1core_1_1container.html">container</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>Array;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>type</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">using</span> <a class="code" href="classostk_1_1core_1_1container_1_1_array.html">ostk::core::container::Array</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">ostk::core::type::Index</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">ostk::core::type::Size</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">class </span>Real;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">class </span>Integer;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_string.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> : <span class="keyword">public</span> std::string</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">using</span> std::string::string;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">String</a>(<span class="keyword">const</span> std::string&amp; aString);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">String</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a6eaf1894a8ee8d15ed3d06d73abe0119">~String</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">String</a>(<span class="keyword">const</span> std::string&amp; aString);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a7c29ece5a4c0db35b4c30d61788fe729">isEmpty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a6eaf1894a8ee8d15ed3d06d73abe0119">~String</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#aabf70678b4fb31beae28af913ffee684">isUppercase</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a7c29ece5a4c0db35b4c30d61788fe729">isEmpty</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a197b0c1b6825a60cf375f49cafd6d550">isLowercase</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#aabf70678b4fb31beae28af913ffee684">isUppercase</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">match</a>(<span class="keyword">const</span> std::regex&amp; aRegularExpression) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a197b0c1b6825a60cf375f49cafd6d550">isLowercase</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac08a31fa6b0582d4a9b223a3927d354b">getLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">match</a>(<span class="keyword">const</span> std::regex&amp; aRegularExpression) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a5ef9410f9ffe233c83cb88b0ce3c1441">getFirst</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a1d611ad2b7ab90bf971eba5e805bdd0c">getLast</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#aceab98c3ab4a61de80b05da7152975a6">getHead</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a4b5ceca3c74ddf5075f35709e77e6c00">getTail</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae90137d2ec2634da5fbe0c32e66a3672">getSubstring</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">Index</a>&amp; aStartPosition, <span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">match</a>(<span class="keyword">const</span> boost::regex&amp; aRegularExpression) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac08a31fa6b0582d4a9b223a3927d354b">getLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a5ef9410f9ffe233c83cb88b0ce3c1441">getFirst</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classostk_1_1core_1_1container_1_1_array.html">Array&lt;String&gt;</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae6af9be350ec2401f961a6b042f84c8a">split</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aDelimiter) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a1d611ad2b7ab90bf971eba5e805bdd0c">getLast</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#aceab98c3ab4a61de80b05da7152975a6">getHead</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a4b5ceca3c74ddf5075f35709e77e6c00">getTail</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a44cc2827faafa67f59e3168f8dcbbbfb">trim</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae90137d2ec2634da5fbe0c32e66a3672">getSubstring</a>(<span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">Index</a>&amp; aStartPosition, <span class="keyword">const</span> <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a>&amp; aLength) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">replace</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> aCharacter, <span class="keyword">const</span> <span class="keywordtype">char</span> aNewCharacter);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">replace</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString, <span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aNewString);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd999bef0746e38e05bb6432fd51dbb">Empty</a>();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abb50863baac9f80e727e4533ffba92e4">Boolean</a>(<span class="keywordtype">bool</span> aBoolean);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae8c906ec919f36655e3c4f54786adb95">Char</a>(<span class="keywordtype">char</span> aCharacter);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">Replicate</a>(<span class="keywordtype">char</span> aCharacter, <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> aCount);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">Replicate</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString, <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> aCount);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classostk_1_1core_1_1container_1_1_array.html">Array&lt;String&gt;</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae6af9be350ec2401f961a6b042f84c8a">split</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aDelimiter) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a44cc2827faafa67f59e3168f8dcbbbfb">trim</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">replace</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> aCharacter, <span class="keyword">const</span> <span class="keywordtype">char</span> aNewCharacter);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">replace</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString, <span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aNewString);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd999bef0746e38e05bb6432fd51dbb">Empty</a>();</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a073128d2588b7f95bbba37c84b6f700f">IsValidUTF8</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abb50863baac9f80e727e4533ffba92e4">Boolean</a>(<span class="keywordtype">bool</span> aBoolean);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">SanitizeUTF8</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">Format</a>(<span class="keyword">const</span> std::string_view aFormat, Args&amp;&amp;... anArgumentList)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> std::vformat(aFormat, std::make_format_args(std::forward&lt;Args&gt;(anArgumentList)...));</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">  163</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">Format</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* aFormat, Args... anArgumentList)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">return</span> fmt::format(aFormat, anArgumentList...);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_has_to_string.html">  173</a></span>&#160;<span class="keyword">class </span><a class="code" href="classostk_1_1core_1_1type_1_1_has_to_string.html">HasToString</a></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;   <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">char</span> YesType[1];</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">char</span> NoType[2];</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">static</span> YesType&amp; test(decltype(&amp;C::toString));</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">static</span> NoType&amp; test(...);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">enum</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">  187</a></span>&#160;        <a class="code" href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">value</a> = <span class="keyword">sizeof</span>(test&lt;T&gt;(0)) == <span class="keyword">sizeof</span>(YesType)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    };</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;};</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">  192</a></span>&#160;<span class="keyword">typename</span> std::enable_if&lt;HasToString&lt;T&gt;::value, std::string&gt;::type <a class="code" href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">CallToString</a>(T* t)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> t-&gt;toString();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#ae8c906ec919f36655e3c4f54786adb95">Char</a>(<span class="keywordtype">char</span> aCharacter);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">Replicate</a>(<span class="keywordtype">char</span> aCharacter, <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> aCount);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">Replicate</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString, <a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> aCount);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a073128d2588b7f95bbba37c84b6f700f">IsValidUTF8</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">SanitizeUTF8</a>(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&amp; aString);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">Format</a>(<span class="keyword">const</span> std::string_view aFormat, Args&amp;&amp;... anArgumentList)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> std::vformat(aFormat, std::make_format_args(std::forward&lt;Args&gt;(anArgumentList)...));</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">  176</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">String</a> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">Format</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* aFormat, Args... anArgumentList)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> fmt::format(aFormat, anArgumentList...);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_has_to_string.html">  186</a></span>&#160;<span class="keyword">class </span><a class="code" href="classostk_1_1core_1_1type_1_1_has_to_string.html">HasToString</a></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;   <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">char</span> YesType[1];</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">char</span> NoType[2];</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">static</span> YesType&amp; test(decltype(&amp;C::toString));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> C&gt;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">static</span> NoType&amp; test(...);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">// Concept to check if a type is convertible to std::string</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;concept StringConvertible = requires(T t) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    { std::string(t) } -&gt; std::convertible_to&lt;std::string&gt;;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;} &amp;&amp; !std::is_array_v&lt;T&gt;;  <span class="comment">// Exclude array types to avoid ambiguity with const char*</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}  <span class="comment">// namespace type</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}  <span class="comment">// namespace ostk</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">namespace </span>std</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">struct </span>hash&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::String&gt;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a> argument_type;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">typedef</span> std::size_t result_type;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">enum</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">  200</a></span>&#160;        <a class="code" href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">value</a> = <span class="keyword">sizeof</span>(test&lt;T&gt;(0)) == <span class="keyword">sizeof</span>(YesType)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    };</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;};</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">  205</a></span>&#160;<span class="keyword">typename</span> std::enable_if&lt;HasToString&lt;T&gt;::value, std::string&gt;::type <a class="code" href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">CallToString</a>(T* t)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span> t-&gt;toString();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">// Concept to check if a type is convertible to std::string</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;concept StringConvertible = requires(T t) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    { std::string(t) } -&gt; std::convertible_to&lt;std::string&gt;;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;} &amp;&amp; !std::is_array_v&lt;T&gt;;  <span class="comment">// Exclude array types to avoid ambiguity with const char*</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    result_type operator()(<span class="keyword">const</span> argument_type&amp; aString)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> std::hash&lt;std::string&gt; {}(aString);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;};</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}  <span class="comment">// namespace type</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}  <span class="comment">// namespace ostk</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">namespace </span>std</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">struct </span>formatter&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::String&gt; : formatter&lt;string&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">struct </span>hash&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::String&gt;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a>&amp; str, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> formatter&lt;string&gt;::format(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">string</span>&amp;<span class="keyword">&gt;</span>(str), ctx);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">// Generic formatter for StringConvertible types</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    requires ostk::core::type::StringConvertible&lt;T&gt; &amp;&amp; (!std::is_same_v&lt;T, ostk::core::type::String&gt;) &amp;&amp;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;             (!std::is_same_v&lt;T, std::string&gt;) &amp;&amp; (!std::is_same_v&lt;T, const char*&gt;)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keyword">struct</span> formatter&lt;T&gt; : formatter&lt;string&gt;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a> argument_type;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">typedef</span> std::size_t result_type;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    result_type operator()(<span class="keyword">const</span> argument_type&amp; aString)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> std::hash&lt;std::string&gt; {}(aString);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;};</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#ifdef CPP20</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keyword">struct </span>formatter&lt;<a class="code" href="namespaceostk.html">ostk</a>::core::type::String&gt; : formatter&lt;string&gt;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> T&amp; value, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a>&amp; str, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> formatter&lt;string&gt;::format(<span class="keywordtype">string</span>(value), ctx);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> formatter&lt;string&gt;::format(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">string</span>&amp;<span class="keyword">&gt;</span>(str), ctx);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;};</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">// Concept to check if a type is an enum</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">// Generic formatter for StringConvertible types</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;concept EnumType = is_enum_v&lt;T&gt;;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">// Generic formatter for all enum types</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span> &lt;EnumType T&gt;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword">struct </span>formatter&lt;T&gt; : formatter&lt;underlying_type_t&lt;T&gt;&gt;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">auto</span> format(T value, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> formatter&lt;underlying_type_t&lt;T&gt;&gt;::format(<span class="keyword">static_cast&lt;</span>underlying_type_t&lt;T&gt;<span class="keyword">&gt;</span>(value), ctx);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;};</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}  <span class="comment">// namespace std</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    requires ostk::core::type::StringConvertible&lt;T&gt; &amp;&amp; (!std::is_same_v&lt;T, ostk::core::type::String&gt;) &amp;&amp;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;             (!std::is_same_v&lt;T, std::string&gt;) &amp;&amp; (!std::is_same_v&lt;T, const char*&gt;)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keyword">struct</span> formatter&lt;T&gt; : formatter&lt;string&gt;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">auto</span> format(<span class="keyword">const</span> T&amp; value, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">return</span> formatter&lt;string&gt;::format(<span class="keywordtype">string</span>(value), ctx);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;};</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">// Concept to check if a type is an enum</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;concept EnumType = is_enum_v&lt;T&gt;;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">// Generic formatter for all enum types</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword">template</span> &lt;EnumType T&gt;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">struct </span>formatter&lt;T&gt; : formatter&lt;underlying_type_t&lt;T&gt;&gt;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">auto</span> format(T value, FormatContext&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">return</span> formatter&lt;underlying_type_t&lt;T&gt;&gt;::format(<span class="keyword">static_cast&lt;</span>underlying_type_t&lt;T&gt;<span class="keyword">&gt;</span>(value), ctx);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;};</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}  <span class="comment">// namespace std</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a44cc2827faafa67f59e3168f8dcbbbfb"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a44cc2827faafa67f59e3168f8dcbbbfb">ostk::core::type::String::trim</a></div><div class="ttdeci">String &amp; trim()</div><div class="ttdoc">Removes whitespace from both ends.</div><div class="ttdef"><b>Definition:</b> String.cpp:154</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a44cc2827faafa67f59e3168f8dcbbbfb"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a44cc2827faafa67f59e3168f8dcbbbfb">ostk::core::type::String::trim</a></div><div class="ttdeci">String &amp; trim()</div><div class="ttdoc">Removes whitespace from both ends.</div><div class="ttdef"><b>Definition:</b> String.cpp:161</div></div>
 <div class="ttc" id="a_index_8hpp_html"><div class="ttname"><a href="_index_8hpp.html">Index.hpp</a></div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac08a31fa6b0582d4a9b223a3927d354b"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac08a31fa6b0582d4a9b223a3927d354b">ostk::core::type::String::getLength</a></div><div class="ttdeci">Size getLength() const</div><div class="ttdef"><b>Definition:</b> String.cpp:67</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_has_to_string_html_a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">ostk::core::type::HasToString::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> String.hpp:187</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac78674da13d8b5a3a35a6787cb515a38"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">ostk::core::type::String::match</a></div><div class="ttdeci">bool match(const std::regex &amp;aRegularExpression) const</div><div class="ttdoc">Returns whether the string matches a regular expression.</div><div class="ttdef"><b>Definition:</b> String.cpp:62</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_aabf70678b4fb31beae28af913ffee684"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#aabf70678b4fb31beae28af913ffee684">ostk::core::type::String::isUppercase</a></div><div class="ttdeci">bool isUppercase() const</div><div class="ttdef"><b>Definition:</b> String.cpp:36</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_aceab98c3ab4a61de80b05da7152975a6"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#aceab98c3ab4a61de80b05da7152975a6">ostk::core::type::String::getHead</a></div><div class="ttdeci">String getHead(const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:72</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae90137d2ec2634da5fbe0c32e66a3672"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae90137d2ec2634da5fbe0c32e66a3672">ostk::core::type::String::getSubstring</a></div><div class="ttdeci">String getSubstring(const Index &amp;aStartPosition, const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:116</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd48b5675fa8109c0aaf8e339f00675"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:163</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd999bef0746e38e05bb6432fd51dbb"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd999bef0746e38e05bb6432fd51dbb">ostk::core::type::String::Empty</a></div><div class="ttdeci">static String Empty()</div><div class="ttdef"><b>Definition:</b> String.cpp:178</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a6eaf1894a8ee8d15ed3d06d73abe0119"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a6eaf1894a8ee8d15ed3d06d73abe0119">ostk::core::type::String::~String</a></div><div class="ttdeci">~String()</div><div class="ttdef"><b>Definition:</b> String.cpp:29</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_has_to_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_has_to_string.html">ostk::core::type::HasToString</a></div><div class="ttdoc">https://gist.github.com/fenbf/d2cd670704b82e2ce7fd</div><div class="ttdef"><b>Definition:</b> String.hpp:173</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac08a31fa6b0582d4a9b223a3927d354b"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac08a31fa6b0582d4a9b223a3927d354b">ostk::core::type::String::getLength</a></div><div class="ttdeci">Size getLength() const</div><div class="ttdef"><b>Definition:</b> String.cpp:74</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_has_to_string_html_a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_has_to_string.html#a7f6fad759eb8bb7d96b72f6fa76f6203a0a5c32e88dfcb605c346519a50a92131">ostk::core::type::HasToString::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> String.hpp:200</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac78674da13d8b5a3a35a6787cb515a38"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac78674da13d8b5a3a35a6787cb515a38">ostk::core::type::String::match</a></div><div class="ttdeci">bool match(const std::regex &amp;aRegularExpression) const</div><div class="ttdoc">Returns whether the string matches a regular expression.</div><div class="ttdef"><b>Definition:</b> String.cpp:64</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_aabf70678b4fb31beae28af913ffee684"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#aabf70678b4fb31beae28af913ffee684">ostk::core::type::String::isUppercase</a></div><div class="ttdeci">bool isUppercase() const</div><div class="ttdef"><b>Definition:</b> String.cpp:38</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_aceab98c3ab4a61de80b05da7152975a6"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#aceab98c3ab4a61de80b05da7152975a6">ostk::core::type::String::getHead</a></div><div class="ttdeci">String getHead(const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:79</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae90137d2ec2634da5fbe0c32e66a3672"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae90137d2ec2634da5fbe0c32e66a3672">ostk::core::type::String::getSubstring</a></div><div class="ttdeci">String getSubstring(const Index &amp;aStartPosition, const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:123</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd48b5675fa8109c0aaf8e339f00675"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd48b5675fa8109c0aaf8e339f00675">ostk::core::type::String::Format</a></div><div class="ttdeci">static String Format(const char *aFormat, Args... anArgumentList)</div><div class="ttdoc">Create formatted string.</div><div class="ttdef"><b>Definition:</b> String.hpp:176</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abcd999bef0746e38e05bb6432fd51dbb"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abcd999bef0746e38e05bb6432fd51dbb">ostk::core::type::String::Empty</a></div><div class="ttdeci">static String Empty()</div><div class="ttdef"><b>Definition:</b> String.cpp:185</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a6eaf1894a8ee8d15ed3d06d73abe0119"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a6eaf1894a8ee8d15ed3d06d73abe0119">ostk::core::type::String::~String</a></div><div class="ttdeci">~String()</div><div class="ttdef"><b>Definition:</b> String.cpp:31</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_has_to_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_has_to_string.html">ostk::core::type::HasToString</a></div><div class="ttdoc">https://gist.github.com/fenbf/d2cd670704b82e2ce7fd</div><div class="ttdef"><b>Definition:</b> String.hpp:186</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1container_html"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html">ostk::core::container</a></div><div class="ttdef"><b>Definition:</b> Array.hpp:19</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:50</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a7c29ece5a4c0db35b4c30d61788fe729"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a7c29ece5a4c0db35b4c30d61788fe729">ostk::core::type::String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> String.cpp:31</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a073128d2588b7f95bbba37c84b6f700f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a073128d2588b7f95bbba37c84b6f700f">ostk::core::type::String::IsValidUTF8</a></div><div class="ttdeci">static bool IsValidUTF8(const String &amp;aString)</div><div class="ttdoc">Checks if the string contains any invalid UTF-8 characters.</div><div class="ttdef"><b>Definition:</b> String.cpp:211</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:52</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a7c29ece5a4c0db35b4c30d61788fe729"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a7c29ece5a4c0db35b4c30d61788fe729">ostk::core::type::String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> String.cpp:33</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a073128d2588b7f95bbba37c84b6f700f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a073128d2588b7f95bbba37c84b6f700f">ostk::core::type::String::IsValidUTF8</a></div><div class="ttdeci">static bool IsValidUTF8(const String &amp;aString)</div><div class="ttdoc">Checks if the string contains any invalid UTF-8 characters.</div><div class="ttdef"><b>Definition:</b> String.cpp:218</div></div>
 <div class="ttc" id="anamespaceostk_html"><div class="ttname"><a href="namespaceostk.html">ostk</a></div><div class="ttdoc">Apache License 2.0.</div><div class="ttdef"><b>Definition:</b> Array.hpp:15</div></div>
 <div class="ttc" id="a_size_8hpp_html"><div class="ttname"><a href="_size_8hpp.html">Size.hpp</a></div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a5ef9410f9ffe233c83cb88b0ce3c1441"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a5ef9410f9ffe233c83cb88b0ce3c1441">ostk::core::type::String::getFirst</a></div><div class="ttdeci">char getFirst() const</div><div class="ttdef"><b>Definition:</b> String.cpp:96</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_af11502e59dc726425d58e94f2b08ace6"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">ostk::core::type::String::Replicate</a></div><div class="ttdeci">static String Replicate(char aCharacter, Size aCount)</div><div class="ttdef"><b>Definition:</b> String.cpp:194</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a207952f09a96c355722a56cde16fed1f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">ostk::core::type::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:19</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a858b680569fe684d75d7f2fe25959faa"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">ostk::core::type::String::SanitizeUTF8</a></div><div class="ttdeci">static String SanitizeUTF8(const String &amp;aString)</div><div class="ttdoc">Sanitizes the string by removing any invalid UTF-8 characters.</div><div class="ttdef"><b>Definition:</b> String.cpp:257</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abb50863baac9f80e727e4533ffba92e4"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abb50863baac9f80e727e4533ffba92e4">ostk::core::type::String::Boolean</a></div><div class="ttdeci">static String Boolean(bool aBoolean)</div><div class="ttdef"><b>Definition:</b> String.cpp:184</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a1d611ad2b7ab90bf971eba5e805bdd0c"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a1d611ad2b7ab90bf971eba5e805bdd0c">ostk::core::type::String::getLast</a></div><div class="ttdeci">char getLast() const</div><div class="ttdef"><b>Definition:</b> String.cpp:106</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae6af9be350ec2401f961a6b042f84c8a"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae6af9be350ec2401f961a6b042f84c8a">ostk::core::type::String::split</a></div><div class="ttdeci">Array&lt; String &gt; split(const String &amp;aDelimiter) const</div><div class="ttdoc">Split the String into tokens separated by the given delimeter. E.X. String(&quot;1sat2satredsatbluesat&quot;)....</div><div class="ttdef"><b>Definition:</b> String.cpp:147</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac4d69227a1cb3c0b4d9e3501e01b3aed"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">ostk::core::type::String::replace</a></div><div class="ttdeci">String &amp; replace(const char aCharacter, const char aNewCharacter)</div><div class="ttdoc">Replace all occurences of character by other character.</div><div class="ttdef"><b>Definition:</b> String.cpp:164</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a4b5ceca3c74ddf5075f35709e77e6c00"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a4b5ceca3c74ddf5075f35709e77e6c00">ostk::core::type::String::getTail</a></div><div class="ttdeci">String getTail(const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:84</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a197b0c1b6825a60cf375f49cafd6d550"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a197b0c1b6825a60cf375f49cafd6d550">ostk::core::type::String::isLowercase</a></div><div class="ttdeci">bool isLowercase() const</div><div class="ttdef"><b>Definition:</b> String.cpp:49</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a5ef9410f9ffe233c83cb88b0ce3c1441"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a5ef9410f9ffe233c83cb88b0ce3c1441">ostk::core::type::String::getFirst</a></div><div class="ttdeci">char getFirst() const</div><div class="ttdef"><b>Definition:</b> String.cpp:103</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_af11502e59dc726425d58e94f2b08ace6"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#af11502e59dc726425d58e94f2b08ace6">ostk::core::type::String::Replicate</a></div><div class="ttdeci">static String Replicate(char aCharacter, Size aCount)</div><div class="ttdef"><b>Definition:</b> String.cpp:201</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a207952f09a96c355722a56cde16fed1f"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a207952f09a96c355722a56cde16fed1f">ostk::core::type::String::String</a></div><div class="ttdeci">String()</div><div class="ttdef"><b>Definition:</b> String.cpp:21</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a858b680569fe684d75d7f2fe25959faa"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a858b680569fe684d75d7f2fe25959faa">ostk::core::type::String::SanitizeUTF8</a></div><div class="ttdeci">static String SanitizeUTF8(const String &amp;aString)</div><div class="ttdoc">Sanitizes the string by removing any invalid UTF-8 characters.</div><div class="ttdef"><b>Definition:</b> String.cpp:264</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_abb50863baac9f80e727e4533ffba92e4"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#abb50863baac9f80e727e4533ffba92e4">ostk::core::type::String::Boolean</a></div><div class="ttdeci">static String Boolean(bool aBoolean)</div><div class="ttdef"><b>Definition:</b> String.cpp:191</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a1d611ad2b7ab90bf971eba5e805bdd0c"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a1d611ad2b7ab90bf971eba5e805bdd0c">ostk::core::type::String::getLast</a></div><div class="ttdeci">char getLast() const</div><div class="ttdef"><b>Definition:</b> String.cpp:113</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae6af9be350ec2401f961a6b042f84c8a"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae6af9be350ec2401f961a6b042f84c8a">ostk::core::type::String::split</a></div><div class="ttdeci">Array&lt; String &gt; split(const String &amp;aDelimiter) const</div><div class="ttdoc">Split the String into tokens separated by the given delimeter. E.X. String(&quot;1sat2satredsatbluesat&quot;)....</div><div class="ttdef"><b>Definition:</b> String.cpp:154</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ac4d69227a1cb3c0b4d9e3501e01b3aed"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ac4d69227a1cb3c0b4d9e3501e01b3aed">ostk::core::type::String::replace</a></div><div class="ttdeci">String &amp; replace(const char aCharacter, const char aNewCharacter)</div><div class="ttdoc">Replace all occurences of character by other character.</div><div class="ttdef"><b>Definition:</b> String.cpp:171</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a4b5ceca3c74ddf5075f35709e77e6c00"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a4b5ceca3c74ddf5075f35709e77e6c00">ostk::core::type::String::getTail</a></div><div class="ttdeci">String getTail(const Size &amp;aLength) const</div><div class="ttdef"><b>Definition:</b> String.cpp:91</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_a197b0c1b6825a60cf375f49cafd6d550"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#a197b0c1b6825a60cf375f49cafd6d550">ostk::core::type::String::isLowercase</a></div><div class="ttdeci">bool isLowercase() const</div><div class="ttdef"><b>Definition:</b> String.cpp:51</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a417fd235f7e100d47856d16751831c34"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">ostk::core::type::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:17</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae8c906ec919f36655e3c4f54786adb95"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae8c906ec919f36655e3c4f54786adb95">ostk::core::type::String::Char</a></div><div class="ttdeci">static String Char(char aCharacter)</div><div class="ttdef"><b>Definition:</b> String.cpp:189</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html_ae8c906ec919f36655e3c4f54786adb95"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html#ae8c906ec919f36655e3c4f54786adb95">ostk::core::type::String::Char</a></div><div class="ttdeci">static String Char(char aCharacter)</div><div class="ttdef"><b>Definition:</b> String.cpp:196</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a49cf705368ffaff1cc457f73d7ebc403"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">ostk::core::type::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:17</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1container_1_1_array_html"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_array.html">ostk::core::container::Array</a></div><div class="ttdoc">Array container.</div><div class="ttdef"><b>Definition:</b> Array.hpp:32</div></div>
-<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_ad18c81a5ed56f58ff9df98288c8c343a"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">ostk::core::type::CallToString</a></div><div class="ttdeci">std::enable_if&lt; HasToString&lt; T &gt;::value, std::string &gt;::type CallToString(T *t)</div><div class="ttdef"><b>Definition:</b> String.hpp:192</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_ad18c81a5ed56f58ff9df98288c8c343a"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#ad18c81a5ed56f58ff9df98288c8c343a">ostk::core::type::CallToString</a></div><div class="ttdeci">std::enable_if&lt; HasToString&lt; T &gt;::value, std::string &gt;::type CallToString(T *t)</div><div class="ttdef"><b>Definition:</b> String.hpp:205</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

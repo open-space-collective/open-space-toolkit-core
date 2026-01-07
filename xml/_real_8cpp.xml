@@ -18,39 +18,39 @@
       <node id="4">
         <label>limits</label>
       </node>
-      <node id="25">
+      <node id="26">
         <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>boost/stacktrace.hpp</label>
       </node>
       <node id="5">
         <label>boost/lexical_cast.hpp</label>
       </node>
-      <node id="27">
+      <node id="28">
         <label>stdint.h</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>stdexcept</label>
       </node>
       <node id="13">
         <label>string</label>
       </node>
-      <node id="15">
+      <node id="16">
         <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
         <link refid="_index_8hpp"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -62,10 +62,10 @@
       <node id="11">
         <label>ostream</label>
       </node>
-      <node id="17">
+      <node id="18">
         <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
         <link refid="_size_8hpp"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -73,19 +73,19 @@
         <link refid="_error_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp</label>
         <link refid="_undefined_8hpp"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -103,15 +103,15 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>OpenSpaceToolkit/Core/Error/RuntimeError.hpp</label>
         <link refid="_runtime_error_8hpp"/>
-        <childnode refid="20" relation="include">
-        </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -121,31 +121,34 @@
       <node id="3">
         <label>iostream</label>
       </node>
-      <node id="16">
+      <node id="17">
         <label>cstddef</label>
       </node>
-      <node id="24">
+      <node id="25">
         <label>OpenSpaceToolkit/Core/Type/Real.hpp</label>
         <link refid="_real_8hpp"/>
-        <childnode refid="25" relation="include">
-        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="15">
+        <label>boost/regex.hpp</label>
+      </node>
+      <node id="19">
         <label>OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp</label>
         <link refid="_to_be_implemented_8hpp"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="24">
         <label>OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp</label>
         <link refid="_wrong_8hpp"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -168,7 +171,9 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -179,10 +184,10 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="27">
         <label>OpenSpaceToolkit/Core/Type/Sign.hpp</label>
         <link refid="_sign_8hpp"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
     </incdepgraph>

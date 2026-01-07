@@ -19,10 +19,10 @@
       <node id="11">
         <label>string</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>OpenSpaceToolkit/Core/Type/Index.hpp</label>
         <link refid="_index_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="10">
@@ -34,10 +34,10 @@
       <node id="9">
         <label>ostream</label>
       </node>
-      <node id="15">
+      <node id="16">
         <label>OpenSpaceToolkit/Core/Type/Size.hpp</label>
         <link refid="_size_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -52,8 +52,11 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>cstddef</label>
+      </node>
+      <node id="13">
+        <label>boost/regex.hpp</label>
       </node>
       <node id="1">
         <label>include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp</label>
@@ -81,7 +84,9 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="5">
