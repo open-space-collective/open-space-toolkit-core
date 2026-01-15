@@ -6,6 +6,7 @@
 
 #include <OpenSpaceToolkitCorePy/Container.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
+#include <OpenSpaceToolkitCorePy/Logger.cpp>
 #include <OpenSpaceToolkitCorePy/Type.cpp>
 
 PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
@@ -27,4 +28,5 @@ PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
     OpenSpaceToolkitCorePy_Type(m);
     OpenSpaceToolkitCorePy_FileSystem(m);
     OpenSpaceToolkitCorePy_Container(m);
+    OpenSpaceToolkitCorePy_Logger(m);
 }
