@@ -51,3 +51,4 @@ docs/cpp_rst
 tmp/
 __pycache__
 .ipynb_checkpoints
+*.egg-info/

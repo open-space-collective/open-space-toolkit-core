@@ -1,0 +1,27 @@
+# Apache License 2.0
+
+# This file is for local development and CI only
+# For distribution builds, see bindings/python/tools/python/pyproject.toml.in
+
+[project]
+name = "open-space-toolkit-core-dev"
+version = "0.0.0"
+description = "Development environment for Open Space Toolkit Core"
+requires-python = ">=3.9"
+
+# No runtime dependencies - this is not for distribution
+
+[project.optional-dependencies]
+dev = [
+    "plotly",
+    "pandas",
+    "cesiumpy @ git+https://github.com/open-space-collective/cesiumpy",
+    
+    "ipython",
+    "pytest",
+    "black[jupyter]",
+]
+
+[tool.black]
+line-length = 90
+

@@ -20,24 +20,12 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
 ]
 requires-python = "~=${PYTHON_VERSION}.0"
-dependencies = [
-    "plotly",
-    "pandas",
-    "cesiumpy @ git+https://github.com/open-space-collective/cesiumpy",
-] 
+
+dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with high-level OSTk packages
 
 [project.optional-dependencies]
-dev = [
-    "ipython",
-    "pytest",
-    "pybind11-stubgen",
-    "black[jupyter]",
-
-    # Build
-    "setuptools",
-    "wheel",
-    "build",
-    "twine",
+prebuild = [
+    "pybind11-stubgen"
 ]
 
 [tool.setuptools]
@@ -47,9 +35,6 @@ include-package-data = true
 [tool.setuptools.package-data]
 "ostk.core" = ["${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
 "*" = ["*/data/*"]
-
-[tool.black]
-line-length = 90
 
 [tool.bdist_wheel]
 python-tag = "py${EXTENSION}"
