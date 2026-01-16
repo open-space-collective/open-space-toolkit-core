@@ -3,7 +3,7 @@
 ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:0.10.2-7-gf7d2f5d AS root-user
+FROM openspacecollective/open-space-toolkit-base-development:0.10.2-8-g88d75d7 AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -68,6 +68,11 @@ RUN cd /tmp \
     && mkdir -p /usr/local/include/rapidcsv \
     && cp src/*.h /usr/local/include/rapidcsv/ \
     && rm -rf /tmp/rapidcsv
+
+## Install Python dev dependencies
+COPY bindings/python/pyproject.toml /tmp/ostk-deps/
+RUN cd /tmp/ostk-deps \
+    && VIRTUAL_ENV=${OSTK_VIRTUAL_ENV} uv pip install .[dev]
 
 # Labels
 
