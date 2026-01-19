@@ -156,7 +156,7 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && uv sync --all-extras
                             COMMAND "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/.venv/bin/python" -m "pybind11_stubgen" -o "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" "${PROJECT_GROUP}.${PROJECT_SUBGROUP}" # generate stubs in same dir as binaries
                             COMMAND find "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_GROUP}" -type f -name "*.pyi" -exec sed -i "s/: \\\\.\\\\.\\\\./: typing.Any/g" {} + # crudely fix stubs with invalid syntax
-                            COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && uv build
+                            COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && env _PYTHON_HOST_PLATFORM="${PLATFORM}" uv build
                             COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             COMMAND cp "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/dist/*" "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             DEPENDS ${DEPS})
