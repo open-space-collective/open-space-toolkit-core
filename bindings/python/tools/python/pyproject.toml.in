@@ -31,11 +31,12 @@ prebuild = [
 [tool.setuptools]
 zip-safe = true
 include-package-data = true
+# Declare a dummy extension module to force platform-specific wheel tags.
+# The actual .so files are pre-compiled and included via package-data.
+ext-modules = [
+    {name = "ostk.core._platform", sources = []}
+]
 
 [tool.setuptools.package-data]
 "ostk.core" = ["${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
 "*" = ["*/data/*"]
-
-[tool.bdist_wheel]
-python-tag = "py${EXTENSION}"
-plat-name = "${PLATFORM}"
