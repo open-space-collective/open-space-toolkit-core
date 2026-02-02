@@ -21,11 +21,14 @@ classifiers = [
 ]
 requires-python = "~=${PYTHON_VERSION}.0"
 
-dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with high-level OSTk packages
+dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with higher-level OSTk packages
 
 [project.optional-dependencies]
 prebuild = [
     "pybind11-stubgen"
+]
+test = [
+    "pytest"
 ]
 
 [tool.setuptools]

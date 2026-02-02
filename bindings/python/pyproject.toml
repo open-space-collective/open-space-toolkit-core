@@ -18,7 +18,6 @@ dev = [
     "cesiumpy @ git+https://github.com/open-space-collective/cesiumpy",
     
     "ipython",
-    "pytest",
     "black[jupyter]",
 ]
 

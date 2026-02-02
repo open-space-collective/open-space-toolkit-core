@@ -14,7 +14,6 @@ docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
 test_python_version := 3.11
-test_python_directory := /usr/local/lib/python${test_python_version}/dist-packages
 
 jupyter_notebook_port := 9005
 jupyter_python_version := 3.11
@@ -338,7 +337,7 @@ debug-jupyter: build-release-image-jupyter ## Debug jupyter notebook using the o
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs:delegated" \
 		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials:delegated" \
-		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit${project_name_camel_case}Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
+		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit$(project_name_camel_case)Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		/bin/bash -c "chown -R jovyan:users /home/jovyan ; python$(jupyter_python_version) -m pip install /opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)/ --force-reinstall ; start-notebook.sh --ServerApp.token=''"
@@ -457,6 +456,24 @@ format-check-python-standalone:
 
 .PHONY: format-check-python-standalone
 
+build-tests: ## Build C++ with code coverage, build Python bindings, and run C++ tests 
+
+	@ echo "Building for test"
+
+	docker run \
+		--rm \
+		--volume="$(CURDIR):/app:delegated" \
+		--workdir=/app/build \
+		$(docker_development_image_repository):$(docker_image_version) \
+		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
+		&& $(MAKE) -j 4 \
+		&& $(MAKE) coverage \
+		&& (rm -rf /app/coverage || true) \
+		&& mkdir /app/coverage \
+		&& mv /app/build/coverage* /app/coverage"
+
+.PHONY: build-tests
+
 test: ## Run tests
 
 	@ echo "Running tests..."
@@ -512,30 +529,25 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
+		--env="OSTK_PYTHON_VERSION=$(test_python_version)" \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
+		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF -DPYTHON_SEARCH_VERSIONS=$(test_python_version) .. \
 		&& $(MAKE) -j 4 \
-		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} bindings/python/OpenSpaceToolkit*Py-python-package-${test_python_version} \
-		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} plotly pandas \
-		&& cd ${test_python_directory}/ostk/$(project_name)/ \
-		&& python${test_python_version} -m pytest -sv ."
+		&& ostk-install-python \
+		&& ostk-test-python"
 
 .PHONY: test-unit-python-standalone
 
-ci-test-python: ## Run Python unit tests. Assumes the dev image has already been built, AND that bindings have been built and are available at `packages/python`
+ci-test-python: ## Run Python unit tests. Assumes the dev image has already been built, AND that bindings have been built and are available at `build/bindings/python`
 
 	@ echo "Running Python unit tests..."
 
 	docker run \
 	--rm \
 	--volume="$(CURDIR):/app:delegated" \
-	--volume="/app/build" \
 	--workdir=/app/build \
 	$(docker_development_image_repository):$(docker_image_version) \
-	/bin/bash -c "python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} --find-links /app/packages/python open_space_toolkit_${project_name} \
-	&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} plotly pandas \
-	&& cd ${test_python_directory}/ostk/$(project_name)/ \
-	&& python${test_python_version} -m pytest -sv ."
+	/bin/bash -c "OSTK_PYTHON_VERSION=$(test_python_version) ostk-test-python"
 
 .PHONY: ci-test-python
 

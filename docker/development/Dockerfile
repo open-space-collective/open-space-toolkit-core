@@ -3,7 +3,7 @@
 ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:0.10.2-8-g88d75d7 AS root-user
+FROM openspacecollective/open-space-toolkit-base-development:0.10.2-11-g8108865 AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -69,10 +69,11 @@ RUN cd /tmp \
     && cp src/*.h /usr/local/include/rapidcsv/ \
     && rm -rf /tmp/rapidcsv
 
-## Install Python dev dependencies
-COPY bindings/python/pyproject.toml /tmp/ostk-deps/
-RUN cd /tmp/ostk-deps \
-    && VIRTUAL_ENV=${OSTK_VIRTUAL_ENV} uv pip install .[dev]
+## Install Python dev dependencies (root)
+COPY bindings/python/pyproject.toml /app/bindings/python/
+COPY bindings/python/uv.lock /app/bindings/python/
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
 # Labels
 
@@ -113,6 +114,12 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 ## Configure environment
 
 ENV PATH="/home/${USERNAME}/.local/bin:${PATH}"
+
+## Install Python dev dependencies (non-root)
+COPY --chown=${USER_UID}:${USER_GID} bindings/python/pyproject.toml /app/bindings/python/
+COPY --chown=${USER_UID}:${USER_GID} bindings/python/uv.lock /app/bindings/python/
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
 # Entrypoint
 
