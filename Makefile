@@ -452,7 +452,7 @@ format-check-python-standalone:
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		ostk-check-format-python
+		/bin/bash -c 'ls -al $${PYTHON_WD}'
 
 .PHONY: format-check-python-standalone
 
