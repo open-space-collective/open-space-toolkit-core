@@ -69,17 +69,25 @@ RUN cd /tmp \
     && cp src/*.h /usr/local/include/rapidcsv/ \
     && rm -rf /tmp/rapidcsv
 
-## Install Python dev dependencies (root)
-COPY bindings/python/pyproject.toml /app/bindings/python/
-COPY bindings/python/uv.lock /app/bindings/python/
-RUN cd /app/bindings/python \
-    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
-
 # Labels
 
 ARG VERSION
 ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
+
+# Test image for CI that includes all source code, compiles C++ for test (with coverage), and builds Python bindings
+FROM root-user AS test-ci 
+
+COPY . /app
+
+WORKDIR /app/build
+
+RUN cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
+    && make -j $(nproc) \
+    && (rm -rf /app/coverage || true)
+
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
 # Development image for humans (non-root user)
 
