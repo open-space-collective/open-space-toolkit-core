@@ -9,6 +9,7 @@ docker_image_repository := $(docker_registry_path)/open-space-toolkit-$(project_
 docker_image_version := $(project_version)
 
 docker_development_image_repository := $(docker_image_repository)-development
+docker_test_image_repository := $(docker_image_repository)-test
 docker_release_image_cpp_repository := $(docker_image_repository)-cpp
 docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
@@ -452,27 +453,23 @@ format-check-python-standalone:
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c 'ls -al $${PYTHON_WD}'
+		/bin/bash -c 'ostk-check-format-python'
 
 .PHONY: format-check-python-standalone
 
-build-tests: ## Build C++ with code coverage, build Python bindings, and run C++ tests 
+build-test-image: pull-development-image ## Build a test image that includes all code and dependencies for CI
 
-	@ echo "Building for test"
+	@ echo "Building test image"
 
-	docker run \
-		--rm \
-		--volume="$(CURDIR):/app:delegated" \
-		--workdir=/app/build \
-		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
-		&& $(MAKE) -j 4 \
-		&& $(MAKE) coverage \
-		&& (rm -rf /app/coverage || true) \
-		&& mkdir /app/coverage \
-		&& mv /app/build/coverage* /app/coverage"
+	docker build \
+		--file="$(CURDIR)"/docker/development/Dockerfile \
+		--tag=$(docker_test_image_repository):$(docker_image_version) \
+		--tag=$(docker_test_image_repository):latest \
+		--build-arg="VERSION=$(docker_image_version)" \
+		--target=test-ci \
+		"$(CURDIR)"
 
-.PHONY: build-tests
+.PHONY: build-test-image
 
 test: ## Run tests
 
@@ -538,19 +535,6 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 
 .PHONY: test-unit-python-standalone
 
-ci-test-python: ## Run Python unit tests. Assumes the dev image has already been built, AND that bindings have been built and are available at `build/bindings/python`
-
-	@ echo "Running Python unit tests..."
-
-	docker run \
-	--rm \
-	--volume="$(CURDIR):/app:delegated" \
-	--workdir=/app/build \
-	$(docker_development_image_repository):$(docker_image_version) \
-	/bin/bash -c "OSTK_PYTHON_VERSION=$(test_python_version) ostk-test-python"
-
-.PHONY: ci-test-python
-
 test-coverage: ## Run test coverage cpp
 
 	@ echo "Running coverage tests..."
@@ -569,18 +553,15 @@ test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 
 	@ echo "Running C++ coverage tests..."
 
+	@ mkdir -p $(CURDIR)/coverage
+
 	docker run \
 		--rm \
-		--volume="$(CURDIR):/app:delegated" \
-		--volume="/app/build" \
-		--workdir=/app/build \
-		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
-		&& $(MAKE) -j 4 \
-		&& $(MAKE) coverage \
-		&& (rm -rf /app/coverage || true) \
-		&& mkdir /app/coverage \
-		&& mv /app/build/coverage* /app/coverage"
+		--volume=$(CURDIR)/coverage:/app/coverage:delegated \
+		$(docker_test_image_repository):$(docker_image_version) \
+		/bin/bash -c "make coverage \
+		&& rm -rf /app/coverage/* \
+		&& cp -r /app/build/coverage* /app/coverage/"
 
 .PHONY: test-coverage-cpp-standalone
 
