@@ -3,7 +3,7 @@
 ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:0.10.2-16-gbec2abb AS root-user
+FROM openspacecollective/open-space-toolkit-base-development:0.10.2-16-g4a0f563 AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
