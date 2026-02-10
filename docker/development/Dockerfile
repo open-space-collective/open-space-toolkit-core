@@ -3,7 +3,7 @@
 ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:0.10.2-11-g8108865 AS root-user
+FROM openspacecollective/open-space-toolkit-base-development:0.10.2-16-gbec2abb AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -75,19 +75,20 @@ ARG VERSION
 ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
 
-# Test image for CI that includes all source code, compiles C++ for test (with coverage), and builds Python bindings
-FROM root-user AS test-ci 
+FROM root-user AS ci-base
 
 COPY . /app
 
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
+
 WORKDIR /app/build
+
+FROM ci-base AS ci-test
 
 RUN cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
     && make -j $(nproc) \
     && (rm -rf /app/coverage || true)
-
-RUN cd /app/bindings/python \
-    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
 # Development image for humans (non-root user)
 
