@@ -48,6 +48,7 @@ jobs:
     with:
       project_name: ${{ needs.prepare-environment.outputs.project_name }}
       project_version: ${{ needs.prepare-environment.outputs.project_version }}
+      target: ci-base
     secrets: inherit
 
   test:
