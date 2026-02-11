@@ -75,6 +75,7 @@ ARG VERSION
 ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
 
+# A layer that includes the codebase, and has the Python development environment set up.
 FROM root-user AS ci-base
 
 COPY . /app
@@ -84,11 +85,12 @@ RUN cd /app/bindings/python \
 
 WORKDIR /app/build
 
+# A layer that includes the compiled C++ binaries and Python bindings, with code coverage.
 FROM ci-base AS ci-test
 
 RUN cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
     && make -j $(nproc) \
-    && (rm -rf /app/coverage || true)
+    && (rm -rf /app/build/coverage || true)
 
 # Development image for humans (non-root user)
 
