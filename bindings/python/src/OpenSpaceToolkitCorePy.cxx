@@ -4,6 +4,9 @@
 #include <pybind11/operators.h>
 #include <pybind11/pybind11.h>
 
+// Type caster for Real must be included before any bindings that use Real
+#include <OpenSpaceToolkitCorePy/Type/RealTypeCaster.hpp>
+
 #include <OpenSpaceToolkitCorePy/Container.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
 #include <OpenSpaceToolkitCorePy/Type.cpp>
