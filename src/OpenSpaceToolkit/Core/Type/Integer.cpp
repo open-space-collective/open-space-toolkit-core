@@ -97,304 +97,289 @@ bool Integer::operator>=(const Integer::ValueType& anInteger) const
 
 Integer Integer::operator+(const Integer& anInteger) const
 {
-    if ((type_ != Integer::Type::Undefined) && (anInteger.type_ != Integer::Type::Undefined))
+    if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
     {
-        if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
+        return Integer::PositiveInfinity();
+    }
+    else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
+    {
+        return Integer::NegativeInfinity();
+    }
+    else if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: +Inf + (-Inf).");
+    }
+    else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: -Inf + (+Inf).");
+    }
+    else if ((type_ == Integer::Type::Defined) || (anInteger.type_ == Integer::Type::Defined))
+    {
+        if (type_ != Integer::Type::Defined)
+        {
+            return *this;
+        }
+        else if (anInteger.type_ != Integer::Type::Defined)
+        {
+            return anInteger;
+        }
+
+        if ((anInteger.value_ > 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() - anInteger.value_)))
         {
             return Integer::PositiveInfinity();
         }
-        else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
+
+        if ((anInteger.value_ < 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() - anInteger.value_)))
         {
             return Integer::NegativeInfinity();
         }
-        else if ((type_ == Integer::Type::Defined) || (anInteger.type_ == Integer::Type::Defined))
-        {
-            if (type_ != Integer::Type::Defined)
-            {
-                return *this;
-            }
-            else if (anInteger.type_ != Integer::Type::Defined)
-            {
-                return anInteger;
-            }
 
-            // [TBC] Use __builtin_add_overflow instead?
-
-            if ((anInteger.value_ > 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() - anInteger.value_)
-                                          ))  // Addition would overflow
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((anInteger.value_ < 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() - anInteger.value_)
-                                          ))  // Addition would underflow
-            {
-                return Integer::NegativeInfinity();
-            }
-
-            return Integer(value_ + anInteger.value_);
-        }
+        return Integer(value_ + anInteger.value_);
     }
 
-    return Integer::Undefined();
+    throw ostk::core::error::RuntimeError("Indeterminate form in Integer addition.");
 }
 
 Integer Integer::operator-(const Integer& anInteger) const
 {
-    if ((type_ != Integer::Type::Undefined) && (anInteger.type_ != Integer::Type::Undefined))
+    if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
     {
-        if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
+        return Integer::PositiveInfinity();
+    }
+    else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
+    {
+        return Integer::NegativeInfinity();
+    }
+    else if ((type_ == Integer::Type::PositiveInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: +Inf - (+Inf).");
+    }
+    else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::NegativeInfinity))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: -Inf - (-Inf).");
+    }
+    else if ((type_ == Integer::Type::Defined) || (anInteger.type_ == Integer::Type::Defined))
+    {
+        if (type_ != Integer::Type::Defined)
         {
-            return Integer::PositiveInfinity();
+            return *this;
         }
-        else if ((type_ == Integer::Type::NegativeInfinity) && (anInteger.type_ == Integer::Type::PositiveInfinity))
+        else if (anInteger.type_ != Integer::Type::Defined)
         {
-            return Integer::NegativeInfinity();
-        }
-        else if ((type_ == Integer::Type::Defined) || (anInteger.type_ == Integer::Type::Defined))
-        {
-            if (type_ != Integer::Type::Defined)
-            {
-                return *this;
-            }
-            else if (anInteger.type_ != Integer::Type::Defined)
-            {
-                if (anInteger.type_ == Integer::Type::PositiveInfinity)
-                {
-                    return Integer::NegativeInfinity();
-                }
-
-                return Integer::PositiveInfinity();
-            }
-
-            if ((anInteger.value_ < 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() + anInteger.value_)
-                                          ))  // Subtraction would overflow
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((anInteger.value_ > 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() + anInteger.value_)
-                                          ))  // Subtraction would underflow
+            if (anInteger.type_ == Integer::Type::PositiveInfinity)
             {
                 return Integer::NegativeInfinity();
             }
 
-            return Integer(value_ - anInteger.value_);
+            return Integer::PositiveInfinity();
         }
+
+        if ((anInteger.value_ < 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() + anInteger.value_)))
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        if ((anInteger.value_ > 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() + anInteger.value_)))
+        {
+            return Integer::NegativeInfinity();
+        }
+
+        return Integer(value_ - anInteger.value_);
     }
 
-    return Integer::Undefined();
+    throw ostk::core::error::RuntimeError("Indeterminate form in Integer subtraction.");
 }
 
 Integer Integer::operator*(const Integer& anInteger) const
 {
-    if ((type_ != Integer::Type::Undefined) && (anInteger.type_ != Integer::Type::Undefined))
+    if (type_ == Integer::Type::PositiveInfinity)
     {
-        if (type_ == Integer::Type::PositiveInfinity)
+        if (anInteger.isStrictlyPositive())
         {
-            if (anInteger.isStrictlyPositive())
-            {
-                return Integer::PositiveInfinity();
-            }
-            else if (anInteger.isStrictlyNegative())
-            {
-                return Integer::NegativeInfinity();
-            }
-
-            return Integer::Undefined();
+            return Integer::PositiveInfinity();
         }
-        else if (type_ == Integer::Type::NegativeInfinity)
+        else if (anInteger.isStrictlyNegative())
         {
-            if (anInteger.isStrictlyPositive())
-            {
-                return Integer::NegativeInfinity();
-            }
-            else if (anInteger.isStrictlyNegative())
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            return Integer::Undefined();
+            return Integer::NegativeInfinity();
         }
-        else if (anInteger.type_ == Integer::Type::PositiveInfinity)
-        {
-            if (this->isStrictlyPositive())
-            {
-                return Integer::PositiveInfinity();
-            }
-            else if (this->isStrictlyNegative())
-            {
-                return Integer::NegativeInfinity();
-            }
 
-            return Integer::Undefined();
-        }
-        else if (anInteger.type_ == Integer::Type::NegativeInfinity)
-        {
-            if (this->isStrictlyPositive())
-            {
-                return Integer::NegativeInfinity();
-            }
-            else if (this->isStrictlyNegative())
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            return Integer::Undefined();
-        }
-        else
-        {
-            if (this->isZero() || anInteger.isZero())
-            {
-                return Integer::Zero();
-            }
-
-            // Check for -1 for two's complement machines
-
-            if ((value_ < 0) &&
-                (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))  // Multiplication can overflow
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((anInteger.value_ < 0) &&
-                (value_ == std::numeric_limits<Integer::ValueType>::min()))  // Multiplication can overflow
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((this->getSign() == anInteger.getSign()) &&
-                (std::abs(value_) > (std::numeric_limits<Integer::ValueType>::max() / std::abs(anInteger.value_))
-                ))  // Multiplication would overflow
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((value_ == +1) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
-            {
-                return Integer(std::numeric_limits<Integer::ValueType>::min());
-            }
-
-            if ((value_ == -1) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
-            {
-                return Integer::PositiveInfinity();
-            }
-
-            if ((anInteger.value_ != -1) && (this->getSign() != anInteger.getSign()) &&
-                ((-std::abs(value_)) < (std::numeric_limits<Integer::ValueType>::min() / std::abs(anInteger.value_))
-                ))  // Multiplication would underflow
-            {
-                return Integer::NegativeInfinity();
-            }
-
-            return Integer(value_ * anInteger.value_);
-        }
+        throw ostk::core::error::RuntimeError("Indeterminate form: +Inf * 0.");
     }
+    else if (type_ == Integer::Type::NegativeInfinity)
+    {
+        if (anInteger.isStrictlyPositive())
+        {
+            return Integer::NegativeInfinity();
+        }
+        else if (anInteger.isStrictlyNegative())
+        {
+            return Integer::PositiveInfinity();
+        }
 
-    return Integer::Undefined();
+        throw ostk::core::error::RuntimeError("Indeterminate form: -Inf * 0.");
+    }
+    else if (anInteger.type_ == Integer::Type::PositiveInfinity)
+    {
+        if (this->isStrictlyPositive())
+        {
+            return Integer::PositiveInfinity();
+        }
+        else if (this->isStrictlyNegative())
+        {
+            return Integer::NegativeInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Indeterminate form: 0 * +Inf.");
+    }
+    else if (anInteger.type_ == Integer::Type::NegativeInfinity)
+    {
+        if (this->isStrictlyPositive())
+        {
+            return Integer::NegativeInfinity();
+        }
+        else if (this->isStrictlyNegative())
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Indeterminate form: 0 * -Inf.");
+    }
+    else
+    {
+        if (this->isZero() || anInteger.isZero())
+        {
+            return Integer::Zero();
+        }
+
+        // Check for -1 for two's complement machines
+
+        if ((value_ < 0) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        if ((anInteger.value_ < 0) && (value_ == std::numeric_limits<Integer::ValueType>::min()))
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        if ((this->getSign() == anInteger.getSign()) &&
+            (std::abs(value_) > (std::numeric_limits<Integer::ValueType>::max() / std::abs(anInteger.value_))))
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        if ((value_ == +1) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+        {
+            return Integer(std::numeric_limits<Integer::ValueType>::min());
+        }
+
+        if ((value_ == -1) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        if ((anInteger.value_ != -1) && (this->getSign() != anInteger.getSign()) &&
+            ((-std::abs(value_)) < (std::numeric_limits<Integer::ValueType>::min() / std::abs(anInteger.value_))))
+        {
+            return Integer::NegativeInfinity();
+        }
+
+        return Integer(value_ * anInteger.value_);
+    }
 }
 
 Integer Integer::operator/(const Integer& anInteger) const
 {
     if (anInteger.isZero())
     {
-        return Integer::Undefined();
+        throw ostk::core::error::RuntimeError("Division by zero.");
     }
 
-    if ((type_ != Integer::Type::Undefined) && (anInteger.type_ != Integer::Type::Undefined))
+    if (type_ == Integer::Type::PositiveInfinity)
     {
-        if (type_ == Integer::Type::PositiveInfinity)
+        if (anInteger.isInfinity())
         {
-            if (anInteger.isInfinity())
-            {
-                return Integer::Undefined();
-            }
-            else if (anInteger.isStrictlyPositive())
-            {
-                return Integer::PositiveInfinity();
-            }
-            else if (anInteger.isStrictlyNegative())
-            {
-                return Integer::NegativeInfinity();
-            }
-
-            return Integer::Undefined();
+            throw ostk::core::error::RuntimeError("Indeterminate form: Inf / Inf.");
         }
-        else if (type_ == Integer::Type::NegativeInfinity)
+        else if (anInteger.isStrictlyPositive())
         {
-            if (anInteger.isInfinity())
-            {
-                return Integer::Undefined();
-            }
-            else if (anInteger.isStrictlyPositive())
-            {
-                return Integer::NegativeInfinity();
-            }
-            else if (anInteger.isStrictlyNegative())
-            {
-                return Integer::PositiveInfinity();
-            }
+            return Integer::PositiveInfinity();
+        }
+        else if (anInteger.isStrictlyNegative())
+        {
+            return Integer::NegativeInfinity();
+        }
 
-            return Integer::Undefined();
+        throw ostk::core::error::RuntimeError("Indeterminate form in Integer division.");
+    }
+    else if (type_ == Integer::Type::NegativeInfinity)
+    {
+        if (anInteger.isInfinity())
+        {
+            throw ostk::core::error::RuntimeError("Indeterminate form: Inf / Inf.");
+        }
+        else if (anInteger.isStrictlyPositive())
+        {
+            return Integer::NegativeInfinity();
+        }
+        else if (anInteger.isStrictlyNegative())
+        {
+            return Integer::PositiveInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Indeterminate form in Integer division.");
+    }
+    else
+    {
+        if (this->isZero() || anInteger.isInfinity())
+        {
+            return Integer::Zero();
         }
         else
         {
-            if (this->isZero() || anInteger.isInfinity())
+            if ((value_ == std::numeric_limits<Integer::ValueType>::min()) && (anInteger.value_ == -1))
             {
-                return Integer::Zero();
+                return Integer::PositiveInfinity();
             }
-            else
-            {
-                if ((value_ == std::numeric_limits<Integer::ValueType>::min()) && (anInteger.value_ == -1))
-                {
-                    return Integer::PositiveInfinity();
-                }
 
-                return Integer(value_ / anInteger.value_);
-            }
+            return Integer(value_ / anInteger.value_);
         }
     }
-
-    return Integer::Undefined();
 }
 
 Integer Integer::operator%(const Integer& anInteger) const
 {
     if (anInteger.isZero())
     {
-        return Integer::Undefined();
+        throw ostk::core::error::RuntimeError("Modulo by zero.");
     }
 
-    if ((type_ != Integer::Type::Undefined) && (anInteger.type_ != Integer::Type::Undefined))
+    if (this->isZero())
     {
-        if (this->isZero())
-        {
-            return Integer::Zero();
-        }
-        else if (!this->isInfinity() && anInteger.isInfinity())
-        {
-            return *this;
-        }
-        else if ((!this->isInfinity()) && this->isStrictlyPositive() && (!anInteger.isInfinity()) &&
-                 (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
-        {
-            return *this;
-        }
-        else if ((!anInteger.isInfinity()) && (std::abs(anInteger.value_) == 1))
-        {
-            return Integer::Zero();
-        }
-        else if (this->isInfinity())
-        {
-            return Integer::Undefined();
-        }
-        else
-        {
-            return Integer(value_ % anInteger.value_);
-        }
+        return Integer::Zero();
     }
-
-    return Integer::Undefined();
+    else if (!this->isInfinity() && anInteger.isInfinity())
+    {
+        return *this;
+    }
+    else if ((!this->isInfinity()) && this->isStrictlyPositive() && (!anInteger.isInfinity()) &&
+             (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+    {
+        return *this;
+    }
+    else if ((!anInteger.isInfinity()) && (std::abs(anInteger.value_) == 1))
+    {
+        return Integer::Zero();
+    }
+    else if (this->isInfinity())
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: Inf % n.");
+    }
+    else
+    {
+        return Integer(value_ % anInteger.value_);
+    }
 }
 
 Integer Integer::operator+(const Integer::ValueType& anInteger) const
@@ -536,9 +521,6 @@ Integer Integer::operator-() const
             return Integer(-value_);
         }
 
-        case Integer::Type::Undefined:
-            return Integer::Undefined();
-
         case Integer::Type::PositiveInfinity:
             return Integer::NegativeInfinity();
 
@@ -549,7 +531,7 @@ Integer Integer::operator-() const
             break;
     }
 
-    return Integer::Undefined();
+    throw ostk::core::error::RuntimeError("Cannot negate Integer.");
 }
 
 Integer& Integer::operator++()
@@ -570,7 +552,6 @@ Integer& Integer::operator++()
             break;
         }
 
-        case Integer::Type::Undefined:
         case Integer::Type::PositiveInfinity:
         case Integer::Type::NegativeInfinity:
         default:
@@ -598,7 +579,6 @@ Integer& Integer::operator--()
             break;
         }
 
-        case Integer::Type::Undefined:
         case Integer::Type::PositiveInfinity:
         case Integer::Type::NegativeInfinity:
         default:
@@ -630,7 +610,6 @@ Integer Integer::operator++(int anInteger)
             break;
         }
 
-        case Integer::Type::Undefined:
         case Integer::Type::PositiveInfinity:
         case Integer::Type::NegativeInfinity:
         default:
@@ -662,7 +641,6 @@ Integer Integer::operator--(int anInteger)
             break;
         }
 
-        case Integer::Type::Undefined:
         case Integer::Type::PositiveInfinity:
         case Integer::Type::NegativeInfinity:
         default:
@@ -676,7 +654,7 @@ Integer::operator Integer::ValueType() const
 {
     if (type_ != Integer::Type::Defined)
     {
-        throw ostk::core::error::runtime::Undefined("Integer");
+        throw ostk::core::error::RuntimeError("Cannot convert non-finite Integer to value.");
     }
 
     return value_;
@@ -688,10 +666,6 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Integer& anInteger)
 
     switch (anInteger.type_)
     {
-        case Integer::Type::Undefined:
-            anOutputStream << "Undefined";
-            break;
-
         case Integer::Type::Defined:
             anOutputStream << anInteger.value_;
             break;
@@ -705,19 +679,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Integer& anInteger)
             break;
     }
 
-    // ostk::core::utility::Output::Header(anOutputStream, "Integer") ;
-
-    // ostk::core::utility::Output::Line(anOutputStream) << "Type:" << anInteger.type_ ;
-    // ostk::core::utility::Output::Line(anOutputStream) << "Value:" << anInteger.value_ ;
-
-    // ostk::core::utility::Output::Footer(anOutputStream) ;
-
     return anOutputStream;
-}
-
-bool Integer::isDefined() const
-{
-    return type_ != Integer::Type::Undefined;
 }
 
 bool Integer::isZero() const
@@ -779,9 +741,6 @@ type::Sign Integer::getSign() const
 {
     switch (type_)
     {
-        case Integer::Type::Undefined:
-            return type::Sign::Undefined;
-
         case Integer::Type::Defined:
         {
             if (value_ > 0)
@@ -813,9 +772,6 @@ type::String Integer::toString() const
 {
     switch (type_)
     {
-        case Integer::Type::Undefined:
-            return "Undefined";
-
         case Integer::Type::Defined:
             return boost::lexical_cast<std::string>(value_);
 
@@ -827,11 +783,6 @@ type::String Integer::toString() const
     }
 
     return type::String::Empty();
-}
-
-Integer Integer::Undefined()
-{
-    return Integer(Integer::Type::Undefined, 0);
 }
 
 Integer Integer::Zero()
@@ -949,7 +900,7 @@ bool Integer::CanParse(const type::String& aString)
         return false;
     }
 
-    if ((aString == "Undefined") || (aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
+    if ((aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
     {
         return true;
     }
@@ -969,8 +920,6 @@ Integer Integer::Parse(char aCharacter)
     {
         throw ostk::core::error::RuntimeError("Cannot cast character [" + String::Char(aCharacter) + "] to Integer.");
     }
-
-    return Integer::Undefined();
 }
 
 Integer Integer::Parse(const type::String& aString)
@@ -978,11 +927,6 @@ Integer Integer::Parse(const type::String& aString)
     if (aString.isEmpty())
     {
         throw ostk::core::error::runtime::Undefined("String");
-    }
-
-    if (aString == "Undefined")
-    {
-        return Integer::Undefined();
     }
 
     if ((aString == "Inf") || (aString == "+Inf"))
@@ -1003,8 +947,6 @@ Integer Integer::Parse(const type::String& aString)
     {
         throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Integer.");
     }
-
-    return Integer::Undefined();
 }
 
 Integer::Integer(const Integer::Type& aType, const Integer::ValueType& anInteger)

@@ -33,15 +33,11 @@ class User
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const User& aUser);
 
-    bool isDefined() const;
-
     int getUID() const;
 
     int getEUID() const;
 
     String getName() const;
-
-    static User Undefined();
 
     static User Process();
 

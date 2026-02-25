@@ -3,6 +3,8 @@
 #ifndef __OpenSpaceToolkit_Core_Type_Real__
 #define __OpenSpaceToolkit_Core_Type_Real__
 
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/Sign.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
@@ -82,7 +84,6 @@ class Real
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal);
 
-    bool isDefined() const;
     bool isZero() const;
     bool isPositive() const;
     bool isNegative() const;
@@ -99,7 +100,7 @@ class Real
 
     type::Sign getSign() const;
 
-    type::String toString(const type::Integer& aPrecision = type::Integer::Undefined()) const;
+    type::String toString(const std::optional<type::Integer>& aPrecision = std::nullopt) const;
 
     type::Integer toInteger() const;
 
@@ -108,8 +109,6 @@ class Real
     type::Integer floor() const;
 
     Real sqrt() const;
-
-    static Real Undefined();
 
     static Real Zero();
 
@@ -135,7 +134,6 @@ class Real
     enum class Type
     {
 
-        Undefined,
         Defined,
         PositiveInfinity,
         NegativeInfinity

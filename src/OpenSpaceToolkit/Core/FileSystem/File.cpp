@@ -51,7 +51,7 @@ bool File::operator==(const File& aFile) const
         return false;
     }
 
-    return path_ == aFile.path_;
+    return path_.value() == aFile.path_.value();
 }
 
 bool File::operator!=(const File& aFile) const
@@ -67,7 +67,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const File& aFile)
     ostk::core::utils::Print::Line(anOutputStream)
         << "Extension:" << (aFile.isDefined() ? aFile.getExtension() : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
-        << "Path:" << (aFile.isDefined() ? aFile.path_.toString() : "Undefined");
+        << "Path:" << (aFile.isDefined() ? aFile.path_.value().toString() : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Exists:" << (aFile.isDefined() ? String::Boolean(aFile.exists()) : "Undefined");
 
@@ -78,7 +78,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const File& aFile)
 
 bool File::isDefined() const
 {
-    return path_.isDefined();
+    return path_.has_value();
 }
 
 bool File::exists() const
@@ -90,7 +90,7 @@ bool File::exists() const
 
     try
     {
-        return boost::filesystem::exists(path_.toString());
+        return boost::filesystem::exists(path_.value().toString());
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -121,10 +121,10 @@ String File::getName(const bool withExtension) const
     {
         if (!withExtension)
         {
-            return boost::filesystem::path(path_.toString()).stem().string();
+            return boost::filesystem::path(path_.value().toString()).stem().string();
         }
 
-        return boost::filesystem::path(path_.toString()).filename().string();
+        return boost::filesystem::path(path_.value().toString()).filename().string();
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -143,7 +143,7 @@ String File::getExtension() const
 
     try
     {
-        const String fullExtension = boost::filesystem::path(path_.toString()).extension().string();
+        const String fullExtension = boost::filesystem::path(path_.value().toString()).extension().string();
 
         if (fullExtension.getLength() > 1)
         {
@@ -167,7 +167,7 @@ filesystem::Path File::getPath() const
         throw ostk::core::error::runtime::Undefined("File");
     }
 
-    return path_;
+    return path_.value();
 }
 
 filesystem::PermissionSet File::getPermissions() const
@@ -279,7 +279,7 @@ filesystem::PermissionSet File::getPermissions() const
         throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString());
     }
 
-    return {canRead(path_), canWrite(path_), canExecute(path_)};
+    return {canRead(path_.value()), canWrite(path_.value()), canExecute(path_.value())};
 }
 
 filesystem::Directory File::getParentDirectory() const
@@ -289,7 +289,7 @@ filesystem::Directory File::getParentDirectory() const
         throw ostk::core::error::runtime::Undefined("File");
     }
 
-    String filePathString = path_.getNormalizedPath().toString();
+    String filePathString = path_.value().getNormalizedPath().toString();
 
     // Below is a hacky solution to trim trailing slashes
 
@@ -318,7 +318,7 @@ String File::getContents() const
         throw ostk::core::error::RuntimeError("File [{}] does not exist.", this->toString());
     }
 
-    std::fstream fileStream {path_.toString(), std::fstream::in};
+    std::fstream fileStream {path_.value().toString(), std::fstream::in};
 
     if (!fileStream.is_open())
     {
@@ -350,7 +350,7 @@ String File::toString() const
         throw ostk::core::error::runtime::Undefined("File");
     }
 
-    return path_.toString();
+    return path_.value().toString();
 }
 
 void File::open(const File::OpenMode& anOpenMode)
@@ -400,7 +400,7 @@ void File::open(const File::OpenMode& anOpenMode)
             break;
     }
 
-    fileStreamUPtr_ = std::make_unique<std::fstream>(path_.toString(), fileOpenMode);
+    fileStreamUPtr_ = std::make_unique<std::fstream>(path_.value().toString(), fileOpenMode);
 
     if (!fileStreamUPtr_->is_open())
     {
@@ -471,7 +471,7 @@ void File::moveToDirectory(const filesystem::Directory& aDestination)
 
     try
     {
-        boost::filesystem::rename(path_.toString(), destinationPath.toString());
+        boost::filesystem::rename(path_.value().toString(), destinationPath.toString());
 
         path_ = destinationPath;
     }
@@ -499,7 +499,7 @@ void File::create(
         parentDirectory.create();
     }
 
-    const filesystem::Path filePath = path_;
+    const filesystem::Path filePath = path_.value();
 
     std::fstream fileStream;
 
@@ -540,7 +540,7 @@ void File::remove()
 
     try
     {
-        boost::filesystem::remove(path_.toString());
+        boost::filesystem::remove(path_.value().toString());
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -550,21 +550,22 @@ void File::remove()
 
 File File::Undefined()
 {
-    return {Path::Undefined()};
+    return File();
 }
 
 File File::Path(const filesystem::Path& aPath)
 {
-    if (!aPath.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Path");
-    }
-
     return {aPath};
 }
 
 File::File(const filesystem::Path& aPath)
     : path_(aPath),
+      fileStreamUPtr_(nullptr)
+{
+}
+
+File::File()
+    : path_(std::nullopt),
       fileStreamUPtr_(nullptr)
 {
 }

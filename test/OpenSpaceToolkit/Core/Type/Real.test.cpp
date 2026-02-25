@@ -48,7 +48,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, EqualToOperator)
         EXPECT_FALSE(Real(1.0) == Real(0.0));
         EXPECT_FALSE(Real(-1.0) == Real(+1.0));
 
-        EXPECT_FALSE(Real::Undefined() == Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() == Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() == Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() == Real::NegativeInfinity());
@@ -72,7 +71,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, NotEqualToOperator)
         EXPECT_FALSE(Real(+123.0) != Real(+123.0));
         EXPECT_FALSE(Real(-123.0) != Real(-123.0));
 
-        EXPECT_FALSE(Real::Undefined() != Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() != Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() != Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() != Real::NegativeInfinity());
@@ -100,7 +98,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, LessThanOperator)
         EXPECT_FALSE(Real(+123.0) < Real(+123.0));
         EXPECT_FALSE(Real(-123.0) < Real(-123.0));
 
-        EXPECT_FALSE(Real::Undefined() < Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() < Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() < Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() < Real::NegativeInfinity());
@@ -128,7 +125,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, LessThanOrEqualToOperator)
         EXPECT_FALSE(Real(+1.0) <= Real(-1.0));
         EXPECT_FALSE(Real(+123.0) <= Real(-123.0));
 
-        EXPECT_FALSE(Real::Undefined() <= Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() <= Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() <= Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() <= Real::NegativeInfinity());
@@ -156,7 +152,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, GreaterThanOperator)
         EXPECT_FALSE(Real(+123.0) > Real(+123.0));
         EXPECT_FALSE(Real(-123.0) > Real(-123.0));
 
-        EXPECT_FALSE(Real::Undefined() > Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() > Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() > Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() > Real::NegativeInfinity());
@@ -184,7 +179,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, GreaterThanOrEqualToOperator)
         EXPECT_FALSE(Real(-1.0) >= Real(+1.0));
         EXPECT_FALSE(Real(-123.0) >= Real(+123.0));
 
-        EXPECT_FALSE(Real::Undefined() >= Real::Undefined());
         EXPECT_FALSE(Real::PositiveInfinity() >= Real::PositiveInfinity());
         EXPECT_FALSE(Real::NegativeInfinity() >= Real::NegativeInfinity());
         EXPECT_FALSE(Real::PositiveInfinity() >= Real::NegativeInfinity());
@@ -200,18 +194,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
 
     Array<Triple<Real, Real, Real>> testCases = {
 
-        {Real::Undefined(), Real::Undefined(), Real::Undefined()},
-        {Real::Undefined(), Real::NegativeInfinity(), Real::Undefined()},
-        {Real::Undefined(), std::numeric_limits<Real::ValueType>::lowest(), Real::Undefined()},
-        {Real::Undefined(), -2.0, Real::Undefined()},
-        {Real::Undefined(), -1.0, Real::Undefined()},
-        {Real::Undefined(), +0.0, Real::Undefined()},
-        {Real::Undefined(), +1.0, Real::Undefined()},
-        {Real::Undefined(), +2.0, Real::Undefined()},
-        {Real::Undefined(), std::numeric_limits<Real::ValueType>::max(), Real::Undefined()},
-        {Real::Undefined(), Real::PositiveInfinity(), Real::Undefined()},
-
-        {Real::NegativeInfinity(), Real::Undefined(), Real::Undefined()},
         {Real::NegativeInfinity(), Real::NegativeInfinity(), Real::NegativeInfinity()},
         {Real::NegativeInfinity(), std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity()},
         {Real::NegativeInfinity(), -2.0, Real::NegativeInfinity()},
@@ -220,9 +202,7 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {Real::NegativeInfinity(), +1.0, Real::NegativeInfinity()},
         {Real::NegativeInfinity(), +2.0, Real::NegativeInfinity()},
         {Real::NegativeInfinity(), std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
-        {Real::NegativeInfinity(), Real::PositiveInfinity(), Real::Undefined()},
 
-        {std::numeric_limits<Real::ValueType>::lowest(), Real::Undefined(), Real::Undefined()},
         {std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity(), Real::NegativeInfinity()},
         {std::numeric_limits<Real::ValueType>::lowest(),
          std::numeric_limits<Real::ValueType>::lowest(),
@@ -237,7 +217,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
          std::numeric_limits<Real::ValueType>::lowest() + std::numeric_limits<Real::ValueType>::max()},
         {std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {-2.0, Real::Undefined(), Real::Undefined()},
         {-2.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {-2.0, std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity()},
         {-2.0, -2.0, -4.0},
@@ -248,7 +227,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {-2.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::max() - 2},
         {-2.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {-1.0, Real::Undefined(), Real::Undefined()},
         {-1.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity()},
         {-1.0, -2.0, -3.0},
@@ -259,7 +237,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {-1.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::max() - 1},
         {-1.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {+0.0, Real::Undefined(), Real::Undefined()},
         {+0.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {+0.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest()},
         {+0.0, -2.0, -2.0},
@@ -270,7 +247,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {+0.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::max()},
         {+0.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {+1.0, Real::Undefined(), Real::Undefined()},
         {+1.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {+1.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest() + 1},
         {+1.0, -2.0, -1.0},
@@ -281,7 +257,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {+1.0, std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()},
         {+1.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {+2.0, Real::Undefined(), Real::Undefined()},
         {+2.0, Real::NegativeInfinity(), Real::NegativeInfinity()},
         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest() + 2},
         {+2.0, -2.0, +0.0},
@@ -292,7 +267,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         {+2.0, std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()},
         {+2.0, Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {std::numeric_limits<Real::ValueType>::max(), Real::Undefined(), Real::Undefined()},
         {std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity(), Real::NegativeInfinity()},
         {std::numeric_limits<Real::ValueType>::max(),
          std::numeric_limits<Real::ValueType>::lowest(),
@@ -307,8 +281,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
          Real::PositiveInfinity()},
         {std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity(), Real::PositiveInfinity()},
 
-        {Real::PositiveInfinity(), Real::Undefined(), Real::Undefined()},
-        {Real::PositiveInfinity(), Real::NegativeInfinity(), Real::Undefined()},
         {Real::PositiveInfinity(), std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
         {Real::PositiveInfinity(), -2.0, Real::PositiveInfinity()},
         {Real::PositiveInfinity(), -1.0, Real::PositiveInfinity()},
@@ -326,26 +298,23 @@ TEST(OpenSpaceToolkit_Core_Type_Real, AdditionOperator)
         const Real& b = testCase.second;
         const Real& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a + b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a + b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a + b);
-            }
+            EXPECT_TRUE((a + b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a + b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a + b).isDefined());
+            EXPECT_EQ(c, a + b);
         }
     }
+
+    // Indeterminate forms: +Inf + (-Inf), -Inf + (+Inf)
+    EXPECT_ANY_THROW(Real::PositiveInfinity() + Real::NegativeInfinity());
+    EXPECT_ANY_THROW(Real::NegativeInfinity() + Real::PositiveInfinity());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
@@ -356,19 +325,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
 
     Array<Triple<Real, Real, Real>> testCases = {
 
-        {Real::Undefined(), Real::Undefined(), Real::Undefined()},
-        {Real::Undefined(), Real::NegativeInfinity(), Real::Undefined()},
-        {Real::Undefined(), std::numeric_limits<Real::ValueType>::lowest(), Real::Undefined()},
-        {Real::Undefined(), -2.0, Real::Undefined()},
-        {Real::Undefined(), -1.0, Real::Undefined()},
-        {Real::Undefined(), +0.0, Real::Undefined()},
-        {Real::Undefined(), +1.0, Real::Undefined()},
-        {Real::Undefined(), +2.0, Real::Undefined()},
-        {Real::Undefined(), std::numeric_limits<Real::ValueType>::max(), Real::Undefined()},
-        {Real::Undefined(), Real::PositiveInfinity(), Real::Undefined()},
-
-        {Real::NegativeInfinity(), Real::Undefined(), Real::Undefined()},
-        {Real::NegativeInfinity(), Real::NegativeInfinity(), Real::Undefined()},
         {Real::NegativeInfinity(), std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity()},
         {Real::NegativeInfinity(), -2.0, Real::NegativeInfinity()},
         {Real::NegativeInfinity(), -1.0, Real::NegativeInfinity()},
@@ -378,7 +334,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {Real::NegativeInfinity(), std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
         {Real::NegativeInfinity(), Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {std::numeric_limits<Real::ValueType>::lowest(), Real::Undefined(), Real::Undefined()},
         {std::numeric_limits<Real::ValueType>::lowest(), Real::NegativeInfinity(), Real::PositiveInfinity()},
         {std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::lowest(), +0.0},
         {std::numeric_limits<Real::ValueType>::lowest(), -2.0, std::numeric_limits<Real::ValueType>::lowest() + 2},
@@ -391,7 +346,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
          Real::NegativeInfinity()},
         {std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {-2.0, Real::Undefined(), Real::Undefined()},
         {-2.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {-2.0, std::numeric_limits<Real::ValueType>::lowest(), -2 - std::numeric_limits<Real::ValueType>::lowest()},
         {-2.0, -2.0, +0.0},
@@ -402,7 +356,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {-2.0, std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
         {-2.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {-1.0, Real::Undefined(), Real::Undefined()},
         {-1.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {-1.0, std::numeric_limits<Real::ValueType>::lowest(), std::numeric_limits<Real::ValueType>::max()},
         {-1.0, -2.0, +1.0},
@@ -413,7 +366,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {-1.0, std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity()},
         {-1.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {+0.0, Real::Undefined(), Real::Undefined()},
         {+0.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {+0.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
         {+0.0, -2.0, +2.0},
@@ -424,7 +376,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {+0.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::lowest() + 1},
         {+0.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {+1.0, Real::Undefined(), Real::Undefined()},
         {+1.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {+1.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
         {+1.0, -2.0, +3.0},
@@ -435,7 +386,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {+1.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::lowest() + 2},
         {+1.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {+2.0, Real::Undefined(), Real::Undefined()},
         {+2.0, Real::NegativeInfinity(), Real::PositiveInfinity()},
         {+2.0, std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
         {+2.0, -2.0, +4.0},
@@ -446,7 +396,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {+2.0, std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::lowest() + 3},
         {+2.0, Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {std::numeric_limits<Real::ValueType>::max(), Real::Undefined(), Real::Undefined()},
         {std::numeric_limits<Real::ValueType>::max(), Real::NegativeInfinity(), Real::PositiveInfinity()},
         {std::numeric_limits<Real::ValueType>::max(),
          std::numeric_limits<Real::ValueType>::lowest(),
@@ -459,7 +408,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {std::numeric_limits<Real::ValueType>::max(), std::numeric_limits<Real::ValueType>::max(), +0.0},
         {std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity(), Real::NegativeInfinity()},
 
-        {Real::PositiveInfinity(), Real::Undefined(), Real::Undefined()},
         {Real::PositiveInfinity(), Real::NegativeInfinity(), Real::PositiveInfinity()},
         {Real::PositiveInfinity(), std::numeric_limits<Real::ValueType>::lowest(), Real::PositiveInfinity()},
         {Real::PositiveInfinity(), -2.0, Real::PositiveInfinity()},
@@ -467,8 +415,7 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         {Real::PositiveInfinity(), +0.0, Real::PositiveInfinity()},
         {Real::PositiveInfinity(), +1.0, Real::PositiveInfinity()},
         {Real::PositiveInfinity(), +2.0, Real::PositiveInfinity()},
-        {Real::PositiveInfinity(), std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()},
-        {Real::PositiveInfinity(), Real::PositiveInfinity(), Real::Undefined()}
+        {Real::PositiveInfinity(), std::numeric_limits<Real::ValueType>::max(), Real::PositiveInfinity()}
 
     };
 
@@ -478,26 +425,23 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
         const Real& b = testCase.second;
         const Real& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a - b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a - b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a - b);
-            }
+            EXPECT_TRUE((a - b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a - b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a - b).isDefined());
+            EXPECT_EQ(c, a - b);
         }
     }
+
+    // Indeterminate forms: +Inf - (+Inf), -Inf - (-Inf)
+    EXPECT_ANY_THROW(Real::PositiveInfinity() - Real::PositiveInfinity());
+    EXPECT_ANY_THROW(Real::NegativeInfinity() - Real::NegativeInfinity());
 }
 
 // TEST (OpenSpaceToolkit_Core_Type_Real, MultiplicationOperator)
@@ -1678,22 +1622,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, SubtractionOperator)
 
 // // }
 
-TEST(OpenSpaceToolkit_Core_Type_Real, IsDefined)
-{
-    using ostk::core::type::Real;
-
-    EXPECT_TRUE(Real(0.0).isDefined());
-    EXPECT_TRUE(Real(-1.0).isDefined());
-    EXPECT_TRUE(Real(+0.0).isDefined());
-    EXPECT_TRUE(Real(+1.0).isDefined());
-    EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::lowest()).isDefined());
-    EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::max()).isDefined());
-    EXPECT_TRUE(Real::NegativeInfinity().isDefined());
-    EXPECT_TRUE(Real::PositiveInfinity().isDefined());
-
-    EXPECT_FALSE(Real::Undefined().isDefined());
-}
-
 TEST(OpenSpaceToolkit_Core_Type_Real, IsZero)
 {
     using ostk::core::type::Real;
@@ -1707,7 +1635,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsZero)
     EXPECT_FALSE(Real(std::numeric_limits<Real::ValueType>::max()).isZero());
     EXPECT_FALSE(Real::NegativeInfinity().isZero());
     EXPECT_FALSE(Real::PositiveInfinity().isZero());
-    EXPECT_FALSE(Real::Undefined().isZero());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, IsPositive)
@@ -1720,7 +1647,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsPositive)
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::max()).isPositive());
     EXPECT_TRUE(Real::PositiveInfinity().isPositive());
 
-    EXPECT_FALSE(Real::Undefined().isPositive());
     EXPECT_FALSE(Real(-1.0).isPositive());
     EXPECT_FALSE(Real(std::numeric_limits<Real::ValueType>::lowest()).isPositive());
     EXPECT_FALSE(Real::NegativeInfinity().isPositive());
@@ -1736,7 +1662,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsNegative)
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::lowest()).isNegative());
     EXPECT_TRUE(Real::NegativeInfinity().isNegative());
 
-    EXPECT_FALSE(Real::Undefined().isNegative());
     EXPECT_FALSE(Real(+1.0).isNegative());
     EXPECT_FALSE(Real(std::numeric_limits<Real::ValueType>::max()).isNegative());
     EXPECT_FALSE(Real::PositiveInfinity().isNegative());
@@ -1750,7 +1675,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsStrictlyPositive)
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::max()).isStrictlyPositive());
     EXPECT_TRUE(Real::PositiveInfinity().isStrictlyPositive());
 
-    EXPECT_FALSE(Real::Undefined().isStrictlyPositive());
     EXPECT_FALSE(Real(0.0).isStrictlyPositive());
     EXPECT_FALSE(Real(-1.0).isStrictlyPositive());
     EXPECT_FALSE(Real(+0.0).isStrictlyPositive());
@@ -1766,7 +1690,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsStrictlyNegative)
     EXPECT_TRUE(Real(std::numeric_limits<Real::ValueType>::lowest()).isStrictlyNegative());
     EXPECT_TRUE(Real::NegativeInfinity().isStrictlyNegative());
 
-    EXPECT_FALSE(Real::Undefined().isStrictlyNegative());
     EXPECT_FALSE(Real(0.0).isStrictlyNegative());
     EXPECT_FALSE(Real(+1.0).isStrictlyNegative());
     EXPECT_FALSE(Real(+0.0).isStrictlyNegative());
@@ -1781,7 +1704,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsInfinity)
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity());
     EXPECT_TRUE(Real::PositiveInfinity().isInfinity());
 
-    EXPECT_FALSE(Real::Undefined().isInfinity());
     EXPECT_FALSE(Real(0.0).isInfinity());
     EXPECT_FALSE(Real(-1.0).isInfinity());
     EXPECT_FALSE(Real(+0.0).isInfinity());
@@ -1796,7 +1718,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsPositiveInfinity)
 
     EXPECT_TRUE(Real::PositiveInfinity().isPositiveInfinity());
 
-    EXPECT_FALSE(Real::Undefined().isPositiveInfinity());
     EXPECT_FALSE(Real(0.0).isPositiveInfinity());
     EXPECT_FALSE(Real(-1.0).isPositiveInfinity());
     EXPECT_FALSE(Real(+0.0).isPositiveInfinity());
@@ -1812,7 +1733,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsNegativeInfinity)
 
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity());
 
-    EXPECT_FALSE(Real::Undefined().isNegativeInfinity());
     EXPECT_FALSE(Real(0.0).isNegativeInfinity());
     EXPECT_FALSE(Real(-1.0).isNegativeInfinity());
     EXPECT_FALSE(Real(+0.0).isNegativeInfinity());
@@ -1853,7 +1773,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsInteger)
     }
 
     {
-        EXPECT_FALSE(Real::Undefined().isInteger());
         EXPECT_FALSE(Real::NegativeInfinity().isInteger());
         EXPECT_FALSE(Real::PositiveInfinity().isInteger());
     }
@@ -1877,7 +1796,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsFinite)
     }
 
     {
-        EXPECT_FALSE(Real::Undefined().isFinite());
         EXPECT_FALSE(Real::NegativeInfinity().isFinite());
         EXPECT_FALSE(Real::PositiveInfinity().isFinite());
     }
@@ -1902,14 +1820,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsNear)
         EXPECT_FALSE(Real::NegativeInfinity().isNear(Real::NegativeInfinity(), 0.0));
         EXPECT_FALSE(Real::PositiveInfinity().isNear(Real::PositiveInfinity(), 0.0));
     }
-
-    {
-        EXPECT_ANY_THROW(Real::Undefined().isNear(Real::Undefined(), Real::Undefined()));
-        EXPECT_ANY_THROW(Real::Undefined().isNear(Real::Undefined(), 0.0));
-        EXPECT_ANY_THROW(Real::Undefined().isNear(0.0, 0.0));
-        EXPECT_ANY_THROW(Real(0.0).isNear(Real::Undefined(), 0.0));
-        EXPECT_ANY_THROW(Real(0.0).isNear(0.0, Real::Undefined()));
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, GetSign)
@@ -1917,7 +1827,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, GetSign)
     using ostk::core::type::Real;
     using ostk::core::type::Sign;
 
-    EXPECT_EQ(Sign::Undefined, Real::Undefined().getSign());
     EXPECT_EQ(Sign::None, Real(0.0).getSign());
     EXPECT_EQ(Sign::Negative, Real(-1.0).getSign());
     EXPECT_EQ(Sign::None, Real(+0.0).getSign());
@@ -2151,10 +2060,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, ToString)
         EXPECT_EQ("-Inf", Real::NegativeInfinity().toString(3));
         EXPECT_EQ("+Inf", Real::PositiveInfinity().toString(3));
     }
-
-    {
-        EXPECT_EQ("Undefined", Real::Undefined().toString(3));
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, ToInteger)
@@ -2173,7 +2078,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, ToInteger)
     }
 
     {
-        EXPECT_ANY_THROW(Real::Undefined().toInteger());
         EXPECT_ANY_THROW(Real(0.1).toInteger());
         EXPECT_ANY_THROW(Real(10.1).toInteger());
     }
@@ -2192,17 +2096,8 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Abs)
     }
 
     {
-        EXPECT_NO_THROW(Real::Undefined().abs());
-
-        EXPECT_FALSE(Real::Undefined().abs().isDefined());
-    }
-
-    {
         EXPECT_NO_THROW(Real::PositiveInfinity().abs());
         EXPECT_NO_THROW(Real::NegativeInfinity().abs());
-
-        EXPECT_TRUE(Real::PositiveInfinity().abs().isDefined());
-        EXPECT_TRUE(Real::NegativeInfinity().abs().isDefined());
 
         EXPECT_TRUE(Real::PositiveInfinity().abs().isPositiveInfinity());
         EXPECT_TRUE(Real::NegativeInfinity().abs().isPositiveInfinity());
@@ -2224,13 +2119,8 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Floor)
     }
 
     {
-        EXPECT_NO_THROW(Real::Undefined().floor());
-        EXPECT_NO_THROW(Real::PositiveInfinity().floor());
-        EXPECT_NO_THROW(Real::NegativeInfinity().floor());
-
-        EXPECT_FALSE(Real::Undefined().floor().isDefined());
-        EXPECT_FALSE(Real::PositiveInfinity().floor().isDefined());
-        EXPECT_FALSE(Real::NegativeInfinity().floor().isDefined());
+        EXPECT_ANY_THROW(Real::PositiveInfinity().floor());
+        EXPECT_ANY_THROW(Real::NegativeInfinity().floor());
     }
 }
 
@@ -2245,38 +2135,16 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Sqrt)
     }
 
     {
-        EXPECT_NO_THROW(Real(-1.0).sqrt());
-        EXPECT_NO_THROW(Real(-2.0).sqrt());
-
-        EXPECT_FALSE(Real(-1.0).sqrt().isDefined());
-        EXPECT_FALSE(Real(-2.0).sqrt().isDefined());
-    }
-
-    {
-        EXPECT_NO_THROW(Real::Undefined().sqrt());
-
-        EXPECT_FALSE(Real::Undefined().sqrt().isDefined());
+        EXPECT_ANY_THROW(Real(-1.0).sqrt());
+        EXPECT_ANY_THROW(Real(-2.0).sqrt());
     }
 
     {
         EXPECT_NO_THROW(Real::PositiveInfinity().sqrt());
-        EXPECT_NO_THROW(Real::NegativeInfinity().sqrt());
-
-        EXPECT_TRUE(Real::PositiveInfinity().sqrt().isDefined());
-        EXPECT_FALSE(Real::NegativeInfinity().sqrt().isDefined());
+        EXPECT_ANY_THROW(Real::NegativeInfinity().sqrt());
 
         EXPECT_TRUE(Real::PositiveInfinity().sqrt().isPositiveInfinity());
     }
-}
-
-TEST(OpenSpaceToolkit_Core_Type_Real, Undefined)
-{
-    using ostk::core::type::Real;
-
-    EXPECT_NO_THROW(Real::Undefined());
-
-    EXPECT_FALSE(Real::Undefined().isDefined());
-    EXPECT_FALSE(Real::Undefined().isInfinity());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, Zero)
@@ -2284,7 +2152,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Zero)
     using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Zero());
-    EXPECT_TRUE(Real::Zero().isDefined());
 
     EXPECT_EQ(0.0, Real::Zero());
 }
@@ -2294,7 +2161,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Pi)
     using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Pi());
-    EXPECT_TRUE(Real::Pi().isDefined());
 
     EXPECT_EQ(M_PI, Real::Pi());
 }
@@ -2304,7 +2170,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, HalfPi)
     using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::HalfPi());
-    EXPECT_TRUE(Real::HalfPi().isDefined());
 
     EXPECT_EQ(M_PI / 2.0, Real::HalfPi());
 }
@@ -2314,7 +2179,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, TwoPi)
     using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::TwoPi());
-    EXPECT_TRUE(Real::TwoPi().isDefined());
 
     EXPECT_EQ(2.0 * M_PI, Real::TwoPi());
 }
@@ -2324,7 +2188,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Epsilon)
     using ostk::core::type::Real;
 
     EXPECT_NO_THROW(Real::Epsilon());
-    EXPECT_TRUE(Real::Epsilon().isDefined());
     EXPECT_FALSE(Real::Epsilon().isZero());
 
     EXPECT_EQ(1e-15, Real::Epsilon());
@@ -2336,7 +2199,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, PositiveInfinity)
 
     EXPECT_NO_THROW(Real::PositiveInfinity());
 
-    EXPECT_TRUE(Real::PositiveInfinity().isDefined());
     EXPECT_TRUE(Real::PositiveInfinity().isInfinity());
     EXPECT_TRUE(Real::PositiveInfinity().isPositiveInfinity());
 }
@@ -2347,7 +2209,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, NegativeInfinity)
 
     EXPECT_NO_THROW(Real::NegativeInfinity());
 
-    EXPECT_TRUE(Real::NegativeInfinity().isDefined());
     EXPECT_TRUE(Real::NegativeInfinity().isInfinity());
     EXPECT_TRUE(Real::NegativeInfinity().isNegativeInfinity());
 }
@@ -2360,25 +2221,16 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Integer)
     {
         EXPECT_NO_THROW(Real::Integer(Integer(123)));
 
-        EXPECT_TRUE(Real::Integer(Integer(123)).isDefined());
         EXPECT_TRUE(Real::Integer(Integer(123)).isInteger());
         EXPECT_TRUE(Real::Integer(Integer(123)).isFinite());
 
         EXPECT_EQ(Integer(123), Real::Integer(Integer(123)).toInteger());
-    }
-
-    {
-        EXPECT_NO_THROW(Real::Integer(Integer::Undefined()));
-
-        EXPECT_FALSE(Real::Integer(Integer::Undefined()).isDefined());
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, CanParse)
 {
     using ostk::core::type::Real;
-
-    EXPECT_TRUE(Real::CanParse("Undefined"));
 
     EXPECT_TRUE(Real::CanParse("0"));
     EXPECT_TRUE(Real::CanParse("-1"));
@@ -2421,8 +2273,8 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Parse)
 {
     using ostk::core::type::Real;
 
-    EXPECT_FALSE(Real::Parse("Undefined").isDefined());
-    EXPECT_FALSE(Real::Parse("NaN").isDefined());
+    EXPECT_ANY_THROW(Real::Parse("Undefined"));
+    EXPECT_ANY_THROW(Real::Parse("NaN"));
 
     EXPECT_EQ(+0.0, Real::Parse("0"));
     EXPECT_EQ(-1.0, Real::Parse("-1"));

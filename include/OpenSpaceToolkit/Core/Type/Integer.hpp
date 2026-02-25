@@ -199,7 +199,6 @@ class Integer
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Integer& anInteger);
 
-    bool isDefined() const;
     bool isZero() const;
     bool isPositive() const;
     bool isNegative() const;
@@ -216,8 +215,6 @@ class Integer
     type::Sign getSign() const;
 
     type::String toString() const;
-
-    static Integer Undefined();
 
     static Integer Zero();
 
@@ -257,7 +254,6 @@ class Integer
     enum class Type
     {
 
-        Undefined,
         Defined,
         PositiveInfinity,
         NegativeInfinity

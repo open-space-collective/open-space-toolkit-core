@@ -33,8 +33,6 @@ class Group
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Group& aGroup);
 
-    bool isDefined() const;
-
     int getGID() const;
 
     int getEGID() const;
@@ -42,8 +40,6 @@ class Group
     int getSGID() const;
 
     String getName() const;
-
-    static Group Undefined();
 
     static Group Process();
 

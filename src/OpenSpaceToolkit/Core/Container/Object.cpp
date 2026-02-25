@@ -656,7 +656,7 @@ type::String Object::getJsonString() const
             {
                 const type::Integer& integer = anObject.accessInteger();
 
-                if (integer.isDefined() && integer.isFinite())
+                if (integer.isFinite())
                 {
                     value.SetInt(integer);
                 }

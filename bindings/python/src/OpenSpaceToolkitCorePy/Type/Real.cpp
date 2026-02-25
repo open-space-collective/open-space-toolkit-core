@@ -119,22 +119,6 @@ inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
         )
 
         .def(
-            "is_defined",
-            &Real::isDefined,
-            R"doc(
-                Check if the Real number is defined (not NaN or uninitialized).
-
-                Returns:
-                    bool: True if the Real number is defined, False otherwise.
-
-                Example:
-                    >>> real = Real(3.14)
-                    >>> real.is_defined()  # True
-                    >>> undefined_real = Real.undefined()
-                    >>> undefined_real.is_defined()  # False
-            )doc"
-        )
-        .def(
             "is_zero",
             &Real::isZero,
             R"doc(
@@ -380,20 +364,6 @@ inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &Real::Undefined,
-            R"doc(
-                Create an undefined Real number.
-
-                Returns:
-                    Real: An undefined Real number (NaN).
-
-                Example:
-                    >>> undefined_real = Real.undefined()
-                    >>> undefined_real.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "zero",
             &Real::Zero,

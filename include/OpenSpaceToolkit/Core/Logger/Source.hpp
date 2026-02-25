@@ -28,10 +28,6 @@ class Source
 
     Source& operator=(const Source& aSource);
 
-    bool isDefined() const;
-
-    static Source Undefined();
-
     // private:
 
     Unique<source::Source> sourceUPtr_;
