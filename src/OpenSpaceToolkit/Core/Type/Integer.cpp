@@ -124,14 +124,12 @@ Integer Integer::operator+(const Integer& anInteger) const
             return anInteger;
         }
 
-        if ((anInteger.value_ > 0) &&
-            (value_ > (std::numeric_limits<Integer::ValueType>::max() - anInteger.value_)))
+        if ((anInteger.value_ > 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() - anInteger.value_)))
         {
             return Integer::PositiveInfinity();
         }
 
-        if ((anInteger.value_ < 0) &&
-            (value_ < (std::numeric_limits<Integer::ValueType>::min() - anInteger.value_)))
+        if ((anInteger.value_ < 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() - anInteger.value_)))
         {
             return Integer::NegativeInfinity();
         }
@@ -176,14 +174,12 @@ Integer Integer::operator-(const Integer& anInteger) const
             return Integer::PositiveInfinity();
         }
 
-        if ((anInteger.value_ < 0) &&
-            (value_ > (std::numeric_limits<Integer::ValueType>::max() + anInteger.value_)))
+        if ((anInteger.value_ < 0) && (value_ > (std::numeric_limits<Integer::ValueType>::max() + anInteger.value_)))
         {
             return Integer::PositiveInfinity();
         }
 
-        if ((anInteger.value_ > 0) &&
-            (value_ < (std::numeric_limits<Integer::ValueType>::min() + anInteger.value_)))
+        if ((anInteger.value_ > 0) && (value_ < (std::numeric_limits<Integer::ValueType>::min() + anInteger.value_)))
         {
             return Integer::NegativeInfinity();
         }
@@ -257,14 +253,12 @@ Integer Integer::operator*(const Integer& anInteger) const
 
         // Check for -1 for two's complement machines
 
-        if ((value_ < 0) &&
-            (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
+        if ((value_ < 0) && (anInteger.value_ == std::numeric_limits<Integer::ValueType>::min()))
         {
             return Integer::PositiveInfinity();
         }
 
-        if ((anInteger.value_ < 0) &&
-            (value_ == std::numeric_limits<Integer::ValueType>::min()))
+        if ((anInteger.value_ < 0) && (value_ == std::numeric_limits<Integer::ValueType>::min()))
         {
             return Integer::PositiveInfinity();
         }

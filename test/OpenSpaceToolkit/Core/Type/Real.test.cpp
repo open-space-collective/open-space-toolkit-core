@@ -1820,7 +1820,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, IsNear)
         EXPECT_FALSE(Real::NegativeInfinity().isNear(Real::NegativeInfinity(), 0.0));
         EXPECT_FALSE(Real::PositiveInfinity().isNear(Real::PositiveInfinity(), 0.0));
     }
-
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, GetSign)
@@ -2061,7 +2060,6 @@ TEST(OpenSpaceToolkit_Core_Type_Real, ToString)
         EXPECT_EQ("-Inf", Real::NegativeInfinity().toString(3));
         EXPECT_EQ("+Inf", Real::PositiveInfinity().toString(3));
     }
-
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Real, ToInteger)

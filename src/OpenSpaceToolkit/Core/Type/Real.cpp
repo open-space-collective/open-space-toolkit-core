@@ -124,8 +124,8 @@ Real Real::operator+(const Real& aReal) const
             return (value_ != 0.0) ? Real::PositiveInfinity() : aReal;
         }
 
-        if ((aReal.value_ < 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() - aReal.value_)
-                                    ))  // Addition would underflow
+        if ((aReal.value_ < 0.0) &&
+            (value_ <= (std::numeric_limits<Real::ValueType>::lowest() - aReal.value_)))  // Addition would underflow
         {
             return (value_ != 0.0) ? Real::NegativeInfinity() : aReal;
         }
@@ -173,8 +173,8 @@ Real Real::operator-(const Real& aReal) const
             return (value_ != 0.0) ? Real::PositiveInfinity() : -aReal;
         }
 
-        if ((aReal.value_ > 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() + aReal.value_)
-                                    ))  // Subtraction would underflow
+        if ((aReal.value_ > 0.0) &&
+            (value_ <= (std::numeric_limits<Real::ValueType>::lowest() + aReal.value_)))  // Subtraction would underflow
         {
             return (value_ != 0.0) ? Real::NegativeInfinity() : -aReal;
         }

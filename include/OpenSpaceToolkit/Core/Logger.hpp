@@ -36,7 +36,9 @@ class Logger
    public:
     Logger(const String& aChannel);
 
-    Pump operator()(const Severity& aSeverity, const std::optional<Integer>& aLine, const String& aFile, const String& aFunction);
+    Pump operator()(
+        const Severity& aSeverity, const std::optional<Integer>& aLine, const String& aFile, const String& aFunction
+    );
 
     template <class T>
     Pump operator<<(const T& anObject)
