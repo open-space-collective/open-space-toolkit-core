@@ -542,6 +542,5 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Path)
 
     {
         EXPECT_ANY_THROW(Directory::Path(Path::Parse("")));
-        EXPECT_ANY_THROW(Directory::Path(Path::Undefined()));
     }
 }

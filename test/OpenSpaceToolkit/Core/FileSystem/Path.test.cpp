@@ -46,12 +46,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, EqualToOperator)
         EXPECT_FALSE(Path::Parse("/path/to/file") == Path::Parse("/path/to/file2"));
         EXPECT_FALSE(Path::Parse("/path/to/file") == Path::Parse("/path2/to/file"));
     }
-
-    {
-        EXPECT_FALSE(Path::Parse("/path/to/file") == Path::Undefined());
-        EXPECT_FALSE(Path::Undefined() == Path::Parse("/path/to/file"));
-        EXPECT_FALSE(Path::Undefined() == Path::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, NotEqualToOperator)
@@ -62,12 +56,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, NotEqualToOperator)
         EXPECT_TRUE(Path::Parse("/path/to/file") != Path::Parse("/path/to/file/"));
         EXPECT_TRUE(Path::Parse("/path/to/file") != Path::Parse("/path/to/file2"));
         EXPECT_TRUE(Path::Parse("/path/to/file") != Path::Parse("/path2/to/file"));
-    }
-
-    {
-        EXPECT_TRUE(Path::Parse("/path/to/file") != Path::Undefined());
-        EXPECT_TRUE(Path::Undefined() != Path::Parse("/path/to/file"));
-        EXPECT_TRUE(Path::Undefined() != Path::Undefined());
     }
 
     {
@@ -106,14 +94,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionOperator)
         const Path secondPath = Path::Parse("../ghi/jkl");
 
         EXPECT_EQ(Path::Parse("./abc/def/../ghi/jkl"), firstPath + secondPath);
-    }
-
-    {
-        const Path path = Path::Parse("/abc/def");
-
-        EXPECT_ANY_THROW(Path::Undefined() + path);
-        EXPECT_ANY_THROW(path + Path::Undefined());
-        EXPECT_ANY_THROW(Path::Undefined() + Path::Undefined());
     }
 }
 
@@ -156,14 +136,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, AdditionAssignmentOperator)
 
         EXPECT_EQ(Path::Parse("./abc/def/../ghi/jkl"), firstPath);
     }
-
-    {
-        Path path = Path::Parse("/abc/def");
-
-        EXPECT_ANY_THROW(Path::Undefined() += path);
-        EXPECT_ANY_THROW(path += Path::Undefined());
-        EXPECT_ANY_THROW(Path::Undefined() += Path::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, StreamOperator)
@@ -178,23 +150,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, StreamOperator)
         EXPECT_NO_THROW(std::cout << path << std::endl);
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty());
-    }
-}
-
-TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsDefined)
-{
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_TRUE(Path::Parse("/").isDefined());
-        EXPECT_TRUE(Path::Parse("/abc").isDefined());
-        EXPECT_TRUE(Path::Parse("/abc/").isDefined());
-        EXPECT_TRUE(Path::Parse("/abc/def").isDefined());
-        EXPECT_TRUE(Path::Parse("/abc/def.ghi").isDefined());
-    }
-
-    {
-        EXPECT_FALSE(Path::Undefined().isDefined());
     }
 }
 
@@ -226,10 +181,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsAbsolute)
         EXPECT_FALSE(Path::Parse("../abc/def").isAbsolute());
         EXPECT_FALSE(Path::Parse("../abc/def.ghi").isAbsolute());
     }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().isAbsolute());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsRelative)
@@ -260,10 +211,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, IsRelative)
         EXPECT_FALSE(Path::Parse("/abc/./def.ghi").isRelative());
         EXPECT_FALSE(Path::Parse("/abc/../def.ghi").isRelative());
     }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().isRelative());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetParentPath)
@@ -278,10 +225,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetParentPath)
         EXPECT_EQ(Path::Parse("/abc"), Path::Parse("/abc/def.ghi").getParentPath());
         EXPECT_EQ(Path::Parse("/abc/."), Path::Parse("/abc/./def.ghi").getParentPath());
         EXPECT_EQ(Path::Parse("/abc/.."), Path::Parse("/abc/../def.ghi").getParentPath());
-    }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().getParentPath());
     }
 }
 
@@ -311,10 +254,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetLastElement)
         EXPECT_EQ("def", Path::Parse("../abc/def").getLastElement());
         EXPECT_EQ("def.ghi", Path::Parse("../abc/def.ghi").getLastElement());
     }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().getLastElement());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
@@ -343,10 +282,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetNormalizedPath)
         EXPECT_EQ(Path::Parse("/app"), Path::Parse("/app/.").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/"), Path::Parse("/app/..").getNormalizedPath());
         EXPECT_EQ(Path::Parse("/app/build"), Path::Parse("/app/./build").getNormalizedPath());
-    }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().getNormalizedPath());
     }
 }
 
@@ -396,11 +331,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, GetAbsolutePath)
             Path::Parse("/app/docs/./index.html"), Path::Parse("./index.html").getAbsolutePath(Path::Parse("/app/docs"))
         );
     }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().getAbsolutePath());
-        EXPECT_ANY_THROW(Path::Parse("/").getAbsolutePath(Path::Undefined()));
-    }
 }
 
 // TEST (OpenSpaceToolkit_Core_FileSystem_Path, GetRelativePathTo)
@@ -427,20 +357,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, ToString)
         EXPECT_EQ("/abc/def", Path::Parse("/abc/def").toString());
         EXPECT_EQ("/abc/def.ghi", Path::Parse("/abc/def.ghi").toString());
     }
-
-    {
-        EXPECT_ANY_THROW(Path::Undefined().toString());
-    }
-}
-
-TEST(OpenSpaceToolkit_Core_FileSystem_Path, Undefined)
-{
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_NO_THROW(Path::Undefined());
-        EXPECT_FALSE(Path::Undefined().isDefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Path, Root)
@@ -449,7 +365,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Root)
 
     {
         EXPECT_NO_THROW(Path::Root());
-        EXPECT_TRUE(Path::Root().isDefined());
         EXPECT_EQ("/", Path::Root().toString());
     }
 }
@@ -460,7 +375,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Current)
 
     {
         EXPECT_NO_THROW(Path::Current());
-        EXPECT_TRUE(Path::Current().isDefined());
     }
 }
 
@@ -470,7 +384,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Path, Parse)
 
     {
         EXPECT_NO_THROW(Path::Parse("/"));
-        EXPECT_TRUE(Path::Parse("/").isDefined());
         EXPECT_EQ("/", Path::Parse("/").toString());
     }
 

@@ -169,9 +169,9 @@ class Object
 
     static Object Boolean(const bool& aBoolean);
 
-    static Object Integer(const type::Integer& anInteger = type::Integer::Undefined());
+    static Object Integer(const type::Integer& anInteger);
 
-    static Object Real(const type::Real& aReal = type::Real::Undefined());
+    static Object Real(const type::Real& aReal);
 
     static Object String(const type::String& aString = type::String::Empty());
 

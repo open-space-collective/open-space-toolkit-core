@@ -4,6 +4,7 @@
 #define __OpenSpaceToolkit_Core_FileSystem_File__
 
 #include <fstream>
+#include <optional>
 
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
@@ -347,11 +348,13 @@ class File
     static File Path(const filesystem::Path& aPath);
 
    private:
-    filesystem::Path path_;
+    std::optional<filesystem::Path> path_;
 
     Unique<std::fstream> fileStreamUPtr_;
 
     File(const filesystem::Path& aPath);
+
+    File();
 };
 
 }  // namespace filesystem

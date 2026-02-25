@@ -67,8 +67,8 @@ TEST(OpenSpaceToolkit_Core_Container_Tuple, Unpack)
     {
         const Tuple<Integer, String, Integer, String> tuple = {123, "abc", 456, "def"};
 
-        Integer firstInteger = Integer::Undefined();
-        Integer secondInteger = Integer::Undefined();
+        Integer firstInteger = Integer(0);
+        Integer secondInteger = Integer(0);
         String firstString = String::Empty();
         String secondString = String::Empty();
 

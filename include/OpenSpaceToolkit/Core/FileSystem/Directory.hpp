@@ -3,6 +3,8 @@
 #ifndef __OpenSpaceToolkit_Core_FileSystem_Directory__
 #define __OpenSpaceToolkit_Core_FileSystem_Directory__
 
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
@@ -28,10 +30,6 @@ using ostk::core::type::String;
 class Directory
 {
    public:
-    /// @brief              Default constructor (disabled)
-
-    Directory() = delete;
-
     /// @brief              Copy constructor
     ///
     /// @param              [in] aDirectory A directory
@@ -320,9 +318,11 @@ class Directory
     static Directory Path(const filesystem::Path& aPath);
 
    private:
-    filesystem::Path path_;
+    std::optional<filesystem::Path> path_;
 
     Directory(const filesystem::Path& aPath);
+
+    Directory();
 };
 
 }  // namespace filesystem

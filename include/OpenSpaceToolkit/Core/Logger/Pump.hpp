@@ -3,6 +3,8 @@
 #ifndef __OpenSpaceToolkit_Core_Logger_Pump__
 #define __OpenSpaceToolkit_Core_Logger_Pump__
 
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Source.hpp>
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
@@ -29,7 +31,11 @@ class Pump
     using StreamManipulator = std::ostream&(std::ostream&);
 
     Pump(
-        const Severity& aSeverity, const Integer& aLine, const String& aFile, const String& aFunction, Source* aSource
+        const Severity& aSeverity,
+        const std::optional<Integer>& aLine,
+        const String& aFile,
+        const String& aFunction,
+        Source* aSource
     );
 
     Pump(const Pump& aPump) = delete;

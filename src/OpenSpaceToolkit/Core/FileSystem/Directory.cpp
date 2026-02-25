@@ -20,7 +20,7 @@ bool Directory::operator==(const Directory& aDirectory) const
         return false;
     }
 
-    return path_ == aDirectory.path_;
+    return path_.value() == aDirectory.path_.value();
 }
 
 bool Directory::operator!=(const Directory& aDirectory) const
@@ -35,7 +35,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Directory& aDirecto
     ostk::core::utils::Print::Line(anOutputStream)
         << "Name:" << (aDirectory.isDefined() ? aDirectory.getName() : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
-        << "Path:" << (aDirectory.isDefined() ? aDirectory.path_.toString() : "Undefined");
+        << "Path:" << (aDirectory.isDefined() ? aDirectory.path_.value().toString() : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Exists:" << (aDirectory.isDefined() ? String::Boolean(aDirectory.exists()) : "Undefined");
 
@@ -46,7 +46,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Directory& aDirecto
 
 bool Directory::isDefined() const
 {
-    return path_.isDefined();
+    return path_.has_value();
 }
 
 bool Directory::exists() const
@@ -58,7 +58,7 @@ bool Directory::exists() const
 
     try
     {
-        return boost::filesystem::is_directory(path_.toString() + "/");
+        return boost::filesystem::is_directory(path_.value().toString() + "/");
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -77,7 +77,7 @@ bool Directory::isEmpty() const
 
     try
     {
-        return boost::filesystem::is_empty(boost::filesystem::path(path_.toString()));
+        return boost::filesystem::is_empty(boost::filesystem::path(path_.value().toString()));
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -101,7 +101,7 @@ bool Directory::containsFileWithName(const String& aFileName) const
 
     try
     {
-        const boost::filesystem::path directoryPath = {path_.toString()};
+        const boost::filesystem::path directoryPath = {path_.value().toString()};
 
         for (boost::filesystem::directory_iterator directoryIterator {directoryPath};
              directoryIterator != boost::filesystem::directory_iterator();
@@ -140,7 +140,7 @@ String Directory::getName() const
 
     try
     {
-        String directoryPathString = path_.toString();
+        String directoryPathString = path_.value().toString();
 
         while ((directoryPathString.getLength() > 1) && (directoryPathString.getLast() == '/'))
         {
@@ -164,7 +164,7 @@ filesystem::Path Directory::getPath() const
         throw ostk::core::error::runtime::Undefined("File");
     }
 
-    return path_;
+    return path_.value();
 }
 
 // filesystem::PermissionSet               Directory::getPermissions                   ( ) const
@@ -174,7 +174,7 @@ filesystem::Path Directory::getPath() const
 
 Directory Directory::getParentDirectory() const
 {
-    return File::Path(path_).getParentDirectory();
+    return File::Path(path_.value()).getParentDirectory();
 }
 
 // container::Array<filesystem::File>           Directory::getFiles                         ( ) const
@@ -193,7 +193,7 @@ container::Array<Directory> Directory::getDirectories() const
 
     try
     {
-        const boost::filesystem::path directoryPath = {path_.toString()};
+        const boost::filesystem::path directoryPath = {path_.value().toString()};
 
         for (boost::filesystem::directory_iterator directoryIterator {directoryPath};
              directoryIterator != boost::filesystem::directory_iterator();
@@ -231,7 +231,7 @@ String Directory::toString() const
         throw ostk::core::error::runtime::Undefined("Directory");
     }
 
-    return path_.toString();
+    return path_.value().toString();
 }
 
 // void                            Directory::renameTo                         (   const   String& aName )
@@ -261,7 +261,7 @@ void Directory::create(
 
     try
     {
-        String directoryPathString = path_.toString();
+        String directoryPathString = path_.value().toString();
 
         if ((directoryPathString.getLength() > 1) && (directoryPathString.getLast() != '/'))
         {
@@ -296,7 +296,7 @@ void Directory::remove()
 
     try
     {
-        boost::filesystem::remove_all(path_.toString());
+        boost::filesystem::remove_all(path_.value().toString());
     }
     catch (const boost::filesystem::filesystem_error& e)
     {
@@ -306,7 +306,7 @@ void Directory::remove()
 
 Directory Directory::Undefined()
 {
-    return {Path::Undefined()};
+    return Directory();
 }
 
 Directory Directory::Root()
@@ -316,16 +316,16 @@ Directory Directory::Root()
 
 Directory Directory::Path(const filesystem::Path& aPath)
 {
-    if (!aPath.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Path");
-    }
-
     return {aPath};
 }
 
 Directory::Directory(const filesystem::Path& aPath)
     : path_(aPath)
+{
+}
+
+Directory::Directory()
+    : path_(std::nullopt)
 {
 }
 

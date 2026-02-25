@@ -92,265 +92,259 @@ bool Real::operator>=(const Real::ValueType& aReal) const
 
 Real Real::operator+(const Real& aReal) const
 {
-    if ((type_ != Real::Type::Undefined) && (aReal.type_ != Real::Type::Undefined))
+    if ((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::PositiveInfinity))
     {
-        if ((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::PositiveInfinity))
+        return Real::PositiveInfinity();
+    }
+    else if ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::NegativeInfinity))
+    {
+        return Real::NegativeInfinity();
+    }
+    else if (((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::NegativeInfinity)) ||
+             ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::PositiveInfinity)))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: +Inf + (-Inf).");
+    }
+    else if ((type_ == Real::Type::Defined) || (aReal.type_ == Real::Type::Defined))
+    {
+        if (type_ != Real::Type::Defined)
         {
-            return Real::PositiveInfinity();
+            return *this;
         }
-        else if ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::NegativeInfinity))
+        else if (aReal.type_ != Real::Type::Defined)
         {
-            return Real::NegativeInfinity();
+            return aReal;
         }
-        else if ((type_ == Real::Type::Defined) || (aReal.type_ == Real::Type::Defined))
+
+        // [TBC] Use __builtin_add_overflow instead?
+
+        if ((aReal.value_ > 0.0) &&
+            (value_ >= (std::numeric_limits<Real::ValueType>::max() - aReal.value_)))  // Addition would overflow
         {
-            if (type_ != Real::Type::Defined)
-            {
-                return *this;
-            }
-            else if (aReal.type_ != Real::Type::Defined)
-            {
-                return aReal;
-            }
-
-            // [TBC] Use __builtin_add_overflow instead?
-
-            if ((aReal.value_ > 0.0) &&
-                (value_ >= (std::numeric_limits<Real::ValueType>::max() - aReal.value_)))  // Addition would overflow
-            {
-                return (value_ != 0.0) ? Real::PositiveInfinity() : aReal;
-            }
-
-            if ((aReal.value_ < 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() - aReal.value_)
-                                        ))  // Addition would underflow
-            {
-                return (value_ != 0.0) ? Real::NegativeInfinity() : aReal;
-            }
-
-            return Real(value_ + aReal.value_);
+            return (value_ != 0.0) ? Real::PositiveInfinity() : aReal;
         }
+
+        if ((aReal.value_ < 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() - aReal.value_)
+                                    ))  // Addition would underflow
+        {
+            return (value_ != 0.0) ? Real::NegativeInfinity() : aReal;
+        }
+
+        return Real(value_ + aReal.value_);
     }
 
-    return Real::Undefined();
+    throw ostk::core::error::RuntimeError("Indeterminate form: +Inf + (-Inf).");
 }
 
 Real Real::operator-(const Real& aReal) const
 {
-    if ((type_ != Real::Type::Undefined) && (aReal.type_ != Real::Type::Undefined))
+    if ((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::NegativeInfinity))
     {
-        if ((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::NegativeInfinity))
+        return Real::PositiveInfinity();
+    }
+    else if ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::PositiveInfinity))
+    {
+        return Real::NegativeInfinity();
+    }
+    else if (((type_ == Real::Type::PositiveInfinity) && (aReal.type_ == Real::Type::PositiveInfinity)) ||
+             ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::NegativeInfinity)))
+    {
+        throw ostk::core::error::RuntimeError("Indeterminate form: Inf - Inf.");
+    }
+    else if ((type_ == Real::Type::Defined) || (aReal.type_ == Real::Type::Defined))
+    {
+        if (type_ != Real::Type::Defined)
         {
+            return *this;
+        }
+        else if (aReal.type_ != Real::Type::Defined)
+        {
+            if (aReal.type_ == Real::Type::PositiveInfinity)
+            {
+                return Real::NegativeInfinity();
+            }
+
             return Real::PositiveInfinity();
         }
-        else if ((type_ == Real::Type::NegativeInfinity) && (aReal.type_ == Real::Type::PositiveInfinity))
+
+        if ((aReal.value_ < 0.0) &&
+            (value_ >= (std::numeric_limits<Real::ValueType>::max() + aReal.value_)))  // Subtraction would overflow
         {
-            return Real::NegativeInfinity();
+            return (value_ != 0.0) ? Real::PositiveInfinity() : -aReal;
         }
-        else if ((type_ == Real::Type::Defined) || (aReal.type_ == Real::Type::Defined))
+
+        if ((aReal.value_ > 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() + aReal.value_)
+                                    ))  // Subtraction would underflow
         {
-            if (type_ != Real::Type::Defined)
-            {
-                return *this;
-            }
-            else if (aReal.type_ != Real::Type::Defined)
-            {
-                if (aReal.type_ == Real::Type::PositiveInfinity)
-                {
-                    return Real::NegativeInfinity();
-                }
-
-                return Real::PositiveInfinity();
-            }
-
-            if ((aReal.value_ < 0.0) &&
-                (value_ >= (std::numeric_limits<Real::ValueType>::max() + aReal.value_)))  // Subtraction would overflow
-            {
-                return (value_ != 0.0) ? Real::PositiveInfinity() : -aReal;
-            }
-
-            if ((aReal.value_ > 0.0) && (value_ <= (std::numeric_limits<Real::ValueType>::lowest() + aReal.value_)
-                                        ))  // Subtraction would underflow
-            {
-                return (value_ != 0.0) ? Real::NegativeInfinity() : -aReal;
-            }
-
-            return Real(value_ - aReal.value_);
+            return (value_ != 0.0) ? Real::NegativeInfinity() : -aReal;
         }
+
+        return Real(value_ - aReal.value_);
     }
 
-    return Real::Undefined();
+    throw ostk::core::error::RuntimeError("Indeterminate form: Inf - Inf.");
 }
 
 Real Real::operator*(const Real& aReal) const
 {
-    if ((type_ != Real::Type::Undefined) && (aReal.type_ != Real::Type::Undefined))
+    if (type_ == Real::Type::PositiveInfinity)
     {
-        if (type_ == Real::Type::PositiveInfinity)
+        if (aReal.isStrictlyPositive())
         {
-            if (aReal.isStrictlyPositive())
-            {
-                return Real::PositiveInfinity();
-            }
-            else if (aReal.isStrictlyNegative())
-            {
-                return Real::NegativeInfinity();
-            }
-
-            return Real::Undefined();
+            return Real::PositiveInfinity();
         }
-        else if (type_ == Real::Type::NegativeInfinity)
+        else if (aReal.isStrictlyNegative())
         {
-            if (aReal.isStrictlyPositive())
-            {
-                return Real::NegativeInfinity();
-            }
-            else if (aReal.isStrictlyNegative())
-            {
-                return Real::PositiveInfinity();
-            }
-
-            return Real::Undefined();
+            return Real::NegativeInfinity();
         }
-        else if (aReal.type_ == Real::Type::PositiveInfinity)
-        {
-            if (this->isStrictlyPositive())
-            {
-                return Real::PositiveInfinity();
-            }
-            else if (this->isStrictlyNegative())
-            {
-                return Real::NegativeInfinity();
-            }
 
-            return Real::Undefined();
-        }
-        else if (aReal.type_ == Real::Type::NegativeInfinity)
-        {
-            if (this->isStrictlyPositive())
-            {
-                return Real::NegativeInfinity();
-            }
-            else if (this->isStrictlyNegative())
-            {
-                return Real::PositiveInfinity();
-            }
-
-            return Real::Undefined();
-        }
-        else
-        {
-            if (this->isZero() || aReal.isZero())
-            {
-                return Real::Zero();
-            }
-
-            // Check for -1 for two's complement machines
-
-            if ((value_ < 0.0) &&
-                (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))  // Multiplication can overflow
-            {
-                return Real::PositiveInfinity();
-            }
-
-            if ((aReal.value_ < 0.0) &&
-                (value_ == std::numeric_limits<Real::ValueType>::lowest()))  // Multiplication can overflow
-            {
-                return Real::PositiveInfinity();
-            }
-
-            if ((this->getSign() == aReal.getSign()) &&
-                (std::abs(value_) > (std::numeric_limits<Real::ValueType>::max() / std::abs(aReal.value_))
-                ))  // Multiplication would overflow
-            {
-                return Real::PositiveInfinity();
-            }
-
-            if ((value_ == +1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
-            {
-                return Real(std::numeric_limits<Real::ValueType>::lowest());
-            }
-
-            if ((value_ == -1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
-            {
-                return Real::PositiveInfinity();
-            }
-
-            if ((aReal.value_ != -1) && (this->getSign() != aReal.getSign()) &&
-                ((-std::abs(value_)) < (std::numeric_limits<Real::ValueType>::lowest() / std::abs(aReal.value_))
-                ))  // Multiplication would underflow
-            {
-                return Real::NegativeInfinity();
-            }
-
-            return Real(value_ * aReal.value_);
-        }
+        throw ostk::core::error::RuntimeError("Indeterminate form: Inf * 0.");
     }
+    else if (type_ == Real::Type::NegativeInfinity)
+    {
+        if (aReal.isStrictlyPositive())
+        {
+            return Real::NegativeInfinity();
+        }
+        else if (aReal.isStrictlyNegative())
+        {
+            return Real::PositiveInfinity();
+        }
 
-    return Real::Undefined();
+        throw ostk::core::error::RuntimeError("Indeterminate form: Inf * 0.");
+    }
+    else if (aReal.type_ == Real::Type::PositiveInfinity)
+    {
+        if (this->isStrictlyPositive())
+        {
+            return Real::PositiveInfinity();
+        }
+        else if (this->isStrictlyNegative())
+        {
+            return Real::NegativeInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Indeterminate form: 0 * Inf.");
+    }
+    else if (aReal.type_ == Real::Type::NegativeInfinity)
+    {
+        if (this->isStrictlyPositive())
+        {
+            return Real::NegativeInfinity();
+        }
+        else if (this->isStrictlyNegative())
+        {
+            return Real::PositiveInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Indeterminate form: 0 * Inf.");
+    }
+    else
+    {
+        if (this->isZero() || aReal.isZero())
+        {
+            return Real::Zero();
+        }
+
+        // Check for -1 for two's complement machines
+
+        if ((value_ < 0.0) &&
+            (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))  // Multiplication can overflow
+        {
+            return Real::PositiveInfinity();
+        }
+
+        if ((aReal.value_ < 0.0) &&
+            (value_ == std::numeric_limits<Real::ValueType>::lowest()))  // Multiplication can overflow
+        {
+            return Real::PositiveInfinity();
+        }
+
+        if ((this->getSign() == aReal.getSign()) &&
+            (std::abs(value_) > (std::numeric_limits<Real::ValueType>::max() / std::abs(aReal.value_))
+            ))  // Multiplication would overflow
+        {
+            return Real::PositiveInfinity();
+        }
+
+        if ((value_ == +1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
+        {
+            return Real(std::numeric_limits<Real::ValueType>::lowest());
+        }
+
+        if ((value_ == -1) && (aReal.value_ == std::numeric_limits<Real::ValueType>::lowest()))
+        {
+            return Real::PositiveInfinity();
+        }
+
+        if ((aReal.value_ != -1) && (this->getSign() != aReal.getSign()) &&
+            ((-std::abs(value_)) < (std::numeric_limits<Real::ValueType>::lowest() / std::abs(aReal.value_))
+            ))  // Multiplication would underflow
+        {
+            return Real::NegativeInfinity();
+        }
+
+        return Real(value_ * aReal.value_);
+    }
 }
 
 Real Real::operator/(const Real& aReal) const
 {
     if (aReal.isZero())
     {
-        return Real::Undefined();
+        throw ostk::core::error::RuntimeError("Division by zero.");
     }
 
-    if ((type_ != Real::Type::Undefined) && (aReal.type_ != Real::Type::Undefined))
+    if (type_ == Real::Type::PositiveInfinity)
     {
-        if (type_ == Real::Type::PositiveInfinity)
+        if (aReal.isInfinity())
         {
-            if (aReal.isInfinity())
-            {
-                return Real::Undefined();
-            }
-            else if (aReal.isStrictlyPositive())
-            {
-                return Real::PositiveInfinity();
-            }
-            else if (aReal.isStrictlyNegative())
-            {
-                return Real::NegativeInfinity();
-            }
-
-            return Real::Undefined();
+            throw ostk::core::error::RuntimeError("Indeterminate form: Inf / Inf.");
         }
-        else if (type_ == Real::Type::NegativeInfinity)
+        else if (aReal.isStrictlyPositive())
         {
-            if (aReal.isInfinity())
-            {
-                return Real::Undefined();
-            }
-            else if (aReal.isStrictlyPositive())
-            {
-                return Real::NegativeInfinity();
-            }
-            else if (aReal.isStrictlyNegative())
-            {
-                return Real::PositiveInfinity();
-            }
+            return Real::PositiveInfinity();
+        }
+        else if (aReal.isStrictlyNegative())
+        {
+            return Real::NegativeInfinity();
+        }
 
-            return Real::Undefined();
+        throw ostk::core::error::RuntimeError("Division by zero.");
+    }
+    else if (type_ == Real::Type::NegativeInfinity)
+    {
+        if (aReal.isInfinity())
+        {
+            throw ostk::core::error::RuntimeError("Indeterminate form: Inf / Inf.");
+        }
+        else if (aReal.isStrictlyPositive())
+        {
+            return Real::NegativeInfinity();
+        }
+        else if (aReal.isStrictlyNegative())
+        {
+            return Real::PositiveInfinity();
+        }
+
+        throw ostk::core::error::RuntimeError("Division by zero.");
+    }
+    else
+    {
+        if (this->isZero() || aReal.isInfinity())
+        {
+            return Real::Zero();
         }
         else
         {
-            if (this->isZero() || aReal.isInfinity())
+            if ((value_ == std::numeric_limits<Real::ValueType>::lowest()) && (aReal.value_ == -1))
             {
-                return Real::Zero();
+                return Real::PositiveInfinity();
             }
-            else
-            {
-                if ((value_ == std::numeric_limits<Real::ValueType>::lowest()) && (aReal.value_ == -1))
-                {
-                    return Real::PositiveInfinity();
-                }
 
-                return Real(value_ / aReal.value_);
-            }
+            return Real(value_ / aReal.value_);
         }
     }
-
-    return Real::Undefined();
 }
 
 Real Real::operator+(const Real::ValueType& aReal) const
@@ -468,9 +462,6 @@ Real Real::operator-() const
             return Real(-value_);
         }
 
-        case Real::Type::Undefined:
-            return Real::Undefined();
-
         case Real::Type::PositiveInfinity:
             return Real::NegativeInfinity();
 
@@ -481,14 +472,14 @@ Real Real::operator-() const
             break;
     }
 
-    return Real::Undefined();
+    throw ostk::core::error::RuntimeError("Cannot negate Real.");
 }
 
 Real::operator Real::ValueType() const
 {
     if (type_ != Real::Type::Defined)
     {
-        throw ostk::core::error::runtime::Undefined("Real");
+        throw ostk::core::error::RuntimeError("Cannot convert non-finite Real to value.");
     }
 
     return value_;
@@ -496,14 +487,8 @@ Real::operator Real::ValueType() const
 
 std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal)
 {
-    (void)aReal;
-
     switch (aReal.type_)
     {
-        case Real::Type::Undefined:
-            anOutputStream << "Undefined";
-            break;
-
         case Real::Type::Defined:
             anOutputStream << aReal.value_;
             break;
@@ -517,19 +502,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Real& aReal)
             break;
     }
 
-    // ostk::core::utility::Output::Header(anOutputStream, "Real") ;
-
-    // ostk::core::utility::Output::Line(anOutputStream) << "Type:" << aReal.type_ ;
-    // ostk::core::utility::Output::Line(anOutputStream) << "Value:" << aReal.value_ ;
-
-    // ostk::core::utility::Output::Footer(anOutputStream) ;
-
     return anOutputStream;
-}
-
-bool Real::isDefined() const
-{
-    return type_ != Real::Type::Undefined;
 }
 
 bool Real::isZero() const
@@ -591,21 +564,6 @@ bool Real::isFinite() const
 
 bool Real::isNear(const Real& aValue, const Real& aTolerance) const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Real");
-    }
-
-    if (!aValue.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Real");
-    }
-
-    if (!aTolerance.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Tolerance");
-    }
-
     if ((!this->isFinite()) || (!aValue.isFinite()))
     {
         return false;
@@ -618,9 +576,6 @@ type::Sign Real::getSign() const
 {
     switch (type_)
     {
-        case Real::Type::Undefined:
-            return type::Sign::Undefined;
-
         case Real::Type::Defined:
         {
             if (value_ > 0.0)
@@ -648,16 +603,13 @@ type::Sign Real::getSign() const
     return type::Sign::Undefined;
 }
 
-type::String Real::toString(const type::Integer& aPrecision) const
+type::String Real::toString(const std::optional<type::Integer>& aPrecision) const
 {
     switch (type_)
     {
-        case Real::Type::Undefined:
-            return "Undefined";
-
         case Real::Type::Defined:
         {
-            if (!aPrecision.isDefined())
+            if (!aPrecision.has_value())
             {
                 if (this->isInteger())
                 {
@@ -671,16 +623,7 @@ type::String Real::toString(const type::Integer& aPrecision) const
                     return realString;
                 }
 
-                // type::String realString = std::to_string(value_) ;
                 type::String realString = boost::lexical_cast<std::string>(value_);
-
-                // std::ostringstream stringStream ;
-
-                // stringStream.precision(14) ;
-
-                // stringStream << std::fixed << value_ ;
-
-                // type::String realString = stringStream.str() ;
 
                 if (realString.find('e') == std::string::npos)
                 {
@@ -690,14 +633,11 @@ type::String Real::toString(const type::Integer& aPrecision) const
                 }
 
                 return realString;
-
-                // return boost::lexical_cast<std::string>(value_) ;
-                // return std::to_string(value_) ;
             }
 
             std::ostringstream stringStream;
 
-            stringStream.precision(aPrecision);
+            stringStream.precision(aPrecision.value());
 
             stringStream << std::fixed << value_;
 
@@ -722,17 +662,12 @@ type::Integer Real::toInteger() const
     }
 
     throw ostk::core::error::RuntimeError("Real is not integer.");
-
-    return type::Integer::Undefined();
 }
 
 Real Real::abs() const
 {
     switch (type_)
     {
-        case Real::Type::Undefined:
-            return Real::Undefined();
-
         case Real::Type::Defined:
             return Real(Real::Type::Defined, std::abs(value_));
 
@@ -741,47 +676,41 @@ Real Real::abs() const
             return Real::PositiveInfinity();
 
         default:
-            throw ostk::core::error::runtime::Undefined("Type");
+            throw ostk::core::error::RuntimeError("Cannot compute abs of Real.");
             break;
     }
 
-    return Real::Undefined();
+    throw ostk::core::error::RuntimeError("Cannot compute abs of Real.");
 }
 
 type::Integer Real::floor() const
 {
     switch (type_)
     {
-        case Real::Type::Undefined:
-            return type::Integer::Undefined();
-
         case Real::Type::Defined:
             return type::Integer(static_cast<type::Integer::ValueType>(std::floor(value_)));
 
         case Real::Type::PositiveInfinity:
         case Real::Type::NegativeInfinity:
-            return type::Integer::Undefined();
+            throw ostk::core::error::RuntimeError("Cannot compute floor of infinite Real.");
 
         default:
-            throw ostk::core::error::runtime::Undefined("Type");
+            throw ostk::core::error::RuntimeError("Cannot compute floor of Real.");
             break;
     }
 
-    return type::Integer::Undefined();
+    throw ostk::core::error::RuntimeError("Cannot compute floor of Real.");
 }
 
 Real Real::sqrt() const
 {
     switch (type_)
     {
-        case Real::Type::Undefined:
-            return Real::Undefined();
-
         case Real::Type::Defined:
         {
             if (this->isStrictlyNegative())
             {
-                return Real::Undefined();
+                throw ostk::core::error::RuntimeError("Cannot compute sqrt of negative Real.");
             }
 
             return Real(Real::Type::Defined, std::sqrt(value_));
@@ -791,19 +720,14 @@ Real Real::sqrt() const
             return Real::PositiveInfinity();
 
         case Real::Type::NegativeInfinity:
-            return Real::Undefined();
+            throw ostk::core::error::RuntimeError("Cannot compute sqrt of negative infinity.");
 
         default:
-            throw ostk::core::error::runtime::Undefined("Type");
+            throw ostk::core::error::RuntimeError("Cannot compute sqrt of Real.");
             break;
     }
 
-    return Real::Undefined();
-}
-
-Real Real::Undefined()
-{
-    return Real(Real::Type::Undefined, 0.0);
+    throw ostk::core::error::RuntimeError("Cannot compute sqrt of Real.");
 }
 
 Real Real::Zero()
@@ -843,12 +767,7 @@ Real Real::NegativeInfinity()
 
 Real Real::Integer(const type::Integer& anInteger)
 {
-    if (anInteger.isDefined())
-    {
-        return Real(Real::Type::Defined, anInteger);
-    }
-
-    return Real::Undefined();
+    return Real(Real::Type::Defined, anInteger);
 }
 
 Real Real::CanParse(const type::String& aString)
@@ -858,8 +777,7 @@ Real Real::CanParse(const type::String& aString)
         return false;
     }
 
-    if ((aString == "Undefined") || (aString == "NaN") || (aString == "Inf") || (aString == "+Inf") ||
-        (aString == "-Inf"))
+    if ((aString == "NaN") || (aString == "Inf") || (aString == "+Inf") || (aString == "-Inf"))
     {
         return true;
     }
@@ -876,9 +794,14 @@ Real Real::Parse(const type::String& aString)
         throw ostk::core::error::runtime::Undefined("String");
     }
 
-    if ((aString == "Undefined") || (aString == "NaN"))
+    if (aString == "NaN")
     {
-        return Real::Undefined();
+        throw ostk::core::error::RuntimeError("Cannot parse 'NaN' as Real.");
+    }
+
+    if ((aString == "Undefined"))
+    {
+        throw ostk::core::error::RuntimeError("Cannot parse 'Undefined' as Real.");
     }
 
     if ((aString == "Inf") || (aString == "+Inf"))
@@ -907,13 +830,8 @@ Real Real::Parse(const type::String& aString)
         throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.");
     }
 
-    return Real::Undefined();
+    throw ostk::core::error::RuntimeError("Cannot cast string [" + aString + "] to Real.");
 }
-
-// Real                             Real::Object                             (   const   container::Object& anObject )
-// {
-
-// }
 
 Real::Real(const Real::Type& aType, const Real::ValueType& aReal)
     : type_(aType),

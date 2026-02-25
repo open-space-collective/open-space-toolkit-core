@@ -24,20 +24,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathC
         .def("__repr__", &(shiftToString<Path>), R"doc(Return string representation of the Path for debugging.)doc")
 
         .def(
-            "is_defined",
-            &Path::isDefined,
-            R"doc(
-                Check if the Path is defined.
-
-                Returns:
-                    bool: True if the Path is defined, False otherwise.
-
-                Example:
-                    >>> path = Path.parse("/home/user")
-                    >>> path.is_defined()  # True
-            )doc"
-        )
-        .def(
             "is_absolute",
             &Path::isAbsolute,
             R"doc(
@@ -145,20 +131,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathC
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &Path::Undefined,
-            R"doc(
-                Create an undefined Path.
-
-                Returns:
-                    Path: An undefined Path object.
-
-                Example:
-                    >>> undefined_path = Path.undefined()
-                    >>> undefined_path.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "root",
             &Path::Root,

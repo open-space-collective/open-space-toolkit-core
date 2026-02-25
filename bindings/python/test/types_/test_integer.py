@@ -10,13 +10,11 @@ def test_integer_constructors():
     b = Integer(1)
     c = Integer(123456789)
     d = Integer(-1)
-    u = Integer.undefined()
 
     assert isinstance(a, Integer)
     assert isinstance(b, Integer)
     assert isinstance(c, Integer)
     assert isinstance(d, Integer)
-    assert isinstance(u, Integer)
 
     with pytest.raises(TypeError):
         e = Integer(1.2)
@@ -102,18 +100,6 @@ def test_integer_casting():
     assert isinstance(int(a), int)
     assert isinstance(int(b), int)
     assert isinstance(int(c), int)
-
-
-def test_integer_is_defined():
-    a = Integer(10)
-    b = Integer(-1346)
-    c = Integer(0)
-    u = Integer.undefined()
-
-    assert a.is_defined() is True
-    assert b.is_defined() is True
-    assert c.is_defined() is True
-    assert u.is_defined() is False
 
 
 def test_integer_zero():
@@ -214,13 +200,11 @@ def test_integer_get_sign():
     assert Integer(-1).get_sign() == Sign.Negative
     assert Integer(232567).get_sign() == Sign.Positive
     assert Integer(0).get_sign() == Sign.NoSign
-    assert Integer.undefined().get_sign() == Sign.Undefined
 
 
 def test_integer_static_methods():
     a = Integer(34)
 
-    assert Integer.undefined()
     assert Integer.zero() == Integer(0)
     # assert Integer.positive_infinity()
     # assert Integer.negative_infinity()

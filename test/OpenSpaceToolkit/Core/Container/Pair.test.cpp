@@ -61,7 +61,7 @@ TEST(OpenSpaceToolkit_Core_Container_Pair, Unpack)
     {
         const Pair<Integer, String> pair = {123, "abc"};
 
-        Integer integer = Integer::Undefined();
+        Integer integer = Integer(0);
         String string = String::Empty();
 
         Unpack(integer, string) = pair;

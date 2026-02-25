@@ -2,6 +2,8 @@
 
 import math
 
+import pytest
+
 from ostk.core.type import Real, Sign
 
 
@@ -110,20 +112,6 @@ def test_real_casting():
     assert isinstance(float(c), float)
 
 
-def test_real_is_defined():
-    a = Real(10.0)
-    b = Real(-1346.67)
-    c = Real(0.0)
-    d = Real(5 / 3)
-    e = Real.undefined()
-
-    assert a.is_defined() is True
-    assert b.is_defined() is True
-    assert c.is_defined() is True
-    assert d.is_defined() is True
-    assert e.is_defined() is False
-
-
 def test_real_is_zero():
     a = Real(4.0)
     b = Real(0)
@@ -213,7 +201,6 @@ def test_real_is_near():
 
 
 def test_real_get_sign():
-    assert Real.undefined().get_sign() == Sign.Undefined
     assert Real(456).get_sign() == Sign.Positive
     assert Real(457.3455).get_sign() == Sign.Positive
     assert Real(0.0).get_sign() == Sign.NoSign
@@ -238,7 +225,8 @@ def test_real_sqrt():
     assert Real(64.0).sqrt() == 8.0
     assert Real(16.0).sqrt() == 4.0
     assert Real(45.6).sqrt() == math.sqrt(45.6)
-    assert Real(-3.56).sqrt().is_defined() is False
+    with pytest.raises(RuntimeError):
+        Real(-3.56).sqrt()
 
 
 def test_real_pi():

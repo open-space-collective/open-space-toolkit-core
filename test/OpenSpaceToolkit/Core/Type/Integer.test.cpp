@@ -46,7 +46,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, EqualToOperator)
         EXPECT_FALSE(Integer(1) == Integer(0));
         EXPECT_FALSE(Integer(-1) == Integer(+1));
 
-        EXPECT_FALSE(Integer::Undefined() == Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() == Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() == Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() == Integer::NegativeInfinity());
@@ -79,7 +78,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, NotEqualToOperator)
         EXPECT_FALSE(Integer(+123) != Integer(+123));
         EXPECT_FALSE(Integer(-123) != Integer(-123));
 
-        EXPECT_FALSE(Integer::Undefined() != Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() != Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() != Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() != Integer::NegativeInfinity());
@@ -116,7 +114,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, LessThanOperator)
         EXPECT_FALSE(Integer(+123) < Integer(+123));
         EXPECT_FALSE(Integer(-123) < Integer(-123));
 
-        EXPECT_FALSE(Integer::Undefined() < Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() < Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() < Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() < Integer::NegativeInfinity());
@@ -157,7 +154,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, LessThanOrEqualToOperator)
         EXPECT_FALSE(Integer(+1) <= Integer(-1));
         EXPECT_FALSE(Integer(+123) <= Integer(-123));
 
-        EXPECT_FALSE(Integer::Undefined() <= Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() <= Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() <= Integer::NegativeInfinity());
@@ -198,7 +194,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, GreaterThanOperator)
         EXPECT_FALSE(Integer(+123) > Integer(+123));
         EXPECT_FALSE(Integer(-123) > Integer(-123));
 
-        EXPECT_FALSE(Integer::Undefined() > Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() > Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() > Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() > Integer::NegativeInfinity());
@@ -239,7 +234,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, GreaterThanOrEqualToOperator)
         EXPECT_FALSE(Integer(-1) >= Integer(+1));
         EXPECT_FALSE(Integer(-123) >= Integer(+123));
 
-        EXPECT_FALSE(Integer::Undefined() >= Integer::Undefined());
         EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::PositiveInfinity());
         EXPECT_FALSE(Integer::NegativeInfinity() >= Integer::NegativeInfinity());
         EXPECT_FALSE(Integer::PositiveInfinity() >= Integer::NegativeInfinity());
@@ -270,18 +264,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::NegativeInfinity()},
@@ -290,9 +272,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -307,7 +287,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
          std::numeric_limits<Integer::ValueType>::min() + std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-2, -2, -4},
@@ -318,7 +297,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 2},
         {-2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-1, -2, -3},
@@ -329,7 +307,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 1},
         {-1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min()},
         {+0, -2, -2},
@@ -340,7 +317,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {+0, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max()},
         {+0, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {+1, -2, -1},
@@ -351,7 +327,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+2, -2, +0},
@@ -362,7 +337,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -377,8 +351,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
          Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::PositiveInfinity()},
@@ -396,26 +368,23 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionOperator)
         const Integer& b = testCase.second;
         const Integer& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a + b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a + b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a + b);
-            }
+            EXPECT_TRUE((a + b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a + b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a + b).isDefined());
+            EXPECT_EQ(c, a + b);
         }
     }
+
+    // Indeterminate forms throw
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() + Integer::NegativeInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() + Integer::PositiveInfinity());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
@@ -426,19 +395,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::NegativeInfinity()},
@@ -448,7 +404,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min(), +0},
         {std::numeric_limits<Integer::ValueType>::min(), -2, std::numeric_limits<Integer::ValueType>::min() + 2},
@@ -461,7 +416,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
          Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), -2 - std::numeric_limits<Integer::ValueType>::min()},
         {-2, -2, +0},
@@ -472,7 +426,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::max()},
         {-1, -2, +1},
@@ -483,7 +436,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min()},
         {-1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+0, -2, +2},
@@ -494,7 +446,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {+0, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {+0, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+1, -2, +3},
@@ -505,7 +456,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+2, -2, +4},
@@ -516,7 +466,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 3},
         {+2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -529,7 +478,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::PositiveInfinity()},
@@ -537,8 +485,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         {Integer::PositiveInfinity(), +0, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()}
 
     };
 
@@ -548,26 +495,23 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionOperator)
         const Integer& b = testCase.second;
         const Integer& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a - b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a - b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a - b);
-            }
+            EXPECT_TRUE((a - b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a - b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a - b).isDefined());
+            EXPECT_EQ(c, a - b);
         }
     }
+
+    // Indeterminate forms throw
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() - Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() - Integer::NegativeInfinity());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
@@ -578,29 +522,15 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::PositiveInfinity()},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -615,7 +545,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
          Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1073741823, Integer::Undefined(), Integer::Undefined()},
         {-1073741823, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1073741823, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-1073741823, -3, Integer::PositiveInfinity()},
@@ -628,7 +557,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {-1073741823, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-1073741823, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-2, -2, +4},
@@ -639,7 +567,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-1, -2, +2},
@@ -650,8 +577,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), -std::numeric_limits<Integer::ValueType>::max()},
         {-1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
-        {+0, Integer::NegativeInfinity(), Integer::Undefined()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -2, +0},
         {+0, -1, +0},
@@ -659,9 +584,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
-        {+0, Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min()},
         {+1, -2, -2},
@@ -672,7 +595,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {+2, -2, -4},
@@ -683,7 +605,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+1073741823, Integer::Undefined(), Integer::Undefined()},
         {+1073741823, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1073741823, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {+1073741823, -3, Integer::NegativeInfinity()},
@@ -696,7 +617,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         {+1073741823, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1073741823, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -711,12 +631,10 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
          Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::NegativeInfinity()},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
@@ -730,26 +648,25 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationOperator)
         const Integer& b = testCase.second;
         const Integer& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a * b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a * b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a * b);
-            }
+            EXPECT_TRUE((a * b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a * b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a * b).isDefined());
+            EXPECT_EQ(c, a * b);
         }
     }
+
+    // Indeterminate forms throw
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() * Integer(0));
+    EXPECT_ANY_THROW(Integer(0) * Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() * Integer(0));
+    EXPECT_ANY_THROW(Integer(0) * Integer::NegativeInfinity());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionOperator)
@@ -760,115 +677,82 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::PositiveInfinity()},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), +0},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min(), 1},
         {std::numeric_limits<Integer::ValueType>::min(), -2, std::numeric_limits<Integer::ValueType>::min() / -2},
         {std::numeric_limits<Integer::ValueType>::min(), -1, Integer::PositiveInfinity()},
-        {std::numeric_limits<Integer::ValueType>::min(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), +1, std::numeric_limits<Integer::ValueType>::min()},
         {std::numeric_limits<Integer::ValueType>::min(), +2, std::numeric_limits<Integer::ValueType>::min() / 2},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::max(), -1},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), +0},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), +0},
         {-2, std::numeric_limits<Integer::ValueType>::min(), +0},
         {-2, -2, +1},
         {-2, -1, +2},
-        {-2, +0, Integer::Undefined()},
         {-2, +1, -2},
         {-2, +2, -1},
         {-2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-2, Integer::PositiveInfinity(), +0},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), +0},
         {-1, std::numeric_limits<Integer::ValueType>::min(), +0},
         {-1, -2, +0},
         {-1, -1, +1},
-        {-1, +0, Integer::Undefined()},
         {-1, +1, -1},
         {-1, +2, +0},
         {-1, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-1, Integer::PositiveInfinity(), +0},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), +0},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -2, +0},
         {+0, -1, +0},
-        {+0, +0, Integer::Undefined()},
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+0, Integer::PositiveInfinity(), +0},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), +0},
         {+1, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+1, -2, +0},
         {+1, -1, -1},
-        {+1, +0, Integer::Undefined()},
         {+1, +1, +1},
         {+1, +2, +0},
         {+1, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+1, Integer::PositiveInfinity(), +0},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), +0},
         {+2, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+2, -2, -1},
         {+2, -1, -2},
-        {+2, +0, Integer::Undefined()},
         {+2, +1, +2},
         {+2, +2, +1},
         {+2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+2, Integer::PositiveInfinity(), +0},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), -2, std::numeric_limits<Integer::ValueType>::max() / -2},
         {std::numeric_limits<Integer::ValueType>::max(), -1, std::numeric_limits<Integer::ValueType>::max() / -1},
-        {std::numeric_limits<Integer::ValueType>::max(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), +1, std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::max(), +2, std::numeric_limits<Integer::ValueType>::max() / 2},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +1},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), +0},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::NegativeInfinity()},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()}
 
     };
 
@@ -878,26 +762,36 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionOperator)
         const Integer& b = testCase.second;
         const Integer& c = testCase.third;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a / b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a / b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a / b);
-            }
+            EXPECT_TRUE((a / b).isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE((a / b).isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE((a / b).isDefined());
+            EXPECT_EQ(c, a / b);
         }
     }
+
+    // Indeterminate forms throw
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() / Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() / Integer::NegativeInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() / Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() / Integer::NegativeInfinity());
+
+    // Division by zero throws
+    EXPECT_ANY_THROW(Integer(-2) / Integer(0));
+    EXPECT_ANY_THROW(Integer(-1) / Integer(0));
+    EXPECT_ANY_THROW(Integer(0) / Integer(0));
+    EXPECT_ANY_THROW(Integer(+1) / Integer(0));
+    EXPECT_ANY_THROW(Integer(+2) / Integer(0));
+    EXPECT_ANY_THROW(Integer(std::numeric_limits<Integer::ValueType>::min()) / Integer(0));
+    EXPECT_ANY_THROW(Integer(std::numeric_limits<Integer::ValueType>::max()) / Integer(0));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() / Integer(0));
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() / Integer(0));
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
@@ -908,29 +802,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), -2, Integer::Undefined()},
         {Integer::NegativeInfinity(), -1, +0},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, +0},
-        {Integer::NegativeInfinity(), +2, Integer::Undefined()},
-        {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(),
          Integer::NegativeInfinity(),
          std::numeric_limits<Integer::ValueType>::min()},
@@ -938,7 +812,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
         {std::numeric_limits<Integer::ValueType>::min(), -3, -2},
         {std::numeric_limits<Integer::ValueType>::min(), -2, +0},
         {std::numeric_limits<Integer::ValueType>::min(), -1, +0},
-        {std::numeric_limits<Integer::ValueType>::min(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), +1, +0},
         {std::numeric_limits<Integer::ValueType>::min(), +2, +0},
         {std::numeric_limits<Integer::ValueType>::min(), +3, -2},
@@ -947,72 +820,61 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
          Integer::PositiveInfinity(),
          std::numeric_limits<Integer::ValueType>::min()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), -2},
         {-2, std::numeric_limits<Integer::ValueType>::min(), -2},
         {-2, -3, -2},
         {-2, -2, +0},
         {-2, -1, +0},
-        {-2, +0, Integer::Undefined()},
         {-2, +1, +0},
         {-2, +2, +0},
         {-2, +3, -2},
         {-2, std::numeric_limits<Integer::ValueType>::max(), -2},
         {-2, Integer::PositiveInfinity(), -2},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), -1},
         {-1, std::numeric_limits<Integer::ValueType>::min(), -1},
         {-1, -3, -1},
         {-1, -2, -1},
         {-1, -1, +0},
-        {-1, +0, Integer::Undefined()},
         {-1, +1, +0},
         {-1, +2, -1},
         {-1, +3, -1},
         {-1, std::numeric_limits<Integer::ValueType>::max(), -1},
         {-1, Integer::PositiveInfinity(), -1},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), +0},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -3, +0},
         {+0, -2, +0},
         {+0, -1, +0},
-        {+0, +0, Integer::Undefined()},
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, +3, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+0, Integer::PositiveInfinity(), +0},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), +1},
         {+1, std::numeric_limits<Integer::ValueType>::min(), +1},
         {+1, -3, +1},
         {+1, -2, +1},
         {+1, -1, +0},
-        {+1, +0, Integer::Undefined()},
         {+1, +1, +0},
         {+1, +2, +1},
         {+1, +3, +1},
         {+1, std::numeric_limits<Integer::ValueType>::max(), +1},
         {+1, Integer::PositiveInfinity(), +1},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), +2},
         {+2, std::numeric_limits<Integer::ValueType>::min(), +2},
         {+2, -3, +2},
         {+2, -2, +0},
         {+2, -1, +0},
-        {+2, +0, Integer::Undefined()},
         {+2, +1, +0},
         {+2, +2, +0},
         {+2, +3, +2},
         {+2, std::numeric_limits<Integer::ValueType>::max(), +2},
         {+2, Integer::PositiveInfinity(), +2},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(),
          Integer::NegativeInfinity(),
          std::numeric_limits<Integer::ValueType>::max()},
@@ -1021,7 +883,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
          std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::max(), -2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), -1, +0},
-        {std::numeric_limits<Integer::ValueType>::max(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), +1, +0},
         {std::numeric_limits<Integer::ValueType>::max(), +2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +0},
@@ -1029,16 +890,8 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
          Integer::PositiveInfinity(),
          std::numeric_limits<Integer::ValueType>::max()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), -2, Integer::Undefined()},
         {Integer::PositiveInfinity(), -1, +0},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
-        {Integer::PositiveInfinity(), +1, +0},
-        {Integer::PositiveInfinity(), +2, Integer::Undefined()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), +1, +0}
 
     };
 
@@ -1048,26 +901,33 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloOperator)
         const Integer& b = testCase.second;
         const Integer& c = testCase.third;
 
-        if (c.isDefined())
-        {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE((a % b).isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE((a % b).isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a % b);
-            }
-        }
-        else
-        {
-            EXPECT_FALSE((a % b).isDefined());
-        }
+        EXPECT_EQ(c, a % b);
     }
+
+    // Modulo by zero throws
+    EXPECT_ANY_THROW(Integer(-2) % Integer(0));
+    EXPECT_ANY_THROW(Integer(-1) % Integer(0));
+    EXPECT_ANY_THROW(Integer(0) % Integer(0));
+    EXPECT_ANY_THROW(Integer(+1) % Integer(0));
+    EXPECT_ANY_THROW(Integer(+2) % Integer(0));
+    EXPECT_ANY_THROW(Integer(std::numeric_limits<Integer::ValueType>::min()) % Integer(0));
+    EXPECT_ANY_THROW(Integer(std::numeric_limits<Integer::ValueType>::max()) % Integer(0));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer(0));
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer(0));
+
+    // Infinity % anything (except +/-1) throws
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer::NegativeInfinity());
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer(std::numeric_limits<Integer::ValueType>::min()));
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer(-2));
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer(+2));
+    EXPECT_ANY_THROW(Integer::PositiveInfinity() % Integer(std::numeric_limits<Integer::ValueType>::max()));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer::PositiveInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer::NegativeInfinity());
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer(std::numeric_limits<Integer::ValueType>::min()));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer(-2));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer(+2));
+    EXPECT_ANY_THROW(Integer::NegativeInfinity() % Integer(std::numeric_limits<Integer::ValueType>::max()));
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
@@ -1078,18 +938,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::NegativeInfinity()},
@@ -1098,9 +946,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -1115,7 +961,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
          std::numeric_limits<Integer::ValueType>::min() + std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-2, -2, -4},
@@ -1126,7 +971,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 2},
         {-2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-1, -2, -3},
@@ -1137,7 +981,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max() - 1},
         {-1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min()},
         {+0, -2, -2},
@@ -1148,7 +991,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {+0, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max()},
         {+0, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {+1, -2, -1},
@@ -1159,7 +1001,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+2, -2, +0},
@@ -1170,7 +1011,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -1185,8 +1025,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
          Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::PositiveInfinity()},
@@ -1206,25 +1044,28 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, AdditionAssignmentOperator)
 
         a += b;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a);
-            }
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(c, a);
         }
+    }
+
+    // Indeterminate forms throw
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a += Integer::NegativeInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a += Integer::PositiveInfinity());
     }
 }
 
@@ -1236,19 +1077,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::NegativeInfinity()},
@@ -1258,7 +1086,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min(), +0},
         {std::numeric_limits<Integer::ValueType>::min(), -2, std::numeric_limits<Integer::ValueType>::min() + 2},
@@ -1271,7 +1098,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
          Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), -2 - std::numeric_limits<Integer::ValueType>::min()},
         {-2, -2, +0},
@@ -1282,7 +1108,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::max()},
         {-1, -2, +1},
@@ -1293,7 +1118,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min()},
         {-1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+0, -2, +2},
@@ -1304,7 +1128,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {+0, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {+0, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+1, -2, +3},
@@ -1315,7 +1138,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 2},
         {+1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {+2, -2, +4},
@@ -1326,7 +1148,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min() + 3},
         {+2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -1339,7 +1160,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::PositiveInfinity()},
@@ -1347,8 +1167,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
         {Integer::PositiveInfinity(), +0, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()}
 
     };
 
@@ -1360,25 +1179,28 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, SubtractionAssignmentOperator)
 
         a -= b;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a);
-            }
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(c, a);
         }
+    }
+
+    // Indeterminate forms throw
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a -= Integer::PositiveInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a -= Integer::NegativeInfinity());
     }
 }
 
@@ -1390,29 +1212,15 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::PositiveInfinity()},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -1427,7 +1235,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
          Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1073741823, Integer::Undefined(), Integer::Undefined()},
         {-1073741823, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1073741823, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-1073741823, -3, Integer::PositiveInfinity()},
@@ -1440,7 +1247,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {-1073741823, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-1073741823, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-2, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-2, -2, +4},
@@ -1451,7 +1257,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {-2, std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
         {-2, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {-1, std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-1, -2, +2},
@@ -1462,8 +1267,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {-1, std::numeric_limits<Integer::ValueType>::max(), -std::numeric_limits<Integer::ValueType>::max()},
         {-1, Integer::PositiveInfinity(), Integer::NegativeInfinity()},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
-        {+0, Integer::NegativeInfinity(), Integer::Undefined()},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -2, +0},
         {+0, -1, +0},
@@ -1471,9 +1274,7 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
-        {+0, Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1, std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min()},
         {+1, -2, -2},
@@ -1484,7 +1285,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {+1, std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max()},
         {+1, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+2, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {+2, -2, -4},
@@ -1495,7 +1295,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {+2, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+2, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {+1073741823, Integer::Undefined(), Integer::Undefined()},
         {+1073741823, Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {+1073741823, std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {+1073741823, -3, Integer::NegativeInfinity()},
@@ -1508,7 +1307,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
         {+1073741823, std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
         {+1073741823, Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(),
          std::numeric_limits<Integer::ValueType>::min(),
@@ -1523,12 +1321,10 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
          Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), Integer::PositiveInfinity()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
         {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::NegativeInfinity()},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
@@ -1544,25 +1340,36 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, MultiplicationAssignmentOperator)
 
         a *= b;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a);
-            }
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(c, a);
         }
+    }
+
+    // Indeterminate forms throw
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a *= Integer(0));
+    }
+    {
+        Integer a = Integer(0);
+        EXPECT_ANY_THROW(a *= Integer::PositiveInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a *= Integer(0));
+    }
+    {
+        Integer a = Integer(0);
+        EXPECT_ANY_THROW(a *= Integer::NegativeInfinity());
     }
 }
 
@@ -1574,115 +1381,82 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionAssignmentOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -2, Integer::PositiveInfinity()},
         {Integer::NegativeInfinity(), -1, Integer::PositiveInfinity()},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), +2, Integer::NegativeInfinity()},
         {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity(), +0},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min(), 1},
         {std::numeric_limits<Integer::ValueType>::min(), -2, std::numeric_limits<Integer::ValueType>::min() / -2},
         {std::numeric_limits<Integer::ValueType>::min(), -1, Integer::PositiveInfinity()},
-        {std::numeric_limits<Integer::ValueType>::min(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), +1, std::numeric_limits<Integer::ValueType>::min()},
         {std::numeric_limits<Integer::ValueType>::min(), +2, std::numeric_limits<Integer::ValueType>::min() / 2},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::max(), -1},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity(), +0},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), +0},
         {-2, std::numeric_limits<Integer::ValueType>::min(), +0},
         {-2, -2, +1},
         {-2, -1, +2},
-        {-2, +0, Integer::Undefined()},
         {-2, +1, -2},
         {-2, +2, -1},
         {-2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-2, Integer::PositiveInfinity(), +0},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), +0},
         {-1, std::numeric_limits<Integer::ValueType>::min(), +0},
         {-1, -2, +0},
         {-1, -1, +1},
-        {-1, +0, Integer::Undefined()},
         {-1, +1, -1},
         {-1, +2, +0},
         {-1, std::numeric_limits<Integer::ValueType>::max(), +0},
         {-1, Integer::PositiveInfinity(), +0},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), +0},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -2, +0},
         {+0, -1, +0},
-        {+0, +0, Integer::Undefined()},
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+0, Integer::PositiveInfinity(), +0},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), +0},
         {+1, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+1, -2, +0},
         {+1, -1, -1},
-        {+1, +0, Integer::Undefined()},
         {+1, +1, +1},
         {+1, +2, +0},
         {+1, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+1, Integer::PositiveInfinity(), +0},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), +0},
         {+2, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+2, -2, -1},
         {+2, -1, -2},
-        {+2, +0, Integer::Undefined()},
         {+2, +1, +2},
         {+2, +2, +1},
         {+2, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+2, Integer::PositiveInfinity(), +0},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::NegativeInfinity(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::min(), +0},
         {std::numeric_limits<Integer::ValueType>::max(), -2, std::numeric_limits<Integer::ValueType>::max() / -2},
         {std::numeric_limits<Integer::ValueType>::max(), -1, std::numeric_limits<Integer::ValueType>::max() / -1},
-        {std::numeric_limits<Integer::ValueType>::max(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), +1, std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::max(), +2, std::numeric_limits<Integer::ValueType>::max() / 2},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +1},
         {std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity(), +0},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
         {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -2, Integer::NegativeInfinity()},
         {Integer::PositiveInfinity(), -1, Integer::NegativeInfinity()},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
         {Integer::PositiveInfinity(), +1, Integer::PositiveInfinity()},
         {Integer::PositiveInfinity(), +2, Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::PositiveInfinity()}
 
     };
 
@@ -1694,25 +1468,54 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, DivisionAssignmentOperator)
 
         a /= b;
 
-        if (c.isDefined())
+        if (c.isPositiveInfinity())
         {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a);
-            }
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (c.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(c, a);
         }
+    }
+
+    // Indeterminate forms throw
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a /= Integer::PositiveInfinity());
+    }
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a /= Integer::NegativeInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a /= Integer::PositiveInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a /= Integer::NegativeInfinity());
+    }
+
+    // Division by zero throws
+    {
+        Integer a = Integer(1);
+        EXPECT_ANY_THROW(a /= Integer(0));
+    }
+    {
+        Integer a = Integer(0);
+        EXPECT_ANY_THROW(a /= Integer(0));
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a /= Integer(0));
+    }
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a /= Integer(0));
     }
 }
 
@@ -1724,29 +1527,9 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
 
     Array<Triple<Integer, Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::Undefined(), -2, Integer::Undefined()},
-        {Integer::Undefined(), -1, Integer::Undefined()},
-        {Integer::Undefined(), +0, Integer::Undefined()},
-        {Integer::Undefined(), +1, Integer::Undefined()},
-        {Integer::Undefined(), +2, Integer::Undefined()},
-        {Integer::Undefined(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::Undefined(), Integer::PositiveInfinity(), Integer::Undefined()},
-
-        {Integer::NegativeInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), -2, Integer::Undefined()},
         {Integer::NegativeInfinity(), -1, +0},
-        {Integer::NegativeInfinity(), +0, Integer::Undefined()},
         {Integer::NegativeInfinity(), +1, +0},
-        {Integer::NegativeInfinity(), +2, Integer::Undefined()},
-        {Integer::NegativeInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::NegativeInfinity(), Integer::PositiveInfinity(), Integer::Undefined()},
 
-        {std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(),
          Integer::NegativeInfinity(),
          std::numeric_limits<Integer::ValueType>::min()},
@@ -1754,7 +1537,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
         {std::numeric_limits<Integer::ValueType>::min(), -3, -2},
         {std::numeric_limits<Integer::ValueType>::min(), -2, +0},
         {std::numeric_limits<Integer::ValueType>::min(), -1, +0},
-        {std::numeric_limits<Integer::ValueType>::min(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::min(), +1, +0},
         {std::numeric_limits<Integer::ValueType>::min(), +2, +0},
         {std::numeric_limits<Integer::ValueType>::min(), +3, -2},
@@ -1763,72 +1545,61 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
          Integer::PositiveInfinity(),
          std::numeric_limits<Integer::ValueType>::min()},
 
-        {-2, Integer::Undefined(), Integer::Undefined()},
         {-2, Integer::NegativeInfinity(), -2},
         {-2, std::numeric_limits<Integer::ValueType>::min(), -2},
         {-2, -3, -2},
         {-2, -2, +0},
         {-2, -1, +0},
-        {-2, +0, Integer::Undefined()},
         {-2, +1, +0},
         {-2, +2, +0},
         {-2, +3, -2},
         {-2, std::numeric_limits<Integer::ValueType>::max(), -2},
         {-2, Integer::PositiveInfinity(), -2},
 
-        {-1, Integer::Undefined(), Integer::Undefined()},
         {-1, Integer::NegativeInfinity(), -1},
         {-1, std::numeric_limits<Integer::ValueType>::min(), -1},
         {-1, -3, -1},
         {-1, -2, -1},
         {-1, -1, +0},
-        {-1, +0, Integer::Undefined()},
         {-1, +1, +0},
         {-1, +2, -1},
         {-1, +3, -1},
         {-1, std::numeric_limits<Integer::ValueType>::max(), -1},
         {-1, Integer::PositiveInfinity(), -1},
 
-        {+0, Integer::Undefined(), Integer::Undefined()},
         {+0, Integer::NegativeInfinity(), +0},
         {+0, std::numeric_limits<Integer::ValueType>::min(), +0},
         {+0, -3, +0},
         {+0, -2, +0},
         {+0, -1, +0},
-        {+0, +0, Integer::Undefined()},
         {+0, +1, +0},
         {+0, +2, +0},
         {+0, +3, +0},
         {+0, std::numeric_limits<Integer::ValueType>::max(), +0},
         {+0, Integer::PositiveInfinity(), +0},
 
-        {+1, Integer::Undefined(), Integer::Undefined()},
         {+1, Integer::NegativeInfinity(), +1},
         {+1, std::numeric_limits<Integer::ValueType>::min(), +1},
         {+1, -3, +1},
         {+1, -2, +1},
         {+1, -1, +0},
-        {+1, +0, Integer::Undefined()},
         {+1, +1, +0},
         {+1, +2, +1},
         {+1, +3, +1},
         {+1, std::numeric_limits<Integer::ValueType>::max(), +1},
         {+1, Integer::PositiveInfinity(), +1},
 
-        {+2, Integer::Undefined(), Integer::Undefined()},
         {+2, Integer::NegativeInfinity(), +2},
         {+2, std::numeric_limits<Integer::ValueType>::min(), +2},
         {+2, -3, +2},
         {+2, -2, +0},
         {+2, -1, +0},
-        {+2, +0, Integer::Undefined()},
         {+2, +1, +0},
         {+2, +2, +0},
         {+2, +3, +2},
         {+2, std::numeric_limits<Integer::ValueType>::max(), +2},
         {+2, Integer::PositiveInfinity(), +2},
 
-        {std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined(), Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(),
          Integer::NegativeInfinity(),
          std::numeric_limits<Integer::ValueType>::max()},
@@ -1837,7 +1608,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
          std::numeric_limits<Integer::ValueType>::max()},
         {std::numeric_limits<Integer::ValueType>::max(), -2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), -1, +0},
-        {std::numeric_limits<Integer::ValueType>::max(), +0, Integer::Undefined()},
         {std::numeric_limits<Integer::ValueType>::max(), +1, +0},
         {std::numeric_limits<Integer::ValueType>::max(), +2, +1},
         {std::numeric_limits<Integer::ValueType>::max(), std::numeric_limits<Integer::ValueType>::max(), +0},
@@ -1845,16 +1615,8 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
          Integer::PositiveInfinity(),
          std::numeric_limits<Integer::ValueType>::max()},
 
-        {Integer::PositiveInfinity(), Integer::Undefined(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::NegativeInfinity(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::min(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), -2, Integer::Undefined()},
         {Integer::PositiveInfinity(), -1, +0},
-        {Integer::PositiveInfinity(), +0, Integer::Undefined()},
-        {Integer::PositiveInfinity(), +1, +0},
-        {Integer::PositiveInfinity(), +2, Integer::Undefined()},
-        {Integer::PositiveInfinity(), std::numeric_limits<Integer::ValueType>::max(), Integer::Undefined()},
-        {Integer::PositiveInfinity(), Integer::PositiveInfinity(), Integer::Undefined()}
+        {Integer::PositiveInfinity(), +1, +0}
 
     };
 
@@ -1866,25 +1628,51 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ModuloAssignmentOperator)
 
         a %= b;
 
-        if (c.isDefined())
-        {
-            if (c.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (c.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(c, a);
-            }
-        }
-        else
-        {
-            EXPECT_FALSE(a.isDefined());
-        }
+        EXPECT_EQ(c, a);
+    }
+
+    // Modulo by zero throws
+    {
+        Integer a = Integer(1);
+        EXPECT_ANY_THROW(a %= Integer(0));
+    }
+    {
+        Integer a = Integer(0);
+        EXPECT_ANY_THROW(a %= Integer(0));
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a %= Integer(0));
+    }
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a %= Integer(0));
+    }
+
+    // Infinity % anything (except +/-1) throws
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a %= Integer::PositiveInfinity());
+    }
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a %= Integer(-2));
+    }
+    {
+        Integer a = Integer::PositiveInfinity();
+        EXPECT_ANY_THROW(a %= Integer(+2));
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a %= Integer::NegativeInfinity());
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a %= Integer(-2));
+    }
+    {
+        Integer a = Integer::NegativeInfinity();
+        EXPECT_ANY_THROW(a %= Integer(+2));
     }
 }
 
@@ -1896,7 +1684,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryPlusOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min()},
         {-2, -2},
@@ -1916,24 +1703,17 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryPlusOperator)
 
         Integer c = +a;
 
-        if (b.isDefined())
+        if (b.isPositiveInfinity())
         {
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, c);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(c.isDefined());
+            EXPECT_EQ(b, c);
         }
     }
 }
@@ -1946,7 +1726,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryMinusOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::PositiveInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::PositiveInfinity()},
         {-2, +2},
@@ -1966,24 +1745,17 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, UnaryMinusOperator)
 
         Integer c = -a;
 
-        if (b.isDefined())
+        if (b.isPositiveInfinity())
         {
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, c);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
         }
         else
         {
-            EXPECT_FALSE(c.isDefined());
+            EXPECT_EQ(b, c);
         }
     }
 }
@@ -1996,7 +1768,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixIncrementOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {-2, -1},
@@ -2014,43 +1785,22 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixIncrementOperator)
         Integer& a = testCase.first;
         const Integer& b = testCase.second;
 
-        if (b.isDefined())
+        Integer c = ++a;
+
+        if (b.isPositiveInfinity())
         {
-            Integer c = ++a;
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, c);
-            }
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, a);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            Integer c = ++a;
-
-            EXPECT_FALSE(c.isDefined());
-
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(b, c);
+            EXPECT_EQ(b, a);
         }
     }
 }
@@ -2063,7 +1813,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixDecrementOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-2, -3},
@@ -2081,43 +1830,22 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PrefixDecrementOperator)
         Integer& a = testCase.first;
         const Integer& b = testCase.second;
 
-        if (b.isDefined())
+        Integer c = --a;
+
+        if (b.isPositiveInfinity())
         {
-            Integer c = --a;
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, c);
-            }
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, a);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
+            EXPECT_TRUE(a.isNegativeInfinity());
         }
         else
         {
-            Integer c = --a;
-
-            EXPECT_FALSE(c.isDefined());
-
-            EXPECT_FALSE(a.isDefined());
+            EXPECT_EQ(b, c);
+            EXPECT_EQ(b, a);
         }
     }
 }
@@ -2130,7 +1858,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixIncrementOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), std::numeric_limits<Integer::ValueType>::min() + 1},
         {-2, -1},
@@ -2149,62 +1876,34 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixIncrementOperator)
         const Integer aCopy = a;
         const Integer& b = testCase.second;
 
-        if (b.isDefined())
+        Integer c = a++;
+
+        // c should equal original value
+        if (aCopy.isPositiveInfinity())
         {
-            Integer c = a++;
-
-            if (!aCopy.isDefined())
-            {
-                EXPECT_FALSE(c.isDefined());
-            }
-            else if (aCopy.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (aCopy.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(aCopy, c);
-            }
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, a);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+        }
+        else if (aCopy.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
         }
         else
         {
-            Integer c = a++;
+            EXPECT_EQ(aCopy, c);
+        }
 
-            if (!aCopy.isDefined())
-            {
-                EXPECT_FALSE(c.isDefined());
-            }
-            else if (aCopy.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (aCopy.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(aCopy, c);
-            }
-
-            EXPECT_FALSE(a.isDefined());
+        // a should equal incremented value
+        if (b.isPositiveInfinity())
+        {
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
+        }
+        else
+        {
+            EXPECT_EQ(b, a);
         }
     }
 }
@@ -2217,7 +1916,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixDecrementOperator)
 
     Array<Pair<Integer, Integer>> testCases = {
 
-        {Integer::Undefined(), Integer::Undefined()},
         {Integer::NegativeInfinity(), Integer::NegativeInfinity()},
         {std::numeric_limits<Integer::ValueType>::min(), Integer::NegativeInfinity()},
         {-2, -3},
@@ -2236,62 +1934,34 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixDecrementOperator)
         const Integer aCopy = a;
         const Integer& b = testCase.second;
 
-        if (b.isDefined())
+        Integer c = a--;
+
+        // c should equal original value
+        if (aCopy.isPositiveInfinity())
         {
-            Integer c = a--;
-
-            if (!aCopy.isDefined())
-            {
-                EXPECT_FALSE(c.isDefined());
-            }
-            else if (aCopy.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (aCopy.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(aCopy, c);
-            }
-
-            if (b.isPositiveInfinity())
-            {
-                EXPECT_TRUE(a.isPositiveInfinity());
-            }
-            else if (b.isNegativeInfinity())
-            {
-                EXPECT_TRUE(a.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(b, a);
-            }
+            EXPECT_TRUE(c.isPositiveInfinity());
+        }
+        else if (aCopy.isNegativeInfinity())
+        {
+            EXPECT_TRUE(c.isNegativeInfinity());
         }
         else
         {
-            Integer c = a--;
+            EXPECT_EQ(aCopy, c);
+        }
 
-            if (!aCopy.isDefined())
-            {
-                EXPECT_FALSE(c.isDefined());
-            }
-            else if (aCopy.isPositiveInfinity())
-            {
-                EXPECT_TRUE(c.isPositiveInfinity());
-            }
-            else if (aCopy.isNegativeInfinity())
-            {
-                EXPECT_TRUE(c.isNegativeInfinity());
-            }
-            else
-            {
-                EXPECT_EQ(aCopy, c);
-            }
-
-            EXPECT_FALSE(a.isDefined());
+        // a should equal decremented value
+        if (b.isPositiveInfinity())
+        {
+            EXPECT_TRUE(a.isPositiveInfinity());
+        }
+        else if (b.isNegativeInfinity())
+        {
+            EXPECT_TRUE(a.isNegativeInfinity());
+        }
+        else
+        {
+            EXPECT_EQ(b, a);
         }
     }
 }
@@ -2299,10 +1969,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, PostfixDecrementOperator)
 TEST(OpenSpaceToolkit_Core_Type_Integer, ValueTypeOperator)
 {
     using ostk::core::type::Integer;
-
-    {
-        EXPECT_ANY_THROW(Integer::ValueType a = Integer::Undefined(); (void)a;);
-    }
 
     {
         EXPECT_ANY_THROW(Integer::ValueType a = Integer::NegativeInfinity(); (void)a;);
@@ -2346,22 +2012,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ValueTypeOperator)
 
 // }
 
-TEST(OpenSpaceToolkit_Core_Type_Integer, IsDefined)
-{
-    using ostk::core::type::Integer;
-
-    EXPECT_TRUE(Integer(0).isDefined());
-    EXPECT_TRUE(Integer(-1).isDefined());
-    EXPECT_TRUE(Integer(+0).isDefined());
-    EXPECT_TRUE(Integer(+1).isDefined());
-    EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::min()).isDefined());
-    EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::max()).isDefined());
-    EXPECT_TRUE(Integer::NegativeInfinity().isDefined());
-    EXPECT_TRUE(Integer::PositiveInfinity().isDefined());
-
-    EXPECT_FALSE(Integer::Undefined().isDefined());
-}
-
 TEST(OpenSpaceToolkit_Core_Type_Integer, IsZero)
 {
     using ostk::core::type::Integer;
@@ -2375,7 +2025,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsZero)
     EXPECT_FALSE(Integer(std::numeric_limits<Integer::ValueType>::max()).isZero());
     EXPECT_FALSE(Integer::NegativeInfinity().isZero());
     EXPECT_FALSE(Integer::PositiveInfinity().isZero());
-    EXPECT_FALSE(Integer::Undefined().isZero());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, IsPositive)
@@ -2388,7 +2037,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsPositive)
     EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::max()).isPositive());
     EXPECT_TRUE(Integer::PositiveInfinity().isPositive());
 
-    EXPECT_FALSE(Integer::Undefined().isPositive());
     EXPECT_FALSE(Integer(-1).isPositive());
     EXPECT_FALSE(Integer(std::numeric_limits<Integer::ValueType>::min()).isPositive());
     EXPECT_FALSE(Integer::NegativeInfinity().isPositive());
@@ -2404,7 +2052,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsNegative)
     EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::min()).isNegative());
     EXPECT_TRUE(Integer::NegativeInfinity().isNegative());
 
-    EXPECT_FALSE(Integer::Undefined().isNegative());
     EXPECT_FALSE(Integer(+1).isNegative());
     EXPECT_FALSE(Integer(std::numeric_limits<Integer::ValueType>::max()).isNegative());
     EXPECT_FALSE(Integer::PositiveInfinity().isNegative());
@@ -2418,7 +2065,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsStrictlyPositive)
     EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::max()).isStrictlyPositive());
     EXPECT_TRUE(Integer::PositiveInfinity().isStrictlyPositive());
 
-    EXPECT_FALSE(Integer::Undefined().isStrictlyPositive());
     EXPECT_FALSE(Integer(0).isStrictlyPositive());
     EXPECT_FALSE(Integer(-1).isStrictlyPositive());
     EXPECT_FALSE(Integer(+0).isStrictlyPositive());
@@ -2434,7 +2080,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsStrictlyNegative)
     EXPECT_TRUE(Integer(std::numeric_limits<Integer::ValueType>::min()).isStrictlyNegative());
     EXPECT_TRUE(Integer::NegativeInfinity().isStrictlyNegative());
 
-    EXPECT_FALSE(Integer::Undefined().isStrictlyNegative());
     EXPECT_FALSE(Integer(0).isStrictlyNegative());
     EXPECT_FALSE(Integer(+1).isStrictlyNegative());
     EXPECT_FALSE(Integer(+0).isStrictlyNegative());
@@ -2449,7 +2094,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsInfinity)
     EXPECT_TRUE(Integer::NegativeInfinity().isInfinity());
     EXPECT_TRUE(Integer::PositiveInfinity().isInfinity());
 
-    EXPECT_FALSE(Integer::Undefined().isInfinity());
     EXPECT_FALSE(Integer(0).isInfinity());
     EXPECT_FALSE(Integer(-1).isInfinity());
     EXPECT_FALSE(Integer(+0).isInfinity());
@@ -2464,7 +2108,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsPositiveInfinity)
 
     EXPECT_TRUE(Integer::PositiveInfinity().isPositiveInfinity());
 
-    EXPECT_FALSE(Integer::Undefined().isPositiveInfinity());
     EXPECT_FALSE(Integer(0).isPositiveInfinity());
     EXPECT_FALSE(Integer(-1).isPositiveInfinity());
     EXPECT_FALSE(Integer(+0).isPositiveInfinity());
@@ -2480,7 +2123,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsNegativeInfinity)
 
     EXPECT_TRUE(Integer::NegativeInfinity().isNegativeInfinity());
 
-    EXPECT_FALSE(Integer::Undefined().isNegativeInfinity());
     EXPECT_FALSE(Integer(0).isNegativeInfinity());
     EXPECT_FALSE(Integer(-1).isNegativeInfinity());
     EXPECT_FALSE(Integer(+0).isNegativeInfinity());
@@ -2503,7 +2145,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsFinite)
 
     EXPECT_FALSE(Integer::NegativeInfinity().isFinite());
     EXPECT_FALSE(Integer::PositiveInfinity().isFinite());
-    EXPECT_FALSE(Integer::Undefined().isFinite());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, IsEven)
@@ -2525,7 +2166,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsEven)
 
     EXPECT_FALSE(Integer::NegativeInfinity().isEven());
     EXPECT_FALSE(Integer::PositiveInfinity().isEven());
-    EXPECT_FALSE(Integer::Undefined().isEven());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, IsOdd)
@@ -2543,7 +2183,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, IsOdd)
 
     EXPECT_FALSE(Integer::NegativeInfinity().isOdd());
     EXPECT_FALSE(Integer::PositiveInfinity().isOdd());
-    EXPECT_FALSE(Integer::Undefined().isOdd());
 }
 
 TEST(OpenSpaceToolkit_Core_Type_Integer, GetSign)
@@ -2551,7 +2190,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, GetSign)
     using ostk::core::type::Integer;
     using ostk::core::type::Sign;
 
-    EXPECT_EQ(Sign::Undefined, Integer::Undefined().getSign());
     EXPECT_EQ(Sign::None, Integer(0).getSign());
     EXPECT_EQ(Sign::Negative, Integer(-1).getSign());
     EXPECT_EQ(Sign::None, Integer(+0).getSign());
@@ -2566,7 +2204,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ToString)
 {
     using ostk::core::type::Integer;
 
-    EXPECT_EQ("Undefined", Integer::Undefined().toString());
     EXPECT_EQ("0", Integer(0).toString());
     EXPECT_EQ("-1", Integer(-1).toString());
     EXPECT_EQ("0", Integer(+0).toString());
@@ -2584,23 +2221,12 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, ToString)
 
 // }
 
-TEST(OpenSpaceToolkit_Core_Type_Integer, Undefined)
-{
-    using ostk::core::type::Integer;
-
-    EXPECT_NO_THROW(Integer::Undefined());
-
-    EXPECT_FALSE(Integer::Undefined().isDefined());
-    EXPECT_FALSE(Integer::Undefined().isInfinity());
-}
-
 TEST(OpenSpaceToolkit_Core_Type_Integer, PositiveInfinity)
 {
     using ostk::core::type::Integer;
 
     EXPECT_NO_THROW(Integer::PositiveInfinity());
 
-    EXPECT_TRUE(Integer::PositiveInfinity().isDefined());
     EXPECT_TRUE(Integer::PositiveInfinity().isInfinity());
     EXPECT_TRUE(Integer::PositiveInfinity().isPositiveInfinity());
 }
@@ -2611,7 +2237,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, NegativeInfinity)
 
     EXPECT_NO_THROW(Integer::NegativeInfinity());
 
-    EXPECT_TRUE(Integer::NegativeInfinity().isDefined());
     EXPECT_TRUE(Integer::NegativeInfinity().isInfinity());
     EXPECT_TRUE(Integer::NegativeInfinity().isNegativeInfinity());
 }
@@ -3051,8 +2676,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, CanParse)
     // String
 
     {
-        EXPECT_TRUE(Integer::CanParse("Undefined"));
-
         EXPECT_TRUE(Integer::CanParse("0"));
         EXPECT_TRUE(Integer::CanParse("-1"));
         EXPECT_TRUE(Integer::CanParse("+0"));
@@ -3095,8 +2718,6 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Parse)
     // String
 
     {
-        EXPECT_FALSE(Integer::Parse("Undefined").isDefined());
-
         EXPECT_EQ(+0, Integer::Parse("0"));
         EXPECT_EQ(-1, Integer::Parse("-1"));
         EXPECT_EQ(+0, Integer::Parse("+0"));

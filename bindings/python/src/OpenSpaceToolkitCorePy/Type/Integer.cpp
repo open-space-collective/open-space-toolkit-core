@@ -120,22 +120,6 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integ
         )
 
         .def(
-            "is_defined",
-            &Integer::isDefined,
-            R"doc(
-                Check if the Integer is defined (not uninitialized).
-
-                Returns:
-                    bool: True if the Integer is defined, False otherwise.
-
-                Example:
-                    >>> integer = Integer(42)
-                    >>> integer.is_defined()  # True
-                    >>> undefined_int = Integer.undefined()
-                    >>> undefined_int.is_defined()  # False
-            )doc"
-        )
-        .def(
             "is_zero",
             &Integer::isZero,
             R"doc(
@@ -326,20 +310,6 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integ
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &Integer::Undefined,
-            R"doc(
-                Create an undefined Integer.
-
-                Returns:
-                    Integer: An undefined Integer.
-
-                Example:
-                    >>> undefined_int = Integer.undefined()
-                    >>> undefined_int.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "zero",
             &Integer::Zero,

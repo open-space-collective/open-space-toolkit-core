@@ -3,6 +3,8 @@
 #ifndef __OpenSpaceToolkit_Core_Logger__
 #define __OpenSpaceToolkit_Core_Logger__
 
+#include <optional>
+
 #include <boost/log/attributes.hpp>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
@@ -34,12 +36,12 @@ class Logger
    public:
     Logger(const String& aChannel);
 
-    Pump operator()(const Severity& aSeverity, const Integer& aLine, const String& aFile, const String& aFunction);
+    Pump operator()(const Severity& aSeverity, const std::optional<Integer>& aLine, const String& aFile, const String& aFunction);
 
     template <class T>
     Pump operator<<(const T& anObject)
     {
-        Pump pump(Severity::Info, Integer::Undefined(), String::Empty(), String::Empty(), &source_);
+        Pump pump(Severity::Info, std::nullopt, String::Empty(), String::Empty(), &source_);
 
         pump << anObject;
 

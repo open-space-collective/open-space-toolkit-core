@@ -17,12 +17,6 @@ def test_path_parse():
     assert isinstance(path_3, Path)
 
 
-def test_path_undefined():
-    # create undefined path
-    undefined_path = Path.undefined()
-    assert isinstance(undefined_path, Path)
-
-
 def test_path_root():
     # create root path
     root_path = Path.root()
@@ -48,14 +42,6 @@ def test_path_operators():
     assert isinstance(path_1, Path)
     assert isinstance(path_2, Path)
     assert isinstance(path_3, Path)
-
-
-def test_path_is_defined():
-    path_1 = Path.undefined()
-    path_2 = Path.current()
-
-    assert path_1.is_defined() is False
-    assert path_2.is_defined() is True
 
 
 def test_path_is_absolute():
@@ -133,12 +119,8 @@ def test_path_get_absolute_path():
 
 
 def test_path_to_string():
-    path_1 = Path.undefined()
-    with pytest.raises(RuntimeError):
-        path_1.to_string()
-
-    path_2 = Path.parse("/path/to/file.txt")
-    path_2_string = path_2.to_string()
-    assert isinstance(path_2_string, String)
-    assert path_2_string == String("/path/to/file.txt")
-    assert path_2_string == "/path/to/file.txt"
+    path = Path.parse("/path/to/file.txt")
+    path_string = path.to_string()
+    assert isinstance(path_string, String)
+    assert path_string == String("/path/to/file.txt")
+    assert path_string == "/path/to/file.txt"
