@@ -9,7 +9,6 @@ docker_image_repository := $(docker_registry_path)/open-space-toolkit-$(project_
 docker_image_version := $(project_version)
 
 docker_development_image_repository := $(docker_image_repository)-development
-docker_test_image_repository := $(docker_image_repository)-test
 docker_release_image_cpp_repository := $(docker_image_repository)-cpp
 docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
@@ -187,12 +186,6 @@ build-release-image-jupyter: pull-release-image-jupyter ## Build release image j
 
 build-documentation: build-development-image ## Build documentation
 
-	@ $(MAKE) build-documentation-standalone
-
-.PHONY: build-documentation
-
-build-documentation-standalone: ## Build documentation (standalone)
-
 	@ echo "Building documentation..."
 
 	docker run \
@@ -206,7 +199,7 @@ build-documentation-standalone: ## Build documentation (standalone)
 		&& ostk-install-python \
 		&& ostk-build-docs"
 
-.PHONY: build-documentation-standalone
+.PHONY: build-documentation
 
 build-packages: ## Build packages
 
@@ -218,12 +211,6 @@ build-packages: ## Build packages
 .PHONY: build-packages
 
 build-packages-cpp: build-development-image ## Build C++ packages
-
-	@ $(MAKE) build-packages-cpp-standalone
-
-.PHONY: build-packages-cpp
-
-build-packages-cpp-standalone: ## Build C++ packages (standalone)
 
 	@ echo "Building C++ packages..."
 
@@ -239,15 +226,10 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-.PHONY: build-packages-cpp-standalone
+.PHONY: build-packages-cpp
 
 build-packages-python: build-development-image ## Build Python packages
 
-	@ $(MAKE) build-packages-python-standalone
-
-.PHONY: build-packages-python
-
-build-packages-python-standalone: ## Build Python packages (standalone)
 
 	@ echo "Building Python packages..."
 
@@ -263,7 +245,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
-.PHONY: build-packages-python-standalone
+.PHONY: build-packages-python
 
 start-development dev: build-development-image-non-root ## Start development environment
 
@@ -425,12 +407,6 @@ format-check: ## Run format checking
 
 format-check-cpp: build-development-image ## Run the clang-format tool to check the code against rules and formatting
 
-	@ $(MAKE) format-check-cpp-standalone
-
-.PHONY: format-check-cpp
-
-format-check-cpp-standalone:
-
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
@@ -438,38 +414,18 @@ format-check-cpp-standalone:
 		$(docker_development_image_repository):$(docker_image_version) \
 		ostk-check-format-cpp
 
-.PHONY: format-check-cpp-standalone
+.PHONY: format-check-cpp
 
 format-check-python: build-development-image ## Run the black format tool against python code
-
-	@ $(MAKE) format-check-python-standalone
-
-.PHONY: format-check-python
-
-format-check-python-standalone:
 
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c 'ostk-check-format-python'
+		ostk-check-format-python
 
-.PHONY: format-check-python-standalone
-
-build-test-image: pull-development-image ## Build a test image that includes all code and dependencies for CI
-
-	@ echo "Building test image"
-
-	docker build \
-		--file="$(CURDIR)"/docker/development/Dockerfile \
-		--tag=$(docker_test_image_repository):$(docker_image_version) \
-		--tag=$(docker_test_image_repository):latest \
-		--build-arg="VERSION=$(docker_image_version)" \
-		--target=test-ci \
-		"$(CURDIR)"
-
-.PHONY: build-test-image
+.PHONY: format-check-python
 
 test: ## Run tests
 
@@ -491,12 +447,6 @@ test-unit: ## Run unit tests
 
 test-unit-cpp: build-development-image ## Run C++ unit tests
 
-	@ $(MAKE) test-unit-cpp-standalone
-
-.PHONY: test-unit-cpp
-
-test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
-
 	@ echo "Running C++ unit tests..."
 
 	docker run \
@@ -509,15 +459,9 @@ test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 		&& $(MAKE) -j 4 \
 		&& $(MAKE) test"
 
-.PHONY: test-unit-cpp-standalone
+.PHONY: test-unit-cpp
 
 test-unit-python: build-development-image ## Run Python unit tests
-
-	@ $(MAKE) test-unit-python-standalone
-
-.PHONY: test-unit-python
-
-test-unit-python-standalone: ## Run Python unit tests (standalone)
 
 	@ echo "Running Python unit tests..."
 
@@ -533,7 +477,7 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		&& ostk-install-python \
 		&& ostk-test-python"
 
-.PHONY: test-unit-python-standalone
+.PHONY: test-unit-python
 
 test-coverage: ## Run test coverage cpp
 
@@ -545,25 +489,24 @@ test-coverage: ## Run test coverage cpp
 
 test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
-	@ $(MAKE) test-coverage-cpp-standalone
-
-.PHONY: test-coverage-cpp
-
-test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
-
 	@ echo "Running C++ coverage tests..."
 
 	@ mkdir -p $(CURDIR)/coverage
 
 	docker run \
 		--rm \
-		--volume=$(CURDIR)/coverage:/app/coverage:delegated \
-		$(docker_test_image_repository):$(docker_image_version) \
-		/bin/bash -c "make coverage \
-		&& rm -rf /app/coverage/* \
-		&& cp -r /app/build/coverage* /app/coverage/"
+		--volume="$(CURDIR):/app:delegated" \
+		--volume="/app/build" \
+		--workdir=/app/build \
+		$(docker_development_image_repository):$(docker_image_version) \
+		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_CODE_COVERAGE=ON .. \
+		&& $(MAKE) -j 4 \
+		&& $(MAKE) coverage \
+		&& (rm -rf /app/coverage || true) \
+		&& mkdir /app/coverage \
+		&& mv /app/build/coverage* /app/coverage"
 
-.PHONY: test-coverage-cpp-standalone
+.PHONY: test-coverage-cpp
 
 clean: ## Clean
 
