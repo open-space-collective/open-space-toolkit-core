@@ -12,8 +12,12 @@ namespace core
 namespace type
 {
 
-/// @brief                      A unit of digital information that consists of eight bits
-
+/// @brief A unit of digital information that consists of eight bits
+///
+/// @code
+///     Byte byte = 0xFF ;
+///     Byte byte = 42 ;
+/// @endcode
 using Byte = uint8_t;
 
 }  // namespace type

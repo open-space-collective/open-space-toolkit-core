@@ -18,8 +18,7 @@ namespace sink
 using ostk::core::logger::Severity;
 using ostk::core::type::Unique;
 
-/// @brief                      Log console sink
-
+/// @brief Log console sink
 class Console : public Sink
 {
    public:

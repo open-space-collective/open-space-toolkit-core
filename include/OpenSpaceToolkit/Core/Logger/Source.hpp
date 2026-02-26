@@ -17,19 +17,36 @@ namespace logger
 using ostk::core::type::String;
 using ostk::core::type::Unique;
 
-/// @brief                      Log source
-
+/// @brief Log source
+///
+/// Represents a named logging source associated with a channel.
 class Source
 {
    public:
+    /// @brief Constructor
+    ///
+    /// @param [in] aChannel A channel name
     Source(const String& aChannel);
 
+    /// @brief Copy constructor
+    ///
+    /// @param [in] aSource A source
     Source(const Source& aSource);
 
+    /// @brief Copy assignment operator
+    ///
+    /// @param [in] aSource A source
+    /// @return Reference to source
     Source& operator=(const Source& aSource);
 
+    /// @brief Check if source is defined
+    ///
+    /// @return True if defined
     bool isDefined() const;
 
+    /// @brief Construct an undefined source
+    ///
+    /// @return Undefined source
     static Source Undefined();
 
     // private:

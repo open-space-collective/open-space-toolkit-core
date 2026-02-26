@@ -21,11 +21,24 @@ using ostk::core::type::Index;
 using ostk::core::type::Size;
 using ostk::core::type::String;
 
-/// @brief                      Tuple container
-
+/// @brief Tuple container
+///
+/// @code
+///     Tuple<int, double, String> tuple = std::make_tuple(1, 2.0, String("abc")) ;
+/// @endcode
 template <typename... Args>
 using Tuple = std::tuple<Args...>;
 
+/// @brief Unpack values into a tuple of references for structured assignment
+///
+/// @code
+///     int a ;
+///     double b ;
+///     Unpack(a, b) = std::make_tuple(1, 2.0) ;
+/// @endcode
+///
+/// @param [in] args References to variables to unpack into
+/// @return Tuple of references
 template <typename... Args>
 auto Unpack(Args&... args)
 {

@@ -17,16 +17,21 @@ namespace runtime
 
 using ostk::core::type::String;
 
-/// @brief                      Undefined variable error class
-
+/// @brief Undefined variable error class
+///
+/// Thrown when an undefined variable is accessed.
 class Undefined : public RuntimeError
 {
    public:
+    /// @brief Constructor
+    ///
+    /// @param [in] aVariableName The name of the undefined variable
     Undefined(const String& aVariableName);
 
     // Undefined                                   (   const   String&                     aScope,
     //                                                 const   String&                     aVariableName ) ;
 
+    /// @brief Destructor
     ~Undefined();
 };
 

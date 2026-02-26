@@ -12,8 +12,12 @@ namespace core
 namespace container
 {
 
-/// @brief                      List container
-
+/// @brief List container
+///
+/// @code
+///     List<Integer> list ;
+///     list.push_back(123) ;
+/// @endcode
 template <class T>
 using List = std::list<T>;
 

@@ -19,13 +19,21 @@ namespace error
 
 using ostk::core::type::String;
 
-/// @brief                      Runtime error class
-
+/// @brief Runtime error class
+///
+/// Exception class for runtime errors, with stack trace support.
 class RuntimeError : public Exception
 {
    public:
+    /// @brief Constructor
+    ///
+    /// @param [in] aMessage An error message
     RuntimeError(const String& aMessage);
 
+    /// @brief Formatted constructor
+    ///
+    /// @param [in] aFormat A format string
+    /// @param [in] anArgumentList Format arguments
     template <typename... Args>
     RuntimeError(const char* aFormat, Args... anArgumentList)
         : Exception(String::Empty()),
@@ -35,11 +43,22 @@ class RuntimeError : public Exception
     {
     }
 
+    /// @brief Destructor
     ~RuntimeError();
 
+    /// @brief Get the error message
+    ///
+    /// @return Error message
     String getMessage() const;
+
+    /// @brief Get the stack trace
+    ///
+    /// @return Stack trace string
     String getStackTrace() const;
 
+    /// @brief Get the full error description (stack trace + message)
+    ///
+    /// @return Error description as C-string
     virtual const char* what() const noexcept override;
 
    private:

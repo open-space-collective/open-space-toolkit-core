@@ -45,126 +45,242 @@ using ostk::core::type::Size;
 class Real;
 class Integer;
 
-/// @brief                      A sequence of characters
-/// @note                       The current implementation (derived for std::string) is temporary, as this type of
+/// @brief A sequence of characters
+///
+/// @note The current implementation (derived for std::string) is temporary, as this type of
 /// inheritance this is not recommended.
-
 class String : public std::string
 {
    public:
     using std::string::string;
 
+    /// @brief Default constructor
+    ///
+    /// @code
+    ///     String string ;
+    /// @endcode
     String();
 
+    /// @brief Constructor from std::string
+    ///
+    /// @code
+    ///     String string("Hello") ;
+    /// @endcode
+    ///
+    /// @param [in] aString A standard string
     String(const std::string& aString);
 
+    /// @brief Destructor
     ~String();
 
+    /// @brief Check if string is empty
+    ///
+    /// @code
+    ///     String("Hello").isEmpty() ; // False
+    ///     String("").isEmpty() ; // True
+    /// @endcode
+    ///
+    /// @return True if empty
     bool isEmpty() const;
 
+    /// @brief Check if all characters are uppercase
+    ///
+    /// @code
+    ///     String("ABC").isUppercase() ; // True
+    ///     String("Abc").isUppercase() ; // False
+    /// @endcode
+    ///
+    /// @return True if all characters are uppercase
     bool isUppercase() const;
 
+    /// @brief Check if all characters are lowercase
+    ///
+    /// @code
+    ///     String("abc").isLowercase() ; // True
+    ///     String("Abc").isLowercase() ; // False
+    /// @endcode
+    ///
+    /// @return True if all characters are lowercase
     bool isLowercase() const;
 
-    /// @brief              Returns whether the string matches a regular expression
+    /// @brief Returns whether the string matches a regular expression
     ///
     /// @code
-    ///                     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
+    ///     String("abc").match(std::regex("^[a-z]{3}$")) ; // True
     /// @endcode
     ///
-    /// @param              [in] aRegularExpression A regular expression
-    /// @return             True if matches regular expression
-
+    /// @param [in] aRegularExpression A regular expression
+    /// @return True if matches regular expression
     bool match(const std::regex& aRegularExpression) const;
 
-    /// @brief              Returns whether the string matches a regular expression (boost::regex overload)
+    /// @brief Returns whether the string matches a regular expression (boost::regex overload)
     ///
     /// @code
-    ///                     String("abc").match(boost::regex("^[a-z]{3}$")) ; // True
+    ///     String("abc").match(boost::regex("^[a-z]{3}$")) ; // True
     /// @endcode
     ///
-    /// @param              [in] aRegularExpression A boost regular expression
-    /// @return             True if matches regular expression
-
+    /// @param [in] aRegularExpression A boost regular expression
+    /// @return True if matches regular expression
     bool match(const boost::regex& aRegularExpression) const;
 
-    Size getLength() const;
-
-    char getFirst() const;
-
-    char getLast() const;
-
-    String getHead(const Size& aLength) const;
-
-    String getTail(const Size& aLength) const;
-
-    String getSubstring(const Index& aStartPosition, const Size& aLength) const;
-
-    /// @brief              Split the String into tokens separated by the given delimeter.
-    ///                     E.X. String("1sat2satredsatbluesat").split("sat") -> ["1", "2", "red", "blue", ""]
-    ///
-    /// @return             Array of String tokens
-
-    Array<String> split(const String& aDelimiter) const;
-
-    /// @brief              Removes whitespace from both ends
-    ///
-    /// @return             Reference to string
-
-    String& trim();
-
-    /// @brief              Replace all occurences of character by other character
-    ///
-    /// @param              [in] aCharacter A character
-    /// @param              [in] aNewCharacter A replacement character
-    /// @return             Reference to string
-
-    String& replace(const char aCharacter, const char aNewCharacter);
-
-    /// @brief              Replace all occurences of string by other string
-    ///
-    /// @param              [in] aCharacter A string
-    /// @param              [in] aNewCharacter A replacement string
-    /// @return             Reference to string
-
-    String& replace(const String& aString, const String& aNewString);
-
-    static String Empty();
-
-    static String Boolean(bool aBoolean);
-
-    static String Char(char aCharacter);
-
-    static String Replicate(char aCharacter, Size aCount);
-
-    static String Replicate(const String& aString, Size aCount);
-
-    /// @brief              Checks if the string contains any invalid UTF-8 characters
-    ///
-    /// @param              [in] aString A string
-    /// @return             True if valid UTF-8 string
-
-    static bool IsValidUTF8(const String& aString);
-
-    /// @brief              Sanitizes the string by removing any invalid UTF-8 characters
-    ///
-    /// @param              [in] aString A string
-    /// @return             valid UTF-8 string
-
-    static String SanitizeUTF8(const String& aString);
-
-    /// @brief              Create formatted string
+    /// @brief Get length of string
     ///
     /// @code
-    ///                     String::Format("{0}, {1}!", "Hello", "World") ; // "Hello, World!"
-    ///                     String::Format("Let's operate {0} {1}!", 123, "satellites") ; // "Let's operate 123
-    ///                     satellites!"
+    ///     String("Hello").getLength() ; // 5
     /// @endcode
     ///
-    /// @param              [in] aFormat A format
-    /// @param              [in] anArgumentList A list of arguments
-    /// @return             Formatted string
+    /// @return Length of string
+    Size getLength() const;
 
+    /// @brief Get first character
+    ///
+    /// @code
+    ///     String("Hello").getFirst() ; // 'H'
+    /// @endcode
+    ///
+    /// @return First character
+    char getFirst() const;
+
+    /// @brief Get last character
+    ///
+    /// @code
+    ///     String("Hello").getLast() ; // 'o'
+    /// @endcode
+    ///
+    /// @return Last character
+    char getLast() const;
+
+    /// @brief Get head of string (first N characters)
+    ///
+    /// @code
+    ///     String("Hello").getHead(3) ; // "Hel"
+    /// @endcode
+    ///
+    /// @param [in] aLength Number of characters
+    /// @return Head substring
+    String getHead(const Size& aLength) const;
+
+    /// @brief Get tail of string (last N characters)
+    ///
+    /// @code
+    ///     String("Hello").getTail(3) ; // "llo"
+    /// @endcode
+    ///
+    /// @param [in] aLength Number of characters
+    /// @return Tail substring
+    String getTail(const Size& aLength) const;
+
+    /// @brief Get substring starting at position with given length
+    ///
+    /// @code
+    ///     String("Hello").getSubstring(1, 3) ; // "ell"
+    /// @endcode
+    ///
+    /// @param [in] aStartPosition A start position
+    /// @param [in] aLength A length
+    /// @return Substring
+    String getSubstring(const Index& aStartPosition, const Size& aLength) const;
+
+    /// @brief Split the String into tokens separated by the given delimeter.
+    /// E.X. String("1sat2satredsatbluesat").split("sat") -> ["1", "2", "red", "blue", ""]
+    ///
+    /// @return Array of String tokens
+    Array<String> split(const String& aDelimiter) const;
+
+    /// @brief Removes whitespace from both ends
+    ///
+    /// @return Reference to string
+    String& trim();
+
+    /// @brief Replace all occurences of character by other character
+    ///
+    /// @param [in] aCharacter A character
+    /// @param [in] aNewCharacter A replacement character
+    /// @return Reference to string
+    String& replace(const char aCharacter, const char aNewCharacter);
+
+    /// @brief Replace all occurences of string by other string
+    ///
+    /// @param [in] aCharacter A string
+    /// @param [in] aNewCharacter A replacement string
+    /// @return Reference to string
+    String& replace(const String& aString, const String& aNewString);
+
+    /// @brief Construct an empty string
+    ///
+    /// @code
+    ///     String string = String::Empty() ; // ""
+    /// @endcode
+    ///
+    /// @return Empty string
+    static String Empty();
+
+    /// @brief Construct a string from a boolean value
+    ///
+    /// @code
+    ///     String::Boolean(true) ; // "True"
+    ///     String::Boolean(false) ; // "False"
+    /// @endcode
+    ///
+    /// @param [in] aBoolean A boolean
+    /// @return String representation of boolean
+    static String Boolean(bool aBoolean);
+
+    /// @brief Construct a string from a single character
+    ///
+    /// @code
+    ///     String::Char('A') ; // "A"
+    /// @endcode
+    ///
+    /// @param [in] aCharacter A character
+    /// @return String containing the character
+    static String Char(char aCharacter);
+
+    /// @brief Construct a string by replicating a character
+    ///
+    /// @code
+    ///     String::Replicate('a', 3) ; // "aaa"
+    /// @endcode
+    ///
+    /// @param [in] aCharacter A character
+    /// @param [in] aCount Number of repetitions
+    /// @return Replicated string
+    static String Replicate(char aCharacter, Size aCount);
+
+    /// @brief Construct a string by replicating a string
+    ///
+    /// @code
+    ///     String::Replicate("ab", 3) ; // "ababab"
+    /// @endcode
+    ///
+    /// @param [in] aString A string
+    /// @param [in] aCount Number of repetitions
+    /// @return Replicated string
+    static String Replicate(const String& aString, Size aCount);
+
+    /// @brief Checks if the string contains any invalid UTF-8 characters
+    ///
+    /// @param [in] aString A string
+    /// @return True if valid UTF-8 string
+    static bool IsValidUTF8(const String& aString);
+
+    /// @brief Sanitizes the string by removing any invalid UTF-8 characters
+    ///
+    /// @param [in] aString A string
+    /// @return valid UTF-8 string
+    static String SanitizeUTF8(const String& aString);
+
+    /// @brief Create formatted string
+    ///
+    /// @code
+    ///     String::Format("{0}, {1}!", "Hello", "World") ; // "Hello, World!"
+    ///     String::Format("Let's operate {0} {1}!", 123, "satellites") ; // "Let's operate 123
+    ///     satellites!"
+    /// @endcode
+    ///
+    /// @param [in] aFormat A format
+    /// @param [in] anArgumentList A list of arguments
+    /// @return Formatted string
 #ifdef CPP20
     template <typename... Args>
     static String Format(const std::string_view aFormat, Args&&... anArgumentList)
@@ -180,8 +296,7 @@ class String : public std::string
 #endif
 };
 
-/// @ref                        https://gist.github.com/fenbf/d2cd670704b82e2ce7fd
-
+/// @ref https://gist.github.com/fenbf/d2cd670704b82e2ce7fd
 template <typename T>
 class HasToString
 {

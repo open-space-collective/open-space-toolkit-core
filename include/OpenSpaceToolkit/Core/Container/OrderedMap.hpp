@@ -21,15 +21,21 @@ namespace core
 namespace container
 {
 
-/// @brief                      Ordered map container
+/// @brief Ordered map container
 ///
-///                             The ordered-map library provides a hash map and a hash set which preserve the order of
-///                             insertion in a way similar to Python's OrderedDict. When iterating over the map, the
-///                             values will be returned in the same order as they were inserted.
+/// The ordered-map library provides a hash map and a hash set which preserve the order of
+/// insertion in a way similar to Python's OrderedDict. When iterating over the map, the
+/// values will be returned in the same order as they were inserted.
 ///
-/// @ref                        https://github.com/Tessil/ordered-map
-/// @note                       This has to be eventually fully wrapped (to remove user dependency on tsl/ordered_map)
-
+/// @code
+///     OrderedMap<String, Integer> map ;
+///     map["first"] = 1 ;
+///     map["second"] = 2 ;
+///     // Iteration order: "first", "second"
+/// @endcode
+///
+/// @ref https://github.com/Tessil/ordered-map
+/// @note This has to be eventually fully wrapped (to remove user dependency on tsl/ordered_map)
 template <
     class Key,
     class T,

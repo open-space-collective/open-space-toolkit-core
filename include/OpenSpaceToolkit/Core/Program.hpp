@@ -4,5 +4,4 @@
 #define __OpenSpaceToolkit_Core_Program__
 
 /// @brief
-
 #endif
