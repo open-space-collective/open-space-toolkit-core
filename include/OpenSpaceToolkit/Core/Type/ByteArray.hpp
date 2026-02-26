@@ -3,13 +3,17 @@
 #ifndef __OpenSpaceToolkit_Core_Type_ByteArray__
 #define __OpenSpaceToolkit_Core_Type_ByteArray__
 
-#include <OpenSpaceToolkit/Core/Type/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Type/Byte.hpp>
 
 namespace ostk
 {
 namespace core
 {
+
+using ostk::core::container::Array;
+using ostk::core::type::Byte;
+
 namespace type
 {
 

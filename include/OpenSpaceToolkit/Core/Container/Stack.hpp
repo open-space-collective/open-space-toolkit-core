@@ -3,12 +3,18 @@
 #ifndef __OpenSpaceToolkit_Core_Container_Stack__
 #define __OpenSpaceToolkit_Core_Container_Stack__
 
+#include <ostream>
+
+#include <OpenSpaceToolkit/Core/Container/Object.hpp>
+
 namespace ostk
 {
 namespace core
 {
 namespace container
 {
+
+using ostk::core::container::Object;
 
 /// @brief First-in, last-out (FILO) container [TBI]
 class Stack
@@ -29,7 +35,7 @@ class Stack
     ///
     /// @param [in] aStack A stack
     /// @return Reference to stack
-    Stack& operator=(const Stack& aStack) const;
+    Stack& operator=(const Stack& aStack);
 
     /// @brief Output stream operator
     ///

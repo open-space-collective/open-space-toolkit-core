@@ -3,12 +3,18 @@
 #ifndef __OpenSpaceToolkit_Core_Container_Queue__
 #define __OpenSpaceToolkit_Core_Container_Queue__
 
+#include <ostream>
+
+#include <OpenSpaceToolkit/Core/Container/Object.hpp>
+
 namespace ostk
 {
 namespace core
 {
 namespace container
 {
+
+using ostk::core::container::Object;
 
 /// @brief First-in, first-out (FIFO) container [TBI]
 class Queue
@@ -29,7 +35,7 @@ class Queue
     ///
     /// @param [in] aQueue A queue
     /// @return Reference to queue
-    Queue& operator=(const Queue& aQueue) const;
+    Queue& operator=(const Queue& aQueue);
 
     /// @brief Output stream operator
     ///

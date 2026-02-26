@@ -3,12 +3,18 @@
 #ifndef __OpenSpaceToolkit_Core_Container_Graph__
 #define __OpenSpaceToolkit_Core_Container_Graph__
 
+#include <ostream>
+
+#include <OpenSpaceToolkit/Core/Container/Object.hpp>
+
 namespace ostk
 {
 namespace core
 {
 namespace container
 {
+
+using ostk::core::container::Object;
 
 /// @brief Structure consisting of a finite set of vertices, together with a set of pairs of these
 /// vertices (edges). [TBI]
@@ -32,7 +38,7 @@ class Graph
     ///
     /// @param [in] aGraph A graph
     /// @return Reference to graph
-    Graph& operator=(const Graph& aGraph) const;
+    Graph& operator=(const Graph& aGraph);
 
     /// @brief Output stream operator
     ///
