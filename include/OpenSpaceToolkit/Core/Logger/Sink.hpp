@@ -19,21 +19,42 @@ using ostk::core::logger::Severity;
 using ostk::core::type::String;
 using ostk::core::type::Unique;
 
-/// @brief                      Log sink
-
+/// @brief Log sink
+///
+/// Represents a destination for log messages, with channel filtering.
 class Sink
 {
    public:
+    /// @brief Constructor from internal sink
+    ///
+    /// @param [in] aSink An internal sink implementation
     Sink(const sink::Sink& aSink);
 
+    /// @brief Copy constructor
+    ///
+    /// @param [in] aSink A sink
     Sink(const Sink& aSink);
 
+    /// @brief Enable the sink
     void enable();
+
+    /// @brief Disable the sink
     void disable();
 
+    /// @brief Add a channel to the sink filter
+    ///
+    /// @param [in] aChannel A channel name
     void addChannel(const String& aChannel);
+
+    /// @brief Remove a channel from the sink filter
+    ///
+    /// @param [in] aChannel A channel name
     void removeChannel(const String& aChannel);
 
+    /// @brief Construct a console sink with a severity filter
+    ///
+    /// @param [in] aSeverity A minimum severity level
+    /// @return Console sink
     static Sink Console(const Severity& aSeverity);
 
    private:

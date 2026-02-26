@@ -13,8 +13,12 @@ namespace core
 namespace type
 {
 
-/// @brief                      Holds a non-owning reference to an object that is managed by Shared
-
+/// @brief Holds a non-owning reference to an object that is managed by Shared
+///
+/// @code
+///     Shared<MyClass> shared = std::make_shared<MyClass>() ;
+///     Weak<MyClass> weak = shared ;
+/// @endcode
 template <class T>
 using Weak = std::weak_ptr<T>;
 

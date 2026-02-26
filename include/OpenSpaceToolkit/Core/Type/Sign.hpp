@@ -12,16 +12,14 @@ namespace core
 namespace type
 {
 
-/// @brief                      Sign enum
-
+/// @brief Sign enum
 enum class Sign : uint8_t
 {
 
-    Undefined,
-    Positive,
-    Negative,
-    None
-
+    Undefined,  ///< Undefined sign
+    Positive,   ///< Positive sign
+    Negative,   ///< Negative sign
+    None        ///< No sign (zero)
 };
 
 }  // namespace type

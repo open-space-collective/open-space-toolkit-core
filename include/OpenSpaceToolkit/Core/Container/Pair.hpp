@@ -22,8 +22,13 @@ using ostk::core::type::Index;
 using ostk::core::type::Size;
 using ostk::core::type::String;
 
-/// @brief                      Pair container
-
+/// @brief Pair container
+///
+/// @code
+///     Pair<String, Integer> pair = std::make_pair(String("key"), Integer(123)) ;
+///     pair.first ; // "key"
+///     pair.second ; // 123
+/// @endcode
 template <class T, class U>
 using Pair = std::pair<T, U>;
 

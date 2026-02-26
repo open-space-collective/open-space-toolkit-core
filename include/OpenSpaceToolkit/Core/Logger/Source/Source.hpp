@@ -22,8 +22,7 @@ using ostk::core::logger::Severity;
 using ostk::core::type::String;
 using ostk::core::type::Unique;
 
-/// @brief                      Log source base
-
+/// @brief Log source base
 class Source
 {
     friend class Pump;

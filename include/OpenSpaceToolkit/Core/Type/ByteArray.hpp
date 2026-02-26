@@ -13,11 +13,11 @@ namespace core
 namespace type
 {
 
-/// @brief                      An array of bytes [TBI]
-
+/// @brief An array of bytes [TBI]
 class ByteArray
 {
    public:
+    /// @brief Default constructor
     ByteArray() = default;
 
    private:

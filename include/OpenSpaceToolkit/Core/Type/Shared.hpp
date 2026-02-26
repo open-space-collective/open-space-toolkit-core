@@ -13,8 +13,12 @@ namespace core
 namespace type
 {
 
-/// @brief                      Retains shared ownership of an object through a pointer
-
+/// @brief Retains shared ownership of an object through a pointer
+///
+/// @code
+///     Shared<MyClass> ptr = std::make_shared<MyClass>() ;
+///     Shared<MyClass> ptr2 = ptr ; // Shared ownership
+/// @endcode
 template <class T>
 using Shared = std::shared_ptr<T>;
 

@@ -12,8 +12,12 @@ namespace core
 namespace type
 {
 
-/// @brief                      Index can store the maximum size of a theoretically possible object of any type
-
+/// @brief Index can store the maximum size of a theoretically possible object of any type
+///
+/// @code
+///     Index index = 0 ;
+///     Index index = 42 ;
+/// @endcode
 typedef size_t Index;
 
 }  // namespace type

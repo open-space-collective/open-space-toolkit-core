@@ -14,8 +14,13 @@ namespace container
 namespace table
 {
 
-/// @brief                      Cell of table
-
+/// @brief Cell of table
+///
+/// A cell is a universal type container (alias for Object).
+///
+/// @code
+///     Cell cell = Object::Integer(123) ;
+/// @endcode
 using Cell = container::Object;
 
 }  // namespace table

@@ -20,8 +20,7 @@ using ostk::core::container::Array;
 using ostk::core::logger::Severity;
 using ostk::core::type::String;
 
-/// @brief                      Log sink base
-
+/// @brief Log sink base
 class Sink
 {
    public:

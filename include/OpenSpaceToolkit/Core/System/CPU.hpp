@@ -10,8 +10,7 @@ namespace core
 namespace system
 {
 
-/// @brief                      [TBI]
-
+/// @brief [TBI]
 }
 }  // namespace core
 }  // namespace ostk

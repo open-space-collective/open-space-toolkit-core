@@ -10,18 +10,16 @@ namespace core
 namespace logger
 {
 
-/// @brief                      Log severity
-
+/// @brief Log severity
 enum class Severity
 {
 
-    Trace,
-    Debug,
-    Info,
-    Warning,
-    Error,
-    Fatal
-
+    Trace,    ///< Detailed tracing information
+    Debug,    ///< Debug-level information
+    Info,     ///< General informational messages
+    Warning,  ///< Warning conditions
+    Error,    ///< Error conditions
+    Fatal     ///< Fatal error conditions
 };
 
 }  // namespace logger
