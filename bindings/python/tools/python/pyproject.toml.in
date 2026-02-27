@@ -4,5 +4,42 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.black]
-line-length = 90
+[project]
+name = "open-space-toolkit-core"
+version = "${PROJECT_VERSION_STRING}"
+description = "Fundamental types, container and utility."
+authors = [
+    {name = "Open Space Collective", email = "contact@open-space-collective.org"}
+]
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["open-space-collective", "open-space-toolkit", "core"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+]
+requires-python = "~=${PYTHON_VERSION}.0"
+
+dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with higher-level OSTk packages
+
+[project.optional-dependencies]
+prebuild = [
+    "pybind11-stubgen"
+]
+test = [
+    "pytest"
+]
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = true
+# Declare a dummy extension module to force platform-specific wheel tags.
+# The actual .so files are pre-compiled and included via package-data.
+ext-modules = [
+    {name = "ostk.core._platform", sources = []}
+]
+
+[tool.setuptools.package-data]
+"ostk.core" = ["${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
+"*" = ["*/data/*"]

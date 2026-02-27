@@ -14,7 +14,6 @@ docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
 test_python_version := 3.11
-test_python_directory := /usr/local/lib/python${test_python_version}/dist-packages
 
 jupyter_notebook_port := 9005
 jupyter_python_version := 3.11
@@ -187,12 +186,6 @@ build-release-image-jupyter: pull-release-image-jupyter ## Build release image j
 
 build-documentation: build-development-image ## Build documentation
 
-	@ $(MAKE) build-documentation-standalone
-
-.PHONY: build-documentation
-
-build-documentation-standalone: ## Build documentation (standalone)
-
 	@ echo "Building documentation..."
 
 	docker run \
@@ -206,7 +199,7 @@ build-documentation-standalone: ## Build documentation (standalone)
 		&& ostk-install-python \
 		&& ostk-build-docs"
 
-.PHONY: build-documentation-standalone
+.PHONY: build-documentation
 
 build-packages: ## Build packages
 
@@ -218,12 +211,6 @@ build-packages: ## Build packages
 .PHONY: build-packages
 
 build-packages-cpp: build-development-image ## Build C++ packages
-
-	@ $(MAKE) build-packages-cpp-standalone
-
-.PHONY: build-packages-cpp
-
-build-packages-cpp-standalone: ## Build C++ packages (standalone)
 
 	@ echo "Building C++ packages..."
 
@@ -239,15 +226,10 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-.PHONY: build-packages-cpp-standalone
+.PHONY: build-packages-cpp
 
 build-packages-python: build-development-image ## Build Python packages
 
-	@ $(MAKE) build-packages-python-standalone
-
-.PHONY: build-packages-python
-
-build-packages-python-standalone: ## Build Python packages (standalone)
 
 	@ echo "Building Python packages..."
 
@@ -263,7 +245,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 		&& mkdir -p /app/packages/python \
 		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
 
-.PHONY: build-packages-python-standalone
+.PHONY: build-packages-python
 
 start-development dev: build-development-image-non-root ## Start development environment
 
@@ -338,7 +320,7 @@ debug-jupyter: build-release-image-jupyter ## Debug jupyter notebook using the o
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs:delegated" \
 		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials:delegated" \
-		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit${project_name_camel_case}Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
+		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit$(project_name_camel_case)Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		/bin/bash -c "chown -R jovyan:users /home/jovyan ; python$(jupyter_python_version) -m pip install /opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)/ --force-reinstall ; start-notebook.sh --ServerApp.token=''"
@@ -425,12 +407,6 @@ format-check: ## Run format checking
 
 format-check-cpp: build-development-image ## Run the clang-format tool to check the code against rules and formatting
 
-	@ $(MAKE) format-check-cpp-standalone
-
-.PHONY: format-check-cpp
-
-format-check-cpp-standalone:
-
 	docker run \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
@@ -438,15 +414,9 @@ format-check-cpp-standalone:
 		$(docker_development_image_repository):$(docker_image_version) \
 		ostk-check-format-cpp
 
-.PHONY: format-check-cpp-standalone
+.PHONY: format-check-cpp
 
 format-check-python: build-development-image ## Run the black format tool against python code
-
-	@ $(MAKE) format-check-python-standalone
-
-.PHONY: format-check-python
-
-format-check-python-standalone:
 
 	docker run \
 		--rm \
@@ -455,7 +425,7 @@ format-check-python-standalone:
 		$(docker_development_image_repository):$(docker_image_version) \
 		ostk-check-format-python
 
-.PHONY: format-check-python-standalone
+.PHONY: format-check-python
 
 test: ## Run tests
 
@@ -477,12 +447,6 @@ test-unit: ## Run unit tests
 
 test-unit-cpp: build-development-image ## Run C++ unit tests
 
-	@ $(MAKE) test-unit-cpp-standalone
-
-.PHONY: test-unit-cpp
-
-test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
-
 	@ echo "Running C++ unit tests..."
 
 	docker run \
@@ -495,15 +459,9 @@ test-unit-cpp-standalone: ## Run C++ unit tests (standalone)
 		&& $(MAKE) -j 4 \
 		&& $(MAKE) test"
 
-.PHONY: test-unit-cpp-standalone
+.PHONY: test-unit-cpp
 
 test-unit-python: build-development-image ## Run Python unit tests
-
-	@ $(MAKE) test-unit-python-standalone
-
-.PHONY: test-unit-python
-
-test-unit-python-standalone: ## Run Python unit tests (standalone)
 
 	@ echo "Running Python unit tests..."
 
@@ -512,32 +470,14 @@ test-unit-python-standalone: ## Run Python unit tests (standalone)
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
+		--env="OSTK_PYTHON_VERSION=$(test_python_version)" \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF .. \
+		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF -DPYTHON_SEARCH_VERSIONS=$(test_python_version) .. \
 		&& $(MAKE) -j 4 \
-		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} bindings/python/OpenSpaceToolkit*Py-python-package-${test_python_version} \
-		&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} plotly pandas \
-		&& cd ${test_python_directory}/ostk/$(project_name)/ \
-		&& python${test_python_version} -m pytest -sv ."
+		&& ostk-install-python \
+		&& ostk-test-python"
 
-.PHONY: test-unit-python-standalone
-
-ci-test-python: ## Run Python unit tests. Assumes the dev image has already been built, AND that bindings have been built and are available at `packages/python`
-
-	@ echo "Running Python unit tests..."
-
-	docker run \
-	--rm \
-	--volume="$(CURDIR):/app:delegated" \
-	--volume="/app/build" \
-	--workdir=/app/build \
-	$(docker_development_image_repository):$(docker_image_version) \
-	/bin/bash -c "python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} --find-links /app/packages/python open_space_toolkit_${project_name} \
-	&& python${test_python_version} -m pip install --root-user-action=ignore --target=${test_python_directory} plotly pandas \
-	&& cd ${test_python_directory}/ostk/$(project_name)/ \
-	&& python${test_python_version} -m pytest -sv ."
-
-.PHONY: ci-test-python
+.PHONY: test-unit-python
 
 test-coverage: ## Run test coverage cpp
 
@@ -549,13 +489,9 @@ test-coverage: ## Run test coverage cpp
 
 test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
-	@ $(MAKE) test-coverage-cpp-standalone
-
-.PHONY: test-coverage-cpp
-
-test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
-
 	@ echo "Running C++ coverage tests..."
+
+	@ mkdir -p $(CURDIR)/coverage
 
 	docker run \
 		--rm \
@@ -570,7 +506,7 @@ test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 		&& mkdir /app/coverage \
 		&& mv /app/build/coverage* /app/coverage"
 
-.PHONY: test-coverage-cpp-standalone
+.PHONY: test-coverage-cpp
 
 clean: ## Clean
 
