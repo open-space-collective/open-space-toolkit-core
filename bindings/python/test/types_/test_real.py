@@ -2,7 +2,8 @@
 
 import math
 
-from ostk.core.type import Real, Sign
+from ostk.core.type import Real
+from ostk.core.type import Sign
 
 
 def test_real_constructors():
@@ -262,6 +263,32 @@ def test_real_integer():
 def test_real_hash():
     assert hash(Real(1.0)) == hash(Real(1.0))
     assert {Real(1.0): "test"} == {Real(1.0): "test"}
+
+
+def test_real_implicit_float_conversion():
+    """Test that Real is implicitly convertible to float."""
+
+    real = Real(3.14)
+
+    # Real should be an instance of float
+    assert isinstance(real, float)
+
+    # Static methods should return float-compatible values
+    assert isinstance(Real.pi(), float)
+    assert isinstance(Real.zero(), float)
+
+    # Should work seamlessly with Python math functions
+    result = math.sin(Real.pi())
+    assert abs(result) < 1e-10
+
+    # Should be usable in any context expecting float
+    values = [1.0, 2.0, Real(3.0)]
+    assert all(isinstance(v, float) for v in values)
+
+    # Arithmetic with Real should return float-compatible results
+    assert isinstance(Real(1.0) + Real(2.0), float)
+    assert isinstance(Real(1.0) + 2.0, float)
+    assert isinstance(2.0 + Real(1.0), float)
 
 
 # def test_real_parse ():
