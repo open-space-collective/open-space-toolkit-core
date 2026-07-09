@@ -41,7 +41,6 @@ PROJECT (${PROJECT_NAME} VERSION ${PROJECT_VERSION_STRING} LANGUAGES "C" "CXX")
 ### Improved FIND_PYTHON macro
 
 MACRO (FIND_PYTHON version)
-
     # Use uv to hint the location of python-config
     EXECUTE_PROCESS (
         COMMAND uv python find --offline --no-project ${version}
@@ -54,7 +53,6 @@ MACRO (FIND_PYTHON version)
         GET_FILENAME_COMPONENT (_python_bin_dir "${_python_executable}" DIRECTORY)
         FIND_PROGRAM (PYTHON_CONFIG_${version} python${version}-config HINTS "${_python_bin_dir}")
     ENDIF ()
-    
     IF (EXISTS ${PYTHON_CONFIG_${version}})
         EXECUTE_PROCESS (COMMAND ${PYTHON_CONFIG_${version}} --includes OUTPUT_VARIABLE _python_include_args)
         SEPARATE_ARGUMENTS (_python_includes UNIX_COMMAND "${_python_include_args}")
@@ -147,15 +145,15 @@ FUNCTION (PY_ADD_PACKAGE_DIRECTORY NAME)
         # Build wheels with cmake
         ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                             COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}"
-                            COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/test"
-                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_GROUP}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_GROUP}/__init__.py"
-                            COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/__init__.py"
+                            COMMAND rm -rf "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/test"
+                            COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/test" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/test"
+                            COMMAND cp -r "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/*" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}"
                             COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}.*${EXTENSION}*.so" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_PATH}/"
                             COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/README.md" "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/README.md"
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && uv sync --all-extras
-                            COMMAND "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/.venv/bin/python" -m "pybind11_stubgen" -o "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" "${PROJECT_GROUP}.${PROJECT_SUBGROUP}" # generate stubs in same dir as binaries
-                            COMMAND find "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_GROUP}" -type f -name "*.pyi" -exec sed -i "s/: \\\\.\\\\.\\\\./: typing.Any/g" {} + # crudely fix stubs with invalid syntax
+                            COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && uv run pybind11-stubgen -o . "${PROJECT_GROUP}.${PROJECT_SUBGROUP}" # generate stubs in same dir as binaries
+                            COMMAND find "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/${PROJECT_GROUP}" -type f -name "*.pyi" -exec sed -i "s/: \\\\.\\\\.\\\\./: typing.Any/g" {} + # crudely fix broken stubs; need to escape \\
                             COMMAND cd "${CMAKE_CURRENT_BINARY_DIR}/${NAME}" && env _PYTHON_HOST_PLATFORM="${PLATFORM}" uv build
                             COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/dist"
                             COMMAND cp "${CMAKE_CURRENT_BINARY_DIR}/${NAME}/dist/*" "${CMAKE_CURRENT_BINARY_DIR}/dist"

@@ -28,6 +28,7 @@ dev_username := developer
 TARGETPLATFORM ?= linux/amd64
 $(info Target platform is $(TARGETPLATFORM))
 
+
 pull: ## Pull all images
 
 	@ echo "Pulling images..."
@@ -187,14 +188,25 @@ build-documentation: build-development-image ## Build documentation
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
-		--workdir=/app/build \
+		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON -DBUILD_SHARED_LIBRARY=ON -DBUILD_DOCUMENTATION=ON .. \
-		&& ostk-build \
-		&& ostk-install-python \
-		&& ostk-build-docs"
+		/bin/bash -c "$(MAKE) _build-documentation"
 
 .PHONY: build-documentation
+
+_build-documentation: ## Build documentation (runs inside container)
+
+	cd /app/build \
+	&& cmake \
+		-DBUILD_UNIT_TESTS=OFF \
+		-DBUILD_PYTHON_BINDINGS=ON \
+		-DBUILD_DOCUMENTATION=ON \
+		.. \
+	&& ostk-build \
+	&& ostk-install-python \
+	&& ostk-build-docs
+
+.PHONY: _build-documentation
 
 build-packages: ## Build packages
 
@@ -214,17 +226,30 @@ build-packages-cpp: build-development-image ## Build C++ packages
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
-		--workdir=/app/build \
+		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=OFF -DCPACK_GENERATOR=DEB -DBUILD_WITH_DEBUG_SYMBOLS=OFF .. \
-		&& $(MAKE) package \
-		&& mkdir -p /app/packages/cpp \
-		&& mv /app/build/*.deb /app/packages/cpp"
+		/bin/bash -c "$(MAKE) _build-package-cpp"
 
 .PHONY: build-packages-cpp
 
-build-packages-python: build-development-image ## Build Python packages
+_build-package-cpp: ## Build C++ package (runs inside container)
 
+	cd /app/build \
+	&& cmake \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCPACK_GENERATOR=DEB \
+		-DBUILD_WITH_DEBUG_SYMBOLS=OFF \
+		-DBUILD_UNIT_TESTS=OFF \
+		-DBUILD_PYTHON_BINDINGS=OFF \
+		-DBUILD_DOCUMENTATION=OFF \
+		.. \
+	&& $(MAKE) package \
+	&& mkdir -p /app/packages/cpp \
+	&& mv /app/build/*.deb /app/packages/cpp
+
+.PHONY: _build-package-cpp
+
+build-packages-python: build-development-image ## Build Python packages
 
 	@ echo "Building Python packages..."
 
@@ -233,14 +258,54 @@ build-packages-python: build-development-image ## Build Python packages
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
-		--workdir=/app/build \
+		--workdir=/app \
 		$(docker_development_image_repository):$(docker_image_version) \
-		/bin/bash -c "cmake -DBUILD_UNIT_TESTS=OFF -DBUILD_PYTHON_BINDINGS=ON -DBUILD_WITH_DEBUG_SYMBOLS=OFF .. \
-		&& $(MAKE) -j 4 \
-		&& mkdir -p /app/packages/python \
-		&& mv /app/build/bindings/python/dist/*.whl /app/packages/python"
+		/bin/bash -c "$(MAKE) _build-package-python"
 
 .PHONY: build-packages-python
+
+_build-package-python: ## Build Python package (runs inside container)
+
+	cd /app/build \
+	&& cmake \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DBUILD_WITH_DEBUG_SYMBOLS=OFF \
+		-DBUILD_UNIT_TESTS=OFF \
+		-DBUILD_PYTHON_BINDINGS=ON \
+		-DBUILD_DOCUMENTATION=OFF \
+		.. \
+	&& $(MAKE) -j $(shell nproc --ignore=2) \
+	&& mkdir -p /app/packages/python \
+	&& mv /app/build/bindings/python/dist/*.whl /app/packages/python
+
+.PHONY: _build-package-python
+
+_build-test-cpp: ## Build C++ unit tests with coverage (runs inside container)
+
+	cd /app/build \
+	&& cmake \
+		-DBUILD_UNIT_TESTS=ON \
+		-DBUILD_PYTHON_BINDINGS=OFF \
+		-DBUILD_CODE_COVERAGE=ON \
+		-DBUILD_DOCUMENTATION=OFF \
+		.. \
+    && $(MAKE) -j $(shell nproc --ignore=2) \
+    && (rm -rf /app/build/coverage || true)
+
+.PHONY: _build-test-cpp
+
+_build-test-python: ## Build Python bindings for testing (runs inside container)
+
+	cd /app/build \
+	&& cmake \
+		-DBUILD_UNIT_TESTS=OFF \
+		-DBUILD_PYTHON_BINDINGS=ON \
+		-DBUILD_CODE_COVERAGE=OFF \
+		-DBUILD_DOCUMENTATION=OFF \
+		.. \
+    && $(MAKE) -j $(shell nproc --ignore=2)
+
+.PHONY: _build-test-python
 
 start-development dev: build-development-image-non-root ## Start development environment
 
@@ -315,7 +380,7 @@ debug-jupyter: build-release-image-jupyter ## Debug jupyter notebook using the o
 		--publish="$(jupyter_notebook_port):8888" \
 		--volume="$(CURDIR)/bindings/python/docs:/home/jovyan/docs:delegated" \
 		--volume="$(CURDIR)/tutorials/python/notebooks:/home/jovyan/tutorials:delegated" \
-		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit$(project_name_camel_case)Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
+		--volume="$(CURDIR)/build/bindings/python/OpenSpaceToolkit${project_name_camel_case}Py-python-package-$(jupyter_python_version):/opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)" \
 		--workdir="/home/jovyan" \
 		$(docker_release_image_jupyter_repository):$(docker_image_version) \
 		/bin/bash -c "chown -R jovyan:users /home/jovyan ; python$(jupyter_python_version) -m pip install /opt/conda/lib/python$(jupyter_python_version)/site-packages/ostk/$(project_name)/ --force-reinstall ; start-notebook.sh --ServerApp.token=''"
@@ -465,11 +530,9 @@ test-unit-python: build-development-image ## Run Python unit tests
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
 		--workdir=/app/build \
-		--env="OSTK_PYTHON_VERSION=$(test_python_version)" \
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash -c "cmake -DBUILD_PYTHON_BINDINGS=ON -DBUILD_UNIT_TESTS=OFF -DPYTHON_SEARCH_VERSIONS=$(test_python_version) .. \
 		&& $(MAKE) -j 4 \
-		&& ostk-install-python \
 		&& ostk-test-python"
 
 .PHONY: test-unit-python
@@ -515,6 +578,7 @@ clean: ## Clean
 	rm -rf "$(CURDIR)/coverage"
 	rm -rf "$(CURDIR)/packages"
 	rm -rf "$(CURDIR)/.open-space-toolkit"
+	find "$(CURDIR)" -type d -name ".mypy_cache" -not -path "$(CURDIR)/.git/*" -exec rm -rf {} +
 
 .PHONY: clean
 

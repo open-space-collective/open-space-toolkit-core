@@ -1,9 +1,9 @@
 # Apache License 2.0
 
-ARG BASE_IMAGE_VERSION="latest"
+ARG BASE_IMAGE_VERSION="0.10.2-43-g5d79632"
 
 # General purpose development image (root user)
-FROM openspacecollective/open-space-toolkit-base-development:0.10.2-16-g4a0f563 AS root-user
+FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} AS root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
@@ -78,25 +78,22 @@ LABEL VERSION="${VERSION}"
 # A layer that includes the codebase, and has the Python development environment set up.
 FROM root-user AS ci-base
 
-COPY . /app
+COPY bindings/python/pyproject.toml /app/bindings/python/
+COPY bindings/python/uv.lock /app/bindings/python/
 
 RUN cd /app/bindings/python \
     && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
+COPY . /app
+
 WORKDIR /app/build
-
-# A layer that includes the compiled C++ binaries and Python bindings, with code coverage.
-FROM ci-base AS ci-test
-
-RUN cmake -DBUILD_UNIT_TESTS=ON -DBUILD_PYTHON_BINDINGS=ON -DBUILD_CODE_COVERAGE=ON .. \
-    && make -j $(nproc) \
-    && (rm -rf /app/build/coverage || true)
 
 # Development image for humans (non-root user)
 
 FROM root-user AS non-root-user
 
 # Install dev utilities
+
 RUN apt-get update \
     && apt-get install -y zsh sudo \
     && rm -rf /var/lib/apt/lists/*
@@ -126,7 +123,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 
 ENV PATH="/home/${USERNAME}/.local/bin:${PATH}"
 
-## Install Python dev dependencies (non-root)
+# Install Python dev dependencies (non-root)
 COPY --chown=${USER_UID}:${USER_GID} bindings/python/pyproject.toml /app/bindings/python/
 COPY --chown=${USER_UID}:${USER_GID} bindings/python/uv.lock /app/bindings/python/
 RUN cd /app/bindings/python \
