@@ -53,6 +53,7 @@ MACRO (FIND_PYTHON version)
         GET_FILENAME_COMPONENT (_python_bin_dir "${_python_executable}" DIRECTORY)
         FIND_PROGRAM (PYTHON_CONFIG_${version} python${version}-config HINTS "${_python_bin_dir}")
     ENDIF ()
+
     IF (EXISTS ${PYTHON_CONFIG_${version}})
         EXECUTE_PROCESS (COMMAND ${PYTHON_CONFIG_${version}} --includes OUTPUT_VARIABLE _python_include_args)
         SEPARATE_ARGUMENTS (_python_includes UNIX_COMMAND "${_python_include_args}")
