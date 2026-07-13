@@ -96,10 +96,13 @@ $(document).ready(function(){initNavTree('structostk_1_1core_1_1container_1_1_tr
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaaf7b3bbad2d3c013e2b9d74f0f97503"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structostk_1_1core_1_1container_1_1_triple.html#aaaf7b3bbad2d3c013e2b9d74f0f97503">first</a></td></tr>
+<tr class="memdesc:aaaf7b3bbad2d3c013e2b9d74f0f97503"><td class="mdescLeft">&#160;</td><td class="mdescRight">First element.  <a href="structostk_1_1core_1_1container_1_1_triple.html#aaaf7b3bbad2d3c013e2b9d74f0f97503">More...</a><br /></td></tr>
 <tr class="separator:aaaf7b3bbad2d3c013e2b9d74f0f97503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a172fe1b954b041775b86ea10c8d4d2eb"><td class="memItemLeft" align="right" valign="top">U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structostk_1_1core_1_1container_1_1_triple.html#a172fe1b954b041775b86ea10c8d4d2eb">second</a></td></tr>
+<tr class="memdesc:a172fe1b954b041775b86ea10c8d4d2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second element.  <a href="structostk_1_1core_1_1container_1_1_triple.html#a172fe1b954b041775b86ea10c8d4d2eb">More...</a><br /></td></tr>
 <tr class="separator:a172fe1b954b041775b86ea10c8d4d2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f8f5c43182f8bc5b1145f8cd680bbe5"><td class="memItemLeft" align="right" valign="top">V&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structostk_1_1core_1_1container_1_1_triple.html#a4f8f5c43182f8bc5b1145f8cd680bbe5">third</a></td></tr>
+<tr class="memdesc:a4f8f5c43182f8bc5b1145f8cd680bbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Third element.  <a href="structostk_1_1core_1_1container_1_1_triple.html#a4f8f5c43182f8bc5b1145f8cd680bbe5">More...</a><br /></td></tr>
 <tr class="separator:a4f8f5c43182f8bc5b1145f8cd680bbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -107,7 +110,12 @@ Public Attributes</h2></td></tr>
 struct ostk::core::container::Triple&lt; T, U, V &gt;</h3>
 
 <p><a class="el" href="structostk_1_1core_1_1container_1_1_triple.html" title="Triple container.">Triple</a> container. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+<p>A container holding three elements of potentially different types.</p>
+<div class="fragment"><div class="line">Triple&lt;int, double, String&gt; triple = <a class="code" href="namespaceostk_1_1core_1_1container.html#a544aebdb3d5392abe3d9984db9560d4a">make_triple</a>(1, 2.0, String(<span class="stringliteral">&quot;abc&quot;</span>)) ;</div>
+<div class="line">triple.first ; <span class="comment">// 1</span></div>
+<div class="line">triple.second ; <span class="comment">// 2.0</span></div>
+<div class="line">triple.third ; <span class="comment">// &quot;abc&quot;</span></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aaaf7b3bbad2d3c013e2b9d74f0f97503"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaaf7b3bbad2d3c013e2b9d74f0f97503">&#9670;&nbsp;</a></span>first</h2>
 
@@ -121,6 +129,8 @@ template&lt;typename T , typename U , typename V &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>First element. </p>
 
 </div>
 </div>
@@ -138,6 +148,8 @@ template&lt;typename T , typename U , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Second element. </p>
+
 </div>
 </div>
 <a id="a4f8f5c43182f8bc5b1145f8cd680bbe5"></a>
@@ -154,6 +166,8 @@ template&lt;typename T , typename U , typename V &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Third element. </p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
@@ -161,6 +175,7 @@ template&lt;typename T , typename U , typename V &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceostk_1_1core_1_1container_html_a544aebdb3d5392abe3d9984db9560d4a"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#a544aebdb3d5392abe3d9984db9560d4a">ostk::core::container::make_triple</a></div><div class="ttdeci">Triple&lt; T, U, V &gt; make_triple(const T &amp;aFirstElement, const U &amp;aSecondElement, const V &amp;aThirdElement)</div><div class="ttdoc">Construct a Triple from three values.</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

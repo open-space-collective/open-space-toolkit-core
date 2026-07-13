@@ -28,10 +28,13 @@
 <para>List container. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">List&lt;Integer&gt;<sp/>list<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">list.push_back(123)<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/List.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/List.hpp" bodystart="18" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/List.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/List.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a28c15c2301fc936ac22a4f50a3eac0ec" prot="public" static="no">
         <templateparamlist>
@@ -58,10 +61,13 @@
 <para>Map container. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Map&lt;String,<sp/>Integer&gt;<sp/>map<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">map[&quot;key&quot;]<sp/>=<sp/>123<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Map.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Map.hpp" bodystart="18" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Map.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Map.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a997e0cc9fef8279d296c0d4aa1d9b493" prot="public" static="no">
         <templateparamlist>
@@ -96,17 +102,19 @@
 <para>Ordered map container. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>                        The ordered-map library provides a hash map and a hash set which preserve the order of
-                        insertion in a way similar to Python&apos;s OrderedDict. When iterating over the map, the
-                        values will be returned in the same order as they were inserted.
-</verbatim></para>
+<para>The ordered-map library provides a hash map and a hash set which preserve the order of insertion in a way similar to Python&apos;s OrderedDict. When iterating over the map, the values will be returned in the same order as they were inserted.</para>
+<para><programlisting><codeline><highlight class="normal">OrderedMap&lt;String,<sp/>Integer&gt;<sp/>map<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">map[&quot;first&quot;]<sp/>=<sp/>1<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">map[&quot;second&quot;]<sp/>=<sp/>2<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Iteration<sp/>order:<sp/>&quot;first&quot;,<sp/>&quot;second&quot;</highlight></codeline>
+</programlisting></para>
 <para><ulink url="https://github.com/Tessil/ordered-map">https://github.com/Tessil/ordered-map</ulink> <simplesect kind="note"><para>This has to be eventually fully wrapped (to remove user dependency on tsl/ordered_map) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" line="40" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" bodystart="40" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" line="46" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/OrderedMap.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1a781aa933b420f5cf5bcb1a1d26c5815a" prot="public" static="no">
         <templateparamlist>
@@ -125,10 +133,14 @@
 <para>Pair container. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Pair&lt;String,<sp/>Integer&gt;<sp/>pair<sp/>=<sp/>std::make_pair(String(&quot;key&quot;),<sp/>Integer(123))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">pair.first<sp/>;<sp/>//<sp/>&quot;key&quot;</highlight></codeline>
+<codeline><highlight class="normal">pair.second<sp/>;<sp/>//<sp/>123</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Pair.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Pair.hpp" bodystart="28" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Pair.hpp" line="33" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Pair.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1container_1af6dbaf299d8b2ced8a150b09c3cade2a" prot="public" static="no">
         <templateparamlist>
@@ -146,10 +158,12 @@
 <para>Tuple container. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Tuple&lt;int,<sp/>double,<sp/>String&gt;<sp/>tuple<sp/>=<sp/>std::make_tuple(1,<sp/>2.0,<sp/>String(&quot;abc&quot;))<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="27" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="30" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -182,12 +196,41 @@
           <declname>aThirdElement</declname>
         </param>
         <briefdescription>
+<para>Construct a <ref refid="structostk_1_1core_1_1container_1_1_triple" kindref="compound">Triple</ref> from three values. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFirstElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A first element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aSecondElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A second element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aThirdElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A third element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A triple </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="36" column="8" declfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" declline="36" declcolumn="8"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="50" column="8" declfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" declline="50" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1adc15b58ecbd48d11cc0febf28fb28dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -206,12 +249,29 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Unpack values into a tuple of references for structured assignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">int<sp/>a<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>b<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Unpack(a,<sp/>b)<sp/>=<sp/>std::make_tuple(1,<sp/>2.0)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>References to variables to unpack into </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple of references </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="30" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="30" bodyend="33"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" line="43" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Tuple.hpp" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a827f89ac319a6f99ccbb2f8d94472bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -273,6 +333,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -294,6 +374,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to file </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -315,6 +415,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to file </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

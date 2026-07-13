@@ -19,21 +19,23 @@ Inheritance diagram for ostk\+::core\+::error\+::Runtime\+Error\+:\begin{figure}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_ab86f511d582bd8904b8314ae71025498}{Runtime\+Error}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Message)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a9affbbaa722f639547f9c4d1c9f0a421}{Runtime\+Error}} (const char $\ast$a\+Format, Args... an\+Argument\+List)
-\item 
+\begin{DoxyCompactList}\small\item\em Formatted constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}{$\sim$\+Runtime\+Error}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a40d4dae4c7626fb646970a0b4a6facc6}{get\+Message}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the error message. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}{get\+Stack\+Trace}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the stack trace. \end{DoxyCompactList}\item 
 virtual const char $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}{what}} () const noexcept override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the full error description (stack trace + message) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Runtime error class. 
+
+\mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception}{Exception}} class for runtime errors, with stack trace support. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_ab86f511d582bd8904b8314ae71025498}\label{classostk_1_1core_1_1error_1_1_runtime_error_ab86f511d582bd8904b8314ae71025498}} 
@@ -42,6 +44,15 @@ Runtime error class.
 \doxysubsubsection{\texorpdfstring{RuntimeError()}{RuntimeError()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::error\+::\+Runtime\+Error\+::\+Runtime\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Message }\end{DoxyParamCaption})}
 
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Message} & An error message \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a9affbbaa722f639547f9c4d1c9f0a421}\label{classostk_1_1core_1_1error_1_1_runtime_error_a9affbbaa722f639547f9c4d1c9f0a421}} 
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!RuntimeError@{RuntimeError}}
 \index{RuntimeError@{RuntimeError}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
@@ -49,11 +60,26 @@ Runtime error class.
 {\footnotesize\ttfamily template$<$typename... Args$>$ \\
 ostk\+::core\+::error\+::\+Runtime\+Error\+::\+Runtime\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a\+Format,  }\item[{Args...}]{an\+Argument\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Formatted constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Format} & A format string \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Argument\+List} & Format arguments \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}\label{classostk_1_1core_1_1error_1_1_runtime_error_a65b0f31efc6a6825703553b8383e1668}} 
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!````~RuntimeError@{$\sim$RuntimeError}}
 \index{````~RuntimeError@{$\sim$RuntimeError}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
 \doxysubsubsection{\texorpdfstring{$\sim$RuntimeError()}{~RuntimeError()}}
 {\footnotesize\ttfamily ostk\+::core\+::error\+::\+Runtime\+Error\+::$\sim$\+Runtime\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
 
 
 
@@ -64,18 +90,39 @@ ostk\+::core\+::error\+::\+Runtime\+Error\+::\+Runtime\+Error (\begin{DoxyParamC
 \doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::error\+::\+Runtime\+Error\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the error message. 
+
+\begin{DoxyReturn}{Returns}
+Error message 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}\label{classostk_1_1core_1_1error_1_1_runtime_error_a747df8aef9222235e399d4b0b81ac5dd}} 
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!getStackTrace@{getStackTrace}}
 \index{getStackTrace@{getStackTrace}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
 \doxysubsubsection{\texorpdfstring{getStackTrace()}{getStackTrace()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::error\+::\+Runtime\+Error\+::get\+Stack\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the stack trace. 
+
+\begin{DoxyReturn}{Returns}
+Stack trace string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}\label{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}} 
 \index{ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}!what@{what}}
 \index{what@{what}!ostk::core::error::RuntimeError@{ostk::core::error::RuntimeError}}
 \doxysubsubsection{\texorpdfstring{what()}{what()}}
 {\footnotesize\ttfamily const char $\ast$ ostk\+::core\+::error\+::\+Runtime\+Error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
+
+
+Get the full error description (stack trace + message) 
+
+\begin{DoxyReturn}{Returns}
+Error description as C-\/string 
+\end{DoxyReturn}
 
 
 Reimplemented from \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception_ae34ebc20a97277da6e2472b6bb8e3812}{ostk\+::core\+::error\+::\+Exception}}.

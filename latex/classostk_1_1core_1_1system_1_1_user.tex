@@ -13,45 +13,43 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a0de9691c8ea414402a61ca2ba571125b}{User}} (const uint \&a\+U\+ID, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a136687a5b8b44617158bb3d14d4697c8}{User}} (const uint \&a\+U\+ID, const uint \&a\+E\+U\+ID, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with effective user ID. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a58e11432b4f5e0c37edf841d3360f58b}{operator==}} (const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&a\+User) const
-\item 
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac11fea5211b9e8faa2ae07c1ba5fa154}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&a\+User) const
-\item 
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a8db1aaed91e6eca5459230cd28931e56}{is\+Defined}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Check if user is defined. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_acc8330f48805da8a188c0b38ef815a03}{get\+U\+ID}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get user ID. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac4c9c03e93d714ccf43b6160c73e9604}{get\+E\+U\+ID}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get effective user ID. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a1f112f97f90b2910c943d22aff6f66f5}{get\+Name}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get user name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ad5a31224086dca11b4795adbddd82759}{Undefined}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct an undefined user. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_adc854960802510e2dcc4c45bbb1ab0a5}{Process}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a user from the current process. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a7625cdddf50a15320fca6d18e67ae848}{U\+ID}} (const uint \&a\+U\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a user from a user ID. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_a83abc0dd6771386923d28c2106e107b7}{Name}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Name)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a user from a user name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac434498b36c6e29a86acbb50589e91a3}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&a\+User)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}}. 
 
-\begin{DoxyVerb}                        POSIX compliant
-\end{DoxyVerb}
-
+P\+O\+S\+IX compliant
 
 \href{https://en.wikipedia.org/wiki/User_identifier}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+User\+\_\+identifier}} 
 
@@ -62,12 +60,36 @@ std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac434498
 \doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::system\+::\+User\+::\+User (\begin{DoxyParamCaption}\item[{const uint \&}]{a\+U\+ID,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Name }\end{DoxyParamCaption})}
 
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+U\+ID} & A user ID \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Name} & A user name \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a136687a5b8b44617158bb3d14d4697c8}\label{classostk_1_1core_1_1system_1_1_user_a136687a5b8b44617158bb3d14d4697c8}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!User@{User}}
 \index{User@{User}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::system\+::\+User\+::\+User (\begin{DoxyParamCaption}\item[{const uint \&}]{a\+U\+ID,  }\item[{const uint \&}]{a\+E\+U\+ID,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Name }\end{DoxyParamCaption})}
 
+
+
+Constructor with effective user ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+U\+ID} & A user ID \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+E\+U\+ID} & An effective user ID \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Name} & A user name \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -77,60 +99,150 @@ std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac434498
 \doxysubsubsection{\texorpdfstring{getEUID()}{getEUID()}}
 {\footnotesize\ttfamily int ostk\+::core\+::system\+::\+User\+::get\+E\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get effective user ID. 
+
+\begin{DoxyReturn}{Returns}
+Effective user ID 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a1f112f97f90b2910c943d22aff6f66f5}\label{classostk_1_1core_1_1system_1_1_user_a1f112f97f90b2910c943d22aff6f66f5}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!getName@{getName}}
 \index{getName@{getName}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::system\+::\+User\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get user name. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} name 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_acc8330f48805da8a188c0b38ef815a03}\label{classostk_1_1core_1_1system_1_1_user_acc8330f48805da8a188c0b38ef815a03}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!getUID@{getUID}}
 \index{getUID@{getUID}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{getUID()}{getUID()}}
 {\footnotesize\ttfamily int ostk\+::core\+::system\+::\+User\+::get\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get user ID. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} ID 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a8db1aaed91e6eca5459230cd28931e56}\label{classostk_1_1core_1_1system_1_1_user_a8db1aaed91e6eca5459230cd28931e56}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!isDefined@{isDefined}}
 \index{isDefined@{isDefined}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::system\+::\+User\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Check if user is defined. 
+
+\begin{DoxyReturn}{Returns}
+True if defined 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a83abc0dd6771386923d28c2106e107b7}\label{classostk_1_1core_1_1system_1_1_user_a83abc0dd6771386923d28c2106e107b7}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!Name@{Name}}
 \index{Name@{Name}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{Name()}{Name()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} ostk\+::core\+::system\+::\+User\+::\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct a user from a user name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Name} & A user name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_ac11fea5211b9e8faa2ae07c1ba5fa154}\label{classostk_1_1core_1_1system_1_1_user_ac11fea5211b9e8faa2ae07c1ba5fa154}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::system\+::\+User\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&}]{a\+User }\end{DoxyParamCaption}) const}
 
+
+
+Not equal to operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+User} & A user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if users are not equal 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a58e11432b4f5e0c37edf841d3360f58b}\label{classostk_1_1core_1_1system_1_1_user_a58e11432b4f5e0c37edf841d3360f58b}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!operator==@{operator==}}
 \index{operator==@{operator==}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::system\+::\+User\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&}]{a\+User }\end{DoxyParamCaption}) const}
 
+
+
+Equal to operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+User} & A user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if users are equal 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_adc854960802510e2dcc4c45bbb1ab0a5}\label{classostk_1_1core_1_1system_1_1_user_adc854960802510e2dcc4c45bbb1ab0a5}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!Process@{Process}}
 \index{Process@{Process}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{Process()}{Process()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} ostk\+::core\+::system\+::\+User\+::\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct a user from the current process. 
+
+\begin{DoxyReturn}{Returns}
+Current process user 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_a7625cdddf50a15320fca6d18e67ae848}\label{classostk_1_1core_1_1system_1_1_user_a7625cdddf50a15320fca6d18e67ae848}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!UID@{UID}}
 \index{UID@{UID}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{UID()}{UID()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} ostk\+::core\+::system\+::\+User\+::\+U\+ID (\begin{DoxyParamCaption}\item[{const uint \&}]{a\+U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct a user from a user ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+U\+ID} & A user ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_user_ad5a31224086dca11b4795adbddd82759}\label{classostk_1_1core_1_1system_1_1_user_ad5a31224086dca11b4795adbddd82759}} 
 \index{ostk::core::system::User@{ostk::core::system::User}!Undefined@{Undefined}}
 \index{Undefined@{Undefined}!ostk::core::system::User@{ostk::core::system::User}}
 \doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} ostk\+::core\+::system\+::\+User\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct an undefined user. 
+
+\begin{DoxyReturn}{Returns}
+Undefined user 
+\end{DoxyReturn}
 
 
 \doxysubsection{Friends And Related Function Documentation}
@@ -140,6 +252,20 @@ std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user_ac434498
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_user}{User}} \&}]{a\+User }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+User} & A user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to output stream 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

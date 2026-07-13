@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="35" column="51" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="35" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="34" column="51" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" prot="public" static="no">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="36" column="45" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="36" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="35" column="45" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" prot="public" static="no">
         <type>std::function&lt; bool(const T &amp;)&gt;</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="37" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="37" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="36" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="41" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="39" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a4852ac57202e8781d95529d156dcd3d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="52" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="49" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae2b91188c5b673de253b494287ebcc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="63" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="59" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ad8ebc43a185418e004017aae36bc83b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="66" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="62" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a6f6cf6e7e042b1ab3e3ec6bd3b9a5850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="80" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="75" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a4b93e437ebc4108b12b021091f44620d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="86" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="80" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a620c83d378ed652d54caf1613d567249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="92" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="85" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aec8aa7415c0d09d7a4a8ec1e3b63568a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="98" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="90" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aa0f1dd01d56624d0478ff4de87230d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="105" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="96" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a2bc9fd90ce72d0cba9616ff16b4441d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt; &amp;</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="112" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="102" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a17058cdfb4c04ed41b1b5cead35cf973" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
@@ -375,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="125" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="114" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ac30877a0e3663ad5158e2639cc32455f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="150" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="137" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae035b7590373b178035f33733158877e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="162" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="148" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -474,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="176" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="161" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af8f48574ba41c8cbea39de23ecdba7aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="192" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="176" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
@@ -542,7 +542,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="203" column="13"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="186" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
@@ -562,7 +562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="214" column="13"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="196" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Size</type>
@@ -582,7 +582,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="225" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="206" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Index</type>
@@ -615,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="237" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="217" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ae0b2aff1ac2bda149f0f7fef323ca65b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref></type>
@@ -635,7 +635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="248" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="227" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; const T * &gt;</type>
@@ -669,7 +669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="261" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="239" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
@@ -703,7 +703,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="274" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="251" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" kindref="member">ConstIterator</ref></type>
@@ -736,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="286" column="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="262" column="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -775,7 +775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="300" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="275" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af242918858601d5af9d10fda5b527440" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -808,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="312" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="286" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -828,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="323" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="296" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aaccce84e7159516210d15cedd0f0c005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -848,7 +848,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="334" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="306" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -879,7 +879,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="345" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="316" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -910,7 +910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="356" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="326" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af2c427638ce6fe5b8172b726b26d041f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -941,7 +941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="367" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="336" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a28c5536135c3a1434b470163e83d0890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -972,7 +972,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="378" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="346" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a09ace899b075e2c71989015d89547712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1004,7 +1004,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="390" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="357" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a05c7a33085e45003d6839d7d68a8f9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1036,7 +1036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="402" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="368" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a1e7b5f5c9410592b8d6c15629932b1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" kindref="member">Iterator</ref></type>
@@ -1069,7 +1069,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="414" column="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="379" column="31"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -1121,7 +1121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="139" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="127" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1142,16 +1142,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="424" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="388" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> container. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>                        Sequence container representing arrays that can change in size.
-                        Arrays use contiguous storage locations for their elements. 
-</verbatim> </para>
+<para>Sequence container representing arrays that can change in size. Arrays use contiguous storage locations for their elements. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -1175,7 +1173,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="33" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="32" bodyend="425"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="32" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="31" bodyend="389"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>

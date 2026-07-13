@@ -9,7 +9,7 @@ class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterat
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename... T$>$ }\\auto \mbox{\hyperlink{namespaceostk_1_1core_1_1container_1_1iterator_a25872b7f46de31f17770db725eb1ae15}{Zip}} (T \&\&... seqs)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Zip multiple sequences together for parallel iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -20,6 +20,29 @@ class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterat
 {\footnotesize\ttfamily template$<$typename... T$>$ \\
 auto ostk\+::core\+::container\+::iterator\+::\+Zip (\begin{DoxyParamCaption}\item[{T \&\&...}]{seqs }\end{DoxyParamCaption})}
 
+
+
+Zip multiple sequences together for parallel iteration. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<int> a = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<String> b = \{\textcolor{stringliteral}{"a"}, \textcolor{stringliteral}{"b"}, \textcolor{stringliteral}{"c"}\} ;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& [x, y] : \mbox{\hyperlink{namespaceostk_1_1core_1_1container_1_1iterator_a25872b7f46de31f17770db725eb1ae15}{Zip}}(a, b))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
 \begin{DoxyNote}{Note}
-Sequences must be the same length 
+Sequences must be the same length
 \end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em seqs} & Sequences to zip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator}{Zip\+Iterator}} over the zipped sequences 
+\end{DoxyReturn}

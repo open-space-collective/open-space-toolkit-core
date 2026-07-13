@@ -202,7 +202,7 @@
     <member refid="classostk_1_1core_1_1container_1_1_graph_1a6047678871c1968109b3d3140e1d3b52" kind="function"><name>Graph</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_graph_1ade5b2ef0a1670dee37a39ba72dad9334" kind="function"><name>Graph</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_graph_1a5dbc837d77fb76af816658399acf5f6d" kind="function"><name>~Graph</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_graph_1ae788a25b416e6306f1218007f34ebd43" kind="function"><name>operator=</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_graph_1a26c05cf5e5a6733f8b72a3d37713f559" kind="function"><name>operator=</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_graph_1a45d46a9713a96a2a9a001a9e511b9d5b" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_graph_1a225f9b61ac2385ccf05891298c7ab6b1" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_graph_1a5852ad09090cad83cf2777c604e829cf" kind="function"><name>Empty</name></member>
@@ -563,7 +563,7 @@
     <member refid="classostk_1_1core_1_1container_1_1_queue_1a1bf36ee5bf7d93c00a3accf87b395e2e" kind="function"><name>Queue</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_queue_1ae68385c404f527e7911a0a123779e71a" kind="function"><name>Queue</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_queue_1a04cb880277a69493af40c814ee69d3af" kind="function"><name>~Queue</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_queue_1a04f96ea1cc20b6cf5620ae1753b7485c" kind="function"><name>operator=</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_queue_1a16f7ff7f02e308e8a198707628a2eb0f" kind="function"><name>operator=</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_queue_1a73d21f037e4c47caae25704c8fe8d407" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_queue_1a4c174fae5388505f1109c3cf04974617" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_queue_1a47bb867f09dc6668ca92f730e9645eaf" kind="function"><name>Empty</name></member>
@@ -746,7 +746,7 @@
     <member refid="classostk_1_1core_1_1container_1_1_stack_1af0e0c3303c5c323a7e44dcf060905918" kind="function"><name>Stack</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_stack_1aa93b179d188b59262eadb0bbc2f471c1" kind="function"><name>Stack</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_stack_1ab729328cfb3414eea24d10578dc50b86" kind="function"><name>~Stack</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_stack_1a838d731b5b3cb75afb600f95bdb6116a" kind="function"><name>operator=</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_stack_1abbfca902e8a6268ed62adc6f3e1a87c0" kind="function"><name>operator=</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_stack_1afadb6fd8466d932a0a6d2a297d7790e3" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_stack_1a042acac24eba66c740c7d3d48dfc0e46" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_stack_1a8c02317e185f74fde64bc50f76091b83" kind="function"><name>Empty</name></member>

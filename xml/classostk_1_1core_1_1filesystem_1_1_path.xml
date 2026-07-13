@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="266" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="264" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="243" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="241" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="30" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="30" bodyend="33"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="28" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1adaf95b0c85488ad0e2adb367b0f6abdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="34" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="35" bodyend="35"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="31" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a1115a751ca2c6e9ba40adeb8de01b229" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="41" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="37" bodyend="45"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="37" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="37" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1acac1dddfbbe0ba250cacfc2e3673224f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="54" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="47" bodyend="55"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="49" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="47" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a8225e86412c9c09a8829624b9d8d1283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="67" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="57" bodyend="60"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="61" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="57" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a8296e690dcfdb364d3414421052104b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -173,8 +173,7 @@
 <para>Addition operator. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>                Append path to path
-</verbatim></para>
+<para>Append path to path</para>
 <para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path&quot;)<sp/>+<sp/>Path::Parse(&quot;./to/file&quot;)<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -192,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="80" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="62" bodyend="69"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="73" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="62" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a4b3ef62c4fb4d91d8ecd76f5e4afe4d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref> &amp;</type>
@@ -207,8 +206,7 @@
 <para>Addition assignment operator. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>                Append path to path
-</verbatim></para>
+<para>Append path to path</para>
 <para><programlisting><codeline><highlight class="normal">Path<sp/>path<sp/>=<sp/>Path::Parse(&quot;/path&quot;)<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">path<sp/>+=<sp/>Path::Parse(&quot;./to/file&quot;)<sp/>;<sp/>//<sp/>/path/to/file</highlight></codeline>
 </programlisting></para>
@@ -227,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="94" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="71" bodyend="93"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="86" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="71" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aecd66a5bf86b41374c9256831577f689" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -247,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="106" bodyend="109"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="108" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aa6d0534d0e162b76a623baa7ae421280" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -267,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="129" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="111" bodyend="119"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="111" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a9df1286241b0309e53766a284ea3c18b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -287,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="140" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="121" bodyend="129"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="128" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="121" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab5a9418eda9883fa2a72b067fc7145a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -307,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="151" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="131" bodyend="150"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="138" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="131" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1aa92eb9cc5209fd5c41cb1ecc8777cd06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -327,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="162" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="152" bodyend="169"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="148" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="152" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a6eb6808eeb1d03810e485f91825aae98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -347,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="173" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="171" bodyend="190"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="158" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="171" bodyend="190"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a22653239f49248fd5c081a6560baec8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -381,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="185" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="192" bodyend="217"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="169" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="192" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab4309ce6b68c58c5befe2f479de6842f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -415,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="198" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="181" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ab5ea209f4b4984efbec83f1def2011ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -434,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="208" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="224" bodyend="241"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="190" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="224" bodyend="241"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -481,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="107" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="95" bodyend="104"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="98" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="95" bodyend="104"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -503,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="219" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="243" bodyend="246"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="200" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="243" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1ac44f214afcd0a549eb46abbb58a91e45" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -522,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="229" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="248" bodyend="255"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="209" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="248" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -541,7 +539,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="239" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="257" bodyend="271"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="218" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="257" bodyend="271"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a478763ba7e88a5cc99809eae958d95f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -573,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="250" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="273" bodyend="285"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="228" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="273" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_path_1a4203822b86cdaf2542b292d214e5e113" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">Path</ref></type>
@@ -605,7 +603,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="261" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="238" column="17"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -620,14 +618,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="268" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="293" bodyend="296"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="245" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="293" bodyend="296"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="23" bodyend="269"/>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Path.hpp" bodystart="22" bodyend="246"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>Current</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a22653239f49248fd5c081a6560baec8b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Path</scope><name>getAbsolutePath</name></member>

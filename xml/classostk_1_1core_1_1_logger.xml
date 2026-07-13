@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="58" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="58" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="93" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1_logger_1a9809a17064cb86de4d457b5c2c5ac7b0" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="59" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="59" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="94" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1_logger_1a14265191ccef29216a801f1f52a0bcd0" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1logger_1_1_sink" kindref="compound">Sink</ref> &gt;</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="60" column="11" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="60" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="95" column="11" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -55,12 +55,23 @@
           <declname>aChannel</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A channel name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="35" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="44" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref></type>
@@ -84,12 +95,49 @@
           <declname>aFunction</declname>
         </param>
         <briefdescription>
+<para>Function call operator to create a log pump. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A severity level </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A line number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Log pump </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="37" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="53" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -106,12 +154,25 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Stream operator to log an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object to log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Log pump </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="40" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="40" bodyend="47"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="60" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="60" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -119,12 +180,16 @@
         <argsstring>() const</argsstring>
         <name>getChannel</name>
         <briefdescription>
+<para>Get the channel name. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Channel name </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="49" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="72" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -138,12 +203,25 @@
           <declname>aSeverity</declname>
         </param>
         <briefdescription>
+<para>Construct a console logger with a severity filter. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A minimum severity level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Console logger </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="51" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="78" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a37f1934e129df80b75bffa2cf7255ff0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref></type>
@@ -159,12 +237,33 @@
           <declname>aSeverity</declname>
         </param>
         <briefdescription>
+<para>Construct a console logger with a channel name and severity filter. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A channel name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A minimum severity level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Console logger </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="53" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="85" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
@@ -172,20 +271,28 @@
         <argsstring>()</argsstring>
         <name>Global</name>
         <briefdescription>
+<para>Access the global logger instance. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to global logger </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="55" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="90" column="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Log management. </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides logging capabilities with configurable channels, severity levels, and sinks.</para>
+<para><programlisting><codeline><highlight class="normal">Logger<sp/>logger<sp/>=<sp/>Logger::Console(Severity::Debug)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">LOG_DEBUG(logger)<sp/>&lt;&lt;<sp/>&quot;Debug<sp/>message&quot;<sp/>;</highlight></codeline>
+</programlisting> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="33" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="32" bodyend="61"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="39" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="38" bodyend="96"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1_logger_1aabe4da4395bf31b957cf16b6f309a2c8" prot="private" virt="non-virtual"><scope>ostk::core::Logger</scope><name>channel_</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>Console</name></member>

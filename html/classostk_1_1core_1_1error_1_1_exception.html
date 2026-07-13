@@ -108,16 +108,21 @@ Inheritance diagram for ostk::core::error::Exception:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a27647e55b84a7a32cf8b24e575651d71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html#a27647e55b84a7a32cf8b24e575651d71">Exception</a> (const <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a> &amp;aScope)</td></tr>
+<tr class="memdesc:a27647e55b84a7a32cf8b24e575651d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classostk_1_1core_1_1error_1_1_exception.html#a27647e55b84a7a32cf8b24e575651d71">More...</a><br /></td></tr>
 <tr class="separator:a27647e55b84a7a32cf8b24e575651d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae44d71ced961433d0b3325ff176e4974"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html#ae44d71ced961433d0b3325ff176e4974">~Exception</a> ()</td></tr>
+<tr class="memdesc:ae44d71ced961433d0b3325ff176e4974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classostk_1_1core_1_1error_1_1_exception.html#ae44d71ced961433d0b3325ff176e4974">More...</a><br /></td></tr>
 <tr class="separator:ae44d71ced961433d0b3325ff176e4974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3778009187ea6841eff3bdd45d345144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classostk_1_1core_1_1type_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html#a3778009187ea6841eff3bdd45d345144">getScope</a> () const</td></tr>
+<tr class="memdesc:a3778009187ea6841eff3bdd45d345144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scope of the exception.  <a href="classostk_1_1core_1_1error_1_1_exception.html#a3778009187ea6841eff3bdd45d345144">More...</a><br /></td></tr>
 <tr class="separator:a3778009187ea6841eff3bdd45d345144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae34ebc20a97277da6e2472b6bb8e3812"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html#ae34ebc20a97277da6e2472b6bb8e3812">what</a> () const noexcept</td></tr>
+<tr class="memdesc:ae34ebc20a97277da6e2472b6bb8e3812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exception message.  <a href="classostk_1_1core_1_1error_1_1_exception.html#ae34ebc20a97277da6e2472b6bb8e3812">More...</a><br /></td></tr>
 <tr class="separator:ae34ebc20a97277da6e2472b6bb8e3812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html" title="Exception class.">Exception</a> class. </p>
+<p>Base exception class for all OpenSpaceToolkit exceptions. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a27647e55b84a7a32cf8b24e575651d71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27647e55b84a7a32cf8b24e575651d71">&#9670;&nbsp;</a></span>Exception()</h2>
@@ -134,6 +139,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aScope</td><td>A scope identifier </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -152,6 +165,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -169,6 +184,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the scope of the exception. </p>
+<dl class="section return"><dt>Returns</dt><dd>Scope string </dd></dl>
 
 </div>
 </div>
@@ -194,6 +212,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the exception message. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classostk_1_1core_1_1error_1_1_exception.html" title="Exception class.">Exception</a> message as C-string </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classostk_1_1core_1_1error_1_1_runtime_error.html#a671d71ab5483eaa1ce5cc3400747ded1">ostk::core::error::RuntimeError</a>.</p>
 

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="41" column="22" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="41" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="56" column="22" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a7adeeea72276f9e563aca9e6bd579aed" prot="private" static="no" mutable="no">
         <type>uint</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="42" column="14" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="42" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="57" column="14" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,12 +46,31 @@
           <declname>anIndentation</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anIndentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An indentation level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="24" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="14" bodyend="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="32" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="14" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a2e4d7000658fc88f76dfee037ef12adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -63,12 +82,13 @@
           <declname>aLineBuffer</declname>
         </param>
         <briefdescription>
+<para>Copy constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="26" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="35" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ae41cb4c25cf9091302402efb6e221f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -80,12 +100,13 @@
           <declname>aLineBuffer</declname>
         </param>
         <briefdescription>
+<para>Move constructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="28" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="38" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a4e41e82cf1085cdb1db3289b58305526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -93,12 +114,13 @@
         <argsstring>()</argsstring>
         <name>~LineBuffer</name>
         <briefdescription>
+<para>Destructor (flushes the line) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="30" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="21" bodyend="24"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="41" column="9" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1ac7609b62d8623d0f8717acc4c5102faf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -115,19 +137,34 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Stream insertion operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to line buffer </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="33" column="9" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="33" bodyend="38"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="48" column="9" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="48" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Line buffer for formatted output. </para>
     </briefdescription>
     <detaileddescription>
+<para>Collects output via stream operators and formats it with fixed-width columns. </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="21" bodyend="43"/>
+    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="25" bodyend="58"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a7adeeea72276f9e563aca9e6bd579aed" prot="private" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>indentation_</name></member>
       <member refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer_1a068be8d7623e32d2d1cbe11c42ecd1bb" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print::LineBuffer</scope><name>LineBuffer</name></member>

@@ -11,12 +11,15 @@
         <argsstring>()</argsstring>
         <name>String</name>
         <briefdescription>
+<para>Default constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String<sp/>string<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="57" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="21" bodyend="24"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="62" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac189ff8f059b1444cdb6d216376a3919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,12 +31,25 @@
           <declname>aString</declname>
         </param>
         <briefdescription>
+<para>Constructor from std::string. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String<sp/>string(&quot;Hello&quot;)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A standard string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="59" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="26" bodyend="29"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="71" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a6eaf1894a8ee8d15ed3d06d73abe0119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -41,12 +57,13 @@
         <argsstring>()</argsstring>
         <name>~String</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="61" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="31" bodyend="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="74" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a7c29ece5a4c0db35b4c30d61788fe729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -54,12 +71,19 @@
         <argsstring>() const</argsstring>
         <name>isEmpty</name>
         <briefdescription>
+<para>Check if string is empty. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).isEmpty()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+<codeline><highlight class="normal">String(&quot;&quot;).isEmpty()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if empty </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="63" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="33" bodyend="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="84" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aabf70678b4fb31beae28af913ffee684" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -67,12 +91,19 @@
         <argsstring>() const</argsstring>
         <name>isUppercase</name>
         <briefdescription>
+<para>Check if all characters are uppercase. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;ABC&quot;).isUppercase()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">String(&quot;Abc&quot;).isUppercase()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if all characters are uppercase </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="65" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="38" bodyend="49"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="94" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="38" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a197b0c1b6825a60cf375f49cafd6d550" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -80,12 +111,19 @@
         <argsstring>() const</argsstring>
         <name>isLowercase</name>
         <briefdescription>
+<para>Check if all characters are lowercase. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;abc&quot;).isLowercase()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">String(&quot;Abc&quot;).isLowercase()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if all characters are lowercase </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="67" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="51" bodyend="62"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="104" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="51" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac78674da13d8b5a3a35a6787cb515a38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -117,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="78" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="64" bodyend="67"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="114" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="64" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a0a401dde78ac05caacde7869fe0e06b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -149,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="89" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="69" bodyend="72"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="124" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac08a31fa6b0582d4a9b223a3927d354b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" kindref="member">Size</ref></type>
@@ -157,12 +195,18 @@
         <argsstring>() const</argsstring>
         <name>getLength</name>
         <briefdescription>
+<para>Get length of string. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getLength()<sp/>;<sp/>//<sp/>5</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Length of string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="91" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="74" bodyend="77"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="133" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a5ef9410f9ffe233c83cb88b0ce3c1441" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -170,12 +214,18 @@
         <argsstring>() const</argsstring>
         <name>getFirst</name>
         <briefdescription>
+<para>Get first character. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getFirst()<sp/>;<sp/>//<sp/>&apos;H&apos;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>First character </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="93" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="103" bodyend="111"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="142" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="103" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a1d611ad2b7ab90bf971eba5e805bdd0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -183,12 +233,18 @@
         <argsstring>() const</argsstring>
         <name>getLast</name>
         <briefdescription>
+<para>Get last character. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getLast()<sp/>;<sp/>//<sp/>&apos;o&apos;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Last character </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="95" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="113" bodyend="121"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="151" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="113" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1aceab98c3ab4a61de80b05da7152975a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -200,12 +256,27 @@
           <declname>aLength</declname>
         </param>
         <briefdescription>
+<para>Get head of string (first N characters) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getHead(3)<sp/>;<sp/>//<sp/>&quot;Hel&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Head substring </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="97" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="79" bodyend="89"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="161" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="79" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a4b5ceca3c74ddf5075f35709e77e6c00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -217,12 +288,27 @@
           <declname>aLength</declname>
         </param>
         <briefdescription>
+<para>Get tail of string (last N characters) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getTail(3)<sp/>;<sp/>//<sp/>&quot;llo&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tail substring </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="99" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="91" bodyend="101"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="171" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="91" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae90137d2ec2634da5fbe0c32e66a3672" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -238,12 +324,35 @@
           <declname>aLength</declname>
         </param>
         <briefdescription>
+<para>Get substring starting at position with given length. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String(&quot;Hello&quot;).getSubstring(1,<sp/>3)<sp/>;<sp/>//<sp/>&quot;ell&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aStartPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A start position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Substring </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="101" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="123" bodyend="152"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="182" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="123" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae6af9be350ec2401f961a6b042f84c8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &gt;</type>
@@ -264,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="108" column="11" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="154" bodyend="159"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="188" column="11" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="154" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a44cc2827faafa67f59e3168f8dcbbbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -281,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="114" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="161" bodyend="169"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="193" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="161" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ac4d69227a1cb3c0b4d9e3501e01b3aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -323,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="122" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="171" bodyend="176"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="200" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="171" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a368cc0fbfe2f92586a2eeb3616b47da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
@@ -365,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="130" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="178" bodyend="183"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="207" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="178" bodyend="183"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -375,12 +484,18 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
+<para>Construct an empty string. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String<sp/>string<sp/>=<sp/>String::Empty()<sp/>;<sp/>//<sp/>&quot;&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Empty string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="132" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="185" bodyend="189"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="216" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="185" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -392,12 +507,28 @@
           <declname>aBoolean</declname>
         </param>
         <briefdescription>
+<para>Construct a string from a boolean value. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String::Boolean(true)<sp/>;<sp/>//<sp/>&quot;True&quot;</highlight></codeline>
+<codeline><highlight class="normal">String::Boolean(false)<sp/>;<sp/>//<sp/>&quot;False&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aBoolean</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> representation of boolean </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="134" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="191" bodyend="194"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="227" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="191" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -409,12 +540,27 @@
           <declname>aCharacter</declname>
         </param>
         <briefdescription>
+<para>Construct a string from a single character. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String::Char(&apos;A&apos;)<sp/>;<sp/>//<sp/>&quot;A&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A character </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> containing the character </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="136" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="196" bodyend="199"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="237" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="196" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1af11502e59dc726425d58e94f2b08ace6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -430,12 +576,35 @@
           <declname>aCount</declname>
         </param>
         <briefdescription>
+<para>Construct a string by replicating a character. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String::Replicate(&apos;a&apos;,<sp/>3)<sp/>;<sp/>//<sp/>&quot;aaa&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCharacter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A character </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of repetitions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Replicated string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="138" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="201" bodyend="204"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="248" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="201" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a015a3f0091b792bfae001904d7b31aea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -451,12 +620,35 @@
           <declname>aCount</declname>
         </param>
         <briefdescription>
+<para>Construct a string by replicating a string. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String::Replicate(&quot;ab&quot;,<sp/>3)<sp/>;<sp/>//<sp/>&quot;ababab&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of repetitions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Replicated string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="140" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="206" bodyend="216"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="259" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="206" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a073128d2588b7f95bbba37c84b6f700f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -486,7 +678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="147" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="218" bodyend="262"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="265" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="218" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1a858b680569fe684d75d7f2fe25959faa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -516,7 +708,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="154" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="264" bodyend="294"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="271" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/String.cpp" bodystart="264" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_string_1abcd48b5675fa8109c0aaf8e339f00675" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -569,7 +761,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="176" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="176" bodyend="179"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="292" column="19" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="292" bodyend="295"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -612,7 +804,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="53" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="52" bodyend="181"/>
+    <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="53" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="52" bodyend="297"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1type_1_1_string_1abb50863baac9f80e727e4533ffba92e4" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Boolean</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_string_1ae8c906ec919f36655e3c4f54786adb95" prot="public" virt="non-virtual"><scope>ostk::core::type::String</scope><name>Char</name></member>

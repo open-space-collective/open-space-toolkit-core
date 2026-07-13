@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="46" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="46" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="65" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1error_1_1_runtime_error_1adf614b046fe1d2bc6b50b51e32129d46" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="47" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="47" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="66" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1error_1_1_runtime_error_1aa1394e7425ab36e900f89e6ad3f843b1" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="48" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="48" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="67" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="67" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,12 +59,23 @@
           <declname>aMessage</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An error message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="27" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="11" bodyend="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="31" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="11" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a9affbbaa722f639547f9c4d1c9f0a421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -87,12 +98,31 @@
           <declname>anArgumentList</declname>
         </param>
         <briefdescription>
+<para>Formatted constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFormat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anArgumentList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Format arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="30" column="5" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="30" bodyend="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="38" column="5" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="38" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a65b0f31efc6a6825703553b8383e1668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,12 +130,13 @@
         <argsstring>()</argsstring>
         <name>~RuntimeError</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="38" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="29" bodyend="29"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="47" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="29" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -113,12 +144,16 @@
         <argsstring>() const</argsstring>
         <name>getMessage</name>
         <briefdescription>
+<para>Get the error message. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Error message </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="40" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="19" bodyend="22"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="52" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -126,12 +161,16 @@
         <argsstring>() const</argsstring>
         <name>getStackTrace</name>
         <briefdescription>
+<para>Get the stack trace. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Stack trace string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="41" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="24" bodyend="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="57" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
         <type>const char *</type>
@@ -140,18 +179,23 @@
         <name>what</name>
         <reimplements refid="classostk_1_1core_1_1error_1_1_exception_1ae34ebc20a97277da6e2472b6bb8e3812">what</reimplements>
         <briefdescription>
+<para>Get the full error description (stack trace + message) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Error description as C-string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="43" column="24" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="31" bodyend="34"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="62" column="24" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Runtime error class. </para>
     </briefdescription>
     <detaileddescription>
+<para><ref refid="classostk_1_1core_1_1error_1_1_exception" kindref="compound">Exception</ref> class for runtime errors, with stack trace support. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="6">
@@ -205,7 +249,7 @@
         <label>std::exception</label>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="24" bodyend="49"/>
+    <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="25" bodyend="68"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>Exception</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getMessage</name></member>

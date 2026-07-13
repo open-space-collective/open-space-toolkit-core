@@ -15,12 +15,23 @@
           <declname>aVariableName</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aVariableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the wrong variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="25" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Wrong.cpp" bodystart="14" bodyend="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="29" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Wrong.cpp" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1runtime_1_1_wrong_1ac517c931c12598eed5d6b06272cfa303" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -43,12 +54,31 @@
           <declname>anArgumentList</declname>
         </param>
         <briefdescription>
+<para>Formatted constructor with variable name and value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aVariableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the wrong variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anArgumentList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value(s) of the wrong variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="28" column="5" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" bodystart="28" bodyend="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="36" column="5" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" bodystart="36" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1runtime_1_1_wrong_1abc368bd88382a208840fd799fd7dc93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -56,18 +86,20 @@
         <argsstring>()</argsstring>
         <name>~Wrong</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="36" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Wrong.cpp" bodystart="26" bodyend="26"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="45" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Wrong.cpp" bodystart="26" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_wrong" kindref="compound">Wrong</ref> variable error class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Thrown when a variable has an unexpected or invalid value. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -115,7 +147,7 @@
         <label>std::exception</label>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" bodystart="22" bodyend="37"/>
+    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Wrong.hpp" bodystart="23" bodyend="46"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Wrong</scope><name>Exception</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Wrong</scope><name>getMessage</name></member>

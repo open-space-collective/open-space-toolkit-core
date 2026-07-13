@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="80" column="31" bodyfile="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" bodystart="80" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="148" column="31" bodyfile="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" bodystart="148" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -40,12 +40,13 @@
         <argsstring>()</argsstring>
         <name>Iterator</name>
         <briefdescription>
+<para>Default constructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="45" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="16" bodyend="16"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="46" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="16" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ae54d4ef5f3b791b5776ff2e83742a230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,12 +58,23 @@
           <declname>anOrderedMapIt</declname>
         </param>
         <briefdescription>
+<para>Constructor from map iterator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOrderedMapIt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ordered map iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="47" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="18" bodyend="21"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="51" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="18" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aa05530049e613020cbfb8b734d622b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -74,12 +86,23 @@
           <declname>aIterator</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aIterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="49" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="23" bodyend="26"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="56" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a5017456fd22066a962495741d3540acc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -91,12 +114,25 @@
           <declname>aIterator</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aIterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="51" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="28" bodyend="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="62" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="28" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aba3be06d5b252cbaf1a653e0e8bc3cca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,12 +144,25 @@
           <declname>aIterator</declname>
         </param>
         <briefdescription>
+<para>Equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aIterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if iterators are equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="53" column="14" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="38" bodyend="41"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="68" column="14" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a193b72c125c2f14bc0cc79dc2a20ac17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -125,12 +174,25 @@
           <declname>aIterator</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aIterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if iterators are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="54" column="14" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="43" bodyend="46"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="74" column="14" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a0291930d68b453d82c4042e46f141fce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -138,12 +200,16 @@
         <argsstring>() const</argsstring>
         <name>operator*</name>
         <briefdescription>
+<para>Const dereference operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="56" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="48" bodyend="51"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="79" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a63b9bf1ff06245caeaa6a6ebd870a716" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> *</type>
@@ -151,12 +217,16 @@
         <argsstring>() const</argsstring>
         <name>operator-&gt;</name>
         <briefdescription>
+<para>Const member access operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const pointer to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="57" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="53" bodyend="56"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="84" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6cfd7b6ad05566619d36cd87f0cea11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -164,12 +234,16 @@
         <argsstring>()</argsstring>
         <name>operator*</name>
         <briefdescription>
+<para>Dereference operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="59" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="89" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a98314873f00fcfee4e53b8efde431dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> *</type>
@@ -177,12 +251,16 @@
         <argsstring>()</argsstring>
         <name>operator-&gt;</name>
         <briefdescription>
+<para>Member access operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="60" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="94" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1acfeb07ca8c5e248d0f0cd36fe03989fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a6e8585a0041d78b9849506eef8cf958d" kindref="member">Dictionary::Value</ref> &amp;</type>
@@ -194,12 +272,25 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Key subscript operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A key </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="62" column="27" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="68" bodyend="71"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="100" column="27" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a5b227e68c5a467289b517ed2748d159b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -207,12 +298,16 @@
         <argsstring>()</argsstring>
         <name>operator++</name>
         <briefdescription>
+<para>Pre-increment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to incremented iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="64" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="73" bodyend="78"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="105" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="73" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a51cee01ce643ba414fa41be033a7c33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref></type>
@@ -223,12 +318,16 @@
           <type>int</type>
         </param>
         <briefdescription>
+<para>Post-increment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> before increment </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="65" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="80" bodyend="83"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="110" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="80" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a789700a7cbecc95ac97122bff792b52d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -236,12 +335,16 @@
         <argsstring>()</argsstring>
         <name>operator--</name>
         <briefdescription>
+<para>Pre-decrement operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to decremented iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="67" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="85" bodyend="90"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="115" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="85" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ad28a9198ee57436f4def0e402978826b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref></type>
@@ -252,12 +355,16 @@
           <type>int</type>
         </param>
         <briefdescription>
+<para>Post-decrement operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator" kindref="compound">Iterator</ref> before decrement </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="68" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="92" bodyend="95"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="120" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="92" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ab8a4f2dc4dc79d9b1a6ed04c350dd2ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary_1ad65f1fca6dd24efcbfc9a8ba99340603" kindref="member">Dictionary::Key</ref> &amp;</type>
@@ -265,12 +372,16 @@
         <argsstring>() const</argsstring>
         <name>accessKey</name>
         <briefdescription>
+<para>Access key (const) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to key </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="70" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="97" bodyend="100"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="125" column="31" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1abf31257aba69a8ba374ee66a1ff3ce8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a6e8585a0041d78b9849506eef8cf958d" kindref="member">Dictionary::Value</ref> &amp;</type>
@@ -278,12 +389,16 @@
         <argsstring>() const</argsstring>
         <name>accessValue</name>
         <briefdescription>
+<para>Access value (const) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="71" column="33" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="102" bodyend="105"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="130" column="33" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="102" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a58d5f2505b51ea8e782cb069ddd16caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1a6e8585a0041d78b9849506eef8cf958d" kindref="member">Dictionary::Value</ref> &amp;</type>
@@ -291,12 +406,16 @@
         <argsstring>()</argsstring>
         <name>accessValue</name>
         <briefdescription>
+<para>Access value (mutable) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="73" column="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="135" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref> &amp;</type>
@@ -304,12 +423,16 @@
         <argsstring>() const</argsstring>
         <name>accessMapIterator</name>
         <briefdescription>
+<para>Access underlying map iterator (const) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const reference to map iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="75" column="37" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="112" bodyend="115"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="140" column="37" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="112" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aba6384619c15e1226b9aceadc5f8a8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a4c9b68858cbec66ca004c77ba8c9a172" kindref="member">Iterator::MapIterator</ref> &amp;</type>
@@ -317,19 +440,24 @@
         <argsstring>()</argsstring>
         <name>accessMapIterator</name>
         <briefdescription>
+<para>Access underlying map iterator (mutable) </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to map iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="77" column="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="145" column="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Mutable iterator for dictionary entries. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="41" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" bodystart="40" bodyend="81"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" line="41" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Dictionary.hpp" bodystart="40" bodyend="149"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ab8a4f2dc4dc79d9b1a6ed04c350dd2ec" prot="public" virt="non-virtual"><scope>ostk::core::container::Dictionary::Iterator</scope><name>accessKey</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" prot="public" virt="non-virtual"><scope>ostk::core::container::Dictionary::Iterator</scope><name>accessMapIterator</name></member>

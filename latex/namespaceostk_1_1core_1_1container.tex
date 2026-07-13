@@ -15,17 +15,17 @@ class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}}
 \begin{DoxyCompactList}\small\item\em Key-\/value pairs container. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_graph}{Graph}}
-\begin{DoxyCompactList}\small\item\em Structure consisting of a finite set of vertices, together with a set of pairs of these vertices (edges). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Structure consisting of a finite set of vertices, together with a set of pairs of these vertices (edges). \mbox{[}T\+BI\mbox{]}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}}
 \begin{DoxyCompactList}\small\item\em Universal type container. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_queue}{Queue}}
-\begin{DoxyCompactList}\small\item\em First-\/in, first-\/out (F\+I\+FO) container. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em First-\/in, first-\/out (F\+I\+FO) container \mbox{[}T\+BI\mbox{]}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_stack}{Stack}}
-\begin{DoxyCompactList}\small\item\em First-\/in, last-\/out (F\+I\+LO) container. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em First-\/in, last-\/out (F\+I\+LO) container \mbox{[}T\+BI\mbox{]}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} container. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}}
-\begin{DoxyCompactList}\small\item\em Undirected graph in which any two vertices are connected by exactly one path. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Undirected graph in which any two vertices are connected by exactly one path \mbox{[}T\+BI\mbox{]}. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}} container. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
@@ -45,9 +45,9 @@ struct \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T , typename U , typename V $>$ }\\\mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}}$<$ T, U, V $>$ \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a544aebdb3d5392abe3d9984db9560d4a}{make\+\_\+triple}} (const T \&a\+First\+Element, const U \&a\+Second\+Element, const V \&a\+Third\+Element)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}} from three values. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\auto \mbox{\hyperlink{namespaceostk_1_1core_1_1container_adc15b58ecbd48d11cc0febf28fb28dbe}{Unpack}} (Args \&... args)
-\item 
+\begin{DoxyCompactList}\small\item\em Unpack values into a tuple of references for structured assignment. \end{DoxyCompactList}\item 
 std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a827f89ac319a6f99ccbb2f8d94472bdb}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \&a\+Dictionary)
 \item 
 std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1container_ac506c478a21717562396abb41d83172e}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
@@ -72,7 +72,12 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1container_afdfb0dc39c01f19995055
 
 List container. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a28c15c2301fc936ac22a4f50a3eac0ec}\label{namespaceostk_1_1core_1_1container_a28c15c2301fc936ac22a4f50a3eac0ec}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{List<Integer> list ;}
+\DoxyCodeLine{list.push\_back(123) ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a28c15c2301fc936ac22a4f50a3eac0ec}\label{namespaceostk_1_1core_1_1container_a28c15c2301fc936ac22a4f50a3eac0ec}} 
 \index{ostk::core::container@{ostk::core::container}!Map@{Map}}
 \index{Map@{Map}!ostk::core::container@{ostk::core::container}}
 \doxysubsubsection{\texorpdfstring{Map}{Map}}
@@ -83,7 +88,12 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a28c15c2301fc936ac22a4
 
 Map container. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a997e0cc9fef8279d296c0d4aa1d9b493}\label{namespaceostk_1_1core_1_1container_a997e0cc9fef8279d296c0d4aa1d9b493}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Map<String, Integer> map ;}
+\DoxyCodeLine{map[\textcolor{stringliteral}{"key"}] = 123 ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a997e0cc9fef8279d296c0d4aa1d9b493}\label{namespaceostk_1_1core_1_1container_a997e0cc9fef8279d296c0d4aa1d9b493}} 
 \index{ostk::core::container@{ostk::core::container}!OrderedMap@{OrderedMap}}
 \index{OrderedMap@{OrderedMap}!ostk::core::container@{ostk::core::container}}
 \doxysubsubsection{\texorpdfstring{OrderedMap}{OrderedMap}}
@@ -94,10 +104,15 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a997e0cc9fef8279d296c0
 
 Ordered map container. 
 
-\begin{DoxyVerb}                        The ordered-map library provides a hash map and a hash set which preserve the order of
-                        insertion in a way similar to Python's OrderedDict. When iterating over the map, the
-                        values will be returned in the same order as they were inserted.
-\end{DoxyVerb}
+The ordered-\/map library provides a hash map and a hash set which preserve the order of insertion in a way similar to Python\textquotesingle{}s Ordered\+Dict. When iterating over the map, the values will be returned in the same order as they were inserted.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{OrderedMap<String, Integer> map ;}
+\DoxyCodeLine{map[\textcolor{stringliteral}{"first"}] = 1 ;}
+\DoxyCodeLine{map[\textcolor{stringliteral}{"second"}] = 2 ;}
+\DoxyCodeLine{\textcolor{comment}{// Iteration order: "first", "second"}}
+\end{DoxyCode}
 
 
 \href{https://github.com/Tessil/ordered-map}{\texttt{ https\+://github.\+com/\+Tessil/ordered-\/map}} \begin{DoxyNote}{Note}
@@ -114,7 +129,13 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1container_a781aa933b420f5cf5bcb1
 
 Pair container. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1container_af6dbaf299d8b2ced8a150b09c3cade2a}\label{namespaceostk_1_1core_1_1container_af6dbaf299d8b2ced8a150b09c3cade2a}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Pair<String, Integer> pair = std::make\_pair(String(\textcolor{stringliteral}{"key"}), Integer(123)) ;}
+\DoxyCodeLine{pair.first ; \textcolor{comment}{// "key"}}
+\DoxyCodeLine{pair.second ; \textcolor{comment}{// 123}}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_af6dbaf299d8b2ced8a150b09c3cade2a}\label{namespaceostk_1_1core_1_1container_af6dbaf299d8b2ced8a150b09c3cade2a}} 
 \index{ostk::core::container@{ostk::core::container}!Tuple@{Tuple}}
 \index{Tuple@{Tuple}!ostk::core::container@{ostk::core::container}}
 \doxysubsubsection{\texorpdfstring{Tuple}{Tuple}}
@@ -126,6 +147,10 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1container_af6dbaf299d8b2ced8a150
 Tuple container. 
 
 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Tuple<int, double, String> tuple = std::make\_tuple(1, 2.0, String(\textcolor{stringliteral}{"abc"})) ;}
+\end{DoxyCode}
+ 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a544aebdb3d5392abe3d9984db9560d4a}\label{namespaceostk_1_1core_1_1container_a544aebdb3d5392abe3d9984db9560d4a}} 
@@ -135,12 +160,38 @@ Tuple container.
 {\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
 \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}}$<$T, U, V$>$ ostk\+::core\+::container\+::make\+\_\+triple (\begin{DoxyParamCaption}\item[{const T \&}]{a\+First\+Element,  }\item[{const U \&}]{a\+Second\+Element,  }\item[{const V \&}]{a\+Third\+Element }\end{DoxyParamCaption})}
 
+
+
+Construct a \mbox{\hyperlink{structostk_1_1core_1_1container_1_1_triple}{Triple}} from three values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+First\+Element} & A first element \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Second\+Element} & A second element \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Third\+Element} & A third element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A triple 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a658f7ade754eaa9ab0e310c2e62a5914}\label{namespaceostk_1_1core_1_1container_a658f7ade754eaa9ab0e310c2e62a5914}} 
 \index{ostk::core::container@{ostk::core::container}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::container@{ostk::core::container}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}}\& ostk\+::core\+::container\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+File} & A file \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to file 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a827f89ac319a6f99ccbb2f8d94472bdb}\label{namespaceostk_1_1core_1_1container_a827f89ac319a6f99ccbb2f8d94472bdb}} 
 \index{ostk::core::container@{ostk::core::container}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::container@{ostk::core::container}}
@@ -170,6 +221,16 @@ A reference to output stream
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::container\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to output stream 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_a8238aac5bd4baedb41a4fc81ce1c74a6}\label{namespaceostk_1_1core_1_1container_a8238aac5bd4baedb41a4fc81ce1c74a6}} 
 \index{ostk::core::container@{ostk::core::container}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::container@{ostk::core::container}}
@@ -198,6 +259,16 @@ A reference to output stream
 \doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}}\& ostk\+::core\+::container\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{filesystem\+::\+File}} \&}]{a\+File,  }\item[{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+File} & A file \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to file 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1container_adc15b58ecbd48d11cc0febf28fb28dbe}\label{namespaceostk_1_1core_1_1container_adc15b58ecbd48d11cc0febf28fb28dbe}} 
 \index{ostk::core::container@{ostk::core::container}!Unpack@{Unpack}}
 \index{Unpack@{Unpack}!ostk::core::container@{ostk::core::container}}
@@ -205,3 +276,23 @@ A reference to output stream
 {\footnotesize\ttfamily template$<$typename... Args$>$ \\
 auto ostk\+::core\+::container\+::\+Unpack (\begin{DoxyParamCaption}\item[{Args \&...}]{args }\end{DoxyParamCaption})}
 
+
+
+Unpack values into a tuple of references for structured assignment. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a ;}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1container_adc15b58ecbd48d11cc0febf28fb28dbe}{Unpack}}(a, b) = std::make\_tuple(1, 2.0) ;}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & References to variables to unpack into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple of references 
+\end{DoxyReturn}

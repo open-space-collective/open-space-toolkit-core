@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="96" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="96" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="132" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1aae747fe50fdea2da283cb593293ac014" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="97" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="97" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="133" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="133" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -50,12 +50,23 @@
           <declname>aSequence</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sequences to zip together </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="79" column="5" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="79" bodyend="83"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="109" column="5" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="109" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1ae4c8c2625fedbb5ce799ef15fef96c1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
@@ -63,12 +74,16 @@
         <argsstring>() const</argsstring>
         <name>begin</name>
         <briefdescription>
+<para>Returns an iterator pointing to the first zipped element. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> to the first element </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="85" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="85" bodyend="88"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="118" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="118" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1af5067549c260224ccb8e652979d1455f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">ZipIterator::Iterator</ref></type>
@@ -76,21 +91,33 @@
         <argsstring>() const</argsstring>
         <name>end</name>
         <briefdescription>
+<para>Returns an iterator pointing past the last zipped element. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> past the last element </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="90" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="90" bodyend="93"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="126" column="27" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="126" bodyend="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Zip iterator. </para>
     </briefdescription>
     <detaileddescription>
+<para>Allows iterating over multiple sequences simultaneously.</para>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>a<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;String&gt;<sp/>b<sp/>=<sp/>{&quot;a&quot;,<sp/>&quot;b&quot;,<sp/>&quot;c&quot;}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(const<sp/>auto&amp;<sp/>[x,<sp/>y]<sp/>:<sp/>Zip(a,<sp/>b))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>x<sp/>=<sp/>1,<sp/>y<sp/>=<sp/>&quot;a&quot;<sp/>;<sp/>x<sp/>=<sp/>2,<sp/>y<sp/>=<sp/>&quot;b&quot;<sp/>;<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
 <para><ulink url="https://gist.github.com/mortehu/373069390c75b02f98b655e3f7dbef9a">https://gist.github.com/mortehu/373069390c75b02f98b655e3f7dbef9a</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="24" bodyend="98"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="35" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="34" bodyend="134"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1ae4c8c2625fedbb5ce799ef15fef96c1a" prot="public" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>begin</name></member>
       <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1a143a3e57569c8bd7caca581f322ad9fa" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator</scope><name>begin_</name></member>

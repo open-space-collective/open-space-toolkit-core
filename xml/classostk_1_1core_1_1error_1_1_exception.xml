@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="33" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="33" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="44" column="12" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,12 +31,23 @@
           <declname>aScope</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aScope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A scope identifier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="24" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="12" bodyend="15"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="28" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="12" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1ae44d71ced961433d0b3325ff176e4974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -44,12 +55,13 @@
         <argsstring>()</argsstring>
         <name>~Exception</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="26" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="17" bodyend="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="31" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="17" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -57,12 +69,16 @@
         <argsstring>() const</argsstring>
         <name>getScope</name>
         <briefdescription>
+<para>Get the scope of the exception. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Scope string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="28" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="19" bodyend="22"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="36" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_exception_1ae34ebc20a97277da6e2472b6bb8e3812" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
         <type>const char *</type>
@@ -71,18 +87,23 @@
         <name>what</name>
         <reimplementedby refid="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1">what</reimplementedby>
         <briefdescription>
+<para>Get the exception message. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1error_1_1_exception" kindref="compound">Exception</ref> message as C-string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="30" column="24" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="24" bodyend="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="41" column="24" bodyfile="src/OpenSpaceToolkit/Core/Error/Exception.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1error_1_1_exception" kindref="compound">Exception</ref> class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Base exception class for all OpenSpaceToolkit exceptions. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="6">
@@ -130,7 +151,7 @@
         <label>std::exception</label>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="21" bodyend="34"/>
+    <location file="include/OpenSpaceToolkit/Core/Error/Exception.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Exception.hpp" bodystart="22" bodyend="45"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>Exception</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" virt="non-virtual"><scope>ostk::core::error::Exception</scope><name>getScope</name></member>

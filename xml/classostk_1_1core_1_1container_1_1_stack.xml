@@ -10,12 +10,13 @@
         <argsstring>()=delete</argsstring>
         <name>Stack</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="18" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1aa93b179d188b59262eadb0bbc2f471c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -27,12 +28,23 @@
           <declname>aStack</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aStack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="20" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="29" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1ab729328cfb3414eea24d10578dc50b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,29 +52,43 @@
         <argsstring>()</argsstring>
         <name>~Stack</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="22" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="32" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1a838d731b5b3cb75afb600f95bdb6116a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1abbfca902e8a6268ed62adc6f3e1a87c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_stack" kindref="compound">Stack</ref> &amp;</type>
         <definition>Stack&amp; ostk::core::container::Stack::operator=</definition>
-        <argsstring>(const Stack &amp;aStack) const</argsstring>
+        <argsstring>(const Stack &amp;aStack)</argsstring>
         <name>operator=</name>
         <param>
           <type>const <ref refid="classostk_1_1core_1_1container_1_1_stack" kindref="compound">Stack</ref> &amp;</type>
           <declname>aStack</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aStack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to stack </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="24" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="38" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1afadb6fd8466d932a0a6d2a297d7790e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -70,12 +96,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if stack is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="28" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="50" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -93,12 +123,33 @@
           <declname>aStack</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aStack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="26" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="45" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -108,12 +159,16 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
+<para>Construct an empty stack. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Empty stack </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="30" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="55" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_stack_1a0fe89583f20416d268d2a298402118ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_stack" kindref="compound">Stack</ref></type>
@@ -125,26 +180,39 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Construct a stack from an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_stack" kindref="compound">Stack</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="32" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="61" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>First-in, last-out (FILO) container. </para>
+<para>First-in, last-out (FILO) container [TBI]. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="16" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Stack.hpp" bodystart="15" bodyend="36"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Stack.hpp" line="21" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Stack.hpp" bodystart="20" bodyend="65"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1a8c02317e185f74fde64bc50f76091b83" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>Empty</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1afadb6fd8466d932a0a6d2a297d7790e3" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1a0fe89583f20416d268d2a298402118ad" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>Object</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1a042acac24eba66c740c7d3d48dfc0e46" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>operator&lt;&lt;</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_stack_1a838d731b5b3cb75afb600f95bdb6116a" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_stack_1abbfca902e8a6268ed62adc6f3e1a87c0" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>operator=</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1af0e0c3303c5c323a7e44dcf060905918" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>Stack</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1aa93b179d188b59262eadb0bbc2f471c1" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>Stack</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_stack_1ab729328cfb3414eea24d10578dc50b86" prot="public" virt="non-virtual"><scope>ostk::core::container::Stack</scope><name>~Stack</name></member>

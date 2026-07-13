@@ -2,7 +2,7 @@
 \label{classostk_1_1core_1_1container_1_1_tree}\index{ostk::core::container::Tree@{ostk::core::container::Tree}}
 
 
-Undirected graph in which any two vertices are connected by exactly one path.  
+Undirected graph in which any two vertices are connected by exactly one path \mbox{[}T\+BI\mbox{]}.  
 
 
 
@@ -13,38 +13,33 @@ Undirected graph in which any two vertices are connected by exactly one path.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a6957b96965368f6dd283c5986b82f00c}{Tree}} ()=delete
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}{Tree}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}{$\sim$\+Tree}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree) const
-\item 
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}{is\+Defined}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if tree is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a747219067a849456b83b66061fc3a1f5}{Empty}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct an empty tree. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}{Object}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&an\+Object)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a tree from an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree_aca74cf66509d8f31b83b1c100cb00bea}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&a\+Tree)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Undirected graph in which any two vertices are connected by exactly one path. 
+Undirected graph in which any two vertices are connected by exactly one path \mbox{[}T\+BI\mbox{]}. 
 
-\begin{DoxyVerb}                        A tree data structure can be defined recursively (locally) as a collection of nodes
-                        (starting at a root node), where each node is a data structure consisting of a value,
-                        together with a list of references to nodes (the "children"), with the constraints that
-                        no reference is duplicated, and none points to the root.
-\end{DoxyVerb}
-
+A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the \char`\"{}children\char`\"{}), with the constraints that no reference is duplicated, and none points to the root.
 
 \href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(graph\+\_\+theory) \href{https://en.wikipedia.org/wiki/Tree_}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Tree\+\_\+}}(data\+\_\+structure) 
 
@@ -55,17 +50,34 @@ Undirected graph in which any two vertices are connected by exactly one path.
 \doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+
+
+Default constructor (disabled) 
+
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}\label{classostk_1_1core_1_1container_1_1_tree_a1e87f651a4bc19e42c89b0bae8dd965b}} 
 \index{ostk::core::container::Tree@{ostk::core::container::Tree}!Tree@{Tree}}
 \index{Tree@{Tree}!ostk::core::container::Tree@{ostk::core::container::Tree}}
 \doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})}
 
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Tree} & A tree \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}\label{classostk_1_1core_1_1container_1_1_tree_a4024924e1a48e9cc1d32065a306cb840}} 
 \index{ostk::core::container::Tree@{ostk::core::container::Tree}!````~Tree@{$\sim$Tree}}
 \index{````~Tree@{$\sim$Tree}!ostk::core::container::Tree@{ostk::core::container::Tree}}
 \doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
 {\footnotesize\ttfamily ostk\+::core\+::container\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
 
 
 
@@ -76,24 +88,62 @@ Undirected graph in which any two vertices are connected by exactly one path.
 \doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} ostk\+::core\+::container\+::\+Tree\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct an empty tree. 
+
+\begin{DoxyReturn}{Returns}
+Empty tree 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}\label{classostk_1_1core_1_1container_1_1_tree_a43db1f621767f4dcee49611cee3d7d9e}} 
 \index{ostk::core::container::Tree@{ostk::core::container::Tree}!isDefined@{isDefined}}
 \index{isDefined@{isDefined}!ostk::core::container::Tree@{ostk::core::container::Tree}}
 \doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
 {\footnotesize\ttfamily bool ostk\+::core\+::container\+::\+Tree\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Check if tree is defined. 
+
+\begin{DoxyReturn}{Returns}
+True if defined 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}\label{classostk_1_1core_1_1container_1_1_tree_a6a8a27586220318a879ce5e68ef3fb27}} 
 \index{ostk::core::container::Tree@{ostk::core::container::Tree}!Object@{Object}}
 \index{Object@{Object}!ostk::core::container::Tree@{ostk::core::container::Tree}}
 \doxysubsubsection{\texorpdfstring{Object()}{Object()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} ostk\+::core\+::container\+::\+Tree\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object}{Object}} \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Construct a tree from an object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}\label{classostk_1_1core_1_1container_1_1_tree_ac2cca9d5261c57d25d704ae49d517fbd}} 
 \index{ostk::core::container::Tree@{ostk::core::container::Tree}!operator=@{operator=}}
 \index{operator=@{operator=}!ostk::core::container::Tree@{ostk::core::container::Tree}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}}\& ostk\+::core\+::container\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption}) const}
 
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Tree} & A tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to tree 
+\end{DoxyReturn}
 
 
 \doxysubsection{Friends And Related Function Documentation}
@@ -103,6 +153,20 @@ Undirected graph in which any two vertices are connected by exactly one path.
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_tree}{Tree}} \&}]{a\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Tree} & A tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to output stream 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

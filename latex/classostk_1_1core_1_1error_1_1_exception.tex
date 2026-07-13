@@ -19,17 +19,19 @@ Inheritance diagram for ostk\+::core\+::error\+::Exception\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception_a27647e55b84a7a32cf8b24e575651d71}{Exception}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Scope)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception_ae44d71ced961433d0b3325ff176e4974}{$\sim$\+Exception}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception_a3778009187ea6841eff3bdd45d345144}{get\+Scope}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the scope of the exception. \end{DoxyCompactList}\item 
 virtual const char $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception_ae34ebc20a97277da6e2472b6bb8e3812}{what}} () const noexcept
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the exception message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception}{Exception}} class. 
+
+Base exception class for all Open\+Space\+Toolkit exceptions. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_exception_a27647e55b84a7a32cf8b24e575651d71}\label{classostk_1_1core_1_1error_1_1_exception_a27647e55b84a7a32cf8b24e575651d71}} 
@@ -38,11 +40,24 @@ virtual const char $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_except
 \doxysubsubsection{\texorpdfstring{Exception()}{Exception()}}
 {\footnotesize\ttfamily ostk\+::core\+::error\+::\+Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Scope }\end{DoxyParamCaption})}
 
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Scope} & A scope identifier \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_exception_ae44d71ced961433d0b3325ff176e4974}\label{classostk_1_1core_1_1error_1_1_exception_ae44d71ced961433d0b3325ff176e4974}} 
 \index{ostk::core::error::Exception@{ostk::core::error::Exception}!````~Exception@{$\sim$Exception}}
 \index{````~Exception@{$\sim$Exception}!ostk::core::error::Exception@{ostk::core::error::Exception}}
 \doxysubsubsection{\texorpdfstring{$\sim$Exception()}{~Exception()}}
 {\footnotesize\ttfamily ostk\+::core\+::error\+::\+Exception\+::$\sim$\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
 
 
 
@@ -53,12 +68,26 @@ virtual const char $\ast$ \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_except
 \doxysubsubsection{\texorpdfstring{getScope()}{getScope()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} ostk\+::core\+::error\+::\+Exception\+::get\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the scope of the exception. 
+
+\begin{DoxyReturn}{Returns}
+Scope string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1error_1_1_exception_ae34ebc20a97277da6e2472b6bb8e3812}\label{classostk_1_1core_1_1error_1_1_exception_ae34ebc20a97277da6e2472b6bb8e3812}} 
 \index{ostk::core::error::Exception@{ostk::core::error::Exception}!what@{what}}
 \index{what@{what}!ostk::core::error::Exception@{ostk::core::error::Exception}}
 \doxysubsubsection{\texorpdfstring{what()}{what()}}
 {\footnotesize\ttfamily const char $\ast$ ostk\+::core\+::error\+::\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
+
+
+Get the exception message. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1error_1_1_exception}{Exception}} message as C-\/string 
+\end{DoxyReturn}
 
 
 Reimplemented in \mbox{\hyperlink{classostk_1_1core_1_1error_1_1_runtime_error_a671d71ab5483eaa1ce5cc3400747ded1}{ostk\+::core\+::error\+::\+Runtime\+Error}}.

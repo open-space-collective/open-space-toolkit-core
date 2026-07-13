@@ -18,23 +18,25 @@ using \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a76c2ff8c48c3484e3ca
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a0a637b6f2ae5ac6b0bd9a55880bddfb8}{Pump}} (const \mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} \&a\+Severity, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&a\+Line, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+File, const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&a\+Function, \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_source}{Source}} $\ast$a\+Source)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a8bc336c04ded0c76896aca7604f1d170}{Pump}} (const \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&a\+Pump)=delete
-\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor (disabled) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a9a7525e9d81db32109ceb3dbc55f0d54}{Pump}} (\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&\&a\+Pump)
-\item 
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a66b4321348906a8a2b379c9aefac01d6}{$\sim$\+Pump}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor (flushes the log message) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \& \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_adaca719cdabd4a6f6e8937bacf093b77}{operator=}} (const \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&a\+Pump)=delete
-\item 
+\begin{DoxyCompactList}\small\item\em Copy assignment operator (disabled) \end{DoxyCompactList}\item 
 {\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \& \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_ac2bb85f5e310c5cccf792d85b317acda}{operator$<$$<$}} (const T \&an\+Object)
-\item 
+\begin{DoxyCompactList}\small\item\em Stream insertion operator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \& \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a6ab7044123e2f99752a043a462632a6b}{operator$<$$<$}} (\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a76c2ff8c48c3484e3ca179667a7a7b31}{Stream\+Manipulator}} a\+Stream\+Manipulator)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stream manipulator operator (e.\+g., std\+::endl) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Log pump. 
+
+Temporary object that collects log message content via stream operators and flushes the message to the log source upon destruction. 
 
 \doxysubsection{Member Typedef Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_a76c2ff8c48c3484e3ca179667a7a7b31}\label{classostk_1_1core_1_1logger_1_1_pump_a76c2ff8c48c3484e3ca179667a7a7b31}} 
@@ -52,11 +54,32 @@ Log pump.
 \doxysubsubsection{\texorpdfstring{Pump()}{Pump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily ostk\+::core\+::logger\+::\+Pump\+::\+Pump (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceostk_1_1core_1_1logger_a52d02954e094391f067befffe7f3cae9}{Severity}} \&}]{a\+Severity,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{a\+Line,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \&}]{a\+Function,  }\item[{\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_source}{Source}} $\ast$}]{a\+Source }\end{DoxyParamCaption})}
 
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Severity} & A severity level \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Line} & A source line number \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+File} & A source file name \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Function} & A source function name \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Source} & A pointer to the log source \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_a8bc336c04ded0c76896aca7604f1d170}\label{classostk_1_1core_1_1logger_1_1_pump_a8bc336c04ded0c76896aca7604f1d170}} 
 \index{ostk::core::logger::Pump@{ostk::core::logger::Pump}!Pump@{Pump}}
 \index{Pump@{Pump}!ostk::core::logger::Pump@{ostk::core::logger::Pump}}
 \doxysubsubsection{\texorpdfstring{Pump()}{Pump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily ostk\+::core\+::logger\+::\+Pump\+::\+Pump (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&}]{a\+Pump }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor (disabled) 
 
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_a9a7525e9d81db32109ceb3dbc55f0d54}\label{classostk_1_1core_1_1logger_1_1_pump_a9a7525e9d81db32109ceb3dbc55f0d54}} 
 \index{ostk::core::logger::Pump@{ostk::core::logger::Pump}!Pump@{Pump}}
@@ -64,11 +87,24 @@ Log pump.
 \doxysubsubsection{\texorpdfstring{Pump()}{Pump()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily ostk\+::core\+::logger\+::\+Pump\+::\+Pump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&\&}]{a\+Pump }\end{DoxyParamCaption})}
 
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Pump} & A pump to move from \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_a66b4321348906a8a2b379c9aefac01d6}\label{classostk_1_1core_1_1logger_1_1_pump_a66b4321348906a8a2b379c9aefac01d6}} 
 \index{ostk::core::logger::Pump@{ostk::core::logger::Pump}!````~Pump@{$\sim$Pump}}
 \index{````~Pump@{$\sim$Pump}!ostk::core::logger::Pump@{ostk::core::logger::Pump}}
 \doxysubsubsection{\texorpdfstring{$\sim$Pump()}{~Pump()}}
 {\footnotesize\ttfamily ostk\+::core\+::logger\+::\+Pump\+::$\sim$\+Pump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor (flushes the log message) 
 
 
 
@@ -80,17 +116,45 @@ Log pump.
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}}\& ostk\+::core\+::logger\+::\+Pump\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const T \&}]{an\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Stream insertion operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Object} & An object to insert into the log message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to pump 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_a6ab7044123e2f99752a043a462632a6b}\label{classostk_1_1core_1_1logger_1_1_pump_a6ab7044123e2f99752a043a462632a6b}} 
 \index{ostk::core::logger::Pump@{ostk::core::logger::Pump}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::logger::Pump@{ostk::core::logger::Pump}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}}\& ostk\+::core\+::logger\+::\+Pump\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump_a76c2ff8c48c3484e3ca179667a7a7b31}{Stream\+Manipulator}}}]{a\+Stream\+Manipulator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Stream manipulator operator (e.\+g., std\+::endl) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Stream\+Manipulator} & A stream manipulator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to pump 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1logger_1_1_pump_adaca719cdabd4a6f6e8937bacf093b77}\label{classostk_1_1core_1_1logger_1_1_pump_adaca719cdabd4a6f6e8937bacf093b77}} 
 \index{ostk::core::logger::Pump@{ostk::core::logger::Pump}!operator=@{operator=}}
 \index{operator=@{operator=}!ostk::core::logger::Pump@{ostk::core::logger::Pump}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}}\& ostk\+::core\+::logger\+::\+Pump\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1logger_1_1_pump}{Pump}} \&}]{a\+Pump }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment operator (disabled) 
 
 
 

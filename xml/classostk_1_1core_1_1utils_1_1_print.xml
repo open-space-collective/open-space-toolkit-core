@@ -11,12 +11,13 @@
         <argsstring>()=delete</argsstring>
         <name>Print</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="45" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="61" column="5"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -34,12 +35,31 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para><ref refid="classostk_1_1core_1_1utils_1_1_print" kindref="compound">Print</ref> a section header. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A header name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="47" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="26" bodyend="33"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="67" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="26" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1a1aeb071e217dabc5df02b5692d3d3e10" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1utils_1_1_print_1_1_line_buffer" kindref="compound">Print::LineBuffer</ref></type>
@@ -56,12 +76,33 @@
           <defval>1</defval>
         </param>
         <briefdescription>
+<para>Create a formatted line buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anIndentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An indentation level (default: 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Line buffer </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="49" column="30" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="35" bodyend="38"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="74" column="30" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="35" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1a4803c717a7418a18060f2bcc7e391410" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,12 +119,31 @@
           <defval>&quot;&quot;</defval>
         </param>
         <briefdescription>
+<para><ref refid="classostk_1_1core_1_1utils_1_1_print" kindref="compound">Print</ref> a separator line. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional separator label (default: empty) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="51" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="40" bodyend="54"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="80" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="40" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1utils_1_1_print_1af2493f2770f18699410630710a8105a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,19 +155,31 @@
           <declname>anOutputStream</declname>
         </param>
         <briefdescription>
+<para><ref refid="classostk_1_1core_1_1utils_1_1_print" kindref="compound">Print</ref> a section footer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="53" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="56" bodyend="59"/>
+        <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="85" column="17" bodyfile="src/OpenSpaceToolkit/Core/Utility/Print.cpp" bodystart="56" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Formatted print utilities for structured output. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="18" bodyend="54"/>
+    <location file="include/OpenSpaceToolkit/Core/Utility/Print.hpp" line="20" column="1" bodyfile="include/OpenSpaceToolkit/Core/Utility/Print.hpp" bodystart="19" bodyend="86"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1utils_1_1_print_1af2493f2770f18699410630710a8105a4" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Footer</name></member>
       <member refid="classostk_1_1core_1_1utils_1_1_print_1a31241a78c064230fdf2f0089e642e20e" prot="public" virt="non-virtual"><scope>ostk::core::utils::Print</scope><name>Header</name></member>

@@ -21,12 +21,13 @@
         <argsstring></argsstring>
         <name>first</name>
         <briefdescription>
+<para>First element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="30" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="30" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="38" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structostk_1_1core_1_1container_1_1_triple_1a172fe1b954b041775b86ea10c8d4d2eb" prot="public" static="no" mutable="no">
         <type>U</type>
@@ -34,12 +35,13 @@
         <argsstring></argsstring>
         <name>second</name>
         <briefdescription>
+<para>Second element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="31" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="31" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="39" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structostk_1_1core_1_1container_1_1_triple_1a4f8f5c43182f8bc5b1145f8cd680bbe5" prot="public" static="no" mutable="no">
         <type>V</type>
@@ -47,20 +49,27 @@
         <argsstring></argsstring>
         <name>third</name>
         <briefdescription>
+<para>Third element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="32" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="32" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="40" column="7" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="structostk_1_1core_1_1container_1_1_triple" kindref="compound">Triple</ref> container. </para>
     </briefdescription>
     <detaileddescription>
+<para>A container holding three elements of potentially different types.</para>
+<para><programlisting><codeline><highlight class="normal">Triple&lt;int,<sp/>double,<sp/>String&gt;<sp/>triple<sp/>=<sp/>make_triple(1,<sp/>2.0,<sp/>String(&quot;abc&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">triple.first<sp/>;<sp/>//<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">triple.second<sp/>;<sp/>//<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal">triple.third<sp/>;<sp/>//<sp/>&quot;abc&quot;</highlight></codeline>
+</programlisting> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="28" bodyend="33"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Triple.hpp" line="37" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Triple.hpp" bodystart="36" bodyend="41"/>
     <listofallmembers>
       <member refid="structostk_1_1core_1_1container_1_1_triple_1aaaf7b3bbad2d3c013e2b9d74f0f97503" prot="public" virt="non-virtual"><scope>ostk::core::container::Triple</scope><name>first</name></member>
       <member refid="structostk_1_1core_1_1container_1_1_triple_1a172fe1b954b041775b86ea10c8d4d2eb" prot="public" virt="non-virtual"><scope>ostk::core::container::Triple</scope><name>second</name></member>

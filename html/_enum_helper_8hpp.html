@@ -137,7 +137,13 @@ Macros</h2></td></tr>
 <div class="line">    static EnumType EnumName##FromString(<span class="keyword">const</span> <a class="code" href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a>&amp; enumString);</div>
 </div><!-- fragment -->
 <p>Declares the standard enum-to-string and string-to-enum conversion functions. </p>
-<dl class="section note"><dt>Note</dt><dd>This macro should be used in a header file, within the namespace of the enum. It does NOT have a dependency on magic_enum. </dd></dl>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyClass</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="keyword">enum class</span> Color { Red, Green, Blue } ;</div>
+<div class="line"><a class="code" href="_enum_helper_8hpp.html#a7ee40a373d808974ffc8363d60035bca">OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION</a>(Color, Color, MyClass)</div>
+<div class="line">} ;</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This macro should be used in a header file, within the namespace of the enum. It does NOT have a dependency on magic_enum. </dd></dl>
 
 </div>
 </div>
@@ -188,14 +194,17 @@ Macros</h2></td></tr>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p>Defines the implementation for enum-to-string and string-to-enum conversion functions. </p>
-<dl class="section note"><dt>Note</dt><dd>This macro should be used in a source file, within the namespace of the enum. The source file MUST #include &lt;magic_enum/magic_enum.hpp&gt; before using this. </dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="_enum_helper_8hpp.html#a72e0abb65aaf8b5d9e61baf8bc066560">OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION</a>(MyClass::Color, Color, MyClass)</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This macro should be used in a source file, within the namespace of the enum. The source file MUST #include &lt;magic_enum/magic_enum.hpp&gt; before using this. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="a_enum_helper_8hpp_html_a7ee40a373d808974ffc8363d60035bca"><div class="ttname"><a href="_enum_helper_8hpp.html#a7ee40a373d808974ffc8363d60035bca">OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION</a></div><div class="ttdeci">#define OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION(EnumType, EnumName, ClassName)</div><div class="ttdoc">Declares the standard enum-to-string and string-to-enum conversion functions.</div><div class="ttdef"><b>Definition:</b> EnumHelper.hpp:24</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1type_1_1_string_html"><div class="ttname"><a href="classostk_1_1core_1_1type_1_1_string.html">ostk::core::type::String</a></div><div class="ttdoc">A sequence of characters.</div><div class="ttdef"><b>Definition:</b> String.hpp:52</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1error_1_1runtime_1_1_wrong_html"><div class="ttname"><a href="classostk_1_1core_1_1error_1_1runtime_1_1_wrong.html">ostk::core::error::runtime::Wrong</a></div><div class="ttdoc">Wrong variable error class.</div><div class="ttdef"><b>Definition:</b> Wrong.hpp:22</div></div>
+<div class="ttc" id="a_enum_helper_8hpp_html_a72e0abb65aaf8b5d9e61baf8bc066560"><div class="ttname"><a href="_enum_helper_8hpp.html#a72e0abb65aaf8b5d9e61baf8bc066560">OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION</a></div><div class="ttdeci">#define OSTK_CORE_DEFINE_ENUM_STRING_CONVERSION(EnumType, EnumName, ClassName)</div><div class="ttdoc">Defines the implementation for enum-to-string and string-to-enum conversion functions.</div><div class="ttdef"><b>Definition:</b> EnumHelper.hpp:36</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1error_1_1runtime_1_1_wrong_html"><div class="ttname"><a href="classostk_1_1core_1_1error_1_1runtime_1_1_wrong.html">ostk::core::error::runtime::Wrong</a></div><div class="ttdoc">Wrong variable error class.</div><div class="ttdef"><b>Definition:</b> Wrong.hpp:23</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

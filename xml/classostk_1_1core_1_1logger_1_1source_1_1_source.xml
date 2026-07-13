@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="29" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="29" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="28" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="47" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="45" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="46" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="32" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1source_1_1_source_1af58f605f972fe3342beb951953165296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="34" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="33" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1source_1_1_source_1a4f7b5e43ba2d4bcdea104891d02036be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="36" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="35" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1source_1_1_source_1a738c96e3e8b836f444a8e76642a99144" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1source_1_1_source" kindref="compound">Source</ref> *</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="38" column="20"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="37" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1source_1_1_source_1a9043fb9ba427c6913ff230c411554024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1source_1_1_source" kindref="compound">Source</ref> &amp;</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="40" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="39" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1source_1_1_source_1af21cd13688a99e4be234a33eba2b4b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="42" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="41" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -130,7 +130,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="27" bodyend="48"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source/Source.hpp" bodystart="26" bodyend="47"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1logger_1_1source_1_1_source_1af21cd13688a99e4be234a33eba2b4b40" prot="public" virt="non-virtual"><scope>ostk::core::logger::source::Source</scope><name>accessLogger</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1source_1_1_source_1a738c96e3e8b836f444a8e76642a99144" prot="public" virt="virtual"><scope>ostk::core::logger::source::Source</scope><name>clone</name></member>

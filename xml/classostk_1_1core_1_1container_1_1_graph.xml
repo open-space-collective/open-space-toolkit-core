@@ -10,12 +10,13 @@
         <argsstring>()=delete</argsstring>
         <name>Graph</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="21" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="27" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1ade5b2ef0a1670dee37a39ba72dad9334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -27,12 +28,23 @@
           <declname>aGraph</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="23" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="32" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1a5dbc837d77fb76af816658399acf5f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,29 +52,43 @@
         <argsstring>()</argsstring>
         <name>~Graph</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="25" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="35" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1ae788a25b416e6306f1218007f34ebd43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1a26c05cf5e5a6733f8b72a3d37713f559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_graph" kindref="compound">Graph</ref> &amp;</type>
         <definition>Graph&amp; ostk::core::container::Graph::operator=</definition>
-        <argsstring>(const Graph &amp;aGraph) const</argsstring>
+        <argsstring>(const Graph &amp;aGraph)</argsstring>
         <name>operator=</name>
         <param>
           <type>const <ref refid="classostk_1_1core_1_1container_1_1_graph" kindref="compound">Graph</ref> &amp;</type>
           <declname>aGraph</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to graph </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="27" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="41" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1a45d46a9713a96a2a9a001a9e511b9d5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -70,12 +96,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if graph is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="31" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="53" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -93,12 +123,33 @@
           <declname>aGraph</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A graph </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="29" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="48" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -108,12 +159,16 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
+<para>Construct an empty graph. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Empty graph </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="33" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="58" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_graph_1a5af926e028f076738f3d021252191c25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_graph" kindref="compound">Graph</ref></type>
@@ -125,21 +180,34 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Construct a graph from an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_graph" kindref="compound">Graph</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="35" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="64" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Structure consisting of a finite set of vertices, together with a set of pairs of these vertices (edges). </para>
+<para>Structure consisting of a finite set of vertices, together with a set of pairs of these vertices (edges). [TBI]. </para>
     </briefdescription>
     <detaileddescription>
 <para><ulink url="https://en.wikipedia.org/wiki/Graph_">https://en.wikipedia.org/wiki/Graph_</ulink>(abstract_data_type) </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Graph.hpp" bodystart="18" bodyend="39"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Graph.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Graph.hpp" bodystart="23" bodyend="68"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a5852ad09090cad83cf2777c604e829cf" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>Empty</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a6047678871c1968109b3d3140e1d3b52" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>Graph</name></member>
@@ -147,7 +215,7 @@
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a45d46a9713a96a2a9a001a9e511b9d5b" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a5af926e028f076738f3d021252191c25" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>Object</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a225f9b61ac2385ccf05891298c7ab6b1" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>operator&lt;&lt;</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_graph_1ae788a25b416e6306f1218007f34ebd43" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_graph_1a26c05cf5e5a6733f8b72a3d37713f559" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>operator=</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_graph_1a5dbc837d77fb76af816658399acf5f6d" prot="public" virt="non-virtual"><scope>ostk::core::container::Graph</scope><name>~Graph</name></member>
     </listofallmembers>
   </compounddef>

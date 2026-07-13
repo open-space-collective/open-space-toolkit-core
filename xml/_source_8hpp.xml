@@ -207,30 +207,29 @@
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">ostk::core::type::Unique</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="classostk_1_1core_1_1logger_1_1_source" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" kindref="member">Source</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" kindref="member">Source</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/>aSource);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/>aSource);</highlight></codeline>
+<codeline lineno="23" refid="classostk_1_1core_1_1logger_1_1_source" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" kindref="member">Source</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" kindref="member">Undefined</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Unique&lt;source::Source&gt;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" kindref="member">sourceUPtr_</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" kindref="member">Source</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/>aSource);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref>&amp;<sp/>aSource);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Unique&lt;source::Source&gt;<sp/><ref refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" kindref="member">sourceUPtr_</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp"/>
   </compounddef>

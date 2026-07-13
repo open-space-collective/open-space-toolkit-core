@@ -98,6 +98,7 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a25872b7f46de31f17770db725eb1ae15"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
 <tr class="memitem:a25872b7f46de31f17770db725eb1ae15"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceostk_1_1core_1_1container_1_1iterator.html#a25872b7f46de31f17770db725eb1ae15">Zip</a> (T &amp;&amp;... seqs)</td></tr>
+<tr class="memdesc:a25872b7f46de31f17770db725eb1ae15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zip multiple sequences together for parallel iteration.  <a href="namespaceostk_1_1core_1_1container_1_1iterator.html#a25872b7f46de31f17770db725eb1ae15">More...</a><br /></td></tr>
 <tr class="separator:a25872b7f46de31f17770db725eb1ae15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -118,12 +119,28 @@ template&lt;typename... T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>Sequences must be the same length </dd></dl>
+
+<p>Zip multiple sequences together for parallel iteration. </p>
+<div class="fragment"><div class="line">Array&lt;int&gt; a = {1, 2, 3} ;</div>
+<div class="line">Array&lt;String&gt; b = {<span class="stringliteral">&quot;a&quot;</span>, <span class="stringliteral">&quot;b&quot;</span>, <span class="stringliteral">&quot;c&quot;</span>} ;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [x, y] : <a class="code" href="namespaceostk_1_1core_1_1container_1_1iterator.html#a25872b7f46de31f17770db725eb1ae15">Zip</a>(a, b))</div>
+<div class="line">{</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Sequences must be the same length</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">seqs</td><td>Sequences to zip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator.html" title="Zip iterator.">ZipIterator</a> over the zipped sequences </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceostk_1_1core_1_1container_1_1iterator_html_a25872b7f46de31f17770db725eb1ae15"><div class="ttname"><a href="namespaceostk_1_1core_1_1container_1_1iterator.html#a25872b7f46de31f17770db725eb1ae15">ostk::core::container::iterator::Zip</a></div><div class="ttdeci">auto Zip(T &amp;&amp;... seqs)</div><div class="ttdoc">Zip multiple sequences together for parallel iteration.</div><div class="ttdef"><b>Definition:</b> Zip.hpp:152</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

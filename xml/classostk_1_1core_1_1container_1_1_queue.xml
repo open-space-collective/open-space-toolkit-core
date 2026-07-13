@@ -10,12 +10,13 @@
         <argsstring>()=delete</argsstring>
         <name>Queue</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="18" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1ae68385c404f527e7911a0a123779e71a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -27,12 +28,23 @@
           <declname>aQueue</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aQueue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="20" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="29" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1a04cb880277a69493af40c814ee69d3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,29 +52,43 @@
         <argsstring>()</argsstring>
         <name>~Queue</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="22" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="32" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1a04f96ea1cc20b6cf5620ae1753b7485c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1a16f7ff7f02e308e8a198707628a2eb0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_queue" kindref="compound">Queue</ref> &amp;</type>
         <definition>Queue&amp; ostk::core::container::Queue::operator=</definition>
-        <argsstring>(const Queue &amp;aQueue) const</argsstring>
+        <argsstring>(const Queue &amp;aQueue)</argsstring>
         <name>operator=</name>
         <param>
           <type>const <ref refid="classostk_1_1core_1_1container_1_1_queue" kindref="compound">Queue</ref> &amp;</type>
           <declname>aQueue</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aQueue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to queue </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="24" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="38" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1a73d21f037e4c47caae25704c8fe8d407" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -70,12 +96,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if queue is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="28" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="50" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -93,12 +123,33 @@
           <declname>aQueue</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aQueue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="26" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="45" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -108,12 +159,16 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
+<para>Construct an empty queue. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Empty queue </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="30" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="55" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_queue_1a4d27d9ed74a36d344266361192347e97" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_queue" kindref="compound">Queue</ref></type>
@@ -125,26 +180,39 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Construct a queue from an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_queue" kindref="compound">Queue</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="32" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="61" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>First-in, first-out (FIFO) container. </para>
+<para>First-in, first-out (FIFO) container [TBI]. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="16" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Queue.hpp" bodystart="15" bodyend="36"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Queue.hpp" line="21" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Queue.hpp" bodystart="20" bodyend="65"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a47bb867f09dc6668ca92f730e9645eaf" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>Empty</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a73d21f037e4c47caae25704c8fe8d407" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a4d27d9ed74a36d344266361192347e97" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>Object</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a4c174fae5388505f1109c3cf04974617" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>operator&lt;&lt;</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_queue_1a04f96ea1cc20b6cf5620ae1753b7485c" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>operator=</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_queue_1a16f7ff7f02e308e8a198707628a2eb0f" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>operator=</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a1bf36ee5bf7d93c00a3accf87b395e2e" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>Queue</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1ae68385c404f527e7911a0a123779e71a" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>Queue</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_queue_1a04cb880277a69493af40c814ee69d3af" prot="public" virt="non-virtual"><scope>ostk::core::container::Queue</scope><name>~Queue</name></member>

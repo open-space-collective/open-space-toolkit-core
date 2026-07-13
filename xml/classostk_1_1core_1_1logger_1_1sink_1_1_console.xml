@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="26" bodyend="46"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="25" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="64" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="62" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="63" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="66" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="66" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="65" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="48" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="47" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a143d865d1cf750b1d0d98ded32cc69da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="50" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="49" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a60d6555ac02a53aa20efa0f131cdccca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="52" column="13"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="51" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae55ec68ac574b3bcd3ac1bdabbf1848d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1sink_1_1_console" kindref="compound">Console</ref> *</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="54" column="21"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="53" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1a9d9222231635b663c863430457209050" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="56" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="55" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1sink_1_1_console_1ae707d83c0b5052bc100b4570e89ed346" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="57" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="56" column="18"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -270,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="59" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="58" column="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -320,7 +320,7 @@
         <label>Severity</label>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="23" bodyend="67"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink/Console.hpp" bodystart="22" bodyend="66"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a809a19c1204b3b3681dec39b916786c5" prot="public" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>addChannel</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink_1a826ad5fe548935b4cd2b059cf1f3c64e" prot="protected" virt="non-virtual"><scope>ostk::core::logger::sink::Console</scope><name>channelEnabled_</name></member>

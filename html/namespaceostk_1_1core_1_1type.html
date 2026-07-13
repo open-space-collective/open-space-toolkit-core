@@ -200,7 +200,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A unit of digital information that consists of eight bits. </p>
-
+<div class="fragment"><div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">Byte</a> <span class="keywordtype">byte</span> = 0xFF ;</div>
+<div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">Byte</a> <span class="keywordtype">byte</span> = 42 ;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a417fd235f7e100d47856d16751831c34"></a>
@@ -216,7 +218,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Index can store the maximum size of a theoretically possible object of any type. </p>
-
+<div class="fragment"><div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">Index</a> index = 0 ;</div>
+<div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">Index</a> index = 42 ;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a6533a0c2ece5149a622498df086dbc14"></a>
@@ -290,7 +294,9 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Retains shared ownership of an object through a pointer. </p>
-
+<div class="fragment"><div class="line">Shared&lt;MyClass&gt; ptr = std::make_shared&lt;MyClass&gt;() ;</div>
+<div class="line">Shared&lt;MyClass&gt; ptr2 = ptr ; <span class="comment">// Shared ownership</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a49cf705368ffaff1cc457f73d7ebc403"></a>
@@ -306,7 +312,9 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Size can store the maximum size of a theoretically possible object of any type. </p>
-
+<div class="fragment"><div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> size = 0 ;</div>
+<div class="line"><a class="code" href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">Size</a> size = 42 ;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a4345722d214b8254845ef5067a039da9"></a>
@@ -380,7 +388,8 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Owns and manages another object through a pointer. </p>
-
+<div class="fragment"><div class="line">Unique&lt;MyClass&gt; ptr = std::make_unique&lt;MyClass&gt;() ;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="af3e53775781cfb35ee4bd22d6bf784a1"></a>
@@ -398,7 +407,9 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Holds a non-owning reference to an object that is managed by Shared. </p>
-
+<div class="fragment"><div class="line">Shared&lt;MyClass&gt; shared = std::make_shared&lt;MyClass&gt;() ;</div>
+<div class="line">Weak&lt;MyClass&gt; weak = shared ;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -424,10 +435,14 @@ template&lt;class T &gt; </div>
 
 <p>Sign enum. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147"></a>Positive&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b"></a>Negative&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"><p>Undefined sign. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147"></a>Positive&#160;</td><td class="fielddoc"><p>Positive sign. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b"></a>Negative&#160;</td><td class="fielddoc"><p>Negative sign. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No sign (zero) </p>
+</td></tr>
 </table>
 
 </div>
@@ -478,6 +493,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInt</td><td>A ValueType integer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Remainder </dd></dl>
 
 </div>
 </div>
@@ -506,6 +529,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInt</td><td>A ValueType integer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Product </dd></dl>
 
 </div>
 </div>
@@ -534,6 +565,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDouble</td><td>A double </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReal</td><td>A real </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Product </dd></dl>
 
 </div>
 </div>
@@ -562,6 +601,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInt</td><td>A ValueType integer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum </dd></dl>
 
 </div>
 </div>
@@ -590,6 +637,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDouble</td><td>A double </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReal</td><td>A real </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum </dd></dl>
 
 </div>
 </div>
@@ -618,6 +673,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInt</td><td>A ValueType integer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Difference </dd></dl>
 
 </div>
 </div>
@@ -646,6 +709,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDouble</td><td>A double </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReal</td><td>A real </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Difference </dd></dl>
 
 </div>
 </div>
@@ -674,6 +745,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInt</td><td>A ValueType integer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Quotient </dd></dl>
 
 </div>
 </div>
@@ -702,6 +781,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDouble</td><td>A double </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReal</td><td>A real </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Quotient </dd></dl>
 
 </div>
 </div>
@@ -730,6 +817,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anOutputStream</td><td>An output stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">anInteger</td><td>An integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to output stream </dd></dl>
 
 </div>
 </div>
@@ -758,11 +853,22 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anOutputStream</td><td>An output stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aReal</td><td>A real </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to output stream </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_ae6778085a3f5866921d2c9c9b69d8ee1"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#ae6778085a3f5866921d2c9c9b69d8ee1">ostk::core::type::Byte</a></div><div class="ttdeci">uint8_t Byte</div><div class="ttdoc">A unit of digital information that consists of eight bits.</div><div class="ttdef"><b>Definition:</b> Byte.hpp:21</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a417fd235f7e100d47856d16751831c34"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a417fd235f7e100d47856d16751831c34">ostk::core::type::Index</a></div><div class="ttdeci">size_t Index</div><div class="ttdoc">Index can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Index.hpp:21</div></div>
+<div class="ttc" id="anamespaceostk_1_1core_1_1type_html_a49cf705368ffaff1cc457f73d7ebc403"><div class="ttname"><a href="namespaceostk_1_1core_1_1type.html#a49cf705368ffaff1cc457f73d7ebc403">ostk::core::type::Size</a></div><div class="ttdeci">size_t Size</div><div class="ttdoc">Size can store the maximum size of a theoretically possible object of any type.</div><div class="ttdef"><b>Definition:</b> Size.hpp:21</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

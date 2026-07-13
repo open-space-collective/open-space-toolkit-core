@@ -169,8 +169,8 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Permissions control the ability of the users to view, change, navigate, and execute the contents of the file system. </p>
-<pre class="fragment">                        This class is modeled after the Traditional Unix permissions.
-</pre><p><a href="https://en.wikipedia.org/wiki/File_system_permissions">https://en.wikipedia.org/wiki/File_system_permissions</a> </p>
+<p>This class is modeled after the Traditional Unix permissions.</p>
+<p><a href="https://en.wikipedia.org/wiki/File_system_permissions">https://en.wikipedia.org/wiki/File_system_permissions</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa5a65651a709d82b86302edd4d06ab31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5a65651a709d82b86302edd4d06ab31">&#9670;&nbsp;</a></span>PermissionSet() <span class="overload">[1/2]</span></h2>
@@ -429,8 +429,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Logical AND operator. </p>
-<pre class="fragment">                AND permissions
-</pre><div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
+<p>AND permissions</p>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rx = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa1822fb076086e71d5b6bc6a53532200">PermissionSet::RX</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> r = rw &amp;&amp; rx ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
@@ -460,8 +460,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Addition operator. </p>
-<pre class="fragment">                Add permissions
-</pre><div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
+<p>Add permissions</p>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> x = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#af458426b36031ca507f3887ef3bf50fe">PermissionSet::X</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rwx = rw + x ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
@@ -491,8 +491,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Subtraction operator. </p>
-<pre class="fragment">                Remove permissions
-</pre><div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rwx = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a42e2ac3b11b9136ea369dca97f3ef9d8">PermissionSet::RWX</a>() ;</div>
+<p>Remove permissions</p>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rwx = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a42e2ac3b11b9136ea369dca97f3ef9d8">PermissionSet::RWX</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> x = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#af458426b36031ca507f3887ef3bf50fe">PermissionSet::X</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = rwx - x ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
@@ -550,8 +550,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Logical OR operator. </p>
-<pre class="fragment">                OR permissions
-</pre><div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
+<p>OR permissions</p>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rw = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#a48329618a88c8a8ce590f2d04a6c2e43">PermissionSet::RW</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rx = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa1822fb076086e71d5b6bc6a53532200">PermissionSet::RX</a>() ;</div>
 <div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_permission_set.html#aa5a65651a709d82b86302edd4d06ab31">PermissionSet</a> rwx = rw || rx ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>

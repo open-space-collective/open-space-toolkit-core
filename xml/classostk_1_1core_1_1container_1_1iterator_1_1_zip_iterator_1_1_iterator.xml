@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="30" column="22" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="30" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="41" column="22" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,12 +30,23 @@
           <declname>anIteratorList</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anIteratorList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tuple of iterators </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="32" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="32" bodyend="35"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="46" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="46" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a4c9c979ef43c93647970416b3a0a8b9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> &amp;</type>
@@ -43,12 +54,16 @@
         <argsstring>()</argsstring>
         <name>operator++</name>
         <briefdescription>
+<para>Pre-increment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Reference to iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="37" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="37" bodyend="42"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="54" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="54" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a17f719da0f404bf820aff3dd790474b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref></type>
@@ -59,12 +74,16 @@
           <type>int</type>
         </param>
         <briefdescription>
+<para>Post-increment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kindref="compound">Iterator</ref> before increment </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="44" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="44" bodyend="51"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="64" column="18" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="64" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a1f8d3567cd758e2e05378f0de74dc3b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -76,12 +95,25 @@
           <declname>anIterator</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anIterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if iterators are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="53" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="53" bodyend="56"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="77" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a059837024f85829b815a7f276e65b50e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -89,12 +121,16 @@
         <argsstring>() const</argsstring>
         <name>operator*</name>
         <briefdescription>
+<para>Dereference operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Tuple of dereferenced values </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="58" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="58" bodyend="61"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="85" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="85" bodyend="88"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -119,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="65" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="65" bodyend="68"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="92" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="92" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -142,10 +178,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="71" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="71" bodyend="76"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="98" column="14" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="98" bodyend="103"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Inner iterator over zipped elements. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -171,7 +208,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="27" bodyend="77"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="39" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="38" bodyend="104"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1ac88c140fc1636994df3294113bbf26ee" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>deref</name></member>
       <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a032d05a1a57b67a2207a7e9ea06b2d61" prot="private" virt="non-virtual"><scope>ostk::core::container::iterator::ZipIterator::Iterator</scope><name>increment</name></member>

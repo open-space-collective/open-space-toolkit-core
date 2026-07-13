@@ -2,6 +2,11 @@
 \label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}\index{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}}
 
 
+Inner iterator over zipped elements.  
+
+
+
+
 {\ttfamily \#include $<$Zip.\+hpp$>$}
 
 Inheritance diagram for ostk\+::core\+::container\+::iterator\+::Zip\+Iterator$<$ T $>$\+::Iterator\+:\begin{figure}[H]
@@ -14,21 +19,27 @@ Inheritance diagram for ostk\+::core\+::container\+::iterator\+::Zip\+Iterator$<
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a62922888770b995d6ea7a3f54068c2ed}{Iterator}} (decltype(\mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a462d7998def0934afa08f158c7711aba}{iterators\+\_\+}}) an\+Iterator\+List)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a4c9c979ef43c93647970416b3a0a8b9d}{operator++}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pre-\/increment operator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a17f719da0f404bf820aff3dd790474b7}{operator++}} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em Post-\/increment operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a1f8d3567cd758e2e05378f0de74dc3b9}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} \&an\+Iterator) const
-\item 
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a059837024f85829b815a7f276e65b50e}{operator$\ast$}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dereference operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::tuple$<$ decltype(std\+::declval$<$ T $>$).\mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_ae4c8c2625fedbb5ce799ef15fef96c1a}{begin}}())... $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a462d7998def0934afa08f158c7711aba}{iterators\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename... T$>$\newline
+class ostk\+::core\+::container\+::iterator\+::\+Zip\+Iterator$<$ T $>$\+::\+Iterator}
+
+Inner iterator over zipped elements. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a62922888770b995d6ea7a3f54068c2ed}\label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a62922888770b995d6ea7a3f54068c2ed}} 
@@ -40,6 +51,15 @@ std\+::tuple$<$ decltype(std\+::declval$<$ T $>$).\mbox{\hyperlink{classostk_1_1
 
 
 
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Iterator\+List} & A tuple of iterators \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a1f8d3567cd758e2e05378f0de74dc3b9}\label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a1f8d3567cd758e2e05378f0de74dc3b9}} 
 \index{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
@@ -48,6 +68,18 @@ std\+::tuple$<$ decltype(std\+::declval$<$ T $>$).\mbox{\hyperlink{classostk_1_1
 {\footnotesize\ttfamily template$<$typename... T$>$ \\
 bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator}{ostk\+::core\+::container\+::iterator\+::\+Zip\+Iterator}}$<$ T $>$\+::Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} \&}]{an\+Iterator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Not equal to operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Iterator} & An iterator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if iterators are not equal 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a059837024f85829b815a7f276e65b50e}\label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a059837024f85829b815a7f276e65b50e}} 
 \index{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}}
@@ -55,6 +87,13 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterato
 {\footnotesize\ttfamily template$<$typename... T$>$ \\
 auto \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator}{ostk\+::core\+::container\+::iterator\+::\+Zip\+Iterator}}$<$ T $>$\+::Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Dereference operator. 
+
+\begin{DoxyReturn}{Returns}
+Tuple of dereferenced values 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a4c9c979ef43c93647970416b3a0a8b9d}\label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a4c9c979ef43c93647970416b3a0a8b9d}} 
 \index{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}}
@@ -62,6 +101,13 @@ auto \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterato
 {\footnotesize\ttfamily template$<$typename... T$>$ \\
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}}\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator}{ostk\+::core\+::container\+::iterator\+::\+Zip\+Iterator}}$<$ T $>$\+::Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Pre-\/increment operator. 
+
+\begin{DoxyReturn}{Returns}
+Reference to iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a17f719da0f404bf820aff3dd790474b7}\label{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_a17f719da0f404bf820aff3dd790474b7}} 
 \index{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator@{ostk::core::container::iterator::ZipIterator$<$ T $>$::Iterator}}
@@ -69,6 +115,13 @@ auto \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterato
 {\footnotesize\ttfamily template$<$typename... T$>$ \\
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator}{ostk\+::core\+::container\+::iterator\+::\+Zip\+Iterator}}$<$ T $>$\+::Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Post-\/increment operator. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator}{Iterator}} before increment 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}

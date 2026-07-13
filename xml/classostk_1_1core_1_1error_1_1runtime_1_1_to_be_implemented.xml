@@ -11,12 +11,13 @@
         <argsstring>()</argsstring>
         <name>ToBeImplemented</name>
         <briefdescription>
+<para>Default constructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="25" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="14" bodyend="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="27" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1aabda52249a2f3cbf4d17e1c877e8966c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,12 +29,23 @@
           <declname>aFunctionName</declname>
         </param>
         <briefdescription>
+<para>Constructor with function name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFunctionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the unimplemented function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="27" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="19" bodyend="22"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="32" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a3383ca49c74c4969cda170c12ecff4a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -41,18 +53,20 @@
         <argsstring>()</argsstring>
         <name>~ToBeImplemented</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="32" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="31" bodyend="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="38" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp" bodystart="31" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>To be implemented error class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Thrown when a function or feature is not yet implemented. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -100,7 +114,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" bodystart="22" bodyend="33"/>
+    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp" bodystart="23" bodyend="39"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::ToBeImplemented</scope><name>Exception</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::ToBeImplemented</scope><name>getMessage</name></member>

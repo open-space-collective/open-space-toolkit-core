@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="136" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="135" bodyend="143"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="580" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="579" bodyend="587"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="26" column="20" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="26" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="33" column="20" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="145" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="145" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="589" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="589" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1type_1_1_real_1a0c822e1374737201b0b5dbd063730bc4" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real_1a496506f9fe76e8c135c731a7bf5fee19" kindref="member">Real::ValueType</ref></type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="146" column="21" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="146" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="590" column="21" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="590" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,12 +94,13 @@
         <argsstring>()=delete</argsstring>
         <name>Real</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="28" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="36" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1add2d34fddb09655bfa8bec48d22aa635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -111,12 +112,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real(1.23)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="30" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="19" bodyend="23"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="45" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="19" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a8efecc8045c158117b3575f180f6de57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -128,12 +142,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="32" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="25" bodyend="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="51" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="25" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a3b6d8e105ca0f91c585ec99506f481a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -145,12 +172,27 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23)<sp/>==<sp/>Real(1.23)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if reals are equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="34" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="33" bodyend="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="61" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a121ef2f449e5667545807cd4a6b32878" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -162,12 +204,27 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23)<sp/>!=<sp/>Real(4.56)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if reals are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="35" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="38" bodyend="41"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="71" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a650441060aedbd24c098eb6514f87979" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,12 +236,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Less than operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs real is less than rhs real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="36" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="43" bodyend="46"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="77" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a82c713912744f9d793c356a8d0d65574" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -196,12 +266,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Less than or equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs real is less than or equal to rhs real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="37" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="48" bodyend="51"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="83" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a6b01ec8d41fe1dcdfe1772e897c9ef85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -213,12 +296,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Greater than operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs real is greater than rhs real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="38" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="53" bodyend="56"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="89" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a5e3e4d411b2f6dbad973f09eb2da0f03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -230,12 +326,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Greater than or equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if lhs real is greater than or equal to rhs real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="39" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="58" bodyend="61"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="95" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="58" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a409f4a5dd16439a3443064254127b5c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -247,12 +356,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Equal to ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is equal to ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="41" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="63" bodyend="66"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="101" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="63" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1aa8208ece157d08a3010fcea109b08102" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -264,12 +386,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Not equal to ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is not equal to ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="42" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="68" bodyend="71"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="107" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a63dcc6007a06e9437e57b969a6f22d28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -281,12 +416,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Less than ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is less than ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="43" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="73" bodyend="76"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="113" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="73" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ab08225802e0f13e610cefce58aa73fb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -298,12 +446,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Less than or equal to ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is less than or equal to ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="44" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="78" bodyend="81"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="119" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a4a7caeb9e96867fcebc0a7796f1c06ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -315,12 +476,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Greater than ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is greater than ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="45" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="83" bodyend="86"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="125" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="83" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a8277b5d0c6a4cabcb64db10f77b190dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -332,12 +506,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Greater than or equal to ValueType operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if real is greater than or equal to ValueType </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="46" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="88" bodyend="91"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="131" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="88" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a26df78f9c700a510b6d6002b1b6c6469" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -349,12 +536,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Addition operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum of reals </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="48" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="93" bodyend="135"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="137" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="93" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1aba33def927c907041d77ef309e08f8ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -366,12 +566,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Subtraction operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference of reals </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="49" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="137" bodyend="182"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="143" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="137" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a639d0ee4675b03b14812c407f33266db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -383,12 +596,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Multiplication operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product of reals </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="50" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="184" bodyend="290"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="149" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="184" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a9c77be5095578ef6d0759c23f0f89c68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -400,12 +626,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Division operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient of reals </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="51" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="292" bodyend="354"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="155" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="292" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1af3eab6c05e357dfa39a42346fdd6affc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -417,12 +656,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Addition operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="53" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="356" bodyend="359"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="161" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="356" bodyend="359"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1aa9beab6af46be28c452ff83bafc82909" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -434,12 +686,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Subtraction operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="54" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="361" bodyend="364"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="167" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="361" bodyend="364"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1aab55812d0fb8265c8d891e537095190d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -451,12 +716,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Multiplication operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="55" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="366" bodyend="369"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="173" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="366" bodyend="369"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a10139e9ca61b742206452cc40ee6d21d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -468,12 +746,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Division operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="56" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="371" bodyend="374"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="179" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="371" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a2e52f1f59059a72db25854ecdb6bf14f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -485,12 +776,25 @@
           <declname>anInteger</declname>
         </param>
         <briefdescription>
+<para>Addition operator with <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="58" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="185" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1afc8f6927d0a270d596831011464dd40c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -502,12 +806,25 @@
           <declname>anInteger</declname>
         </param>
         <briefdescription>
+<para>Subtraction operator with <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="59" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="191" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a80e4b6b04550e388bbe8346f9dd87750" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -519,12 +836,25 @@
           <declname>anInteger</declname>
         </param>
         <briefdescription>
+<para>Multiplication operator with <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="60" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="197" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a4e6e6e1c7783bbc21a4382e4b49cbced" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -536,12 +866,25 @@
           <declname>anInteger</declname>
         </param>
         <briefdescription>
+<para>Division operator with <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="61" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="203" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ac938f14a777b6c25feab8132a7386b57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -553,12 +896,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Addition assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="63" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="376" bodyend="381"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="209" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="376" bodyend="381"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1aa2310e446ecc65c14fa9fa66db1c224e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -570,12 +926,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Subtraction assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="64" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="383" bodyend="388"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="215" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="383" bodyend="388"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a0119b864af2b242431d5d63b2ad76dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -587,12 +956,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Multiplication assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="65" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="390" bodyend="395"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="221" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="390" bodyend="395"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ab40ef2de5abbc4a4ead1d70a1b18a9b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -604,12 +986,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Division assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="66" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="397" bodyend="402"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="227" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="397" bodyend="402"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1abfc144abaa6e2345dbc532a2b83365c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -621,12 +1016,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Addition assignment operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="68" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="404" bodyend="409"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="233" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="404" bodyend="409"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1afa07f51cec2b27950c9ce9961d3581a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -638,12 +1046,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Subtraction assignment operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="69" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="411" bodyend="416"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="239" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="411" bodyend="416"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a86c7f0b6e2c364efdc76a2f2ed1dc27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -655,12 +1076,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Multiplication assignment operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="70" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="418" bodyend="423"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="245" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="418" bodyend="423"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a2a43d580dc0123424037af6758b53f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> &amp;</type>
@@ -672,12 +1106,25 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Division assignment operator with ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real (ValueType) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="71" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="425" bodyend="430"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="251" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="425" bodyend="430"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a06c0b996bee24dc39e04cf2977861dd8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -685,12 +1132,16 @@
         <argsstring>() const</argsstring>
         <name>operator+</name>
         <briefdescription>
+<para>Unary plus operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="78" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="452" bodyend="455"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="284" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="452" bodyend="455"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a24c56a9ab611ff5a33e52cab0e7ddd00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -698,12 +1149,16 @@
         <argsstring>() const</argsstring>
         <name>operator-</name>
         <briefdescription>
+<para>Unary minus operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Negated real value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="79" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="457" bodyend="485"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="289" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="457" bodyend="485"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a7fac142803f9d0eaba4f253b594f4c2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -711,12 +1166,16 @@
         <argsstring>() const</argsstring>
         <name>operator Real::ValueType</name>
         <briefdescription>
+<para>Conversion operator to ValueType. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Underlying value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="81" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="294" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a3fa4d51e40ddd8dc8587fd36e9b0c644" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -724,12 +1183,19 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if real is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real::Undefined().isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="85" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="530" bodyend="533"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="311" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="530" bodyend="533"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a1fa04573fd84b62b560af7f6d1074f7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -737,12 +1203,18 @@
         <argsstring>() const</argsstring>
         <name>isZero</name>
         <briefdescription>
+<para>Check if real is zero. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(0.0).isZero()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if zero </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="86" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="535" bodyend="538"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="320" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="535" bodyend="538"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a9717316f2e4c725fcd227f950e3f6003" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -750,12 +1222,19 @@
         <argsstring>() const</argsstring>
         <name>isPositive</name>
         <briefdescription>
+<para>Check if real is positive (including zero) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).isPositive()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real(0.0).isPositive()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if positive </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="87" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="540" bodyend="543"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="330" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="540" bodyend="543"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ade0494cae26926149bc98c682d51cb7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -763,12 +1242,19 @@
         <argsstring>() const</argsstring>
         <name>isNegative</name>
         <briefdescription>
+<para>Check if real is negative (including zero) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(-1.23).isNegative()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real(0.0).isNegative()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if negative </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="88" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="545" bodyend="548"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="340" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="545" bodyend="548"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ad4de1101e8a36d4243b62e95b23aecee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -776,12 +1262,19 @@
         <argsstring>() const</argsstring>
         <name>isStrictlyPositive</name>
         <briefdescription>
+<para>Check if real is strictly positive (excluding zero) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).isStrictlyPositive()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real(0.0).isStrictlyPositive()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if strictly positive </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="89" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="550" bodyend="553"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="350" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="550" bodyend="553"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a7931a385428f39aab71b498d41c98292" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -789,12 +1282,19 @@
         <argsstring>() const</argsstring>
         <name>isStrictlyNegative</name>
         <briefdescription>
+<para>Check if real is strictly negative (excluding zero) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(-1.23).isStrictlyNegative()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real(0.0).isStrictlyNegative()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if strictly negative </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="90" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="555" bodyend="558"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="360" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="555" bodyend="558"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1af62d608e76428130ff024a8f72466183" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -802,12 +1302,18 @@
         <argsstring>() const</argsstring>
         <name>isInfinity</name>
         <briefdescription>
+<para>Check if real is infinity (positive or negative) </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real::PositiveInfinity().isInfinity()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if infinity </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="91" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="560" bodyend="563"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="369" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="560" bodyend="563"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a5b7c754e78fa935392df40de9558bf40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -815,12 +1321,18 @@
         <argsstring>() const</argsstring>
         <name>isPositiveInfinity</name>
         <briefdescription>
+<para>Check if real is positive infinity. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real::PositiveInfinity().isPositiveInfinity()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if positive infinity </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="92" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="565" bodyend="568"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="378" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="565" bodyend="568"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ac60a01ee4703b3a19adda02e5dddc0f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -828,12 +1340,18 @@
         <argsstring>() const</argsstring>
         <name>isNegativeInfinity</name>
         <briefdescription>
+<para>Check if real is negative infinity. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real::NegativeInfinity().isNegativeInfinity()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if negative infinity </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="93" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="570" bodyend="573"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="387" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="570" bodyend="573"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a5346a750dcd1c18cc859b31fd655a783" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -841,12 +1359,19 @@
         <argsstring>() const</argsstring>
         <name>isInteger</name>
         <briefdescription>
+<para>Check if real is an integer value. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.0).isInteger()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real(1.5).isInteger()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if integer </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="95" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="575" bodyend="585"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="397" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="575" bodyend="585"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a17fa26c2a3aee65e69ec8aa38202c03d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -854,12 +1379,19 @@
         <argsstring>() const</argsstring>
         <name>isFinite</name>
         <briefdescription>
+<para>Check if real is finite. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).isFinite()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">Real::PositiveInfinity().isFinite()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if finite </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="96" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="587" bodyend="590"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="407" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="587" bodyend="590"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a835cbd63e968f888d8227a38df4e9650" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -876,12 +1408,35 @@
           <defval><ref refid="classostk_1_1core_1_1type_1_1_real_1af0abff31499bc57e5c63f467353e8827" kindref="member">Real::Epsilon</ref>()</defval>
         </param>
         <briefdescription>
+<para>Check if real is near another real within a tolerance. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.0).isNear(Real(1.0<sp/>+<sp/>1e-16),<sp/>Real::Epsilon())<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real value to compare against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aTolerance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tolerance (default: Epsilon) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if near </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="98" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="592" bodyend="615"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="418" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="592" bodyend="615"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a8e647c03dea16ec9a8c8d80d784e54e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02" kindref="member">type::Sign</ref></type>
@@ -889,12 +1444,18 @@
         <argsstring>() const</argsstring>
         <name>getSign</name>
         <briefdescription>
+<para>Get sign of real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).getSign()<sp/>;<sp/>//<sp/>Sign::Positive</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Sign of real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="100" column="16" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="617" bodyend="649"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="427" column="16" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="617" bodyend="649"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a477542fdd8fbb4dbf072ca92b98b5f55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">type::String</ref></type>
@@ -907,12 +1468,28 @@
           <defval><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" kindref="member">type::Integer::Undefined</ref>()</defval>
         </param>
         <briefdescription>
+<para>Convert real to string representation. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.23).toString()<sp/>;<sp/>//<sp/>&quot;1.23&quot;</highlight></codeline>
+<codeline><highlight class="normal">Real(1.23).toString(Integer(2))<sp/>;<sp/>//<sp/>&quot;1.23&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPrecision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A precision (default: Undefined) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> representation </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="102" column="18" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="651" bodyend="715"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="438" column="18" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="651" bodyend="715"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a90d54f55f2aba1c0d2654ea5b27a6f83" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref></type>
@@ -920,12 +1497,18 @@
         <argsstring>() const</argsstring>
         <name>toInteger</name>
         <briefdescription>
+<para>Convert real to integer. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(123.0).toInteger()<sp/>;<sp/>//<sp/>Integer(123)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="104" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="717" bodyend="727"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="447" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="717" bodyend="727"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a89d71bd220a38de4b93161082e7196b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -933,12 +1516,18 @@
         <argsstring>() const</argsstring>
         <name>abs</name>
         <briefdescription>
+<para>Get absolute value. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(-1.23).abs()<sp/>;<sp/>//<sp/>Real(1.23)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Absolute value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="106" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="729" bodyend="749"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="456" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="729" bodyend="749"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1af1e33560d17a2e32926ba96650b6c34c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">type::Integer</ref></type>
@@ -946,12 +1535,18 @@
         <argsstring>() const</argsstring>
         <name>floor</name>
         <briefdescription>
+<para>Get floor value. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(1.7).floor()<sp/>;<sp/>//<sp/>Integer(1)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Floor value as integer </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="108" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="751" bodyend="771"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="465" column="19" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="751" bodyend="771"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a4866aeba89654d2f008f78291cf0acb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -959,12 +1554,18 @@
         <argsstring>() const</argsstring>
         <name>sqrt</name>
         <briefdescription>
+<para>Get square root. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real(4.0).sqrt()<sp/>;<sp/>//<sp/>Real(2.0)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Square root </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="110" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="773" bodyend="802"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="474" column="10" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="773" bodyend="802"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -982,12 +1583,33 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Addition operator (ValueType + <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>) </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="73" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="432" bodyend="435"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="258" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="432" bodyend="435"/>
       </memberdef>
       <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_real_1a6bc7663211551195d77a7136784c382a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1003,12 +1625,33 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Subtraction operator (ValueType - <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>) </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="74" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="437" bodyend="440"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="265" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="437" bodyend="440"/>
       </memberdef>
       <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_real_1a7ca23417eb394573dad57b0e763b3e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1024,12 +1667,33 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Multiplication operator (ValueType * <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>) </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="75" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="442" bodyend="445"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="272" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="442" bodyend="445"/>
       </memberdef>
       <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_real_1a98345c81e7b374941fc15cbbd6922c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1045,12 +1709,33 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Division operator (ValueType / <ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref>) </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="76" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="447" bodyend="450"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="279" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="447" bodyend="450"/>
       </memberdef>
       <memberdef kind="friend" id="classostk_1_1core_1_1type_1_1_real_1a36816b0e006fd2ec3b0c53406439c7c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend std::ostream &amp;</type>
@@ -1066,12 +1751,33 @@
           <declname>aReal</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="83" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="497" bodyend="528"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="301" column="12" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="497" bodyend="528"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1081,12 +1787,18 @@
         <argsstring>()</argsstring>
         <name>Undefined</name>
         <briefdescription>
+<para>Construct an undefined real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Undefined()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Undefined real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="112" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="804" bodyend="807"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="483" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="804" bodyend="807"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a281ed032221603b185f4dca09c2c8a0a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1094,12 +1806,18 @@
         <argsstring>()</argsstring>
         <name>Zero</name>
         <briefdescription>
+<para>Construct a zero real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Zero()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Zero real </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="114" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="809" bodyend="812"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="492" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="809" bodyend="812"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a0719f82a8995f19bc5d3c1a3e6e3bf48" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1107,12 +1825,18 @@
         <argsstring>()</argsstring>
         <name>Pi</name>
         <briefdescription>
+<para>Construct a real with value Pi. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Pi()<sp/>;<sp/>//<sp/>3.14159...</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Pi </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="116" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="814" bodyend="817"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="501" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="814" bodyend="817"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1acc440cc20d66905e8e0d1136a6db4a6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1120,12 +1844,18 @@
         <argsstring>()</argsstring>
         <name>HalfPi</name>
         <briefdescription>
+<para>Construct a real with value Pi/2. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::HalfPi()<sp/>;<sp/>//<sp/>1.5708...</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Half Pi </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="118" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="819" bodyend="822"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="510" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="819" bodyend="822"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a9327579d7f35f191b545118d8af0b3ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1133,12 +1863,18 @@
         <argsstring>()</argsstring>
         <name>TwoPi</name>
         <briefdescription>
+<para>Construct a real with value 2*Pi. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::TwoPi()<sp/>;<sp/>//<sp/>6.28318...</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Two Pi </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="120" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="824" bodyend="827"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="519" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="824" bodyend="827"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1af0abff31499bc57e5c63f467353e8827" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1146,12 +1882,18 @@
         <argsstring>()</argsstring>
         <name>Epsilon</name>
         <briefdescription>
+<para>Construct a real with machine epsilon value. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Epsilon()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Machine epsilon </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="122" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="829" bodyend="832"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="528" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="829" bodyend="832"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a2b1fa45bc9dcea1bc3fc10789760b8dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1159,12 +1901,18 @@
         <argsstring>()</argsstring>
         <name>PositiveInfinity</name>
         <briefdescription>
+<para>Construct a positive infinity real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::PositiveInfinity()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Positive infinity </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="124" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="834" bodyend="837"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="537" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="834" bodyend="837"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a0326e98bd04fc7c9840105dc606ad473" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1172,12 +1920,18 @@
         <argsstring>()</argsstring>
         <name>NegativeInfinity</name>
         <briefdescription>
+<para>Construct a negative infinity real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::NegativeInfinity()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Negative infinity </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="126" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="839" bodyend="842"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="546" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="839" bodyend="842"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1ae747a32ed7675ca44f476e210199daa5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1189,12 +1943,27 @@
           <declname>anInteger</declname>
         </param>
         <briefdescription>
+<para>Construct a real from an integer. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Integer(Integer(123))<sp/>;<sp/>//<sp/>123.0</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="128" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="844" bodyend="852"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="556" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="844" bodyend="852"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1a601885dbb81333e14f53edca3c3a6f23" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1206,12 +1975,27 @@
           <declname>aString</declname>
         </param>
         <briefdescription>
+<para>Check if a string can be parsed as a real. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real::CanParse(&quot;1.23&quot;)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if can be parsed </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="130" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="854" bodyend="870"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="566" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="854" bodyend="870"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1type_1_1_real_1abae293d5042c82f56ad0a80ee3cf10cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -1223,12 +2007,27 @@
           <declname>aString</declname>
         </param>
         <briefdescription>
+<para>Construct a real from a string. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real<sp/>=<sp/>Real::Parse(&quot;1.23&quot;)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="132" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="872" bodyend="911"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="576" column="17" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="872" bodyend="911"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -1251,15 +2050,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="148" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="918" bodyend="922"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="592" column="5" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="918" bodyend="922"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref> type. </para>
     </briefdescription>
     <detaileddescription>
+<para>Represents a real number with support for undefined and infinite values.</para>
+<para><programlisting><codeline><highlight class="normal">Real<sp/>real(1.23)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">real.isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">real.toString()<sp/>;<sp/>//<sp/>&quot;1.23&quot;</highlight></codeline>
+</programlisting> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="23" bodyend="149"/>
+    <location file="include/OpenSpaceToolkit/Core/Type/Real.hpp" line="31" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Real.hpp" bodystart="30" bodyend="593"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1type_1_1_real_1a89d71bd220a38de4b93161082e7196b4" prot="public" virt="non-virtual"><scope>ostk::core::type::Real</scope><name>abs</name></member>
       <member refid="classostk_1_1core_1_1type_1_1_real_1a601885dbb81333e14f53edca3c3a6f23" prot="public" virt="non-virtual"><scope>ostk::core::type::Real</scope><name>CanParse</name></member>

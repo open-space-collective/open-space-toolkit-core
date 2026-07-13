@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="53" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="53" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="100" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="54" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="54" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="101" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a908d23165d17a834625f096b588d52b7" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="55" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="55" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="102" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="102" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,12 +59,31 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="26" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="29" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a136687a5b8b44617158bb3d14d4697c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,12 +103,39 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Constructor with effective user ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aEUID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An effective user ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="28" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="36" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a58e11432b4f5e0c37edf841d3360f58b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -101,12 +147,25 @@
           <declname>aUser</declname>
         </param>
         <briefdescription>
+<para>Equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if users are equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="30" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ac11fea5211b9e8faa2ae07c1ba5fa154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -118,12 +177,25 @@
           <declname>aUser</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if users are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="32" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="48" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,12 +203,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if user is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="36" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="60" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -144,12 +220,16 @@
         <argsstring>() const</argsstring>
         <name>getUID</name>
         <briefdescription>
+<para>Get user ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="38" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="65" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -157,12 +237,16 @@
         <argsstring>() const</argsstring>
         <name>getEUID</name>
         <briefdescription>
+<para>Get effective user ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Effective user ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="40" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="70" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -170,12 +254,16 @@
         <argsstring>() const</argsstring>
         <name>getName</name>
         <briefdescription>
+<para>Get user name. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> name </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="42" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="75" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -193,12 +281,33 @@
           <declname>aUser</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="34" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="55" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -208,12 +317,16 @@
         <argsstring>()</argsstring>
         <name>Undefined</name>
         <briefdescription>
+<para>Construct an undefined user. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Undefined user </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="44" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="80" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
@@ -221,12 +334,16 @@
         <argsstring>()</argsstring>
         <name>Process</name>
         <briefdescription>
+<para>Construct a user from the current process. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Current process user </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="46" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="85" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
@@ -238,12 +355,25 @@
           <declname>aUID</declname>
         </param>
         <briefdescription>
+<para>Construct a user from a user ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="48" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="91" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
@@ -255,23 +385,35 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Construct a user from a user name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="50" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="97" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref>. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>                        POSIX compliant
-</verbatim></para>
+<para>POSIX compliant</para>
 <para><ulink url="https://en.wikipedia.org/wiki/User_identifier">https://en.wikipedia.org/wiki/User_identifier</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="23" bodyend="56"/>
+    <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="22" bodyend="103"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>euid_</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getEUID</name></member>

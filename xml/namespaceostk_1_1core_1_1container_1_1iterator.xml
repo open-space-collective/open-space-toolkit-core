@@ -21,15 +21,34 @@
           <declname>seqs</declname>
         </param>
         <briefdescription>
+<para>Zip multiple sequences together for parallel iteration. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Sequences must be the same length </para>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>a<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;String&gt;<sp/>b<sp/>=<sp/>{&quot;a&quot;,<sp/>&quot;b&quot;,<sp/>&quot;c&quot;}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(const<sp/>auto&amp;<sp/>[x,<sp/>y]<sp/>:<sp/>Zip(a,<sp/>b))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="note"><para>Sequences must be the same length</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">seqs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sequences to zip </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator" kindref="compound">ZipIterator</ref> over the zipped sequences </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="103" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="103" bodyend="106"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" line="152" column="6" bodyfile="include/OpenSpaceToolkit/Core/Container/Iterator/Zip.hpp" bodystart="152" bodyend="155"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

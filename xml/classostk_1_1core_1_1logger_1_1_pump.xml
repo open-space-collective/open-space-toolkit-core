@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="29" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="29" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="31" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="67" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="65" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="90" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="88" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -60,12 +60,55 @@
           <declname>aSource</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A severity level </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A source line number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A source file name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A source function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the log source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="31" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="40" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a8bc336c04ded0c76896aca7604f1d170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,12 +120,13 @@
           <declname>aPump</declname>
         </param>
         <briefdescription>
+<para>Copy constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="35" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="45" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a9a7525e9d81db32109ceb3dbc55f0d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -94,12 +138,23 @@
           <declname>aPump</declname>
         </param>
         <briefdescription>
+<para>Move constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPump</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pump to move from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="37" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="50" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a66b4321348906a8a2b379c9aefac01d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -107,12 +162,13 @@
         <argsstring>()</argsstring>
         <name>~Pump</name>
         <briefdescription>
+<para>Destructor (flushes the log message) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="39" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="53" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1adaca719cdabd4a6f6e8937bacf093b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref> &amp;</type>
@@ -124,12 +180,13 @@
           <declname>aPump</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="41" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="56" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1ac2bb85f5e310c5cccf792d85b317acda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -146,12 +203,25 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Stream insertion operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object to insert into the log message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to pump </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="44" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="44" bodyend="52"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="63" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="63" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a6ab7044123e2f99752a043a462632a6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref> &amp;</type>
@@ -163,12 +233,25 @@
           <declname>aStreamManipulator</declname>
         </param>
         <briefdescription>
+<para>Stream manipulator operator (e.g., std::endl) </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aStreamManipulator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stream manipulator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to pump </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="54" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="54" bodyend="62"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="77" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="77" bodyend="85"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -183,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="69" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="92" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1ab9c936ae69028a8e727a036e8a4b89a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -196,15 +279,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="71" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="94" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Log pump. </para>
     </briefdescription>
     <detaileddescription>
+<para>Temporary object that collects log message content via stream operators and flushes the message to the log source upon destruction. </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="26" bodyend="72"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="28" bodyend="95"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1ab9c936ae69028a8e727a036e8a4b89a3" prot="private" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>accessStream</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a230e0c6b0b57545871e3cc77448dabaf" prot="private" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>canAccessStream</name></member>

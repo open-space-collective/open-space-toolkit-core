@@ -93,7 +93,12 @@ std\+::ostream \& \mbox{\hyperlink{namespaceostk_1_1core_1_1type_ab923b1f63a7df2
 
 A unit of digital information that consists of eight bits. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}\label{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}{Byte}} \textcolor{keywordtype}{byte} = 0xFF ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_ae6778085a3f5866921d2c9c9b69d8ee1}{Byte}} \textcolor{keywordtype}{byte} = 42 ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}\label{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}} 
 \index{ostk::core::type@{ostk::core::type}!Index@{Index}}
 \index{Index@{Index}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{Index}{Index}}
@@ -103,7 +108,12 @@ A unit of digital information that consists of eight bits.
 
 Index can store the maximum size of a theoretically possible object of any type. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}\label{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} index = 0 ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} index = 42 ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}\label{namespaceostk_1_1core_1_1type_a6533a0c2ece5149a622498df086dbc14}} 
 \index{ostk::core::type@{ostk::core::type}!Int16@{Int16}}
 \index{Int16@{Int16}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{Int16}{Int16}}
@@ -138,7 +148,12 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a14fe3367e611fd4d9fca9e9fcf
 
 Retains shared ownership of an object through a pointer. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}\label{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Shared<MyClass> ptr = std::make\_shared<MyClass>() ;}
+\DoxyCodeLine{Shared<MyClass> ptr2 = ptr ; \textcolor{comment}{// Shared ownership}}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}\label{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}} 
 \index{ostk::core::type@{ostk::core::type}!Size@{Size}}
 \index{Size@{Size}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{Size}{Size}}
@@ -148,7 +163,12 @@ Retains shared ownership of an object through a pointer.
 
 Size can store the maximum size of a theoretically possible object of any type. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}\label{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} size = 0 ;}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} size = 42 ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}\label{namespaceostk_1_1core_1_1type_a4345722d214b8254845ef5067a039da9}} 
 \index{ostk::core::type@{ostk::core::type}!Uint16@{Uint16}}
 \index{Uint16@{Uint16}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{Uint16}{Uint16}}
@@ -183,7 +203,11 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_a3b7b378b1980599bd52c095729
 
 Owns and manages another object through a pointer. 
 
-\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}\label{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unique<MyClass> ptr = std::make\_unique<MyClass>() ;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}\label{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6bf784a1}} 
 \index{ostk::core::type@{ostk::core::type}!Weak@{Weak}}
 \index{Weak@{Weak}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{Weak}{Weak}}
@@ -195,6 +219,11 @@ using \mbox{\hyperlink{namespaceostk_1_1core_1_1type_af3e53775781cfb35ee4bd22d6b
 Holds a non-\/owning reference to an object that is managed by Shared. 
 
 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Shared<MyClass> shared = std::make\_shared<MyClass>() ;}
+\DoxyCodeLine{Weak<MyClass> weak = shared ;}
+\end{DoxyCode}
+ 
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02}} 
@@ -209,19 +238,19 @@ Sign enum.
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Undefined@{Undefined}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360}} 
-Undefined&\\
+Undefined&Undefined sign. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Positive@{Positive}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Positive@{Positive}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147}} 
-Positive&\\
+Positive&Positive sign. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Negative@{Negative}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!Negative@{Negative}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b}} 
-Negative&\\
+Negative&Negative sign. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!ostk::core::type@{ostk::core::type}}\index{ostk::core::type@{ostk::core::type}!None@{None}}}\mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754}\label{namespaceostk_1_1core_1_1type_a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754}} 
-None&\\
+None&No sign (zero) \\
 \hline
 
 \end{DoxyEnumFields}
@@ -241,63 +270,173 @@ std\+::enable\+\_\+if$<$\mbox{\hyperlink{classostk_1_1core_1_1type_1_1_has_to_st
 \doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Int} & A Value\+Type integer \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remainder 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_acfb6294d441f631b53c4d4b3ed6d2007}\label{namespaceostk_1_1core_1_1type_acfb6294d441f631b53c4d4b3ed6d2007}} 
 \index{ostk::core::type@{ostk::core::type}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Int} & A Value\+Type integer \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Product 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a625570e035a6e1d98891ed3c09433133}\label{namespaceostk_1_1core_1_1type_a625570e035a6e1d98891ed3c09433133}} 
 \index{ostk::core::type@{ostk::core::type}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Double} & A double \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Real} & A real \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Product 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a085785ee30e403dcaa3ac784e1e502e4}\label{namespaceostk_1_1core_1_1type_a085785ee30e403dcaa3ac784e1e502e4}} 
 \index{ostk::core::type@{ostk::core::type}!operator+@{operator+}}
 \index{operator+@{operator+}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Int} & A Value\+Type integer \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a17ebe4b205c768e424ab75e16f4141b4}\label{namespaceostk_1_1core_1_1type_a17ebe4b205c768e424ab75e16f4141b4}} 
 \index{ostk::core::type@{ostk::core::type}!operator+@{operator+}}
 \index{operator+@{operator+}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Double} & A double \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Real} & A real \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a5eb83e816ac6b6ef4fd98bd58c3ceccf}\label{namespaceostk_1_1core_1_1type_a5eb83e816ac6b6ef4fd98bd58c3ceccf}} 
 \index{ostk::core::type@{ostk::core::type}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Int} & A Value\+Type integer \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Difference 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a2eef915074832cb8477d1064053a259d}\label{namespaceostk_1_1core_1_1type_a2eef915074832cb8477d1064053a259d}} 
 \index{ostk::core::type@{ostk::core::type}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Double} & A double \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Real} & A real \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Difference 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a2ebb3c6dfb7f07ce15431d2b6a7ec8ea}\label{namespaceostk_1_1core_1_1type_a2ebb3c6dfb7f07ce15431d2b6a7ec8ea}} 
 \index{ostk::core::type@{ostk::core::type}!operator/@{operator/}}
 \index{operator/@{operator/}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} ostk\+::core\+::type\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_a690a18bd9f78b063554d7a3e1dc3d0ed}{Integer\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Int} & A Value\+Type integer \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quotient 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a52cb50068e71b0a0e6dd76375a6f7830}\label{namespaceostk_1_1core_1_1type_a52cb50068e71b0a0e6dd76375a6f7830}} 
 \index{ostk::core::type@{ostk::core::type}!operator/@{operator/}}
 \index{operator/@{operator/}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} ostk\+::core\+::type\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real_a496506f9fe76e8c135c731a7bf5fee19}{Real\+::\+Value\+Type}} \&}]{an\+Int,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Double} & A double \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Real} & A real \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quotient 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_a718a72f9497d1b7364f0b99fd2b7dcbd}\label{namespaceostk_1_1core_1_1type_a718a72f9497d1b7364f0b99fd2b7dcbd}} 
 \index{ostk::core::type@{ostk::core::type}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::type\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer}{Integer}} \&}]{an\+Integer }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em an\+Integer} & An integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to output stream 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}\label{namespaceostk_1_1core_1_1type_ab923b1f63a7df2f26ea3cecfb1f6c8da}} 
 \index{ostk::core::type@{ostk::core::type}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!ostk::core::type@{ostk::core::type}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::ostream\& ostk\+::core\+::type\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_real}{Real}} \&}]{a\+Real }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Real} & A real \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to output stream 
+\end{DoxyReturn}

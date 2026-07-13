@@ -263,150 +263,181 @@
         <param><defname>aSeverity</defname></param>
         <initializer>aLogger(aSeverity, __LINE__, __FILE__, __PRETTY_FUNCTION__)</initializer>
         <briefdescription>
+<para>Log macro with severity, file, line, and function information. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aLogger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A logger instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A severity level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="66" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="66" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="105" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a769d9fa6dc0abbbe087bc949f1b3e42b" prot="public" static="no">
         <name>LOG_TRACE</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9add4ec0ac4e58f7c32a01244ae91150b1" kindref="member">ostk::core::logger::Severity::Trace</ref>)</initializer>
         <briefdescription>
+<para>Log trace macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="68" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="68" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="108" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1ac871e9578d8f0db84bd5d6ae6fa3aede" prot="public" static="no">
         <name>LOG_DEBUG</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9aa603905470e2a5b8c13e96b579ef0dba" kindref="member">ostk::core::logger::Severity::Debug</ref>)</initializer>
         <briefdescription>
+<para>Log debug macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="69" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="69" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="111" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1ab7f1ea23f26e6ebe588b7a73c2671cbd" prot="public" static="no">
         <name>LOG_INFO</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a4059b0251f66a18cb56f544728796875" kindref="member">ostk::core::logger::Severity::Info</ref>)</initializer>
         <briefdescription>
+<para>Log info macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="70" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="70" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="114" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1ac7c02456b638903db87f6806739ce12b" prot="public" static="no">
         <name>LOG_WARNING</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a0eaadb4fcb48a0a0ed7bc9868be9fbaa" kindref="member">ostk::core::logger::Severity::Warning</ref>)</initializer>
         <briefdescription>
+<para>Log warning macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="71" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="71" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="117" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1af82d42df573b733c1f607fc8a52775b9" prot="public" static="no">
         <name>LOG_ERROR</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">ostk::core::logger::Severity::Error</ref>)</initializer>
         <briefdescription>
+<para>Log error macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="72" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="72" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="120" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1aea24ad4c59edfe6d5eb9cceb75f36376" prot="public" static="no">
         <name>LOG_FATAL</name>
         <param><defname>aLogger</defname></param>
         <initializer><ref refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" kindref="member">LOG</ref>(aLogger, <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9a882384ec38ce8d9582b57e70861730e4" kindref="member">ostk::core::logger::Severity::Fatal</ref>)</initializer>
         <briefdescription>
+<para>Log fatal macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="73" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="73" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="123" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1ac09f7e09b2e31e8ab2de60dff141b8a5" prot="public" static="no">
         <name>GLOBAL_LOG_TRACE</name>
         <initializer><ref refid="_logger_8hpp_1a769d9fa6dc0abbbe087bc949f1b3e42b" kindref="member">LOG_TRACE</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log trace macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="75" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="75" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="126" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1afdf5052e4b73c2b24484df7dfcf13924" prot="public" static="no">
         <name>GLOBAL_LOG_DEBUG</name>
         <initializer><ref refid="_logger_8hpp_1ac871e9578d8f0db84bd5d6ae6fa3aede" kindref="member">LOG_DEBUG</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log debug macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="76" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="76" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="129" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a438e73611d8cbea0f9f44bc052c180c1" prot="public" static="no">
         <name>GLOBAL_LOG_INFO</name>
         <initializer><ref refid="_logger_8hpp_1ab7f1ea23f26e6ebe588b7a73c2671cbd" kindref="member">LOG_INFO</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log info macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="77" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="77" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="132" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a8c5947451067073fba376cecfceca61d" prot="public" static="no">
         <name>GLOBAL_LOG_WARNING</name>
         <initializer><ref refid="_logger_8hpp_1ac7c02456b638903db87f6806739ce12b" kindref="member">LOG_WARNING</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log warning macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="78" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="78" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="135" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1af690cf01e722c46f0a16af876af0b4f0" prot="public" static="no">
         <name>GLOBAL_LOG_ERROR</name>
         <initializer><ref refid="_logger_8hpp_1af82d42df573b733c1f607fc8a52775b9" kindref="member">LOG_ERROR</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log error macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="79" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="79" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="138" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a9fb80d8817b4f240f1144c0507f40d44" prot="public" static="no">
         <name>GLOBAL_LOG_FATAL</name>
         <initializer><ref refid="_logger_8hpp_1aea24ad4c59edfe6d5eb9cceb75f36376" kindref="member">LOG_FATAL</ref>(<ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">ostk::core::Logger::Global</ref>())</initializer>
         <briefdescription>
+<para>Global log fatal macro. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="80" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="80" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="141" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a19f198f1db10b2d1e5d220ca4077e0f5" prot="public" static="no">
         <name>GET_MACRO</name>
@@ -422,31 +453,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="82" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="82" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="143" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a6b26640bcc00af8151ba41f05c916423" prot="public" static="no">
         <name>LOG_SCOPE0</name>
         <param></param>
         <initializer>BOOST_LOG_NAMED_SCOPE(&quot;?&quot;)</initializer>
         <briefdescription>
+<para>Log scope macro (no arguments) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="84" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="84" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="146" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="146" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a90a4ea029e542890e716f1946144dc8a" prot="public" static="no">
         <name>LOG_SCOPE1</name>
         <param><defname>aScope</defname></param>
         <initializer>BOOST_LOG_NAMED_SCOPE(aScope)</initializer>
         <briefdescription>
+<para>Log scope macro (single scope name) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="85" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="85" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="149" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a72ac4a0282aa2b6661456b5880eb45d0" prot="public" static="no">
         <name>LOG_SCOPE2</name>
@@ -454,24 +487,26 @@
         <param><defname>aMethod</defname></param>
         <initializer>BOOST_LOG_NAMED_SCOPE(aClass &quot; ▸ &quot; aMethod)</initializer>
         <briefdescription>
+<para>Log scope macro (class and method names) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="86" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="86" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="152" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_logger_8hpp_1a84b542bed09b5abc44765ee800833e56" prot="public" static="no">
         <name>LOG_SCOPE</name>
         <param><defname>...</defname></param>
         <initializer><ref refid="_logger_8hpp_1a19f198f1db10b2d1e5d220ca4077e0f5" kindref="member">GET_MACRO</ref>(_0, ##__VA_ARGS__, <ref refid="_logger_8hpp_1a72ac4a0282aa2b6661456b5880eb45d0" kindref="member">LOG_SCOPE2</ref>, <ref refid="_logger_8hpp_1a90a4ea029e542890e716f1946144dc8a" kindref="member">LOG_SCOPE1</ref>, <ref refid="_logger_8hpp_1a6b26640bcc00af8151ba41f05c916423" kindref="member">LOG_SCOPE0</ref>)(__VA_ARGS__)</initializer>
         <briefdescription>
+<para>Log scope macro (variadic) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="88" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="88" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="155" column="9" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="155" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -507,66 +542,77 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" kindref="member">ostk::core::type::Unique</ref>;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="classostk_1_1core_1_1_logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1_logger_1afc4760c6468b14aa75abec4624dfd7ea" kindref="member">Logger</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>aLine,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFunction);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="40" refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anObject)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/>pump(Severity::Info,<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" kindref="member">Integer::Undefined</ref>(),<sp/><ref refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" kindref="member">String::Empty</ref>(),<sp/><ref refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" kindref="member">String::Empty</ref>(),<sp/>&amp;source_);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pump<sp/>&lt;&lt;<sp/>anObject;</highlight></codeline>
+<codeline lineno="38" refid="classostk_1_1core_1_1_logger" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1_logger_1afc4760c6468b14aa75abec4624dfd7ea" kindref="member">Logger</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(pump);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" kindref="member">getChannel</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref>&amp;<sp/>aLine,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFunction);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">Global</ref>();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref><sp/>channel_;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref><sp/>source_;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;Sink&gt;</ref><sp/>sinks_;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="60" refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>anObject)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref><sp/>pump(Severity::Info,<sp/><ref refid="classostk_1_1core_1_1type_1_1_integer_1a7cfec90ab92235c3f156a29358da51dd" kindref="member">Integer::Undefined</ref>(),<sp/><ref refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" kindref="member">String::Empty</ref>(),<sp/><ref refid="classostk_1_1core_1_1type_1_1_string_1abcd999bef0746e38e05bb6432fd51dbb" kindref="member">String::Empty</ref>(),<sp/>&amp;source_);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pump<sp/>&lt;&lt;<sp/>anObject;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG(aLogger,<sp/>aSeverity)<sp/>aLogger(aSeverity,<sp/>__LINE__,<sp/>__FILE__,<sp/>__PRETTY_FUNCTION__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="_logger_8hpp_1a769d9fa6dc0abbbe087bc949f1b3e42b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_TRACE(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Trace)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="_logger_8hpp_1ac871e9578d8f0db84bd5d6ae6fa3aede" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_DEBUG(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Debug)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="_logger_8hpp_1ab7f1ea23f26e6ebe588b7a73c2671cbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_INFO(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Info)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="_logger_8hpp_1ac7c02456b638903db87f6806739ce12b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_WARNING(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Warning)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="_logger_8hpp_1af82d42df573b733c1f607fc8a52775b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_ERROR(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Error)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="_logger_8hpp_1aea24ad4c59edfe6d5eb9cceb75f36376" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_FATAL(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Fatal)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="_logger_8hpp_1ac09f7e09b2e31e8ab2de60dff141b8a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_TRACE<sp/>LOG_TRACE(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="_logger_8hpp_1afdf5052e4b73c2b24484df7dfcf13924" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_DEBUG<sp/>LOG_DEBUG(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77" refid="_logger_8hpp_1a438e73611d8cbea0f9f44bc052c180c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_INFO<sp/>LOG_INFO(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="_logger_8hpp_1a8c5947451067073fba376cecfceca61d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_WARNING<sp/>LOG_WARNING(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="_logger_8hpp_1af690cf01e722c46f0a16af876af0b4f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_ERROR<sp/>LOG_ERROR(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="_logger_8hpp_1a9fb80d8817b4f240f1144c0507f40d44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_FATAL<sp/>LOG_FATAL(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="_logger_8hpp_1a19f198f1db10b2d1e5d220ca4077e0f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_MACRO(_0,<sp/>_1,<sp/>_2,<sp/>NAME,<sp/>...)<sp/>NAME</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="_logger_8hpp_1a6b26640bcc00af8151ba41f05c916423" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SCOPE0()<sp/>BOOST_LOG_NAMED_SCOPE(&quot;?&quot;)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85" refid="_logger_8hpp_1a90a4ea029e542890e716f1946144dc8a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SCOPE1(aScope)<sp/>BOOST_LOG_NAMED_SCOPE(aScope)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="_logger_8hpp_1a72ac4a0282aa2b6661456b5880eb45d0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SCOPE2(aClass,<sp/>aMethod)<sp/>BOOST_LOG_NAMED_SCOPE(aClass<sp/>&quot;<sp/>▸<sp/>&quot;<sp/>aMethod)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="_logger_8hpp_1a84b542bed09b5abc44765ee800833e56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SCOPE(...)<sp/>GET_MACRO(_0,<sp/>##__VA_ARGS__,<sp/>LOG_SCOPE2,<sp/>LOG_SCOPE1,<sp/>LOG_SCOPE0)(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(pump);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" kindref="member">getChannel</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref><sp/><ref refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" kindref="member">Console</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aChannel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref>&amp;<sp/>aSeverity);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref>&amp;<sp/><ref refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" kindref="member">Global</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref><sp/>channel_;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref><sp/>source_;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array&lt;Sink&gt;</ref><sp/>sinks_;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="_logger_8hpp_1a8ac9d89e791f5cb9828a8c970e970db8" refkind="member"><highlight class="preprocessor">#define<sp/>LOG(aLogger,<sp/>aSeverity)<sp/>aLogger(aSeverity,<sp/>__LINE__,<sp/>__FILE__,<sp/>__PRETTY_FUNCTION__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="_logger_8hpp_1a769d9fa6dc0abbbe087bc949f1b3e42b" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_TRACE(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Trace)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="_logger_8hpp_1ac871e9578d8f0db84bd5d6ae6fa3aede" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_DEBUG(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Debug)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="_logger_8hpp_1ab7f1ea23f26e6ebe588b7a73c2671cbd" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_INFO(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Info)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="_logger_8hpp_1ac7c02456b638903db87f6806739ce12b" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_WARNING(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Warning)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="_logger_8hpp_1af82d42df573b733c1f607fc8a52775b9" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_ERROR(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Error)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="_logger_8hpp_1aea24ad4c59edfe6d5eb9cceb75f36376" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_FATAL(aLogger)<sp/>LOG(aLogger,<sp/>ostk::core::logger::Severity::Fatal)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="_logger_8hpp_1ac09f7e09b2e31e8ab2de60dff141b8a5" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_TRACE<sp/>LOG_TRACE(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="_logger_8hpp_1afdf5052e4b73c2b24484df7dfcf13924" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_DEBUG<sp/>LOG_DEBUG(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="_logger_8hpp_1a438e73611d8cbea0f9f44bc052c180c1" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_INFO<sp/>LOG_INFO(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="_logger_8hpp_1a8c5947451067073fba376cecfceca61d" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_WARNING<sp/>LOG_WARNING(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="_logger_8hpp_1af690cf01e722c46f0a16af876af0b4f0" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_ERROR<sp/>LOG_ERROR(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="_logger_8hpp_1a9fb80d8817b4f240f1144c0507f40d44" refkind="member"><highlight class="preprocessor">#define<sp/>GLOBAL_LOG_FATAL<sp/>LOG_FATAL(ostk::core::Logger::Global())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="_logger_8hpp_1a19f198f1db10b2d1e5d220ca4077e0f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_MACRO(_0,<sp/>_1,<sp/>_2,<sp/>NAME,<sp/>...)<sp/>NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="_logger_8hpp_1a6b26640bcc00af8151ba41f05c916423" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_SCOPE0()<sp/>BOOST_LOG_NAMED_SCOPE(&quot;?&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="_logger_8hpp_1a90a4ea029e542890e716f1946144dc8a" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_SCOPE1(aScope)<sp/>BOOST_LOG_NAMED_SCOPE(aScope)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="_logger_8hpp_1a72ac4a0282aa2b6661456b5880eb45d0" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_SCOPE2(aClass,<sp/>aMethod)<sp/>BOOST_LOG_NAMED_SCOPE(aClass<sp/>&quot;<sp/>▸<sp/>&quot;<sp/>aMethod)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="_logger_8hpp_1a84b542bed09b5abc44765ee800833e56" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_SCOPE(...)<sp/>GET_MACRO(_0,<sp/>##__VA_ARGS__,<sp/>LOG_SCOPE2,<sp/>LOG_SCOPE1,<sp/>LOG_SCOPE0)(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/OpenSpaceToolkit/Core/Logger.hpp"/>
   </compounddef>

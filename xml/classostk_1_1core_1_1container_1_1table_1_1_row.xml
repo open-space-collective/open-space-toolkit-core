@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="34" column="35" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="34" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="33" column="35" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="67" column="17" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="67" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="117" column="17" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a8c7b3e8fbe1f1aa958458250fd55f7ba" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="namespaceostk_1_1core_1_1container_1_1table_1a51083d72525ab97335e7a0a60e421a8b" kindref="member">Cell</ref> &gt;</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="68" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="68" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="118" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="118" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,12 +57,23 @@
           <declname>aCellArray</declname>
         </param>
         <briefdescription>
+<para>Constructor from cell array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCellArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of cells </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="36" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="17" bodyend="21"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="38" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="17" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1ad7c54ddcdd8c919171d76c0cc31e4df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -74,12 +85,23 @@
           <declname>aCellList</declname>
         </param>
         <briefdescription>
+<para>Constructor from initializer list. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aCellList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An initializer list of cells </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="38" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="23" bodyend="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="43" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="23" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a8c694e337cf4434b86fa1a40a1f07058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,12 +113,23 @@
           <declname>aTablePtr</declname>
         </param>
         <briefdescription>
+<para>Constructor from table pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTablePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parent table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="40" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="29" bodyend="33"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="48" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="29" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1ac980e2541e8c7224861c3ac9bac45fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -112,12 +145,31 @@
           <declname>aCellArray</declname>
         </param>
         <briefdescription>
+<para>Constructor from table pointer and cell array. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTablePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parent table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aCellArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of cells </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="42" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="35" bodyend="39"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="54" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="35" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a2079c8b89100ac40fe9d002492c7b882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -129,12 +181,23 @@
           <declname>aRow</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="44" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="41" bodyend="45"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="59" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="41" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1aec17102b18de98abc1212b4a355b2506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &amp;</type>
@@ -146,12 +209,25 @@
           <declname>aRow</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to row </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="46" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="47" bodyend="57"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="65" column="9" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="47" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1acca04b3e632b5794fdd6d6f6cc83f25a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -163,12 +239,25 @@
           <declname>aRow</declname>
         </param>
         <briefdescription>
+<para>Equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if rows are equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="48" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="59" bodyend="71"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="71" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="59" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a270b8aa57ef8db394f39cb690939a602" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,12 +269,25 @@
           <declname>aRow</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if rows are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="50" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="73" bodyend="76"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="77" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="73" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a1050385411ca3f1fe006db0da2ce92df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="namespaceostk_1_1core_1_1container_1_1table_1a51083d72525ab97335e7a0a60e421a8b" kindref="member">Cell</ref> &amp;</type>
@@ -197,12 +299,25 @@
           <declname>aColumnIndex</declname>
         </param>
         <briefdescription>
+<para>Index subscript operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Const reference to cell </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="52" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="78" bodyend="88"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="83" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="78" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a2b04cb89c86b04a858697a971655c879" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="namespaceostk_1_1core_1_1container_1_1table_1a51083d72525ab97335e7a0a60e421a8b" kindref="member">Cell</ref> &amp;</type>
@@ -214,12 +329,25 @@
           <declname>aColumnName</declname>
         </param>
         <briefdescription>
+<para>Name subscript operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aColumnName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A column name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Const reference to cell </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="54" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="90" bodyend="98"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="89" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="90" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a862e53a3e92971004bf2974ca66f6ed7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -227,12 +355,16 @@
         <argsstring>() const</argsstring>
         <name>isEmpty</name>
         <briefdescription>
+<para>Check if row is empty. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if empty </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="56" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="100" bodyend="103"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="94" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="100" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a9e737fa8290d372fa38c1faeb0bbdb63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Size</type>
@@ -240,12 +372,16 @@
         <argsstring>() const</argsstring>
         <name>getSize</name>
         <briefdescription>
+<para>Get number of cells in row. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Number of cells </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="58" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="105" bodyend="108"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="99" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="105" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a32022be14e0e349316b0983493e9e7fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1table_1_1_row_1a4dfcc47b1a36bc5f1b2b0c56c3ee0430" kindref="member">Row::ConstIterator</ref></type>
@@ -253,12 +389,16 @@
         <argsstring>() const</argsstring>
         <name>begin</name>
         <briefdescription>
+<para>Returns a const iterator pointing to the first cell. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const iterator to first cell </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="60" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="110" bodyend="113"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="104" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="110" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1a7592c966848014a635d5ce3625a0471c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1table_1_1_row_1a4dfcc47b1a36bc5f1b2b0c56c3ee0430" kindref="member">Row::ConstIterator</ref></type>
@@ -266,12 +406,16 @@
         <argsstring>() const</argsstring>
         <name>end</name>
         <briefdescription>
+<para>Returns a const iterator pointing past the last cell. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Const iterator past last cell </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="62" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="115" bodyend="118"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="109" column="24" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1table_1_1_row_1adb098b86798cd4efe955be8dbf73319f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -283,12 +427,23 @@
           <declname>aTablePtr</declname>
         </param>
         <briefdescription>
+<para>Associate row with a table. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTablePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parent table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="64" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="120" bodyend="123"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="114" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table/Row.cpp" bodystart="120" bodyend="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -296,7 +451,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="32" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="31" bodyend="69"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" line="31" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table/Row.hpp" bodystart="30" bodyend="119"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1table_1_1_row_1adb098b86798cd4efe955be8dbf73319f" prot="public" virt="non-virtual"><scope>ostk::core::container::table::Row</scope><name>associateTable</name></member>
       <member refid="classostk_1_1core_1_1container_1_1table_1_1_row_1a32022be14e0e349316b0983493e9e7fe" prot="public" virt="non-virtual"><scope>ostk::core::container::table::Row</scope><name>begin</name></member>

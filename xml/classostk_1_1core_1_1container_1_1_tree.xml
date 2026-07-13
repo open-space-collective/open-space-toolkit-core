@@ -10,6 +10,7 @@
         <argsstring>()=delete</argsstring>
         <name>Tree</name>
         <briefdescription>
+<para>Default constructor (disabled) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -27,12 +28,23 @@
           <declname>aTree</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tree </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="28" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a4024924e1a48e9cc1d32065a306cb840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,12 +52,13 @@
         <argsstring>()</argsstring>
         <name>~Tree</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="30" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="34" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1ac2cca9d5261c57d25d704ae49d517fbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> &amp;</type>
@@ -57,12 +70,25 @@
           <declname>aTree</declname>
         </param>
         <briefdescription>
+<para>Copy assignment operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tree </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to tree </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="32" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="40" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a43db1f621767f4dcee49611cee3d7d9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -70,12 +96,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if tree is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="36" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="52" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -93,12 +123,33 @@
           <declname>aTree</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tree </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="34" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="47" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -108,12 +159,16 @@
         <argsstring>()</argsstring>
         <name>Empty</name>
         <briefdescription>
+<para>Construct an empty tree. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Empty tree </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="38" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="57" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_tree_1a6a8a27586220318a879ce5e68ef3fb27" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref></type>
@@ -125,26 +180,35 @@
           <declname>anObject</declname>
         </param>
         <briefdescription>
+<para>Construct a tree from an object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_tree" kindref="compound">Tree</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="40" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="63" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Undirected graph in which any two vertices are connected by exactly one path. </para>
+<para>Undirected graph in which any two vertices are connected by exactly one path [TBI]. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>                        A tree data structure can be defined recursively (locally) as a collection of nodes
-                        (starting at a root node), where each node is a data structure consisting of a value,
-                        together with a list of references to nodes (the &quot;children&quot;), with the constraints that
-                        no reference is duplicated, and none points to the root.
-</verbatim></para>
+<para>A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the &quot;children&quot;), with the constraints that no reference is duplicated, and none points to the root.</para>
 <para><ulink url="https://en.wikipedia.org/wiki/Tree_">https://en.wikipedia.org/wiki/Tree_</ulink>(graph_theory) <ulink url="https://en.wikipedia.org/wiki/Tree_">https://en.wikipedia.org/wiki/Tree_</ulink>(data_structure) </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tree.hpp" bodystart="23" bodyend="44"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Tree.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Tree.hpp" bodystart="22" bodyend="67"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_tree_1a747219067a849456b83b66061fc3a1f5" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>Empty</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_tree_1a43db1f621767f4dcee49611cee3d7d9e" prot="public" virt="non-virtual"><scope>ostk::core::container::Tree</scope><name>isDefined</name></member>

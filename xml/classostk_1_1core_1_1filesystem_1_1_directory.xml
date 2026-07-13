@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="323" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="323" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="296" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="296" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="33" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a56b60dabb38a5cd40d81a7e9396b8a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="39" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="36" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a735e8c716574a9f0720deca6fe53551d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &amp;</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="46" column="15"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="42" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a2052299ec678425c614a9d94b6719408" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="59" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="16" bodyend="24"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="54" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="16" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3104154a1142af0ea03f257edf493bc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="72" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="26" bodyend="29"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="66" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a7dc2c8a49eea8ee0cc6372b349756bf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="96" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="47" bodyend="50"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="88" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1affd6e4da6f153b1c961ff61178898c20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="107" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="52" bodyend="69"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="98" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="52" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3f9fa68eb7bce123a435c20ae9ece692" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="71" bodyend="88"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="108" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="71" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a3aae4c5746c1db8563c39b1930688edc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="129" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="90" bodyend="127"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="118" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="90" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a5a06e7333bba2f33cda76e5e24b00e37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -265,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="140" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="128" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ad9ffa02a5f60cc351bc16dcedb64ce7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="151" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="134" bodyend="158"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="138" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="134" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af81a249fa293a8c8350d9ec9e296ce81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="162" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="160" bodyend="168"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="148" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="160" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a5b41f71a42dc5bfc00b495c46ffe77f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref></type>
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="173" column="31"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="158" column="31"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1aa48e08223e5a4b1ae28b08f9e5ac0a5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
@@ -345,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="184" column="15" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="175" bodyend="178"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="168" column="15" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="175" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af6e1bd5eb2b4634b4232fcfcf7ebce64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &gt;</type>
@@ -356,8 +356,7 @@
 <para>Get files in directory. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>                Files are listed in alphabetical order.
-</verbatim></para>
+<para>Files are listed in alphabetical order.</para>
 <para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">Array&lt;File&gt;<sp/>files<sp/>=<sp/>directory.getFiles()<sp/>;</highlight></codeline>
 </programlisting></para>
@@ -367,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="197" column="22"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="180" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a588b3190a53c99a8a348ac4c01b31edc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">container::Array</ref>&lt; <ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref> &gt;</type>
@@ -378,8 +377,7 @@
 <para>Get directories in directory. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>                Directories are listed in alphabetical order.
-</verbatim></para>
+<para>Directories are listed in alphabetical order.</para>
 <para><programlisting><codeline><highlight class="normal">Directory<sp/>directory<sp/>=<sp/>Directory::Path(Path::Parse(&quot;/path/to/directory&quot;))<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">Array&lt;Directory&gt;<sp/>directories<sp/>=<sp/>directory.getDirectories()<sp/>;</highlight></codeline>
 </programlisting></para>
@@ -389,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="210" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="185" bodyend="225"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="192" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="185" bodyend="225"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ae55d292dd71ab8f311b3c4ae79c317e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -408,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="220" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="227" bodyend="235"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="201" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="227" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1ad0d45f2de353448c92807fd7d0d3fab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -439,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="231" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="211" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a9b4e55d3fa01d0a9cc1d5abc934f559c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
@@ -486,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="245" column="15"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="224" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a60a53b7d1fb751e8cf98dc61a6e2815f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -518,7 +516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="257" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="235" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a078d17063b9915092af76d347a9665cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -578,7 +576,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="272" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="251" bodyend="288"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="249" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="251" bodyend="288"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a58be001fc39b8319a664bde35ff59d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -597,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="287" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="290" bodyend="305"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="263" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="290" bodyend="305"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -644,7 +642,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="85" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="31" bodyend="45"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="78" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="31" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -666,7 +664,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="298" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="307" bodyend="310"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="273" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="307" bodyend="310"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1a654e1ae79c5e73460b722db30340270c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
@@ -685,7 +683,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="308" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="312" bodyend="315"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="282" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="312" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_directory_1af4d6ebf5c5b5c86fe25226bf5f887a8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">Directory</ref></type>
@@ -718,7 +716,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="320" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="317" bodyend="325"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="293" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="317" bodyend="325"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -737,7 +735,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="325" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="327" bodyend="330"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="298" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="327" bodyend="330"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -746,7 +744,7 @@
     <detaileddescription>
 <para><ulink url="https://en.wikipedia.org/wiki/Directory_">https://en.wikipedia.org/wiki/Directory_</ulink>(computing) </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="28" bodyend="326"/>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" line="28" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp" bodystart="27" bodyend="299"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a5a06e7333bba2f33cda76e5e24b00e37" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>containsDirectoryWithName</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3aae4c5746c1db8563c39b1930688edc" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::Directory</scope><name>containsFileWithName</name></member>

@@ -15,12 +15,23 @@
           <declname>aVariableName</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aVariableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the undefined variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="25" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp" bodystart="14" bodyend="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="29" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1runtime_1_1_undefined_1a0fd23d55bea868ae30b50f6d2690d6b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,18 +39,20 @@
         <argsstring>()</argsstring>
         <name>~Undefined</name>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="30" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp" bodystart="26" bodyend="26"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="35" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/Runtime/Undefined.cpp" bodystart="26" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_undefined" kindref="compound">Undefined</ref> variable error class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Thrown when an undefined variable is accessed. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -87,7 +100,7 @@
         <label>std::exception</label>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" bodystart="22" bodyend="31"/>
+    <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" bodystart="23" bodyend="36"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>Exception</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getMessage</name></member>

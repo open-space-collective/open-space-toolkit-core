@@ -14,6 +14,7 @@
         <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
           <name>Undefined</name>
           <briefdescription>
+<para>Undefined sign. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -21,6 +22,7 @@
         <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02a3289297424e01eda5b788c083bbf3147" prot="public">
           <name>Positive</name>
           <briefdescription>
+<para>Positive sign. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -28,6 +30,7 @@
         <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02affb9356ff2b7da85c75c92fa7ea03b8b" prot="public">
           <name>Negative</name>
           <briefdescription>
+<para>Negative sign. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -35,6 +38,7 @@
         <enumvalue id="namespaceostk_1_1core_1_1type_1a294c0f2c89e8801458b09885d53c4b02a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
           <name>None</name>
           <briefdescription>
+<para>No sign (zero) </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -46,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Sign.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Sign.hpp" bodystart="17" bodyend="25"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Sign.hpp" line="17" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Sign.hpp" bodystart="16" bodyend="23"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -59,10 +63,13 @@
 <para>A unit of digital information that consists of eight bits. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Byte<sp/>byte<sp/>=<sp/>0xFF<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Byte<sp/>byte<sp/>=<sp/>42<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Byte.hpp" line="17" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Byte.hpp" bodystart="17" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Byte.hpp" line="21" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Byte.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a417fd235f7e100d47856d16751831c34" prot="public" static="no">
         <type>size_t</type>
@@ -73,10 +80,13 @@
 <para>Index can store the maximum size of a theoretically possible object of any type. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Index<sp/>index<sp/>=<sp/>0<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Index<sp/>index<sp/>=<sp/>42<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Index.hpp" line="17" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Index.hpp" bodystart="17" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Index.hpp" line="21" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Index.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a41ef4a3c69ac49fd2f62758bdf69e5a8" prot="public" static="no">
         <type>int8_t</type>
@@ -196,10 +206,13 @@
 <para>Retains shared ownership of an object through a pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Shared&lt;MyClass&gt;<sp/>ptr<sp/>=<sp/>std::make_shared&lt;MyClass&gt;()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Shared&lt;MyClass&gt;<sp/>ptr2<sp/>=<sp/>ptr<sp/>;<sp/>//<sp/>Shared<sp/>ownership</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Shared.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Shared.hpp" bodystart="19" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Shared.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Shared.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a49cf705368ffaff1cc457f73d7ebc403" prot="public" static="no">
         <type>size_t</type>
@@ -210,10 +223,13 @@
 <para>Size can store the maximum size of a theoretically possible object of any type. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Size<sp/>size<sp/>=<sp/>0<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Size<sp/>size<sp/>=<sp/>42<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Size.hpp" line="17" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Size.hpp" bodystart="17" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Size.hpp" line="21" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Size.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a3b7b378b1980599bd52c095729a2d5bb" prot="public" static="no">
         <templateparamlist>
@@ -229,10 +245,12 @@
 <para>Owns and manages another object through a pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Unique&lt;MyClass&gt;<sp/>ptr<sp/>=<sp/>std::make_unique&lt;MyClass&gt;()<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Unique.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Unique.hpp" bodystart="19" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Unique.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Unique.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1af3e53775781cfb35ee4bd22d6bf784a1" prot="public" static="no">
         <templateparamlist>
@@ -248,10 +266,13 @@
 <para>Holds a non-owning reference to an object that is managed by Shared. </para>
         </briefdescription>
         <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">Shared&lt;MyClass&gt;<sp/>shared<sp/>=<sp/>std::make_shared&lt;MyClass&gt;()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Weak&lt;MyClass&gt;<sp/>weak<sp/>=<sp/>shared<sp/>;</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Weak.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Weak.hpp" bodystart="19" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Weak.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/Type/Weak.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -275,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="205" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="205" bodyend="208"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="320" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="320" bodyend="323"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -293,6 +314,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ValueType integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -314,6 +355,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ValueType integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -335,6 +396,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ValueType integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -356,6 +437,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ValueType integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -377,6 +478,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ValueType integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Remainder </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -398,6 +519,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">anInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -419,6 +560,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -440,6 +601,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -461,6 +642,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Product </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -482,6 +683,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aDouble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Quotient </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -503,6 +724,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aReal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A real </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

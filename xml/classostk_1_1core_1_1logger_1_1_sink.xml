@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="40" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="40" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="61" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,12 +29,23 @@
           <declname>aSink</declname>
         </param>
         <briefdescription>
+<para>Constructor from internal sink. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An internal sink implementation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="27" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1aadf37265845ad9648afcb7d07f0756ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -46,12 +57,23 @@
           <declname>aSink</declname>
         </param>
         <briefdescription>
+<para>Copy constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSink</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A sink </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="29" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="36" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1aba09f6fd4b47c6dbcf755834ea531c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -59,12 +81,13 @@
         <argsstring>()</argsstring>
         <name>enable</name>
         <briefdescription>
+<para>Enable the sink. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="31" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="39" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1a0ab42f184deb76938ae3ab97f690fbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -72,12 +95,13 @@
         <argsstring>()</argsstring>
         <name>disable</name>
         <briefdescription>
+<para>Disable the sink. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="32" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -89,12 +113,23 @@
           <declname>aChannel</declname>
         </param>
         <briefdescription>
+<para>Add a channel to the sink filter. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A channel name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="34" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="47" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_sink_1ac11d2e63d7643cdbf8a24718ce2dd216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -106,12 +141,23 @@
           <declname>aChannel</declname>
         </param>
         <briefdescription>
+<para>Remove a channel from the sink filter. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A channel name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="35" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="52" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -125,20 +171,34 @@
           <declname>aSeverity</declname>
         </param>
         <briefdescription>
+<para>Construct a console sink with a severity filter. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSeverity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A minimum severity level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Console sink </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="37" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="58" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Log sink. </para>
     </briefdescription>
     <detaileddescription>
+<para>Represents a destination for log messages, with channel filtering. </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="24" bodyend="41"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Sink.hpp" bodystart="25" bodyend="62"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1logger_1_1_sink_1a7dba5710eb033df07cfe7ead0104a122" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>addChannel</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_sink_1a363d47c4b76945b5aa75f0b21b7740c2" prot="public" virt="non-virtual"><scope>ostk::core::logger::Sink</scope><name>Console</name></member>

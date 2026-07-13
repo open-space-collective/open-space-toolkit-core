@@ -99,35 +99,35 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="9">
+      <node id="12">
         <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
         <link refid="_row_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="11">
         <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
         <link refid="_cell_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="22">
         <label>src/OpenSpaceToolkit/Core/FileSystem/PermissionSet.cpp</label>
         <link refid="_permission_set_8cpp"/>
       </node>
-      <node id="20">
+      <node id="23">
         <label>src/OpenSpaceToolkit/Core/Type/Integer.cpp</label>
         <link refid="_integer_8cpp"/>
       </node>
-      <node id="11">
+      <node id="14">
         <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
         <link refid="_row_8cpp"/>
       </node>
-      <node id="12">
+      <node id="15">
         <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
         <link refid="_table_8cpp"/>
       </node>
@@ -139,7 +139,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="25">
         <label>src/OpenSpaceToolkit/Core/Type/String.cpp</label>
         <link refid="_string_8cpp"/>
       </node>
@@ -150,16 +150,16 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
       </node>
-      <node id="17">
+      <node id="20">
         <label>include/OpenSpaceToolkit/Core/Type/EnumHelper.hpp</label>
         <link refid="_enum_helper_8hpp"/>
         <childnode refid="7" relation="include">
@@ -170,25 +170,25 @@
         <link refid="_error_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -198,49 +198,67 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="10">
+        <label>include/OpenSpaceToolkit/Core/Container/Stack.hpp</label>
+        <link refid="_stack_8hpp"/>
       </node>
       <node id="5">
         <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
         <link refid="_dictionary_8cpp"/>
       </node>
+      <node id="8">
+        <label>include/OpenSpaceToolkit/Core/Container/Graph.hpp</label>
+        <link refid="_graph_8hpp"/>
+      </node>
       <node id="6">
         <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
         <link refid="_object_8cpp"/>
       </node>
-      <node id="21">
+      <node id="24">
         <label>src/OpenSpaceToolkit/Core/Type/Real.cpp</label>
         <link refid="_real_8cpp"/>
       </node>
-      <node id="18">
+      <node id="21">
         <label>src/OpenSpaceToolkit/Core/FileSystem/Path.cpp</label>
         <link refid="_path_8cpp"/>
       </node>
-      <node id="16">
+      <node id="19">
         <label>src/OpenSpaceToolkit/Core/FileSystem/File.cpp</label>
         <link refid="_file_8cpp"/>
       </node>
-      <node id="10">
+      <node id="13">
         <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
         <link refid="_table_8hpp"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp</label>
-        <link refid="_to_be_implemented_8cpp"/>
-      </node>
-      <node id="13">
-        <label>include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp</label>
-        <link refid="_directory_8hpp"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+      </node>
+      <node id="26">
+        <label>src/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.cpp</label>
+        <link refid="_to_be_implemented_8cpp"/>
+      </node>
+      <node id="9">
+        <label>include/OpenSpaceToolkit/Core/Container/Queue.hpp</label>
+        <link refid="_queue_8hpp"/>
+      </node>
+      <node id="16">
+        <label>include/OpenSpaceToolkit/Core/FileSystem/Directory.hpp</label>
+        <link refid="_directory_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -248,14 +266,14 @@
         <link refid="_to_be_implemented_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="17">
         <label>include/OpenSpaceToolkit/Core/FileSystem.hpp</label>
         <link refid="_file_system_8hpp"/>
       </node>
-      <node id="15">
+      <node id="18">
         <label>src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp</label>
         <link refid="_directory_8cpp"/>
       </node>
@@ -288,26 +306,25 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">ostk::core::type::String</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" kindref="compound">ToBeImplemented</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1error_1_1_runtime_error" kindref="compound">RuntimeError</ref></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a9bfd0da6b176670f0174794ef44c8420" kindref="member">ToBeImplemented</ref>();</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a9bfd0da6b176670f0174794ef44c8420" kindref="member">ToBeImplemented</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFunctionName);</highlight></codeline>
+<codeline lineno="23" refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" kindref="compound">ToBeImplemented</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1error_1_1_runtime_error" kindref="compound">RuntimeError</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a9bfd0da6b176670f0174794ef44c8420" kindref="member">ToBeImplemented</ref>();</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ToBeImplemented<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/><sp/><sp/>const<sp/><sp/><sp/>String&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScope,</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/><sp/><sp/>String&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aFunctionName<sp/>)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a3383ca49c74c4969cda170c12ecff4a9" kindref="member">~ToBeImplemented</ref>();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>runtime</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>error</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a9bfd0da6b176670f0174794ef44c8420" kindref="member">ToBeImplemented</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref>&amp;<sp/>aFunctionName);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ToBeImplemented<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/><sp/><sp/>const<sp/><sp/><sp/>String&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScope,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/><sp/><sp/>String&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aFunctionName<sp/>)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented_1a3383ca49c74c4969cda170c12ecff4a9" kindref="member">~ToBeImplemented</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>runtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/OpenSpaceToolkit/Core/Error/Runtime/ToBeImplemented.hpp"/>
   </compounddef>

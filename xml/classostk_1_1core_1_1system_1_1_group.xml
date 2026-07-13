@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="55" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="55" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="105" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_group_1ae648e24c652287b514030b68c1f2f6b5" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="56" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="56" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="106" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_group_1a9da2cf5b280d30804bec17a5732559a0" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="57" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="57" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="107" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="107" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,12 +59,31 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Constructor. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="26" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="29" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a0fea739e63a33287a75d34304c4e1aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,12 +103,39 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Constructor with effective group ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aEGID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An effective group ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="28" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="36" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1aace16b5205f388ab389cd7ab14d2937b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -101,12 +147,25 @@
           <declname>aGroup</declname>
         </param>
         <briefdescription>
+<para>Equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if groups are equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="30" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a053e176cea38e57bce0f69f72baed19b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -118,12 +177,25 @@
           <declname>aGroup</declname>
         </param>
         <briefdescription>
+<para>Not equal to operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if groups are not equal </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="32" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="48" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a97f411cf741aca95c24120cea524f247" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,12 +203,16 @@
         <argsstring>() const</argsstring>
         <name>isDefined</name>
         <briefdescription>
+<para>Check if group is defined. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>True if defined </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="36" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="60" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a07b7056475b78fb83f34c7787cc52b8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -144,12 +220,16 @@
         <argsstring>() const</argsstring>
         <name>getGID</name>
         <briefdescription>
+<para>Get group ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="38" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="65" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a4a3d6eaf4892cd330be48522e38b41f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -157,12 +237,16 @@
         <argsstring>() const</argsstring>
         <name>getEGID</name>
         <briefdescription>
+<para>Get effective group ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Effective group ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="40" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="70" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1aa4d1f37a36f78a14f67559e04de6f78c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -170,12 +254,16 @@
         <argsstring>() const</argsstring>
         <name>getSGID</name>
         <briefdescription>
+<para>Get saved group ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Saved group ID </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="42" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="75" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a53f316d03ebb745b3aecb3c535799829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -183,12 +271,16 @@
         <argsstring>() const</argsstring>
         <name>getName</name>
         <briefdescription>
+<para>Get group name. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> name </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="44" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="80" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -206,12 +298,33 @@
           <declname>aGroup</declname>
         </param>
         <briefdescription>
+<para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to output stream </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="34" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="55" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -221,12 +334,16 @@
         <argsstring>()</argsstring>
         <name>Undefined</name>
         <briefdescription>
+<para>Construct an undefined group. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Undefined group </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="46" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="85" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a9d38b7db49fb6b2e779bbba884c15b2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
@@ -234,12 +351,16 @@
         <argsstring>()</argsstring>
         <name>Process</name>
         <briefdescription>
+<para>Construct a group from the current process. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Current process group </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="48" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="90" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1ae94d4f0fd06b120b007e880ec60c944b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
@@ -251,12 +372,25 @@
           <declname>aGID</declname>
         </param>
         <briefdescription>
+<para>Construct a group from a group ID. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aGID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="50" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="96" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_group_1a694c3ccaf1a870ab3c7e81aac8b776c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref></type>
@@ -268,23 +402,35 @@
           <declname>aName</declname>
         </param>
         <briefdescription>
+<para>Construct a group from a group name. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A group name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="52" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="102" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classostk_1_1core_1_1system_1_1_group" kindref="compound">Group</ref>. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>                        POSIX compliant
-</verbatim></para>
+<para>POSIX compliant</para>
 <para><ulink url="https://en.wikipedia.org/wiki/Group_identifier">https://en.wikipedia.org/wiki/Group_identifier</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="23" bodyend="58"/>
+    <location file="include/OpenSpaceToolkit/Core/System/Group.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/Group.hpp" bodystart="22" bodyend="108"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1system_1_1_group_1ae648e24c652287b514030b68c1f2f6b5" prot="private" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>egid_</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_group_1a4a3d6eaf4892cd330be48522e38b41f1" prot="public" virt="non-virtual"><scope>ostk::core::system::Group</scope><name>getEGID</name></member>

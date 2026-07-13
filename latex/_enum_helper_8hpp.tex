@@ -29,6 +29,17 @@
 
 Declares the standard enum-\/to-\/string and string-\/to-\/enum conversion functions. 
 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }MyClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\textcolor{keyword}{enum class} Color \{ Red, Green, Blue \} ;}
+\DoxyCodeLine{\mbox{\hyperlink{_enum_helper_8hpp_a7ee40a373d808974ffc8363d60035bca}{OSTK\_CORE\_DECLARE\_ENUM\_STRING\_CONVERSION}}(Color, Color, MyClass)}
+\DoxyCodeLine{\} ;}
+\end{DoxyCode}
+
+
 \begin{DoxyNote}{Note}
 This macro should be used in a header file, within the namespace of the enum. It does N\+OT have a dependency on magic\+\_\+enum. 
 \end{DoxyNote}
@@ -59,6 +70,12 @@ This macro should be used in a header file, within the namespace of the enum. It
 
 
 Defines the implementation for enum-\/to-\/string and string-\/to-\/enum conversion functions. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_enum_helper_8hpp_a72e0abb65aaf8b5d9e61baf8bc066560}{OSTK\_CORE\_DEFINE\_ENUM\_STRING\_CONVERSION}}(MyClass::Color, Color, MyClass)}
+\end{DoxyCode}
+
 
 \begin{DoxyNote}{Note}
 This macro should be used in a source file, within the namespace of the enum. The source file M\+U\+ST \#include $<$magic\+\_\+enum/magic\+\_\+enum.\+hpp$>$ before using this. 
