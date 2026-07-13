@@ -1,6 +1,6 @@
 # Apache License 2.0
 
-ARG BASE_IMAGE_VERSION="0.10.2-43-g5d79632"
+ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
 FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} AS root-user
