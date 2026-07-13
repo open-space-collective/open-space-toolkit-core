@@ -8,7 +8,7 @@ from ostk.core.filesystem import Directory, Path, PermissionSet, File
 
 def test_file_constructors():
     undefined_file = File.undefined()
-    current_file = File.path(Path.parse("./test_file.py"))
+    current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
 
     assert isinstance(undefined_file, File)
     assert isinstance(current_file, File)
@@ -16,7 +16,7 @@ def test_file_constructors():
 
 def test_file_operators():
     undefined_file = File.undefined()
-    current_file = File.path(Path.parse("./test_file.py"))
+    current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
 
     assert current_file == current_file
     assert current_file != undefined_file
@@ -24,23 +24,23 @@ def test_file_operators():
 
 def test_file_is_defined():
     undefined_file = File.undefined()
-    current_file = File.path(Path.parse("./test_file.py"))
+    current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
 
     assert undefined_file.is_defined() is False
     assert current_file.is_defined() is True
 
 
 def test_file_exists():
-    current_file = File.path(Path.parse("./__init__.py"))
-    false_file = File.path(Path.parse("./false_file.py"))
+    current_file = File.path(Path.parse("./test/filesystem/__init__.py"))
+    false_file = File.path(Path.parse("./test/filesystem/false_file.py"))
 
     assert current_file.exists() is True
     assert false_file.exists() is False
 
 
 def test_file_getter_functions():
-    current_file = File.path(Path.parse("./__init__.py"))
-    shared_lib_file = File.path(Path.parse("./shared_library.so.3.3"))
+    current_file = File.path(Path.parse("./test/filesystem/__init__.py"))
+    shared_lib_file = File.path(Path.parse("./test/filesystem/shared_library.so.3.3"))
 
     # name
     file_name = current_file.get_name()
@@ -64,8 +64,8 @@ def test_file_getter_functions():
     so_file_path = shared_lib_file.get_path()
 
     assert isinstance(file_path, Path)
-    assert file_path == Path.parse("./__init__.py")
-    assert so_file_path == Path.parse("./shared_library.so.3.3")
+    assert file_path == Path.parse("./test/filesystem/__init__.py")
+    assert so_file_path == Path.parse("./test/filesystem/shared_library.so.3.3")
 
     # permissions
     file_permissions = current_file.get_permissions()

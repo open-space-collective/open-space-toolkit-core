@@ -29,10 +29,12 @@
 
 bin/*
 lib/*
+share/*
 build/
 *.so*
 *.a
 *.exe*
+*.rpm*
 packages/
 coverage/
 
@@ -51,3 +53,7 @@ docs/cpp_rst
 tmp/
 __pycache__
 .ipynb_checkpoints
+.pytest_cache/
+.open-space-toolkit
+scripts
+*.egg-info/

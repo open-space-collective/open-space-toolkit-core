@@ -75,11 +75,25 @@ ARG VERSION
 ENV VERSION="${VERSION}"
 LABEL VERSION="${VERSION}"
 
+# A layer that includes the codebase, and has the Python development environment set up.
+FROM root-user AS ci-base
+
+COPY bindings/python/pyproject.toml /app/bindings/python/
+COPY bindings/python/uv.lock /app/bindings/python/
+
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
+
+COPY . /app
+
+WORKDIR /app/build
+
 # Development image for humans (non-root user)
 
 FROM root-user AS non-root-user
 
 # Install dev utilities
+
 RUN apt-get update \
     && apt-get install -y zsh sudo \
     && rm -rf /var/lib/apt/lists/*
@@ -108,6 +122,12 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 ## Configure environment
 
 ENV PATH="/home/${USERNAME}/.local/bin:${PATH}"
+
+# Install Python dev dependencies (non-root)
+COPY --chown=${USER_UID}:${USER_GID} bindings/python/pyproject.toml /app/bindings/python/
+COPY --chown=${USER_UID}:${USER_GID} bindings/python/uv.lock /app/bindings/python/
+RUN cd /app/bindings/python \
+    && uv sync --all-extras --python ${OSTK_PYTHON_VERSION} --frozen
 
 # Entrypoint
 
