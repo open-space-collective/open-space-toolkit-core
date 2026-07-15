@@ -36,8 +36,7 @@ handling. It is written in C++ and exposed to Python through pybind11 bindings.
 
 ## How the documentation is organised
 
-This documentation follows the [Diátaxis](https://diataxis.fr/) framework. It is
-split into four sections, each serving a different need. If you are not sure
+It is split into four sections, each serving a different need. If you are not sure
 where to start, the tutorials are the best entry point.
 
 ::::{grid} 1 1 2 2
@@ -75,16 +74,7 @@ Understanding-oriented discussion that clarifies and illuminates the design
 and concepts behind the toolkit.
 :::
 
-::::
-
-:::{admonition} About the Diátaxis framework
-:class: seealso
-
-The four sections above are not arbitrary. They correspond to the four distinct
-documentation needs described by [Diátaxis](https://diataxis.fr/): *learning*,
-*goals*, *information* and *understanding*. Keeping them separate makes the
-documentation easier to write and much easier to use.
-:::
+::::    
 
 ## Installation
 

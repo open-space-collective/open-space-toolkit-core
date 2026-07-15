@@ -32,30 +32,12 @@ dt.sig-object.py {
 }
 
 /* The parameter list of a multi-line signature is rendered as a <dl>/<dd>. */
-dt.sig-object.py > dl {
+dt.sig-object.py>dl {
     margin: 0;
     padding: 0;
 }
 
-dt.sig-object.py > dl > dd {
+dt.sig-object.py>dl>dd {
     margin-left: 2em;
     text-indent: 0;
-}
-
-/*
- * Keep the navigation sidebar flush-left on wide screens.
- *
- * By default Furo sizes the sidebar drawer to half the viewport
- * (``width: calc(50% - 26em)``) and right-aligns the navigation inside it
- * (``justify-content: flex-end``) to keep the content column centred. On wide
- * screens this leaves a large empty band to the left of the navigation.
- *
- * Pin the drawer to the sidebar width (15em, Furo's own value, used as-is for
- * the mobile drawer) so the navigation sits flush against the left edge. The
- * mobile off-canvas drawer (max-width: 63em) is left untouched.
- */
-@media (min-width: 63.0625em) {
-    .sidebar-drawer {
-        width: 15em;
-    }
 }

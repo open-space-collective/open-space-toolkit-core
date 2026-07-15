@@ -35,6 +35,5 @@ Doxygen documentation in the headers.
 ```{note}
 Neither page is maintained by hand. The Python reference is regenerated from the
 compiled `ostk.core` module and the C++ reference is regenerated from the header
-comments on every documentation build, so adding a class or module never
-requires editing a `.rst` file.
+comments on every documentation build.
 ```

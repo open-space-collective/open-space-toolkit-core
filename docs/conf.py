@@ -1,8 +1,6 @@
 #
 # Open Space Toolkit ▸ Core — Sphinx documentation configuration.
 #
-# The documentation follows the Diátaxis framework (https://diataxis.fr/):
-# tutorials, how-to guides, explanation and reference.
 #
 # The API reference is generated automatically:
 #   - Python : discovered by introspecting the compiled ``ostk.core`` module,
