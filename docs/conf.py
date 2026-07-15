@@ -215,6 +215,10 @@ def setup(app):
 html_theme = "furo"
 html_title = "Open Space Toolkit ▸ Core"
 
+# Custom stylesheet (loaded after the theme's CSS).
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
+
 html_theme_options = {
     "source_repository": "https://github.com/open-space-collective/open-space-toolkit-core/",
     "source_branch": "main",
