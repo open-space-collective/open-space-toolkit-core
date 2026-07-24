@@ -195,7 +195,7 @@ FOREACH (PYTHON_VERSION ${PYTHON_SEARCH_VERSIONS})
         MESSAGE (STATUS "Python ${PYTHON_VERSION} found.")
         LIST (APPEND PYTHON_VERSIONS ${PYTHON_VERSION})
     ELSE ()
-        MESSAGE (STATUS "Python ${PYTHON_VERSION} not found.")
+        MESSAGE (FATAL_ERROR "Python ${PYTHON_VERSION} was requested but not found.")
     ENDIF ()
 ENDFOREACH ()
 
