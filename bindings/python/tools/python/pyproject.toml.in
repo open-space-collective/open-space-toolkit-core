@@ -19,7 +19,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: POSIX :: Linux",
 ]
-requires-python = "~=${PYTHON_VERSION}.0"
+requires-python = ">=3.9"
 
 dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with higher-level OSTk packages
 
@@ -41,7 +41,7 @@ ext-modules = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["ostk.core"]
+include = ["ostk.core", "ostk.core.*"]
 
 [tool.setuptools.package-data]
 "ostk.core" = ["${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
