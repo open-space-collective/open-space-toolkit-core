@@ -80,7 +80,20 @@ pip install open-space-toolkit-core
 
 ## Documentation
 
-Documentation is available [here](https://open-space-collective.github.io/open-space-toolkit-core):
+Documentation is available [here](https://open-space-collective.github.io/open-space-toolkit-core).
+
+It is organised using the [Diátaxis](https://diataxis.fr/) framework, which
+separates documentation into four purpose-built sections:
+
+- **[Tutorials](https://open-space-collective.github.io/open-space-toolkit-core/tutorials/index.html)** — learning-oriented lessons to get you started.
+- **[How-to guides](https://open-space-collective.github.io/open-space-toolkit-core/how-to/index.html)** — practical recipes for specific tasks.
+- **[Reference](https://open-space-collective.github.io/open-space-toolkit-core/reference/index.html)** — the complete Python and C++ APIs, generated automatically.
+- **[Explanation](https://open-space-collective.github.io/open-space-toolkit-core/explanation/index.html)** — discussion of the design and concepts.
+
+The API reference is generated automatically on every build — the Python API by
+introspecting the compiled `ostk.core` module, and the C++ API from the header
+comments via Doxygen and [Exhale](https://exhale.readthedocs.io/) — so it never
+needs to be maintained by hand.
 
 ## Setup
 
