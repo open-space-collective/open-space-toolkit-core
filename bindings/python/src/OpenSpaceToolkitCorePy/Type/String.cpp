@@ -76,12 +76,12 @@ inline void OpenSpaceToolkitCorePy_Type_String(nanobind::class_<String>& stringC
 
         .def(
             "__add__",
-            [](const String& self, const String& other)
+            [](const String& self, const std::string& other)
             {
                 return self + other;
             },
             nanobind::is_operator(),
-            R"doc(Concatenate a String with another String.)doc"
+            R"doc(Concatenate a String with a standard string.)doc"
         )
         .def(
             "__iadd__",
