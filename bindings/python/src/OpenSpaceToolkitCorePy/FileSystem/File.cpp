@@ -5,18 +5,34 @@
 using ostk::core::filesystem::File;
 using ostk::core::filesystem::PermissionSet;
 
-inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileClass)
+inline void OpenSpaceToolkitCorePy_FileSystem_File(nanobind::class_<File>& fileClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     fileClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         // No init here - Files are created via static methods
 
         // Define methods
-        .def(self == self, R"doc(Check if two Files are equal.)doc")
-        .def(self != self, R"doc(Check if two Files are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const File& self, const File& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Files are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const File& self, const File& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Files are not equal.)doc"
+        )
 
         // .def("__str__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
         // .def("__repr__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
@@ -219,9 +235,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     >>> file.create()  # Uses default permissions
                     >>> file.create(PermissionSet.rw(), PermissionSet.r(), PermissionSet.none())
             )doc",
-            arg_v("owner_permissions", PermissionSet::RW(), "PermissionSet.rw()"),
-            arg_v("group_permissions", PermissionSet::R(), "PermissionSet.r()"),
-            arg_v("other_permissions", PermissionSet::R(), "PermissionSet.r()")
+            arg("owner_permissions").sig("PermissionSet.rw()") = PermissionSet::RW(),
+            arg("group_permissions").sig("PermissionSet.r()") = PermissionSet::R(),
+            arg("other_permissions").sig("PermissionSet.r()") = PermissionSet::R()
         )
         // .def("clear", &File::clear)
         .def(

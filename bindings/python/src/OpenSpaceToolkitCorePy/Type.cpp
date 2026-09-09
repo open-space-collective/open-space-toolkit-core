@@ -10,7 +10,7 @@
 #include <OpenSpaceToolkitCorePy/Type/Sign.cpp>
 #include <OpenSpaceToolkitCorePy/Type/String.cpp>
 
-inline void OpenSpaceToolkitCorePy_Type(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Type(nanobind::module_& aModule)
 {
     using ostk::core::type::Integer;
     using ostk::core::type::Real;
@@ -25,9 +25,9 @@ inline void OpenSpaceToolkitCorePy_Type(pybind11::module& aModule)
         and Sign enumerations that provide enhanced functionality over standard types.
     )doc");
 
-    pybind11::class_<Integer> integerClass(type, "Integer");
-    pybind11::class_<Real> realClass(type, "Real");
-    pybind11::class_<String> stringClass(type, "String");
+    nanobind::class_<Integer> integerClass(type, "Integer");
+    nanobind::class_<Real> realClass(type, "Real");
+    nanobind::class_<String> stringClass(type, "String");
 
     // Add custom type to python "type" submodule
     OpenSpaceToolkitCorePy_Type_Sign(type);

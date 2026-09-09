@@ -9,15 +9,15 @@
 
 using ostk::core::type::String;
 
-inline void OpenSpaceToolkitCorePy_Type_String(pybind11::class_<String>& stringClass)
+inline void OpenSpaceToolkitCorePy_Type_String(nanobind::class_<String>& stringClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::type::Size;
 
     stringClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         .def(
             init<std::string>(),
             R"doc(
@@ -34,20 +34,80 @@ inline void OpenSpaceToolkitCorePy_Type_String(pybind11::class_<String>& stringC
         )
 
         // Define methods
-        .def(self == self, R"doc(Check if two Strings are equal.)doc")
-        .def(self != self, R"doc(Check if two Strings are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const String& self, const String& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Strings are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const String& self, const String& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Strings are not equal.)doc"
+        )
 
-        .def(self + self, R"doc(Concatenate two Strings.)doc")
-        .def(self += self, R"doc(Append another String to this one in-place.)doc")
+        .def(
+            "__add__",
+            [](const String& self, const String& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Concatenate two Strings.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](String& self, const String& other) -> String&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Append another String to this one in-place.)doc"
+        )
 
-        .def(self + String(), R"doc(Concatenate a String with another String.)doc")
-        .def(self += std::string(), R"doc(Append a standard string to this String in-place.)doc")
+        .def(
+            "__add__",
+            [](const String& self, const String& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Concatenate a String with another String.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](String& self, const std::string& other) -> String&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Append a standard string to this String in-place.)doc"
+        )
 
-        .def(std::string() + self, R"doc(Concatenate a standard string with a String.)doc")
+        .def(
+            "__radd__",
+            [](const String& self, const std::string& other)
+            {
+                return other + self;
+            },
+            nanobind::is_operator(),
+            R"doc(Concatenate a standard string with a String.)doc"
+        )
 
         .def(
             "__str__",
-            +[](const ostk::core::type::String& aString) -> str
+            +[](const ostk::core::type::String& aString) -> std::string
             {
                 return aString;
             },
