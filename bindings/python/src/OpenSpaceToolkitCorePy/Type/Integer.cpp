@@ -4,16 +4,16 @@
 
 using ostk::core::type::Integer;
 
-inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integerClass)
+inline void OpenSpaceToolkitCorePy_Type_Integer(nanobind::class_<Integer>& integerClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::type::Real;
     using ostk::core::type::String;
 
     integerClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         .def(
             init<Integer::ValueType>(),
             R"doc(
@@ -49,35 +49,259 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integ
         )
 
         // Define methods
-        .def(self == self, R"doc(Check if two Integers are equal.)doc")
-        .def(self != self, R"doc(Check if two Integers are not equal.)doc")
-        .def(self < self, R"doc(Check if this Integer is less than another.)doc")
-        .def(self <= self, R"doc(Check if this Integer is less than or equal to another.)doc")
-        .def(self > self, R"doc(Check if this Integer is greater than another.)doc")
-        .def(self >= self, R"doc(Check if this Integer is greater than or equal to another.)doc")
+        .def(
+            "__eq__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Integers are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Integers are not equal.)doc"
+        )
+        .def(
+            "__lt__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self < other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Integer is less than another.)doc"
+        )
+        .def(
+            "__le__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self <= other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Integer is less than or equal to another.)doc"
+        )
+        .def(
+            "__gt__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self > other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Integer is greater than another.)doc"
+        )
+        .def(
+            "__ge__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self >= other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Integer is greater than or equal to another.)doc"
+        )
 
-        .def(self + self, R"doc(Add two Integers.)doc")
-        .def(self += self, R"doc(Add another Integer to this one in-place.)doc")
-        .def(self - self, R"doc(Subtract two Integers.)doc")
-        .def(self -= self, R"doc(Subtract another Integer from this one in-place.)doc")
-        .def(self * self, R"doc(Multiply two Integers.)doc")
-        .def(self *= self, R"doc(Multiply this Integer by another in-place.)doc")
-        .def(self / self, R"doc(Divide two Integers.)doc")
-        .def(self /= self, R"doc(Divide this Integer by another in-place.)doc")
+        .def(
+            "__add__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Add two Integers.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](Integer& self, const Integer& other) -> Integer&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Add another Integer to this one in-place.)doc"
+        )
+        .def(
+            "__sub__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self - other;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract two Integers.)doc"
+        )
+        .def(
+            "__isub__",
+            [](Integer& self, const Integer& other) -> Integer&
+            {
+                self -= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Subtract another Integer from this one in-place.)doc"
+        )
+        .def(
+            "__mul__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self * other;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply two Integers.)doc"
+        )
+        .def(
+            "__imul__",
+            [](Integer& self, const Integer& other) -> Integer&
+            {
+                self *= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Multiply this Integer by another in-place.)doc"
+        )
+        .def(
+            "__truediv__",
+            [](const Integer& self, const Integer& other)
+            {
+                return self / other;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide two Integers.)doc"
+        )
+        .def(
+            "__itruediv__",
+            [](Integer& self, const Integer& other) -> Integer&
+            {
+                self /= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Divide this Integer by another in-place.)doc"
+        )
 
-        .def(self + int(), R"doc(Add an Integer and a Python int.)doc")
-        .def(self += int(), R"doc(Add a Python int to this Integer in-place.)doc")
-        .def(self - int(), R"doc(Subtract a Python int from an Integer.)doc")
-        .def(self -= int(), R"doc(Subtract a Python int from this Integer in-place.)doc")
-        .def(self * int(), R"doc(Multiply an Integer by a Python int.)doc")
-        .def(self *= int(), R"doc(Multiply this Integer by a Python int in-place.)doc")
-        .def(self / int(), R"doc(Divide an Integer by a Python int.)doc")
-        .def(self /= int(), R"doc(Divide this Integer by a Python int in-place.)doc")
+        .def(
+            "__add__",
+            [](const Integer& self, const int& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Add an Integer and a Python int.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](Integer& self, const int& other) -> Integer&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Add a Python int to this Integer in-place.)doc"
+        )
+        .def(
+            "__sub__",
+            [](const Integer& self, const int& other)
+            {
+                return self - other;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract a Python int from an Integer.)doc"
+        )
+        .def(
+            "__isub__",
+            [](Integer& self, const int& other) -> Integer&
+            {
+                self -= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Subtract a Python int from this Integer in-place.)doc"
+        )
+        .def(
+            "__mul__",
+            [](const Integer& self, const int& other)
+            {
+                return self * other;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply an Integer by a Python int.)doc"
+        )
+        .def(
+            "__imul__",
+            [](Integer& self, const int& other) -> Integer&
+            {
+                self *= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Multiply this Integer by a Python int in-place.)doc"
+        )
+        .def(
+            "__truediv__",
+            [](const Integer& self, const int& other)
+            {
+                return self / other;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide an Integer by a Python int.)doc"
+        )
+        .def(
+            "__itruediv__",
+            [](Integer& self, const int& other) -> Integer&
+            {
+                self /= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Divide this Integer by a Python int in-place.)doc"
+        )
 
-        .def(int() + self, R"doc(Add a Python int and an Integer.)doc")
-        .def(int() - self, R"doc(Subtract an Integer from a Python int.)doc")
-        .def(int() * self, R"doc(Multiply a Python int by an Integer.)doc")
-        .def(int() / self, R"doc(Divide a Python int by an Integer.)doc")
+        .def(
+            "__radd__",
+            [](const Integer& self, const int& other)
+            {
+                return other + self;
+            },
+            nanobind::is_operator(),
+            R"doc(Add a Python int and an Integer.)doc"
+        )
+        .def(
+            "__rsub__",
+            [](const Integer& self, const int& other)
+            {
+                return other - self;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract an Integer from a Python int.)doc"
+        )
+        .def(
+            "__rmul__",
+            [](const Integer& self, const int& other)
+            {
+                return other * self;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply a Python int by an Integer.)doc"
+        )
+        .def(
+            "__rtruediv__",
+            [](const Integer& self, const int& other)
+            {
+                return other / self;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide a Python int by an Integer.)doc"
+        )
 
         .def(
             "__str__",
@@ -594,6 +818,6 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(pybind11::class_<Integer>& integ
 
         ;
 
-    // Implicit conversion (allowed in the direction of the binded custom type only in pybind11)
+    // Implicit conversion (allowed in the direction of the binded custom type only in nanobind)
     implicitly_convertible<Integer::ValueType, Integer>();
 }

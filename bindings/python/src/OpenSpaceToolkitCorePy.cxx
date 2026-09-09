@@ -1,14 +1,13 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkitCorePy/Utility/ShiftToString.hpp>
-#include <pybind11/operators.h>
-#include <pybind11/pybind11.h>
+#include <nanobind/nanobind.h>
 
 #include <OpenSpaceToolkitCorePy/Container.cpp>
 #include <OpenSpaceToolkitCorePy/FileSystem.cpp>
 #include <OpenSpaceToolkitCorePy/Type.cpp>
 
-PYBIND11_MODULE(OpenSpaceToolkitCorePy, m)
+NB_MODULE(OpenSpaceToolkitCorePy, m)
 {
     // Add optional docstring for package OpenSpaceToolkitCorePy
     m.doc() = "Fundamental types, container and utility for OpenSpaceToolkit.";

@@ -73,9 +73,9 @@ Array<String> getStringArray()
     return vector;
 }
 
-inline void OpenSpaceToolkitCorePy_Container_Array(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Container_Array(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::type::Integer;
     using ostk::core::type::Real;
