@@ -3,6 +3,9 @@
 #ifndef __OpenSpaceToolkit_Core_Type_Real__
 #define __OpenSpaceToolkit_Core_Type_Real__
 
+#include <cmath>
+#include <limits>
+
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/Sign.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
@@ -576,21 +579,393 @@ class Real
     static Real Parse(const type::String& aString);
 
    private:
-    enum class Type
-    {
+    /// Throws `error::runtime::Undefined("Real")`. Defined in Real.cpp so that
+    /// this header need not pull in the error hierarchy just to inline the
+    /// arithmetic.
+    [[noreturn]] static void ThrowUndefined();
 
-        Undefined,
-        Defined,
-        PositiveInfinity,
-        NegativeInfinity
-
-    };
-
-    Real::Type type_;
+    /// The value is stored in its native IEEE-754 representation: a quiet NaN
+    /// denotes an undefined real, and the infinities are the native ones. No
+    /// discriminant tag is carried, so `sizeof(Real) == sizeof(double)` and the
+    /// arithmetic below is the hardware's.
     Real::ValueType value_;
-
-    Real(const Real::Type& aType, const Real::ValueType& aReal);
 };
+
+
+// Inline implementation
+//
+// The operations below used to live in Real.cpp, where every comparison and
+// every arithmetic operation cost a cross-library call and a switch over a
+// discriminant tag. With the value held in its native IEEE-754 form they are
+// small enough to inline, so callers get the bare hardware instruction.
+
+inline Real::Real(Real::ValueType aReal)
+    : value_(aReal)
+{
+}
+
+inline Real& Real::operator=(Real::ValueType aReal)
+{
+    value_ = aReal;
+
+    return *this;
+}
+
+// Comparison operators are only meaningful between two finite reals: an
+// undefined or infinite operand makes every comparison false.
+
+inline bool Real::operator==(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ == aReal.value_);
+}
+
+inline bool Real::operator!=(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ != aReal.value_);
+}
+
+inline bool Real::operator<(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ < aReal.value_);
+}
+
+inline bool Real::operator<=(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ <= aReal.value_);
+}
+
+inline bool Real::operator>(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ > aReal.value_);
+}
+
+inline bool Real::operator>=(const Real& aReal) const
+{
+    return std::isfinite(value_) && std::isfinite(aReal.value_) && (value_ >= aReal.value_);
+}
+
+inline bool Real::operator==(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ == aReal);
+}
+
+inline bool Real::operator!=(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ != aReal);
+}
+
+inline bool Real::operator<(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ < aReal);
+}
+
+inline bool Real::operator<=(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ <= aReal);
+}
+
+inline bool Real::operator>(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ > aReal);
+}
+
+inline bool Real::operator>=(const Real::ValueType& aReal) const
+{
+    return std::isfinite(value_) && (value_ >= aReal);
+}
+
+// Arithmetic is the hardware's: NaN propagates through an undefined operand,
+// overflow saturates to an infinity, and the indeterminate forms
+// (inf - inf, 0 * inf, inf / inf) already yield NaN. Division by zero is the
+// one case where IEEE-754 and this type disagree - IEEE-754 yields an infinity,
+// where a real divided by zero is undefined here - so it is checked for.
+
+inline Real Real::operator+(const Real& aReal) const
+{
+    return Real(value_ + aReal.value_);
+}
+
+inline Real Real::operator-(const Real& aReal) const
+{
+    return Real(value_ - aReal.value_);
+}
+
+inline Real Real::operator*(const Real& aReal) const
+{
+    return Real(value_ * aReal.value_);
+}
+
+inline Real Real::operator/(const Real& aReal) const
+{
+    return (aReal.value_ == 0.0) ? Real::Undefined() : Real(value_ / aReal.value_);
+}
+
+inline Real Real::operator+(const Real::ValueType& aReal) const
+{
+    return Real(value_ + aReal);
+}
+
+inline Real Real::operator-(const Real::ValueType& aReal) const
+{
+    return Real(value_ - aReal);
+}
+
+inline Real Real::operator*(const Real::ValueType& aReal) const
+{
+    return Real(value_ * aReal);
+}
+
+inline Real Real::operator/(const Real::ValueType& aReal) const
+{
+    return (aReal == 0.0) ? Real::Undefined() : Real(value_ / aReal);
+}
+
+inline Real Real::operator+(const type::Integer& anInteger) const
+{
+    return (*this) + Real::Integer(anInteger);
+}
+
+inline Real Real::operator-(const type::Integer& anInteger) const
+{
+    return (*this) - Real::Integer(anInteger);
+}
+
+inline Real Real::operator*(const type::Integer& anInteger) const
+{
+    return (*this) * Real::Integer(anInteger);
+}
+
+inline Real Real::operator/(const type::Integer& anInteger) const
+{
+    return (*this) / Real::Integer(anInteger);
+}
+
+inline Real& Real::operator+=(const Real& aReal)
+{
+    value_ += aReal.value_;
+
+    return *this;
+}
+
+inline Real& Real::operator-=(const Real& aReal)
+{
+    value_ -= aReal.value_;
+
+    return *this;
+}
+
+inline Real& Real::operator*=(const Real& aReal)
+{
+    value_ *= aReal.value_;
+
+    return *this;
+}
+
+inline Real& Real::operator/=(const Real& aReal)
+{
+    return (*this) = (*this) / aReal;
+}
+
+inline Real& Real::operator+=(const Real::ValueType& aReal)
+{
+    value_ += aReal;
+
+    return *this;
+}
+
+inline Real& Real::operator-=(const Real::ValueType& aReal)
+{
+    value_ -= aReal;
+
+    return *this;
+}
+
+inline Real& Real::operator*=(const Real::ValueType& aReal)
+{
+    value_ *= aReal;
+
+    return *this;
+}
+
+inline Real& Real::operator/=(const Real::ValueType& aReal)
+{
+    return (*this) = (*this) / aReal;
+}
+
+inline Real operator+(const Real::ValueType& aDouble, const Real& aReal)
+{
+    return Real(aDouble) + aReal;
+}
+
+inline Real operator-(const Real::ValueType& aDouble, const Real& aReal)
+{
+    return Real(aDouble) - aReal;
+}
+
+inline Real operator*(const Real::ValueType& aDouble, const Real& aReal)
+{
+    return Real(aDouble) * aReal;
+}
+
+inline Real operator/(const Real::ValueType& aDouble, const Real& aReal)
+{
+    return Real(aDouble) / aReal;
+}
+
+inline Real Real::operator+() const
+{
+    return *this;
+}
+
+inline Real Real::operator-() const
+{
+    return Real(-value_);
+}
+
+// Predicates reduce to a single floating-point comparison each: a NaN compares
+// false against everything, so the undefined case falls out for free.
+
+inline bool Real::isDefined() const
+{
+    return !std::isnan(value_);
+}
+
+inline bool Real::isZero() const
+{
+    return value_ == 0.0;
+}
+
+inline bool Real::isPositive() const
+{
+    return value_ >= 0.0;
+}
+
+inline bool Real::isNegative() const
+{
+    return value_ <= 0.0;
+}
+
+inline bool Real::isStrictlyPositive() const
+{
+    return value_ > 0.0;
+}
+
+inline bool Real::isStrictlyNegative() const
+{
+    return value_ < 0.0;
+}
+
+inline bool Real::isInfinity() const
+{
+    return std::isinf(value_);
+}
+
+inline bool Real::isPositiveInfinity() const
+{
+    return value_ == std::numeric_limits<Real::ValueType>::infinity();
+}
+
+inline bool Real::isNegativeInfinity() const
+{
+    return value_ == -std::numeric_limits<Real::ValueType>::infinity();
+}
+
+inline bool Real::isFinite() const
+{
+    return std::isfinite(value_);
+}
+
+inline bool Real::isInteger() const
+{
+    Real::ValueType integralPart;
+
+    return std::isfinite(value_) && (std::modf(value_, &integralPart) == 0.0);
+}
+
+inline Real::operator Real::ValueType() const
+{
+    if (!std::isfinite(value_))
+    {
+        Real::ThrowUndefined();
+    }
+
+    return value_;
+}
+
+inline type::Sign Real::getSign() const
+{
+    if (std::isnan(value_))
+    {
+        return type::Sign::Undefined;
+    }
+
+    if (value_ > 0.0)
+    {
+        return type::Sign::Positive;
+    }
+
+    if (value_ < 0.0)
+    {
+        return type::Sign::Negative;
+    }
+
+    return type::Sign::None;
+}
+
+inline Real Real::abs() const
+{
+    return Real(std::abs(value_));
+}
+
+inline Real Real::sqrt() const
+{
+    return (value_ < 0.0) ? Real::Undefined() : Real(std::sqrt(value_));
+}
+
+inline Real Real::Undefined()
+{
+    return Real(std::numeric_limits<Real::ValueType>::quiet_NaN());
+}
+
+inline Real Real::Zero()
+{
+    return Real(0.0);
+}
+
+inline Real Real::Pi()
+{
+    return Real(M_PI);
+}
+
+inline Real Real::HalfPi()
+{
+    return Real(M_PI / 2.0);
+}
+
+inline Real Real::TwoPi()
+{
+    return Real(2.0 * M_PI);
+}
+
+inline Real Real::Epsilon()
+{
+    return Real(1e-15);
+}
+
+inline Real Real::PositiveInfinity()
+{
+    return Real(std::numeric_limits<Real::ValueType>::infinity());
+}
+
+inline Real Real::NegativeInfinity()
+{
+    return Real(-std::numeric_limits<Real::ValueType>::infinity());
+}
+
+inline Real Real::Integer(const type::Integer& anInteger)
+{
+    return anInteger.isDefined() ? Real(static_cast<Real::ValueType>(anInteger)) : Real::Undefined();
+}
 
 }  // namespace type
 }  // namespace core
