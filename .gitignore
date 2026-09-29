@@ -37,6 +37,7 @@ build/
 *.rpm*
 packages/
 coverage/
+abi-report/
 
 ## Documentation
 

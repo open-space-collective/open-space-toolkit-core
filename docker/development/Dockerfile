@@ -69,6 +69,23 @@ RUN cd /tmp \
     && cp src/*.h /usr/local/include/rapidcsv/ \
     && rm -rf /tmp/rapidcsv
 
+## ABI compliance tools (used by tools/check-abi.sh)
+
+# The Ubuntu 20.04 abi-dumper (1.1) silently drops most symbols from GCC 13 builds, hence the install from source.
+
+ARG ABI_DUMPER_VERSION="1.4"
+ARG ABI_COMPLIANCE_CHECKER_VERSION="2.3"
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends elfutils universal-ctags vtable-dumper \
+    && rm -rf /var/lib/apt/lists/* \
+    && cd /tmp \
+    && git clone --branch ${ABI_DUMPER_VERSION} --depth 1 https://github.com/lvc/abi-dumper.git \
+    && make -C abi-dumper install prefix=/usr/local \
+    && git clone --branch ${ABI_COMPLIANCE_CHECKER_VERSION} --depth 1 https://github.com/lvc/abi-compliance-checker.git \
+    && make -C abi-compliance-checker install prefix=/usr/local \
+    && rm -rf /tmp/abi-dumper /tmp/abi-compliance-checker
+
 # Labels
 
 ARG VERSION

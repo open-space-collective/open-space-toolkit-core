@@ -15,6 +15,8 @@ docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
 test_python_version := 3.11
 
+abi_baseline := $(shell git describe --tags --abbrev=0 2> /dev/null)
+
 jupyter_notebook_port := 9005
 jupyter_python_version := 3.11
 jupyter_python_version_without_dot := $(shell echo $(jupyter_python_version) | sed 's/\.//')
@@ -567,6 +569,19 @@ test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
 .PHONY: test-coverage-cpp
 
+check-abi: build-development-image ## Check the ABI of HEAD against abi_baseline (default: latest tag)
+
+	@ echo "Checking ABI compatibility against $(abi_baseline)..."
+
+	docker run \
+		--rm \
+		--volume="$(CURDIR):/app:delegated" \
+		--workdir=/app \
+		$(docker_development_image_repository):$(docker_image_version) \
+		/bin/bash -c "git config --global --add safe.directory '*' && ./tools/check-abi.sh '$(abi_baseline)' HEAD"
+
+.PHONY: check-abi
+
 clean: ## Clean
 
 	@ echo "Cleaning up..."
@@ -577,6 +592,7 @@ clean: ## Clean
 	rm -rf "$(CURDIR)/docs/latex"
 	rm -rf "$(CURDIR)/lib"
 	rm -rf "$(CURDIR)/coverage"
+	rm -rf "$(CURDIR)/abi-report"
 	rm -rf "$(CURDIR)/packages"
 	rm -rf "$(CURDIR)/.open-space-toolkit"
 	find "$(CURDIR)" -type d -name ".mypy_cache" -not -path "$(CURDIR)/.git/*" -exec rm -rf {} +

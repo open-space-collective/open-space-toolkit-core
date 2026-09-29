@@ -130,6 +130,20 @@ Or to run them manually:
 
 *Tip: The `ostk-test` command simplifies running tests from within the development environment.*
 
+### ABI Compatibility
+
+Pull requests are checked with [ABI Compliance Checker](https://lvc.github.io/abi-compliance-checker/) for changes that break binary compatibility of the shared library with their base branch.
+If a break is intentional, mark the pull request title as a breaking change (e.g. `feat!: ...`) and re-run the check.
+
+To check the current commit against the latest release, or against another revision:
+
+```bash
+make check-abi
+make check-abi abi_baseline=5.2.0
+```
+
+Only committed changes are checked. The report is written to `./abi-report/compat_report.html`.
+
 ## Contribution
 
 Contributions are more than welcome!
