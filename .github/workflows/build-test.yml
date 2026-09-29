@@ -87,6 +87,10 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         shell: bash
         run: |
+          # The workspace is owned by the runner user, not the container's root user, and actions/checkout only trusts
+          # it during its own step. The clones made by the script need the .git directory trusted too, hence '*'.
+          git config --global --add safe.directory '*'
+
           status=0
           ./tools/check-abi.sh "${BASE_SHA}" HEAD || status=$?
 
