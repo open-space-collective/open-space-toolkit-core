@@ -1,0 +1,11 @@
+[package]
+name = "ostk-build"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "build.rs support for the Open Space Toolkit Rust bindings: builds an OSTK library statically with CMake and emits the link line"
+repository = "https://github.com/open-space-collective/open-space-toolkit-core"
+
+[dependencies]
+cmake = "0.1.52"
+cc = "1"
