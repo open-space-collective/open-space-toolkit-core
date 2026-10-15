@@ -587,7 +587,6 @@ class Real
     Real::ValueType value_;
 };
 
-
 // Inline implementation
 //
 // The operations below used to live in Real.cpp, where every comparison and
