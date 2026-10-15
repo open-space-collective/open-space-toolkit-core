@@ -584,10 +584,6 @@ class Real
     /// arithmetic.
     [[noreturn]] static void ThrowUndefined();
 
-    /// The value is stored in its native IEEE-754 representation: a quiet NaN
-    /// denotes an undefined real, and the infinities are the native ones. No
-    /// discriminant tag is carried, so `sizeof(Real) == sizeof(double)` and the
-    /// arithmetic below is the hardware's.
     Real::ValueType value_;
 };
 
@@ -674,11 +670,6 @@ inline bool Real::operator>=(const Real::ValueType& aReal) const
     return std::isfinite(value_) && (value_ >= aReal);
 }
 
-// Arithmetic is the hardware's: NaN propagates through an undefined operand,
-// overflow saturates to an infinity, and the indeterminate forms
-// (inf - inf, 0 * inf, inf / inf) already yield NaN. Division by zero is the
-// one case where IEEE-754 and this type disagree - IEEE-754 yields an infinity,
-// where a real divided by zero is undefined here - so it is checked for.
 
 inline Real Real::operator+(const Real& aReal) const
 {
@@ -822,8 +813,6 @@ inline Real Real::operator-() const
     return Real(-value_);
 }
 
-// Predicates reduce to a single floating-point comparison each: a NaN compares
-// false against everything, so the undefined case falls out for free.
 
 inline bool Real::isDefined() const
 {
