@@ -19,13 +19,13 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: POSIX :: Linux",
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 
 dependencies = [] # no runtime dependencies for ostk-core, but kept for symmetry with higher-level OSTk packages
 
 [project.optional-dependencies]
 prebuild = [
-    "nanobind==2.9.2"
+    "nanobind==3.1.0"
 ]
 test = [
     "pytest"

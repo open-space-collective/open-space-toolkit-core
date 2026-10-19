@@ -48,6 +48,25 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(nanobind::class_<Integer>& integ
             )doc"
         )
 
+        // Since nanobind 2.14, implicit conversion to integer-typed arguments requires __index__
+        .def(
+            "__index__",
+            +[](const ostk::core::type::Integer& anInteger) -> int
+            {
+                return static_cast<int>(anInteger);
+            },
+            R"doc(
+                Convert the Integer to a Python int losslessly, so it can be used where an integer is expected.
+
+                Returns:
+                    int: The numeric value as a Python int.
+
+                Example:
+                    >>> integer = Integer(42)
+                    >>> [0, 1, 2, 3][Integer(2)]  # 2
+            )doc"
+        )
+
         // Define methods
         .def(
             "__eq__",
