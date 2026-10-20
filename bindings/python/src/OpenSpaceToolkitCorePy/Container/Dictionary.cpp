@@ -71,7 +71,6 @@ inline void OpenSpaceToolkitCorePy_Container_Dictionary(nanobind::class_<Diction
 
     dictionaryClass
 
-        // https://github.com/pybind/nanobind/blob/e3aa215b020886d648add951186052c619c3cf9d/include/nanobind/stl_bind.h
 
         .def(
             "__init__",
