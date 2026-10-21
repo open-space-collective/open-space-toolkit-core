@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <limits>
+#include <locale>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
@@ -203,6 +204,24 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // Distance exceeds the signed range: must not overflow
+        const Array<int> firstArray = {std::numeric_limits<int>::min()};
+        const Array<int> secondArray = {std::numeric_limits<int>::max()};
+
+        EXPECT_FALSE(firstArray.isNear(secondArray, std::numeric_limits<int>::max()));
+        EXPECT_FALSE(firstArray.isNear(secondArray, -1));
+    }
+
+    {
+        const Array<unsigned int> firstArray = {1u, 10u};
+        const Array<unsigned int> secondArray = {3u, 8u};
+
+        EXPECT_TRUE(firstArray.isNear(secondArray, 2u));
+        EXPECT_FALSE(firstArray.isNear(secondArray, 1u));
+        EXPECT_TRUE(secondArray.isNear(firstArray, 2u));
+    }
+
+    {
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 3.0};
 
@@ -357,6 +376,25 @@ TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
         const Array<double> array({std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::infinity()});
 
         EXPECT_EQ("[Undefined, +Inf]", array.toString());
+    }
+
+    {
+        // Output must not depend on the global locale
+        struct CommaNumpunct : std::numpunct<char>
+        {
+            char do_decimal_point() const override
+            {
+                return ',';
+            }
+        };
+
+        const std::locale previousLocale = std::locale::global(std::locale(std::locale::classic(), new CommaNumpunct));
+
+        const Array<double> array({1.5});
+
+        EXPECT_EQ("[1.5]", array.toString());
+
+        std::locale::global(previousLocale);
     }
 
     {

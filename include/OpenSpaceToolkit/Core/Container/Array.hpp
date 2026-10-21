@@ -167,7 +167,7 @@ class Array : public std::vector<T>
     ///     Array<double> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
     ///     firstArray.isNear(secondArray,
     ///     [] (const double& aFirstValue, const double& aSecondValue) -> bool
-    ///     { return aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; // True
+    ///     { return std::abs(aFirstValue - aSecondValue) <= 1e-15 ; }) ; // True
     /// @endcode
     ///
     /// @param [in] anArray An array

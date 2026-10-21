@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <limits>
+#include <locale>
 #include <sstream>
 #include <string>
 #include <type_traits>
@@ -127,7 +128,25 @@ bool Array<T>::isNear(const Array<T>& anArray, const T& aTolerance) const
 
     for (const auto elementTuple : ostk::core::container::iterator::Zip(*this, anArray))
     {
-        if constexpr (std::is_arithmetic<T>::value)
+        if constexpr (std::is_integral<T>::value && !std::is_same<T, bool>::value)
+        {
+            // Compute the distance in the unsigned domain to avoid signed overflow
+            using Unsigned = typename std::make_unsigned<T>::type;
+
+            const T& firstValue = std::get<0>(elementTuple);
+            const T& secondValue = std::get<1>(elementTuple);
+
+            const Unsigned distance =
+                (firstValue > secondValue)
+                    ? static_cast<Unsigned>(static_cast<Unsigned>(firstValue) - static_cast<Unsigned>(secondValue))
+                    : static_cast<Unsigned>(static_cast<Unsigned>(secondValue) - static_cast<Unsigned>(firstValue));
+
+            if (!((aTolerance >= 0) && (distance <= static_cast<Unsigned>(aTolerance))))
+            {
+                return false;
+            }
+        }
+        else if constexpr (std::is_floating_point<T>::value)
         {
             if (!(std::abs(std::get<0>(elementTuple) - std::get<1>(elementTuple)) <= aTolerance))
             {
@@ -214,6 +233,7 @@ extractString(const T& aType)
 
         std::ostringstream stringStream;
 
+        stringStream.imbue(std::locale::classic());
         stringStream.precision(std::numeric_limits<T>::max_digits10);
 
         stringStream << aType;
