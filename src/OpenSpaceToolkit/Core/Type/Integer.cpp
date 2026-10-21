@@ -8,6 +8,10 @@
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace ostk
 {
 namespace core
@@ -1016,3 +1020,5 @@ Integer::Integer(const Integer::Type& aType, const Integer::ValueType& anInteger
 }  // namespace type
 }  // namespace core
 }  // namespace ostk
+
+#pragma GCC diagnostic pop

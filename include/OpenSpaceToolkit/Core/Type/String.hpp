@@ -42,9 +42,6 @@ using ostk::core::container::Array;
 using ostk::core::type::Index;
 using ostk::core::type::Size;
 
-class Real;
-class Integer;
-
 /// @brief A sequence of characters
 ///
 /// @note The current implementation (derived for std::string) is temporary, as this type of

@@ -9,6 +9,10 @@
 
 #include <Global.test.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 TEST(OpenSpaceToolkit_Core_Type_Real, DefaultConstructor)
 {
     using ostk::core::type::Real;
@@ -2457,3 +2461,5 @@ TEST(OpenSpaceToolkit_Core_Type_Real, Parse)
     EXPECT_ANY_THROW(Real::Parse("-1e600"));
     EXPECT_ANY_THROW(Real::Parse("+1e600"));
 }
+
+#pragma GCC diagnostic pop

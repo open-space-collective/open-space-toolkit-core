@@ -1,9 +1,11 @@
 /// Apache License 2.0
 
+#include <cmath>
+#include <limits>
+#include <locale>
+
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
@@ -12,16 +14,15 @@
 TEST(OpenSpaceToolkit_Core_Container_Array, VectorConstructor)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        const std::vector<Integer> aVector = {1, 2, 3};
+        const std::vector<int> aVector = {1, 2, 3};
 
-        EXPECT_NO_THROW(Array<Integer> array(aVector); (void)array;);
+        EXPECT_NO_THROW(Array<int> array(aVector); (void)array;);
 
-        const Array<Integer> array(aVector);
+        const Array<int> array(aVector);
 
         EXPECT_EQ(Size(3), array.getSize());
 
@@ -48,17 +49,16 @@ TEST(OpenSpaceToolkit_Core_Container_Array, VectorConstructor)
 TEST(OpenSpaceToolkit_Core_Container_Array, SizeValueConstructor)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
         const Size size = 3;
-        const Integer value = 123;
+        const int value = 123;
 
-        EXPECT_NO_THROW(Array<Integer> array(size, value); (void)array;);
+        EXPECT_NO_THROW(Array<int> array(size, value); (void)array;);
 
-        const Array<Integer> array(size, value);
+        const Array<int> array(size, value);
 
         EXPECT_EQ(Size(3), array.getSize());
 
@@ -86,14 +86,13 @@ TEST(OpenSpaceToolkit_Core_Container_Array, SizeValueConstructor)
 TEST(OpenSpaceToolkit_Core_Container_Array, InitializerListConstructor)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        EXPECT_NO_THROW(Array<Integer> array({1, 2, 3}); (void)array;);
+        EXPECT_NO_THROW(Array<int> array({1, 2, 3}); (void)array;);
 
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_EQ(Size(3), array.getSize());
 
@@ -118,42 +117,39 @@ TEST(OpenSpaceToolkit_Core_Container_Array, InitializerListConstructor)
 TEST(OpenSpaceToolkit_Core_Container_Array, AdditionOperator)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
 
     {
-        const Array<Integer> firstArray({-4, -3, -2, -1});
-        const Array<Integer> secondArray({+0, +1, +2, +3, +4});
+        const Array<int> firstArray({-4, -3, -2, -1});
+        const Array<int> secondArray({+0, +1, +2, +3, +4});
 
         EXPECT_NO_THROW(firstArray + secondArray);
 
-        EXPECT_EQ(Array<Integer>({-4, -3, -2, -1, +0, +1, +2, +3, +4}), firstArray + secondArray);
+        EXPECT_EQ(Array<int>({-4, -3, -2, -1, +0, +1, +2, +3, +4}), firstArray + secondArray);
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, IsEmpty)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
 
     {
-        EXPECT_FALSE(Array<Integer>({1, 2, 3}).isEmpty());
+        EXPECT_FALSE(Array<int>({1, 2, 3}).isEmpty());
     }
 
     {
-        EXPECT_TRUE(Array<Integer>({}).isEmpty());
-        EXPECT_TRUE(Array<Integer>::Empty().isEmpty());
+        EXPECT_TRUE(Array<int>({}).isEmpty());
+        EXPECT_TRUE(Array<int>::Empty().isEmpty());
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, Contains)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_TRUE(array.contains(1));
         EXPECT_TRUE(array.contains(2));
@@ -177,33 +173,71 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Contains)
 TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Real;
 
     // Tolerance
 
     {
-        const Array<Real> array = {1.0, 2.0, 3.0};
+        const Array<double> array = {1.0, 2.0, 3.0};
 
         EXPECT_TRUE(array.isNear(array, 0.0));
     }
 
     {
-        const Array<Real> firstArray = {1.0, 2.0, 3.0};
-        const Array<Real> secondArray = {1.0, 2.0, 3.0};
+        const Array<double> firstArray = {1.0, 2.0, 3.0};
+        const Array<double> secondArray = {1.0, 2.0, 4.0};
+
+        EXPECT_FALSE(firstArray.isNear(secondArray, 0.5));
+    }
+
+    {
+        const Array<double> firstArray = {1.0, std::numeric_limits<double>::quiet_NaN()};
+
+        EXPECT_FALSE(firstArray.isNear(firstArray, 1.0));
+    }
+
+    {
+        const Array<int> firstArray = {1, 2, 3};
+        const Array<int> secondArray = {1, 2, 4};
+
+        EXPECT_TRUE(firstArray.isNear(secondArray, 1));
+        EXPECT_FALSE(firstArray.isNear(secondArray, 0));
+    }
+
+    {
+        // Distance exceeds the signed range: must not overflow
+        const Array<int> firstArray = {std::numeric_limits<int>::min()};
+        const Array<int> secondArray = {std::numeric_limits<int>::max()};
+
+        EXPECT_FALSE(firstArray.isNear(secondArray, std::numeric_limits<int>::max()));
+        EXPECT_FALSE(firstArray.isNear(secondArray, -1));
+    }
+
+    {
+        const Array<unsigned int> firstArray = {1u, 10u};
+        const Array<unsigned int> secondArray = {3u, 8u};
+
+        EXPECT_TRUE(firstArray.isNear(secondArray, 2u));
+        EXPECT_FALSE(firstArray.isNear(secondArray, 1u));
+        EXPECT_TRUE(secondArray.isNear(firstArray, 2u));
+    }
+
+    {
+        const Array<double> firstArray = {1.0, 2.0, 3.0};
+        const Array<double> secondArray = {1.0, 2.0, 3.0};
 
         EXPECT_TRUE(firstArray.isNear(secondArray, 0.0));
     }
 
     {
-        const Array<Real> firstArray = {1.0, 2.0, 3.0};
-        const Array<Real> secondArray = {1.0, 2.0, 4.0};
+        const Array<double> firstArray = {1.0, 2.0, 3.0};
+        const Array<double> secondArray = {1.0, 2.0, 4.0};
 
         EXPECT_TRUE(firstArray.isNear(secondArray, 1.0));
     }
 
     {
-        const Array<Real> firstArray = {1.0, 2.0, 3.0};
-        const Array<Real> secondArray = {1.0, 2.0, 3.0, 4.0};
+        const Array<double> firstArray = {1.0, 2.0, 3.0};
+        const Array<double> secondArray = {1.0, 2.0, 3.0, 4.0};
 
         EXPECT_FALSE(firstArray.isNear(secondArray, 1.0));
     }
@@ -211,14 +245,14 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     // Comparator
 
     {
-        const Array<Real> firstArray = {1.0, 2.0, 3.0};
-        const Array<Real> secondArray = {1.0, 2.0, 4.0};
+        const Array<double> firstArray = {1.0, 2.0, 3.0};
+        const Array<double> secondArray = {1.0, 2.0, 4.0};
 
         EXPECT_TRUE(firstArray.isNear(
             secondArray,
-            [](const Real& aFirstValue, const Real& aSecondValue) -> bool
+            [](const double& aFirstValue, const double& aSecondValue) -> bool
             {
-                return aFirstValue.isNear(aSecondValue, 1.0);
+                return std::abs(aFirstValue - aSecondValue) <= 1.0;
             }
         ));
     }
@@ -227,11 +261,10 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
 TEST(OpenSpaceToolkit_Core_Container_Array, AccessFirst)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_NO_THROW(array.accessFirst());
 
@@ -256,11 +289,10 @@ TEST(OpenSpaceToolkit_Core_Container_Array, AccessFirst)
 TEST(OpenSpaceToolkit_Core_Container_Array, AccessLast)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_NO_THROW(array.accessLast());
 
@@ -285,14 +317,13 @@ TEST(OpenSpaceToolkit_Core_Container_Array, AccessLast)
 TEST(OpenSpaceToolkit_Core_Container_Array, GetSize)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
-    EXPECT_EQ(Size(0), Array<Integer>({}).getSize());
-    EXPECT_EQ(Size(0), Array<Integer>::Empty().getSize());
+    EXPECT_EQ(Size(0), Array<int>({}).getSize());
+    EXPECT_EQ(Size(0), Array<int>::Empty().getSize());
 
-    EXPECT_EQ(Size(3), Array<Integer>({1, 2, 3}).getSize());
+    EXPECT_EQ(Size(3), Array<int>({1, 2, 3}).getSize());
     EXPECT_EQ(Size(2), Array<String>({"abc", "def"}).getSize());
 }
 
@@ -300,11 +331,10 @@ TEST(OpenSpaceToolkit_Core_Container_Array, GetIndexOf)
 {
     using ostk::core::container::Array;
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_EQ(Index(0), array.getIndexOf(1));
         EXPECT_EQ(Index(1), array.getIndexOf(2));
@@ -328,13 +358,43 @@ TEST(OpenSpaceToolkit_Core_Container_Array, GetIndexOf)
 TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({1, 2, 3});
+        const Array<int> array({1, 2, 3});
 
         EXPECT_EQ("[1, 2, 3]", array.toString());
+    }
+
+    {
+        const Array<double> array({1.0, 2.5, -3.0});
+
+        EXPECT_EQ("[1.0, 2.5, -3.0]", array.toString());
+    }
+
+    {
+        const Array<double> array({std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::infinity()});
+
+        EXPECT_EQ("[Undefined, +Inf]", array.toString());
+    }
+
+    {
+        // Output must not depend on the global locale
+        struct CommaNumpunct : std::numpunct<char>
+        {
+            char do_decimal_point() const override
+            {
+                return ',';
+            }
+        };
+
+        const std::locale previousLocale = std::locale::global(std::locale(std::locale::classic(), new CommaNumpunct));
+
+        const Array<double> array({1.5});
+
+        EXPECT_EQ("[1.5]", array.toString());
+
+        std::locale::global(previousLocale);
     }
 
     {
@@ -344,7 +404,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
     }
 
     {
-        EXPECT_EQ("[]", Array<Integer>::Empty().toString());
+        EXPECT_EQ("[]", Array<int>::Empty().toString());
         EXPECT_EQ("[]", Array<String>::Empty().toString());
     }
 }
@@ -361,21 +421,20 @@ TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
 TEST(OpenSpaceToolkit_Core_Container_Array, AccessWhere)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
+        const Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
 
-        const Array<Integer>::Predicate predicate = [](const Integer& anInteger) -> bool
+        const Array<int>::Predicate predicate = [](const int& anInteger) -> bool
         {
-            return anInteger.isEven();
+            return (anInteger % 2) == 0;
         };
 
         EXPECT_NO_THROW(array.accessWhere(predicate));
 
-        const Array<const Integer*> filteredArray = array.accessWhere(predicate);
+        const Array<const int*> filteredArray = array.accessWhere(predicate);
 
         EXPECT_EQ(Size(5), filteredArray.getSize());
 
@@ -390,25 +449,24 @@ TEST(OpenSpaceToolkit_Core_Container_Array, AccessWhere)
 TEST(OpenSpaceToolkit_Core_Container_Array, GetWhere)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
+        const Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
 
-        const Array<Integer>::Predicate predicate = [](const Integer& anInteger) -> bool
+        const Array<int>::Predicate predicate = [](const int& anInteger) -> bool
         {
-            return anInteger.isEven();
+            return (anInteger % 2) == 0;
         };
 
         EXPECT_NO_THROW(array.getWhere(predicate));
 
-        const Array<Integer> filteredArray = array.getWhere(predicate);
+        const Array<int> filteredArray = array.getWhere(predicate);
 
         EXPECT_EQ(Size(5), filteredArray.getSize());
 
-        EXPECT_EQ(Array<Integer>({-4, -2, +0, +2, +4}), filteredArray);
+        EXPECT_EQ(Array<int>({-4, -2, +0, +2, +4}), filteredArray);
 
         EXPECT_TRUE(&array[0] != &filteredArray[0]);
         EXPECT_TRUE(&array[2] != &filteredArray[1]);
@@ -421,25 +479,24 @@ TEST(OpenSpaceToolkit_Core_Container_Array, GetWhere)
 TEST(OpenSpaceToolkit_Core_Container_Array, Find)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
 
     {
-        const Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
+        const Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
 
         EXPECT_NO_THROW(array.find(+1));
 
-        const Array<Integer>::ConstIterator arrayIt = array.find(+1);
+        const Array<int>::ConstIterator arrayIt = array.find(+1);
 
         EXPECT_EQ(+1, (*arrayIt));
     }
 
     {
-        Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
+        Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
 
         EXPECT_NO_THROW(array.find(+1));
 
-        const Array<Integer>::Iterator arrayIt = array.find(+1);
+        const Array<int>::Iterator arrayIt = array.find(+1);
 
         EXPECT_EQ(+1, (*arrayIt));
 
@@ -447,15 +504,15 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Find)
 
         EXPECT_EQ(+123, (*arrayIt));
 
-        EXPECT_EQ(Array<Integer>({-4, -3, -2, -1, +0, +123, +2, +3, +4}), array);
+        EXPECT_EQ(Array<int>({-4, -3, -2, -1, +0, +123, +2, +3, +4}), array);
     }
 
     {
-        Array<Integer> array({123, 456, 123});
+        Array<int> array({123, 456, 123});
 
         EXPECT_NO_THROW(array.find(123));
 
-        const Array<Integer>::Iterator arrayIt = array.find(123);
+        const Array<int>::Iterator arrayIt = array.find(123);
 
         EXPECT_EQ(123, (*arrayIt));
 
@@ -463,23 +520,22 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Find)
 
         EXPECT_EQ(999, (*arrayIt));
 
-        EXPECT_EQ(Array<Integer>({999, 456, 123}), array);
+        EXPECT_EQ(Array<int>({999, 456, 123}), array);
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, Map)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
         const Array<String> strings = {"1", "2", "3"};
 
-        const Array<Integer> integers = strings.map<Integer>(
-            [](const String& aString) -> Integer
+        const Array<int> integers = strings.map<int>(
+            [](const String& aString) -> int
             {
-                return Integer::Parse(aString);
+                return std::stoi(aString);
             }
         );
 
@@ -505,21 +561,20 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Map)
 TEST(OpenSpaceToolkit_Core_Container_Array, Reduce)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
 
     {
-        const Array<Integer> integers = {1, 2, 3};
+        const Array<int> integers = {1, 2, 3};
 
-        const Integer reducedInteger = integers.reduce(std::plus<Integer>());
+        const int reducedInteger = integers.reduce(std::plus<int>());
 
         EXPECT_EQ(6, reducedInteger);
     }
 
     {
-        const Array<Integer> integers = {1, 2, 3};
+        const Array<int> integers = {1, 2, 3};
 
-        const Integer reducedInteger = integers.reduce(
-            [](const Integer& anAccumulator, const Integer& aValue) -> Integer
+        const int reducedInteger = integers.reduce(
+            [](const int& anAccumulator, const int& aValue) -> int
             {
                 return anAccumulator + aValue;
             }
@@ -537,35 +592,34 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Add)
 {
     using ostk::core::container::Array;
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        Array<Integer> array({1, 2, 3});
+        Array<int> array({1, 2, 3});
 
-        EXPECT_EQ(Array<Integer>({1, 2, 3}), array);
-
-        array.add(4);
-
-        EXPECT_EQ(Array<Integer>({1, 2, 3, 4}), array);
+        EXPECT_EQ(Array<int>({1, 2, 3}), array);
 
         array.add(4);
 
-        EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 4}), array);
+        EXPECT_EQ(Array<int>({1, 2, 3, 4}), array);
+
+        array.add(4);
+
+        EXPECT_EQ(Array<int>({1, 2, 3, 4, 4}), array);
     }
 
     {
-        Array<Integer> array({1, 2, 3});
+        Array<int> array({1, 2, 3});
 
-        EXPECT_EQ(Array<Integer>({1, 2, 3}), array);
-
-        array.add({4, 5, 6});
-
-        EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 5, 6}), array);
+        EXPECT_EQ(Array<int>({1, 2, 3}), array);
 
         array.add({4, 5, 6});
 
-        EXPECT_EQ(Array<Integer>({1, 2, 3, 4, 5, 6, 4, 5, 6}), array);
+        EXPECT_EQ(Array<int>({1, 2, 3, 4, 5, 6}), array);
+
+        array.add({4, 5, 6});
+
+        EXPECT_EQ(Array<int>({1, 2, 3, 4, 5, 6, 4, 5, 6}), array);
     }
 }
 
@@ -573,123 +627,119 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Remove)
 {
     using ostk::core::container::Array;
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        Array<Integer> array({1, 2, 3});
+        Array<int> array({1, 2, 3});
 
-        EXPECT_EQ(Array<Integer>({1, 2, 3}), array);
+        EXPECT_EQ(Array<int>({1, 2, 3}), array);
 
         array.remove(3);
 
-        EXPECT_EQ(Array<Integer>({1, 2}), array);
+        EXPECT_EQ(Array<int>({1, 2}), array);
 
         EXPECT_NO_THROW(array.remove(3));
 
         array.remove(1);
 
-        EXPECT_EQ(Array<Integer>({2}), array);
+        EXPECT_EQ(Array<int>({2}), array);
     }
 
     {
-        Array<Integer> array({1, 3, 2, 3});
+        Array<int> array({1, 3, 2, 3});
 
-        EXPECT_EQ(Array<Integer>({1, 3, 2, 3}), array);
+        EXPECT_EQ(Array<int>({1, 3, 2, 3}), array);
 
         array.remove(3);
 
-        EXPECT_EQ(Array<Integer>({1, 2}), array);
+        EXPECT_EQ(Array<int>({1, 2}), array);
 
         EXPECT_NO_THROW(array.remove(3));
     }
 
     {
-        Array<Integer> array({1, 3, 2, 3});
+        Array<int> array({1, 3, 2, 3});
 
-        EXPECT_EQ(Array<Integer>({1, 3, 2, 3}), array);
+        EXPECT_EQ(Array<int>({1, 3, 2, 3}), array);
 
         array.remove({2, 3});
 
-        EXPECT_EQ(Array<Integer>({1}), array);
+        EXPECT_EQ(Array<int>({1}), array);
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, MergeWith)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        Array<Integer> firstArray({-4, -3, -2, -1});
-        const Array<Integer> secondArray({+0, +1, +2, +3, +4});
+        Array<int> firstArray({-4, -3, -2, -1});
+        const Array<int> secondArray({+0, +1, +2, +3, +4});
 
         EXPECT_NO_THROW(firstArray.mergeWith(secondArray));
 
-        EXPECT_EQ(Array<Integer>({-4, -3, -2, -1, +0, +1, +2, +3, +4}), firstArray);
+        EXPECT_EQ(Array<int>({-4, -3, -2, -1, +0, +1, +2, +3, +4}), firstArray);
     }
 
     {
-        Array<Integer> firstArray({});
-        const Array<Integer> secondArray({+0, +1, +2, +3, +4});
+        Array<int> firstArray({});
+        const Array<int> secondArray({+0, +1, +2, +3, +4});
 
         EXPECT_NO_THROW(firstArray.mergeWith(secondArray));
 
-        EXPECT_EQ(Array<Integer>({+0, +1, +2, +3, +4}), firstArray);
+        EXPECT_EQ(Array<int>({+0, +1, +2, +3, +4}), firstArray);
     }
 
     {
-        Array<Integer> firstArray({-4, -3, -2, -1});
-        const Array<Integer> secondArray({});
+        Array<int> firstArray({-4, -3, -2, -1});
+        const Array<int> secondArray({});
 
         EXPECT_NO_THROW(firstArray.mergeWith(secondArray));
 
-        EXPECT_EQ(Array<Integer>({-4, -3, -2, -1}), firstArray);
+        EXPECT_EQ(Array<int>({-4, -3, -2, -1}), firstArray);
     }
 
     {
-        Array<Integer> firstArray({});
-        const Array<Integer> secondArray({});
+        Array<int> firstArray({});
+        const Array<int> secondArray({});
 
         EXPECT_NO_THROW(firstArray.mergeWith(secondArray));
 
-        EXPECT_EQ(Array<Integer>({}), firstArray);
+        EXPECT_EQ(Array<int>({}), firstArray);
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, RemoveWhere)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
     using ostk::core::type::String;
 
     {
-        Array<Integer> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
+        Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
 
-        const Array<Integer>::Predicate predicate = [](const Integer& anInteger) -> bool
+        const Array<int>::Predicate predicate = [](const int& anInteger) -> bool
         {
-            return anInteger.isOdd();
+            return (anInteger % 2) != 0;
         };
 
         EXPECT_NO_THROW(array.removeWhere(predicate));
 
-        EXPECT_EQ(Array<Integer>({-4, -2, +0, +2, +4}), array);
+        EXPECT_EQ(Array<int>({-4, -2, +0, +2, +4}), array);
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Array, Empty)
 {
     using ostk::core::container::Array;
-    using ostk::core::type::Integer;
     using ostk::core::type::Size;
 
     {
-        EXPECT_NO_THROW(Array<Integer> array = Array<Integer>::Empty(); (void)array;);
+        EXPECT_NO_THROW(Array<int> array = Array<int>::Empty(); (void)array;);
 
-        EXPECT_EQ(Size(0), Array<Integer>::Empty().getSize());
+        EXPECT_EQ(Size(0), Array<int>::Empty().getSize());
     }
 }
 
@@ -697,11 +747,10 @@ TEST(OpenSpaceToolkit_Core_Container_Array, Zip)
 {
     using ostk::core::container::Array;
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
 
     {
-        const Array<Integer> firstArray = {{-4, -3, -2, -1, +0, +1, +2, +3, +4}};
-        const Array<Integer> secondArray = {{-8, -6, -4, -2, +0, +2, +4, +6, +8}};
+        const Array<int> firstArray = {{-4, -3, -2, -1, +0, +1, +2, +3, +4}};
+        const Array<int> secondArray = {{-8, -6, -4, -2, +0, +2, +4, +6, +8}};
 
         Index index = 0;
 
