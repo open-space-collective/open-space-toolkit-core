@@ -71,7 +71,6 @@ inline void OpenSpaceToolkitCorePy_Container_Dictionary(nanobind::class_<Diction
 
     dictionaryClass
 
-
         .def(
             "__init__",
             [](Dictionary* aDictionaryPtr, const dict& aDictionary)
