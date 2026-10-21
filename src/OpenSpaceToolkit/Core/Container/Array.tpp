@@ -1,6 +1,12 @@
 /// Apache License 2.0
 
 #include <algorithm>
+#include <cmath>
+#include <cstdlib>
+#include <limits>
+#include <sstream>
+#include <string>
+#include <type_traits>
 
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Utility.hpp>
@@ -121,9 +127,19 @@ bool Array<T>::isNear(const Array<T>& anArray, const T& aTolerance) const
 
     for (const auto elementTuple : ostk::core::container::iterator::Zip(*this, anArray))
     {
-        if (!std::get<0>(elementTuple).isNear(std::get<1>(elementTuple), aTolerance))
+        if constexpr (std::is_arithmetic<T>::value)
         {
-            return false;
+            if (!(std::abs(std::get<0>(elementTuple) - std::get<1>(elementTuple)) <= aTolerance))
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if (!std::get<0>(elementTuple).isNear(std::get<1>(elementTuple), aTolerance))
+            {
+                return false;
+            }
         }
     }
 
@@ -178,6 +194,43 @@ template <typename T>
 typename std::enable_if<std::is_same<T, type::String>::value, type::String>::type extractString(const T& aType)
 {
     return "\"" + aType + "\"";
+}
+
+template <typename T>
+typename std::enable_if<std::is_arithmetic<T>::value && !std::is_same<T, bool>::value, type::String>::type
+extractString(const T& aType)
+{
+    if constexpr (std::is_floating_point<T>::value)
+    {
+        if (std::isnan(aType))
+        {
+            return "Undefined";
+        }
+
+        if (std::isinf(aType))
+        {
+            return (aType > 0) ? "+Inf" : "-Inf";
+        }
+
+        std::ostringstream stringStream;
+
+        stringStream.precision(std::numeric_limits<T>::max_digits10);
+
+        stringStream << aType;
+
+        type::String string = stringStream.str();
+
+        if (string.find_first_of(".e") == std::string::npos)
+        {
+            string += ".0";
+        }
+
+        return string;
+    }
+    else
+    {
+        return std::to_string(aType);
+    }
 }
 
 // template <typename T>

@@ -11,8 +11,6 @@
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/Type/EnumHelper.hpp>
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 #include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
@@ -215,12 +213,12 @@ class Object
     /// @brief Access integer value (const)
     ///
     /// @return Const reference to integer value
-    const type::Integer& accessInteger() const;
+    const int& accessInteger() const;
 
     /// @brief Access real value (const)
     ///
     /// @return Const reference to real value
-    const type::Real& accessReal() const;
+    const double& accessReal() const;
 
     /// @brief Access string value (const)
     ///
@@ -250,12 +248,12 @@ class Object
     /// @brief Get integer value (copy)
     ///
     /// @return Integer value
-    type::Integer getInteger() const;
+    int getInteger() const;
 
     /// @brief Get real value (copy)
     ///
     /// @return Real value
-    type::Real getReal() const;
+    double getReal() const;
 
     /// @brief Get string value (copy)
     ///
@@ -291,12 +289,12 @@ class Object
     /// @brief Access integer value (mutable)
     ///
     /// @return Reference to integer value
-    type::Integer& accessInteger();
+    int& accessInteger();
 
     /// @brief Access real value (mutable)
     ///
     /// @return Reference to real value
-    type::Real& accessReal();
+    double& accessReal();
 
     /// @brief Access string value (mutable)
     ///
@@ -338,9 +336,9 @@ class Object
     ///     Object object = Object::Integer(123) ;
     /// @endcode
     ///
-    /// @param [in] anInteger An integer (default: Undefined)
+    /// @param [in] anInteger An integer
     /// @return Integer object
-    static Object Integer(const type::Integer& anInteger = type::Integer::Undefined());
+    static Object Integer(int anInteger);
 
     /// @brief Construct a real object
     ///
@@ -348,9 +346,9 @@ class Object
     ///     Object object = Object::Real(1.23) ;
     /// @endcode
     ///
-    /// @param [in] aReal A real (default: Undefined)
+    /// @param [in] aReal A real
     /// @return Real object
-    static Object Real(const type::Real& aReal = type::Real::Undefined());
+    static Object Real(double aReal);
 
     /// @brief Construct a string object
     ///

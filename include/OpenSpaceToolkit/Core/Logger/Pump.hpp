@@ -5,7 +5,6 @@
 
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Source.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 #include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
@@ -17,7 +16,6 @@ namespace logger
 {
 
 using ostk::core::logger::Severity;
-using ostk::core::type::Integer;
 using ostk::core::type::String;
 using ostk::core::type::Unique;
 
@@ -37,9 +35,7 @@ class Pump
     /// @param [in] aFile A source file name
     /// @param [in] aFunction A source function name
     /// @param [in] aSource A pointer to the log source
-    Pump(
-        const Severity& aSeverity, const Integer& aLine, const String& aFile, const String& aFunction, Source* aSource
-    );
+    Pump(const Severity& aSeverity, int aLine, const String& aFile, const String& aFunction, Source* aSource);
 
     /// @brief Copy constructor (disabled)
     Pump(const Pump& aPump) = delete;

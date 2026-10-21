@@ -11,6 +11,10 @@
 #define CPP20
 #endif
 
+// Real and Integer are deprecated: their own definitions must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace ostk
 {
 namespace core
@@ -22,12 +26,14 @@ namespace type
 ///
 /// Represents a real number with support for undefined and infinite values.
 ///
+/// @deprecated Use `double` instead. Real will be removed in a future release.
+///
 /// @code
 ///     Real real(1.23) ;
 ///     real.isDefined() ; // True
 ///     real.toString() ; // "1.23"
 /// @endcode
-class Real
+class [[deprecated("Real is deprecated and will be removed in a future release; use double instead.")]] Real
 {
    public:
     typedef double ValueType;
@@ -607,5 +613,7 @@ struct std::formatter<ostk::core::type::Real> : std::formatter<double>
     }
 };
 #endif
+
+#pragma GCC diagnostic pop
 
 #endif
