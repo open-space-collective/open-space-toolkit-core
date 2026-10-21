@@ -7,7 +7,7 @@
 #include <OpenSpaceToolkitCorePy/Container/Dictionary.cpp>
 #include <OpenSpaceToolkitCorePy/Container/Object.cpp>
 
-inline void OpenSpaceToolkitCorePy_Container(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Container(nanobind::module_& aModule)
 {
     using ostk::core::container::Dictionary;
     using ostk::core::container::Object;
@@ -20,8 +20,8 @@ inline void OpenSpaceToolkitCorePy_Container(pybind11::module& aModule)
         and Array types for storing and manipulating structured data.
     )doc");
 
-    pybind11::class_<Dictionary> dictionaryClass(container, "Dictionary");
-    pybind11::class_<Object> objectClass(container, "Object");
+    nanobind::class_<Dictionary> dictionaryClass(container, "Dictionary");
+    nanobind::class_<Object> objectClass(container, "Object");
 
     // Add objects to python "container" submodules
     OpenSpaceToolkitCorePy_Container_Array(container);

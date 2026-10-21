@@ -194,10 +194,10 @@ def test_string_static_methods():
     assert String.char("e") == String("e")
     assert isinstance(String.char("e"), String)
 
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         assert String.char("")
 
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         assert String.char("st")
 
     # replicate

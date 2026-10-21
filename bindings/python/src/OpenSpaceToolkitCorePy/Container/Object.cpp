@@ -7,9 +7,9 @@
 
 using ostk::core::container::Object;
 
-inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& objectClass)
+inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& objectClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::type::Index;
     using ostk::core::type::Integer;
@@ -46,8 +46,24 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
 
     objectClass
 
-        .def(self == self, R"doc(Check if two Objects are equal.)doc")
-        .def(self != self, R"doc(Check if two Objects are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const Object& self, const Object& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Objects are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Object& self, const Object& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Objects are not equal.)doc"
+        )
 
         .def(
             "__getitem__",

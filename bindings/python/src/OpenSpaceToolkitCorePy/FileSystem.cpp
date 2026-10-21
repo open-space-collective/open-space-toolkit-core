@@ -16,7 +16,7 @@ using ostk::core::filesystem::File;
 using ostk::core::filesystem::Path;
 using ostk::core::filesystem::PermissionSet;
 
-inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_FileSystem(nanobind::module_& aModule)
 {
     // Create "filesystem" python submodule
     auto filesystem = aModule.def_submodule("filesystem", R"doc(
@@ -26,10 +26,10 @@ inline void OpenSpaceToolkitCorePy_FileSystem(pybind11::module& aModule)
         and permission sets, enabling cross-platform file system operations.
     )doc");
 
-    pybind11::class_<PermissionSet> permissionSetClass(filesystem, "PermissionSet");
-    pybind11::class_<Path> pathClass(filesystem, "Path");
-    pybind11::class_<File> fileClass(filesystem, "File");
-    pybind11::class_<Directory> directoryClass(filesystem, "Directory");
+    nanobind::class_<PermissionSet> permissionSetClass(filesystem, "PermissionSet");
+    nanobind::class_<Path> pathClass(filesystem, "Path");
+    nanobind::class_<File> fileClass(filesystem, "File");
+    nanobind::class_<Directory> directoryClass(filesystem, "Directory");
 
     // Add custom objects to python "filesystem" submodule
     OpenSpaceToolkitCorePy_FileSystem_PermissionSet(permissionSetClass);

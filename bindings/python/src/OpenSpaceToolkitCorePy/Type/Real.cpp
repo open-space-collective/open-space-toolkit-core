@@ -6,13 +6,13 @@ using ostk::core::type::Integer;
 using ostk::core::type::Real;
 using ostk::core::type::String;
 
-inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
+inline void OpenSpaceToolkitCorePy_Type_Real(nanobind::class_<Real>& realClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     realClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         .def(
             init<Real::ValueType>(),
             R"doc(
@@ -48,35 +48,259 @@ inline void OpenSpaceToolkitCorePy_Type_Real(pybind11::class_<Real>& realClass)
         )
 
         // Define methods
-        .def(self == self, R"doc(Check if two Real numbers are equal.)doc")
-        .def(self != self, R"doc(Check if two Real numbers are not equal.)doc")
-        .def(self < self, R"doc(Check if this Real number is less than another.)doc")
-        .def(self <= self, R"doc(Check if this Real number is less than or equal to another.)doc")
-        .def(self > self, R"doc(Check if this Real number is greater than another.)doc")
-        .def(self >= self, R"doc(Check if this Real number is greater than or equal to another.)doc")
+        .def(
+            "__eq__",
+            [](const Real& self, const Real& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Real numbers are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Real& self, const Real& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Real numbers are not equal.)doc"
+        )
+        .def(
+            "__lt__",
+            [](const Real& self, const Real& other)
+            {
+                return self < other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Real number is less than another.)doc"
+        )
+        .def(
+            "__le__",
+            [](const Real& self, const Real& other)
+            {
+                return self <= other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Real number is less than or equal to another.)doc"
+        )
+        .def(
+            "__gt__",
+            [](const Real& self, const Real& other)
+            {
+                return self > other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Real number is greater than another.)doc"
+        )
+        .def(
+            "__ge__",
+            [](const Real& self, const Real& other)
+            {
+                return self >= other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if this Real number is greater than or equal to another.)doc"
+        )
 
-        .def(self + self, R"doc(Add two Real numbers.)doc")
-        .def(self += self, R"doc(Add another Real number to this one in-place.)doc")
-        .def(self - self, R"doc(Subtract two Real numbers.)doc")
-        .def(self -= self, R"doc(Subtract another Real number from this one in-place.)doc")
-        .def(self * self, R"doc(Multiply two Real numbers.)doc")
-        .def(self *= self, R"doc(Multiply this Real number by another in-place.)doc")
-        .def(self / self, R"doc(Divide two Real numbers.)doc")
-        .def(self /= self, R"doc(Divide this Real number by another in-place.)doc")
+        .def(
+            "__add__",
+            [](const Real& self, const Real& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Add two Real numbers.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](Real& self, const Real& other) -> Real&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Add another Real number to this one in-place.)doc"
+        )
+        .def(
+            "__sub__",
+            [](const Real& self, const Real& other)
+            {
+                return self - other;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract two Real numbers.)doc"
+        )
+        .def(
+            "__isub__",
+            [](Real& self, const Real& other) -> Real&
+            {
+                self -= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Subtract another Real number from this one in-place.)doc"
+        )
+        .def(
+            "__mul__",
+            [](const Real& self, const Real& other)
+            {
+                return self * other;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply two Real numbers.)doc"
+        )
+        .def(
+            "__imul__",
+            [](Real& self, const Real& other) -> Real&
+            {
+                self *= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Multiply this Real number by another in-place.)doc"
+        )
+        .def(
+            "__truediv__",
+            [](const Real& self, const Real& other)
+            {
+                return self / other;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide two Real numbers.)doc"
+        )
+        .def(
+            "__itruediv__",
+            [](Real& self, const Real& other) -> Real&
+            {
+                self /= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Divide this Real number by another in-place.)doc"
+        )
 
-        .def(self + double(), R"doc(Add a Real number and a double.)doc")
-        .def(self += double(), R"doc(Add a double to this Real number in-place.)doc")
-        .def(self - double(), R"doc(Subtract a double from a Real number.)doc")
-        .def(self -= double(), R"doc(Subtract a double from this Real number in-place.)doc")
-        .def(self * double(), R"doc(Multiply a Real number by a double.)doc")
-        .def(self *= double(), R"doc(Multiply this Real number by a double in-place.)doc")
-        .def(self / double(), R"doc(Divide a Real number by a double.)doc")
-        .def(self /= double(), R"doc(Divide this Real number by a double in-place.)doc")
+        .def(
+            "__add__",
+            [](const Real& self, const double& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Add a Real number and a double.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](Real& self, const double& other) -> Real&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Add a double to this Real number in-place.)doc"
+        )
+        .def(
+            "__sub__",
+            [](const Real& self, const double& other)
+            {
+                return self - other;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract a double from a Real number.)doc"
+        )
+        .def(
+            "__isub__",
+            [](Real& self, const double& other) -> Real&
+            {
+                self -= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Subtract a double from this Real number in-place.)doc"
+        )
+        .def(
+            "__mul__",
+            [](const Real& self, const double& other)
+            {
+                return self * other;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply a Real number by a double.)doc"
+        )
+        .def(
+            "__imul__",
+            [](Real& self, const double& other) -> Real&
+            {
+                self *= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Multiply this Real number by a double in-place.)doc"
+        )
+        .def(
+            "__truediv__",
+            [](const Real& self, const double& other)
+            {
+                return self / other;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide a Real number by a double.)doc"
+        )
+        .def(
+            "__itruediv__",
+            [](Real& self, const double& other) -> Real&
+            {
+                self /= other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Divide this Real number by a double in-place.)doc"
+        )
 
-        .def(double() + self, R"doc(Add a double and a Real number.)doc")
-        .def(double() - self, R"doc(Subtract a Real number from a double.)doc")
-        .def(double() * self, R"doc(Multiply a double by a Real number.)doc")
-        .def(double() / self, R"doc(Divide a double by a Real number.)doc")
+        .def(
+            "__radd__",
+            [](const Real& self, const double& other)
+            {
+                return other + self;
+            },
+            nanobind::is_operator(),
+            R"doc(Add a double and a Real number.)doc"
+        )
+        .def(
+            "__rsub__",
+            [](const Real& self, const double& other)
+            {
+                return other - self;
+            },
+            nanobind::is_operator(),
+            R"doc(Subtract a Real number from a double.)doc"
+        )
+        .def(
+            "__rmul__",
+            [](const Real& self, const double& other)
+            {
+                return other * self;
+            },
+            nanobind::is_operator(),
+            R"doc(Multiply a double by a Real number.)doc"
+        )
+        .def(
+            "__rtruediv__",
+            [](const Real& self, const double& other)
+            {
+                return other / self;
+            },
+            nanobind::is_operator(),
+            R"doc(Divide a double by a Real number.)doc"
+        )
 
         .def(
             "__str__",

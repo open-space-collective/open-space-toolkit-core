@@ -4,9 +4,9 @@
 
 using ostk::core::type::Sign;
 
-inline void OpenSpaceToolkitCorePy_Type_Sign(pybind11::module& aModule)
+inline void OpenSpaceToolkitCorePy_Type_Sign(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     enum_<Sign>(aModule, "Sign", R"doc(
         Enumeration representing the sign of a number.

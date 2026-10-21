@@ -4,21 +4,55 @@
 
 using ostk::core::filesystem::Path;
 
-inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathClass)
+inline void OpenSpaceToolkitCorePy_FileSystem_Path(nanobind::class_<Path>& pathClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     pathClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         // No init here - Paths are created via static methods
 
         // Define methods
-        .def(self == self, R"doc(Check if two Paths are equal.)doc")
-        .def(self != self, R"doc(Check if two Paths are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const Path& self, const Path& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Paths are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Path& self, const Path& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Paths are not equal.)doc"
+        )
 
-        .def(self + self, R"doc(Concatenate two Paths.)doc")
-        .def(self += self, R"doc(Append another Path to this one in-place.)doc")
+        .def(
+            "__add__",
+            [](const Path& self, const Path& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Concatenate two Paths.)doc"
+        )
+        .def(
+            "__iadd__",
+            [](Path& self, const Path& other) -> Path&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator(),
+            R"doc(Append another Path to this one in-place.)doc"
+        )
 
         .def("__str__", &(shiftToString<Path>), R"doc(Return string representation of the Path.)doc")
         .def("__repr__", &(shiftToString<Path>), R"doc(Return string representation of the Path for debugging.)doc")
@@ -113,7 +147,27 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathC
         )
         .def(
             "get_absolute_path",
-            &Path::getAbsolutePath,
+            [](const Path& aPath) -> Path
+            {
+                return aPath.getAbsolutePath();
+            },
+            R"doc(
+                Get an absolute version of the Path, relative to the current directory.
+
+                Returns:
+                    Path: The absolute path.
+
+                Example:
+                    >>> relative_path = Path.parse("documents/file.txt")
+                    >>> absolute = relative_path.get_absolute_path()
+            )doc"
+        )
+        .def(
+            "get_absolute_path",
+            [](const Path& aPath, const Path& aBasePath) -> Path
+            {
+                return aPath.getAbsolutePath(aBasePath);
+            },
             R"doc(
                 Get an absolute version of the Path.
 
@@ -127,7 +181,7 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Path(pybind11::class_<Path>& pathC
                     >>> relative_path = Path.parse("documents/file.txt")
                     >>> absolute = relative_path.get_absolute_path()
             )doc",
-            arg_v("base_path", Path::Current(), "Path.current()")
+            arg("base_path")
         )
         .def(
             "to_string",
