@@ -18,6 +18,7 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
     "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
 ]
 requires-python = ">=3.9"
 
@@ -44,5 +45,5 @@ ext-modules = [
 include = ["ostk.core", "ostk.core.*"]
 
 [tool.setuptools.package-data]
-"ostk.core" = ["${SHARED_LIBRARY_TARGET}.${PROJECT_VERSION_MAJOR}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
+"ostk.core" = ["${BUNDLED_CORE_LIBRARY}", "${LIBRARY_TARGET}.*${EXTENSION}*.so"]
 "*" = ["*/data/*"]
