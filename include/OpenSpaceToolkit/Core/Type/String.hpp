@@ -285,7 +285,8 @@ class String : public std::string
     template <typename... Args>
     static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
-        return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
+        // make_format_args stores references, so the arguments must be lvalues.
+        return std::vformat(aFormat, std::make_format_args(anArgumentList...));
     }
 #else
     template <typename... Args>
