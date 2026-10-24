@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <algorithm>
+
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 
 #include <Global.test.hpp>
@@ -351,16 +353,18 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 
         const Array<Directory> subDirectories = directory.getDirectories();
 
-        EXPECT_EQ(1, subDirectories.getSize());
+        EXPECT_EQ(3, subDirectories.getSize());
 
-        const Array<String> subDirectoryNames = subDirectories.map<String>(
+        Array<String> subDirectoryNames = subDirectories.map<String>(
             [](const Directory& aDirectory) -> String
             {
                 return aDirectory.getName();
             }
         );
 
-        const Array<String> referenceSubDirectoryNames = {"cmake"};
+        std::sort(subDirectoryNames.begin(), subDirectoryNames.end());
+
+        const Array<String> referenceSubDirectoryNames = {"ci", "cmake", "dependencies"};
 
         EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames);
     }

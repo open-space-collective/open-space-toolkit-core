@@ -285,7 +285,8 @@ class String : public std::string
     template <typename... Args>
     static String Format(const std::string_view aFormat, Args&&... anArgumentList)
     {
-        return std::vformat(aFormat, std::make_format_args(std::forward<Args>(anArgumentList)...));
+        // make_format_args stores references, so the arguments must be lvalues.
+        return std::vformat(aFormat, std::make_format_args(anArgumentList...));
     }
 #else
     template <typename... Args>
@@ -363,7 +364,8 @@ struct formatter<ostk::core::type::String> : formatter<string>
 // Generic formatter for StringConvertible types
 template <typename T>
     requires ostk::core::type::StringConvertible<T> && (!std::is_same_v<T, ostk::core::type::String>) &&
-             (!std::is_same_v<T, std::string>) && (!std::is_same_v<T, const char*>)
+             (!std::is_same_v<T, std::string>) && (!std::is_same_v<T, std::string_view>) &&
+             (!std::is_same_v<T, const char*>)
 struct formatter<T> : formatter<string>
 {
     template <typename FormatContext>
