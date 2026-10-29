@@ -2,6 +2,7 @@
 
 #include <nanobind/stl/bind_map.h>
 #include <nanobind/stl/bind_vector.h>
+#include <nanobind/stl/optional.h>
 
 #include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
@@ -151,7 +152,7 @@ inline void OpenSpaceToolkitCorePy_Container_Dictionary(nanobind::class_<Diction
         .def("add_value_for_key", &Dictionary::addValueForKey, arg("value"), arg("key"))
 
         .def_static("empty", &Dictionary::Empty)
-        .def_static("parse", &Dictionary::Parse, arg("string"), arg("format"))
+        .def_static("parse", &Dictionary::Parse, arg("string"), arg("format") = none())
 
         ;
 

@@ -42,21 +42,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(nanobind::class_<Directo
         )
 
         .def(
-            "is_defined",
-            &Directory::isDefined,
-            R"doc(
-                Check if the Directory is defined.
-
-                Returns:
-                    bool: True if the Directory is defined, False otherwise.
-
-                Example:
-                    >>> from ostk.core.filesystem import Path
-                    >>> directory = Directory.path(Path.parse("/home/user"))
-                    >>> directory.is_defined()  # True
-            )doc"
-        )
-        .def(
             "exists",
             &Directory::exists,
             R"doc(
@@ -230,20 +215,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(nanobind::class_<Directo
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &Directory::Undefined,
-            R"doc(
-                Create an undefined Directory.
-
-                Returns:
-                    Directory: An undefined Directory object.
-
-                Example:
-                    >>> undefined_dir = Directory.undefined()
-                    >>> undefined_dir.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "root",
             &Directory::Root,

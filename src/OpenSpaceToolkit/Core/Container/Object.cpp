@@ -608,15 +608,17 @@ container::Array<Object> Object::getArray() const
     return this->accessArray();
 }
 
-type::String Object::toString(const Object::Format& aFormat) const
+type::String Object::toString(const std::optional<Object::Format>& aFormat) const
 {
     LOG_SCOPE("Object", "toString");
 
-    switch (aFormat)
+    if (!aFormat.has_value())
     {
-        case Object::Format::Undefined:
-            break;
+        throw ostk::core::error::runtime::Wrong("Format");
+    }
 
+    switch (aFormat.value())
+    {
         case Object::Format::JSON:
             return this->getJsonString();
 
@@ -829,26 +831,22 @@ Object Object::Array(const container::Array<Object>& anArray)
     return Object(std::make_unique<Object::Impl>(boost::any(anArray)));
 }
 
-Object Object::Parse(const type::String& aString, const Object::Format& aFormat)
+Object Object::Parse(const type::String& aString, const std::optional<Object::Format>& aFormat)
 {
-    switch (aFormat)
+    if (!aFormat.has_value())
     {
-        case Object::Format::Undefined:
+        // Automatically detect format
+
+        if ((!aString.isEmpty()) && (aString.getFirst() == '{') && (aString.getLast() == '}'))
         {
-            // Automatically detect format
-
-            if ((!aString.isEmpty()) && (aString.getFirst() == '{') && (aString.getLast() == '}'))
-            {
-                return Object::ParseJson(aString);
-            }
-            else
-            {
-                throw ostk::core::error::RuntimeError("Cannot detect format.");
-            }
-
-            break;
+            return Object::ParseJson(aString);
         }
 
+        throw ostk::core::error::RuntimeError("Cannot detect format.");
+    }
+
+    switch (aFormat.value())
+    {
         case Object::Format::JSON:
             return Object::ParseJson(aString);
 
@@ -1051,14 +1049,9 @@ Object Object::ParseYaml(const type::String& aString)
     }
 }
 
-Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat)
+Object Object::Load(const filesystem::File& aFile, const std::optional<Object::Format>& aFormat)
 {
     LOG_SCOPE("Object", "Load");
-
-    if (!aFile.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
 
     if (!aFile.exists())
     {

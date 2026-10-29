@@ -3,6 +3,8 @@
 #ifndef __OpenSpaceToolkit_Core_Container_Table__
 #define __OpenSpaceToolkit_Core_Container_Table__
 
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Container/Table/Cell.hpp>
 #include <OpenSpaceToolkit/Core/Container/Table/Row.hpp>
@@ -34,8 +36,7 @@ class Table
     enum class Format
     {
 
-        Undefined,  ///< Undefined format
-        CSV         ///< Comma-Separated Values format
+        CSV  ///< Comma-Separated Values format
     };
 
     /// @brief Table constant iterator
@@ -224,11 +225,11 @@ class Table
     /// @endcode
     ///
     /// @param [in] aFile A table file
-    /// @param [in] (optional) aFormat A table format
+    /// @param [in] (optional) aFormat A table format (default: std::nullopt, which detects the format)
     /// @param [in] (optional) hasHeader True if file has a header
     /// @return Table
     static Table Load(
-        const File& aFile, const Table::Format& aFormat = Table::Format::Undefined, bool hasHeader = true
+        const File& aFile, const std::optional<Table::Format>& aFormat = std::nullopt, bool hasHeader = true
     );
 
    private:

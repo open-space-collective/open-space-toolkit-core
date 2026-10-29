@@ -106,6 +106,20 @@ class TestObject:
             is True
         )
 
+    def test_parse_without_format(self):
+        assert Object.parse('{"key": 123}') == Object.parse(
+            '{"key": 123}', Object.Format.JSON
+        )
+        assert Object.parse('{"key": 123}', format=None) == Object.parse(
+            '{"key": 123}', Object.Format.JSON
+        )
+
+        with pytest.raises(RuntimeError):
+            Object.parse("abc")
+
+    def test_format_has_no_undefined(self):
+        assert not hasattr(Object.Format, "Undefined")
+
     def test_parse(self):
         assert Object.parse("", Object.Format.YAML) == Object.undefined()
         assert Object.parse("null", Object.Format.YAML) == Object.undefined()

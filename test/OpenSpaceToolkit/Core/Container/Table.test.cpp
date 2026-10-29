@@ -731,4 +731,17 @@ TEST(OpenSpaceToolkit_Core_Container_Table, Load)
 
         EXPECT_EQ(referenceTable, table);
     }
+    {
+        const File file = File::Path(Path::Parse("/app/test/OpenSpaceToolkit/Core/Container/Table/B.csv"));
+
+        EXPECT_EQ(Table::Load(file), Table::Load(file, std::nullopt));
+        EXPECT_EQ(Table::Load(file), Table::Load(file, Table::Format::CSV));
+    }
+
+    {
+        const File file = File::Path(Path::Parse("/app/CMakeLists.txt"));
+
+        EXPECT_ANY_THROW(Table::Load(file));
+        EXPECT_ANY_THROW(Table::Load(file, std::nullopt));
+    }
 }
