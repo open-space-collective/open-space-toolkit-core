@@ -119,25 +119,25 @@ class Dictionary
         /// @return Iterator before decrement
         Iterator operator--(int);
 
-        /// @brief Access key (const)
+        /// @brief Get key
         ///
         /// @return Const reference to key
-        const Dictionary::Key& accessKey() const;
+        const Dictionary::Key& getKey() const;
 
-        /// @brief Access value (const)
+        /// @brief Get value
         ///
         /// @return Const reference to value
-        const Dictionary::Value& accessValue() const;
+        const Dictionary::Value& getValue() const;
 
         /// @brief Access value (mutable)
         ///
         /// @return Reference to value
         Dictionary::Value& accessValue();
 
-        /// @brief Access underlying map iterator (const)
+        /// @brief Get underlying map iterator
         ///
         /// @return Const reference to map iterator
-        const Iterator::MapIterator& accessMapIterator() const;
+        const Iterator::MapIterator& getMapIterator() const;
 
         /// @brief Access underlying map iterator (mutable)
         ///
@@ -226,15 +226,15 @@ class Dictionary
         /// @return Const iterator before decrement
         ConstIterator operator--(int);
 
-        /// @brief Access key (const)
+        /// @brief Get key
         ///
         /// @return Const reference to key
-        const Dictionary::Key& accessKey() const;
+        const Dictionary::Key& getKey() const;
 
-        /// @brief Access value (const)
+        /// @brief Get value
         ///
         /// @return Const reference to value
-        const Dictionary::Value& accessValue() const;
+        const Dictionary::Value& getValue() const;
 
         /// @brief Access underlying map const iterator (mutable)
         ///

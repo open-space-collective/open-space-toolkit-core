@@ -33,7 +33,7 @@ class Exception : public std::exception
     /// @brief Get the scope of the exception
     ///
     /// @return Scope string
-    String getScope() const;
+    const String& getScope() const;
 
     /// @brief Get the exception message
     ///

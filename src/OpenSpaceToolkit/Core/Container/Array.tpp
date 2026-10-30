@@ -85,7 +85,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Array<U>& anArray)
 }
 
 template <class T>
-const T& Array<T>::accessFirst() const
+const T& Array<T>::getFirst() const
 {
     if (this->isEmpty())
     {
@@ -96,7 +96,7 @@ const T& Array<T>::accessFirst() const
 }
 
 template <class T>
-const T& Array<T>::accessLast() const
+const T& Array<T>::getLast() const
 {
     if (this->isEmpty())
     {
@@ -346,22 +346,6 @@ T Array<T>::reduce(const std::function<T(T, T)>& aReduceFunction) const
     }
 
     return accumulator;
-}
-
-template <class T>
-Array<const T*> Array<T>::accessWhere(const std::function<bool(const T&)>& aPredicate) const
-{
-    Array<const T*> array = Array<const T*>::Empty();
-
-    for (const auto& item : (*this))
-    {
-        if (aPredicate(item))
-        {
-            array.add(&item);
-        }
-    }
-
-    return array;
 }
 
 template <class T>

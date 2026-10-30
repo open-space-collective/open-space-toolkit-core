@@ -175,8 +175,8 @@ inline void OpenSpaceToolkitCorePy_Container_Dictionary(nanobind::class_<Diction
             nanobind::is_operator()
         )
 
-        .def("access_key", &Dictionary::ConstIterator::accessKey, rv_policy::reference)
-        .def("access_value", &Dictionary::ConstIterator::accessValue, rv_policy::reference)
+        .def("get_key", &Dictionary::ConstIterator::getKey, rv_policy::reference)
+        .def("get_value", &Dictionary::ConstIterator::getValue, rv_policy::reference)
 
         ;
 }

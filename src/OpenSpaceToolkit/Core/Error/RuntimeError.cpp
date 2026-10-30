@@ -16,12 +16,12 @@ RuntimeError::RuntimeError(const String& aMessage)
 {
 }
 
-String RuntimeError::getMessage() const
+const String& RuntimeError::getMessage() const
 {
     return message_;
 }
 
-String RuntimeError::getStackTrace() const
+const String& RuntimeError::getStackTrace() const
 {
     return stackTrace_;
 }

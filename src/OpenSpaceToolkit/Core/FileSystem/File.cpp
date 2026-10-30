@@ -132,7 +132,7 @@ String File::getExtension() const
     return String::Empty();
 }
 
-filesystem::Path File::getPath() const
+const filesystem::Path& File::getPath() const
 {
     return path_;
 }

@@ -2,6 +2,8 @@
 
 #include <nanobind/stl/optional.h>
 
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
@@ -11,6 +13,8 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
 {
     using namespace nanobind;
 
+    using ostk::core::container::Array;
+    using ostk::core::container::Dictionary;
     using ostk::core::type::Index;
     using ostk::core::type::String;
 
@@ -240,7 +244,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
         )
         .def(
             "get_string",
-            &Object::getString,
+            [](const Object& self) -> String
+            {
+                return self.getString();
+            },
             R"doc(
                 Get the string value from the Object.
 
@@ -253,7 +260,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
         )
         .def(
             "get_dictionary",
-            &Object::getDictionary,
+            [](const Object& self) -> Dictionary
+            {
+                return self.getDictionary();
+            },
             R"doc(
                 Get the dictionary from the Object.
 
@@ -266,7 +276,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
         )
         .def(
             "get_array",
-            &Object::getArray,
+            [](const Object& self) -> Array<Object>
+            {
+                return self.getArray();
+            },
             R"doc(
                 Get the array from the Object.
 
