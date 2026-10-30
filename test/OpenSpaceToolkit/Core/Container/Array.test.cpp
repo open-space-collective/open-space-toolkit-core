@@ -177,12 +177,14 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     // Tolerance
 
     {
+        // An array is near itself even with zero tolerance
         const Array<double> array = {1.0, 2.0, 3.0};
 
         EXPECT_TRUE(array.isNear(array, 0.0));
     }
 
     {
+        // Last elements differ by 1.0, which exceeds the tolerance of 0.5
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 4.0};
 
@@ -190,12 +192,14 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // NaN is never near anything (including itself), so the comparison fails regardless of tolerance
         const Array<double> firstArray = {1.0, std::numeric_limits<double>::quiet_NaN()};
 
         EXPECT_FALSE(firstArray.isNear(firstArray, 1.0));
     }
 
     {
+        // Integer elements: a difference of 1 is within a tolerance of 1 but not within a tolerance of 0
         const Array<int> firstArray = {1, 2, 3};
         const Array<int> secondArray = {1, 2, 4};
 
@@ -205,6 +209,8 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
 
     {
         // Distance exceeds the signed range: must not overflow
+        // (min and max are 2^32 - 1 apart, larger than any tolerance representable as int, and a negative tolerance
+        // never matches)
         const Array<int> firstArray = {std::numeric_limits<int>::min()};
         const Array<int> secondArray = {std::numeric_limits<int>::max()};
 
@@ -213,6 +219,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // Unsigned elements: distance is symmetric and computed without wrap-around, whichever array is larger
         const Array<unsigned int> firstArray = {1u, 10u};
         const Array<unsigned int> secondArray = {3u, 8u};
 
@@ -222,6 +229,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // Equal arrays are near with zero tolerance
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 3.0};
 
@@ -229,6 +237,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // The tolerance is inclusive: a difference of exactly 1.0 is near for a tolerance of 1.0
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 4.0};
 
@@ -236,6 +245,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
+        // Arrays of different sizes are never near
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 3.0, 4.0};
 
@@ -245,6 +255,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     // Comparator
 
     {
+        // A custom comparator replaces the tolerance check: here, elements within 1.0 are considered near
         const Array<double> firstArray = {1.0, 2.0, 3.0};
         const Array<double> secondArray = {1.0, 2.0, 4.0};
 
