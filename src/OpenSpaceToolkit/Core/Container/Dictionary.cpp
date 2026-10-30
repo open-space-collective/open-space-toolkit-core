@@ -315,26 +315,28 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
     printArray =
         [&printArray, &printDictionary, &anOutputStream](const container::Array<Object>& array, uint anIndentation)
     {
-        type::Integer index = 0;
+        type::Index index = 0;
 
         for (const auto& arrayElement : array)
         {
             if (arrayElement.isDictionary())
             {
-                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ");
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation)
+                    << ("- [" + std::to_string(index) + "]: ");
 
                 printDictionary(arrayElement.accessDictionary(), anIndentation + 1);
             }
             else if (arrayElement.isArray())
             {
-                ostk::core::utils::Print::Line(anOutputStream, anIndentation) << ("- [" + index.toString() + "]: ");
+                ostk::core::utils::Print::Line(anOutputStream, anIndentation)
+                    << ("- [" + std::to_string(index) + "]: ");
 
                 printArray(arrayElement.accessArray(), anIndentation + 1);
             }
             else
             {
                 ostk::core::utils::Print::Line(anOutputStream, anIndentation)
-                    << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON);
+                    << ("- [" + std::to_string(index) + "]: ") << arrayElement.toString(Object::Format::JSON);
             }
 
             index++;

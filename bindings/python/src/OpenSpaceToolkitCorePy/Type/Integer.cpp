@@ -2,6 +2,10 @@
 
 #include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 using ostk::core::type::Integer;
 
 inline void OpenSpaceToolkitCorePy_Type_Integer(nanobind::class_<Integer>& integerClass)
@@ -840,3 +844,5 @@ inline void OpenSpaceToolkitCorePy_Type_Integer(nanobind::class_<Integer>& integ
     // Implicit conversion (allowed in the direction of the binded custom type only in nanobind)
     implicitly_convertible<Integer::ValueType, Integer>();
 }
+
+#pragma GCC diagnostic pop

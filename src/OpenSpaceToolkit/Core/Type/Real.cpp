@@ -9,6 +9,10 @@
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace ostk
 {
 namespace core
@@ -924,3 +928,5 @@ Real::Real(const Real::Type& aType, const Real::ValueType& aReal)
 }  // namespace type
 }  // namespace core
 }  // namespace ostk
+
+#pragma GCC diagnostic pop

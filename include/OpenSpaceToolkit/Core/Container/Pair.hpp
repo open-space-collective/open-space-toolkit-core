@@ -25,7 +25,7 @@ using ostk::core::type::String;
 /// @brief Pair container
 ///
 /// @code
-///     Pair<String, Integer> pair = std::make_pair(String("key"), Integer(123)) ;
+///     Pair<String, int> pair = std::make_pair(String("key"), 123) ;
 ///     pair.first ; // "key"
 ///     pair.second ; // 123
 /// @endcode

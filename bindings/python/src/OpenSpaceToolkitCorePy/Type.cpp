@@ -10,6 +10,10 @@
 #include <OpenSpaceToolkitCorePy/Type/Sign.cpp>
 #include <OpenSpaceToolkitCorePy/Type/String.cpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 inline void OpenSpaceToolkitCorePy_Type(nanobind::module_& aModule)
 {
     using ostk::core::type::Integer;
@@ -23,11 +27,17 @@ inline void OpenSpaceToolkitCorePy_Type(nanobind::module_& aModule)
 
         This submodule contains fundamental data types including Integer, Real, String,
         and Sign enumerations that provide enhanced functionality over standard types.
+
+        Note:
+            Integer and Real are deprecated and will be removed in a future release. Use int and float instead.
     )doc");
 
     nanobind::class_<Integer> integerClass(type, "Integer");
     nanobind::class_<Real> realClass(type, "Real");
     nanobind::class_<String> stringClass(type, "String");
+
+    integerClass.attr("__doc__") = "Deprecated: Integer will be removed in a future release. Use int instead.";
+    realClass.attr("__doc__") = "Deprecated: Real will be removed in a future release. Use float instead.";
 
     // Add custom type to python "type" submodule
     OpenSpaceToolkitCorePy_Type_Sign(type);
@@ -35,3 +45,5 @@ inline void OpenSpaceToolkitCorePy_Type(nanobind::module_& aModule)
     OpenSpaceToolkitCorePy_Type_Real(realClass);
     OpenSpaceToolkitCorePy_Type_String(stringClass);
 }
+
+#pragma GCC diagnostic pop

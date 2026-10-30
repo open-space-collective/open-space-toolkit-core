@@ -1,7 +1,6 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Container/Triple.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <Global.test.hpp>
@@ -9,22 +8,20 @@
 TEST(OpenSpaceToolkit_Core_Container_Triple, Constructor)
 {
     using ostk::core::container::Triple;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Triple<bool, Integer, String> triple = {true, 123, "abc"};
+        const Triple<bool, int, String> triple = {true, 123, "abc"};
     }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Triple, Getters)
 {
     using ostk::core::container::Triple;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        const Triple<bool, Integer, String> triple = {true, 123, "abc"};
+        const Triple<bool, int, String> triple = {true, 123, "abc"};
 
         EXPECT_EQ(true, triple.first);
         EXPECT_EQ(123, triple.second);
@@ -35,11 +32,10 @@ TEST(OpenSpaceToolkit_Core_Container_Triple, Getters)
 TEST(OpenSpaceToolkit_Core_Container_Triple, Setters)
 {
     using ostk::core::container::Triple;
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     {
-        Triple<bool, Integer, String> triple = {true, 123, "abc"};
+        Triple<bool, int, String> triple = {true, 123, "abc"};
 
         EXPECT_EQ(true, triple.first);
         EXPECT_EQ(123, triple.second);

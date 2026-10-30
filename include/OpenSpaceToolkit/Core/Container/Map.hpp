@@ -15,7 +15,7 @@ namespace container
 /// @brief Map container
 ///
 /// @code
-///     Map<String, Integer> map ;
+///     Map<String, int> map ;
 ///     map["key"] = 123 ;
 /// @endcode
 template <class Key, class T, class Compare = std::less<Key>, class Allocator = std::allocator<std::pair<const Key, T>>>
