@@ -192,10 +192,10 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 
     {
-        // NaN comparisons are always false, so a NaN distance never exceeds the tolerance and is treated as near
+        // NaN is never near anything (including itself), so the comparison fails regardless of tolerance
         const Array<double> firstArray = {1.0, std::numeric_limits<double>::quiet_NaN()};
 
-        EXPECT_TRUE(firstArray.isNear(firstArray, 1.0));
+        EXPECT_FALSE(firstArray.isNear(firstArray, 1.0));
     }
 
     {

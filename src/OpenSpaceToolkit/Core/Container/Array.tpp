@@ -148,7 +148,8 @@ bool Array<T>::isNear(const Array<T>& anArray, const T& aTolerance) const
         }
         else if constexpr (std::is_floating_point<T>::value)
         {
-            if ((std::abs(std::get<0>(elementTuple) - std::get<1>(elementTuple)) > aTolerance))
+            // Negated "<=" (rather than ">") so that NaN distances are rejected
+            if (!(std::abs(std::get<0>(elementTuple) - std::get<1>(elementTuple)) <= aTolerance))
             {
                 return false;
             }
