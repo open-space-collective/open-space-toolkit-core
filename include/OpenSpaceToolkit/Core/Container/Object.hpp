@@ -205,70 +205,55 @@ class Object
     /// @return True if array
     bool isArray() const;
 
-    /// @brief Access boolean value (const)
-    ///
-    /// @return Const reference to boolean value
-    const bool& accessBoolean() const;
-
-    /// @brief Access integer value (const)
-    ///
-    /// @return Const reference to integer value
-    const int& accessInteger() const;
-
-    /// @brief Access real value (const)
-    ///
-    /// @return Const reference to real value
-    const double& accessReal() const;
-
-    /// @brief Access string value (const)
-    ///
-    /// @return Const reference to string value
-    const type::String& accessString() const;
-
-    /// @brief Access dictionary value (const)
-    ///
-    /// @return Const reference to dictionary value
-    const container::Dictionary& accessDictionary() const;
-
-    /// @brief Access array value (const)
-    ///
-    /// @return Const reference to array value
-    const container::Array<Object>& accessArray() const;
-
     /// @brief Get object type
     ///
     /// @return Object type
     Object::Type getType() const;
 
-    /// @brief Get boolean value (copy)
+    /// @brief Get boolean value
     ///
     /// @return Boolean value
     bool getBoolean() const;
 
-    /// @brief Get integer value (copy)
+    /// @brief Get integer value
     ///
     /// @return Integer value
     int getInteger() const;
 
-    /// @brief Get real value (copy)
+    /// @brief Get real value
     ///
     /// @return Real value
     double getReal() const;
 
-    /// @brief Get string value (copy)
+    /// @brief Get string value
     ///
-    /// @return String value
-    type::String getString() const;
+    /// @return Const reference to string value
+    const type::String& getString() const&;
 
-    /// @brief Get dictionary value (copy)
+    /// @brief Get string value of a temporary object
     ///
-    /// @return Dictionary value
-    container::Dictionary getDictionary() const;
+    /// @return String value (copy, so that it does not dangle)
+    type::String getString() &&;
 
-    /// @brief Get array value (copy)
+    /// @brief Get dictionary value
     ///
-    /// @return Array value
-    container::Array<Object> getArray() const;
+    /// @return Const reference to dictionary value
+    const container::Dictionary& getDictionary() const&;
+
+    /// @brief Get dictionary value of a temporary object
+    ///
+    /// @return Dictionary value (copy, so that it does not dangle)
+    container::Dictionary getDictionary() &&;
+
+    /// @brief Get array value
+    ///
+    /// @return Const reference to array value
+    const container::Array<Object>& getArray() const&;
+
+    /// @brief Get array value of a temporary object
+    ///
+    /// @return Array value (copy, so that it does not dangle)
+    container::Array<Object> getArray() &&;
 
     /// @brief Convert object to string representation
     ///

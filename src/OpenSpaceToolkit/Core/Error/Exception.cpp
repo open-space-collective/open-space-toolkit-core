@@ -16,7 +16,7 @@ Exception::Exception(const String& aScope)
 
 Exception::~Exception() {}
 
-String Exception::getScope() const
+const String& Exception::getScope() const
 {
     return scope_;
 }

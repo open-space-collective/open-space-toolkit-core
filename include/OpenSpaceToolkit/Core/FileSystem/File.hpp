@@ -163,7 +163,7 @@ class File
     /// @endcode
     ///
     /// @return File path
-    filesystem::Path getPath() const;
+    const filesystem::Path& getPath() const;
 
     /// @brief Get file permissions
     ///
