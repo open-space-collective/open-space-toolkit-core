@@ -7,27 +7,17 @@ from ostk.core.filesystem import Directory, Path, PermissionSet, File
 
 
 def test_file_constructors():
-    undefined_file = File.undefined()
     current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
 
-    assert isinstance(undefined_file, File)
     assert isinstance(current_file, File)
 
 
 def test_file_operators():
-    undefined_file = File.undefined()
     current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
+    other_file = File.path(Path.parse("./test/filesystem/__init__.py"))
 
     assert current_file == current_file
-    assert current_file != undefined_file
-
-
-def test_file_is_defined():
-    undefined_file = File.undefined()
-    current_file = File.path(Path.parse("./test/filesystem/test_file.py"))
-
-    assert undefined_file.is_defined() is False
-    assert current_file.is_defined() is True
+    assert current_file != other_file
 
 
 def test_file_exists():

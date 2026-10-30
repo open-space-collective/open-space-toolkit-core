@@ -38,7 +38,7 @@ File& File::operator=(const File& aFile)
 
 File::~File()
 {
-    if (this->isDefined() && this->exists() && this->isOpen())
+    if (this->exists() && this->isOpen())
     {
         this->close();
     }
@@ -46,11 +46,6 @@ File::~File()
 
 bool File::operator==(const File& aFile) const
 {
-    if ((!this->isDefined()) || (!aFile.isDefined()))
-    {
-        return false;
-    }
-
     return path_ == aFile.path_;
 }
 
@@ -63,31 +58,18 @@ std::ostream& operator<<(std::ostream& anOutputStream, const File& aFile)
 {
     ostk::core::utils::Print::Header(anOutputStream, "File");
 
-    ostk::core::utils::Print::Line(anOutputStream) << "Name:" << (aFile.isDefined() ? aFile.getName() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Extension:" << (aFile.isDefined() ? aFile.getExtension() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Path:" << (aFile.isDefined() ? aFile.path_.toString() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Exists:" << (aFile.isDefined() ? String::Boolean(aFile.exists()) : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "Name:" << aFile.getName();
+    ostk::core::utils::Print::Line(anOutputStream) << "Extension:" << aFile.getExtension();
+    ostk::core::utils::Print::Line(anOutputStream) << "Path:" << aFile.path_.toString();
+    ostk::core::utils::Print::Line(anOutputStream) << "Exists:" << String::Boolean(aFile.exists());
 
     ostk::core::utils::Print::Footer(anOutputStream);
 
     return anOutputStream;
 }
 
-bool File::isDefined() const
-{
-    return path_.isDefined();
-}
-
 bool File::exists() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     try
     {
         return boost::filesystem::exists(path_.toString());
@@ -112,11 +94,6 @@ bool File::isOpen() const
 
 String File::getName(const bool withExtension) const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     try
     {
         if (!withExtension)
@@ -136,11 +113,6 @@ String File::getName(const bool withExtension) const
 
 String File::getExtension() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     try
     {
         const String fullExtension = boost::filesystem::path(path_.toString()).extension().string();
@@ -162,11 +134,6 @@ String File::getExtension() const
 
 filesystem::Path File::getPath() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     return path_;
 }
 
@@ -284,11 +251,6 @@ filesystem::PermissionSet File::getPermissions() const
 
 filesystem::Directory File::getParentDirectory() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     String filePathString = path_.getNormalizedPath().toString();
 
     // Below is a hacky solution to trim trailing slashes
@@ -345,11 +307,6 @@ String File::getContents() const
 
 String File::toString() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     return path_.toString();
 }
 
@@ -548,18 +505,8 @@ void File::remove()
     }
 }
 
-File File::Undefined()
-{
-    return {Path::Undefined()};
-}
-
 File File::Path(const filesystem::Path& aPath)
 {
-    if (!aPath.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Path");
-    }
-
     return {aPath};
 }
 

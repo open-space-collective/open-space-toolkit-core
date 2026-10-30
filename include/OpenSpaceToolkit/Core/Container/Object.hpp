@@ -4,6 +4,7 @@
 #define __OpenSpaceToolkit_Core_Container_Object__
 
 #include <fstream>
+#include <optional>
 #include <ostream>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
@@ -52,7 +53,6 @@ class Object
     enum class Format
     {
 
-        Undefined,
         JSON,
         YAML
 
@@ -272,9 +272,9 @@ class Object
 
     /// @brief Convert object to string representation
     ///
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which is not supported and throws)
     /// @return String representation
-    type::String toString(const Object::Format& aFormat = Object::Format::Undefined) const;
+    type::String toString(const std::optional<Object::Format>& aFormat = std::nullopt) const;
 
     /// @brief Convert object to JSON string
     ///
@@ -387,9 +387,9 @@ class Object
     /// @endcode
     ///
     /// @param [in] aString A string
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which detects the format)
     /// @return Object
-    static Object Parse(const type::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Parse(const type::String& aString, const std::optional<Object::Format>& aFormat = std::nullopt);
 
     /// @brief Construct an object by loading from a file
     ///
@@ -398,9 +398,9 @@ class Object
     /// @endcode
     ///
     /// @param [in] aFile A file
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which detects the format)
     /// @return Object
-    static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Load(const filesystem::File& aFile, const std::optional<Object::Format>& aFormat = std::nullopt);
 
     OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION(Object::Type, Type, Object)
 

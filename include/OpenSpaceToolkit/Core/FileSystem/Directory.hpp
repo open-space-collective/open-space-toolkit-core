@@ -77,16 +77,6 @@ class Directory
     /// @return A reference to output stream
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Directory& aDirectory);
 
-    /// @brief Check if directory is defined
-    ///
-    /// @code
-    ///     Directory directory = Directory::Undefined() ;
-    ///     directory.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return True if directory is defined
-    bool isDefined() const;
-
     /// @brief Check if directory exists
     ///
     /// @code
@@ -262,16 +252,6 @@ class Directory
     /// @endcode
     void remove();
 
-    /// @brief Constructs an undefined directory
-    ///
-    /// @code
-    ///     Directory directory = Directory::Undefined() ;
-    ///     directory.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return Undefined directory
-    static Directory Undefined();
-
     /// @brief Constructs a root directory
     ///
     /// @code
@@ -285,7 +265,6 @@ class Directory
     ///
     /// @code
     ///     Directory directory = Directory::Path(Path::Parse("/path/to/directory")) ;
-    ///     directory.isDefined() ; // True
     /// @endcode
     ///
     /// @param [in] aPath Path to directory

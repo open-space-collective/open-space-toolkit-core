@@ -39,16 +39,6 @@ class Source
     /// @return Reference to source
     Source& operator=(const Source& aSource);
 
-    /// @brief Check if source is defined
-    ///
-    /// @return True if defined
-    bool isDefined() const;
-
-    /// @brief Construct an undefined source
-    ///
-    /// @return Undefined source
-    static Source Undefined();
-
     // private:
 
     Unique<source::Source> sourceUPtr_;

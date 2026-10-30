@@ -54,11 +54,6 @@ class Group
     /// @return Reference to output stream
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Group& aGroup);
 
-    /// @brief Check if group is defined
-    ///
-    /// @return True if defined
-    bool isDefined() const;
-
     /// @brief Get group ID
     ///
     /// @return Group ID
@@ -78,11 +73,6 @@ class Group
     ///
     /// @return Group name
     String getName() const;
-
-    /// @brief Construct an undefined group
-    ///
-    /// @return Undefined group
-    static Group Undefined();
 
     /// @brief Construct a group from the current process
     ///

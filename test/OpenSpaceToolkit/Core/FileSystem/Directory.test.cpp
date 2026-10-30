@@ -27,12 +27,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, EqualToOperator)
             Directory::Path(Path::Parse("/path/to/directory")) == Directory::Path(Path::Parse("/path2/to/file"))
         );
     }
-
-    {
-        EXPECT_FALSE(Directory::Path(Path::Parse("/path/to/directory")) == Directory::Undefined());
-        EXPECT_FALSE(Directory::Undefined() == Directory::Path(Path::Parse("/path/to/directory")));
-        EXPECT_FALSE(Directory::Undefined() == Directory::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, NotEqualToOperator)
@@ -58,12 +52,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, NotEqualToOperator)
             Directory::Path(Path::Parse("/path/to/directory")) != Directory::Path(Path::Parse("/path/to/directory"))
         );
     }
-
-    {
-        EXPECT_TRUE(Directory::Path(Path::Parse("/path/to/directory")) != Directory::Undefined());
-        EXPECT_TRUE(Directory::Undefined() != Directory::Path(Path::Parse("/path/to/directory")));
-        EXPECT_TRUE(Directory::Undefined() != Directory::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, StreamOperator)
@@ -82,22 +70,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsDefined)
-{
-    using ostk::core::filesystem::Directory;
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_TRUE(Directory::Path(Path::Parse("/")).isDefined());
-        EXPECT_TRUE(Directory::Path(Path::Parse("/path/to/directory")).isDefined());
-        EXPECT_TRUE(Directory::Path(Path::Parse("/path/to/directory/")).isDefined());
-    }
-
-    {
-        EXPECT_FALSE(Directory::Undefined().isDefined());
-    }
-}
-
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Exists)
 {
     using ostk::core::filesystem::Directory;
@@ -112,10 +84,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Exists)
     {
         EXPECT_FALSE(Directory::Path(Path::Parse("/skf47hksdjf")).exists());
         EXPECT_FALSE(Directory::Path(Path::Parse("/usr/sdfkjdfg")).exists());
-    }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().exists());
     }
 }
 
@@ -136,7 +104,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, IsEmpty)
     }
 
     {
-        EXPECT_ANY_THROW(Directory::Undefined().isEmpty());
         EXPECT_ANY_THROW(Directory::Path(Path::Parse("/abc")).isEmpty());
     }
 }
@@ -160,9 +127,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ContainsFileWithName)
     {
         const Directory directory = Directory::Path(Path::Parse("/app/tools/development"));
 
-        EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc"));
         EXPECT_ANY_THROW(directory.containsFileWithName(""));
-        EXPECT_ANY_THROW(Directory::Undefined().containsFileWithName("abc"));
     }
 }
 
@@ -192,10 +157,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetName)
         EXPECT_EQ("games", Directory::Path(Path::Parse("/usr/games")).getName());
         EXPECT_EQ("games", Directory::Path(Path::Parse("/usr/games/")).getName());
     }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().getName());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetPath)
@@ -209,10 +170,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetPath)
         EXPECT_EQ(Path::Parse("/usr/"), Directory::Path(Path::Parse("/usr/")).getPath());
         EXPECT_EQ(Path::Parse("/usr/games"), Directory::Path(Path::Parse("/usr/games")).getPath());
         EXPECT_EQ(Path::Parse("/usr/games/"), Directory::Path(Path::Parse("/usr/games/")).getPath());
-    }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().getPath());
     }
 }
 
@@ -265,7 +222,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetPath)
 
 //     {
 
-//         EXPECT_ANY_THROW(Directory::Undefined().getPermissions()) ;
 //         EXPECT_ANY_THROW(Directory::Path(Path::Parse("/abc")).getPermissions()) ;
 
 //     }
@@ -313,10 +269,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
             Directory::Path(Path::Parse("/")), Directory::Path(Path::Parse("/app/build/..")).getParentDirectory()
         );
     }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().getParentDirectory());
-    }
 }
 
 // TEST (OpenSpaceToolkit_Core_FileSystem_Directory, GetFiles)
@@ -332,8 +284,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetParentDirectory)
 //     }
 
 //     {
-
-//         EXPECT_ANY_THROW(Directory::Undefined().getFiles()) ;
 
 //     }
 
@@ -364,10 +314,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, GetDirectories)
 
         EXPECT_EQ(referenceSubDirectoryNames, subDirectoryNames);
     }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().getDirectories());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
@@ -381,10 +327,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
         EXPECT_EQ("/app//does-not-exist", Directory::Path(Path::Parse("/app//does-not-exist")).toString());
         EXPECT_EQ("/", Directory::Path(Path::Parse("/")).toString());
         EXPECT_EQ("/app/build/..", Directory::Path(Path::Parse("/app/build/..")).toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().toString());
     }
 }
 
@@ -401,8 +343,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
 //     }
 
 //     {
-
-//         EXPECT_ANY_THROW(Directory::Undefined().renameTo()) ;
 
 //     }
 
@@ -422,8 +362,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
 
 //     {
 
-//         EXPECT_ANY_THROW(Directory::Undefined().copyToDirectory()) ;
-
 //     }
 
 // }
@@ -441,8 +379,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, ToString)
 //     }
 
 //     {
-
-//         EXPECT_ANY_THROW(Directory::Undefined().moveToDirectory()) ;
 
 //     }
 
@@ -466,10 +402,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Create)
 
         directory.remove();
     }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().create());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Remove)
@@ -490,21 +422,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Remove)
 
         EXPECT_ANY_THROW(directory.remove());
     }
-
-    {
-        EXPECT_ANY_THROW(Directory::Undefined().remove());
-    }
-}
-
-TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Undefined)
-{
-    using ostk::core::filesystem::Directory;
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_NO_THROW(Directory::Undefined());
-        EXPECT_FALSE(Directory::Undefined().isDefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Root)
@@ -514,7 +431,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Root)
 
     {
         EXPECT_NO_THROW(Directory::Root());
-        EXPECT_TRUE(Directory::Root().isDefined());
         EXPECT_EQ(Path::Parse("/"), Directory::Root().getPath());
     }
 }
@@ -527,21 +443,16 @@ TEST(OpenSpaceToolkit_Core_FileSystem_Directory, Path)
     {
         const Path path = Path::Parse("/path/to/directory");
 
-        EXPECT_TRUE(Directory::Path(path).isDefined());
-
         EXPECT_EQ(path, Directory::Path(path).getPath());
     }
 
     {
         const Path path = Path::Parse("/path/to/directory/");
 
-        EXPECT_TRUE(Directory::Path(path).isDefined());
-
         EXPECT_EQ(path, Directory::Path(path).getPath());
     }
 
     {
         EXPECT_ANY_THROW(Directory::Path(Path::Parse("")));
-        EXPECT_ANY_THROW(Directory::Path(Path::Undefined()));
     }
 }

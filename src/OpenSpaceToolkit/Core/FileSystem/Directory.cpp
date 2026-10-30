@@ -15,11 +15,6 @@ namespace filesystem
 
 bool Directory::operator==(const Directory& aDirectory) const
 {
-    if ((!this->isDefined()) || (!aDirectory.isDefined()))
-    {
-        return false;
-    }
-
     return path_ == aDirectory.path_;
 }
 
@@ -32,30 +27,17 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Directory& aDirecto
 {
     ostk::core::utils::Print::Header(anOutputStream, "Directory");
 
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Name:" << (aDirectory.isDefined() ? aDirectory.getName() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Path:" << (aDirectory.isDefined() ? aDirectory.path_.toString() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Exists:" << (aDirectory.isDefined() ? String::Boolean(aDirectory.exists()) : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "Name:" << aDirectory.getName();
+    ostk::core::utils::Print::Line(anOutputStream) << "Path:" << aDirectory.path_.toString();
+    ostk::core::utils::Print::Line(anOutputStream) << "Exists:" << String::Boolean(aDirectory.exists());
 
     ostk::core::utils::Print::Footer(anOutputStream);
 
     return anOutputStream;
 }
 
-bool Directory::isDefined() const
-{
-    return path_.isDefined();
-}
-
 bool Directory::exists() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Directory");
-    }
-
     try
     {
         return boost::filesystem::is_directory(path_.toString() + "/");
@@ -133,11 +115,6 @@ bool Directory::containsFileWithName(const String& aFileName) const
 
 String Directory::getName() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     try
     {
         String directoryPathString = path_.toString();
@@ -159,11 +136,6 @@ String Directory::getName() const
 
 filesystem::Path Directory::getPath() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     return path_;
 }
 
@@ -226,11 +198,6 @@ container::Array<Directory> Directory::getDirectories() const
 
 String Directory::toString() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Directory");
-    }
-
     return path_.toString();
 }
 
@@ -304,11 +271,6 @@ void Directory::remove()
     }
 }
 
-Directory Directory::Undefined()
-{
-    return {Path::Undefined()};
-}
-
 Directory Directory::Root()
 {
     return {Path::Parse("/")};
@@ -316,11 +278,6 @@ Directory Directory::Root()
 
 Directory Directory::Path(const filesystem::Path& aPath)
 {
-    if (!aPath.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Path");
-    }
-
     return {aPath};
 }
 

@@ -40,23 +40,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(nanobind::class_<File>& fileC
         .def("__repr__", &(shiftToString<File>), R"doc(Return string representation of the File for debugging.)doc")
 
         .def(
-            "is_defined",
-            &File::isDefined,
-            R"doc(
-                Check if the File is defined.
-
-                Returns:
-                    bool: True if the File is defined, False otherwise.
-
-                Example:
-                    >>> from ostk.core.filesystem import Path
-                    >>> file = File.path(Path.parse("/path/to/file.txt"))
-                    >>> file.is_defined()  # True
-                    >>> undefined_file = File.undefined()
-                    >>> undefined_file.is_defined()  # False
-            )doc"
-        )
-        .def(
             "exists",
             &File::exists,
             R"doc(
@@ -259,20 +242,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(nanobind::class_<File>& fileC
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &File::Undefined,
-            R"doc(
-                Create an undefined File.
-
-                Returns:
-                    File: An undefined File object.
-
-                Example:
-                    >>> undefined_file = File.undefined()
-                    >>> undefined_file.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "path",
             &File::Path,
