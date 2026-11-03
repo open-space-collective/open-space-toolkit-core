@@ -269,7 +269,7 @@ TEST(OpenSpaceToolkit_Core_Container_Array, IsNear)
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Container_Array, AccessFirst)
+TEST(OpenSpaceToolkit_Core_Container_Array, GetFirst)
 {
     using ostk::core::container::Array;
     using ostk::core::type::String;
@@ -277,27 +277,27 @@ TEST(OpenSpaceToolkit_Core_Container_Array, AccessFirst)
     {
         const Array<int> array({1, 2, 3});
 
-        EXPECT_NO_THROW(array.accessFirst());
+        EXPECT_NO_THROW(array.getFirst());
 
-        EXPECT_EQ(1, array.accessFirst());
+        EXPECT_EQ(1, array.getFirst());
     }
 
     {
         const Array<String> array({"abc", "def"});
 
-        EXPECT_NO_THROW(array.accessFirst());
+        EXPECT_NO_THROW(array.getFirst());
 
-        EXPECT_EQ("abc", array.accessFirst());
+        EXPECT_EQ("abc", array.getFirst());
     }
 
     {
         const Array<String> array({});
 
-        EXPECT_ANY_THROW(array.accessFirst());
+        EXPECT_ANY_THROW(array.getFirst());
     }
 }
 
-TEST(OpenSpaceToolkit_Core_Container_Array, AccessLast)
+TEST(OpenSpaceToolkit_Core_Container_Array, GetLast)
 {
     using ostk::core::container::Array;
     using ostk::core::type::String;
@@ -305,23 +305,23 @@ TEST(OpenSpaceToolkit_Core_Container_Array, AccessLast)
     {
         const Array<int> array({1, 2, 3});
 
-        EXPECT_NO_THROW(array.accessLast());
+        EXPECT_NO_THROW(array.getLast());
 
-        EXPECT_EQ(3, array.accessLast());
+        EXPECT_EQ(3, array.getLast());
     }
 
     {
         const Array<String> array({"abc", "def"});
 
-        EXPECT_NO_THROW(array.accessLast());
+        EXPECT_NO_THROW(array.getLast());
 
-        EXPECT_EQ("def", array.accessLast());
+        EXPECT_EQ("def", array.getLast());
     }
 
     {
         const Array<String> array({});
 
-        EXPECT_ANY_THROW(array.accessLast());
+        EXPECT_ANY_THROW(array.getLast());
     }
 }
 
@@ -428,34 +428,6 @@ TEST(OpenSpaceToolkit_Core_Container_Array, ToString)
 //     FAIL() ;
 
 // }
-
-TEST(OpenSpaceToolkit_Core_Container_Array, AccessWhere)
-{
-    using ostk::core::container::Array;
-    using ostk::core::type::Size;
-    using ostk::core::type::String;
-
-    {
-        const Array<int> array({-4, -3, -2, -1, +0, +1, +2, +3, +4});
-
-        const Array<int>::Predicate predicate = [](const int& anInteger) -> bool
-        {
-            return (anInteger % 2) == 0;
-        };
-
-        EXPECT_NO_THROW(array.accessWhere(predicate));
-
-        const Array<const int*> filteredArray = array.accessWhere(predicate);
-
-        EXPECT_EQ(Size(5), filteredArray.getSize());
-
-        EXPECT_TRUE(&array[0] == filteredArray[0]);
-        EXPECT_TRUE(&array[2] == filteredArray[1]);
-        EXPECT_TRUE(&array[4] == filteredArray[2]);
-        EXPECT_TRUE(&array[6] == filteredArray[3]);
-        EXPECT_TRUE(&array[8] == filteredArray[4]);
-    }
-}
 
 TEST(OpenSpaceToolkit_Core_Container_Array, GetWhere)
 {

@@ -144,7 +144,7 @@ TEST(OpenSpaceToolkit_Core_Container_Object, IndexSubscriptOperator)
 
     {
         Object object = Object::Array();
-        EXPECT_EQ(Size(0), object.accessArray().getSize());
+        EXPECT_EQ(Size(0), object.getArray().getSize());
 
         EXPECT_TRUE(object.isArray());
 
@@ -154,7 +154,7 @@ TEST(OpenSpaceToolkit_Core_Container_Object, IndexSubscriptOperator)
         object[3] = Object::String("abc");
 
         EXPECT_TRUE(object.isArray());
-        EXPECT_EQ(Size(4), object.accessArray().getSize());
+        EXPECT_EQ(Size(4), object.getArray().getSize());
 
         EXPECT_EQ(true, object[0].getBoolean());
         EXPECT_EQ(123, object[1].getInteger());
@@ -170,7 +170,7 @@ TEST(OpenSpaceToolkit_Core_Container_Object, IndexSubscriptOperator)
         object[3] = Object::String("abc");
 
         EXPECT_TRUE(object.isArray());
-        EXPECT_EQ(Size(4), object.accessArray().getSize());
+        EXPECT_EQ(Size(4), object.getArray().getSize());
 
         EXPECT_FALSE(object[0].isDefined());
         EXPECT_FALSE(object[1].isDefined());

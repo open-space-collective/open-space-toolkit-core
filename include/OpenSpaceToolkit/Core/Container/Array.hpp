@@ -175,25 +175,25 @@ class Array : public std::vector<T>
     /// @return True if array is near another array
     bool isNear(const Array<T>& anArray, const std::function<bool(const T&, const T&)>& aComparator) const;
 
-    /// @brief Access first element
+    /// @brief Get first element
     ///
     /// @code
     ///     Array<int> array = {1, 2, 3} ;
-    ///     const int& element = array.accessFirst() ; // 1
+    ///     const int& element = array.getFirst() ; // 1
     /// @endcode
     ///
-    /// @return Reference to the first element of array
-    const T& accessFirst() const;
+    /// @return Const reference to the first element of array
+    const T& getFirst() const;
 
-    /// @brief Access last element
+    /// @brief Get last element
     ///
     /// @code
     ///     Array<int> array = {1, 2, 3} ;
-    ///     const int& element = array.accessLast() ; // 3
+    ///     const int& element = array.getLast() ; // 3
     /// @endcode
     ///
-    /// @return Reference to the last element of array
-    const T& accessLast() const;
+    /// @return Const reference to the last element of array
+    const T& getLast() const;
 
     /// @brief Get array size
     ///
@@ -225,18 +225,6 @@ class Array : public std::vector<T>
     ///
     /// @return String representation of array
     type::String toString() const;
-
-    /// @brief Get array of pointers to element based on condition
-    ///
-    /// @code
-    ///     Array<int> array = {0, 1, 2, 3, 4} ;
-    ///     Array<const int*> elements = array.accessWhere([] (const int& anInteger) -> bool {
-    ///     return (anInteger % 2) == 0 ; }) ; // [&0, &2, &4]
-    /// @endcode
-    ///
-    /// @param [in] aPredicate A predicate
-    /// @return Array of pointers to element
-    Array<const T*> accessWhere(const Array<T>::Predicate& aPredicate) const;
 
     /// @brief Get array of elements based on condition
     ///

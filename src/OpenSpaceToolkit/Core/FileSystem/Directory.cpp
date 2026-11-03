@@ -134,7 +134,7 @@ String Directory::getName() const
     return String::Empty();
 }
 
-filesystem::Path Directory::getPath() const
+const filesystem::Path& Directory::getPath() const
 {
     return path_;
 }

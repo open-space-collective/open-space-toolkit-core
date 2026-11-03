@@ -311,8 +311,8 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
         for (const auto& dictIt : dictionary)
         {
-            const Dictionary::Key& key = dictIt.accessKey();
-            const Dictionary::Value& value = dictIt.accessValue();
+            const Dictionary::Key& key = dictIt.getKey();
+            const Dictionary::Value& value = dictIt.getValue();
 
             switch (idx)
             {
@@ -362,7 +362,7 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
             for (auto& dictIt : dictionary)
             {
-                const Dictionary::Key& key = dictIt.accessKey();
+                const Dictionary::Key& key = dictIt.getKey();
                 Dictionary::Value& value = dictIt.accessValue();
 
                 switch (idx)
@@ -409,8 +409,8 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
             for (const auto& dictIt : dictionary)
             {
-                const Dictionary::Key& key = dictIt.accessKey();
-                const Dictionary::Value& value = dictIt.accessValue();
+                const Dictionary::Key& key = dictIt.getKey();
+                const Dictionary::Value& value = dictIt.getValue();
 
                 switch (idx)
                 {

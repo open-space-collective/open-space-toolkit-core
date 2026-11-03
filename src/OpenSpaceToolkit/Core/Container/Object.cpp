@@ -350,7 +350,7 @@ const Object& Object::operator[](const type::String& aKey) const
         throw ostk::core::error::RuntimeError("Object is not a dictionary.");
     }
 
-    return this->accessDictionary()[aKey];
+    return this->getDictionary()[aKey];
 }
 
 const Object& Object::operator[](const type::Index& anIndex) const
@@ -362,7 +362,7 @@ const Object& Object::operator[](const type::Index& anIndex) const
         throw ostk::core::error::RuntimeError("Object is not an array.");
     }
 
-    return this->accessArray()[anIndex];
+    return this->getArray()[anIndex];
 }
 
 Object& Object::operator[](const type::String& aKey)
@@ -416,30 +416,30 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject)
             break;
 
         case Object::Type::Boolean:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessBoolean();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getBoolean();
             break;
 
         case Object::Type::Integer:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessInteger();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getInteger();
             break;
 
         case Object::Type::Real:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessReal();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getReal();
             break;
 
         case Object::Type::String:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessString();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getString();
             break;
 
         case Object::Type::Dictionary:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessDictionary();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getDictionary();
             break;
 
         case Object::Type::Array:
         {
             type::Index index = 0;
 
-            for (const auto& arrayElement : anObject.accessArray())
+            for (const auto& arrayElement : anObject.getArray())
             {
                 ostk::core::utils::Print::Line(anOutputStream)
                     << ("- [" + std::to_string(index) + "]: ") << arrayElement.toString(Object::Format::JSON);
@@ -513,7 +513,12 @@ bool Object::isArray() const
     return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->isArray() : false;
 }
 
-const bool& Object::accessBoolean() const
+Object::Type Object::getType() const
+{
+    return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->getType() : Object::Type::Undefined;
+}
+
+bool Object::getBoolean() const
 {
     if (!this->isDefined())
     {
@@ -523,7 +528,7 @@ const bool& Object::accessBoolean() const
     return objectImplUPtr_->accessBoolean();
 }
 
-const int& Object::accessInteger() const
+int Object::getInteger() const
 {
     if (!this->isDefined())
     {
@@ -533,7 +538,7 @@ const int& Object::accessInteger() const
     return objectImplUPtr_->accessInteger();
 }
 
-const double& Object::accessReal() const
+double Object::getReal() const
 {
     if (!this->isDefined())
     {
@@ -543,7 +548,7 @@ const double& Object::accessReal() const
     return objectImplUPtr_->accessReal();
 }
 
-const type::String& Object::accessString() const
+const type::String& Object::getString() const&
 {
     if (!this->isDefined())
     {
@@ -553,7 +558,12 @@ const type::String& Object::accessString() const
     return objectImplUPtr_->accessString();
 }
 
-const container::Dictionary& Object::accessDictionary() const
+type::String Object::getString() &&
+{
+    return this->getString();
+}
+
+const container::Dictionary& Object::getDictionary() const&
 {
     if (!this->isDefined())
     {
@@ -563,7 +573,12 @@ const container::Dictionary& Object::accessDictionary() const
     return objectImplUPtr_->accessDictionary();
 }
 
-const container::Array<Object>& Object::accessArray() const
+container::Dictionary Object::getDictionary() &&
+{
+    return this->getDictionary();
+}
+
+const container::Array<Object>& Object::getArray() const&
 {
     if (!this->isDefined())
     {
@@ -573,39 +588,9 @@ const container::Array<Object>& Object::accessArray() const
     return objectImplUPtr_->accessArray();
 }
 
-Object::Type Object::getType() const
+container::Array<Object> Object::getArray() &&
 {
-    return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->getType() : Object::Type::Undefined;
-}
-
-bool Object::getBoolean() const
-{
-    return this->accessBoolean();
-}
-
-int Object::getInteger() const
-{
-    return this->accessInteger();
-}
-
-double Object::getReal() const
-{
-    return this->accessReal();
-}
-
-type::String Object::getString() const
-{
-    return this->accessString();
-}
-
-container::Dictionary Object::getDictionary() const
-{
-    return this->accessDictionary();
-}
-
-container::Array<Object> Object::getArray() const
-{
-    return this->accessArray();
+    return this->getArray();
 }
 
 type::String Object::toString(const std::optional<Object::Format>& aFormat) const
@@ -653,19 +638,19 @@ type::String Object::getJsonString() const
                 break;
 
             case Object::Type::Boolean:
-                value.SetBool(anObject.accessBoolean());
+                value.SetBool(anObject.getBoolean());
                 break;
 
             case Object::Type::Integer:
             {
-                value.SetInt(anObject.accessInteger());
+                value.SetInt(anObject.getInteger());
 
                 break;
             }
 
             case Object::Type::Real:
             {
-                const double& real = anObject.accessReal();
+                const double& real = anObject.getReal();
 
                 if (!std::isfinite(real))
                 {
@@ -678,18 +663,18 @@ type::String Object::getJsonString() const
             }
 
             case Object::Type::String:
-                value.SetString(anObject.accessString().data(), anObject.accessString().length());
+                value.SetString(anObject.getString().data(), anObject.getString().length());
                 break;
 
             case Object::Type::Dictionary:
             {
                 value.SetObject();
 
-                for (const auto& dictIt : anObject.accessDictionary())
+                for (const auto& dictIt : anObject.getDictionary())
                 {
                     value.AddMember(
-                        rapidjson::Value(dictIt.accessKey().data(), dictIt.accessKey().length()).Move(),
-                        ValueFromObject(dictIt.accessValue()),
+                        rapidjson::Value(dictIt.getKey().data(), dictIt.getKey().length()).Move(),
+                        ValueFromObject(dictIt.getValue()),
                         jsonDocument.GetAllocator()
                     );
                 }
@@ -703,7 +688,7 @@ type::String Object::getJsonString() const
 
                 rapidjson::Document::AllocatorType& allocator = jsonDocument.GetAllocator();
 
-                for (const auto& object : anObject.accessArray())
+                for (const auto& object : anObject.getArray())
                 {
                     value.PushBack(ValueFromObject(object), allocator);
                 }

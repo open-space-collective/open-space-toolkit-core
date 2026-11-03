@@ -94,12 +94,12 @@ Dictionary::Iterator Dictionary::Iterator::operator--(int)
     return Dictionary::Iterator(mapIt_--);
 }
 
-const Dictionary::Key& Dictionary::Iterator::accessKey() const
+const Dictionary::Key& Dictionary::Iterator::getKey() const
 {
     return mapIt_.key();
 }
 
-const Dictionary::Value& Dictionary::Iterator::accessValue() const
+const Dictionary::Value& Dictionary::Iterator::getValue() const
 {
     return const_cast<Iterator::MapIterator&>(mapIt_).value();  // const_cast used due to a bug with tsl::ordered_map
 }
@@ -109,7 +109,7 @@ Dictionary::Value& Dictionary::Iterator::accessValue()
     return mapIt_.value();
 }
 
-const Dictionary::Iterator::MapIterator& Dictionary::Iterator::accessMapIterator() const
+const Dictionary::Iterator::MapIterator& Dictionary::Iterator::getMapIterator() const
 {
     return mapIt_;
 }
@@ -132,7 +132,7 @@ Dictionary::ConstIterator::ConstIterator(const Dictionary::ConstIterator& aConst
 }
 
 Dictionary::ConstIterator::ConstIterator(const Dictionary::Iterator& anIterator)
-    : mapIt_(anIterator.accessMapIterator())
+    : mapIt_(anIterator.getMapIterator())
 {
 }
 
@@ -195,12 +195,12 @@ Dictionary::ConstIterator Dictionary::ConstIterator::operator--(int)
     return Dictionary::ConstIterator(mapIt_--);
 }
 
-const Dictionary::Key& Dictionary::ConstIterator::accessKey() const
+const Dictionary::Key& Dictionary::ConstIterator::getKey() const
 {
     return mapIt_.key();
 }
 
-const Dictionary::Value& Dictionary::ConstIterator::accessValue() const
+const Dictionary::Value& Dictionary::ConstIterator::getValue() const
 {
     return mapIt_.value();
 }
@@ -289,20 +289,20 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
     {
         for (const auto& dictIt : dictionary)
         {
-            const Dictionary::Key& key = dictIt.accessKey();
-            const Dictionary::Value& value = dictIt.accessValue();
+            const Dictionary::Key& key = dictIt.getKey();
+            const Dictionary::Value& value = dictIt.getValue();
 
             if (value.isDictionary())
             {
                 ostk::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ");
 
-                printDictionary(value.accessDictionary(), anIndentation + 1);
+                printDictionary(value.getDictionary(), anIndentation + 1);
             }
             else if (value.isArray())
             {
                 ostk::core::utils::Print::Line(anOutputStream, anIndentation) << (key + ": ");
 
-                printArray(value.accessArray(), anIndentation + 1);
+                printArray(value.getArray(), anIndentation + 1);
             }
             else
             {
@@ -324,14 +324,14 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Dictionary& aDictio
                 ostk::core::utils::Print::Line(anOutputStream, anIndentation)
                     << ("- [" + std::to_string(index) + "]: ");
 
-                printDictionary(arrayElement.accessDictionary(), anIndentation + 1);
+                printDictionary(arrayElement.getDictionary(), anIndentation + 1);
             }
             else if (arrayElement.isArray())
             {
                 ostk::core::utils::Print::Line(anOutputStream, anIndentation)
                     << ("- [" + std::to_string(index) + "]: ");
 
-                printArray(arrayElement.accessArray(), anIndentation + 1);
+                printArray(arrayElement.getArray(), anIndentation + 1);
             }
             else
             {
@@ -424,7 +424,7 @@ Dictionary Dictionary::Parse(const String& aString, const std::optional<Object::
         throw ostk::core::error::runtime::Wrong("String");
     }
 
-    return object.accessDictionary();
+    return object.getDictionary();
 }
 
 Dictionary::Dictionary() {}

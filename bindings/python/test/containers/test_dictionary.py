@@ -56,7 +56,7 @@ class TestDictionary:
 
     def test_operator___iter__(self, dictionary: Dictionary):
         for item in dictionary:
-            assert str(item.access_key()) in {
+            assert str(item.get_key()) in {
                 "boolean",
                 "integer",
                 "real",
@@ -64,7 +64,7 @@ class TestDictionary:
                 "array",
                 "dictionary",
             }
-            assert isinstance(item.access_value(), Object)
+            assert isinstance(item.get_value(), Object)
 
     def test_operator___contains__(self, dictionary: Dictionary):
         assert "boolean" in dictionary

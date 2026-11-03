@@ -135,7 +135,7 @@ class Directory
     /// @endcode
     ///
     /// @return Directory path
-    filesystem::Path getPath() const;
+    const filesystem::Path& getPath() const;
 
     /// @brief Get directory permissions
     ///

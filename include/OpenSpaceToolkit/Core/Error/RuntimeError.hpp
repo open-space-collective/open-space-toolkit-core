@@ -49,12 +49,12 @@ class RuntimeError : public Exception
     /// @brief Get the error message
     ///
     /// @return Error message
-    String getMessage() const;
+    const String& getMessage() const;
 
     /// @brief Get the stack trace
     ///
     /// @return Stack trace string
-    String getStackTrace() const;
+    const String& getStackTrace() const;
 
     /// @brief Get the full error description (stack trace + message)
     ///
