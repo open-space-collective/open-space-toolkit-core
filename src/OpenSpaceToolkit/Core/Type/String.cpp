@@ -6,7 +6,6 @@
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
@@ -15,8 +14,6 @@ namespace core
 {
 namespace type
 {
-
-using ostk::core::type::Integer;
 
 String::String()
     : std::string()
@@ -135,16 +132,16 @@ String String::getSubstring(const Index& aStartPosition, const Size& aLength) co
     if (aStartPosition >= this->length())
     {
         throw ostk::core::error::RuntimeError(
-            "Start position [" + Integer::Index(aStartPosition).toString() + "] out of bounds [" +
-            Integer::Size(this->length() - 1).toString() + "]."
+            "Start position [" + std::to_string(aStartPosition) + "] out of bounds [" +
+            std::to_string(this->length() - 1) + "]."
         );
     }
 
     if ((aStartPosition + aLength) > this->length())
     {
         throw ostk::core::error::RuntimeError(
-            "End position [" + Integer::Index(aStartPosition + aLength - 1).toString() + "] out of bounds [" +
-            Integer::Size(this->length() - 1).toString() + "]."
+            "End position [" + std::to_string(aStartPosition + aLength - 1) + "] out of bounds [" +
+            std::to_string(this->length() - 1) + "]."
         );
     }
 
@@ -221,7 +218,7 @@ bool String::IsValidUTF8(const String& string)
 
     for (Size i = 0; i < stringLength; i++)
     {
-        Integer c = (unsigned char)string[i];
+        int c = (unsigned char)string[i];
 
         Size n;
 

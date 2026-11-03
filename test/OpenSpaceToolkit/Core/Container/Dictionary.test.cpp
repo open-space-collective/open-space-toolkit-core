@@ -2,8 +2,6 @@
 
 #include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
@@ -313,8 +311,8 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
         for (const auto& dictIt : dictionary)
         {
-            const Dictionary::Key& key = dictIt.accessKey();
-            const Dictionary::Value& value = dictIt.accessValue();
+            const Dictionary::Key& key = dictIt.getKey();
+            const Dictionary::Value& value = dictIt.getValue();
 
             switch (idx)
             {
@@ -364,7 +362,7 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
             for (auto& dictIt : dictionary)
             {
-                const Dictionary::Key& key = dictIt.accessKey();
+                const Dictionary::Key& key = dictIt.getKey();
                 Dictionary::Value& value = dictIt.accessValue();
 
                 switch (idx)
@@ -411,8 +409,8 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Iterator)
 
             for (const auto& dictIt : dictionary)
             {
-                const Dictionary::Key& key = dictIt.accessKey();
-                const Dictionary::Value& value = dictIt.accessValue();
+                const Dictionary::Key& key = dictIt.getKey();
+                const Dictionary::Value& value = dictIt.getValue();
 
                 switch (idx)
                 {
@@ -660,5 +658,26 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Parse)
         EXPECT_ANY_THROW(Dictionary::Parse("123.456"));
         EXPECT_ANY_THROW(Dictionary::Parse("abc"));
         EXPECT_ANY_THROW(Dictionary::Parse("{{}}"));
+    }
+}
+
+TEST(OpenSpaceToolkit_Core_Container_Dictionary, ParseWithoutFormat)
+{
+    using ostk::core::container::Dictionary;
+    using ostk::core::type::String;
+
+    {
+        const String jsonString = "{\"Key\": 123}";
+
+        EXPECT_NO_THROW(Dictionary::Parse(jsonString));
+        EXPECT_NO_THROW(Dictionary::Parse(jsonString, std::nullopt));
+
+        const Dictionary dictionary = Dictionary::Parse(jsonString);
+
+        EXPECT_EQ(123, dictionary["Key"].getInteger());
+    }
+
+    {
+        EXPECT_ANY_THROW(Dictionary::Parse("abc"));
     }
 }

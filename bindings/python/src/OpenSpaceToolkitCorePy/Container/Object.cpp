@@ -1,19 +1,21 @@
 /// Apache License 2.0
 
+#include <nanobind/stl/optional.h>
+
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 using ostk::core::container::Object;
 
-inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& objectClass)
+inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& objectClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
+    using ostk::core::container::Array;
+    using ostk::core::container::Dictionary;
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
-    using ostk::core::type::Real;
     using ostk::core::type::String;
 
     enum_<Object::Type>(objectClass, "Type", R"doc(
@@ -38,7 +40,6 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
         Defines the supported formats for serializing/deserializing Objects.
     )doc")
 
-        .value("Undefined", Object::Format::Undefined, "Undefined format")
         .value("JSON", Object::Format::JSON, "JSON format")
         .value("YAML", Object::Format::YAML, "YAML format")
 
@@ -46,8 +47,24 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
 
     objectClass
 
-        .def(self == self, R"doc(Check if two Objects are equal.)doc")
-        .def(self != self, R"doc(Check if two Objects are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const Object& self, const Object& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Objects are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Object& self, const Object& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Objects are not equal.)doc"
+        )
 
         .def(
             "__getitem__",
@@ -206,7 +223,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                 Get the integer value from the Object.
 
                 Returns:
-                    Integer: The integer value.
+                    int: The integer value.
 
                 Raises:
                     RuntimeError: If the object is not an integer.
@@ -219,7 +236,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                 Get the real number value from the Object.
 
                 Returns:
-                    Real: The real number value.
+                    float: The real number value.
 
                 Raises:
                     RuntimeError: If the object is not a real number.
@@ -227,7 +244,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
         )
         .def(
             "get_string",
-            &Object::getString,
+            [](const Object& self) -> String
+            {
+                return self.getString();
+            },
             R"doc(
                 Get the string value from the Object.
 
@@ -240,7 +260,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
         )
         .def(
             "get_dictionary",
-            &Object::getDictionary,
+            [](const Object& self) -> Dictionary
+            {
+                return self.getDictionary();
+            },
             R"doc(
                 Get the dictionary from the Object.
 
@@ -253,7 +276,10 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
         )
         .def(
             "get_array",
-            &Object::getArray,
+            [](const Object& self) -> Array<Object>
+            {
+                return self.getArray();
+            },
             R"doc(
                 Get the array from the Object.
 
@@ -271,7 +297,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                 Convert the Object to a string representation.
 
                 Args:
-                    format (Object.Format): The output format (JSON or YAML).
+                    format (Object.Format | None): The output format (JSON or YAML). None is not supported and raises.
 
                 Returns:
                     str: String representation of the object.
@@ -310,7 +336,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                 Create an Object containing an integer value.
 
                 Args:
-                    integer (Integer): The integer value.
+                    integer (int): The integer value.
 
                 Returns:
                     Object: An object containing the integer.
@@ -324,7 +350,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                 Create an Object containing a real number value.
 
                 Args:
-                    real (Real): The real number value.
+                    real (float): The real number value.
 
                 Returns:
                     Object: An object containing the real number.
@@ -381,7 +407,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
 
                 Args:
                     string (str): The string to parse.
-                    format (Object.Format): The format of the string (JSON or YAML).
+                    format (Object.Format | None): The format of the string (JSON or YAML). If None, the format is detected.
 
                 Returns:
                     Object: The parsed object.
@@ -390,7 +416,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                     RuntimeError: If the string cannot be parsed.
             )doc",
             arg("string"),
-            arg("format")
+            arg("format") = none()
         )
         .def_static(
             "load",
@@ -400,7 +426,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
 
                 Args:
                     file (File): The file to load from.
-                    format (Object.Format): The format of the file content.
+                    format (Object.Format | None): The format of the file content. If None, the format is detected.
 
                 Returns:
                     Object: The loaded object.
@@ -409,7 +435,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(pybind11::class_<Object>& ob
                     RuntimeError: If the file cannot be loaded or parsed.
             )doc",
             arg("file"),
-            arg("format")
+            arg("format") = none()
         )
         .def_static(
             "string_from_type",

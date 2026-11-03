@@ -14,6 +14,10 @@
 #define CPP20
 #endif
 
+// Real and Integer are deprecated: their own definitions must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace ostk
 {
 namespace core
@@ -37,12 +41,14 @@ class Real;
 ///
 /// Represents an integer number with support for undefined and infinite values.
 ///
+/// @deprecated Use `int` instead. Integer will be removed in a future release.
+///
 /// @code
 ///     Integer integer(123) ;
 ///     integer.isDefined() ; // True
 ///     integer.toString() ; // "123"
 /// @endcode
-class Integer
+class [[deprecated("Integer is deprecated and will be removed in a future release; use int instead.")]] Integer
 {
    public:
     typedef int32_t ValueType;
@@ -684,5 +690,7 @@ struct std::formatter<ostk::core::type::Integer> : std::formatter<int>
     }
 };
 #endif
+
+#pragma GCC diagnostic pop
 
 #endif

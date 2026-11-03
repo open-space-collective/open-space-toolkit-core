@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <cmath>
+
 #include <boost/any.hpp>
 #include <magic_enum/magic_enum.hpp>
 #include <rapidjson/document.h>
@@ -42,8 +44,8 @@ class Object::Impl
     bool isArray() const;
 
     const bool& accessBoolean() const;
-    const type::Integer& accessInteger() const;
-    const type::Real& accessReal() const;
+    const int& accessInteger() const;
+    const double& accessReal() const;
     const type::String& accessString() const;
     const container::Dictionary& accessDictionary() const;
     const container::Array<Object>& accessArray() const;
@@ -51,8 +53,8 @@ class Object::Impl
     Object::Type getType() const;
 
     bool& accessBoolean();
-    type::Integer& accessInteger();
-    type::Real& accessReal();
+    int& accessInteger();
+    double& accessReal();
     type::String& accessString();
     container::Dictionary& accessDictionary();
     container::Array<Object>& accessArray();
@@ -83,14 +85,14 @@ bool Object::Impl::operator==(const Object::Impl& anObject) const
         return boost::any_cast<bool>(value_) == boost::any_cast<bool>(anObject.value_);
     }
 
-    if (value_.type() == typeid(type::Integer))
+    if (value_.type() == typeid(int))
     {
-        return boost::any_cast<type::Integer>(value_) == boost::any_cast<type::Integer>(anObject.value_);
+        return boost::any_cast<int>(value_) == boost::any_cast<int>(anObject.value_);
     }
 
-    if (value_.type() == typeid(type::Real))
+    if (value_.type() == typeid(double))
     {
-        return boost::any_cast<type::Real>(value_) == boost::any_cast<type::Real>(anObject.value_);
+        return boost::any_cast<double>(value_) == boost::any_cast<double>(anObject.value_);
     }
 
     if (value_.type() == typeid(type::String))
@@ -127,12 +129,12 @@ bool Object::Impl::isBoolean() const
 
 bool Object::Impl::isInteger() const
 {
-    return value_.type() == typeid(type::Integer);
+    return value_.type() == typeid(int);
 }
 
 bool Object::Impl::isReal() const
 {
-    return value_.type() == typeid(type::Real);
+    return value_.type() == typeid(double);
 }
 
 bool Object::Impl::isString() const
@@ -160,21 +162,21 @@ const bool& Object::Impl::accessBoolean() const
     throw ostk::core::error::RuntimeError("Object is not of type [Boolean].");
 }
 
-const type::Integer& Object::Impl::accessInteger() const
+const int& Object::Impl::accessInteger() const
 {
     if (this->isInteger())
     {
-        return boost::any_cast<const type::Integer&>(value_);
+        return boost::any_cast<const int&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Integer].");
 }
 
-const type::Real& Object::Impl::accessReal() const
+const double& Object::Impl::accessReal() const
 {
     if (this->isReal())
     {
-        return boost::any_cast<const type::Real&>(value_);
+        return boost::any_cast<const double&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Real].");
@@ -255,21 +257,21 @@ bool& Object::Impl::accessBoolean()
     throw ostk::core::error::RuntimeError("Object is not of type [Boolean].");
 }
 
-type::Integer& Object::Impl::accessInteger()
+int& Object::Impl::accessInteger()
 {
     if (this->isInteger())
     {
-        return boost::any_cast<type::Integer&>(value_);
+        return boost::any_cast<int&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Integer].");
 }
 
-type::Real& Object::Impl::accessReal()
+double& Object::Impl::accessReal()
 {
     if (this->isReal())
     {
-        return boost::any_cast<type::Real&>(value_);
+        return boost::any_cast<double&>(value_);
     }
 
     throw ostk::core::error::RuntimeError("Object is not of type [Real].");
@@ -348,7 +350,7 @@ const Object& Object::operator[](const type::String& aKey) const
         throw ostk::core::error::RuntimeError("Object is not a dictionary.");
     }
 
-    return this->accessDictionary()[aKey];
+    return this->getDictionary()[aKey];
 }
 
 const Object& Object::operator[](const type::Index& anIndex) const
@@ -360,7 +362,7 @@ const Object& Object::operator[](const type::Index& anIndex) const
         throw ostk::core::error::RuntimeError("Object is not an array.");
     }
 
-    return this->accessArray()[anIndex];
+    return this->getArray()[anIndex];
 }
 
 Object& Object::operator[](const type::String& aKey)
@@ -414,33 +416,33 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Object& anObject)
             break;
 
         case Object::Type::Boolean:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessBoolean();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getBoolean();
             break;
 
         case Object::Type::Integer:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessInteger();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getInteger();
             break;
 
         case Object::Type::Real:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessReal();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getReal();
             break;
 
         case Object::Type::String:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessString();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getString();
             break;
 
         case Object::Type::Dictionary:
-            ostk::core::utils::Print::Line(anOutputStream) << anObject.accessDictionary();
+            ostk::core::utils::Print::Line(anOutputStream) << anObject.getDictionary();
             break;
 
         case Object::Type::Array:
         {
-            Integer index = 0;
+            type::Index index = 0;
 
-            for (const auto& arrayElement : anObject.accessArray())
+            for (const auto& arrayElement : anObject.getArray())
             {
                 ostk::core::utils::Print::Line(anOutputStream)
-                    << ("- [" + index.toString() + "]: ") << arrayElement.toString(Object::Format::JSON);
+                    << ("- [" + std::to_string(index) + "]: ") << arrayElement.toString(Object::Format::JSON);
 
                 index++;
             }
@@ -511,7 +513,12 @@ bool Object::isArray() const
     return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->isArray() : false;
 }
 
-const bool& Object::accessBoolean() const
+Object::Type Object::getType() const
+{
+    return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->getType() : Object::Type::Undefined;
+}
+
+bool Object::getBoolean() const
 {
     if (!this->isDefined())
     {
@@ -521,7 +528,7 @@ const bool& Object::accessBoolean() const
     return objectImplUPtr_->accessBoolean();
 }
 
-const type::Integer& Object::accessInteger() const
+int Object::getInteger() const
 {
     if (!this->isDefined())
     {
@@ -531,7 +538,7 @@ const type::Integer& Object::accessInteger() const
     return objectImplUPtr_->accessInteger();
 }
 
-const type::Real& Object::accessReal() const
+double Object::getReal() const
 {
     if (!this->isDefined())
     {
@@ -541,7 +548,7 @@ const type::Real& Object::accessReal() const
     return objectImplUPtr_->accessReal();
 }
 
-const type::String& Object::accessString() const
+const type::String& Object::getString() const&
 {
     if (!this->isDefined())
     {
@@ -551,7 +558,12 @@ const type::String& Object::accessString() const
     return objectImplUPtr_->accessString();
 }
 
-const container::Dictionary& Object::accessDictionary() const
+type::String Object::getString() &&
+{
+    return this->getString();
+}
+
+const container::Dictionary& Object::getDictionary() const&
 {
     if (!this->isDefined())
     {
@@ -561,7 +573,12 @@ const container::Dictionary& Object::accessDictionary() const
     return objectImplUPtr_->accessDictionary();
 }
 
-const container::Array<Object>& Object::accessArray() const
+container::Dictionary Object::getDictionary() &&
+{
+    return this->getDictionary();
+}
+
+const container::Array<Object>& Object::getArray() const&
 {
     if (!this->isDefined())
     {
@@ -571,50 +588,22 @@ const container::Array<Object>& Object::accessArray() const
     return objectImplUPtr_->accessArray();
 }
 
-Object::Type Object::getType() const
+container::Array<Object> Object::getArray() &&
 {
-    return (objectImplUPtr_ != nullptr) ? objectImplUPtr_->getType() : Object::Type::Undefined;
+    return this->getArray();
 }
 
-bool Object::getBoolean() const
-{
-    return this->accessBoolean();
-}
-
-type::Integer Object::getInteger() const
-{
-    return this->accessInteger();
-}
-
-type::Real Object::getReal() const
-{
-    return this->accessReal();
-}
-
-type::String Object::getString() const
-{
-    return this->accessString();
-}
-
-container::Dictionary Object::getDictionary() const
-{
-    return this->accessDictionary();
-}
-
-container::Array<Object> Object::getArray() const
-{
-    return this->accessArray();
-}
-
-type::String Object::toString(const Object::Format& aFormat) const
+type::String Object::toString(const std::optional<Object::Format>& aFormat) const
 {
     LOG_SCOPE("Object", "toString");
 
-    switch (aFormat)
+    if (!aFormat.has_value())
     {
-        case Object::Format::Undefined:
-            break;
+        throw ostk::core::error::runtime::Wrong("Format");
+    }
 
+    switch (aFormat.value())
+    {
         case Object::Format::JSON:
             return this->getJsonString();
 
@@ -649,44 +638,43 @@ type::String Object::getJsonString() const
                 break;
 
             case Object::Type::Boolean:
-                value.SetBool(anObject.accessBoolean());
+                value.SetBool(anObject.getBoolean());
                 break;
 
             case Object::Type::Integer:
             {
-                const type::Integer& integer = anObject.accessInteger();
-
-                if (integer.isDefined() && integer.isFinite())
-                {
-                    value.SetInt(integer);
-                }
-                else
-                {
-                    const type::String string = integer.toString();
-
-                    value.SetString(string.data(), string.length());
-                }
+                value.SetInt(anObject.getInteger());
 
                 break;
             }
 
             case Object::Type::Real:
-                value.SetDouble(anObject.accessReal());
+            {
+                const double& real = anObject.getReal();
+
+                if (!std::isfinite(real))
+                {
+                    throw ostk::core::error::runtime::Undefined("Real");
+                }
+
+                value.SetDouble(real);
+
                 break;
+            }
 
             case Object::Type::String:
-                value.SetString(anObject.accessString().data(), anObject.accessString().length());
+                value.SetString(anObject.getString().data(), anObject.getString().length());
                 break;
 
             case Object::Type::Dictionary:
             {
                 value.SetObject();
 
-                for (const auto& dictIt : anObject.accessDictionary())
+                for (const auto& dictIt : anObject.getDictionary())
                 {
                     value.AddMember(
-                        rapidjson::Value(dictIt.accessKey().data(), dictIt.accessKey().length()).Move(),
-                        ValueFromObject(dictIt.accessValue()),
+                        rapidjson::Value(dictIt.getKey().data(), dictIt.getKey().length()).Move(),
+                        ValueFromObject(dictIt.getValue()),
                         jsonDocument.GetAllocator()
                     );
                 }
@@ -700,7 +688,7 @@ type::String Object::getJsonString() const
 
                 rapidjson::Document::AllocatorType& allocator = jsonDocument.GetAllocator();
 
-                for (const auto& object : anObject.accessArray())
+                for (const auto& object : anObject.getArray())
                 {
                     value.PushBack(ValueFromObject(object), allocator);
                 }
@@ -743,7 +731,7 @@ bool& Object::accessBoolean()
     return objectImplUPtr_->accessBoolean();
 }
 
-type::Integer& Object::accessInteger()
+int& Object::accessInteger()
 {
     if (!this->isDefined())
     {
@@ -753,7 +741,7 @@ type::Integer& Object::accessInteger()
     return objectImplUPtr_->accessInteger();
 }
 
-type::Real& Object::accessReal()
+double& Object::accessReal()
 {
     if (!this->isDefined())
     {
@@ -803,12 +791,12 @@ Object Object::Boolean(const bool& aBoolean)
     return Object(std::make_unique<Object::Impl>(boost::any(aBoolean)));
 }
 
-Object Object::Integer(const type::Integer& anInteger)
+Object Object::Integer(int anInteger)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(anInteger)));
 }
 
-Object Object::Real(const type::Real& aReal)
+Object Object::Real(double aReal)
 {
     return Object(std::make_unique<Object::Impl>(boost::any(aReal)));
 }
@@ -828,26 +816,22 @@ Object Object::Array(const container::Array<Object>& anArray)
     return Object(std::make_unique<Object::Impl>(boost::any(anArray)));
 }
 
-Object Object::Parse(const type::String& aString, const Object::Format& aFormat)
+Object Object::Parse(const type::String& aString, const std::optional<Object::Format>& aFormat)
 {
-    switch (aFormat)
+    if (!aFormat.has_value())
     {
-        case Object::Format::Undefined:
+        // Automatically detect format
+
+        if ((!aString.isEmpty()) && (aString.getFirst() == '{') && (aString.getLast() == '}'))
         {
-            // Automatically detect format
-
-            if ((!aString.isEmpty()) && (aString.getFirst() == '{') && (aString.getLast() == '}'))
-            {
-                return Object::ParseJson(aString);
-            }
-            else
-            {
-                throw ostk::core::error::RuntimeError("Cannot detect format.");
-            }
-
-            break;
+            return Object::ParseJson(aString);
         }
 
+        throw ostk::core::error::RuntimeError("Cannot detect format.");
+    }
+
+    switch (aFormat.value())
+    {
         case Object::Format::JSON:
             return Object::ParseJson(aString);
 
@@ -1050,14 +1034,9 @@ Object Object::ParseYaml(const type::String& aString)
     }
 }
 
-Object Object::Load(const filesystem::File& aFile, const Object::Format& aFormat)
+Object Object::Load(const filesystem::File& aFile, const std::optional<Object::Format>& aFormat)
 {
     LOG_SCOPE("Object", "Load");
-
-    if (!aFile.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
 
     if (!aFile.exists())
     {

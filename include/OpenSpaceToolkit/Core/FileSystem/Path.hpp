@@ -97,16 +97,6 @@ class Path
     /// @return A reference to output stream
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Path& aPath);
 
-    /// @brief Check if path is defined
-    ///
-    /// @code
-    ///     Path path = Path::Undefined() ;
-    ///     path.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return True if path is defined
-    bool isDefined() const;
-
     /// @brief Check if path is absolute
     ///
     /// @code
@@ -188,16 +178,6 @@ class Path
     ///
     /// @return Serialized path
     String toString() const;
-
-    /// @brief Constructs an undefined path
-    ///
-    /// @code
-    ///     Path path = Path::Undefined() ;
-    ///     path.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return Undefined path
-    static Path Undefined();
 
     /// @brief Constructs a root path
     ///

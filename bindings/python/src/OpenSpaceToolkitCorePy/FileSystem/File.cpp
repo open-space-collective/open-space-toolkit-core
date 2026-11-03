@@ -5,41 +5,40 @@
 using ostk::core::filesystem::File;
 using ostk::core::filesystem::PermissionSet;
 
-inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileClass)
+inline void OpenSpaceToolkitCorePy_FileSystem_File(nanobind::class_<File>& fileClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     fileClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         // No init here - Files are created via static methods
 
         // Define methods
-        .def(self == self, R"doc(Check if two Files are equal.)doc")
-        .def(self != self, R"doc(Check if two Files are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const File& self, const File& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Files are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const File& self, const File& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Files are not equal.)doc"
+        )
 
         // .def("__str__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
         // .def("__repr__", +[] (const ostk::core::filesystem::File& aFile) -> str { return aFile.toString() ; })
         .def("__str__", &(shiftToString<File>), R"doc(Return string representation of the File.)doc")
         .def("__repr__", &(shiftToString<File>), R"doc(Return string representation of the File for debugging.)doc")
 
-        .def(
-            "is_defined",
-            &File::isDefined,
-            R"doc(
-                Check if the File is defined.
-
-                Returns:
-                    bool: True if the File is defined, False otherwise.
-
-                Example:
-                    >>> from ostk.core.filesystem import Path
-                    >>> file = File.path(Path.parse("/path/to/file.txt"))
-                    >>> file.is_defined()  # True
-                    >>> undefined_file = File.undefined()
-                    >>> undefined_file.is_defined()  # False
-            )doc"
-        )
         .def(
             "exists",
             &File::exists,
@@ -219,9 +218,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
                     >>> file.create()  # Uses default permissions
                     >>> file.create(PermissionSet.rw(), PermissionSet.r(), PermissionSet.none())
             )doc",
-            arg_v("owner_permissions", PermissionSet::RW(), "PermissionSet.rw()"),
-            arg_v("group_permissions", PermissionSet::R(), "PermissionSet.r()"),
-            arg_v("other_permissions", PermissionSet::R(), "PermissionSet.r()")
+            arg("owner_permissions").sig("PermissionSet.rw()") = PermissionSet::RW(),
+            arg("group_permissions").sig("PermissionSet.r()") = PermissionSet::R(),
+            arg("other_permissions").sig("PermissionSet.r()") = PermissionSet::R()
         )
         // .def("clear", &File::clear)
         .def(
@@ -243,20 +242,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_File(pybind11::class_<File>& fileC
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &File::Undefined,
-            R"doc(
-                Create an undefined File.
-
-                Returns:
-                    File: An undefined File object.
-
-                Example:
-                    >>> undefined_file = File.undefined()
-                    >>> undefined_file.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "path",
             &File::Path,

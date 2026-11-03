@@ -1,5 +1,9 @@
 /// Apache License 2.0
 
+#include <limits>
+
+#include <boost/lexical_cast.hpp>
+
 #include <OpenSpaceToolkit/Core/Container/Table.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Utility.hpp>
@@ -246,36 +250,29 @@ Table Table::Empty()
     return Table(Array<String>::Empty());
 }
 
-Table Table::Load(const File& aFile, const Table::Format& aFormat, bool hasHeader)
+Table Table::Load(const File& aFile, const std::optional<Table::Format>& aFormat, bool hasHeader)
 {
-    if (!aFile.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
-
     if (!aFile.exists())
     {
         throw ostk::core::error::RuntimeError("File [{}] does not exist.", aFile.toString());
     }
 
-    switch (aFormat)
+    if (!aFormat.has_value())
     {
-        case Table::Format::Undefined:
-        {
-            if (aFile.getExtension() == "csv")
-            {
-                return Table::LoadCsv(aFile, hasHeader);
-            }
-            else
-            {
-                throw ostk::core::error::RuntimeError(
-                    "Cannot automatically detect format of table file [{}].", aFile.toString()
-                );
-            }
+        // Automatically detect format
 
-            break;
+        if (aFile.getExtension() == "csv")
+        {
+            return Table::LoadCsv(aFile, hasHeader);
         }
 
+        throw ostk::core::error::RuntimeError(
+            "Cannot automatically detect format of table file [{}].", aFile.toString()
+        );
+    }
+
+    switch (aFormat.value())
+    {
         case Table::Format::CSV:
             return Table::LoadCsv(aFile, hasHeader);
 
@@ -289,9 +286,6 @@ Table Table::Load(const File& aFile, const Table::Format& aFormat, bool hasHeade
 
 Table Table::LoadCsv(const File& aFile, bool hasHeader)
 {
-    using ostk::core::type::Integer;
-    using ostk::core::type::Real;
-
     try
     {
         rapidcsv::Document document(
@@ -327,17 +321,32 @@ Table Table::LoadCsv(const File& aFile, bool hasHeader)
             {
                 Cell cell = Cell::Undefined();
 
-                if (rowValue.empty())
+                int integerValue = 0;
+                double realValue = 0.0;
+
+                if (rowValue.empty() || (rowValue == "Undefined"))
                 {
                     cell = Cell::Undefined();
                 }
-                else if (Integer::CanParse(rowValue))
+                else if (boost::conversion::try_lexical_convert<int>(rowValue, integerValue))
                 {
-                    cell = Cell::Integer(Integer::Parse(rowValue));
+                    cell = Cell::Integer(integerValue);
                 }
-                else if (Real::CanParse(rowValue))
+                else if (rowValue == "NaN")
                 {
-                    cell = Cell::Real(Real::Parse(rowValue));
+                    cell = Cell::Real(std::numeric_limits<double>::quiet_NaN());
+                }
+                else if ((rowValue == "Inf") || (rowValue == "+Inf"))
+                {
+                    cell = Cell::Real(std::numeric_limits<double>::infinity());
+                }
+                else if (rowValue == "-Inf")
+                {
+                    cell = Cell::Real(-std::numeric_limits<double>::infinity());
+                }
+                else if (boost::conversion::try_lexical_convert<double>(rowValue, realValue))
+                {
+                    cell = Cell::Real(realValue);
                 }
                 else
                 {

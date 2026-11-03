@@ -4,13 +4,13 @@
 
 using ostk::core::filesystem::PermissionSet;
 
-inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::class_<PermissionSet>& permissionSet)
+inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(nanobind::class_<PermissionSet>& permissionSet)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     permissionSet
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         .def(
             init<const bool, const bool, const bool>(),
             R"doc(
@@ -32,11 +32,43 @@ inline void OpenSpaceToolkitCorePy_FileSystem_PermissionSet(pybind11::class_<Per
         )
 
         // Define methods
-        .def(self == self, R"doc(Check if two PermissionSets are equal.)doc")
-        .def(self != self, R"doc(Check if two PermissionSets are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const PermissionSet& self, const PermissionSet& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two PermissionSets are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const PermissionSet& self, const PermissionSet& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two PermissionSets are not equal.)doc"
+        )
 
-        .def(self + self, R"doc(Combine two PermissionSets (union of permissions).)doc")
-        .def(self - self, R"doc(Remove permissions (subtract permissions).)doc")
+        .def(
+            "__add__",
+            [](const PermissionSet& self, const PermissionSet& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator(),
+            R"doc(Combine two PermissionSets (union of permissions).)doc"
+        )
+        .def(
+            "__sub__",
+            [](const PermissionSet& self, const PermissionSet& other)
+            {
+                return self - other;
+            },
+            nanobind::is_operator(),
+            R"doc(Remove permissions (subtract permissions).)doc"
+        )
 
         .def("__str__", &(shiftToString<PermissionSet>), R"doc(Return string representation of the PermissionSet.)doc")
         .def(

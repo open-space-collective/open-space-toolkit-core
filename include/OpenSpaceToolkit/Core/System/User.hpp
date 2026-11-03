@@ -54,11 +54,6 @@ class User
     /// @return Reference to output stream
     friend std::ostream& operator<<(std::ostream& anOutputStream, const User& aUser);
 
-    /// @brief Check if user is defined
-    ///
-    /// @return True if defined
-    bool isDefined() const;
-
     /// @brief Get user ID
     ///
     /// @return User ID
@@ -73,11 +68,6 @@ class User
     ///
     /// @return User name
     String getName() const;
-
-    /// @brief Construct an undefined user
-    ///
-    /// @return Undefined user
-    static User Undefined();
 
     /// @brief Construct a user from the current process
     ///

@@ -9,6 +9,10 @@
 
 #include <Global.test.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 TEST(OpenSpaceToolkit_Core_Type_Integer, DefaultConstructor)
 {
     using ostk::core::type::Integer;
@@ -3117,3 +3121,5 @@ TEST(OpenSpaceToolkit_Core_Type_Integer, Parse)
         EXPECT_ANY_THROW(Integer::Parse("+2147483648"));
     }
 }
+
+#pragma GCC diagnostic pop

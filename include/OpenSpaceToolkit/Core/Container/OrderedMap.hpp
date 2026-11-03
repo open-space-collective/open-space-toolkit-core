@@ -28,7 +28,7 @@ namespace container
 /// values will be returned in the same order as they were inserted.
 ///
 /// @code
-///     OrderedMap<String, Integer> map ;
+///     OrderedMap<String, int> map ;
 ///     map["first"] = 1 ;
 ///     map["second"] = 2 ;
 ///     // Iteration order: "first", "second"

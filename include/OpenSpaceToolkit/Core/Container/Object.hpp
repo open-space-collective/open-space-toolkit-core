@@ -4,6 +4,7 @@
 #define __OpenSpaceToolkit_Core_Container_Object__
 
 #include <fstream>
+#include <optional>
 #include <ostream>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
@@ -11,8 +12,6 @@
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 #include <OpenSpaceToolkit/Core/Type/EnumHelper.hpp>
 #include <OpenSpaceToolkit/Core/Type/Index.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 #include <OpenSpaceToolkit/Core/Type/Unique.hpp>
 
@@ -54,7 +53,6 @@ class Object
     enum class Format
     {
 
-        Undefined,
         JSON,
         YAML
 
@@ -207,76 +205,61 @@ class Object
     /// @return True if array
     bool isArray() const;
 
-    /// @brief Access boolean value (const)
-    ///
-    /// @return Const reference to boolean value
-    const bool& accessBoolean() const;
-
-    /// @brief Access integer value (const)
-    ///
-    /// @return Const reference to integer value
-    const type::Integer& accessInteger() const;
-
-    /// @brief Access real value (const)
-    ///
-    /// @return Const reference to real value
-    const type::Real& accessReal() const;
-
-    /// @brief Access string value (const)
-    ///
-    /// @return Const reference to string value
-    const type::String& accessString() const;
-
-    /// @brief Access dictionary value (const)
-    ///
-    /// @return Const reference to dictionary value
-    const container::Dictionary& accessDictionary() const;
-
-    /// @brief Access array value (const)
-    ///
-    /// @return Const reference to array value
-    const container::Array<Object>& accessArray() const;
-
     /// @brief Get object type
     ///
     /// @return Object type
     Object::Type getType() const;
 
-    /// @brief Get boolean value (copy)
+    /// @brief Get boolean value
     ///
     /// @return Boolean value
     bool getBoolean() const;
 
-    /// @brief Get integer value (copy)
+    /// @brief Get integer value
     ///
     /// @return Integer value
-    type::Integer getInteger() const;
+    int getInteger() const;
 
-    /// @brief Get real value (copy)
+    /// @brief Get real value
     ///
     /// @return Real value
-    type::Real getReal() const;
+    double getReal() const;
 
-    /// @brief Get string value (copy)
+    /// @brief Get string value
     ///
-    /// @return String value
-    type::String getString() const;
+    /// @return Const reference to string value
+    const type::String& getString() const&;
 
-    /// @brief Get dictionary value (copy)
+    /// @brief Get string value of a temporary object
     ///
-    /// @return Dictionary value
-    container::Dictionary getDictionary() const;
+    /// @return String value (copy, so that it does not dangle)
+    type::String getString() &&;
 
-    /// @brief Get array value (copy)
+    /// @brief Get dictionary value
     ///
-    /// @return Array value
-    container::Array<Object> getArray() const;
+    /// @return Const reference to dictionary value
+    const container::Dictionary& getDictionary() const&;
+
+    /// @brief Get dictionary value of a temporary object
+    ///
+    /// @return Dictionary value (copy, so that it does not dangle)
+    container::Dictionary getDictionary() &&;
+
+    /// @brief Get array value
+    ///
+    /// @return Const reference to array value
+    const container::Array<Object>& getArray() const&;
+
+    /// @brief Get array value of a temporary object
+    ///
+    /// @return Array value (copy, so that it does not dangle)
+    container::Array<Object> getArray() &&;
 
     /// @brief Convert object to string representation
     ///
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which is not supported and throws)
     /// @return String representation
-    type::String toString(const Object::Format& aFormat = Object::Format::Undefined) const;
+    type::String toString(const std::optional<Object::Format>& aFormat = std::nullopt) const;
 
     /// @brief Convert object to JSON string
     ///
@@ -291,12 +274,12 @@ class Object
     /// @brief Access integer value (mutable)
     ///
     /// @return Reference to integer value
-    type::Integer& accessInteger();
+    int& accessInteger();
 
     /// @brief Access real value (mutable)
     ///
     /// @return Reference to real value
-    type::Real& accessReal();
+    double& accessReal();
 
     /// @brief Access string value (mutable)
     ///
@@ -338,9 +321,9 @@ class Object
     ///     Object object = Object::Integer(123) ;
     /// @endcode
     ///
-    /// @param [in] anInteger An integer (default: Undefined)
+    /// @param [in] anInteger An integer
     /// @return Integer object
-    static Object Integer(const type::Integer& anInteger = type::Integer::Undefined());
+    static Object Integer(int anInteger);
 
     /// @brief Construct a real object
     ///
@@ -348,9 +331,9 @@ class Object
     ///     Object object = Object::Real(1.23) ;
     /// @endcode
     ///
-    /// @param [in] aReal A real (default: Undefined)
+    /// @param [in] aReal A real
     /// @return Real object
-    static Object Real(const type::Real& aReal = type::Real::Undefined());
+    static Object Real(double aReal);
 
     /// @brief Construct a string object
     ///
@@ -389,9 +372,9 @@ class Object
     /// @endcode
     ///
     /// @param [in] aString A string
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which detects the format)
     /// @return Object
-    static Object Parse(const type::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Parse(const type::String& aString, const std::optional<Object::Format>& aFormat = std::nullopt);
 
     /// @brief Construct an object by loading from a file
     ///
@@ -400,9 +383,9 @@ class Object
     /// @endcode
     ///
     /// @param [in] aFile A file
-    /// @param [in] aFormat A serialization format (default: Undefined)
+    /// @param [in] aFormat A serialization format (default: std::nullopt, which detects the format)
     /// @return Object
-    static Object Load(const filesystem::File& aFile, const Object::Format& aFormat = Object::Format::Undefined);
+    static Object Load(const filesystem::File& aFile, const std::optional<Object::Format>& aFormat = std::nullopt);
 
     OSTK_CORE_DECLARE_ENUM_STRING_CONVERSION(Object::Type, Type, Object)
 

@@ -5,18 +5,34 @@
 using ostk::core::filesystem::Directory;
 using ostk::core::filesystem::PermissionSet;
 
-inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directory>& directoryClass)
+inline void OpenSpaceToolkitCorePy_FileSystem_Directory(nanobind::class_<Directory>& directoryClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     directoryClass
 
-        // Define init method using pybind11 "init" convenience method
+        // Define init method using nanobind "init" convenience method
         // No init here - Directories are created via static methods
 
         // Define methods
-        .def(self == self, R"doc(Check if two Directories are equal.)doc")
-        .def(self != self, R"doc(Check if two Directories are not equal.)doc")
+        .def(
+            "__eq__",
+            [](const Directory& self, const Directory& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Directories are equal.)doc"
+        )
+        .def(
+            "__ne__",
+            [](const Directory& self, const Directory& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator(),
+            R"doc(Check if two Directories are not equal.)doc"
+        )
 
         .def("__str__", &(shiftToString<Directory>), R"doc(Return string representation of the Directory.)doc")
         .def(
@@ -25,21 +41,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
             R"doc(Return string representation of the Directory for debugging.)doc"
         )
 
-        .def(
-            "is_defined",
-            &Directory::isDefined,
-            R"doc(
-                Check if the Directory is defined.
-
-                Returns:
-                    bool: True if the Directory is defined, False otherwise.
-
-                Example:
-                    >>> from ostk.core.filesystem import Path
-                    >>> directory = Directory.path(Path.parse("/home/user"))
-                    >>> directory.is_defined()  # True
-            )doc"
-        )
         .def(
             "exists",
             &Directory::exists,
@@ -191,9 +192,9 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
                     >>> directory.create()  # Uses default permissions
                     >>> directory.create(PermissionSet.rwx(), PermissionSet.rx(), PermissionSet.none())
             )doc",
-            arg_v("owner_permissions", PermissionSet::RWX(), "PermissionSet.rwx()"),
-            arg_v("group_permissions", PermissionSet::RX(), "PermissionSet.rx()"),
-            arg_v("other_permissions", PermissionSet::RX(), "PermissionSet.rx()")
+            arg("owner_permissions").sig("PermissionSet.rwx()") = PermissionSet::RWX(),
+            arg("group_permissions").sig("PermissionSet.rx()") = PermissionSet::RX(),
+            arg("other_permissions").sig("PermissionSet.rx()") = PermissionSet::RX()
         )
         .def(
             "remove",
@@ -214,20 +215,6 @@ inline void OpenSpaceToolkitCorePy_FileSystem_Directory(pybind11::class_<Directo
         )
 
         // Define static methods
-        .def_static(
-            "undefined",
-            &Directory::Undefined,
-            R"doc(
-                Create an undefined Directory.
-
-                Returns:
-                    Directory: An undefined Directory object.
-
-                Example:
-                    >>> undefined_dir = Directory.undefined()
-                    >>> undefined_dir.is_defined()  # False
-            )doc"
-        )
         .def_static(
             "root",
             &Directory::Root,

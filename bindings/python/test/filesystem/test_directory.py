@@ -9,9 +9,6 @@ from ostk.core.type import String
 
 
 def test_directory_constructors():
-    directory = Directory.undefined()
-    assert isinstance(directory, Directory)
-
     directory = Directory.path(Path.current())
     assert isinstance(directory, Directory)
     assert os.getcwd() == directory.to_string()
@@ -53,20 +50,7 @@ def test_directory_getter_functions():
     assert isinstance(dir_path, Path)
 
 
-def test_directory_is_defined():
-    directory = Directory.undefined()
-    assert directory.is_defined() is False
-
-    directory = Directory.path(Path.current())
-    assert directory.is_defined() is True
-
-
 def test_directory_exists():
-    directory = Directory.undefined()
-
-    with pytest.raises(RuntimeError):
-        directory.exists() is False
-
     directory = Directory.root()
     assert directory.exists() is True
 
