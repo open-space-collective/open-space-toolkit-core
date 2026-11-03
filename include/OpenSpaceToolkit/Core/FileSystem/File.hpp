@@ -111,16 +111,6 @@ class File
     /// @return A reference to output stream
     friend std::ostream& operator<<(std::ostream& anOutputStream, const File& aFile);
 
-    /// @brief Check if file is defined
-    ///
-    /// @code
-    ///     File file = File::Undefined() ;
-    ///     file.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return True if file is defined
-    bool isDefined() const;
-
     /// @brief Check if file exists
     ///
     /// @code
@@ -294,21 +284,10 @@ class File
     /// @endcode
     void remove();
 
-    /// @brief Constructs an undefined file
-    ///
-    /// @code
-    ///     File file = File::Undefined() ;
-    ///     file.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return Undefined file
-    static File Undefined();
-
     /// @brief Constructs a file from a given path
     ///
     /// @code
     ///     File file = File::Path(Path::Parse("/path/to/file.txt")) ;
-    ///     file.isDefined() ; // True
     /// @endcode
     ///
     /// @param [in] aPath Path to file

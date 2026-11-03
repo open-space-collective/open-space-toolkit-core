@@ -660,3 +660,24 @@ TEST(OpenSpaceToolkit_Core_Container_Dictionary, Parse)
         EXPECT_ANY_THROW(Dictionary::Parse("{{}}"));
     }
 }
+
+TEST(OpenSpaceToolkit_Core_Container_Dictionary, ParseWithoutFormat)
+{
+    using ostk::core::container::Dictionary;
+    using ostk::core::type::String;
+
+    {
+        const String jsonString = "{\"Key\": 123}";
+
+        EXPECT_NO_THROW(Dictionary::Parse(jsonString));
+        EXPECT_NO_THROW(Dictionary::Parse(jsonString, std::nullopt));
+
+        const Dictionary dictionary = Dictionary::Parse(jsonString);
+
+        EXPECT_EQ(123, dictionary["Key"].getInteger());
+    }
+
+    {
+        EXPECT_ANY_THROW(Dictionary::Parse("abc"));
+    }
+}

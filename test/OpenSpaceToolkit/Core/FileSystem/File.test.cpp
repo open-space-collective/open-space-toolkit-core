@@ -20,12 +20,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, EqualToOperator)
         EXPECT_FALSE(File::Path(Path::Parse("/path/to/file")) == File::Path(Path::Parse("/path/to/file2")));
         EXPECT_FALSE(File::Path(Path::Parse("/path/to/file")) == File::Path(Path::Parse("/path2/to/file")));
     }
-
-    {
-        EXPECT_FALSE(File::Path(Path::Parse("/path/to/file")) == File::Undefined());
-        EXPECT_FALSE(File::Undefined() == File::Path(Path::Parse("/path/to/file")));
-        EXPECT_FALSE(File::Undefined() == File::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, NotEqualToOperator)
@@ -37,12 +31,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, NotEqualToOperator)
         EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")) != File::Path(Path::Parse("/path/to/file/")));
         EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")) != File::Path(Path::Parse("/path/to/file2")));
         EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")) != File::Path(Path::Parse("/path2/to/file")));
-    }
-
-    {
-        EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")) != File::Undefined());
-        EXPECT_TRUE(File::Undefined() != File::Path(Path::Parse("/path/to/file")));
-        EXPECT_TRUE(File::Undefined() != File::Undefined());
     }
 
     {
@@ -89,24 +77,7 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, FileStreamOperator)
     }
 
     {
-        EXPECT_ANY_THROW(File::Undefined() << "Hello World!");
         EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")) << "Hello World!");
-    }
-}
-
-TEST(OpenSpaceToolkit_Core_FileSystem_File, IsDefined)
-{
-    using ostk::core::filesystem::File;
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_TRUE(File::Path(Path::Parse("/")).isDefined());
-        EXPECT_TRUE(File::Path(Path::Parse("/path/to/file")).isDefined());
-        EXPECT_TRUE(File::Path(Path::Parse("/path/to/file/")).isDefined());
-    }
-
-    {
-        EXPECT_FALSE(File::Undefined().isDefined());
     }
 }
 
@@ -124,10 +95,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Exists)
     {
         EXPECT_FALSE(File::Path(Path::Parse("/skf47hksdjf")).exists());
         EXPECT_FALSE(File::Path(Path::Parse("/usr/sdfkjdfg")).exists());
-    }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().exists());
     }
 }
 
@@ -151,7 +118,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, IsOpen)
     }
 
     {
-        EXPECT_ANY_THROW(File::Undefined().isOpen());
         EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).isOpen());
     }
 }
@@ -180,10 +146,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetName)
         EXPECT_EQ("CMakeLists", File::Path(Path::Parse("./CMakeLists.txt")).getName(false));
         EXPECT_EQ("CMakeLists", File::Path(Path::Parse("../CMakeLists.txt")).getName(false));
     }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().getName());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetExtension)
@@ -201,10 +163,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetExtension)
         EXPECT_FALSE(File::Path(Path::Parse("/skf47hksdjf")).exists());
         EXPECT_FALSE(File::Path(Path::Parse("/usr/sdfkjdfg")).exists());
     }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().exists());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPath)
@@ -216,10 +174,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPath)
         const Path path = Path::Parse("/path/to/file");
 
         EXPECT_EQ(path, File::Path(path).getPath());
-    }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().getPath());
     }
 }
 
@@ -252,10 +206,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetPermissions)
 
         EXPECT_EQ(PermissionSet::RWX(), file.getPermissions());
     }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().getPermissions());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, GetParentDirectory)
@@ -272,10 +222,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, GetParentDirectory)
             Directory::Path(Path::Parse("/path/to")), File::Path(Path::Parse("/path/to/file")).getParentDirectory()
         );
     }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().getParentDirectory());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, ToString)
@@ -287,10 +233,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, ToString)
         EXPECT_EQ("CMakeLists.txt", File::Path(Path::Parse("CMakeLists.txt")).toString());
         EXPECT_EQ("./CMakeLists.txt", File::Path(Path::Parse("./CMakeLists.txt")).toString());
         EXPECT_EQ("/app/CMakeLists.txt", File::Path(Path::Parse("/app/CMakeLists.txt")).toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().toString());
     }
 }
 
@@ -312,7 +254,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Open)
     }
 
     {
-        EXPECT_ANY_THROW(File::Undefined().open(File::OpenMode::Read));
         EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).open(File::OpenMode::Read));
     }
 }
@@ -339,7 +280,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Close)
     }
 
     {
-        EXPECT_ANY_THROW(File::Undefined().close());
         EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).close());
     }
 }
@@ -366,7 +306,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, AccessStream)
     }
 
     {
-        EXPECT_ANY_THROW(File::Undefined().accessStream());
         EXPECT_ANY_THROW(File::Path(Path::Parse("/tmp/does-not-exist.txt")).accessStream());
     }
 }
@@ -427,10 +366,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, MoveToDirectory)
         file.create();
         directory.create();
 
-        EXPECT_ANY_THROW(file.moveToDirectory(Directory::Undefined()));
-        EXPECT_ANY_THROW(File::Undefined().moveToDirectory(directory));
-        EXPECT_ANY_THROW(File::Undefined().moveToDirectory(Directory::Undefined()));
-
         file.remove();
         directory.remove();
     }
@@ -453,10 +388,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Create)
         EXPECT_ANY_THROW(file.create());
 
         file.remove();
-    }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().create());
     }
 }
 
@@ -492,21 +423,6 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Remove)
 
         EXPECT_ANY_THROW(file.remove());
     }
-
-    {
-        EXPECT_ANY_THROW(File::Undefined().remove());
-    }
-}
-
-TEST(OpenSpaceToolkit_Core_FileSystem_File, Undefined)
-{
-    using ostk::core::filesystem::File;
-    using ostk::core::filesystem::Path;
-
-    {
-        EXPECT_NO_THROW(File::Undefined());
-        EXPECT_FALSE(File::Undefined().isDefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_FileSystem_File, Path)
@@ -517,21 +433,16 @@ TEST(OpenSpaceToolkit_Core_FileSystem_File, Path)
     {
         const Path path = Path::Parse("/path/to/file");
 
-        EXPECT_TRUE(File::Path(path).isDefined());
-
         EXPECT_EQ(path, File::Path(path).getPath());
     }
 
     {
         const Path path = Path::Parse("/path/to/file/");
 
-        EXPECT_TRUE(File::Path(path).isDefined());
-
         EXPECT_EQ(path, File::Path(path).getPath());
     }
 
     {
         EXPECT_ANY_THROW(File::Path(Path::Parse("")));
-        EXPECT_ANY_THROW(File::Path(Path::Undefined()));
     }
 }

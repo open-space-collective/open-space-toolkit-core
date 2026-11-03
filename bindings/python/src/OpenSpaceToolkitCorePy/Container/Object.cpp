@@ -1,5 +1,7 @@
 /// Apache License 2.0
 
+#include <nanobind/stl/optional.h>
+
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
@@ -34,7 +36,6 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
         Defines the supported formats for serializing/deserializing Objects.
     )doc")
 
-        .value("Undefined", Object::Format::Undefined, "Undefined format")
         .value("JSON", Object::Format::JSON, "JSON format")
         .value("YAML", Object::Format::YAML, "YAML format")
 
@@ -283,7 +284,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                 Convert the Object to a string representation.
 
                 Args:
-                    format (Object.Format): The output format (JSON or YAML).
+                    format (Object.Format | None): The output format (JSON or YAML). None is not supported and raises.
 
                 Returns:
                     str: String representation of the object.
@@ -393,7 +394,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
 
                 Args:
                     string (str): The string to parse.
-                    format (Object.Format): The format of the string (JSON or YAML).
+                    format (Object.Format | None): The format of the string (JSON or YAML). If None, the format is detected.
 
                 Returns:
                     Object: The parsed object.
@@ -402,7 +403,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                     RuntimeError: If the string cannot be parsed.
             )doc",
             arg("string"),
-            arg("format")
+            arg("format") = none()
         )
         .def_static(
             "load",
@@ -412,7 +413,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
 
                 Args:
                     file (File): The file to load from.
-                    format (Object.Format): The format of the file content.
+                    format (Object.Format | None): The format of the file content. If None, the format is detected.
 
                 Returns:
                     Object: The loaded object.
@@ -421,7 +422,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                     RuntimeError: If the file cannot be loaded or parsed.
             )doc",
             arg("file"),
-            arg("format")
+            arg("format") = none()
         )
         .def_static(
             "string_from_type",

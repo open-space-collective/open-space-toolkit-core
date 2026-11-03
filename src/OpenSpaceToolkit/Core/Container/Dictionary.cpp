@@ -413,7 +413,7 @@ Dictionary Dictionary::Empty()
     return Dictionary();
 }
 
-Dictionary Dictionary::Parse(const String& aString, const Object::Format& aFormat)
+Dictionary Dictionary::Parse(const String& aString, const std::optional<Object::Format>& aFormat)
 {
     LOG_SCOPE("Dictionary", "Parse");
 

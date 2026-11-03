@@ -406,9 +406,9 @@ class Dictionary
     /// @endcode
     ///
     /// @param [in] aString A string
-    /// @param [in] (optional) aFormat Serialization format
+    /// @param [in] (optional) aFormat Serialization format (default: std::nullopt, which detects the format)
     /// @return Dictionary
-    static Dictionary Parse(const type::String& aString, const Object::Format& aFormat = Object::Format::Undefined);
+    static Dictionary Parse(const type::String& aString, const std::optional<Object::Format>& aFormat = std::nullopt);
 
    private:
     OrderedMap<Dictionary::Key, Dictionary::Value> map_;

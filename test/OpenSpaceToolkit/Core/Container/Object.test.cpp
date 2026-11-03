@@ -226,18 +226,6 @@ TEST(OpenSpaceToolkit_Core_Container_Object, OutputFileStreamOperator)
 
         file.remove();
     }
-
-    {
-        Object object = Object::Undefined();
-
-        object["Integer"] = Object::Integer(123);
-        object["Real"] = Object::Real(123.456);
-        object["String"] = Object::String("Hello World!");
-
-        File file = File::Undefined();
-
-        EXPECT_ANY_THROW(file << object);
-    }
 }
 
 TEST(OpenSpaceToolkit_Core_Container_Object, InputFileStreamOperator)
@@ -1150,6 +1138,47 @@ TEST(OpenSpaceToolkit_Core_Container_Object, Parse)
 //     }
 
 // }
+
+TEST(OpenSpaceToolkit_Core_Container_Object, ParseWithoutFormat)
+{
+    using ostk::core::container::Object;
+    using ostk::core::type::String;
+
+    {
+        const String jsonString = "{\"Key\": 123}";
+
+        EXPECT_NO_THROW(Object::Parse(jsonString));
+        EXPECT_NO_THROW(Object::Parse(jsonString, std::nullopt));
+
+        const Object object = Object::Parse(jsonString);
+
+        EXPECT_EQ(Object::Type::Dictionary, object.getType());
+        EXPECT_EQ(123, object["Key"].getInteger());
+        EXPECT_EQ(object, Object::Parse(jsonString, Object::Format::JSON));
+    }
+
+    {
+        EXPECT_ANY_THROW(Object::Parse(""));
+        EXPECT_ANY_THROW(Object::Parse("123"));
+        EXPECT_ANY_THROW(Object::Parse("abc", std::nullopt));
+    }
+}
+
+TEST(OpenSpaceToolkit_Core_Container_Object, ToString)
+{
+    using ostk::core::container::Object;
+
+    {
+        const Object object = Object::Dictionary({{"Key", Object::Integer(123)}});
+
+        EXPECT_EQ("{\"Key\":123}", object.toString(Object::Format::JSON));
+    }
+
+    {
+        EXPECT_ANY_THROW(Object::Integer(123).toString());
+        EXPECT_ANY_THROW(Object::Integer(123).toString(std::nullopt));
+    }
+}
 
 TEST(OpenSpaceToolkit_Core_Container_Object, StringFromType)
 {

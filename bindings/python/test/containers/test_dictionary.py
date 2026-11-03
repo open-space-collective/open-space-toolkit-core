@@ -134,3 +134,13 @@ class TestDictionary:
         dictionary = Dictionary.parse(string=data, format=Object.Format.YAML)
 
         assert dictionary["count"] == Object.integer(1)
+
+
+def test_parse_without_format():
+    dictionary = Dictionary.parse('{"count": 1}')
+
+    assert dictionary["count"] == Object.integer(1)
+    assert dictionary == Dictionary.parse('{"count": 1}', Object.Format.JSON)
+
+    with pytest.raises(RuntimeError):
+        Dictionary.parse("abc")
