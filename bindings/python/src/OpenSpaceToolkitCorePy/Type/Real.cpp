@@ -2,6 +2,10 @@
 
 #include <OpenSpaceToolkit/Core/Type/Real.hpp>
 
+// Real and Integer are deprecated: their own implementation must not trigger the deprecation warning.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 using ostk::core::type::Integer;
 using ostk::core::type::Real;
 using ostk::core::type::String;
@@ -781,3 +785,5 @@ inline void OpenSpaceToolkitCorePy_Type_Real(nanobind::class_<Real>& realClass)
 
     implicitly_convertible<Real::ValueType, Real>();
 }
+
+#pragma GCC diagnostic pop

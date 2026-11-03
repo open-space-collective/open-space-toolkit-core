@@ -2,8 +2,6 @@
 
 #include <OpenSpaceToolkit/Core/Container/Dictionary.hpp>
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/Size.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 

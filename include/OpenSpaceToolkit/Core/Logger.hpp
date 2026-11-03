@@ -10,7 +10,6 @@
 #include <OpenSpaceToolkit/Core/Logger/Severity.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Sink.hpp>
 #include <OpenSpaceToolkit/Core/Logger/Source.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
@@ -23,7 +22,6 @@ using ostk::core::logger::Pump;
 using ostk::core::logger::Severity;
 using ostk::core::logger::Sink;
 using ostk::core::logger::Source;
-using ostk::core::type::Integer;
 using ostk::core::type::String;
 using ostk::core::type::Unique;
 
@@ -50,7 +48,7 @@ class Logger
     /// @param [in] aFile A file name
     /// @param [in] aFunction A function name
     /// @return Log pump
-    Pump operator()(const Severity& aSeverity, const Integer& aLine, const String& aFile, const String& aFunction);
+    Pump operator()(const Severity& aSeverity, int aLine, const String& aFile, const String& aFunction);
 
     /// @brief Stream operator to log an object
     ///
@@ -59,7 +57,7 @@ class Logger
     template <class T>
     Pump operator<<(const T& anObject)
     {
-        Pump pump(Severity::Info, Integer::Undefined(), String::Empty(), String::Empty(), &source_);
+        Pump pump(Severity::Info, -1, String::Empty(), String::Empty(), &source_);
 
         pump << anObject;
 

@@ -15,7 +15,7 @@ namespace container
 /// @brief List container
 ///
 /// @code
-///     List<Integer> list ;
+///     List<int> list ;
 ///     list.push_back(123) ;
 /// @endcode
 template <class T>

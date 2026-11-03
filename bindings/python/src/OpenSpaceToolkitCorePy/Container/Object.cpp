@@ -1,8 +1,6 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Container/Object.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 using ostk::core::container::Object;
@@ -12,8 +10,6 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
     using namespace nanobind;
 
     using ostk::core::type::Index;
-    using ostk::core::type::Integer;
-    using ostk::core::type::Real;
     using ostk::core::type::String;
 
     enum_<Object::Type>(objectClass, "Type", R"doc(
@@ -222,7 +218,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                 Get the integer value from the Object.
 
                 Returns:
-                    Integer: The integer value.
+                    int: The integer value.
 
                 Raises:
                     RuntimeError: If the object is not an integer.
@@ -235,7 +231,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                 Get the real number value from the Object.
 
                 Returns:
-                    Real: The real number value.
+                    float: The real number value.
 
                 Raises:
                     RuntimeError: If the object is not a real number.
@@ -326,7 +322,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                 Create an Object containing an integer value.
 
                 Args:
-                    integer (Integer): The integer value.
+                    integer (int): The integer value.
 
                 Returns:
                     Object: An object containing the integer.
@@ -340,7 +336,7 @@ inline void OpenSpaceToolkitCorePy_Container_Object(nanobind::class_<Object>& ob
                 Create an Object containing a real number value.
 
                 Args:
-                    real (Real): The real number value.
+                    real (float): The real number value.
 
                 Returns:
                     Object: An object containing the real number.

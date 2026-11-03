@@ -41,8 +41,8 @@ class Array : public std::vector<T>
     /// @brief Constructs an array from a C++ Standard Library vector
     ///
     /// @code
-    ///     std::vector<Integer> vector = {1, 2, 3} ;
-    ///     Array<Integer> array(vector) ;
+    ///     std::vector<int> vector = {1, 2, 3} ;
+    ///     Array<int> array(vector) ;
     /// @endcode
     ///
     /// @param [in] aVector A vector
@@ -68,7 +68,7 @@ class Array : public std::vector<T>
     /// @brief Constructs an array using an initializer list
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     /// @endcode
     ///
     /// @param [in] aList An initializer list
@@ -104,9 +104,9 @@ class Array : public std::vector<T>
     /// @brief Concatenate array
     ///
     /// @code
-    ///     Array<Integer> a = {1, 2, 3} ;
-    ///     Array<Integer> b = {4, 5, 6} ;
-    ///     Array<Integer> c = a + b ; // {1, 2, 3, 4, 5, 6}
+    ///     Array<int> a = {1, 2, 3} ;
+    ///     Array<int> b = {4, 5, 6} ;
+    ///     Array<int> c = a + b ; // {1, 2, 3, 4, 5, 6}
     /// @endcode
     ///
     /// @param [in] anArray An array to append
@@ -116,7 +116,7 @@ class Array : public std::vector<T>
     /// @brief Output stream operator
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     std::cout << array ;
     /// @endcode
     ///
@@ -129,7 +129,7 @@ class Array : public std::vector<T>
     /// @brief Check if array is empty
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     array.isEmpty() ; // False
     /// @endcode
     ///
@@ -139,7 +139,7 @@ class Array : public std::vector<T>
     /// @brief Check if array contains element (by value)
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     array.contains(2) ; // True
     /// @endcode
     ///
@@ -150,8 +150,8 @@ class Array : public std::vector<T>
     /// @brief Check if array is near another array
     ///
     /// @code
-    ///     Array<Real> firstArray = {1.0, 2.0, 3.0} ;
-    ///     Array<Real> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
+    ///     Array<double> firstArray = {1.0, 2.0, 3.0} ;
+    ///     Array<double> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
     ///     firstArray.isNear(secondArray, 1e-15) ; // True
     /// @endcode
     ///
@@ -163,11 +163,11 @@ class Array : public std::vector<T>
     /// @brief Check if array is near another array
     ///
     /// @code
-    ///     Array<Real> firstArray = {1.0, 2.0, 3.0} ;
-    ///     Array<Real> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
+    ///     Array<double> firstArray = {1.0, 2.0, 3.0} ;
+    ///     Array<double> secondArray = {1.0, 2.0, 3.0 + 1e-15} ;
     ///     firstArray.isNear(secondArray,
-    ///     [] (const Real& aFirstValue, const Real& aSecondValue) -> bool
-    ///     { return aFirstValue.isNear(aSecondValue, 1e-15) ; }) ; // True
+    ///     [] (const double& aFirstValue, const double& aSecondValue) -> bool
+    ///     { return std::abs(aFirstValue - aSecondValue) <= 1e-15 ; }) ; // True
     /// @endcode
     ///
     /// @param [in] anArray An array
@@ -178,8 +178,8 @@ class Array : public std::vector<T>
     /// @brief Access first element
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
-    ///     const Integer& element = array.accessFirst() ; // 1
+    ///     Array<int> array = {1, 2, 3} ;
+    ///     const int& element = array.accessFirst() ; // 1
     /// @endcode
     ///
     /// @return Reference to the first element of array
@@ -188,8 +188,8 @@ class Array : public std::vector<T>
     /// @brief Access last element
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
-    ///     const Integer& element = array.accessLast() ; // 3
+    ///     Array<int> array = {1, 2, 3} ;
+    ///     const int& element = array.accessLast() ; // 3
     /// @endcode
     ///
     /// @return Reference to the last element of array
@@ -198,7 +198,7 @@ class Array : public std::vector<T>
     /// @brief Get array size
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     Size size = array.getSize() ; // 3
     /// @endcode
     ///
@@ -208,7 +208,7 @@ class Array : public std::vector<T>
     /// @brief Get index of element (by value)
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     Index index = array.getIndexOf(2) ; // 1
     /// @endcode
     ///
@@ -219,7 +219,7 @@ class Array : public std::vector<T>
     /// @brief Get string representation of array
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     String string = array.toString() ; // "[1, 2, 3]"
     /// @endcode
     ///
@@ -229,9 +229,9 @@ class Array : public std::vector<T>
     /// @brief Get array of pointers to element based on condition
     ///
     /// @code
-    ///     Array<Integer> array = {0, 1, 2, 3, 4} ;
-    ///     Array<const Integer*> elements = array.accessWhere([] (const Integer& anInteger) -> bool {
-    ///     return anInteger.isEven() ; }) ; // [&0, &2, &4]
+    ///     Array<int> array = {0, 1, 2, 3, 4} ;
+    ///     Array<const int*> elements = array.accessWhere([] (const int& anInteger) -> bool {
+    ///     return (anInteger % 2) == 0 ; }) ; // [&0, &2, &4]
     /// @endcode
     ///
     /// @param [in] aPredicate A predicate
@@ -241,9 +241,9 @@ class Array : public std::vector<T>
     /// @brief Get array of elements based on condition
     ///
     /// @code
-    ///     Array<Integer> array = {0, 1, 2, 3, 4} ;
-    ///     Array<Integer> elements = array.getWhere([] (const Integer& anInteger) -> bool {
-    ///     return anInteger.isEven() ; }) ; // [0, 2, 4]
+    ///     Array<int> array = {0, 1, 2, 3, 4} ;
+    ///     Array<int> elements = array.getWhere([] (const int& anInteger) -> bool {
+    ///     return (anInteger % 2) == 0 ; }) ; // [0, 2, 4]
     /// @endcode
     ///
     /// @param [in] aPredicate A predicate
@@ -253,7 +253,7 @@ class Array : public std::vector<T>
     /// @brief Get iterator to element, finding by by value
     ///
     /// @code
-    ///     Array<Integer> array = {0, 1, 2, 3, 4} ;
+    ///     Array<int> array = {0, 1, 2, 3, 4} ;
     ///     auto elementIt = array.find(2) ;
     /// @endcode
     ///
@@ -265,8 +265,8 @@ class Array : public std::vector<T>
     ///
     /// @code
     ///     Array<String> strings = { "1", "2", "3" } ;
-    ///     Array<Integer> integers = strings.map<Integer>([] (const String& aString) -> Integer {
-    ///     return Integer::Parse(aString) ; }) ; // [1, 2, 3]
+    ///     Array<int> integers = strings.map<int>([] (const String& aString) -> int {
+    ///     return std::stoi(aString) ; }) ; // [1, 2, 3]
     /// @endcode
     ///
     /// @param [in] aMappingFunction A mapping function
@@ -277,8 +277,8 @@ class Array : public std::vector<T>
     /// @brief Get reduced value
     ///
     /// @code
-    ///     Array<Integer> integers = { 1, 2, 3 } ;
-    ///     Integer reducedInteger = integers.reduce(std::plus<Integer>()) ; // 6
+    ///     Array<int> integers = { 1, 2, 3 } ;
+    ///     int reducedInteger = integers.reduce(std::plus<int>()) ; // 6
     /// @endcode
     ///
     /// @param [in] aReduceFunction A reduce function
@@ -288,8 +288,8 @@ class Array : public std::vector<T>
     /// @brief Access first element
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
-    ///     Integer& element = array.accessFirst() ; // 1
+    ///     Array<int> array = {1, 2, 3} ;
+    ///     int& element = array.accessFirst() ; // 1
     /// @endcode
     ///
     /// @return Reference to the first element of array
@@ -298,8 +298,8 @@ class Array : public std::vector<T>
     /// @brief Access last element
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
-    ///     Integer& element = array.accessLast() ; // 3
+    ///     Array<int> array = {1, 2, 3} ;
+    ///     int& element = array.accessLast() ; // 3
     /// @endcode
     ///
     /// @return Reference to the last element of array
@@ -308,7 +308,7 @@ class Array : public std::vector<T>
     /// @brief Add element to array
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     array.add(4) ; // [1, 2, 3, 4]
     /// @endcode
     ///
@@ -318,7 +318,7 @@ class Array : public std::vector<T>
     /// @brief Remove element from array (by value)
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     array.remove(2) ; // [1, 3]
     /// @endcode
     ///
@@ -328,7 +328,7 @@ class Array : public std::vector<T>
     /// @brief Add elements to array
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3} ;
+    ///     Array<int> array = {1, 2, 3} ;
     ///     array.add({4, 5}) ; // [1, 2, 3, 4, 5]
     /// @endcode
     ///
@@ -338,7 +338,7 @@ class Array : public std::vector<T>
     /// @brief Remove elements from array (by value)
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3, 4, 5} ;
+    ///     Array<int> array = {1, 2, 3, 4, 5} ;
     ///     array.remove({2, 4}) ; // [1, 3, 5]
     /// @endcode
     ///
@@ -348,8 +348,8 @@ class Array : public std::vector<T>
     /// @brief Merge array with another array
     ///
     /// @code
-    ///     Array<Integer> firstArray = {1, 2, 3} ;
-    ///     Array<Integer> secondArray = {4, 5} ;
+    ///     Array<int> firstArray = {1, 2, 3} ;
+    ///     Array<int> secondArray = {4, 5} ;
     ///     firstArray.merge(secondArray) ; // [1, 2, 3, 4, 5]
     /// @endcode
     ///
@@ -359,8 +359,8 @@ class Array : public std::vector<T>
     /// @brief Remove elements based on condition
     ///
     /// @code
-    ///     Array<Integer> array = {1, 2, 3, 4, 5} ;
-    ///     array.removeWhere([] (const Integer& anInteger) -> bool { return anInteger.isEven() ; }) ;
+    ///     Array<int> array = {1, 2, 3, 4, 5} ;
+    ///     array.removeWhere([] (const int& anInteger) -> bool { return (anInteger % 2) == 0 ; }) ;
     ///     // [1, 3, 5]
     /// @endcode
     ///
@@ -370,7 +370,7 @@ class Array : public std::vector<T>
     /// @brief Get iterator to element, finding by value
     ///
     /// @code
-    ///     Array<Integer> array = {0, 1, 2, 3, 4} ;
+    ///     Array<int> array = {0, 1, 2, 3, 4} ;
     ///     auto elementIt = array.find(2) ;
     /// @endcode
     ///
@@ -381,7 +381,7 @@ class Array : public std::vector<T>
     /// @brief Constructs an empty array
     ///
     /// @code
-    ///     Array<Integer> array = Array<Integer>::Empty() ;
+    ///     Array<int> array = Array<int>::Empty() ;
     /// @endcode
     ///
     /// @return Empty array

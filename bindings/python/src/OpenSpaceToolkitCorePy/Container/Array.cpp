@@ -3,13 +3,9 @@
 #include <OpenSpaceToolkitCorePy/Container/ArrayCasting.hpp>
 
 #include <OpenSpaceToolkit/Core/Container/Array.hpp>
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Type/Real.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 using ostk::core::container::Array;
-using ostk::core::type::Integer;
-using ostk::core::type::Real;
 using ostk::core::type::String;
 
 /// @brief                      Set and Get Array functions
@@ -28,12 +24,12 @@ void setDoubleArray(const Array<double>& anArray)
     (void)anArray;
 }
 
-void setIntegerArray(const Array<Integer>& anArray)
+void setIntegerArray(const Array<int>& anArray)
 {
     (void)anArray;
 }
 
-void setRealArray(const Array<Real>& anArray)
+void setRealArray(const Array<double>& anArray)
 {
     (void)anArray;
 }
@@ -55,15 +51,15 @@ Array<double> getDoubleArray()
     return vector;
 }
 
-Array<Integer> getIntegerArray()
+Array<int> getIntegerArray()
 {
-    Array<Integer> vector = {1, 2, 3};
+    Array<int> vector = {1, 2, 3};
     return vector;
 }
 
-Array<Real> getRealArray()
+Array<double> getRealArray()
 {
-    Array<Real> vector = {1.0, 2.0, 3.0};
+    Array<double> vector = {1.0, 2.0, 3.0};
     return vector;
 }
 
@@ -77,16 +73,14 @@ inline void OpenSpaceToolkitCorePy_Container_Array(nanobind::module_& aModule)
 {
     using namespace nanobind;
 
-    using ostk::core::type::Integer;
-    using ostk::core::type::Real;
     using ostk::core::type::String;
 
     using ostk::core::container::Array;
 
     aModule.def("set_int_array", overload_cast<const Array<int>&>(&setIntArray));
     aModule.def("set_double_array", overload_cast<const Array<double>&>(&setDoubleArray));
-    aModule.def("set_integer_array", overload_cast<const Array<Integer>&>(&setIntegerArray));
-    aModule.def("set_real_array", overload_cast<const Array<Real>&>(&setRealArray));
+    aModule.def("set_integer_array", overload_cast<const Array<int>&>(&setIntegerArray));
+    aModule.def("set_real_array", overload_cast<const Array<double>&>(&setRealArray));
     aModule.def("set_string_array", overload_cast<const Array<String>&>(&setStringArray));
 
     aModule.def("get_int_array", (&getIntArray));
