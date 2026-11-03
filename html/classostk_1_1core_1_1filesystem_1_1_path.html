@@ -115,9 +115,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b3ef62c4fb4d91d8ecd76f5e4afe4d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html">Path</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html#a4b3ef62c4fb4d91d8ecd76f5e4afe4d4">operator+=</a> (const <a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html">Path</a> &amp;aPath)</td></tr>
 <tr class="memdesc:a4b3ef62c4fb4d91d8ecd76f5e4afe4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition assignment operator.  <a href="classostk_1_1core_1_1filesystem_1_1_path.html#a4b3ef62c4fb4d91d8ecd76f5e4afe4d4">More...</a><br /></td></tr>
 <tr class="separator:a4b3ef62c4fb4d91d8ecd76f5e4afe4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecd66a5bf86b41374c9256831577f689"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html#aecd66a5bf86b41374c9256831577f689">isDefined</a> () const</td></tr>
-<tr class="memdesc:aecd66a5bf86b41374c9256831577f689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if path is defined.  <a href="classostk_1_1core_1_1filesystem_1_1_path.html#aecd66a5bf86b41374c9256831577f689">More...</a><br /></td></tr>
-<tr class="separator:aecd66a5bf86b41374c9256831577f689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6d0534d0e162b76a623baa7ae421280"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html#aa6d0534d0e162b76a623baa7ae421280">isAbsolute</a> () const</td></tr>
 <tr class="memdesc:aa6d0534d0e162b76a623baa7ae421280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if path is absolute.  <a href="classostk_1_1core_1_1filesystem_1_1_path.html#aa6d0534d0e162b76a623baa7ae421280">More...</a><br /></td></tr>
 <tr class="separator:aa6d0534d0e162b76a623baa7ae421280"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +142,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2748cd44b01913bffb0f0beb58cee13"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html#ac2748cd44b01913bffb0f0beb58cee13">Undefined</a> ()</td></tr>
-<tr class="memdesc:ac2748cd44b01913bffb0f0beb58cee13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an undefined path.  <a href="classostk_1_1core_1_1filesystem_1_1_path.html#ac2748cd44b01913bffb0f0beb58cee13">More...</a><br /></td></tr>
-<tr class="separator:ac2748cd44b01913bffb0f0beb58cee13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44f214afcd0a549eb46abbb58a91e45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html#ac44f214afcd0a549eb46abbb58a91e45">Root</a> ()</td></tr>
 <tr class="memdesc:ac44f214afcd0a549eb46abbb58a91e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a root path.  <a href="classostk_1_1core_1_1filesystem_1_1_path.html#ac44f214afcd0a549eb46abbb58a91e45">More...</a><br /></td></tr>
 <tr class="separator:ac44f214afcd0a549eb46abbb58a91e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,28 +381,6 @@ Friends</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#a02d3f4ae51b899a880b716cd8f4ddd3f">Path</a> path = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#a478763ba7e88a5cc99809eae958d95f2">Path::Parse</a>(<span class="stringliteral">&quot;/path/to/file&quot;</span>) ;</div>
 <div class="line">path.isAbsolute() ; <span class="comment">// True</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if path is absolute </dd></dl>
-
-</div>
-</div>
-<a id="aecd66a5bf86b41374c9256831577f689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecd66a5bf86b41374c9256831577f689">&#9670;&nbsp;</a></span>isDefined()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ostk::core::filesystem::Path::isDefined </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if path is defined. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#a02d3f4ae51b899a880b716cd8f4ddd3f">Path</a> path = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#ac2748cd44b01913bffb0f0beb58cee13">Path::Undefined</a>() ;</div>
-<div class="line">path.isDefined() ; <span class="comment">// False</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if path is defined </dd></dl>
 
 </div>
 </div>
@@ -702,36 +674,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2748cd44b01913bffb0f0beb58cee13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2748cd44b01913bffb0f0beb58cee13">&#9670;&nbsp;</a></span>Undefined()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classostk_1_1core_1_1filesystem_1_1_path.html">Path</a> ostk::core::filesystem::Path::Undefined </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs an undefined path. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#a02d3f4ae51b899a880b716cd8f4ddd3f">Path</a> path = <a class="code" href="classostk_1_1core_1_1filesystem_1_1_path.html#ac2748cd44b01913bffb0f0beb58cee13">Path::Undefined</a>() ;</div>
-<div class="line">path.isDefined() ; <span class="comment">// False</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Undefined path </dd></dl>
-
-</div>
-</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="a87813ac3ede0b43b50ae6b9fdf0a2815"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87813ac3ede0b43b50ae6b9fdf0a2815">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
@@ -787,13 +729,12 @@ Friends</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_ac44f214afcd0a549eb46abbb58a91e45"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#ac44f214afcd0a549eb46abbb58a91e45">ostk::core::filesystem::Path::Root</a></div><div class="ttdeci">static Path Root()</div><div class="ttdoc">Constructs a root path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:248</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_ab5ea209f4b4984efbec83f1def2011ce"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#ab5ea209f4b4984efbec83f1def2011ce">ostk::core::filesystem::Path::toString</a></div><div class="ttdeci">String toString() const</div><div class="ttdoc">Get serialized path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:224</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_ac44f214afcd0a549eb46abbb58a91e45"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#ac44f214afcd0a549eb46abbb58a91e45">ostk::core::filesystem::Path::Root</a></div><div class="ttdeci">static Path Root()</div><div class="ttdoc">Constructs a root path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:183</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_ab5ea209f4b4984efbec83f1def2011ce"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#ab5ea209f4b4984efbec83f1def2011ce">ostk::core::filesystem::Path::toString</a></div><div class="ttdeci">String toString() const</div><div class="ttdoc">Get serialized path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:169</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a4203822b86cdaf2542b292d214e5e113"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a4203822b86cdaf2542b292d214e5e113">ostk::core::filesystem::Path::Strings</a></div><div class="ttdeci">static Path Strings(const std::initializer_list&lt; String &gt; aStringList)</div><div class="ttdoc">Constructs a path from a list of string.</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a02d3f4ae51b899a880b716cd8f4ddd3f"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a02d3f4ae51b899a880b716cd8f4ddd3f">ostk::core::filesystem::Path::Path</a></div><div class="ttdeci">Path(const Path &amp;aPath)</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Definition:</b> Path.cpp:30</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a478763ba7e88a5cc99809eae958d95f2"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a478763ba7e88a5cc99809eae958d95f2">ostk::core::filesystem::Path::Parse</a></div><div class="ttdeci">static Path Parse(const String &amp;aString)</div><div class="ttdoc">Constructs a path from a given string.</div><div class="ttdef"><b>Definition:</b> Path.cpp:273</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_ac2748cd44b01913bffb0f0beb58cee13"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#ac2748cd44b01913bffb0f0beb58cee13">ostk::core::filesystem::Path::Undefined</a></div><div class="ttdeci">static Path Undefined()</div><div class="ttdoc">Constructs an undefined path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:243</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a238b7ff01a2f1a0c285475e6c2ba0e12"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a238b7ff01a2f1a0c285475e6c2ba0e12">ostk::core::filesystem::Path::Current</a></div><div class="ttdeci">static Path Current()</div><div class="ttdoc">Constructs a current path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:257</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a478763ba7e88a5cc99809eae958d95f2"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a478763ba7e88a5cc99809eae958d95f2">ostk::core::filesystem::Path::Parse</a></div><div class="ttdeci">static Path Parse(const String &amp;aString)</div><div class="ttdoc">Constructs a path from a given string.</div><div class="ttdef"><b>Definition:</b> Path.cpp:208</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1filesystem_1_1_path_html_a238b7ff01a2f1a0c285475e6c2ba0e12"><div class="ttname"><a href="classostk_1_1core_1_1filesystem_1_1_path.html#a238b7ff01a2f1a0c285475e6c2ba0e12">ostk::core::filesystem::Path::Current</a></div><div class="ttdeci">static Path Current()</div><div class="ttdoc">Constructs a current path.</div><div class="ttdef"><b>Definition:</b> Path.cpp:192</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

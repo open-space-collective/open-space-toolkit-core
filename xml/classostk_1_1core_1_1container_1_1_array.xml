@@ -78,8 +78,8 @@
 <para>Constructs an array from a C++ Standard Library vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">std::vector&lt;Integer&gt;<sp/>vector<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array(vector)<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">std::vector&lt;int&gt;<sp/>vector<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>array(vector)<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -182,7 +182,7 @@
 <para>Constructs an array using an initializer list. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -356,9 +356,9 @@
 <para>Concatenate array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>a<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>b<sp/>=<sp/>{4,<sp/>5,<sp/>6}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>c<sp/>=<sp/>a<sp/>+<sp/>b<sp/>;<sp/>//<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5,<sp/>6}</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>a<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>b<sp/>=<sp/>{4,<sp/>5,<sp/>6}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>c<sp/>=<sp/>a<sp/>+<sp/>b<sp/>;<sp/>//<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5,<sp/>6}</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -386,7 +386,7 @@
 <para>Check if array is empty. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.isEmpty()<sp/>;<sp/>//<sp/>False</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para>True if array is empty </para>
@@ -410,7 +410,7 @@
 <para>Check if array contains element (by value) </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.contains(2)<sp/>;<sp/>//<sp/>True</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -447,8 +447,8 @@
 <para>Check if array is near another array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Real&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Real&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;double&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;double&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">firstArray.isNear(secondArray,<sp/>1e-15)<sp/>;<sp/>//<sp/>True</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -493,11 +493,11 @@
 <para>Check if array is near another array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Real&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Real&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;double&gt;<sp/>firstArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;double&gt;<sp/>secondArray<sp/>=<sp/>{1.0,<sp/>2.0,<sp/>3.0<sp/>+<sp/>1e-15}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">firstArray.isNear(secondArray,</highlight></codeline>
-<codeline><highlight class="normal">[]<sp/>(const<sp/>Real&amp;<sp/>aFirstValue,<sp/>const<sp/>Real&amp;<sp/>aSecondValue)<sp/>-&gt;<sp/>bool</highlight></codeline>
-<codeline><highlight class="normal">{<sp/>return<sp/>aFirstValue.isNear(aSecondValue,<sp/>1e-15)<sp/>;<sp/>})<sp/>;<sp/>//<sp/>True</highlight></codeline>
+<codeline><highlight class="normal">[]<sp/>(const<sp/>double&amp;<sp/>aFirstValue,<sp/>const<sp/>double&amp;<sp/>aSecondValue)<sp/>-&gt;<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">{<sp/>return<sp/>std::abs(aFirstValue<sp/>-<sp/>aSecondValue)<sp/>&lt;=<sp/>1e-15<sp/>;<sp/>})<sp/>;<sp/>//<sp/>True</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -524,19 +524,19 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="176" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a695276574804a96e05f140fb178af844" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
-        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::accessFirst</definition>
+        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::getFirst</definition>
         <argsstring>() const</argsstring>
-        <name>accessFirst</name>
+        <name>getFirst</name>
         <briefdescription>
-<para>Access first element. </para>
+<para>Get first element. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">const<sp/>Integer&amp;<sp/>element<sp/>=<sp/>array.accessFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>int&amp;<sp/>element<sp/>=<sp/>array.getFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
 </programlisting></para>
-<para><simplesect kind="return"><para>Reference to the first element of array </para>
+<para><simplesect kind="return"><para>Const reference to the first element of array </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -544,19 +544,19 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="186" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aed58ef446df64734550d64abd388ffdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
-        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::accessLast</definition>
+        <definition>const T&amp; ostk::core::container::Array&lt; T &gt;::getLast</definition>
         <argsstring>() const</argsstring>
-        <name>accessLast</name>
+        <name>getLast</name>
         <briefdescription>
-<para>Access last element. </para>
+<para>Get last element. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">const<sp/>Integer&amp;<sp/>element<sp/>=<sp/>array.accessLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>int&amp;<sp/>element<sp/>=<sp/>array.getLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
 </programlisting></para>
-<para><simplesect kind="return"><para>Reference to the last element of array </para>
+<para><simplesect kind="return"><para>Const reference to the last element of array </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -573,7 +573,7 @@
 <para>Get array size. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">Size<sp/>size<sp/>=<sp/>array.getSize()<sp/>;<sp/>//<sp/>3</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> size </para>
@@ -597,7 +597,7 @@
 <para>Get index of element (by value) </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">Index<sp/>index<sp/>=<sp/>array.getIndexOf(2)<sp/>;<sp/>//<sp/>1</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -626,7 +626,7 @@
 <para>Get string representation of array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">String<sp/>string<sp/>=<sp/>array.toString()<sp/>;<sp/>//<sp/>&quot;[1,<sp/>2,<sp/>3]&quot;</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para>String representation of array </para>
@@ -636,40 +636,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="227" column="18"/>
-      </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; const T * &gt;</type>
-        <definition>Array&lt;const T*&gt; ostk::core::container::Array&lt; T &gt;::accessWhere</definition>
-        <argsstring>(const Array&lt; T &gt;::Predicate &amp;aPredicate) const</argsstring>
-        <name>accessWhere</name>
-        <param>
-          <type>const <ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1ac41568a084ad47e56665948592b8b353" kindref="member">Predicate</ref> &amp;</type>
-          <declname>aPredicate</declname>
-        </param>
-        <briefdescription>
-<para>Get array of pointers to element based on condition. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;const<sp/>Integer*&gt;<sp/>elements<sp/>=<sp/>array.accessWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[&amp;0,<sp/>&amp;2,<sp/>&amp;4]</highlight></codeline>
-</programlisting></para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">aPredicate</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A predicate </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref> of pointers to element </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="239" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;</type>
@@ -684,9 +650,9 @@
 <para>Get array of elements based on condition. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>elements<sp/>=<sp/>array.getWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[0,<sp/>2,<sp/>4]</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>elements<sp/>=<sp/>array.getWhere([]<sp/>(const<sp/>int&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>(anInteger<sp/>%<sp/>2)<sp/>==<sp/>0<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[0,<sp/>2,<sp/>4]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -703,7 +669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="251" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="239" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a3e647697c7576e5d9badd5fe1e789b07" kindref="member">ConstIterator</ref></type>
@@ -718,7 +684,7 @@
 <para>Get iterator to element, finding by by value. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">auto<sp/>elementIt<sp/>=<sp/>array.find(2)<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -736,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="262" column="36"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="250" column="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -757,8 +723,8 @@
         </briefdescription>
         <detaileddescription>
 <para><programlisting><codeline><highlight class="normal">Array&lt;String&gt;<sp/>strings<sp/>=<sp/>{<sp/>&quot;1&quot;,<sp/>&quot;2&quot;,<sp/>&quot;3&quot;<sp/>}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>integers<sp/>=<sp/>strings.map&lt;Integer&gt;([]<sp/>(const<sp/>String&amp;<sp/>aString)<sp/>-&gt;<sp/>Integer<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">return<sp/>Integer::Parse(aString)<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3]</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>integers<sp/>=<sp/>strings.map&lt;int&gt;([]<sp/>(const<sp/>String&amp;<sp/>aString)<sp/>-&gt;<sp/>int<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>std::stoi(aString)<sp/>;<sp/>})<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -775,7 +741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="275" column="11"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="263" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af242918858601d5af9d10fda5b527440" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -790,8 +756,8 @@
 <para>Get reduced value. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>integers<sp/>=<sp/>{<sp/>1,<sp/>2,<sp/>3<sp/>}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Integer<sp/>reducedInteger<sp/>=<sp/>integers.reduce(std::plus&lt;Integer&gt;())<sp/>;<sp/>//<sp/>6</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>integers<sp/>=<sp/>{<sp/>1,<sp/>2,<sp/>3<sp/>}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>reducedInteger<sp/>=<sp/>integers.reduce(std::plus&lt;int&gt;())<sp/>;<sp/>//<sp/>6</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -808,7 +774,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="286" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="274" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -819,8 +785,8 @@
 <para>Access first element. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Integer&amp;<sp/>element<sp/>=<sp/>array.accessFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">int&amp;<sp/>element<sp/>=<sp/>array.accessFirst()<sp/>;<sp/>//<sp/>1</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para>Reference to the first element of array </para>
 </simplesect>
@@ -828,7 +794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="296" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="284" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1aaccce84e7159516210d15cedd0f0c005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -839,8 +805,8 @@
 <para>Access last element. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Integer&amp;<sp/>element<sp/>=<sp/>array.accessLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">int&amp;<sp/>element<sp/>=<sp/>array.accessLast()<sp/>;<sp/>//<sp/>3</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para>Reference to the last element of array </para>
 </simplesect>
@@ -848,7 +814,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="306" column="7"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="294" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -863,7 +829,7 @@
 <para>Add element to array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.add(4)<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -879,7 +845,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="316" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="304" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1ac4246bef128b2a237f411b6de86ecedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -894,7 +860,7 @@
 <para>Remove element from array (by value) </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.remove(2)<sp/>;<sp/>//<sp/>[1,<sp/>3]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -910,7 +876,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="326" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="314" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1af2c427638ce6fe5b8172b726b26d041f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -925,7 +891,7 @@
 <para>Add elements to array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.add({4,<sp/>5})<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4,<sp/>5]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -941,7 +907,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="336" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="324" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a28c5536135c3a1434b470163e83d0890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -956,7 +922,7 @@
 <para>Remove elements from array (by value) </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">array.remove({2,<sp/>4})<sp/>;<sp/>//<sp/>[1,<sp/>3,<sp/>5]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -972,7 +938,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="346" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="334" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a09ace899b075e2c71989015d89547712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -987,8 +953,8 @@
 <para>Merge array with another array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>firstArray<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>secondArray<sp/>=<sp/>{4,<sp/>5}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>firstArray<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">Array&lt;int&gt;<sp/>secondArray<sp/>=<sp/>{4,<sp/>5}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">firstArray.merge(secondArray)<sp/>;<sp/>//<sp/>[1,<sp/>2,<sp/>3,<sp/>4,<sp/>5]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1004,7 +970,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="357" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="345" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a05c7a33085e45003d6839d7d68a8f9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1019,8 +985,8 @@
 <para>Remove elements based on condition. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">array.removeWhere([]<sp/>(const<sp/>Integer&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{<sp/>return<sp/>anInteger.isEven()<sp/>;<sp/>})<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5}<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">array.removeWhere([]<sp/>(const<sp/>int&amp;<sp/>anInteger)<sp/>-&gt;<sp/>bool<sp/>{<sp/>return<sp/>(anInteger<sp/>%<sp/>2)<sp/>==<sp/>0<sp/>;<sp/>})<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">//<sp/>[1,<sp/>3,<sp/>5]</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1036,7 +1002,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="368" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="356" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_array_1a1e7b5f5c9410592b8d6c15629932b1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; T &gt;::<ref refid="classostk_1_1core_1_1container_1_1_array_1a31fa4862aac12149c8c77200acc37545" kindref="member">Iterator</ref></type>
@@ -1051,7 +1017,7 @@
 <para>Get iterator to element, finding by value. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">auto<sp/>elementIt<sp/>=<sp/>array.find(2)<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1069,7 +1035,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="379" column="31"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="367" column="31"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -1095,7 +1061,7 @@
 <para>Output stream operator. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>{1,<sp/>2,<sp/>3}<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>array<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
@@ -1134,7 +1100,7 @@
 <para>Constructs an empty array. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Array&lt;Integer&gt;<sp/>array<sp/>=<sp/>Array&lt;Integer&gt;::Empty()<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Array&lt;int&gt;<sp/>array<sp/>=<sp/>Array&lt;int&gt;::Empty()<sp/>;</highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="return"><para>Empty array </para>
 </simplesect>
@@ -1142,7 +1108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="388" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="376" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1173,13 +1139,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="32" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="31" bodyend="389"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Array.hpp" line="32" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Array.hpp" bodystart="31" bodyend="377"/>
     <listofallmembers>
-      <member refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a38a269238bff8dd080daeece1a919b97" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessFirst</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessLast</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1aaccce84e7159516210d15cedd0f0c005" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessLast</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>accessWhere</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1abbe60e90a6650e5aba8a3924a388e25d" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>add</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1af2c427638ce6fe5b8172b726b26d041f" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>add</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1abf16abdc9051e0694ea59471ed34f032" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Array</name></member>
@@ -1195,7 +1158,9 @@
       <member refid="classostk_1_1core_1_1container_1_1_array_1a5fea43d631c4e02fdbebb7854d4936cf" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>Empty</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>find</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a1e7b5f5c9410592b8d6c15629932b1c0" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>find</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1a695276574804a96e05f140fb178af844" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getFirst</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getIndexOf</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_array_1aed58ef446df64734550d64abd388ffdb" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getLast</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getSize</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>getWhere</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_array_1ac30877a0e3663ad5158e2639cc32455f" prot="public" virt="non-virtual"><scope>ostk::core::container::Array</scope><name>isEmpty</name></member>

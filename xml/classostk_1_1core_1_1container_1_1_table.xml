@@ -7,14 +7,6 @@
       <memberdef kind="enum" id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" prot="public" static="no" strong="yes">
         <type></type>
         <name>Format</name>
-        <enumvalue id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
-          <name>Undefined</name>
-          <briefdescription>
-<para>Undefined format. </para>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
         <enumvalue id="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd" prot="public">
           <name>CSV</name>
           <briefdescription>
@@ -30,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="35" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="34" bodyend="39"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="37" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="36" bodyend="40"/>
       </memberdef>
       <memberdef kind="typedef" id="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" prot="public" static="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &gt;::<ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">ConstIterator</ref></type>
@@ -44,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="42" column="35" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="42" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="43" column="35" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -59,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="235" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="235" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="236" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="236" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1container_1_1_table_1aeb60c47591a4adfbd5f67383e317d7e4" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &gt;</type>
@@ -72,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="236" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="236" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="237" column="11" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="237" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -117,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="53" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="17" bodyend="32"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="54" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="21" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a912af250085ce84d721b7b0fd2d26bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -147,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="62" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="34" bodyend="38"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="63" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="38" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a491c07452228578b7428fe63d4586b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -175,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="67" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="40" bodyend="48"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="68" column="5" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="44" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1abfc41b294015775238d994fd6682665d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref> &amp;</type>
@@ -205,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="73" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="50" bodyend="64"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="74" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="54" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a646d26dfecca1687a4b2cc913fcf2518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -237,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="83" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="66" bodyend="69"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="84" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a1a5bd2dc79dafbc66ce722edc803bd6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -269,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="93" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="71" bodyend="74"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="94" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="75" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a2dd9db4ca561ee06b50ff60b4610d680" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1core_1_1container_1_1table_1_1_row" kindref="compound">Row</ref> &amp;</type>
@@ -302,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="104" column="15" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="76" bodyend="84"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="105" column="15" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="80" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ae3278582767e28931cc16e33480307e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const Cell &amp;</type>
@@ -347,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="116" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="86" bodyend="94"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="117" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="90" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ad09697d6111b4d7edd854c3c78d2f6b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const Cell &amp;</type>
@@ -392,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="128" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="96" bodyend="104"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="129" column="16" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="100" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1ae02565642851c77787e76c96289c9e96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -411,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="148" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="177" bodyend="180"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="149" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="181" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a8440df1ba39186a9e9987fd90ad2f38b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -441,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="154" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="182" bodyend="190"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="155" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="186" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a5240e84312f8c89c4ee659889df03ff1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Size</type>
@@ -461,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="164" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="192" bodyend="195"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="165" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="196" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a58af5f24339a5db75ac51f50b5044140" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Size</type>
@@ -481,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="174" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="197" bodyend="200"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="175" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="201" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a561463d618504ac0f354ad9b4da54897" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Index</type>
@@ -511,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="180" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="202" bodyend="215"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="181" column="11" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="206" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a676a0136e949f158ca4c4bbf732e980a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -542,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="190" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="217" bodyend="227"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="191" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="221" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1abc89b9c03ad344cf899b03c30a733ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -559,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="198" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="229" bodyend="232"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="199" column="10" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="233" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a03e9e24ad1bc2aaafc57e02a6f10bb06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">Table::ConstIterator</ref></type>
@@ -576,7 +568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="203" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="234" bodyend="237"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="204" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a0598162989de28b03becb213eefc519d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kindref="member">Table::ConstIterator</ref></type>
@@ -593,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="208" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="239" bodyend="242"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="209" column="26" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="243" bodyend="246"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -639,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="139" column="12" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="106" bodyend="175"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="140" column="12" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="110" bodyend="179"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -660,21 +652,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="217" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="244" bodyend="247"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="218" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="248" bodyend="251"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a1c2863bb986092a6f23509a5f84f908a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1container_1_1_table_1a43986f8a3822a0847703cf03acbc6122" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1container_1_1_table" kindref="compound">Table</ref></type>
         <definition>Table ostk::core::container::Table::Load</definition>
-        <argsstring>(const File &amp;aFile, const Table::Format &amp;aFormat=Table::Format::Undefined, bool hasHeader=true)</argsstring>
+        <argsstring>(const File &amp;aFile, const std::optional&lt; Table::Format &gt; &amp;aFormat=std::nullopt, bool hasHeader=true)</argsstring>
         <name>Load</name>
         <param>
           <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref> &amp;</type>
           <declname>aFile</declname>
         </param>
         <param>
-          <type>const <ref refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" kindref="member">Table::Format</ref> &amp;</type>
+          <type>const std::optional&lt; <ref refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" kindref="member">Table::Format</ref> &gt; &amp;</type>
           <declname>aFormat</declname>
-          <defval><ref refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Table::Format::Undefined</ref></defval>
+          <defval>std::nullopt</defval>
         </param>
         <param>
           <type>bool</type>
@@ -701,7 +693,7 @@
 <parametername direction="in">(optional)</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>aFormat A table format </para>
+<para>aFormat A table format (default: std::nullopt, which detects the format) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -719,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="230" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="249" bodyend="288"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="231" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="253" bodyend="285"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -743,7 +735,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="238" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="290" bodyend="381"/>
+        <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="239" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="287" bodyend="390"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -751,7 +743,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="31" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="30" bodyend="239"/>
+    <location file="include/OpenSpaceToolkit/Core/Container/Table.hpp" line="33" column="1" bodyfile="include/OpenSpaceToolkit/Core/Container/Table.hpp" bodystart="32" bodyend="240"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1container_1_1_table_1a676a0136e949f158ca4c4bbf732e980a" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>addRow</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1a03e9e24ad1bc2aaafc57e02a6f10bb06" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>begin</name></member>
@@ -766,7 +758,7 @@
       <member refid="classostk_1_1core_1_1container_1_1_table_1a8440df1ba39186a9e9987fd90ad2f38b" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>hasColumnWithName</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1a10673e365cf3c6caa5de855a22f2721f" prot="private" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>header_</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1ae02565642851c77787e76c96289c9e96" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>isEmpty</name></member>
-      <member refid="classostk_1_1core_1_1container_1_1_table_1a1c2863bb986092a6f23509a5f84f908a" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Load</name></member>
+      <member refid="classostk_1_1core_1_1container_1_1_table_1a43986f8a3822a0847703cf03acbc6122" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>Load</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1a82c7209ade55914befdb5efe71ecc1e3" prot="private" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>LoadCsv</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1a1a5bd2dc79dafbc66ce722edc803bd6d" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator!=</name></member>
       <member refid="classostk_1_1core_1_1container_1_1_table_1ae3278582767e28931cc16e33480307e7" prot="public" virt="non-virtual"><scope>ostk::core::container::Table</scope><name>operator()</name></member>

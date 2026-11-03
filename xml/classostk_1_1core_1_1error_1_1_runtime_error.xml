@@ -138,9 +138,9 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="47" column="5" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="29" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
-        <definition>String ostk::core::error::RuntimeError::getMessage</definition>
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a541f0acee8f545816ec853afc3ab988e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::core::error::RuntimeError::getMessage</definition>
         <argsstring>() const</argsstring>
         <name>getMessage</name>
         <briefdescription>
@@ -153,11 +153,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="52" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="19" bodyend="22"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="52" column="18" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
-        <definition>String ostk::core::error::RuntimeError::getStackTrace</definition>
+      <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1afe67bb3c669f3655ab02114a7e9f110c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::core::error::RuntimeError::getStackTrace</definition>
         <argsstring>() const</argsstring>
         <name>getStackTrace</name>
         <briefdescription>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="57" column="12" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="24" bodyend="27"/>
+        <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="57" column="18" bodyfile="src/OpenSpaceToolkit/Core/Error/RuntimeError.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
         <type>const char *</type>
@@ -252,9 +252,9 @@
     <location file="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/RuntimeError.hpp" bodystart="25" bodyend="68"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>Exception</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getMessage</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getScope</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getStackTrace</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a541f0acee8f545816ec853afc3ab988e" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getMessage</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1ae3423e56a65010ef3863f02e0ef5f8ff" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getScope</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1afe67bb3c669f3655ab02114a7e9f110c" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>getStackTrace</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a83edfabcac339881e76b9cd4f2794fae" prot="private" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>message_</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1ab86f511d582bd8904b8314ae71025498" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>RuntimeError</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a9affbbaa722f639547f9c4d1c9f0a421" prot="public" virt="non-virtual"><scope>ostk::core::error::RuntimeError</scope><name>RuntimeError</name></member>

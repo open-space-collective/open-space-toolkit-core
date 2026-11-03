@@ -65,7 +65,7 @@ void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6c351bf4316
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a9508ccd2a76a6179215824bfe9210594}{Empty}} ()
 \begin{DoxyCompactList}\small\item\em Constructs an empty dictionary. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}})
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aa71468d850ad73535f777a36f8a7bc93}{Parse}} (const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&a\+String, const std\+::optional$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} $>$ \&a\+Format=std\+::nullopt)
 \begin{DoxyCompactList}\small\item\em Constructs a dictionary from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -113,7 +113,7 @@ Constructs a dictionary using an initializer list.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123), \textcolor{stringliteral}{"Key B"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}{Object::String}}(\textcolor{stringliteral}{"Hello}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123), \textcolor{stringliteral}{"Key B"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a26e9f016e65e3ee291cd58655c541d6a}{Object::String}}(\textcolor{stringliteral}{"Hello}}
 \DoxyCodeLine{\textcolor{stringliteral}{World!"}) \}\} ;}
 \end{DoxyCode}
 
@@ -163,8 +163,8 @@ Add entry to dictionary.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
-\DoxyCodeLine{dictionary.addValueForKey(\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(456), \textcolor{stringliteral}{"Key B"}) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{dictionary.addValueForKey(\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(456), \textcolor{stringliteral}{"Key B"}) ;}
 \end{DoxyCode}
 
 
@@ -258,7 +258,7 @@ Get size of dictionary.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{dictionary.getSize() ; \textcolor{comment}{// 1}}
 \end{DoxyCode}
 
@@ -278,7 +278,7 @@ Check if dictionary has value for a given key.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{dictionary.hasValueForKey(\textcolor{stringliteral}{"Key A"}) ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
@@ -303,7 +303,7 @@ Check if dictionary is empty.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{dictionary.isEmpty() ; \textcolor{comment}{// False}}
 \end{DoxyCode}
 
@@ -323,8 +323,8 @@ Not equal to operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(456) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(456) \}\} ;}
 \DoxyCodeLine{firstDictionary != secondDictionary ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
@@ -367,8 +367,8 @@ Equal to operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} firstDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} secondDictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{firstDictionary == secondDictionary ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
@@ -393,7 +393,7 @@ Key subscript operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{Object\& \textcolor{keywordtype}{object} = dictionary[\textcolor{stringliteral}{"Key A"}] ; \textcolor{comment}{// \&123}}
 \end{DoxyCode}
 
@@ -418,7 +418,7 @@ Key subscript operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{\textcolor{keyword}{const} Object\& \textcolor{keywordtype}{object} = dictionary[\textcolor{stringliteral}{"Key A"}] ; \textcolor{comment}{// \&123}}
 \end{DoxyCode}
 
@@ -431,11 +431,11 @@ Key subscript operator.
 \begin{DoxyReturn}{Returns}
 A const reference to value 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}\label{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_aa71468d850ad73535f777a36f8a7bc93}\label{classostk_1_1core_1_1container_1_1_dictionary_aa71468d850ad73535f777a36f8a7bc93}} 
 \index{ostk::core::container::Dictionary@{ostk::core::container::Dictionary}!Parse@{Parse}}
 \index{Parse@{Parse}!ostk::core::container::Dictionary@{ostk::core::container::Dictionary}}
 \doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} ostk\+::core\+::container\+::\+Dictionary\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360}{Object\+::\+Format\+::\+Undefined}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary}{Dictionary}} ostk\+::core\+::container\+::\+Dictionary\+::\+Parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \&}]{a\+String,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_a99233dc8fdb7cc72bf415cb20a14946a}{Object\+::\+Format}} $>$ \&}]{a\+Format = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -444,7 +444,7 @@ Constructs a dictionary from a string.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{String jsonString = \textcolor{stringliteral}{"\{\(\backslash\)"Key\(\backslash\)": 123\}"} ;}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a91160ea9db250af38f925786b16c42e7}{Dictionary::Parse}}(jsonString) ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_aa71468d850ad73535f777a36f8a7bc93}{Dictionary::Parse}}(jsonString) ;}
 \end{DoxyCode}
 
 
@@ -452,7 +452,7 @@ Constructs a dictionary from a string.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em a\+String} & A string \\
 \hline
-\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format Serialization format \\
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format Serialization format (default\+: std\+::nullopt, which detects the format) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -473,7 +473,7 @@ Output stream operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae4b404625788d1632eff48cd7f6e622f}{Object::Integer}}(123) \}\} ;}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ab035a22d75ef47bb2116eeec820f24aa}{Dictionary}} dictionary = \{\{ \textcolor{stringliteral}{"Key A"}: \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_object_ae9bb4640e600cc852211b8b9531c1608}{Object::Integer}}(123) \}\} ;}
 \DoxyCodeLine{std::cout << dictionary ;}
 \end{DoxyCode}
 

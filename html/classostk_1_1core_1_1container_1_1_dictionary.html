@@ -171,9 +171,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9508ccd2a76a6179215824bfe9210594"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html">Dictionary</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html#a9508ccd2a76a6179215824bfe9210594">Empty</a> ()</td></tr>
 <tr class="memdesc:a9508ccd2a76a6179215824bfe9210594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty dictionary.  <a href="classostk_1_1core_1_1container_1_1_dictionary.html#a9508ccd2a76a6179215824bfe9210594">More...</a><br /></td></tr>
 <tr class="separator:a9508ccd2a76a6179215824bfe9210594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91160ea9db250af38f925786b16c42e7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html">Dictionary</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html#a91160ea9db250af38f925786b16c42e7">Parse</a> (const <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">type::String</a> &amp;aString, const <a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946a">Object::Format</a> &amp;aFormat=<a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360">Object::Format::Undefined</a>)</td></tr>
-<tr class="memdesc:a91160ea9db250af38f925786b16c42e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from a string.  <a href="classostk_1_1core_1_1container_1_1_dictionary.html#a91160ea9db250af38f925786b16c42e7">More...</a><br /></td></tr>
-<tr class="separator:a91160ea9db250af38f925786b16c42e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71468d850ad73535f777a36f8a7bc93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html">Dictionary</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html#aa71468d850ad73535f777a36f8a7bc93">Parse</a> (const <a class="el" href="classostk_1_1core_1_1type_1_1_string.html">type::String</a> &amp;aString, const std::optional&lt; <a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946a">Object::Format</a> &gt; &amp;aFormat=std::nullopt)</td></tr>
+<tr class="memdesc:aa71468d850ad73535f777a36f8a7bc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from a string.  <a href="classostk_1_1core_1_1container_1_1_dictionary.html#aa71468d850ad73535f777a36f8a7bc93">More...</a><br /></td></tr>
+<tr class="separator:aa71468d850ad73535f777a36f8a7bc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -245,7 +245,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a dictionary using an initializer list. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123), <span class="stringliteral">&quot;Key B&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#a26e9f016e65e3ee291cd58655c541d6a">Object::String</a>(<span class="stringliteral">&quot;Hello</span></div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123), <span class="stringliteral">&quot;Key B&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#a26e9f016e65e3ee291cd58655c541d6a">Object::String</a>(<span class="stringliteral">&quot;Hello</span></div>
 <div class="line"><span class="stringliteral">World!&quot;</span>) }} ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -329,8 +329,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add entry to dictionary. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
-<div class="line">dictionary.addValueForKey(<a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(456), <span class="stringliteral">&quot;Key B&quot;</span>) ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
+<div class="line">dictionary.addValueForKey(<a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(456), <span class="stringliteral">&quot;Key B&quot;</span>) ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aValue</td><td>A value </td></tr>
@@ -466,7 +466,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get size of dictionary. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">dictionary.getSize() ; <span class="comment">// 1</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="classostk_1_1core_1_1container_1_1_dictionary.html" title="Key-value pairs container.">Dictionary</a> size </dd></dl>
 
@@ -489,7 +489,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if dictionary has value for a given key. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">dictionary.hasValueForKey(<span class="stringliteral">&quot;Key A&quot;</span>) ; <span class="comment">// True</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -517,7 +517,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if dictionary is empty. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">dictionary.isEmpty() ; <span class="comment">// False</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if dictionary is empty </dd></dl>
 
@@ -540,8 +540,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Not equal to operator. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> firstDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
-<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> secondDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(456) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> firstDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
+<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> secondDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(456) }} ;</div>
 <div class="line">firstDictionary != secondDictionary ; <span class="comment">// True</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -597,8 +597,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Equal to operator. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> firstDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
-<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> secondDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> firstDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
+<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> secondDictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">firstDictionary == secondDictionary ; <span class="comment">// True</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -627,7 +627,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Key subscript operator. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">Object&amp; <span class="keywordtype">object</span> = dictionary[<span class="stringliteral">&quot;Key A&quot;</span>] ; <span class="comment">// &amp;123</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -656,7 +656,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Key subscript operator. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line"><span class="keyword">const</span> Object&amp; <span class="keywordtype">object</span> = dictionary[<span class="stringliteral">&quot;Key A&quot;</span>] ; <span class="comment">// &amp;123</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -668,8 +668,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a91160ea9db250af38f925786b16c42e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91160ea9db250af38f925786b16c42e7">&#9670;&nbsp;</a></span>Parse()</h2>
+<a id="aa71468d850ad73535f777a36f8a7bc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71468d850ad73535f777a36f8a7bc93">&#9670;&nbsp;</a></span>Parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,8 +686,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946a">Object::Format</a> &amp;&#160;</td>
-          <td class="paramname"><em>aFormat</em> = <code><a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360">Object::Format::Undefined</a></code>&#160;</td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="classostk_1_1core_1_1container_1_1_object.html#a99233dc8fdb7cc72bf415cb20a14946a">Object::Format</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aFormat</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -704,11 +704,11 @@ Friends</h2></td></tr>
 
 <p>Constructs a dictionary from a string. </p>
 <div class="fragment"><div class="line">String jsonString = <span class="stringliteral">&quot;{\&quot;Key\&quot;: 123}&quot;</span> ;</div>
-<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = <a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#a91160ea9db250af38f925786b16c42e7">Dictionary::Parse</a>(jsonString) ;</div>
+<div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = <a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#aa71468d850ad73535f777a36f8a7bc93">Dictionary::Parse</a>(jsonString) ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aString</td><td>A string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">(optional)</td><td>aFormat Serialization format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">(optional)</td><td>aFormat Serialization format (default: std::nullopt, which detects the format) </td></tr>
   </table>
   </dd>
 </dl>
@@ -752,7 +752,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Output stream operator. </p>
-<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line"><a class="code" href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">Dictionary</a> dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">std::cout &lt;&lt; dictionary ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -771,11 +771,11 @@ Friends</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_a26e9f016e65e3ee291cd58655c541d6a"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#a26e9f016e65e3ee291cd58655c541d6a">ostk::core::container::Object::String</a></div><div class="ttdeci">static Object String(const type::String &amp;aString=type::String::Empty())</div><div class="ttdoc">Construct a string object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:816</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_dictionary_html_a9508ccd2a76a6179215824bfe9210594"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_dictionary.html#a9508ccd2a76a6179215824bfe9210594">ostk::core::container::Dictionary::Empty</a></div><div class="ttdeci">static Dictionary Empty()</div><div class="ttdoc">Constructs an empty dictionary.</div><div class="ttdef"><b>Definition:</b> Dictionary.cpp:409</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_ae4b404625788d1632eff48cd7f6e622f"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">ostk::core::container::Object::Integer</a></div><div class="ttdeci">static Object Integer(const type::Integer &amp;anInteger=type::Integer::Undefined())</div><div class="ttdoc">Construct an integer object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:806</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_a26e9f016e65e3ee291cd58655c541d6a"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#a26e9f016e65e3ee291cd58655c541d6a">ostk::core::container::Object::String</a></div><div class="ttdeci">static Object String(const type::String &amp;aString=type::String::Empty())</div><div class="ttdoc">Construct a string object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:804</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_ae9bb4640e600cc852211b8b9531c1608"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">ostk::core::container::Object::Integer</a></div><div class="ttdeci">static Object Integer(int anInteger)</div><div class="ttdoc">Construct an integer object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:794</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_dictionary_html_a9508ccd2a76a6179215824bfe9210594"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_dictionary.html#a9508ccd2a76a6179215824bfe9210594">ostk::core::container::Dictionary::Empty</a></div><div class="ttdeci">static Dictionary Empty()</div><div class="ttdoc">Constructs an empty dictionary.</div><div class="ttdef"><b>Definition:</b> Dictionary.cpp:411</div></div>
 <div class="ttc" id="aclassostk_1_1core_1_1container_1_1_dictionary_html_ab035a22d75ef47bb2116eeec820f24aa"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_dictionary.html#ab035a22d75ef47bb2116eeec820f24aa">ostk::core::container::Dictionary::Dictionary</a></div><div class="ttdeci">Dictionary(std::initializer_list&lt; std::pair&lt; Dictionary::Key, Dictionary::Value &gt;&gt; aList)</div><div class="ttdoc">Constructs a dictionary using an initializer list.</div><div class="ttdef"><b>Definition:</b> Dictionary.cpp:213</div></div>
-<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_dictionary_html_a91160ea9db250af38f925786b16c42e7"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_dictionary.html#a91160ea9db250af38f925786b16c42e7">ostk::core::container::Dictionary::Parse</a></div><div class="ttdeci">static Dictionary Parse(const type::String &amp;aString, const Object::Format &amp;aFormat=Object::Format::Undefined)</div><div class="ttdoc">Constructs a dictionary from a string.</div><div class="ttdef"><b>Definition:</b> Dictionary.cpp:414</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_dictionary_html_aa71468d850ad73535f777a36f8a7bc93"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_dictionary.html#aa71468d850ad73535f777a36f8a7bc93">ostk::core::container::Dictionary::Parse</a></div><div class="ttdeci">static Dictionary Parse(const type::String &amp;aString, const std::optional&lt; Object::Format &gt; &amp;aFormat=std::nullopt)</div><div class="ttdoc">Constructs a dictionary from a string.</div><div class="ttdef"><b>Definition:</b> Dictionary.cpp:416</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

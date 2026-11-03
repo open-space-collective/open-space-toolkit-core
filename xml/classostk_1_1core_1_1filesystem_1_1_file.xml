@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="319" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="319" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="298" column="22" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1filesystem_1_1_file_1a4ad0e5d1290a1455c6eac8ec3dda551d" prot="private" static="no" mutable="no">
         <type>Unique&lt; std::fstream &gt;</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="321" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="321" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="300" column="12" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="300" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="68" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="47" bodyend="55"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="68" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ad1dcf8c31ddb76d948ff3b64a3fe46d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="80" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="57" bodyend="60"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="80" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="52" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a4936000a9b87ec0611c1ae036a555ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -276,26 +276,6 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="88" column="5" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="88" bodyend="100"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1aa4a85018536f7e3fa948848215e5d461" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool ostk::core::filesystem::File::isDefined</definition>
-        <argsstring>() const</argsstring>
-        <name>isDefined</name>
-        <briefdescription>
-<para>Check if file is defined. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Undefined()<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
-</programlisting></para>
-<para><simplesect kind="return"><para>True if file is defined </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="122" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="79" bodyend="82"/>
-      </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a34b7fed969550f1eab7fdc045bbddba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool ostk::core::filesystem::File::exists</definition>
@@ -314,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="132" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="84" bodyend="101"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="122" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="71" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a686db52120394678d72e4747e50ad1b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -336,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="144" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="103" bodyend="111"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="134" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="85" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a683410b6b7ac9d51ad470d8064a1be3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -371,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="156" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="113" bodyend="135"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="146" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="95" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a772276701aa831d0dc8073ea97bdf8b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -391,11 +371,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="166" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="137" bodyend="161"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="156" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="114" bodyend="133"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a1455992a788ca7cc3db6f68f30c7823e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref></type>
-        <definition>filesystem::Path ostk::core::filesystem::File::getPath</definition>
+      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a7d1276bbac4c25389f18aba9474efbb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1core_1_1filesystem_1_1_path" kindref="compound">filesystem::Path</ref> &amp;</type>
+        <definition>const filesystem::Path &amp; ostk::core::filesystem::File::getPath</definition>
         <argsstring>() const</argsstring>
         <name>getPath</name>
         <briefdescription>
@@ -411,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="176" column="22" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="163" bodyend="171"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="166" column="28" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="135" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a3bdaaae230d9f5045a943a0a23366391" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_permission_set" kindref="compound">filesystem::PermissionSet</ref></type>
@@ -431,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="186" column="31" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="173" bodyend="283"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="176" column="31" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="140" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a527f2b23fd20550f7e96c599091346a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_directory" kindref="compound">filesystem::Directory</ref></type>
@@ -451,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="196" column="27" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="285" bodyend="312"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="186" column="27" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="252" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a45fd549b56c7180175f8f3d912001c57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -468,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="201" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="314" bodyend="344"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="191" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="276" bodyend="306"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a8890110d866265dd78283fef424dc66d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -487,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="210" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="346" bodyend="354"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="200" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="308" bodyend="311"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a220d5eb2cf4ddebb420bc8a7c6e49c78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +495,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="215" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="356" bodyend="409"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="205" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="313" bodyend="366"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a8929d8fe19ace2368d7f1375924fea38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -529,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="218" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="411" bodyend="429"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="208" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="368" bodyend="386"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1aaeee4b254e87b8fa4c53abe7d7580ace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::fstream &amp;</type>
@@ -546,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="223" column="18" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="431" bodyend="444"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="213" column="18" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="388" bodyend="401"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ae9337a583c49322805c79123c1b8d516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="233" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="223" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a2f6b28469cd3291dfbd25865a6bbc059" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
@@ -624,7 +604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="246" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="236" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a773b37bb669c077accf2ec6be2e7460b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -656,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="257" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="458" bodyend="482"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="247" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="415" bodyend="439"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a94881942705f6308cfcb7ec94ef07dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -716,7 +696,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="271" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="484" bodyend="527"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="261" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="441" bodyend="484"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -735,7 +715,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="285" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="275" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a3819bab5e64c88ed2f5e054092339a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -754,7 +734,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="295" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="534" bodyend="549"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="285" column="10" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="491" bodyend="506"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -801,30 +781,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="112" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="62" bodyend="77"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="112" column="12" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="57" bodyend="69"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1a05d4dda9aed0fb1e7a018f70f76fe18c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
-        <definition>File ostk::core::filesystem::File::Undefined</definition>
-        <argsstring>()</argsstring>
-        <name>Undefined</name>
-        <briefdescription>
-<para>Constructs an undefined file. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Undefined()<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
-</programlisting></para>
-<para><simplesect kind="return"><para>Undefined file </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="305" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="551" bodyend="554"/>
-      </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1filesystem_1_1_file_1ac3621e474fdffccac31fb4bb6ed91ef6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">File</ref></type>
         <definition>File ostk::core::filesystem::File::Path</definition>
@@ -839,7 +799,6 @@
         </briefdescription>
         <detaileddescription>
 <para><programlisting><codeline><highlight class="normal">File<sp/>file<sp/>=<sp/>File::Path(Path::Parse(&quot;/path/to/file.txt&quot;))<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">file.isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
 </programlisting></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -856,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="316" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="556" bodyend="564"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="295" column="17" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="508" bodyend="511"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -875,7 +834,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="323" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="566" bodyend="570"/>
+        <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="302" column="5" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="513" bodyend="517"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -884,7 +843,7 @@
     <detaileddescription>
 <para><ulink url="https://en.wikipedia.org/wiki/Computer_file">https://en.wikipedia.org/wiki/Computer_file</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="28" bodyend="324"/>
+    <location file="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/FileSystem/File.hpp" bodystart="28" bodyend="303"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1aaeee4b254e87b8fa4c53abe7d7580ace" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>accessStream</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>clear</name></member>
@@ -899,9 +858,8 @@
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a772276701aa831d0dc8073ea97bdf8b0" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getExtension</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a683410b6b7ac9d51ad470d8064a1be3a" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getName</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a527f2b23fd20550f7e96c599091346a3" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getParentDirectory</name></member>
-      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a1455992a788ca7cc3db6f68f30c7823e" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getPath</name></member>
+      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a7d1276bbac4c25389f18aba9474efbb3" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getPath</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3bdaaae230d9f5045a943a0a23366391" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>getPermissions</name></member>
-      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1aa4a85018536f7e3fa948848215e5d461" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a686db52120394678d72e4747e50ad1b8" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>isOpen</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a773b37bb669c077accf2ec6be2e7460b" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>moveToDirectory</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a220d5eb2cf4ddebb420bc8a7c6e49c78" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>open</name></member>
@@ -916,7 +874,6 @@
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3819bab5e64c88ed2f5e054092339a47" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>remove</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ae9337a583c49322805c79123c1b8d516" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>renameTo</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a8890110d866265dd78283fef424dc66d" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>toString</name></member>
-      <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a05d4dda9aed0fb1e7a018f70f76fe18c" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>Undefined</name></member>
       <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ac9c48c3dcf4060c07fb44e68200048ad" prot="public" virt="non-virtual"><scope>ostk::core::filesystem::File</scope><name>~File</name></member>
     </listofallmembers>
   </compounddef>

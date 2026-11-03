@@ -19,12 +19,11 @@
     <member refid="classostk_1_1core_1_1container_1_1_array_1ae035b7590373b178035f33733158877e" kind="function"><name>contains</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1a74839e693f5524e2c5c0017648486f13" kind="function"><name>isNear</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1af8f48574ba41c8cbea39de23ecdba7aa" kind="function"><name>isNear</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_array_1a5105b698b2f4a85ab8041136e4fa5737" kind="function"><name>accessFirst</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_array_1a55be65f137698f55130537704726af33" kind="function"><name>accessLast</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_array_1a695276574804a96e05f140fb178af844" kind="function"><name>getFirst</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_array_1aed58ef446df64734550d64abd388ffdb" kind="function"><name>getLast</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1aa6a94bd2117648885f2f150b4cf2c501" kind="function"><name>getSize</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1ad15c241c9653ac3db78dba8a42d5a66e" kind="function"><name>getIndexOf</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1ae0b2aff1ac2bda149f0f7fef323ca65b" kind="function"><name>toString</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_array_1ab890784e4a8ca686d0514ab868f42794" kind="function"><name>accessWhere</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1a8e2da8fcc3fd5d37eb54384e18f59462" kind="function"><name>getWhere</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1a526b45980e342bff95aa068ec0d57cef" kind="function"><name>find</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_array_1a8cf999c431361c3cff33d7cee58a091e" kind="function"><name>map</name></member>
@@ -90,8 +89,8 @@
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a327bd7b14c95ff24d36cb644768a347a" kind="function"><name>operator++</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a7b8965043a43ac298333199e5ebd8423" kind="function"><name>operator--</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1ae61aac4cd94d1a8661c8ecb2f2611c19" kind="function"><name>operator--</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a01005dc887cc99ff46ab3b7c039e8eb6" kind="function"><name>accessKey</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a90d062ad0d7d55d8e06d255a25a40727" kind="function"><name>accessValue</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1a86f60f1003b4001671c624eabe86145a" kind="function"><name>getKey</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1af7cec66cfe433bda83ca2de4910f574d" kind="function"><name>getValue</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_const_iterator_1ab1833819a1014d669ec03abf55c2a40d" kind="function"><name>accessMapConstIterator</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1container_1_1_dictionary" kind="class"><name>ostk::core::container::Dictionary</name>
@@ -117,7 +116,7 @@
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1a38527b37c1f6667391ef9ec68a01bc9e" kind="function"><name>end</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1a95fa6b67a0c39d2d7069ad71a53910ec" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1a9508ccd2a76a6179215824bfe9210594" kind="function"><name>Empty</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1a91160ea9db250af38f925786b16c42e7" kind="function"><name>Parse</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1aa71468d850ad73535f777a36f8a7bc93" kind="function"><name>Parse</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1a21a3b25d6600720307c88b2e8520f547" kind="function"><name>Dictionary</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1filesystem_1_1_directory" kind="class"><name>ostk::core::filesystem::Directory</name>
@@ -127,13 +126,12 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a735e8c716574a9f0720deca6fe53551d" kind="function"><name>operator=</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a2052299ec678425c614a9d94b6719408" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3104154a1142af0ea03f257edf493bc0" kind="function"><name>operator!=</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a7dc2c8a49eea8ee0cc6372b349756bf7" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1affd6e4da6f153b1c961ff61178898c20" kind="function"><name>exists</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3f9fa68eb7bce123a435c20ae9ece692" kind="function"><name>isEmpty</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3aae4c5746c1db8563c39b1930688edc" kind="function"><name>containsFileWithName</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a5a06e7333bba2f33cda76e5e24b00e37" kind="function"><name>containsDirectoryWithName</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1ad9ffa02a5f60cc351bc16dcedb64ce7d" kind="function"><name>getName</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af81a249fa293a8c8350d9ec9e296ce81" kind="function"><name>getPath</name></member>
+    <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a445cef60ac1357e2c839dda03eb29da0" kind="function"><name>getPath</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a5b41f71a42dc5bfc00b495c46ffe77f7" kind="function"><name>getPermissions</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1aa48e08223e5a4b1ae28b08f9e5ac0a5e" kind="function"><name>getParentDirectory</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af6e1bd5eb2b4634b4232fcfcf7ebce64" kind="function"><name>getFiles</name></member>
@@ -145,7 +143,6 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a078d17063b9915092af76d347a9665cc" kind="function"><name>create</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a58be001fc39b8319a664bde35ff59d86" kind="function"><name>remove</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a3cbfede39f82ab145f110ca14e21deef" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a299b477a3f5c6bd989ed0f7e91dbfffd" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1a654e1ae79c5e73460b722db30340270c" kind="function"><name>Root</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1af4d6ebf5c5b5c86fe25226bf5f887a8c" kind="function"><name>Path</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_directory_1aec17fadd7a541ce9b8deae3c752ffa5a" kind="function"><name>Directory</name></member>
@@ -154,7 +151,7 @@
     <member refid="classostk_1_1core_1_1error_1_1_exception_1a6dab20200b1936b280c76dadf3085ed9" kind="variable"><name>scope_</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" kind="function"><name>Exception</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_exception_1ae44d71ced961433d0b3325ff176e4974" kind="function"><name>~Exception</name></member>
-    <member refid="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" kind="function"><name>getScope</name></member>
+    <member refid="classostk_1_1core_1_1error_1_1_exception_1ae3423e56a65010ef3863f02e0ef5f8ff" kind="function"><name>getScope</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_exception_1ae34ebc20a97277da6e2472b6bb8e3812" kind="function"><name>what</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1filesystem_1_1_file" kind="class"><name>ostk::core::filesystem::File</name>
@@ -174,12 +171,11 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1abc152f2c8eb92dcdba974bd506071cb1" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ad1dcf8c31ddb76d948ff3b64a3fe46d2" kind="function"><name>operator!=</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a4936000a9b87ec0611c1ae036a555ed7" kind="function"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_file_1aa4a85018536f7e3fa948848215e5d461" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a34b7fed969550f1eab7fdc045bbddba9" kind="function"><name>exists</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a686db52120394678d72e4747e50ad1b8" kind="function"><name>isOpen</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a683410b6b7ac9d51ad470d8064a1be3a" kind="function"><name>getName</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a772276701aa831d0dc8073ea97bdf8b0" kind="function"><name>getExtension</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a1455992a788ca7cc3db6f68f30c7823e" kind="function"><name>getPath</name></member>
+    <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a7d1276bbac4c25389f18aba9474efbb3" kind="function"><name>getPath</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3bdaaae230d9f5045a943a0a23366391" kind="function"><name>getPermissions</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a527f2b23fd20550f7e96c599091346a3" kind="function"><name>getParentDirectory</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a45fd549b56c7180175f8f3d912001c57" kind="function"><name>getContents</name></member>
@@ -194,7 +190,6 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1af43fdd255e5a9c87745bac7d7d0ac3f1" kind="function"><name>clear</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a3819bab5e64c88ed2f5e054092339a47" kind="function"><name>remove</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a82ce9f27653427d53ecb90de978f4f68" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a05d4dda9aed0fb1e7a018f70f76fe18c" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1ac3621e474fdffccac31fb4bb6ed91ef6" kind="function"><name>Path</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_file_1a51fbd641ab4d43b2098c939732c4af50" kind="function"><name>File</name></member>
   </compound>
@@ -216,13 +211,11 @@
     <member refid="classostk_1_1core_1_1system_1_1_group_1a0fea739e63a33287a75d34304c4e1aa4" kind="function"><name>Group</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1aace16b5205f388ab389cd7ab14d2937b" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a053e176cea38e57bce0f69f72baed19b" kind="function"><name>operator!=</name></member>
-    <member refid="classostk_1_1core_1_1system_1_1_group_1a97f411cf741aca95c24120cea524f247" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a07b7056475b78fb83f34c7787cc52b8c" kind="function"><name>getGID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a4a3d6eaf4892cd330be48522e38b41f1" kind="function"><name>getEGID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1aa4d1f37a36f78a14f67559e04de6f78c" kind="function"><name>getSGID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a53f316d03ebb745b3aecb3c535799829" kind="function"><name>getName</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1adae6b8468d9a0cf648a52c296c6db73a" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1system_1_1_group_1aa12c2323a11d4352246757b4d0b97ab3" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a9d38b7db49fb6b2e779bbba884c15b2c" kind="function"><name>Process</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1ae94d4f0fd06b120b007e880ec60c944b" kind="function"><name>GID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_group_1a694c3ccaf1a870ab3c7e81aac8b776c6" kind="function"><name>Name</name></member>
@@ -249,15 +242,15 @@
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2cb77cf30ff8f2c432f31772f25d4bff" kind="function"><name>isDictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a8b48412c97559db2ec20ee7f8e044def" kind="function"><name>isArray</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aa04e46d95aa918177e30af252c3c454d" kind="function"><name>accessBoolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a9794fc18919657934ffbf971984d8587" kind="function"><name>accessInteger</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a479035dc3712eb32f9c7e9d68f34059b" kind="function"><name>accessReal</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a8fdb3ef9bfd004c6b5f55256f613f34f" kind="function"><name>accessInteger</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a164130d865bddb08a1bfb224c1b3fcaf" kind="function"><name>accessReal</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7961a9ba5df8f17605e7902248798f92" kind="function"><name>accessString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a66a8b205c9c8fa55b0c4770d2e538b99" kind="function"><name>accessDictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a7e85393c5319d5f7060d83cfbef10335" kind="function"><name>accessArray</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1aefe0e46f972bcd48001aa36f23e721ec" kind="function"><name>getType</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a57e1cd16f4bb3ef8f5504d3c9b7b9c5a" kind="function"><name>accessBoolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ac262c242e61d2ed42498438db3b76f65" kind="function"><name>accessInteger</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a1600d599621b9b05b2a3a89d3e654857" kind="function"><name>accessReal</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a6af40850fbb0748ad14466f2813589b9" kind="function"><name>accessInteger</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ae7f635e180920a46cf1786a1c8b53433" kind="function"><name>accessReal</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1ad7e2f71a59bafc9df08b2bbb7422976d" kind="function"><name>accessString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a035dc1cdd7ba0867790d2a3ab1e50901" kind="function"><name>accessDictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1_1_impl_1a2e7a5de5656df427348ee2658a39a1b2" kind="function"><name>accessArray</name></member>
@@ -381,11 +374,11 @@
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a51cee01ce643ba414fa41be033a7c33c" kind="function"><name>operator++</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a789700a7cbecc95ac97122bff792b52d" kind="function"><name>operator--</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ad28a9198ee57436f4def0e402978826b" kind="function"><name>operator--</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1ab8a4f2dc4dc79d9b1a6ed04c350dd2ec" kind="function"><name>accessKey</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1abf31257aba69a8ba374ee66a1ff3ce8c" kind="function"><name>accessValue</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a58d5f2505b51ea8e782cb069ddd16caa" kind="function"><name>accessValue</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a6c801dfdcf56c50b83f8d2ca7e568b96" kind="function"><name>accessMapIterator</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aba6384619c15e1226b9aceadc5f8a8a9" kind="function"><name>accessMapIterator</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a696028046faedffa191ff8970297c179" kind="function"><name>getKey</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aeddcf415ad9f40e9786d275779a25d25" kind="function"><name>getValue</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a2516b5ccd8e72899cf3174162bd65667" kind="function"><name>accessValue</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1a440d682f1ec4aada924c73bdcecb308f" kind="function"><name>getMapIterator</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_1aabc01f1df3e804aabeb2fa9d926cb930" kind="function"><name>accessMapIterator</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator" kind="class"><name>ostk::core::container::iterator::ZipIterator::Iterator</name>
     <member refid="classostk_1_1core_1_1container_1_1iterator_1_1_zip_iterator_1_1_iterator_1a462d7998def0934afa08f158c7711aba" kind="variable"><name>iterators_</name></member>
@@ -411,7 +404,7 @@
     <member refid="classostk_1_1core_1_1_logger_1a9809a17064cb86de4d457b5c2c5ac7b0" kind="variable"><name>source_</name></member>
     <member refid="classostk_1_1core_1_1_logger_1a14265191ccef29216a801f1f52a0bcd0" kind="variable"><name>sinks_</name></member>
     <member refid="classostk_1_1core_1_1_logger_1afc4760c6468b14aa75abec4624dfd7ea" kind="function"><name>Logger</name></member>
-    <member refid="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" kind="function"><name>operator()</name></member>
+    <member refid="classostk_1_1core_1_1_logger_1a37356dcecc5f8c42387e831cb0fd5f40" kind="function"><name>operator()</name></member>
     <member refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" kind="function"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" kind="function"><name>getChannel</name></member>
     <member refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" kind="function"><name>Console</name></member>
@@ -428,7 +421,6 @@
     <member refid="classostk_1_1core_1_1container_1_1_object_1a7aae445503d92c87f3bc4434c50c6e42a3beb75d1563ebc22253341be4ce57f44" kind="enumvalue"><name>Dictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a7aae445503d92c87f3bc4434c50c6e42a4410ec34d9e6c1a68100ca0ce033fb17" kind="enumvalue"><name>Array</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946a" kind="enum"><name>Format</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946aaec0fc0100c4fc1ce4eea230c3dc10360" kind="enumvalue"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946aa0ecd11c1d7a287401d148a23bbd7a2f8" kind="enumvalue"><name>JSON</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a99233dc8fdb7cc72bf415cb20a14946aa9463f87bbed1fcdacfb8d40e185ca2bc" kind="enumvalue"><name>YAML</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a4b302fede78c5e9dd9d77ddbb7497804" kind="variable"><name>objectImplUPtr_</name></member>
@@ -450,39 +442,36 @@
     <member refid="classostk_1_1core_1_1container_1_1_object_1a6dff4baabbbe460465e1885d57eeaeda" kind="function"><name>isString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a8ee541f9c9abe488578913feca0bbebc" kind="function"><name>isDictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a3452786ccbd7ee43f05a988350823895" kind="function"><name>isArray</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a12cb490e5a3c479ec7ce34f9b651b81a" kind="function"><name>accessBoolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a5f832a5ed3cbbb10363b33cf72e9abd4" kind="function"><name>accessInteger</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a6d84fb0f954529d575090ba2ea24f6de" kind="function"><name>accessReal</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1aea21becf7458e40c6f824231a46de2c0" kind="function"><name>accessString</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1abb7bcdc0f8d994aae545a61a6431a042" kind="function"><name>accessDictionary</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1aefd777689c4721873eac7b86fa9c72e5" kind="function"><name>accessArray</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ab87749cbec45e52033265d4926f1ae24" kind="function"><name>getType</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ab3467946cf23cb729487d78318e4792d" kind="function"><name>getBoolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ac86969cb1cce71de9f4cf5f91aaa5933" kind="function"><name>getInteger</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a9ef0a0796226433350017c30b1e82087" kind="function"><name>getReal</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ab2777e6aeaacf1ae6c9834760d5713ad" kind="function"><name>getString</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a47677139e34bbb9608069274a49e289e" kind="function"><name>getDictionary</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a6c1ab134025c1cc2a537936344c93937" kind="function"><name>getArray</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a53699eb49375ff49d52dbb1f4d8d6ead" kind="function"><name>toString</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1ab67d15347ee78e0cc41662892fec5919" kind="function"><name>getInteger</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a86c69cace2a15c00614eb20599fea73f" kind="function"><name>getReal</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a43225aa7aaeab6daf2fc3f245ada76b3" kind="function"><name>getString</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a71a02b5465e0595e2e15a1f155e052b9" kind="function"><name>getString</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a4d3d4f9c78f9123398042964903084e1" kind="function"><name>getDictionary</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a465037cec783ce7475a964a4dbfbcf6b" kind="function"><name>getDictionary</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a6790e257d0e78c31cfab0a8e0585285a" kind="function"><name>getArray</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1aac75a33ea045b0c09dc8ac2fbf16fe96" kind="function"><name>getArray</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1adf0c47ae54eb7237b497e64a956f8d88" kind="function"><name>toString</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1adf025bfe1cc911a95fe312e355876d8d" kind="function"><name>getJsonString</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a9be2980763e271fbf4422d354130f81f" kind="function"><name>accessBoolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ab2825f94e0004cca19d456541f69a39f" kind="function"><name>accessInteger</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ac1c1fedaf20b858bd333d7e6af22edfb" kind="function"><name>accessReal</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ab5a49ea0c90f5392447ad73bfe849b5c" kind="function"><name>accessString</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1aa83058ddaae4af9ba660acd5dc67341e" kind="function"><name>accessDictionary</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ab266a51bc7d1882b94f927a0ebcc78ec" kind="function"><name>accessArray</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a85e37336e0473f974420a34c28eec566" kind="function"><name>accessBoolean</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1ae65623bbf17d42c0a73d454be2c87b89" kind="function"><name>accessInteger</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1ad7688488ae5e4d338f82713ed1a27e94" kind="function"><name>accessReal</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a27d348efb184f1f11a1dc5dcbacd6566" kind="function"><name>accessString</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a568d4dbb9c0b972dd041256fb5ea08bf" kind="function"><name>accessDictionary</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a41d6cb6018ce56a5568cca48f50e0b70" kind="function"><name>accessArray</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a418df9bf4a73078f3d494edef1743f8d" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ab83784f942752bd466d49ac1bd7a13ae" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a5fc82aa46648db0280fc6f6f9adc715f" kind="friend"><name>operator&gt;&gt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1aed5c2a52ad209ff9bb8432f3eaa358b3" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a386554ec7db802d6d60695d238be64dc" kind="function"><name>Boolean</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ae4b404625788d1632eff48cd7f6e622f" kind="function"><name>Integer</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1ac2526f8edf587e27382d27523ea221da" kind="function"><name>Real</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1ae9bb4640e600cc852211b8b9531c1608" kind="function"><name>Integer</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1aa40945f332811ead827e1501282099ea" kind="function"><name>Real</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a26e9f016e65e3ee291cd58655c541d6a" kind="function"><name>String</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ad23ce0a1ae3703bfdf5f632b32df8212" kind="function"><name>Dictionary</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a7aac0eddd5ea3f7ab8bcc19cfe7a9775" kind="function"><name>Array</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1af2dc12d2f08c50abdbffce0ad71384f2" kind="function"><name>Parse</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_object_1a0682782008eca0c7bd2b2e75908af97e" kind="function"><name>Load</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1ae37fa9f3527a1785ba2ee7ecc0c2ee17" kind="function"><name>Parse</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_object_1a8e7b6819b932726cd76ad73557e51417" kind="function"><name>Load</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1acb7f47c046edf842c661918c8165975b" kind="function"><name>Object</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1a24d589ab423ebc81fdee16033812f997" kind="function"><name>ParseJson</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_object_1ac884bb0196eb27a684f9551714462664" kind="function"><name>ParseYaml</name></member>
@@ -496,7 +485,6 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a8225e86412c9c09a8829624b9d8d1283" kind="function"><name>operator!=</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a8296e690dcfdb364d3414421052104b7" kind="function"><name>operator+</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a4b3ef62c4fb4d91d8ecd76f5e4afe4d4" kind="function"><name>operator+=</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aecd66a5bf86b41374c9256831577f689" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1aa6d0534d0e162b76a623baa7ae421280" kind="function"><name>isAbsolute</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a9df1286241b0309e53766a284ea3c18b" kind="function"><name>isRelative</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab5a9418eda9883fa2a72b067fc7145a6" kind="function"><name>getParentPath</name></member>
@@ -506,7 +494,6 @@
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab4309ce6b68c58c5befe2f479de6842f" kind="function"><name>getRelativePathTo</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ab5ea209f4b4984efbec83f1def2011ce" kind="function"><name>toString</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a87813ac3ede0b43b50ae6b9fdf0a2815" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ac2748cd44b01913bffb0f0beb58cee13" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1ac44f214afcd0a549eb46abbb58a91e45" kind="function"><name>Root</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a238b7ff01a2f1a0c285475e6c2ba0e12" kind="function"><name>Current</name></member>
     <member refid="classostk_1_1core_1_1filesystem_1_1_path_1a478763ba7e88a5cc99809eae958d95f2" kind="function"><name>Parse</name></member>
@@ -549,7 +536,7 @@
   <compound refid="classostk_1_1core_1_1logger_1_1_pump" kind="class"><name>ostk::core::logger::Pump</name>
     <member refid="classostk_1_1core_1_1logger_1_1_pump_1a76c2ff8c48c3484e3ca179667a7a7b31" kind="typedef"><name>StreamManipulator</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_pump_1ac07e11a74c4e1c013c3aba09828183c8" kind="variable"><name>implPtr_</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" kind="function"><name>Pump</name></member>
+    <member refid="classostk_1_1core_1_1logger_1_1_pump_1a7e909e37bd81f49561267dd6cfa05ced" kind="function"><name>Pump</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_pump_1a8bc336c04ded0c76896aca7604f1d170" kind="function"><name>Pump</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_pump_1a9a7525e9d81db32109ceb3dbc55f0d54" kind="function"><name>Pump</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_pump_1a66b4321348906a8a2b379c9aefac01d6" kind="function"><name>~Pump</name></member>
@@ -679,8 +666,8 @@
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1ab86f511d582bd8904b8314ae71025498" kind="function"><name>RuntimeError</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a9affbbaa722f639547f9c4d1c9f0a421" kind="function"><name>RuntimeError</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a65b0f31efc6a6825703553b8383e1668" kind="function"><name>~RuntimeError</name></member>
-    <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" kind="function"><name>getMessage</name></member>
-    <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" kind="function"><name>getStackTrace</name></member>
+    <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a541f0acee8f545816ec853afc3ab988e" kind="function"><name>getMessage</name></member>
+    <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1afe67bb3c669f3655ab02114a7e9f110c" kind="function"><name>getStackTrace</name></member>
     <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a671d71ab5483eaa1ce5cc3400747ded1" kind="function"><name>what</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1logger_1_1sink_1_1_sink" kind="class"><name>ostk::core::logger::sink::Sink</name>
@@ -729,8 +716,6 @@
     <member refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" kind="function"><name>Source</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_source_1a8e1107712c9b1ab9e5506230d32c7a06" kind="function"><name>Source</name></member>
     <member refid="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" kind="function"><name>operator=</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" kind="function"><name>isDefined</name></member>
-    <member refid="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" kind="function"><name>Undefined</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1logger_1_1source_1_1_source" kind="class"><name>ostk::core::logger::source::Source</name>
     <member refid="classostk_1_1core_1_1logger_1_1source_1_1_source_1a64fbdb62a5c5f27e0d022da36aab93d9" kind="friend"><name>Pump</name></member>
@@ -782,7 +767,6 @@
   </compound>
   <compound refid="classostk_1_1core_1_1container_1_1_table" kind="class"><name>ostk::core::container::Table</name>
     <member refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6" kind="enum"><name>Format</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360" kind="enumvalue"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd" kind="enumvalue"><name>CSV</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1ae4af97157bca5cd8b6f0602135d291cd" kind="typedef"><name>ConstIterator</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1a10673e365cf3c6caa5de855a22f2721f" kind="variable"><name>header_</name></member>
@@ -807,7 +791,7 @@
     <member refid="classostk_1_1core_1_1container_1_1_table_1a0598162989de28b03becb213eefc519d" kind="function"><name>end</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1afaece709b2f143e4011941ae67b7adba" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1aa02b6a3a484fe5b866b707d927b7d178" kind="function"><name>Empty</name></member>
-    <member refid="classostk_1_1core_1_1container_1_1_table_1a1c2863bb986092a6f23509a5f84f908a" kind="function"><name>Load</name></member>
+    <member refid="classostk_1_1core_1_1container_1_1_table_1a43986f8a3822a0847703cf03acbc6122" kind="function"><name>Load</name></member>
     <member refid="classostk_1_1core_1_1container_1_1_table_1a82c7209ade55914befdb5efe71ecc1e3" kind="function"><name>LoadCsv</name></member>
   </compound>
   <compound refid="classostk_1_1core_1_1error_1_1runtime_1_1_to_be_implemented" kind="class"><name>ostk::core::error::runtime::ToBeImplemented</name>
@@ -842,12 +826,10 @@
     <member refid="classostk_1_1core_1_1system_1_1_user_1a136687a5b8b44617158bb3d14d4697c8" kind="function"><name>User</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1a58e11432b4f5e0c37edf841d3360f58b" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1ac11fea5211b9e8faa2ae07c1ba5fa154" kind="function"><name>operator!=</name></member>
-    <member refid="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" kind="function"><name>getUID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" kind="function"><name>getEUID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" kind="function"><name>getName</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1ac434498b36c6e29a86acbb50589e91a3" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1core_1_1system_1_1_user_1ad5a31224086dca11b4795adbddd82759" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" kind="function"><name>Process</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" kind="function"><name>UID</name></member>
     <member refid="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" kind="function"><name>Name</name></member>
@@ -1141,6 +1123,8 @@
   <compound refid="md_docs_index" kind="page"><name>md_docs_index</name>
   </compound>
   <compound refid="md_docs__tutorial" kind="page"><name>md_docs_Tutorial</name>
+  </compound>
+  <compound refid="deprecated" kind="page"><name>deprecated</name>
   </compound>
   <compound refid="dir_3856f55020c74ffa05b6eb1fa616b6c6" kind="dir"><name>include/OpenSpaceToolkit/Core/Container</name>
   </compound>

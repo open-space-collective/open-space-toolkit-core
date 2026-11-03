@@ -187,7 +187,7 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>List container. </p>
-<div class="fragment"><div class="line">List&lt;Integer&gt; list ;</div>
+<div class="fragment"><div class="line">List&lt;int&gt; list ;</div>
 <div class="line">list.push_back(123) ;</div>
 </div><!-- fragment --> 
 </div>
@@ -207,7 +207,7 @@ template&lt;class Key , class T , class Compare  = std::less&lt;Key&gt;, class A
 </div><div class="memdoc">
 
 <p>Map container. </p>
-<div class="fragment"><div class="line">Map&lt;String, Integer&gt; map ;</div>
+<div class="fragment"><div class="line">Map&lt;String, int&gt; map ;</div>
 <div class="line">map[<span class="stringliteral">&quot;key&quot;</span>] = 123 ;</div>
 </div><!-- fragment --> 
 </div>
@@ -228,7 +228,7 @@ template&lt;class Key , class T , class Hash  = std::hash&lt;Key&gt;, class KeyE
 
 <p>Ordered map container. </p>
 <p>The ordered-map library provides a hash map and a hash set which preserve the order of insertion in a way similar to Python's OrderedDict. When iterating over the map, the values will be returned in the same order as they were inserted.</p>
-<div class="fragment"><div class="line">OrderedMap&lt;String, Integer&gt; map ;</div>
+<div class="fragment"><div class="line">OrderedMap&lt;String, int&gt; map ;</div>
 <div class="line">map[<span class="stringliteral">&quot;first&quot;</span>] = 1 ;</div>
 <div class="line">map[<span class="stringliteral">&quot;second&quot;</span>] = 2 ;</div>
 <div class="line"><span class="comment">// Iteration order: &quot;first&quot;, &quot;second&quot;</span></div>
@@ -251,7 +251,7 @@ template&lt;class T , class U &gt; </div>
 </div><div class="memdoc">
 
 <p>Pair container. </p>
-<div class="fragment"><div class="line">Pair&lt;String, Integer&gt; pair = std::make_pair(String(<span class="stringliteral">&quot;key&quot;</span>), Integer(123)) ;</div>
+<div class="fragment"><div class="line">Pair&lt;String, int&gt; pair = std::make_pair(String(<span class="stringliteral">&quot;key&quot;</span>), 123) ;</div>
 <div class="line">pair.first ; <span class="comment">// &quot;key&quot;</span></div>
 <div class="line">pair.second ; <span class="comment">// 123</span></div>
 </div><!-- fragment --> 
@@ -385,7 +385,7 @@ template&lt;typename T , typename U , typename V &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line">Dictionary dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">Object::Integer</a>(123) }} ;</div>
+<div class="fragment"><div class="line">Dictionary dictionary = {{ <span class="stringliteral">&quot;Key A&quot;</span>: <a class="code" href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">Object::Integer</a>(123) }} ;</div>
 <div class="line">std::cout &lt;&lt; dictionary ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -541,7 +541,7 @@ template&lt;typename... Args&gt; </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_ae4b404625788d1632eff48cd7f6e622f"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#ae4b404625788d1632eff48cd7f6e622f">ostk::core::container::Object::Integer</a></div><div class="ttdeci">static Object Integer(const type::Integer &amp;anInteger=type::Integer::Undefined())</div><div class="ttdoc">Construct an integer object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:806</div></div>
+<div class="ttc" id="aclassostk_1_1core_1_1container_1_1_object_html_ae9bb4640e600cc852211b8b9531c1608"><div class="ttname"><a href="classostk_1_1core_1_1container_1_1_object.html#ae9bb4640e600cc852211b8b9531c1608">ostk::core::container::Object::Integer</a></div><div class="ttdeci">static Object Integer(int anInteger)</div><div class="ttdoc">Construct an integer object.</div><div class="ttdef"><b>Definition:</b> Object.cpp:794</div></div>
 <div class="ttc" id="anamespaceostk_1_1core_1_1container_html_adc15b58ecbd48d11cc0febf28fb28dbe"><div class="ttname"><a href="namespaceostk_1_1core_1_1container.html#adc15b58ecbd48d11cc0febf28fb28dbe">ostk::core::container::Unpack</a></div><div class="ttdeci">auto Unpack(Args &amp;... args)</div><div class="ttdoc">Unpack values into a tuple of references for structured assignment.</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:43</div></div>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->

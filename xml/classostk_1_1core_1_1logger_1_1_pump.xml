@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="31" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="31" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="29" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -30,21 +30,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="90" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="88" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="86" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="84" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a7e909e37bd81f49561267dd6cfa05ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>ostk::core::logger::Pump::Pump</definition>
-        <argsstring>(const Severity &amp;aSeverity, const Integer &amp;aLine, const String &amp;aFile, const String &amp;aFunction, Source *aSource)</argsstring>
+        <argsstring>(const Severity &amp;aSeverity, int aLine, const String &amp;aFile, const String &amp;aFunction, Source *aSource)</argsstring>
         <name>Pump</name>
         <param>
           <type>const <ref refid="namespaceostk_1_1core_1_1logger_1a52d02954e094391f067befffe7f3cae9" kindref="member">Severity</ref> &amp;</type>
           <declname>aSeverity</declname>
         </param>
         <param>
-          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <type>int</type>
           <declname>aLine</declname>
         </param>
         <param>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="40" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="38" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a8bc336c04ded0c76896aca7604f1d170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="45" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="41" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a9a7525e9d81db32109ceb3dbc55f0d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="50" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="46" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a66b4321348906a8a2b379c9aefac01d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="53" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="49" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1adaca719cdabd4a6f6e8937bacf093b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref> &amp;</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="56" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="52" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1ac2bb85f5e310c5cccf792d85b317acda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="63" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="63" bodyend="71"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="59" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="59" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1a6ab7044123e2f99752a043a462632a6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref> &amp;</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="77" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="77" bodyend="85"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="73" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="73" bodyend="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="92" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="88" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_pump_1ab9c936ae69028a8e727a036e8a4b89a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="94" column="18"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="90" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -288,7 +288,7 @@
     <detaileddescription>
 <para>Temporary object that collects log message content via stream operators and flushes the message to the log source upon destruction. </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="28" bodyend="95"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Pump.hpp" bodystart="26" bodyend="91"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1ab9c936ae69028a8e727a036e8a4b89a3" prot="private" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>accessStream</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a230e0c6b0b57545871e3cc77448dabaf" prot="private" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>canAccessStream</name></member>
@@ -296,7 +296,7 @@
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1ac2bb85f5e310c5cccf792d85b317acda" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>operator&lt;&lt;</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a6ab7044123e2f99752a043a462632a6b" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>operator&lt;&lt;</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1adaca719cdabd4a6f6e8937bacf093b77" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>operator=</name></member>
-      <member refid="classostk_1_1core_1_1logger_1_1_pump_1a0a637b6f2ae5ac6b0bd9a55880bddfb8" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>Pump</name></member>
+      <member refid="classostk_1_1core_1_1logger_1_1_pump_1a7e909e37bd81f49561267dd6cfa05ced" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>Pump</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a8bc336c04ded0c76896aca7604f1d170" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>Pump</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a9a7525e9d81db32109ceb3dbc55f0d54" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>Pump</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_pump_1a76c2ff8c48c3484e3ca179667a7a7b31" prot="public" virt="non-virtual"><scope>ostk::core::logger::Pump</scope><name>StreamManipulator</name></member>

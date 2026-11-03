@@ -11,12 +11,6 @@ ostk.core.type.Sign
 
    
    
-   .. rubric:: Methods
-
-   .. autosummary::
-      :nosignatures:
-   
-   
    
 
    
@@ -25,11 +19,9 @@ ostk.core.type.Sign
 
    .. autosummary::
    
+      ~Sign.Undefined
+      ~Sign.Positive
       ~Sign.Negative
       ~Sign.NoSign
-      ~Sign.Positive
-      ~Sign.Undefined
-      ~Sign.name
-      ~Sign.value
    
    

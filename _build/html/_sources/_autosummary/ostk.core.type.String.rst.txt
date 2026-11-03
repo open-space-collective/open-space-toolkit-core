@@ -11,10 +11,13 @@ ostk.core.type.String
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~String.boolean
       ~String.char
@@ -30,9 +33,5 @@ ostk.core.type.String
       ~String.is_uppercase
       ~String.match
       ~String.replicate
-   
-   
-
-   
    
    

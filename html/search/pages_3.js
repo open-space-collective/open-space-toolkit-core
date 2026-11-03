@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tutorial_1001',['Tutorial',['../md_docs__tutorial.html',1,'']]]
+  ['open_20space_20toolkit_20▸_20core_1004',['Open Space Toolkit ▸ Core',['../index.html',1,'']]]
 ];

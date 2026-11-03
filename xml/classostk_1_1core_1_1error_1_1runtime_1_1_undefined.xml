@@ -103,9 +103,9 @@
     <location file="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Error/Runtime/Undefined.hpp" bodystart="23" bodyend="36"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1error_1_1_exception_1a27647e55b84a7a32cf8b24e575651d71" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>Exception</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a40d4dae4c7626fb646970a0b4a6facc6" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getMessage</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_exception_1a3778009187ea6841eff3bdd45d345144" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getScope</name></member>
-      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a747df8aef9222235e399d4b0b81ac5dd" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getStackTrace</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a541f0acee8f545816ec853afc3ab988e" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getMessage</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_exception_1ae3423e56a65010ef3863f02e0ef5f8ff" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getScope</name></member>
+      <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1afe67bb3c669f3655ab02114a7e9f110c" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>getStackTrace</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1ab86f511d582bd8904b8314ae71025498" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>RuntimeError</name></member>
       <member refid="classostk_1_1core_1_1error_1_1_runtime_error_1a9affbbaa722f639547f9c4d1c9f0a421" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>RuntimeError</name></member>
       <member refid="classostk_1_1core_1_1error_1_1runtime_1_1_undefined_1a5ae214a1665596b08d53189168827a01" prot="public" virt="non-virtual"><scope>ostk::core::error::runtime::Undefined</scope><name>Undefined</name></member>

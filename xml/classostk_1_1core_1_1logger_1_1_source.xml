@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="54" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="54" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="44" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -105,42 +105,6 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="40" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool ostk::core::logger::Source::isDefined</definition>
-        <argsstring>() const</argsstring>
-        <name>isDefined</name>
-        <briefdescription>
-<para>Check if source is defined. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>True if defined </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="45" column="10"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></type>
-        <definition>static Source ostk::core::logger::Source::Undefined</definition>
-        <argsstring>()</argsstring>
-        <name>Undefined</name>
-        <briefdescription>
-<para>Construct an undefined source. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>Undefined source </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="50" column="19"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Log source. </para>
@@ -160,14 +124,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="23" bodyend="55"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger/Source.hpp" line="24" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger/Source.hpp" bodystart="23" bodyend="45"/>
     <listofallmembers>
-      <member refid="classostk_1_1core_1_1logger_1_1_source_1ad990358e832e3deb4b5d0cae908d10b7" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_source_1ae6e4fbcb686bcd0b03808f31d9b30bbf" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>operator=</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_source_1a02ece6e1d79d574bcf5e1917dd5cc728" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Source</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_source_1a8e1107712c9b1ab9e5506230d32c7a06" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Source</name></member>
       <member refid="classostk_1_1core_1_1logger_1_1_source_1a17f56c4617f13b631b7ff7eadcb936ed" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>sourceUPtr_</name></member>
-      <member refid="classostk_1_1core_1_1logger_1_1_source_1a272a407ccc75d370b259efc685d48063" prot="public" virt="non-virtual"><scope>ostk::core::logger::Source</scope><name>Undefined</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

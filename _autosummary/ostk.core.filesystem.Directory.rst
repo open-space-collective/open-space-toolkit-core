@@ -16,6 +16,15 @@ ostk.core.filesystem.Directory
    .. autosummary::
       :nosignatures:
    
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
       ~Directory.contains_file_with_name
       ~Directory.create
       ~Directory.exists
@@ -23,16 +32,10 @@ ostk.core.filesystem.Directory
       ~Directory.get_name
       ~Directory.get_parent_directory
       ~Directory.get_path
-      ~Directory.is_defined
       ~Directory.is_empty
       ~Directory.path
       ~Directory.remove
       ~Directory.root
       ~Directory.to_string
-      ~Directory.undefined
-   
-   
-
-   
    
    

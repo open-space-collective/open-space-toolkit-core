@@ -2,7 +2,6 @@ var classostk_1_1core_1_1container_1_1_table =
 [
     [ "ConstIterator", "classostk_1_1core_1_1container_1_1_table.html#ae4af97157bca5cd8b6f0602135d291cd", null ],
     [ "Format", "classostk_1_1core_1_1container_1_1_table.html#ab6907599287d05bc59cb75c1515177b6", [
-      [ "Undefined", "classostk_1_1core_1_1container_1_1_table.html#ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360", null ],
       [ "CSV", "classostk_1_1core_1_1container_1_1_table.html#ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd", null ]
     ] ],
     [ "Table", "classostk_1_1core_1_1container_1_1_table.html#a5f490be7e6a3ff4577b71a45e97fbb15", null ],

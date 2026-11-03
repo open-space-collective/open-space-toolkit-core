@@ -28,7 +28,7 @@
 <para>List container. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">List&lt;Integer&gt;<sp/>list<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">List&lt;int&gt;<sp/>list<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">list.push_back(123)<sp/>;</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
@@ -61,7 +61,7 @@
 <para>Map container. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Map&lt;String,<sp/>Integer&gt;<sp/>map<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Map&lt;String,<sp/>int&gt;<sp/>map<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">map[&quot;key&quot;]<sp/>=<sp/>123<sp/>;</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
@@ -103,7 +103,7 @@
         </briefdescription>
         <detaileddescription>
 <para>The ordered-map library provides a hash map and a hash set which preserve the order of insertion in a way similar to Python&apos;s OrderedDict. When iterating over the map, the values will be returned in the same order as they were inserted.</para>
-<para><programlisting><codeline><highlight class="normal">OrderedMap&lt;String,<sp/>Integer&gt;<sp/>map<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">OrderedMap&lt;String,<sp/>int&gt;<sp/>map<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">map[&quot;first&quot;]<sp/>=<sp/>1<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">map[&quot;second&quot;]<sp/>=<sp/>2<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">//<sp/>Iteration<sp/>order:<sp/>&quot;first&quot;,<sp/>&quot;second&quot;</highlight></codeline>
@@ -133,7 +133,7 @@
 <para>Pair container. </para>
         </briefdescription>
         <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Pair&lt;String,<sp/>Integer&gt;<sp/>pair<sp/>=<sp/>std::make_pair(String(&quot;key&quot;),<sp/>Integer(123))<sp/>;</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">Pair&lt;String,<sp/>int&gt;<sp/>pair<sp/>=<sp/>std::make_pair(String(&quot;key&quot;),<sp/>123)<sp/>;</highlight></codeline>
 <codeline><highlight class="normal">pair.first<sp/>;<sp/>//<sp/>&quot;key&quot;</highlight></codeline>
 <codeline><highlight class="normal">pair.second<sp/>;<sp/>//<sp/>123</highlight></codeline>
 </programlisting> </para>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" line="283" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="283" bodyend="355"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" line="283" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Dictionary.cpp" bodystart="283" bodyend="357"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1ac506c478a21717562396abb41d83172e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -356,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="400" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="400" bodyend="459"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="402" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="402" bodyend="461"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a658f7ade754eaa9ab0e310c2e62a5914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="461" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="461" bodyend="468"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="463" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="463" bodyend="470"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a04582f99eb258ed9c53234d941586a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1filesystem_1_1_file" kindref="compound">filesystem::File</ref> &amp;</type>
@@ -438,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="470" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="470" bodyend="477"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Object.cpp" line="472" column="18" bodyfile="src/OpenSpaceToolkit/Core/Container/Object.cpp" bodystart="472" bodyend="479"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1container_1a8238aac5bd4baedb41a4fc81ce1c74a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Container/Table.cpp" line="106" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="106" bodyend="175"/>
+        <location file="src/OpenSpaceToolkit/Core/Container/Table.cpp" line="110" column="1" bodyfile="src/OpenSpaceToolkit/Core/Container/Table.cpp" bodystart="110" bodyend="179"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

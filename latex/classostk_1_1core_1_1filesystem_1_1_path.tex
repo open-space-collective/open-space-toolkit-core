@@ -21,8 +21,6 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a8225e86412c9c09a
 \begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a4b3ef62c4fb4d91d8ecd76f5e4afe4d4}{operator+=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \&a\+Path)
 \begin{DoxyCompactList}\small\item\em Addition assignment operator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}{is\+Defined}} () const
-\begin{DoxyCompactList}\small\item\em Check if path is defined. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_aa6d0534d0e162b76a623baa7ae421280}{is\+Absolute}} () const
 \begin{DoxyCompactList}\small\item\em Check if path is absolute. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}{is\+Relative}} () const
@@ -42,8 +40,6 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Undefined}} ()
-\begin{DoxyCompactList}\small\item\em Constructs an undefined path. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac44f214afcd0a549eb46abbb58a91e45}{Root}} ()
 \begin{DoxyCompactList}\small\item\em Constructs a root path. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a238b7ff01a2f1a0c285475e6c2ba0e12}{Current}} ()
@@ -237,26 +233,6 @@ Check if path is absolute.
 
 \begin{DoxyReturn}{Returns}
 True if path is absolute 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}\label{classostk_1_1core_1_1filesystem_1_1_path_aecd66a5bf86b41374c9256831577f689}} 
-\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!isDefined@{isDefined}}
-\index{isDefined@{isDefined}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
-\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
-{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Path\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Check if path is defined. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Path::Undefined}}() ;}
-\DoxyCodeLine{path.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-True if path is defined 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}\label{classostk_1_1core_1_1filesystem_1_1_path_a9df1286241b0309e53766a284ea3c18b}} 
 \index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!isRelative@{isRelative}}
@@ -486,26 +462,6 @@ Get serialized path.
 
 \begin{DoxyReturn}{Returns}
 Serialized path 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}\label{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}} 
-\index{ostk::core::filesystem::Path@{ostk::core::filesystem::Path}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk::core::filesystem::Path@{ostk::core::filesystem::Path}}
-\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{Path}} ostk\+::core\+::filesystem\+::\+Path\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Constructs an undefined path. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a02d3f4ae51b899a880b716cd8f4ddd3f}{Path}} path = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_ac2748cd44b01913bffb0f0beb58cee13}{Path::Undefined}}() ;}
-\DoxyCodeLine{path.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Undefined path 
 \end{DoxyReturn}
 
 

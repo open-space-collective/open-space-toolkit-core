@@ -38,8 +38,6 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ad1dcf8c31ddb76d9
 \begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a4936000a9b87ec0611c1ae036a555ed7}{operator$<$$<$}} (const T \&an\+Object)
 \begin{DoxyCompactList}\small\item\em Stream operator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_aa4a85018536f7e3fa948848215e5d461}{is\+Defined}} () const
-\begin{DoxyCompactList}\small\item\em Check if file is defined. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a34b7fed969550f1eab7fdc045bbddba9}{exists}} () const
 \begin{DoxyCompactList}\small\item\em Check if file exists. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a686db52120394678d72e4747e50ad1b8}{is\+Open}} () const
@@ -48,7 +46,7 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a686db52120394678
 \begin{DoxyCompactList}\small\item\em Get file name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a772276701aa831d0dc8073ea97bdf8b0}{get\+Extension}} () const
 \begin{DoxyCompactList}\small\item\em Get file extension. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a1455992a788ca7cc3db6f68f30c7823e}{get\+Path}} () const
+const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a7d1276bbac4c25389f18aba9474efbb3}{get\+Path}} () const
 \begin{DoxyCompactList}\small\item\em Get file path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a3bdaaae230d9f5045a943a0a23366391}{get\+Permissions}} () const
 \begin{DoxyCompactList}\small\item\em Get file permissions. \end{DoxyCompactList}\item 
@@ -79,8 +77,6 @@ void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a3819bab5e64c88ed
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a05d4dda9aed0fb1e7a018f70f76fe18c}{Undefined}} ()
-\begin{DoxyCompactList}\small\item\em Constructs an undefined file. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{Path}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \&a\+Path)
 \begin{DoxyCompactList}\small\item\em Constructs a file from a given path. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
@@ -362,11 +358,11 @@ Get file\textquotesingle{}s parent directory.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}}\textquotesingle{}s parent directory 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_file_a1455992a788ca7cc3db6f68f30c7823e}\label{classostk_1_1core_1_1filesystem_1_1_file_a1455992a788ca7cc3db6f68f30c7823e}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_file_a7d1276bbac4c25389f18aba9474efbb3}\label{classostk_1_1core_1_1filesystem_1_1_file_a7d1276bbac4c25389f18aba9474efbb3}} 
 \index{ostk::core::filesystem::File@{ostk::core::filesystem::File}!getPath@{getPath}}
 \index{getPath@{getPath}!ostk::core::filesystem::File@{ostk::core::filesystem::File}}
 \doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} ostk\+::core\+::filesystem\+::\+File\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \& ostk\+::core\+::filesystem\+::\+File\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -375,7 +371,7 @@ Get file path.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a433d3d7747d23181a0e2ca0bdfb57439}{File}} file = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file.txt"})) ;}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{Path}} path = file.\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a1455992a788ca7cc3db6f68f30c7823e}{getPath}}() ; \textcolor{comment}{// /path/to/file.txt}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{Path}} path = file.\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a7d1276bbac4c25389f18aba9474efbb3}{getPath}}() ; \textcolor{comment}{// /path/to/file.txt}}
 \end{DoxyCode}
 
 
@@ -401,26 +397,6 @@ Get file permissions.
 
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} permissions 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_file_aa4a85018536f7e3fa948848215e5d461}\label{classostk_1_1core_1_1filesystem_1_1_file_aa4a85018536f7e3fa948848215e5d461}} 
-\index{ostk::core::filesystem::File@{ostk::core::filesystem::File}!isDefined@{isDefined}}
-\index{isDefined@{isDefined}!ostk::core::filesystem::File@{ostk::core::filesystem::File}}
-\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
-{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+File\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Check if file is defined. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a433d3d7747d23181a0e2ca0bdfb57439}{File}} file = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a05d4dda9aed0fb1e7a018f70f76fe18c}{File::Undefined}}() ;}
-\DoxyCodeLine{file.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-True if file is defined 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_file_a686db52120394678d72e4747e50ad1b8}\label{classostk_1_1core_1_1filesystem_1_1_file_a686db52120394678d72e4747e50ad1b8}} 
 \index{ostk::core::filesystem::File@{ostk::core::filesystem::File}!isOpen@{isOpen}}
@@ -583,7 +559,6 @@ Constructs a file from a given path.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a433d3d7747d23181a0e2ca0bdfb57439}{File}} file = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/file.txt"})) ;}
-\DoxyCodeLine{file.isDefined() ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
 
@@ -652,26 +627,6 @@ Get serialized file.
 
 \begin{DoxyReturn}{Returns}
 Serialized file 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_file_a05d4dda9aed0fb1e7a018f70f76fe18c}\label{classostk_1_1core_1_1filesystem_1_1_file_a05d4dda9aed0fb1e7a018f70f76fe18c}} 
-\index{ostk::core::filesystem::File@{ostk::core::filesystem::File}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk::core::filesystem::File@{ostk::core::filesystem::File}}
-\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} ostk\+::core\+::filesystem\+::\+File\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Constructs an undefined file. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a433d3d7747d23181a0e2ca0bdfb57439}{File}} file = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_a05d4dda9aed0fb1e7a018f70f76fe18c}{File::Undefined}}() ;}
-\DoxyCodeLine{file.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Undefined file 
 \end{DoxyReturn}
 
 

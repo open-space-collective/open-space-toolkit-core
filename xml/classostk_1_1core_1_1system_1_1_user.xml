@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="100" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="100" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="90" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="101" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="101" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="91" column="9" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1system_1_1_user_1a908d23165d17a834625f096b588d52b7" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="102" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="102" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="92" column="12" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="92" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -197,23 +197,6 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="48" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool ostk::core::system::User::isDefined</definition>
-        <argsstring>() const</argsstring>
-        <name>isDefined</name>
-        <briefdescription>
-<para>Check if user is defined. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>True if defined </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="60" column="10"/>
-      </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int ostk::core::system::User::getUID</definition>
@@ -229,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="65" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="60" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -246,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="70" column="9"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="65" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -263,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="75" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="70" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -311,23 +294,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1ad5a31224086dca11b4795adbddd82759" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
-        <definition>static User ostk::core::system::User::Undefined</definition>
-        <argsstring>()</argsstring>
-        <name>Undefined</name>
-        <briefdescription>
-<para>Construct an undefined user. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>Undefined user </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="80" column="17"/>
-      </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
         <definition>static User ostk::core::system::User::Process</definition>
@@ -343,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="85" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="75" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
@@ -373,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="91" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="81" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1system_1_1_user" kindref="compound">User</ref></type>
@@ -403,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="97" column="17"/>
+        <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="87" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -413,13 +379,12 @@
 <para>POSIX compliant</para>
 <para><ulink url="https://en.wikipedia.org/wiki/User_identifier">https://en.wikipedia.org/wiki/User_identifier</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="22" bodyend="103"/>
+    <location file="include/OpenSpaceToolkit/Core/System/User.hpp" line="23" column="1" bodyfile="include/OpenSpaceToolkit/Core/System/User.hpp" bodystart="22" bodyend="93"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a307ed48df77906f8a6d50ba0b51ab256" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>euid_</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1ac4c9c03e93d714ccf43b6160c73e9604" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getEUID</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a1f112f97f90b2910c943d22aff6f66f5" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getName</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1acc8330f48805da8a188c0b38ef815a03" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>getUID</name></member>
-      <member refid="classostk_1_1core_1_1system_1_1_user_1a8db1aaed91e6eca5459230cd28931e56" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>isDefined</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a83abc0dd6771386923d28c2106e107b7" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Name</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a908d23165d17a834625f096b588d52b7" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>name_</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1ac11fea5211b9e8faa2ae07c1ba5fa154" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>operator!=</name></member>
@@ -428,7 +393,6 @@
       <member refid="classostk_1_1core_1_1system_1_1_user_1adc854960802510e2dcc4c45bbb1ab0a5" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Process</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a7625cdddf50a15320fca6d18e67ae848" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>UID</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a2e966a6193ecb3d0117bb2236695f0e6" prot="private" virt="non-virtual"><scope>ostk::core::system::User</scope><name>uid_</name></member>
-      <member refid="classostk_1_1core_1_1system_1_1_user_1ad5a31224086dca11b4795adbddd82759" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>Undefined</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a0de9691c8ea414402a61ca2ba571125b" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>User</name></member>
       <member refid="classostk_1_1core_1_1system_1_1_user_1a136687a5b8b44617158bb3d14d4697c8" prot="public" virt="non-virtual"><scope>ostk::core::system::User</scope><name>User</name></member>
     </listofallmembers>

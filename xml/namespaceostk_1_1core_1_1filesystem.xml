@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" line="31" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="31" bodyend="45"/>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" line="26" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Directory.cpp" bodystart="26" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1a167a3aa9878e2eaa43418d82d1096310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" line="62" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="62" bodyend="77"/>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" line="57" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/File.cpp" bodystart="57" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1ad638a7d2b5d8f605c8e10d59d18ae911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="95" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="95" bodyend="104"/>
+        <location file="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" line="80" column="1" bodyfile="src/OpenSpaceToolkit/Core/FileSystem/Path.cpp" bodystart="80" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1filesystem_1ab1533d20274fe05cc29c4d432fe96e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>

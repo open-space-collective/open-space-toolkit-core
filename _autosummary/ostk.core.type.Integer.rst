@@ -11,10 +11,13 @@ ostk.core.type.Integer
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~Integer.can_parse
       ~Integer.get_sign
@@ -46,9 +49,5 @@ ostk.core.type.Integer
       ~Integer.uint8
       ~Integer.undefined
       ~Integer.zero
-   
-   
-
-   
    
    

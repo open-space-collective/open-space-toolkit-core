@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="24" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="24" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="28" column="16" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a6533a0c2ece5149a622498df086dbc14" prot="public" static="no">
         <type>int16_t</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="25" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="25" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="29" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a93d6cf7182fe640f849592926c4dd721" prot="public" static="no">
         <type>int32_t</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="26" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="26" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="30" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a904436f796d6205c1b7539d2593370a0" prot="public" static="no">
         <type>int64_t</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="27" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="27" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="31" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a5b1205f7e4b99219442b781b9e360c5f" prot="public" static="no">
         <type>uint8_t</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="29" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="29" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="33" column="17" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a4345722d214b8254845ef5067a039da9" prot="public" static="no">
         <type>uint16_t</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="30" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="30" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="34" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1aa337e1a2f3f607bf36bf17e68ed22439" prot="public" static="no">
         <type>uint32_t</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="31" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="31" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="35" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a0bc9d9789d8cb41a60111abe445f04e0" prot="public" static="no">
         <type>uint64_t</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="32" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="32" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/Integer.hpp" line="36" column="18" bodyfile="include/OpenSpaceToolkit/Core/Type/Integer.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceostk_1_1core_1_1type_1a14fe3367e611fd4d9fca9e9fcfe92848" prot="public" static="no">
         <templateparamlist>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="320" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="320" bodyend="323"/>
+        <location file="include/OpenSpaceToolkit/Core/Type/String.hpp" line="317" column="33" bodyfile="include/OpenSpaceToolkit/Core/Type/String.hpp" bodystart="317" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a085785ee30e403dcaa3ac784e1e502e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="495" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="495" bodyend="498"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="499" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="499" bodyend="502"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a5eb83e816ac6b6ef4fd98bd58c3ceccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="500" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="500" bodyend="503"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="504" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="504" bodyend="507"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1acfb6294d441f631b53c4d4b3ed6d2007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="505" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="505" bodyend="508"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="509" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="509" bodyend="512"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a2ebb3c6dfb7f07ce15431d2b6a7ec8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -460,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="510" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="510" bodyend="513"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="514" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="514" bodyend="517"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a5594a3ee3f2e3092f2b1bd2261331377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref></type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="515" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="515" bodyend="518"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="519" column="9" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="519" bodyend="522"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a718a72f9497d1b7364f0b99fd2b7dcbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -542,7 +542,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="685" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="685" bodyend="716"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Integer.cpp" line="689" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Integer.cpp" bodystart="689" bodyend="720"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a17ebe4b205c768e424ab75e16f4141b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -583,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="432" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="432" bodyend="435"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="436" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="436" bodyend="439"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a2eef915074832cb8477d1064053a259d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -624,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="437" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="437" bodyend="440"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="441" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="441" bodyend="444"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a625570e035a6e1d98891ed3c09433133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -665,7 +665,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="442" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="442" bodyend="445"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="446" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="446" bodyend="449"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1a52cb50068e71b0a0e6dd76375a6f7830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_real" kindref="compound">Real</ref></type>
@@ -706,7 +706,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="447" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="447" bodyend="450"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="451" column="6" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="451" bodyend="454"/>
       </memberdef>
       <memberdef kind="function" id="namespaceostk_1_1core_1_1type_1ab923b1f63a7df2f26ea3cecfb1f6c8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -747,7 +747,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="497" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="497" bodyend="528"/>
+        <location file="src/OpenSpaceToolkit/Core/Type/Real.cpp" line="501" column="1" bodyfile="src/OpenSpaceToolkit/Core/Type/Real.cpp" bodystart="501" bodyend="532"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

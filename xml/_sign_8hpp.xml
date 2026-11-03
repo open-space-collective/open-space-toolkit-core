@@ -18,130 +18,34 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="11">
-        <label>include/OpenSpaceToolkit/Core/Container/Table/Row.hpp</label>
-        <link refid="_row_8hpp"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>include/OpenSpaceToolkit/Core/Type/Integer.hpp</label>
         <link refid="_integer_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="10">
-        <label>include/OpenSpaceToolkit/Core/Container/Table/Cell.hpp</label>
-        <link refid="_cell_8hpp"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="20">
+      <node id="6">
         <label>src/OpenSpaceToolkit/Core/Type/Integer.cpp</label>
         <link refid="_integer_8cpp"/>
       </node>
-      <node id="13">
-        <label>src/OpenSpaceToolkit/Core/Container/Table/Row.cpp</label>
-        <link refid="_row_8cpp"/>
-      </node>
-      <node id="14">
-        <label>src/OpenSpaceToolkit/Core/Container/Table.cpp</label>
-        <link refid="_table_8cpp"/>
-      </node>
       <node id="4">
-        <label>include/OpenSpaceToolkit/Core/Container/Dictionary.hpp</label>
-        <link refid="_dictionary_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>src/OpenSpaceToolkit/Core/Type/String.cpp</label>
-        <link refid="_string_8cpp"/>
-      </node>
-      <node id="3">
-        <label>include/OpenSpaceToolkit/Core/Container/Object.hpp</label>
-        <link refid="_object_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>include/OpenSpaceToolkit/Core/Container/Stack.hpp</label>
-        <link refid="_stack_8hpp"/>
-      </node>
-      <node id="5">
-        <label>src/OpenSpaceToolkit/Core/Container/Dictionary.cpp</label>
-        <link refid="_dictionary_8cpp"/>
-      </node>
-      <node id="18">
         <label>include/OpenSpaceToolkit/Core/Type.hpp</label>
         <link refid="_type_8hpp"/>
       </node>
-      <node id="15">
-        <label>include/OpenSpaceToolkit/Core/Logger/Pump.hpp</label>
-        <link refid="_pump_8hpp"/>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>include/OpenSpaceToolkit/Core/Container/Graph.hpp</label>
-        <link refid="_graph_8hpp"/>
-      </node>
-      <node id="6">
-        <label>src/OpenSpaceToolkit/Core/Container/Object.cpp</label>
-        <link refid="_object_8cpp"/>
-      </node>
-      <node id="19">
+      <node id="5">
         <label>src/OpenSpaceToolkit/Core/Type/Real.cpp</label>
         <link refid="_real_8cpp"/>
       </node>
-      <node id="12">
-        <label>include/OpenSpaceToolkit/Core/Container/Table.hpp</label>
-        <link refid="_table_8hpp"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>include/OpenSpaceToolkit/Core/Container/Queue.hpp</label>
-        <link refid="_queue_8hpp"/>
-      </node>
-      <node id="17">
+      <node id="3">
         <label>include/OpenSpaceToolkit/Core/Type/Real.hpp</label>
         <link refid="_real_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -149,17 +53,9 @@
         <link refid="_sign_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>include/OpenSpaceToolkit/Core/Logger.hpp</label>
-        <link refid="_logger_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

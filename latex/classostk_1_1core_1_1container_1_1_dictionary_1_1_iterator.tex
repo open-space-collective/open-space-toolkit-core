@@ -47,15 +47,15 @@ const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterato
 \begin{DoxyCompactList}\small\item\em Pre-\/decrement operator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator}{Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_ad28a9198ee57436f4def0e402978826b}{operator-\/-\/}} (int)
 \begin{DoxyCompactList}\small\item\em Post-\/decrement operator. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_ab8a4f2dc4dc79d9b1a6ed04c350dd2ec}{access\+Key}} () const
-\begin{DoxyCompactList}\small\item\em Access key (const) \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_abf31257aba69a8ba374ee66a1ff3ce8c}{access\+Value}} () const
-\begin{DoxyCompactList}\small\item\em Access value (const) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a58d5f2505b51ea8e782cb069ddd16caa}{access\+Value}} ()
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a696028046faedffa191ff8970297c179}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Get key. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aeddcf415ad9f40e9786d275779a25d25}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Get value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a2516b5ccd8e72899cf3174162bd65667}{access\+Value}} ()
 \begin{DoxyCompactList}\small\item\em Access value (mutable) \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Iterator\+::\+Map\+Iterator}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a6c801dfdcf56c50b83f8d2ca7e568b96}{access\+Map\+Iterator}} () const
-\begin{DoxyCompactList}\small\item\em Access underlying map iterator (const) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Iterator\+::\+Map\+Iterator}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aba6384619c15e1226b9aceadc5f8a8a9}{access\+Map\+Iterator}} ()
+const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Iterator\+::\+Map\+Iterator}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a440d682f1ec4aada924c73bdcecb308f}{get\+Map\+Iterator}} () const
+\begin{DoxyCompactList}\small\item\em Get underlying map iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Iterator\+::\+Map\+Iterator}} \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aabc01f1df3e804aabeb2fa9d926cb930}{access\+Map\+Iterator}} ()
 \begin{DoxyCompactList}\small\item\em Access underlying map iterator (mutable) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -115,24 +115,11 @@ Copy constructor.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_ab8a4f2dc4dc79d9b1a6ed04c350dd2ec}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_ab8a4f2dc4dc79d9b1a6ed04c350dd2ec}} 
-\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!accessKey@{accessKey}}
-\index{accessKey@{accessKey}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
-\doxysubsubsection{\texorpdfstring{accessKey()}{accessKey()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Access key (const) 
-
-\begin{DoxyReturn}{Returns}
-Const reference to key 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aba6384619c15e1226b9aceadc5f8a8a9}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aba6384619c15e1226b9aceadc5f8a8a9}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aabc01f1df3e804aabeb2fa9d926cb930}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aabc01f1df3e804aabeb2fa9d926cb930}} 
 \index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!accessMapIterator@{accessMapIterator}}
 \index{accessMapIterator@{accessMapIterator}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
-\doxysubsubsection{\texorpdfstring{accessMapIterator()}{accessMapIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Iterator\+::\+Map\+Iterator}}\& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Map\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{accessMapIterator()}{accessMapIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Dictionary\+::\+Iterator\+::\+Map\+Iterator}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Map\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -141,24 +128,11 @@ Access underlying map iterator (mutable)
 \begin{DoxyReturn}{Returns}
 Reference to map iterator 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a6c801dfdcf56c50b83f8d2ca7e568b96}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a6c801dfdcf56c50b83f8d2ca7e568b96}} 
-\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!accessMapIterator@{accessMapIterator}}
-\index{accessMapIterator@{accessMapIterator}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
-\doxysubsubsection{\texorpdfstring{accessMapIterator()}{accessMapIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Dictionary\+::\+Iterator\+::\+Map\+Iterator}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Map\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Access underlying map iterator (const) 
-
-\begin{DoxyReturn}{Returns}
-Const reference to map iterator 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a58d5f2505b51ea8e782cb069ddd16caa}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a58d5f2505b51ea8e782cb069ddd16caa}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a2516b5ccd8e72899cf3174162bd65667}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a2516b5ccd8e72899cf3174162bd65667}} 
 \index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!accessValue@{accessValue}}
 \index{accessValue@{accessValue}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
-\doxysubsubsection{\texorpdfstring{accessValue()}{accessValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}}\& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{accessValue()}{accessValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -167,15 +141,41 @@ Access value (mutable)
 \begin{DoxyReturn}{Returns}
 Reference to value 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_abf31257aba69a8ba374ee66a1ff3ce8c}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_abf31257aba69a8ba374ee66a1ff3ce8c}} 
-\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!accessValue@{accessValue}}
-\index{accessValue@{accessValue}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
-\doxysubsubsection{\texorpdfstring{accessValue()}{accessValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::access\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a696028046faedffa191ff8970297c179}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a696028046faedffa191ff8970297c179}} 
+\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!getKey@{getKey}}
+\index{getKey@{getKey}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_ad65f1fca6dd24efcbfc9a8ba99340603}{Dictionary\+::\+Key}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Access value (const) 
+Get key. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a440d682f1ec4aada924c73bdcecb308f}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a440d682f1ec4aada924c73bdcecb308f}} 
+\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!getMapIterator@{getMapIterator}}
+\index{getMapIterator@{getMapIterator}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
+\doxysubsubsection{\texorpdfstring{getMapIterator()}{getMapIterator()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_a4c9b68858cbec66ca004c77ba8c9a172}{Dictionary\+::\+Iterator\+::\+Map\+Iterator}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::get\+Map\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get underlying map iterator. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to map iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aeddcf415ad9f40e9786d275779a25d25}\label{classostk_1_1core_1_1container_1_1_dictionary_1_1_iterator_aeddcf415ad9f40e9786d275779a25d25}} 
+\index{ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}!getValue@{getValue}}
+\index{getValue@{getValue}!ostk::core::container::Dictionary::Iterator@{ostk::core::container::Dictionary::Iterator}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_dictionary_a6e8585a0041d78b9849506eef8cf958d}{Dictionary\+::\+Value}} \& ostk\+::core\+::container\+::\+Dictionary\+::\+Iterator\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get value. 
 
 \begin{DoxyReturn}{Returns}
 Const reference to value 

@@ -12,8 +12,7 @@
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Format}} \{ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Format\+::\+Undefined}}, 
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Format\+::\+C\+SV}}
+enum \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Format}} \{ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Format\+::\+C\+SV}}
  \}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} format. \end{DoxyCompactList}\item 
 typedef \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1table_1_1_row}{Row}} $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ae4af97157bca5cd8b6f0602135d291cd}{Const\+Iterator}}
@@ -62,7 +61,7 @@ void \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_abc89b9c03ad344cf
 \item 
 static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_aa02b6a3a484fe5b866b707d927b7d178}{Empty}} ()
 \begin{DoxyCompactList}\small\item\em Constructs an empty table. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}{Load}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&a\+File, const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} \&a\+Format=\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Table\+::\+Format\+::\+Undefined}}, bool has\+Header=true)
+static \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a43986f8a3822a0847703cf03acbc6122}{Load}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&a\+File, const std\+::optional$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} $>$ \&a\+Format=std\+::nullopt, bool has\+Header=true)
 \begin{DoxyCompactList}\small\item\em Constructs a table from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -99,10 +98,6 @@ std\+::ostream \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_afae
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} format. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::core::container::Table@{ostk::core::container::Table}}\index{ostk::core::container::Table@{ostk::core::container::Table}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}} 
-Undefined&Undefined format. \\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CSV@{CSV}!ostk::core::container::Table@{ostk::core::container::Table}}\index{ostk::core::container::Table@{ostk::core::container::Table}!CSV@{CSV}}}\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}\label{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}} 
 C\+SV&Comma-\/\+Separated Values format. \\
 \hline
@@ -351,11 +346,11 @@ Check if table is empty.
 \begin{DoxyReturn}{Returns}
 True if table is empty 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}\label{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_table_a43986f8a3822a0847703cf03acbc6122}\label{classostk_1_1core_1_1container_1_1_table_a43986f8a3822a0847703cf03acbc6122}} 
 \index{ostk::core::container::Table@{ostk::core::container::Table}!Load@{Load}}
 \index{Load@{Load}!ostk::core::container::Table@{ostk::core::container::Table}}
 \doxysubsubsection{\texorpdfstring{Load()}{Load()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} ostk\+::core\+::container\+::\+Table\+::\+Load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&}]{a\+File,  }\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} \&}]{a\+Format = {\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6aec0fc0100c4fc1ce4eea230c3dc10360}{Table\+::\+Format\+::\+Undefined}}},  }\item[{bool}]{has\+Header = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table}{Table}} ostk\+::core\+::container\+::\+Table\+::\+Load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file}{File}} \&}]{a\+File,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6}{Table\+::\+Format}} $>$ \&}]{a\+Format = {\ttfamily std\+:\+:nullopt},  }\item[{bool}]{has\+Header = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -363,7 +358,7 @@ Constructs a table from a file.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a1c2863bb986092a6f23509a5f84f908a}{Table::Load}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(Path::Parse(\textcolor{stringliteral}{"/path/to/file.csv"})), \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Table::Format::CSV}},}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a5f490be7e6a3ff4577b71a45e97fbb15}{Table}} table = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_a43986f8a3822a0847703cf03acbc6122}{Table::Load}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_file_ac3621e474fdffccac31fb4bb6ed91ef6}{File::Path}}(Path::Parse(\textcolor{stringliteral}{"/path/to/file.csv"})), \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_table_ab6907599287d05bc59cb75c1515177b6acc8d68c551c4a9a6d5313e07de4deafd}{Table::Format::CSV}},}
 \DoxyCodeLine{\textcolor{keyword}{true}) ;}
 \end{DoxyCode}
 
@@ -372,7 +367,7 @@ Constructs a table from a file.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em a\+File} & A table file \\
 \hline
-\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format A table format \\
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Format A table format (default\+: std\+::nullopt, which detects the format) \\
 \hline
 \mbox{\texttt{ in}}  & {\em (optional)} & has\+Header True if file has a header \\
 \hline

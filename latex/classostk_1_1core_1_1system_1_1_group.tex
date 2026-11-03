@@ -20,8 +20,6 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_aace16b5205f388ab389
 \begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_a053e176cea38e57bce0f69f72baed19b}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} \&a\+Group) const
 \begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_a97f411cf741aca95c24120cea524f247}{is\+Defined}} () const
-\begin{DoxyCompactList}\small\item\em Check if group is defined. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_a07b7056475b78fb83f34c7787cc52b8c}{get\+G\+ID}} () const
 \begin{DoxyCompactList}\small\item\em Get group ID. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_a4a3d6eaf4892cd330be48522e38b41f1}{get\+E\+G\+ID}} () const
@@ -33,8 +31,6 @@ int \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_aa4d1f37a36f78a14f675
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_aa12c2323a11d4352246757b4d0b97ab3}{Undefined}} ()
-\begin{DoxyCompactList}\small\item\em Construct an undefined group. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_a9d38b7db49fb6b2e779bbba884c15b2c}{Process}} ()
 \begin{DoxyCompactList}\small\item\em Construct a group from the current process. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group_ae94d4f0fd06b120b007e880ec60c944b}{G\+ID}} (const uint \&a\+G\+ID)
@@ -165,19 +161,6 @@ Construct a group from a group ID.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_group_a97f411cf741aca95c24120cea524f247}\label{classostk_1_1core_1_1system_1_1_group_a97f411cf741aca95c24120cea524f247}} 
-\index{ostk::core::system::Group@{ostk::core::system::Group}!isDefined@{isDefined}}
-\index{isDefined@{isDefined}!ostk::core::system::Group@{ostk::core::system::Group}}
-\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
-{\footnotesize\ttfamily bool ostk\+::core\+::system\+::\+Group\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Check if group is defined. 
-
-\begin{DoxyReturn}{Returns}
-True if defined 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_group_a694c3ccaf1a870ab3c7e81aac8b776c6}\label{classostk_1_1core_1_1system_1_1_group_a694c3ccaf1a870ab3c7e81aac8b776c6}} 
 \index{ostk::core::system::Group@{ostk::core::system::Group}!Name@{Name}}
 \index{Name@{Name}!ostk::core::system::Group@{ostk::core::system::Group}}
@@ -244,19 +227,6 @@ Construct a group from the current process.
 
 \begin{DoxyReturn}{Returns}
 Current process group 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1system_1_1_group_aa12c2323a11d4352246757b4d0b97ab3}\label{classostk_1_1core_1_1system_1_1_group_aa12c2323a11d4352246757b4d0b97ab3}} 
-\index{ostk::core::system::Group@{ostk::core::system::Group}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk::core::system::Group@{ostk::core::system::Group}}
-\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1core_1_1system_1_1_group}{Group}} ostk\+::core\+::system\+::\+Group\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Construct an undefined group. 
-
-\begin{DoxyReturn}{Returns}
-Undefined group 
 \end{DoxyReturn}
 
 

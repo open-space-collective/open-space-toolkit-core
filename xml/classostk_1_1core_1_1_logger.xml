@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="93" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="93" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="91" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1_logger_1a9809a17064cb86de4d457b5c2c5ac7b0" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_source" kindref="compound">Source</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="94" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="94" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="92" column="12" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1core_1_1_logger_1a14265191ccef29216a801f1f52a0bcd0" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1core_1_1container_1_1_array" kindref="compound">Array</ref>&lt; <ref refid="classostk_1_1core_1_1logger_1_1_sink" kindref="compound">Sink</ref> &gt;</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="95" column="11" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="95" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="93" column="11" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="93" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -71,19 +71,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="44" column="5"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="42" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a37356dcecc5f8c42387e831cb0fd5f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1logger_1_1_pump" kindref="compound">Pump</ref></type>
         <definition>Pump ostk::core::Logger::operator()</definition>
-        <argsstring>(const Severity &amp;aSeverity, const Integer &amp;aLine, const String &amp;aFile, const String &amp;aFunction)</argsstring>
+        <argsstring>(const Severity &amp;aSeverity, int aLine, const String &amp;aFile, const String &amp;aFunction)</argsstring>
         <name>operator()</name>
         <param>
           <type>const Severity &amp;</type>
           <declname>aSeverity</declname>
         </param>
         <param>
-          <type>const <ref refid="classostk_1_1core_1_1type_1_1_integer" kindref="compound">Integer</ref> &amp;</type>
+          <type>int</type>
           <declname>aLine</declname>
         </param>
         <param>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="53" column="10"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="51" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="60" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="60" bodyend="67"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="58" column="5" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="58" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1type_1_1_string" kindref="compound">String</ref></type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="72" column="12"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="70" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="78" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="76" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a37f1934e129df80b75bffa2cf7255ff0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref></type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="85" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="83" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1core_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="90" column="19"/>
+        <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="88" column="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -292,7 +292,7 @@
 <codeline><highlight class="normal">LOG_DEBUG(logger)<sp/>&lt;&lt;<sp/>&quot;Debug<sp/>message&quot;<sp/>;</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="39" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="38" bodyend="96"/>
+    <location file="include/OpenSpaceToolkit/Core/Logger.hpp" line="37" column="1" bodyfile="include/OpenSpaceToolkit/Core/Logger.hpp" bodystart="36" bodyend="94"/>
     <listofallmembers>
       <member refid="classostk_1_1core_1_1_logger_1aabe4da4395bf31b957cf16b6f309a2c8" prot="private" virt="non-virtual"><scope>ostk::core::Logger</scope><name>channel_</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a1aeb05d2b956ccacf4c8cd5942ba8501" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>Console</name></member>
@@ -300,7 +300,7 @@
       <member refid="classostk_1_1core_1_1_logger_1a4691c53452220b6830fa566ce1c15605" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>getChannel</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a183e8665ded1dcadb11ed138879f034b" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>Global</name></member>
       <member refid="classostk_1_1core_1_1_logger_1afc4760c6468b14aa75abec4624dfd7ea" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>Logger</name></member>
-      <member refid="classostk_1_1core_1_1_logger_1a7d8033ccf22cdd2e2ba642517dada6d3" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>operator()</name></member>
+      <member refid="classostk_1_1core_1_1_logger_1a37356dcecc5f8c42387e831cb0fd5f40" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>operator()</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a546b882e7f79c120869d64221b0d554a" prot="public" virt="non-virtual"><scope>ostk::core::Logger</scope><name>operator&lt;&lt;</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a14265191ccef29216a801f1f52a0bcd0" prot="private" virt="non-virtual"><scope>ostk::core::Logger</scope><name>sinks_</name></member>
       <member refid="classostk_1_1core_1_1_logger_1a9809a17064cb86de4d457b5c2c5ac7b0" prot="private" virt="non-virtual"><scope>ostk::core::Logger</scope><name>source_</name></member>

@@ -11,10 +11,13 @@ ostk.core.type.Real
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~Real.abs
       ~Real.can_parse
@@ -44,9 +47,5 @@ ostk.core.type.Real
       ~Real.two_pi
       ~Real.undefined
       ~Real.zero
-   
-   
-
-   
    
    

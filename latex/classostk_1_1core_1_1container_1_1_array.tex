@@ -57,18 +57,16 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a74839e693f5524e2
 \begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_af8f48574ba41c8cbea39de23ecdba7aa}{is\+Near}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \&an\+Array, const std\+::function$<$ bool(const T \&, const T \&)$>$ \&a\+Comparator) const
 \begin{DoxyCompactList}\small\item\em Check if array is near another array. \end{DoxyCompactList}\item 
-const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}{access\+First}} () const
-\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
-const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}{access\+Last}} () const
-\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a695276574804a96e05f140fb178af844}{get\+First}} () const
+\begin{DoxyCompactList}\small\item\em Get first element. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aed58ef446df64734550d64abd388ffdb}{get\+Last}} () const
+\begin{DoxyCompactList}\small\item\em Get last element. \end{DoxyCompactList}\item 
 Size \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}{get\+Size}} () const
 \begin{DoxyCompactList}\small\item\em Get array size. \end{DoxyCompactList}\item 
 Index \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}{get\+Index\+Of}} (const T \&an\+Element) const
 \begin{DoxyCompactList}\small\item\em Get index of element (by value) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{type\+::\+String}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ae0b2aff1ac2bda149f0f7fef323ca65b}{to\+String}} () const
 \begin{DoxyCompactList}\small\item\em Get string representation of array. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ const T $\ast$ $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}{access\+Where}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&a\+Predicate) const
-\begin{DoxyCompactList}\small\item\em Get array of pointers to element based on condition. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a8e2da8fcc3fd5d37eb54384e18f59462}{get\+Where}} (const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&a\+Predicate) const
 \begin{DoxyCompactList}\small\item\em Get array of elements based on condition. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a3e647697c7576e5d9badd5fe1e789b07}{Const\+Iterator}} \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a526b45980e342bff95aa068ec0d57cef}{find}} (const T \&an\+Element) const
@@ -164,8 +162,8 @@ Constructs an array from a C++ Standard Library vector.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{std::vector<Integer> vector = \{1, 2, 3\} ;}
-\DoxyCodeLine{Array<Integer> array(vector) ;}
+\DoxyCodeLine{std::vector<int> vector = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array(vector) ;}
 \end{DoxyCode}
 
 
@@ -219,7 +217,7 @@ Constructs an array using an initializer list.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \end{DoxyCode}
 
 
@@ -282,7 +280,7 @@ Move constructor (vector)
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a38a269238bff8dd080daeece1a919b97}\label{classostk_1_1core_1_1container_1_1_array_a38a269238bff8dd080daeece1a919b97}} 
 \index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessFirst@{accessFirst}}
 \index{accessFirst@{accessFirst}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{accessFirst()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{accessFirst()}{accessFirst()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
@@ -292,29 +290,8 @@ Access first element.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
-\DoxyCodeLine{Integer\& element = array.accessFirst() ; \textcolor{comment}{// 1}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Reference to the first element of array 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}\label{classostk_1_1core_1_1container_1_1_array_a5105b698b2f4a85ab8041136e4fa5737}} 
-\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessFirst@{accessFirst}}
-\index{accessFirst@{accessFirst}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{accessFirst()}{accessFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Access first element. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
-\DoxyCodeLine{\textcolor{keyword}{const} Integer\& element = array.accessFirst() ; \textcolor{comment}{// 1}}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\& element = array.accessFirst() ; \textcolor{comment}{// 1}}
 \end{DoxyCode}
 
 
@@ -324,7 +301,7 @@ Reference to the first element of array
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aaccce84e7159516210d15cedd0f0c005}\label{classostk_1_1core_1_1container_1_1_array_aaccce84e7159516210d15cedd0f0c005}} 
 \index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessLast@{accessLast}}
 \index{accessLast@{accessLast}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{accessLast()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{accessLast()}{accessLast()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
@@ -334,61 +311,13 @@ Access last element.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
-\DoxyCodeLine{Integer\& element = array.accessLast() ; \textcolor{comment}{// 3}}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\& element = array.accessLast() ; \textcolor{comment}{// 3}}
 \end{DoxyCode}
 
 
 \begin{DoxyReturn}{Returns}
 Reference to the last element of array 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}\label{classostk_1_1core_1_1container_1_1_array_a55be65f137698f55130537704726af33}} 
-\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessLast@{accessLast}}
-\index{accessLast@{accessLast}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{accessLast()}{accessLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Access last element. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
-\DoxyCodeLine{\textcolor{keyword}{const} Integer\& element = array.accessLast() ; \textcolor{comment}{// 3}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Reference to the last element of array 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}\label{classostk_1_1core_1_1container_1_1_array_ab890784e4a8ca686d0514ab868f42794}} 
-\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!accessWhere@{accessWhere}}
-\index{accessWhere@{accessWhere}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{accessWhere()}{accessWhere()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$const T$\ast$$>$ \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::access\+Where (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}}$<$ T $>$\+::\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_ac41568a084ad47e56665948592b8b353}{Predicate}} \&}]{a\+Predicate }\end{DoxyParamCaption}) const}
-
-
-
-Get array of pointers to element based on condition. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
-\DoxyCodeLine{Array<const Integer*> elements = array.accessWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
-\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [\&0, \&2, \&4]}}
-\end{DoxyCode}
-
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em a\+Predicate} & A predicate \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{Array}} of pointers to element 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_af2c427638ce6fe5b8172b726b26d041f}\label{classostk_1_1core_1_1container_1_1_array_af2c427638ce6fe5b8172b726b26d041f}} 
 \index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!add@{add}}
@@ -403,7 +332,7 @@ Add elements to array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{array.add(\{4, 5\}) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}}
 \end{DoxyCode}
 
@@ -426,7 +355,7 @@ Add element to array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{array.add(4) ; \textcolor{comment}{// [1, 2, 3, 4]}}
 \end{DoxyCode}
 
@@ -449,7 +378,7 @@ Check if array contains element (by value)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{array.contains(2) ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
@@ -475,7 +404,7 @@ Constructs an empty array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}{Array<Integer>::Empty}}() ;}
+\DoxyCodeLine{Array<int> array = \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array_a5fea43d631c4e02fdbebb7854d4936cf}{Array<int>::Empty}}() ;}
 \end{DoxyCode}
 
 
@@ -495,7 +424,7 @@ Get iterator to element, finding by value.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{Array<int> array = \{0, 1, 2, 3, 4\} ;}
 \DoxyCodeLine{\textcolor{keyword}{auto} elementIt = array.find(2) ;}
 \end{DoxyCode}
 
@@ -521,7 +450,7 @@ Get iterator to element, finding by by value.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{Array<int> array = \{0, 1, 2, 3, 4\} ;}
 \DoxyCodeLine{\textcolor{keyword}{auto} elementIt = array.find(2) ;}
 \end{DoxyCode}
 
@@ -533,6 +462,27 @@ Get iterator to element, finding by by value.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Iterator to element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_a695276574804a96e05f140fb178af844}\label{classostk_1_1core_1_1container_1_1_array_a695276574804a96e05f140fb178af844}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getFirst@{getFirst}}
+\index{getFirst@{getFirst}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFirst()}{getFirst()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get first element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& element = array.getFirst() ; \textcolor{comment}{// 1}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Const reference to the first element of array 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}\label{classostk_1_1core_1_1container_1_1_array_ad15c241c9653ac3db78dba8a42d5a66e}} 
 \index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getIndexOf@{getIndexOf}}
@@ -547,7 +497,7 @@ Get index of element (by value)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a417fd235f7e100d47856d16751831c34}{Index}} index = array.getIndexOf(2) ; \textcolor{comment}{// 1}}
 \end{DoxyCode}
 
@@ -559,6 +509,27 @@ Get index of element (by value)
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Index of element (by value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aed58ef446df64734550d64abd388ffdb}\label{classostk_1_1core_1_1container_1_1_array_aed58ef446df64734550d64abd388ffdb}} 
+\index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getLast@{getLast}}
+\index{getLast@{getLast}!ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getLast()}{getLast()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classostk_1_1core_1_1container_1_1_array}{ostk\+::core\+::container\+::\+Array}}$<$ T $>$\+::get\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get last element. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& element = array.getLast() ; \textcolor{comment}{// 3}}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Const reference to the last element of array 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}\label{classostk_1_1core_1_1container_1_1_array_aa6a94bd2117648885f2f150b4cf2c501}} 
 \index{ostk::core::container::Array$<$ T $>$@{ostk::core::container::Array$<$ T $>$}!getSize@{getSize}}
@@ -573,7 +544,7 @@ Get array size.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{\mbox{\hyperlink{namespaceostk_1_1core_1_1type_a49cf705368ffaff1cc457f73d7ebc403}{Size}} size = array.getSize() ; \textcolor{comment}{// 3}}
 \end{DoxyCode}
 
@@ -594,9 +565,9 @@ Get array of elements based on condition.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{0, 1, 2, 3, 4\} ;}
-\DoxyCodeLine{Array<Integer> elements = array.getWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
-\DoxyCodeLine{\textcolor{keywordflow}{return} anInteger.isEven() ; \}) ; \textcolor{comment}{// [0, 2, 4]}}
+\DoxyCodeLine{Array<int> array = \{0, 1, 2, 3, 4\} ;}
+\DoxyCodeLine{Array<int> elements = array.getWhere([] (\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& anInteger) -\/> \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} (anInteger \% 2) == 0 ; \}) ; \textcolor{comment}{// [0, 2, 4]}}
 \end{DoxyCode}
 
 
@@ -621,7 +592,7 @@ Check if array is empty.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{array.isEmpty() ; \textcolor{comment}{// False}}
 \end{DoxyCode}
 
@@ -642,11 +613,11 @@ Check if array is near another array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;}
-\DoxyCodeLine{Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
+\DoxyCodeLine{Array<double> firstArray = \{1.0, 2.0, 3.0\} ;}
+\DoxyCodeLine{Array<double> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
 \DoxyCodeLine{firstArray.isNear(secondArray,}
-\DoxyCodeLine{[] (\textcolor{keyword}{const} Real\& aFirstValue, \textcolor{keyword}{const} Real\& aSecondValue) -\/> \textcolor{keywordtype}{bool}}
-\DoxyCodeLine{\{ \textcolor{keywordflow}{return} aFirstValue.isNear(aSecondValue, 1e-\/15) ; \}) ; \textcolor{comment}{// True}}
+\DoxyCodeLine{[] (\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& aFirstValue, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& aSecondValue) -\/> \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\{ \textcolor{keywordflow}{return} std::abs(aFirstValue -\/ aSecondValue) <= 1e-\/15 ; \}) ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
 
@@ -673,8 +644,8 @@ Check if array is near another array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Real> firstArray = \{1.0, 2.0, 3.0\} ;}
-\DoxyCodeLine{Array<Real> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
+\DoxyCodeLine{Array<double> firstArray = \{1.0, 2.0, 3.0\} ;}
+\DoxyCodeLine{Array<double> secondArray = \{1.0, 2.0, 3.0 + 1e-\/15\} ;}
 \DoxyCodeLine{firstArray.isNear(secondArray, 1e-\/15) ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
@@ -704,8 +675,8 @@ Get mapped array.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Array<String> strings = \{ \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"} \} ;}
-\DoxyCodeLine{Array<Integer> integers = strings.map<Integer>([] (\textcolor{keyword}{const} String\& aString) -\/> Integer \{}
-\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_integer_ab5b9dbfb16e857b8ecd0579863287d76}{Integer::Parse}}(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}}
+\DoxyCodeLine{Array<int> integers = strings.map<\textcolor{keywordtype}{int}>([] (\textcolor{keyword}{const} String\& aString) -\/> \textcolor{keywordtype}{int} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} std::stoi(aString) ; \}) ; \textcolor{comment}{// [1, 2, 3]}}
 \end{DoxyCode}
 
 
@@ -730,8 +701,8 @@ Merge array with another array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> firstArray = \{1, 2, 3\} ;}
-\DoxyCodeLine{Array<Integer> secondArray = \{4, 5\} ;}
+\DoxyCodeLine{Array<int> firstArray = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> secondArray = \{4, 5\} ;}
 \DoxyCodeLine{firstArray.merge(secondArray) ; \textcolor{comment}{// [1, 2, 3, 4, 5]}}
 \end{DoxyCode}
 
@@ -754,9 +725,9 @@ Concatenate array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> a = \{1, 2, 3\} ;}
-\DoxyCodeLine{Array<Integer> b = \{4, 5, 6\} ;}
-\DoxyCodeLine{Array<Integer> c = a + b ; \textcolor{comment}{// \{1, 2, 3, 4, 5, 6\}}}
+\DoxyCodeLine{Array<int> a = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> b = \{4, 5, 6\} ;}
+\DoxyCodeLine{Array<int> c = a + b ; \textcolor{comment}{// \{1, 2, 3, 4, 5, 6\}}}
 \end{DoxyCode}
 
 
@@ -819,8 +790,8 @@ Get reduced value.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> integers = \{ 1, 2, 3 \} ;}
-\DoxyCodeLine{Integer reducedInteger = integers.reduce(std::plus<Integer>()) ; \textcolor{comment}{// 6}}
+\DoxyCodeLine{Array<int> integers = \{ 1, 2, 3 \} ;}
+\DoxyCodeLine{\textcolor{keywordtype}{int} reducedInteger = integers.reduce(std::plus<int>()) ; \textcolor{comment}{// 6}}
 \end{DoxyCode}
 
 
@@ -845,7 +816,7 @@ Remove elements from array (by value)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3, 4, 5\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3, 4, 5\} ;}
 \DoxyCodeLine{array.remove(\{2, 4\}) ; \textcolor{comment}{// [1, 3, 5]}}
 \end{DoxyCode}
 
@@ -868,7 +839,7 @@ Remove element from array (by value)
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{array.remove(2) ; \textcolor{comment}{// [1, 3]}}
 \end{DoxyCode}
 
@@ -891,8 +862,8 @@ Remove elements based on condition.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3, 4, 5\} ;}
-\DoxyCodeLine{array.removeWhere([] (\textcolor{keyword}{const} Integer\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} anInteger.isEven() ; \}) ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3, 4, 5\} ;}
+\DoxyCodeLine{array.removeWhere([] (\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& anInteger) -\/> \textcolor{keywordtype}{bool} \{ \textcolor{keywordflow}{return} (anInteger \% 2) == 0 ; \}) ;}
 \DoxyCodeLine{\textcolor{comment}{// [1, 3, 5]}}
 \end{DoxyCode}
 
@@ -915,7 +886,7 @@ Get string representation of array.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{String \textcolor{keywordtype}{string} = array.toString() ; \textcolor{comment}{// "[1, 2, 3]"}}
 \end{DoxyCode}
 
@@ -940,7 +911,7 @@ Output stream operator.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Array<Integer> array = \{1, 2, 3\} ;}
+\DoxyCodeLine{Array<int> array = \{1, 2, 3\} ;}
 \DoxyCodeLine{std::cout << array ;}
 \end{DoxyCode}
 

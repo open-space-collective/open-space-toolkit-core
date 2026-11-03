@@ -22,8 +22,6 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a2052299ec67
 \begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3104154a1142af0ea03f257edf493bc0}{operator!=}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \&a\+Directory) const
 \begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}{is\+Defined}} () const
-\begin{DoxyCompactList}\small\item\em Check if directory is defined. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_affd6e4da6f153b1c961ff61178898c20}{exists}} () const
 \begin{DoxyCompactList}\small\item\em Check if directory exists. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}{is\+Empty}} () const
@@ -34,7 +32,7 @@ bool \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a5a06e7333bb
 \begin{DoxyCompactList}\small\item\em Check if directory contains directory with name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1type_1_1_string}{String}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_ad9ffa02a5f60cc351bc16dcedb64ce7d}{get\+Name}} () const
 \begin{DoxyCompactList}\small\item\em Get directory name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}{get\+Path}} () const
+const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \& \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a445cef60ac1357e2c839dda03eb29da0}{get\+Path}} () const
 \begin{DoxyCompactList}\small\item\em Get directory path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_permission_set}{filesystem\+::\+Permission\+Set}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a5b41f71a42dc5bfc00b495c46ffe77f7}{get\+Permissions}} () const
 \begin{DoxyCompactList}\small\item\em Get directory permissions. \end{DoxyCompactList}\item 
@@ -59,8 +57,6 @@ void \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a58be001fc39
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Undefined}} ()
-\begin{DoxyCompactList}\small\item\em Constructs an undefined directory. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a654e1ae79c5e73460b722db30340270c}{Root}} ()
 \begin{DoxyCompactList}\small\item\em Constructs a root directory. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Path}} (const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \&a\+Path)
@@ -306,11 +302,11 @@ Get directory\textquotesingle{}s parent directory.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}}\textquotesingle{}s parent directory 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}\label{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}} 
+\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a445cef60ac1357e2c839dda03eb29da0}\label{classostk_1_1core_1_1filesystem_1_1_directory_a445cef60ac1357e2c839dda03eb29da0}} 
 \index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!getPath@{getPath}}
 \index{getPath@{getPath}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
 \doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} ostk\+::core\+::filesystem\+::\+Directory\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path}{filesystem\+::\+Path}} \& ostk\+::core\+::filesystem\+::\+Directory\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -319,7 +315,7 @@ Get directory path.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Path}} path = directory.\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af81a249fa293a8c8350d9ec9e296ce81}{getPath}}() ; \textcolor{comment}{// /path/to/directory}}
+\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Path}} path = directory.\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a445cef60ac1357e2c839dda03eb29da0}{getPath}}() ; \textcolor{comment}{// /path/to/directory}}
 \end{DoxyCode}
 
 
@@ -345,26 +341,6 @@ Get directory permissions.
 
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} permissions 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}\label{classostk_1_1core_1_1filesystem_1_1_directory_a7dc2c8a49eea8ee0cc6372b349756bf7}} 
-\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!isDefined@{isDefined}}
-\index{isDefined@{isDefined}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
-\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
-{\footnotesize\ttfamily bool ostk\+::core\+::filesystem\+::\+Directory\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Check if directory is defined. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Directory::Undefined}}() ;}
-\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-True if directory is defined 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}\label{classostk_1_1core_1_1filesystem_1_1_directory_a3f9fa68eb7bce123a435c20ae9ece692}} 
 \index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!isEmpty@{isEmpty}}
@@ -492,7 +468,6 @@ Constructs a directory from a given path.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_af4d6ebf5c5b5c86fe25226bf5f887a8c}{Directory::Path}}(\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_path_a478763ba7e88a5cc99809eae958d95f2}{Path::Parse}}(\textcolor{stringliteral}{"/path/to/directory"})) ;}
-\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// True}}
 \end{DoxyCode}
 
 
@@ -580,26 +555,6 @@ Get serialized directory.
 
 \begin{DoxyReturn}{Returns}
 Serialized directory 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}\label{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}} 
-\index{ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk::core::filesystem::Directory@{ostk::core::filesystem::Directory}}
-\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory}{Directory}} ostk\+::core\+::filesystem\+::\+Directory\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Constructs an undefined directory. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a355eb219c6588be19b6b625a06aa901b}{Directory}} directory = \mbox{\hyperlink{classostk_1_1core_1_1filesystem_1_1_directory_a299b477a3f5c6bd989ed0f7e91dbfffd}{Directory::Undefined}}() ;}
-\DoxyCodeLine{directory.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Undefined directory 
 \end{DoxyReturn}
 
 

@@ -16,6 +16,15 @@ ostk.core.filesystem.File
    .. autosummary::
       :nosignatures:
    
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
       ~File.create
       ~File.exists
       ~File.get_contents
@@ -24,15 +33,9 @@ ostk.core.filesystem.File
       ~File.get_parent_directory
       ~File.get_path
       ~File.get_permissions
-      ~File.is_defined
       ~File.move_to_directory
       ~File.path
       ~File.remove
       ~File.to_string
-      ~File.undefined
-   
-   
-
-   
    
    

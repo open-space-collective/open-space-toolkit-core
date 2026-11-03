@@ -195,6 +195,13 @@
 <codeline><highlight class="normal">///<sp/>Apache<sp/>License<sp/>2.0</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#include<sp/>&lt;algorithm&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;cmath&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;cstdlib&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;limits&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;locale&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;sstream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;string&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;type_traits&gt;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#include<sp/>&lt;OpenSpaceToolkit/Core/Error.hpp&gt;</highlight></codeline>
 <codeline><highlight class="normal">#include<sp/>&lt;OpenSpaceToolkit/Core/Utility.hpp&gt;</highlight></codeline>
@@ -272,7 +279,7 @@
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">template<sp/>&lt;class<sp/>T&gt;</highlight></codeline>
-<codeline><highlight class="normal">const<sp/>T&amp;<sp/>Array&lt;T&gt;::accessFirst()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>T&amp;<sp/>Array&lt;T&gt;::getFirst()<sp/>const</highlight></codeline>
 <codeline><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(this-&gt;isEmpty())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -283,7 +290,7 @@
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">template<sp/>&lt;class<sp/>T&gt;</highlight></codeline>
-<codeline><highlight class="normal">const<sp/>T&amp;<sp/>Array&lt;T&gt;::accessLast()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>T&amp;<sp/>Array&lt;T&gt;::getLast()<sp/>const</highlight></codeline>
 <codeline><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(this-&gt;isEmpty())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -315,9 +322,38 @@
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(const<sp/>auto<sp/>elementTuple<sp/>:<sp/>ostk::core::container::iterator::Zip(*this,<sp/>anArray))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!std::get&lt;0&gt;(elementTuple).isNear(std::get&lt;1&gt;(elementTuple),<sp/>aTolerance))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>constexpr<sp/>(std::is_integral&lt;T&gt;::value<sp/>&amp;&amp;<sp/>!std::is_same&lt;T,<sp/>bool&gt;::value)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Compute<sp/>the<sp/>distance<sp/>in<sp/>the<sp/>unsigned<sp/>domain<sp/>to<sp/>avoid<sp/>signed<sp/>overflow</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>Unsigned<sp/>=<sp/>typename<sp/>std::make_unsigned&lt;T&gt;::type;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>T&amp;<sp/>firstValue<sp/>=<sp/>std::get&lt;0&gt;(elementTuple);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>T&amp;<sp/>secondValue<sp/>=<sp/>std::get&lt;1&gt;(elementTuple);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>Unsigned<sp/>distance<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(firstValue<sp/>&gt;<sp/>secondValue)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>static_cast&lt;Unsigned&gt;(static_cast&lt;Unsigned&gt;(firstValue)<sp/>-<sp/>static_cast&lt;Unsigned&gt;(secondValue))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>static_cast&lt;Unsigned&gt;(static_cast&lt;Unsigned&gt;(secondValue)<sp/>-<sp/>static_cast&lt;Unsigned&gt;(firstValue));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!((aTolerance<sp/>&gt;=<sp/>0)<sp/>&amp;&amp;<sp/>(distance<sp/>&lt;=<sp/>static_cast&lt;Unsigned&gt;(aTolerance))))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if<sp/>constexpr<sp/>(std::is_floating_point&lt;T&gt;::value)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Negated<sp/>&quot;&lt;=&quot;<sp/>(rather<sp/>than<sp/>&quot;&gt;&quot;)<sp/>so<sp/>that<sp/>NaN<sp/>distances<sp/>are<sp/>rejected</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!(std::abs(std::get&lt;0&gt;(elementTuple)<sp/>-<sp/>std::get&lt;1&gt;(elementTuple))<sp/>&lt;=<sp/>aTolerance))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!std::get&lt;0&gt;(elementTuple).isNear(std::get&lt;1&gt;(elementTuple),<sp/>aTolerance))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline></codeline>
@@ -372,6 +408,44 @@
 <codeline><highlight class="normal">typename<sp/>std::enable_if&lt;std::is_same&lt;T,<sp/>type::String&gt;::value,<sp/>type::String&gt;::type<sp/>extractString(const<sp/>T&amp;<sp/>aType)</highlight></codeline>
 <codeline><highlight class="normal">{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>&quot;\&quot;&quot;<sp/>+<sp/>aType<sp/>+<sp/>&quot;\&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">template<sp/>&lt;typename<sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal">typename<sp/>std::enable_if&lt;std::is_arithmetic&lt;T&gt;::value<sp/>&amp;&amp;<sp/>!std::is_same&lt;T,<sp/>bool&gt;::value,<sp/>type::String&gt;::type</highlight></codeline>
+<codeline><highlight class="normal">extractString(const<sp/>T&amp;<sp/>aType)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>constexpr<sp/>(std::is_floating_point&lt;T&gt;::value)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(std::isnan(aType))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>&quot;Undefined&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(std::isinf(aType))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(aType<sp/>&gt;<sp/>0)<sp/>?<sp/>&quot;+Inf&quot;<sp/>:<sp/>&quot;-Inf&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>stringStream;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringStream.imbue(std::locale::classic());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringStream.precision(std::numeric_limits&lt;T&gt;::max_digits10);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringStream<sp/>&lt;&lt;<sp/>aType;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type::String<sp/>string<sp/>=<sp/>stringStream.str();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(string.find_first_of(&quot;.e&quot;)<sp/>==<sp/>std::string::npos)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string<sp/>+=<sp/>&quot;.0&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>string;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::to_string(aType);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">//<sp/>template<sp/>&lt;typename<sp/>T&gt;</highlight></codeline>
@@ -466,22 +540,6 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>accumulator;</highlight></codeline>
-<codeline><highlight class="normal">}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">template<sp/>&lt;class<sp/>T&gt;</highlight></codeline>
-<codeline><highlight class="normal">Array&lt;const<sp/>T*&gt;<sp/>Array&lt;T&gt;::accessWhere(const<sp/>std::function&lt;bool(const<sp/>T&amp;)&gt;&amp;<sp/>aPredicate)<sp/>const</highlight></codeline>
-<codeline><highlight class="normal">{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Array&lt;const<sp/>T*&gt;<sp/>array<sp/>=<sp/>Array&lt;const<sp/>T*&gt;::Empty();</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(const<sp/>auto&amp;<sp/>item<sp/>:<sp/>(*this))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(aPredicate(item))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array.add(&amp;item);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>array;</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">template<sp/>&lt;class<sp/>T&gt;</highlight></codeline>

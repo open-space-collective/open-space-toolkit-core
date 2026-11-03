@@ -16,6 +16,15 @@ ostk.core.container.Object
    .. autosummary::
       :nosignatures:
    
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
       ~Object.array
       ~Object.boolean
       ~Object.dictionary
@@ -42,9 +51,5 @@ ostk.core.container.Object
       ~Object.to_string
       ~Object.type_from_string
       ~Object.undefined
-   
-   
-
-   
    
    

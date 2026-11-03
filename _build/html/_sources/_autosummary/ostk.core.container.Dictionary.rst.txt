@@ -11,10 +11,13 @@ ostk.core.container.Dictionary
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~Dictionary.add_value_for_key
       ~Dictionary.empty
@@ -22,9 +25,5 @@ ostk.core.container.Dictionary
       ~Dictionary.has_value_for_key
       ~Dictionary.is_empty
       ~Dictionary.parse
-   
-   
-
-   
    
    

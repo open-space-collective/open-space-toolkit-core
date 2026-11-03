@@ -56,6 +56,7 @@ var NAVTREE =
         [ "Load / Write JSON", "md_docs__tutorial.html#JSON", null ]
       ] ]
     ] ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -91,9 +92,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_array_8hpp.html",
-"classostk_1_1core_1_1container_1_1_array.html#ac4246bef128b2a237f411b6de86ecedc",
-"classostk_1_1core_1_1filesystem_1_1_directory.html#ae55d292dd71ab8f311b3c4ae79c317e4",
-"classostk_1_1core_1_1type_1_1_integer.html#afd52937e53bd4bf39b45afe1e3d74d46"
+"classostk_1_1core_1_1container_1_1_array.html#ad8ebc43a185418e004017aae36bc83b3",
+"classostk_1_1core_1_1filesystem_1_1_file.html#a34b7fed969550f1eab7fdc045bbddba9",
+"classostk_1_1core_1_1type_1_1_real.html#a2e52f1f59059a72db25854ecdb6bf14f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -16,21 +16,24 @@ ostk.core.filesystem.Path
    .. autosummary::
       :nosignatures:
    
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
       ~Path.current
       ~Path.get_absolute_path
       ~Path.get_last_element
       ~Path.get_normalized_path
       ~Path.get_parent_path
       ~Path.is_absolute
-      ~Path.is_defined
       ~Path.is_relative
       ~Path.parse
       ~Path.root
       ~Path.to_string
-      ~Path.undefined
-   
-   
-
-   
    
    

@@ -11,10 +11,13 @@ ostk.core.filesystem.PermissionSet
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~PermissionSet.can_execute
       ~PermissionSet.can_read
@@ -28,9 +31,5 @@ ostk.core.filesystem.PermissionSet
       ~PermissionSet.rx
       ~PermissionSet.w
       ~PermissionSet.x
-   
-   
-
-   
    
    
