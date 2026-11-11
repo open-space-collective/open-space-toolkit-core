@@ -21,6 +21,14 @@ fn main() {
         ])
         .link_system(["stdc++", "dl", "pthread", "m"])
         .build();
+
+    let mut bridge = cxx_build::bridge("src/test_support.rs");
+    bridge.file("src/test_support.cpp");
+    built.configure(&mut bridge);
+    bridge.compile("ostk-core-bridge");
     built.link();
+    for f in ["src/test_support.rs", "src/test_support.h", "src/test_support.cpp"] {
+        println!("cargo:rerun-if-changed={f}");
+    }
     println!("cargo:rerun-if-changed=include");
 }
