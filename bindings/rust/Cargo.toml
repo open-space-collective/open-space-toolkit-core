@@ -12,6 +12,7 @@ backtrace = { version = "0.3", features = ["cpp_demangle"] }
 cxx = "1.0"
 
 [build-dependencies]
+cxx-build = "1.0"
 ostk-build = { path = "build-support" }
 
 [workspace]
