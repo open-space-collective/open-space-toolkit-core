@@ -8,6 +8,8 @@ repository = "https://github.com/open-space-collective/open-space-toolkit-core"
 links = "ostk-core"
 
 [dependencies]
+backtrace = { version = "0.3", features = ["cpp_demangle"] }
+cxx = "1.0"
 
 [build-dependencies]
 ostk-build = { path = "build-support" }
