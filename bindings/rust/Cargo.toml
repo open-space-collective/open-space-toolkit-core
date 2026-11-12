@@ -1,0 +1,16 @@
+[package]
+name = "ostk-core"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Open Space Toolkit Core, built statically for the OSTK Rust bindings"
+repository = "https://github.com/open-space-collective/open-space-toolkit-core"
+links = "ostk-core"
+
+[dependencies]
+
+[build-dependencies]
+ostk-build = { path = "build-support" }
+
+[workspace]
+members = [".", "build-support"]
